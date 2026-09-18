@@ -1,0 +1,4111 @@
+{
+  "line_id": "qfa",
+  "line_name": "量子场论",
+  "timestamp": 1789662470.3111043,
+  "version": "12.0.0",
+  "lineage_tree": {
+    "root": {
+      "name": "qfa",
+      "type": "line_root",
+      "children": [
+        "md_heading",
+        "python_class",
+        "python_function",
+        "json_key"
+      ],
+      "weight": 1.0
+    },
+    "branches": {
+      "md_heading": {
+        "type": "md_heading",
+        "node_count": 41,
+        "avg_relevance": 0.75,
+        "nodes": [
+          {
+            "name": "qfa线 SI5 升级自证报告",
+            "signature": "qfa-SI5-self-cert-report.md::heading:qfa线 SI5 升级自证报告",
+            "relevance": 0.75,
+            "source": "qfa-SI5-self-cert-report.md"
+          },
+          {
+            "name": "线基本信息",
+            "signature": "qfa-SI5-self-cert-report.md::heading:线基本信息",
+            "relevance": 0.75,
+            "source": "qfa-SI5-self-cert-report.md"
+          },
+          {
+            "name": "1. 升级资格评估",
+            "signature": "qfa-SI5-self-cert-report.md::heading:1. 升级资格评估",
+            "relevance": 0.75,
+            "source": "qfa-SI5-self-cert-report.md"
+          },
+          {
+            "name": "1.1 数据充分性: 0.89",
+            "signature": "qfa-SI5-self-cert-report.md::heading:1.1 数据充分性: 0.89",
+            "relevance": 0.75,
+            "source": "qfa-SI5-self-cert-report.md"
+          },
+          {
+            "name": "1.2 验证充分性: 0.90",
+            "signature": "qfa-SI5-self-cert-report.md::heading:1.2 验证充分性: 0.90",
+            "relevance": 0.75,
+            "source": "qfa-SI5-self-cert-report.md"
+          },
+          {
+            "name": "1.3 形式化程度: 0.95",
+            "signature": "qfa-SI5-self-cert-report.md::heading:1.3 形式化程度: 0.95",
+            "relevance": 0.75,
+            "source": "qfa-SI5-self-cert-report.md"
+          },
+          {
+            "name": "1.4 边界测试",
+            "signature": "qfa-SI5-self-cert-report.md::heading:1.4 边界测试",
+            "relevance": 0.75,
+            "source": "qfa-SI5-self-cert-report.md"
+          },
+          {
+            "name": "1.5 交叉验证: 0.93",
+            "signature": "qfa-SI5-self-cert-report.md::heading:1.5 交叉验证: 0.93",
+            "relevance": 0.75,
+            "source": "qfa-SI5-self-cert-report.md"
+          },
+          {
+            "name": "2. 核心能力演进",
+            "signature": "qfa-SI5-self-cert-report.md::heading:2. 核心能力演进",
+            "relevance": 0.75,
+            "source": "qfa-SI5-self-cert-report.md"
+          },
+          {
+            "name": "2.1 形式验证引擎 v4.0→v5.0",
+            "signature": "qfa-SI5-self-cert-report.md::heading:2.1 形式验证引擎 v4.0→v5.0",
+            "relevance": 0.75,
+            "source": "qfa-SI5-self-cert-report.md"
+          },
+          {
+            "name": "2.2 OMNI集成",
+            "signature": "qfa-SI5-self-cert-report.md::heading:2.2 OMNI集成",
+            "relevance": 0.75,
+            "source": "qfa-SI5-self-cert-report.md"
+          },
+          {
+            "name": "3. 验证数据附录",
+            "signature": "qfa-SI5-self-cert-report.md::heading:3. 验证数据附录",
+            "relevance": 0.75,
+            "source": "qfa-SI5-self-cert-report.md"
+          },
+          {
+            "name": "表A: 关键指标对比",
+            "signature": "qfa-SI5-self-cert-report.md::heading:表A: 关键指标对比",
+            "relevance": 0.75,
+            "source": "qfa-SI5-self-cert-report.md"
+          },
+          {
+            "name": "表B: 边界测试结果",
+            "signature": "qfa-SI5-self-cert-report.md::heading:表B: 边界测试结果",
+            "relevance": 0.75,
+            "source": "qfa-SI5-self-cert-report.md"
+          },
+          {
+            "name": "4. 结论",
+            "signature": "qfa-SI5-self-cert-report.md::heading:4. 结论",
+            "relevance": 0.75,
+            "source": "qfa-SI5-self-cert-report.md"
+          },
+          {
+            "name": "OMNI-HUB v3.9 - 场-瞬态-涟漪动力学架构实验报告",
+            "signature": "field_transient_dynamics_report.md::heading:OMNI-HUB v3.9 - 场-瞬态-涟漪动力学架构实验报告",
+            "relevance": 0.75,
+            "source": "field_transient_dynamics_report.md"
+          },
+          {
+            "name": "1. 架构概述",
+            "signature": "field_transient_dynamics_report.md::heading:1. 架构概述",
+            "relevance": 0.75,
+            "source": "field_transient_dynamics_report.md"
+          },
+          {
+            "name": "2. 实验结果",
+            "signature": "field_transient_dynamics_report.md::heading:2. 实验结果",
+            "relevance": 0.75,
+            "source": "field_transient_dynamics_report.md"
+          },
+          {
+            "name": "E1: 场演化 (Field Evolution)",
+            "signature": "field_transient_dynamics_report.md::heading:E1: 场演化 (Field Evolution)",
+            "relevance": 0.75,
+            "source": "field_transient_dynamics_report.md"
+          },
+          {
+            "name": "E2: 瞬态注入 (Transient Injection)",
+            "signature": "field_transient_dynamics_report.md::heading:E2: 瞬态注入 (Transient Injection)",
+            "relevance": 0.75,
+            "source": "field_transient_dynamics_report.md"
+          },
+          {
+            "name": "E3: 涟漪传播 (Ripple Propagation)",
+            "signature": "field_transient_dynamics_report.md::heading:E3: 涟漪传播 (Ripple Propagation)",
+            "relevance": 0.75,
+            "source": "field_transient_dynamics_report.md"
+          },
+          {
+            "name": "E4: 正反向驱动 (Bidirectional Drive)",
+            "signature": "field_transient_dynamics_report.md::heading:E4: 正反向驱动 (Bidirectional Drive)",
+            "relevance": 0.75,
+            "source": "field_transient_dynamics_report.md"
+          },
+          {
+            "name": "E5: 能量守恒 (Energy Conservation)",
+            "signature": "field_transient_dynamics_report.md::heading:E5: 能量守恒 (Energy Conservation)",
+            "relevance": 0.75,
+            "source": "field_transient_dynamics_report.md"
+          },
+          {
+            "name": "E6: 覆盖验证 (Coverage Validation)",
+            "signature": "field_transient_dynamics_report.md::heading:E6: 覆盖验证 (Coverage Validation)",
+            "relevance": 0.75,
+            "source": "field_transient_dynamics_report.md"
+          },
+          {
+            "name": "3. 关键发现",
+            "signature": "field_transient_dynamics_report.md::heading:3. 关键发现",
+            "relevance": 0.75,
+            "source": "field_transient_dynamics_report.md"
+          },
+          {
+            "name": "4. 架构优势 (vs 大讨论大协作)",
+            "signature": "field_transient_dynamics_report.md::heading:4. 架构优势 (vs 大讨论大协作)",
+            "relevance": 0.75,
+            "source": "field_transient_dynamics_report.md"
+          },
+          {
+            "name": "5. 可视化输出",
+            "signature": "field_transient_dynamics_report.md::heading:5. 可视化输出",
+            "relevance": 0.75,
+            "source": "field_transient_dynamics_report.md"
+          },
+          {
+            "name": "6. 代码文件",
+            "signature": "field_transient_dynamics_report.md::heading:6. 代码文件",
+            "relevance": 0.75,
+            "source": "field_transient_dynamics_report.md"
+          },
+          {
+            "name": "OMNI-HUB Linguistic Field v3.8 测试验证报告",
+            "signature": "linguistic_field_test_report.md::heading:OMNI-HUB Linguistic Field v3.8 测试验证报告",
+            "relevance": 0.75,
+            "source": "linguistic_field_test_report.md"
+          },
+          {
+            "name": "1. 四层独立运行测试",
+            "signature": "linguistic_field_test_report.md::heading:1. 四层独立运行测试",
+            "relevance": 0.75,
+            "source": "linguistic_field_test_report.md"
+          },
+          {
+            "name": "语境层 (Context)",
+            "signature": "linguistic_field_test_report.md::heading:语境层 (Context)",
+            "relevance": 0.75,
+            "source": "linguistic_field_test_report.md"
+          },
+          {
+            "name": "语法层 (Grammar)",
+            "signature": "linguistic_field_test_report.md::heading:语法层 (Grammar)",
+            "relevance": 0.75,
+            "source": "linguistic_field_test_report.md"
+          },
+          {
+            "name": "语义层 (Semantics)",
+            "signature": "linguistic_field_test_report.md::heading:语义层 (Semantics)",
+            "relevance": 0.75,
+            "source": "linguistic_field_test_report.md"
+          },
+          {
+            "name": "语用层 (Pragmatics)",
+            "signature": "linguistic_field_test_report.md::heading:语用层 (Pragmatics)",
+            "relevance": 0.75,
+            "source": "linguistic_field_test_report.md"
+          },
+          {
+            "name": "2. 四层循环测试",
+            "signature": "linguistic_field_test_report.md::heading:2. 四层循环测试",
+            "relevance": 0.75,
+            "source": "linguistic_field_test_report.md"
+          },
+          {
+            "name": "3. 语用驱动进化测试",
+            "signature": "linguistic_field_test_report.md::heading:3. 语用驱动进化测试",
+            "relevance": 0.75,
+            "source": "linguistic_field_test_report.md"
+          },
+          {
+            "name": "进化链验证",
+            "signature": "linguistic_field_test_report.md::heading:进化链验证",
+            "relevance": 0.75,
+            "source": "linguistic_field_test_report.md"
+          },
+          {
+            "name": "场景报告",
+            "signature": "linguistic_field_test_report.md::heading:场景报告",
+            "relevance": 0.75,
+            "source": "linguistic_field_test_report.md"
+          },
+          {
+            "name": "4. 集成测试",
+            "signature": "linguistic_field_test_report.md::heading:4. 集成测试",
+            "relevance": 0.75,
+            "source": "linguistic_field_test_report.md"
+          },
+          {
+            "name": "集成循环验证",
+            "signature": "linguistic_field_test_report.md::heading:集成循环验证",
+            "relevance": 0.75,
+            "source": "linguistic_field_test_report.md"
+          },
+          {
+            "name": "5. 系统总结",
+            "signature": "linguistic_field_test_report.md::heading:5. 系统总结",
+            "relevance": 0.75,
+            "source": "linguistic_field_test_report.md"
+          }
+        ]
+      },
+      "python_class": {
+        "type": "python_class",
+        "node_count": 40,
+        "avg_relevance": 0.53,
+        "nodes": [
+          {
+            "name": "class",
+            "signature": "quantum_field.py::class:class",
+            "relevance": 0.5,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "YonedaBinding",
+            "signature": "quantum_field.py::class:YonedaBinding",
+            "relevance": 0.5,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "ChainHash",
+            "signature": "quantum_field.py::class:ChainHash",
+            "relevance": 0.5,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "QuantumBase",
+            "signature": "quantum_field.py::class:QuantumBase",
+            "relevance": 0.6,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "QuantumTeleport",
+            "signature": "quantum_field.py::class:QuantumTeleport",
+            "relevance": 0.6,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "TaskonCapsule",
+            "signature": "quantum_field.py::class:TaskonCapsule",
+            "relevance": 0.5,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "OMNIQuantumField",
+            "signature": "quantum_field.py::class:OMNIQuantumField",
+            "relevance": 0.7,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "DimensionType",
+            "signature": "field_entropy.py::class:DimensionType",
+            "relevance": 0.5,
+            "source": "field_entropy.py"
+          },
+          {
+            "name": "class",
+            "signature": "field_entropy.py::class:class",
+            "relevance": 0.5,
+            "source": "field_entropy.py"
+          },
+          {
+            "name": "FieldEntropy",
+            "signature": "field_entropy.py::class:FieldEntropy",
+            "relevance": 0.6,
+            "source": "field_entropy.py"
+          },
+          {
+            "name": "OMNIHUBSimulator",
+            "signature": "field_entropy.py::class:OMNIHUBSimulator",
+            "relevance": 0.5,
+            "source": "field_entropy.py"
+          },
+          {
+            "name": "EntropyExperiment",
+            "signature": "field_entropy.py::class:EntropyExperiment",
+            "relevance": 0.5,
+            "source": "field_entropy.py"
+          },
+          {
+            "name": "PulseShape",
+            "signature": "field_transient_dynamics.py::class:PulseShape",
+            "relevance": 0.5,
+            "source": "field_transient_dynamics.py"
+          },
+          {
+            "name": "DecayModel",
+            "signature": "field_transient_dynamics.py::class:DecayModel",
+            "relevance": 0.5,
+            "source": "field_transient_dynamics.py"
+          },
+          {
+            "name": "class",
+            "signature": "field_transient_dynamics.py::class:class",
+            "relevance": 0.5,
+            "source": "field_transient_dynamics.py"
+          },
+          {
+            "name": "FieldDynamics",
+            "signature": "field_transient_dynamics.py::class:FieldDynamics",
+            "relevance": 0.6,
+            "source": "field_transient_dynamics.py"
+          },
+          {
+            "name": "TransientInjector",
+            "signature": "field_transient_dynamics.py::class:TransientInjector",
+            "relevance": 0.5,
+            "source": "field_transient_dynamics.py"
+          },
+          {
+            "name": "RipplePropagator",
+            "signature": "field_transient_dynamics.py::class:RipplePropagator",
+            "relevance": 0.5,
+            "source": "field_transient_dynamics.py"
+          },
+          {
+            "name": "BidirectionalDriveV2",
+            "signature": "field_transient_dynamics.py::class:BidirectionalDriveV2",
+            "relevance": 0.5,
+            "source": "field_transient_dynamics.py"
+          },
+          {
+            "name": "FieldAwareness",
+            "signature": "field_transient_dynamics.py::class:FieldAwareness",
+            "relevance": 0.6,
+            "source": "field_transient_dynamics.py"
+          },
+          {
+            "name": "ExperimentRunner",
+            "signature": "field_transient_dynamics.py::class:ExperimentRunner",
+            "relevance": 0.5,
+            "source": "field_transient_dynamics.py"
+          },
+          {
+            "name": "class",
+            "signature": "hyper_field_mip_core.py::class:class",
+            "relevance": 0.5,
+            "source": "hyper_field_mip_core.py"
+          },
+          {
+            "name": "HyperField",
+            "signature": "hyper_field_mip_core.py::class:HyperField",
+            "relevance": 0.6,
+            "source": "hyper_field_mip_core.py"
+          },
+          {
+            "name": "FieldMIPVerifier",
+            "signature": "hyper_field_mip_core.py::class:FieldMIPVerifier",
+            "relevance": 0.6,
+            "source": "hyper_field_mip_core.py"
+          },
+          {
+            "name": "HyperMIPStar",
+            "signature": "hyper_field_mip_core.py::class:HyperMIPStar",
+            "relevance": 0.5,
+            "source": "hyper_field_mip_core.py"
+          },
+          {
+            "name": "FieldEigenEngine",
+            "signature": "hyper_field_mip_core.py::class:FieldEigenEngine",
+            "relevance": 0.6,
+            "source": "hyper_field_mip_core.py"
+          },
+          {
+            "name": "HyperFieldMIPCore",
+            "signature": "hyper_field_mip_core.py::class:HyperFieldMIPCore",
+            "relevance": 0.6,
+            "source": "hyper_field_mip_core.py"
+          },
+          {
+            "name": "LayerType",
+            "signature": "linguistic_field.py::class:LayerType",
+            "relevance": 0.5,
+            "source": "linguistic_field.py"
+          },
+          {
+            "name": "FlowDirection",
+            "signature": "linguistic_field.py::class:FlowDirection",
+            "relevance": 0.5,
+            "source": "linguistic_field.py"
+          },
+          {
+            "name": "EvolutionMode",
+            "signature": "linguistic_field.py::class:EvolutionMode",
+            "relevance": 0.5,
+            "source": "linguistic_field.py"
+          },
+          {
+            "name": "class",
+            "signature": "linguistic_field.py::class:class",
+            "relevance": 0.5,
+            "source": "linguistic_field.py"
+          },
+          {
+            "name": "ContextLayer",
+            "signature": "linguistic_field.py::class:ContextLayer",
+            "relevance": 0.5,
+            "source": "linguistic_field.py"
+          },
+          {
+            "name": "MockLineState",
+            "signature": "linguistic_field.py::class:MockLineState",
+            "relevance": 0.5,
+            "source": "linguistic_field.py"
+          },
+          {
+            "name": "GrammarLayer",
+            "signature": "linguistic_field.py::class:GrammarLayer",
+            "relevance": 0.5,
+            "source": "linguistic_field.py"
+          },
+          {
+            "name": "SemanticsLayer",
+            "signature": "linguistic_field.py::class:SemanticsLayer",
+            "relevance": 0.5,
+            "source": "linguistic_field.py"
+          },
+          {
+            "name": "SurgeLevel",
+            "signature": "tensor_field.py::class:SurgeLevel",
+            "relevance": 0.5,
+            "source": "tensor_field.py"
+          },
+          {
+            "name": "class",
+            "signature": "tensor_field.py::class:class",
+            "relevance": 0.5,
+            "source": "tensor_field.py"
+          },
+          {
+            "name": "TensorField",
+            "signature": "tensor_field.py::class:TensorField",
+            "relevance": 0.6,
+            "source": "tensor_field.py"
+          },
+          {
+            "name": "BeatLevelEngine",
+            "signature": "tensor_field.py::class:BeatLevelEngine",
+            "relevance": 0.5,
+            "source": "tensor_field.py"
+          },
+          {
+            "name": "ComparisonExperiment",
+            "signature": "tensor_field.py::class:ComparisonExperiment",
+            "relevance": 0.5,
+            "source": "tensor_field.py"
+          }
+        ]
+      },
+      "python_function": {
+        "type": "python_function",
+        "node_count": 227,
+        "avg_relevance": 0.5127753303964758,
+        "nodes": [
+          {
+            "name": "evolve",
+            "signature": "quantum_field.py::def:evolve",
+            "relevance": 0.5,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "functor_repr",
+            "signature": "quantum_field.py::def:functor_repr",
+            "relevance": 0.5,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "to_dict",
+            "signature": "quantum_field.py::def:to_dict",
+            "relevance": 0.5,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "__init__",
+            "signature": "quantum_field.py::def:__init__",
+            "relevance": 0.5,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "register_pattern",
+            "signature": "quantum_field.py::def:register_pattern",
+            "relevance": 0.5,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "compute_hom",
+            "signature": "quantum_field.py::def:compute_hom",
+            "relevance": 0.5,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "forward_yoneda",
+            "signature": "quantum_field.py::def:forward_yoneda",
+            "relevance": 0.5,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "backward_yoneda",
+            "signature": "quantum_field.py::def:backward_yoneda",
+            "relevance": 0.5,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "_frobenius_similarity",
+            "signature": "quantum_field.py::def:_frobenius_similarity",
+            "relevance": 0.5,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "_structural_similarity",
+            "signature": "quantum_field.py::def:_structural_similarity",
+            "relevance": 0.5,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "yoneda_isomorphism_check",
+            "signature": "quantum_field.py::def:yoneda_isomorphism_check",
+            "relevance": 0.5,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "_hash",
+            "signature": "quantum_field.py::def:_hash",
+            "relevance": 0.5,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "_convert_numpy",
+            "signature": "quantum_field.py::def:_convert_numpy",
+            "relevance": 0.5,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "_hash_pair",
+            "signature": "quantum_field.py::def:_hash_pair",
+            "relevance": 0.5,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "append",
+            "signature": "quantum_field.py::def:append",
+            "relevance": 0.5,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "_rebuild_merkle_tree",
+            "signature": "quantum_field.py::def:_rebuild_merkle_tree",
+            "relevance": 0.5,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "merkle_root",
+            "signature": "quantum_field.py::def:merkle_root",
+            "relevance": 0.5,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "verify",
+            "signature": "quantum_field.py::def:verify",
+            "relevance": 0.5,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "_verify_merkle_membership",
+            "signature": "quantum_field.py::def:_verify_merkle_membership",
+            "relevance": 0.5,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "get_merkle_path",
+            "signature": "quantum_field.py::def:get_merkle_path",
+            "relevance": 0.5,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "chain_integrity",
+            "signature": "quantum_field.py::def:chain_integrity",
+            "relevance": 0.5,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "tamper_detect",
+            "signature": "quantum_field.py::def:tamper_detect",
+            "relevance": 0.5,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "classical_to_tensor",
+            "signature": "quantum_field.py::def:classical_to_tensor",
+            "relevance": 0.5,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "tensor_to_amplitude",
+            "signature": "quantum_field.py::def:tensor_to_amplitude",
+            "relevance": 0.5,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "set_state",
+            "signature": "quantum_field.py::def:set_state",
+            "relevance": 0.5,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "apply_gate",
+            "signature": "quantum_field.py::def:apply_gate",
+            "relevance": 0.5,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "_single_qubit_gate_tensor",
+            "signature": "quantum_field.py::def:_single_qubit_gate_tensor",
+            "relevance": 0.5,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "_two_qubit_gate_tensor",
+            "signature": "quantum_field.py::def:_two_qubit_gate_tensor",
+            "relevance": 0.5,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "_build_permuted_gate",
+            "signature": "quantum_field.py::def:_build_permuted_gate",
+            "relevance": 0.5,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "create_bell_pair",
+            "signature": "quantum_field.py::def:create_bell_pair",
+            "relevance": 0.5,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "measure",
+            "signature": "quantum_field.py::def:measure",
+            "relevance": 0.5,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "get_amplitudes",
+            "signature": "quantum_field.py::def:get_amplitudes",
+            "relevance": 0.5,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "density_matrix",
+            "signature": "quantum_field.py::def:density_matrix",
+            "relevance": 0.5,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "von_neumann_entropy",
+            "signature": "quantum_field.py::def:von_neumann_entropy",
+            "relevance": 0.5,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "fidelity",
+            "signature": "quantum_field.py::def:fidelity",
+            "relevance": 0.5,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "prepare_teleportation",
+            "signature": "quantum_field.py::def:prepare_teleportation",
+            "relevance": 0.5,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "alice_operations",
+            "signature": "quantum_field.py::def:alice_operations",
+            "relevance": 0.5,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "bob_correction",
+            "signature": "quantum_field.py::def:bob_correction",
+            "relevance": 0.5,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "teleport",
+            "signature": "quantum_field.py::def:teleport",
+            "relevance": 0.5,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "_build_cnot",
+            "signature": "quantum_field.py::def:_build_cnot",
+            "relevance": 0.5,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "_build_single_gate",
+            "signature": "quantum_field.py::def:_build_single_gate",
+            "relevance": 0.5,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "_extract_qubit_state",
+            "signature": "quantum_field.py::def:_extract_qubit_state",
+            "relevance": 0.5,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "_embed_qubit_index",
+            "signature": "quantum_field.py::def:_embed_qubit_index",
+            "relevance": 0.5,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "_encode_payload_to_quantum",
+            "signature": "quantum_field.py::def:_encode_payload_to_quantum",
+            "relevance": 0.6,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "_sign_capsule",
+            "signature": "quantum_field.py::def:_sign_capsule",
+            "relevance": 0.5,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "entangle",
+            "signature": "quantum_field.py::def:entangle",
+            "relevance": 0.5,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "verify_payload",
+            "signature": "quantum_field.py::def:verify_payload",
+            "relevance": 0.5,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "add_merkle_proof",
+            "signature": "quantum_field.py::def:add_merkle_proof",
+            "relevance": 0.5,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "_init_11_line_topology",
+            "signature": "quantum_field.py::def:_init_11_line_topology",
+            "relevance": 0.5,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "build_pattern_network",
+            "signature": "quantum_field.py::def:build_pattern_network",
+            "relevance": 0.5,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "reconstruct_pattern_tower",
+            "signature": "quantum_field.py::def:reconstruct_pattern_tower",
+            "relevance": 0.5,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "create_capsule",
+            "signature": "quantum_field.py::def:create_capsule",
+            "relevance": 0.5,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "teleport_capsule",
+            "signature": "quantum_field.py::def:teleport_capsule",
+            "relevance": 0.5,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "get_system_state",
+            "signature": "quantum_field.py::def:get_system_state",
+            "relevance": 0.5,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "run_experiments",
+            "signature": "quantum_field.py::def:run_experiments",
+            "relevance": 0.5,
+            "source": "quantum_field.py"
+          },
+          {
+            "name": "to_dict",
+            "signature": "field_entropy.py::def:to_dict",
+            "relevance": 0.5,
+            "source": "field_entropy.py"
+          },
+          {
+            "name": "__init__",
+            "signature": "field_entropy.py::def:__init__",
+            "relevance": 0.5,
+            "source": "field_entropy.py"
+          },
+          {
+            "name": "_normalize_to_probability",
+            "signature": "field_entropy.py::def:_normalize_to_probability",
+            "relevance": 0.5,
+            "source": "field_entropy.py"
+          },
+          {
+            "name": "_compute_shannon_entropy",
+            "signature": "field_entropy.py::def:_compute_shannon_entropy",
+            "relevance": 0.5,
+            "source": "field_entropy.py"
+          },
+          {
+            "name": "compute_field_entropy",
+            "signature": "field_entropy.py::def:compute_field_entropy",
+            "relevance": 0.6,
+            "source": "field_entropy.py"
+          },
+          {
+            "name": "compute_joint_entropy",
+            "signature": "field_entropy.py::def:compute_joint_entropy",
+            "relevance": 0.5,
+            "source": "field_entropy.py"
+          },
+          {
+            "name": "compute_mutual_information",
+            "signature": "field_entropy.py::def:compute_mutual_information",
+            "relevance": 0.5,
+            "source": "field_entropy.py"
+          },
+          {
+            "name": "compute_cross_entropy",
+            "signature": "field_entropy.py::def:compute_cross_entropy",
+            "relevance": 0.5,
+            "source": "field_entropy.py"
+          },
+          {
+            "name": "compute_kl_divergence",
+            "signature": "field_entropy.py::def:compute_kl_divergence",
+            "relevance": 0.5,
+            "source": "field_entropy.py"
+          },
+          {
+            "name": "compute_conditional_entropy",
+            "signature": "field_entropy.py::def:compute_conditional_entropy",
+            "relevance": 0.5,
+            "source": "field_entropy.py"
+          },
+          {
+            "name": "entropy_profile",
+            "signature": "field_entropy.py::def:entropy_profile",
+            "relevance": 0.5,
+            "source": "field_entropy.py"
+          },
+          {
+            "name": "_compute_entropy_gradient",
+            "signature": "field_entropy.py::def:_compute_entropy_gradient",
+            "relevance": 0.5,
+            "source": "field_entropy.py"
+          },
+          {
+            "name": "compute_debt_finding_entropy_map",
+            "signature": "field_entropy.py::def:compute_debt_finding_entropy_map",
+            "relevance": 0.5,
+            "source": "field_entropy.py"
+          },
+          {
+            "name": "entropy_flow",
+            "signature": "field_entropy.py::def:entropy_flow",
+            "relevance": 0.5,
+            "source": "field_entropy.py"
+          },
+          {
+            "name": "compute_entropy_current",
+            "signature": "field_entropy.py::def:compute_entropy_current",
+            "relevance": 0.5,
+            "source": "field_entropy.py"
+          },
+          {
+            "name": "compute_self_drive_index",
+            "signature": "field_entropy.py::def:compute_self_drive_index",
+            "relevance": 0.5,
+            "source": "field_entropy.py"
+          },
+          {
+            "name": "compute_system_temperature",
+            "signature": "field_entropy.py::def:compute_system_temperature",
+            "relevance": 0.5,
+            "source": "field_entropy.py"
+          },
+          {
+            "name": "generate_state",
+            "signature": "field_entropy.py::def:generate_state",
+            "relevance": 0.5,
+            "source": "field_entropy.py"
+          },
+          {
+            "name": "generate_spin_sequence",
+            "signature": "field_entropy.py::def:generate_spin_sequence",
+            "relevance": 0.5,
+            "source": "field_entropy.py"
+          },
+          {
+            "name": "run_experiment_1_basic_entropy",
+            "signature": "field_entropy.py::def:run_experiment_1_basic_entropy",
+            "relevance": 0.5,
+            "source": "field_entropy.py"
+          },
+          {
+            "name": "run_experiment_2_debt_finding_map",
+            "signature": "field_entropy.py::def:run_experiment_2_debt_finding_map",
+            "relevance": 0.5,
+            "source": "field_entropy.py"
+          },
+          {
+            "name": "run_experiment_3_entropy_flow",
+            "signature": "field_entropy.py::def:run_experiment_3_entropy_flow",
+            "relevance": 0.5,
+            "source": "field_entropy.py"
+          },
+          {
+            "name": "run_experiment_4_spin_dynamics",
+            "signature": "field_entropy.py::def:run_experiment_4_spin_dynamics",
+            "relevance": 0.5,
+            "source": "field_entropy.py"
+          },
+          {
+            "name": "run_experiment_5_entropy_law",
+            "signature": "field_entropy.py::def:run_experiment_5_entropy_law",
+            "relevance": 0.5,
+            "source": "field_entropy.py"
+          },
+          {
+            "name": "run_all_experiments",
+            "signature": "field_entropy.py::def:run_all_experiments",
+            "relevance": 0.5,
+            "source": "field_entropy.py"
+          },
+          {
+            "name": "save_results",
+            "signature": "field_entropy.py::def:save_results",
+            "relevance": 0.5,
+            "source": "field_entropy.py"
+          },
+          {
+            "name": "__post_init__",
+            "signature": "field_transient_dynamics.py::def:__post_init__",
+            "relevance": 0.5,
+            "source": "field_transient_dynamics.py"
+          },
+          {
+            "name": "copy",
+            "signature": "field_transient_dynamics.py::def:copy",
+            "relevance": 0.5,
+            "source": "field_transient_dynamics.py"
+          },
+          {
+            "name": "to_dict",
+            "signature": "field_transient_dynamics.py::def:to_dict",
+            "relevance": 0.5,
+            "source": "field_transient_dynamics.py"
+          },
+          {
+            "name": "age",
+            "signature": "field_transient_dynamics.py::def:age",
+            "relevance": 0.5,
+            "source": "field_transient_dynamics.py"
+          },
+          {
+            "name": "__init__",
+            "signature": "field_transient_dynamics.py::def:__init__",
+            "relevance": 0.5,
+            "source": "field_transient_dynamics.py"
+          },
+          {
+            "name": "_init_coupling_matrix",
+            "signature": "field_transient_dynamics.py::def:_init_coupling_matrix",
+            "relevance": 0.5,
+            "source": "field_transient_dynamics.py"
+          },
+          {
+            "name": "_init_field_state",
+            "signature": "field_transient_dynamics.py::def:_init_field_state",
+            "relevance": 0.6,
+            "source": "field_transient_dynamics.py"
+          },
+          {
+            "name": "_laplacian_1d",
+            "signature": "field_transient_dynamics.py::def:_laplacian_1d",
+            "relevance": 0.5,
+            "source": "field_transient_dynamics.py"
+          },
+          {
+            "name": "evolve",
+            "signature": "field_transient_dynamics.py::def:evolve",
+            "relevance": 0.5,
+            "source": "field_transient_dynamics.py"
+          },
+          {
+            "name": "_record_state",
+            "signature": "field_transient_dynamics.py::def:_record_state",
+            "relevance": 0.5,
+            "source": "field_transient_dynamics.py"
+          },
+          {
+            "name": "potential_energy",
+            "signature": "field_transient_dynamics.py::def:potential_energy",
+            "relevance": 0.6,
+            "source": "field_transient_dynamics.py"
+          },
+          {
+            "name": "kinetic_energy",
+            "signature": "field_transient_dynamics.py::def:kinetic_energy",
+            "relevance": 0.6,
+            "source": "field_transient_dynamics.py"
+          },
+          {
+            "name": "total_energy",
+            "signature": "field_transient_dynamics.py::def:total_energy",
+            "relevance": 0.6,
+            "source": "field_transient_dynamics.py"
+          },
+          {
+            "name": "field_gradient",
+            "signature": "field_transient_dynamics.py::def:field_gradient",
+            "relevance": 0.6,
+            "source": "field_transient_dynamics.py"
+          },
+          {
+            "name": "equilibrium_point",
+            "signature": "field_transient_dynamics.py::def:equilibrium_point",
+            "relevance": 0.5,
+            "source": "field_transient_dynamics.py"
+          },
+          {
+            "name": "field_coherence",
+            "signature": "field_transient_dynamics.py::def:field_coherence",
+            "relevance": 0.7,
+            "source": "field_transient_dynamics.py"
+          },
+          {
+            "name": "get_state",
+            "signature": "field_transient_dynamics.py::def:get_state",
+            "relevance": 0.5,
+            "source": "field_transient_dynamics.py"
+          },
+          {
+            "name": "set_state",
+            "signature": "field_transient_dynamics.py::def:set_state",
+            "relevance": 0.5,
+            "source": "field_transient_dynamics.py"
+          },
+          {
+            "name": "inject",
+            "signature": "field_transient_dynamics.py::def:inject",
+            "relevance": 0.5,
+            "source": "field_transient_dynamics.py"
+          },
+          {
+            "name": "_generate_pulse",
+            "signature": "field_transient_dynamics.py::def:_generate_pulse",
+            "relevance": 0.5,
+            "source": "field_transient_dynamics.py"
+          },
+          {
+            "name": "pulse_shape",
+            "signature": "field_transient_dynamics.py::def:pulse_shape",
+            "relevance": 0.5,
+            "source": "field_transient_dynamics.py"
+          },
+          {
+            "name": "decay_model",
+            "signature": "field_transient_dynamics.py::def:decay_model",
+            "relevance": 0.5,
+            "source": "field_transient_dynamics.py"
+          },
+          {
+            "name": "superpose",
+            "signature": "field_transient_dynamics.py::def:superpose",
+            "relevance": 0.5,
+            "source": "field_transient_dynamics.py"
+          },
+          {
+            "name": "measure_transient_lifetime",
+            "signature": "field_transient_dynamics.py::def:measure_transient_lifetime",
+            "relevance": 0.5,
+            "source": "field_transient_dynamics.py"
+          },
+          {
+            "name": "update_time",
+            "signature": "field_transient_dynamics.py::def:update_time",
+            "relevance": 0.5,
+            "source": "field_transient_dynamics.py"
+          },
+          {
+            "name": "get_active_pulses",
+            "signature": "field_transient_dynamics.py::def:get_active_pulses",
+            "relevance": 0.5,
+            "source": "field_transient_dynamics.py"
+          },
+          {
+            "name": "create_ripple",
+            "signature": "field_transient_dynamics.py::def:create_ripple",
+            "relevance": 0.5,
+            "source": "field_transient_dynamics.py"
+          },
+          {
+            "name": "propagate_step",
+            "signature": "field_transient_dynamics.py::def:propagate_step",
+            "relevance": 0.5,
+            "source": "field_transient_dynamics.py"
+          },
+          {
+            "name": "_ripple_field",
+            "signature": "field_transient_dynamics.py::def:_ripple_field",
+            "relevance": 0.6,
+            "source": "field_transient_dynamics.py"
+          },
+          {
+            "name": "damping",
+            "signature": "field_transient_dynamics.py::def:damping",
+            "relevance": 0.5,
+            "source": "field_transient_dynamics.py"
+          },
+          {
+            "name": "interference",
+            "signature": "field_transient_dynamics.py::def:interference",
+            "relevance": 0.5,
+            "source": "field_transient_dynamics.py"
+          },
+          {
+            "name": "recursive_ripple",
+            "signature": "field_transient_dynamics.py::def:recursive_ripple",
+            "relevance": 0.5,
+            "source": "field_transient_dynamics.py"
+          },
+          {
+            "name": "measure_ripple_amplitude",
+            "signature": "field_transient_dynamics.py::def:measure_ripple_amplitude",
+            "relevance": 0.5,
+            "source": "field_transient_dynamics.py"
+          },
+          {
+            "name": "visualize",
+            "signature": "field_transient_dynamics.py::def:visualize",
+            "relevance": 0.5,
+            "source": "field_transient_dynamics.py"
+          },
+          {
+            "name": "_draw_ripple_tree",
+            "signature": "field_transient_dynamics.py::def:_draw_ripple_tree",
+            "relevance": 0.5,
+            "source": "field_transient_dynamics.py"
+          },
+          {
+            "name": "forward_drive",
+            "signature": "field_transient_dynamics.py::def:forward_drive",
+            "relevance": 0.5,
+            "source": "field_transient_dynamics.py"
+          },
+          {
+            "name": "reverse_drive",
+            "signature": "field_transient_dynamics.py::def:reverse_drive",
+            "relevance": 0.5,
+            "source": "field_transient_dynamics.py"
+          },
+          {
+            "name": "couple_drives",
+            "signature": "field_transient_dynamics.py::def:couple_drives",
+            "relevance": 0.5,
+            "source": "field_transient_dynamics.py"
+          },
+          {
+            "name": "drive_resonance",
+            "signature": "field_transient_dynamics.py::def:drive_resonance",
+            "relevance": 0.5,
+            "source": "field_transient_dynamics.py"
+          },
+          {
+            "name": "measure_drive_efficiency",
+            "signature": "field_transient_dynamics.py::def:measure_drive_efficiency",
+            "relevance": 0.5,
+            "source": "field_transient_dynamics.py"
+          },
+          {
+            "name": "field_perception",
+            "signature": "field_transient_dynamics.py::def:field_perception",
+            "relevance": 0.6,
+            "source": "field_transient_dynamics.py"
+          },
+          {
+            "name": "field_memory",
+            "signature": "field_transient_dynamics.py::def:field_memory",
+            "relevance": 0.6,
+            "source": "field_transient_dynamics.py"
+          },
+          {
+            "name": "field_intention",
+            "signature": "field_transient_dynamics.py::def:field_intention",
+            "relevance": 0.6,
+            "source": "field_transient_dynamics.py"
+          },
+          {
+            "name": "field_emotion",
+            "signature": "field_transient_dynamics.py::def:field_emotion",
+            "relevance": 0.6,
+            "source": "field_transient_dynamics.py"
+          },
+          {
+            "name": "run_all",
+            "signature": "field_transient_dynamics.py::def:run_all",
+            "relevance": 0.5,
+            "source": "field_transient_dynamics.py"
+          },
+          {
+            "name": "experiment_1_field_evolution",
+            "signature": "field_transient_dynamics.py::def:experiment_1_field_evolution",
+            "relevance": 0.6,
+            "source": "field_transient_dynamics.py"
+          },
+          {
+            "name": "experiment_2_transient_injection",
+            "signature": "field_transient_dynamics.py::def:experiment_2_transient_injection",
+            "relevance": 0.5,
+            "source": "field_transient_dynamics.py"
+          },
+          {
+            "name": "__init__",
+            "signature": "hyper_field_mip_core.py::def:__init__",
+            "relevance": 0.5,
+            "source": "hyper_field_mip_core.py"
+          },
+          {
+            "name": "_build_hamiltonian",
+            "signature": "hyper_field_mip_core.py::def:_build_hamiltonian",
+            "relevance": 0.6,
+            "source": "hyper_field_mip_core.py"
+          },
+          {
+            "name": "evolve",
+            "signature": "hyper_field_mip_core.py::def:evolve",
+            "relevance": 0.5,
+            "source": "hyper_field_mip_core.py"
+          },
+          {
+            "name": "add_pulse",
+            "signature": "hyper_field_mip_core.py::def:add_pulse",
+            "relevance": 0.5,
+            "source": "hyper_field_mip_core.py"
+          },
+          {
+            "name": "measure",
+            "signature": "hyper_field_mip_core.py::def:measure",
+            "relevance": 0.5,
+            "source": "hyper_field_mip_core.py"
+          },
+          {
+            "name": "get_entanglement_entropy",
+            "signature": "hyper_field_mip_core.py::def:get_entanglement_entropy",
+            "relevance": 0.6,
+            "source": "hyper_field_mip_core.py"
+          },
+          {
+            "name": "get_correlation",
+            "signature": "hyper_field_mip_core.py::def:get_correlation",
+            "relevance": 0.5,
+            "source": "hyper_field_mip_core.py"
+          },
+          {
+            "name": "to_state_vector",
+            "signature": "hyper_field_mip_core.py::def:to_state_vector",
+            "relevance": 0.5,
+            "source": "hyper_field_mip_core.py"
+          },
+          {
+            "name": "get_field_metrics",
+            "signature": "hyper_field_mip_core.py::def:get_field_metrics",
+            "relevance": 0.6,
+            "source": "hyper_field_mip_core.py"
+          },
+          {
+            "name": "register_prover",
+            "signature": "hyper_field_mip_core.py::def:register_prover",
+            "relevance": 0.5,
+            "source": "hyper_field_mip_core.py"
+          },
+          {
+            "name": "verify_field_consistency",
+            "signature": "hyper_field_mip_core.py::def:verify_field_consistency",
+            "relevance": 0.6,
+            "source": "hyper_field_mip_core.py"
+          },
+          {
+            "name": "verify_field_causality",
+            "signature": "hyper_field_mip_core.py::def:verify_field_causality",
+            "relevance": 0.6,
+            "source": "hyper_field_mip_core.py"
+          },
+          {
+            "name": "verify_field_unitarity",
+            "signature": "hyper_field_mip_core.py::def:verify_field_unitarity",
+            "relevance": 0.6,
+            "source": "hyper_field_mip_core.py"
+          },
+          {
+            "name": "adaptive_threshold_from_field",
+            "signature": "hyper_field_mip_core.py::def:adaptive_threshold_from_field",
+            "relevance": 0.6,
+            "source": "hyper_field_mip_core.py"
+          },
+          {
+            "name": "challenge_field",
+            "signature": "hyper_field_mip_core.py::def:challenge_field",
+            "relevance": 0.6,
+            "source": "hyper_field_mip_core.py"
+          },
+          {
+            "name": "classical_value",
+            "signature": "hyper_field_mip_core.py::def:classical_value",
+            "relevance": 0.5,
+            "source": "hyper_field_mip_core.py"
+          },
+          {
+            "name": "tsirelson_bound",
+            "signature": "hyper_field_mip_core.py::def:tsirelson_bound",
+            "relevance": 0.5,
+            "source": "hyper_field_mip_core.py"
+          },
+          {
+            "name": "quantum_value",
+            "signature": "hyper_field_mip_core.py::def:quantum_value",
+            "relevance": 0.6,
+            "source": "hyper_field_mip_core.py"
+          },
+          {
+            "name": "quantum_advantage",
+            "signature": "hyper_field_mip_core.py::def:quantum_advantage",
+            "relevance": 0.6,
+            "source": "hyper_field_mip_core.py"
+          },
+          {
+            "name": "prove_re",
+            "signature": "hyper_field_mip_core.py::def:prove_re",
+            "relevance": 0.5,
+            "source": "hyper_field_mip_core.py"
+          },
+          {
+            "name": "eigen_decompose",
+            "signature": "hyper_field_mip_core.py::def:eigen_decompose",
+            "relevance": 0.5,
+            "source": "hyper_field_mip_core.py"
+          },
+          {
+            "name": "get_dominant_mode",
+            "signature": "hyper_field_mip_core.py::def:get_dominant_mode",
+            "relevance": 0.5,
+            "source": "hyper_field_mip_core.py"
+          },
+          {
+            "name": "filter_mode",
+            "signature": "hyper_field_mip_core.py::def:filter_mode",
+            "relevance": 0.5,
+            "source": "hyper_field_mip_core.py"
+          },
+          {
+            "name": "resonance_condition",
+            "signature": "hyper_field_mip_core.py::def:resonance_condition",
+            "relevance": 0.5,
+            "source": "hyper_field_mip_core.py"
+          },
+          {
+            "name": "initialize_field",
+            "signature": "hyper_field_mip_core.py::def:initialize_field",
+            "relevance": 0.6,
+            "source": "hyper_field_mip_core.py"
+          },
+          {
+            "name": "field_challenge",
+            "signature": "hyper_field_mip_core.py::def:field_challenge",
+            "relevance": 0.6,
+            "source": "hyper_field_mip_core.py"
+          },
+          {
+            "name": "run_field_verification_cycle",
+            "signature": "hyper_field_mip_core.py::def:run_field_verification_cycle",
+            "relevance": 0.6,
+            "source": "hyper_field_mip_core.py"
+          },
+          {
+            "name": "get_mip_metrics",
+            "signature": "hyper_field_mip_core.py::def:get_mip_metrics",
+            "relevance": 0.5,
+            "source": "hyper_field_mip_core.py"
+          },
+          {
+            "name": "compute_combined_emergence",
+            "signature": "hyper_field_mip_core.py::def:compute_combined_emergence",
+            "relevance": 0.5,
+            "source": "hyper_field_mip_core.py"
+          },
+          {
+            "name": "to_dict",
+            "signature": "linguistic_field.py::def:to_dict",
+            "relevance": 0.5,
+            "source": "linguistic_field.py"
+          },
+          {
+            "name": "__init__",
+            "signature": "linguistic_field.py::def:__init__",
+            "relevance": 0.5,
+            "source": "linguistic_field.py"
+          },
+          {
+            "name": "_init_line_states",
+            "signature": "linguistic_field.py::def:_init_line_states",
+            "relevance": 0.5,
+            "source": "linguistic_field.py"
+          },
+          {
+            "name": "_init_propagation_weights",
+            "signature": "linguistic_field.py::def:_init_propagation_weights",
+            "relevance": 0.5,
+            "source": "linguistic_field.py"
+          },
+          {
+            "name": "generate_context",
+            "signature": "linguistic_field.py::def:generate_context",
+            "relevance": 0.5,
+            "source": "linguistic_field.py"
+          },
+          {
+            "name": "_build_context_tensor_manual",
+            "signature": "linguistic_field.py::def:_build_context_tensor_manual",
+            "relevance": 0.5,
+            "source": "linguistic_field.py"
+          },
+          {
+            "name": "_state_to_vector",
+            "signature": "linguistic_field.py::def:_state_to_vector",
+            "relevance": 0.5,
+            "source": "linguistic_field.py"
+          },
+          {
+            "name": "update_context",
+            "signature": "linguistic_field.py::def:update_context",
+            "relevance": 0.5,
+            "source": "linguistic_field.py"
+          },
+          {
+            "name": "_diffuse_anomaly",
+            "signature": "linguistic_field.py::def:_diffuse_anomaly",
+            "relevance": 0.5,
+            "source": "linguistic_field.py"
+          },
+          {
+            "name": "_apply_surge",
+            "signature": "linguistic_field.py::def:_apply_surge",
+            "relevance": 0.5,
+            "source": "linguistic_field.py"
+          },
+          {
+            "name": "_apply_pragmatic_feedback",
+            "signature": "linguistic_field.py::def:_apply_pragmatic_feedback",
+            "relevance": 0.5,
+            "source": "linguistic_field.py"
+          },
+          {
+            "name": "propagate_context",
+            "signature": "linguistic_field.py::def:propagate_context",
+            "relevance": 0.5,
+            "source": "linguistic_field.py"
+          },
+          {
+            "name": "_update_metrics",
+            "signature": "linguistic_field.py::def:_update_metrics",
+            "relevance": 0.5,
+            "source": "linguistic_field.py"
+          },
+          {
+            "name": "_cosine_similarity",
+            "signature": "linguistic_field.py::def:_cosine_similarity",
+            "relevance": 0.5,
+            "source": "linguistic_field.py"
+          },
+          {
+            "name": "get_context_for_grammar",
+            "signature": "linguistic_field.py::def:get_context_for_grammar",
+            "relevance": 0.5,
+            "source": "linguistic_field.py"
+          },
+          {
+            "name": "get_context_vector",
+            "signature": "linguistic_field.py::def:get_context_vector",
+            "relevance": 0.5,
+            "source": "linguistic_field.py"
+          },
+          {
+            "name": "_init_type_system",
+            "signature": "linguistic_field.py::def:_init_type_system",
+            "relevance": 0.5,
+            "source": "linguistic_field.py"
+          },
+          {
+            "name": "_init_default_rules",
+            "signature": "linguistic_field.py::def:_init_default_rules",
+            "relevance": 0.5,
+            "source": "linguistic_field.py"
+          },
+          {
+            "name": "add_rule",
+            "signature": "linguistic_field.py::def:add_rule",
+            "relevance": 0.5,
+            "source": "linguistic_field.py"
+          },
+          {
+            "name": "parse",
+            "signature": "linguistic_field.py::def:parse",
+            "relevance": 0.5,
+            "source": "linguistic_field.py"
+          },
+          {
+            "name": "_infer_type",
+            "signature": "linguistic_field.py::def:_infer_type",
+            "relevance": 0.5,
+            "source": "linguistic_field.py"
+          },
+          {
+            "name": "_match_rule",
+            "signature": "linguistic_field.py::def:_match_rule",
+            "relevance": 0.5,
+            "source": "linguistic_field.py"
+          },
+          {
+            "name": "_execute_rule_action",
+            "signature": "linguistic_field.py::def:_execute_rule_action",
+            "relevance": 0.5,
+            "source": "linguistic_field.py"
+          },
+          {
+            "name": "_type_check",
+            "signature": "linguistic_field.py::def:_type_check",
+            "relevance": 0.5,
+            "source": "linguistic_field.py"
+          },
+          {
+            "name": "_compute_parse_confidence",
+            "signature": "linguistic_field.py::def:_compute_parse_confidence",
+            "relevance": 0.5,
+            "source": "linguistic_field.py"
+          },
+          {
+            "name": "validate_syntax",
+            "signature": "linguistic_field.py::def:validate_syntax",
+            "relevance": 0.5,
+            "source": "linguistic_field.py"
+          },
+          {
+            "name": "evolve_grammar",
+            "signature": "linguistic_field.py::def:evolve_grammar",
+            "relevance": 0.5,
+            "source": "linguistic_field.py"
+          },
+          {
+            "name": "_combine_rules",
+            "signature": "linguistic_field.py::def:_combine_rules",
+            "relevance": 0.5,
+            "source": "linguistic_field.py"
+          },
+          {
+            "name": "_adjust_priorities",
+            "signature": "linguistic_field.py::def:_adjust_priorities",
+            "relevance": 0.5,
+            "source": "linguistic_field.py"
+          },
+          {
+            "name": "get_grammar_summary",
+            "signature": "linguistic_field.py::def:get_grammar_summary",
+            "relevance": 0.5,
+            "source": "linguistic_field.py"
+          },
+          {
+            "name": "get_grammar_hash",
+            "signature": "linguistic_field.py::def:get_grammar_hash",
+            "relevance": 0.5,
+            "source": "linguistic_field.py"
+          },
+          {
+            "name": "_init_semantic_space",
+            "signature": "linguistic_field.py::def:_init_semantic_space",
+            "relevance": 0.5,
+            "source": "linguistic_field.py"
+          },
+          {
+            "name": "_init_patterns",
+            "signature": "linguistic_field.py::def:_init_patterns",
+            "relevance": 0.5,
+            "source": "linguistic_field.py"
+          },
+          {
+            "name": "map_meaning",
+            "signature": "linguistic_field.py::def:map_meaning",
+            "relevance": 0.5,
+            "source": "linguistic_field.py"
+          },
+          {
+            "name": "_map_message_meaning",
+            "signature": "linguistic_field.py::def:_map_message_meaning",
+            "relevance": 0.5,
+            "source": "linguistic_field.py"
+          },
+          {
+            "name": "_detect_ambiguities",
+            "signature": "linguistic_field.py::def:_detect_ambiguities",
+            "relevance": 0.5,
+            "source": "linguistic_field.py"
+          },
+          {
+            "name": "_resolve_ambiguity",
+            "signature": "linguistic_field.py::def:_resolve_ambiguity",
+            "relevance": 0.5,
+            "source": "linguistic_field.py"
+          },
+          {
+            "name": "_compute_confidence",
+            "signature": "linguistic_field.py::def:_compute_confidence",
+            "relevance": 0.5,
+            "source": "linguistic_field.py"
+          },
+          {
+            "name": "semantic_consensus",
+            "signature": "linguistic_field.py::def:semantic_consensus",
+            "relevance": 0.5,
+            "source": "linguistic_field.py"
+          },
+          {
+            "name": "resolve_ambiguity",
+            "signature": "linguistic_field.py::def:resolve_ambiguity",
+            "relevance": 0.5,
+            "source": "linguistic_field.py"
+          },
+          {
+            "name": "shift_meaning",
+            "signature": "linguistic_field.py::def:shift_meaning",
+            "relevance": 0.5,
+            "source": "linguistic_field.py"
+          },
+          {
+            "name": "to_vector",
+            "signature": "tensor_field.py::def:to_vector",
+            "relevance": 0.5,
+            "source": "tensor_field.py"
+          },
+          {
+            "name": "__init__",
+            "signature": "tensor_field.py::def:__init__",
+            "relevance": 0.5,
+            "source": "tensor_field.py"
+          },
+          {
+            "name": "_init_weights",
+            "signature": "tensor_field.py::def:_init_weights",
+            "relevance": 0.5,
+            "source": "tensor_field.py"
+          },
+          {
+            "name": "build_tensor",
+            "signature": "tensor_field.py::def:build_tensor",
+            "relevance": 0.5,
+            "source": "tensor_field.py"
+          },
+          {
+            "name": "_space_modulator",
+            "signature": "tensor_field.py::def:_space_modulator",
+            "relevance": 0.5,
+            "source": "tensor_field.py"
+          },
+          {
+            "name": "contract",
+            "signature": "tensor_field.py::def:contract",
+            "relevance": 0.5,
+            "source": "tensor_field.py"
+          },
+          {
+            "name": "_predict_trend",
+            "signature": "tensor_field.py::def:_predict_trend",
+            "relevance": 0.5,
+            "source": "tensor_field.py"
+          },
+          {
+            "name": "detect_anomaly",
+            "signature": "tensor_field.py::def:detect_anomaly",
+            "relevance": 0.5,
+            "source": "tensor_field.py"
+          },
+          {
+            "name": "_generate_recommendation",
+            "signature": "tensor_field.py::def:_generate_recommendation",
+            "relevance": 0.5,
+            "source": "tensor_field.py"
+          },
+          {
+            "name": "predict_trend",
+            "signature": "tensor_field.py::def:predict_trend",
+            "relevance": 0.5,
+            "source": "tensor_field.py"
+          },
+          {
+            "name": "surge_tensor_injection",
+            "signature": "tensor_field.py::def:surge_tensor_injection",
+            "relevance": 0.5,
+            "source": "tensor_field.py"
+          },
+          {
+            "name": "recover_from_surge",
+            "signature": "tensor_field.py::def:recover_from_surge",
+            "relevance": 0.5,
+            "source": "tensor_field.py"
+          },
+          {
+            "name": "update_baseline",
+            "signature": "tensor_field.py::def:update_baseline",
+            "relevance": 0.5,
+            "source": "tensor_field.py"
+          },
+          {
+            "name": "add_snapshot",
+            "signature": "tensor_field.py::def:add_snapshot",
+            "relevance": 0.5,
+            "source": "tensor_field.py"
+          },
+          {
+            "name": "get_field_topology",
+            "signature": "tensor_field.py::def:get_field_topology",
+            "relevance": 0.6,
+            "source": "tensor_field.py"
+          },
+          {
+            "name": "_compute_entropy",
+            "signature": "tensor_field.py::def:_compute_entropy",
+            "relevance": 0.5,
+            "source": "tensor_field.py"
+          },
+          {
+            "name": "register_callback",
+            "signature": "tensor_field.py::def:register_callback",
+            "relevance": 0.5,
+            "source": "tensor_field.py"
+          },
+          {
+            "name": "beat_level_contraction",
+            "signature": "tensor_field.py::def:beat_level_contraction",
+            "relevance": 0.5,
+            "source": "tensor_field.py"
+          },
+          {
+            "name": "simulate_beats",
+            "signature": "tensor_field.py::def:simulate_beats",
+            "relevance": 0.5,
+            "source": "tensor_field.py"
+          },
+          {
+            "name": "generate_normal_state",
+            "signature": "tensor_field.py::def:generate_normal_state",
+            "relevance": 0.5,
+            "source": "tensor_field.py"
+          },
+          {
+            "name": "generate_degraded_state",
+            "signature": "tensor_field.py::def:generate_degraded_state",
+            "relevance": 0.5,
+            "source": "tensor_field.py"
+          },
+          {
+            "name": "generate_surge_state",
+            "signature": "tensor_field.py::def:generate_surge_state",
+            "relevance": 0.5,
+            "source": "tensor_field.py"
+          },
+          {
+            "name": "run_latency_experiment",
+            "signature": "tensor_field.py::def:run_latency_experiment",
+            "relevance": 0.5,
+            "source": "tensor_field.py"
+          },
+          {
+            "name": "run_accuracy_experiment",
+            "signature": "tensor_field.py::def:run_accuracy_experiment",
+            "relevance": 0.5,
+            "source": "tensor_field.py"
+          },
+          {
+            "name": "run_information_density_experiment",
+            "signature": "tensor_field.py::def:run_information_density_experiment",
+            "relevance": 0.5,
+            "source": "tensor_field.py"
+          },
+          {
+            "name": "run_full_comparison",
+            "signature": "tensor_field.py::def:run_full_comparison",
+            "relevance": 0.5,
+            "source": "tensor_field.py"
+          },
+          {
+            "name": "print_report",
+            "signature": "tensor_field.py::def:print_report",
+            "relevance": 0.5,
+            "source": "tensor_field.py"
+          },
+          {
+            "name": "run_surge_compatibility_experiment",
+            "signature": "tensor_field.py::def:run_surge_compatibility_experiment",
+            "relevance": 0.5,
+            "source": "tensor_field.py"
+          },
+          {
+            "name": "complex_state_generator",
+            "signature": "tensor_field.py::def:complex_state_generator",
+            "relevance": 0.5,
+            "source": "tensor_field.py"
+          }
+        ]
+      },
+      "json_key": {
+        "type": "json_key",
+        "node_count": 4,
+        "avg_relevance": 0.7,
+        "nodes": [
+          {
+            "name": "independent",
+            "signature": "linguistic_field_test_results.json::key:independent",
+            "relevance": 0.7,
+            "source": "linguistic_field_test_results.json"
+          },
+          {
+            "name": "cycle",
+            "signature": "linguistic_field_test_results.json::key:cycle",
+            "relevance": 0.7,
+            "source": "linguistic_field_test_results.json"
+          },
+          {
+            "name": "evolution",
+            "signature": "linguistic_field_test_results.json::key:evolution",
+            "relevance": 0.7,
+            "source": "linguistic_field_test_results.json"
+          },
+          {
+            "name": "integration",
+            "signature": "linguistic_field_test_results.json::key:integration",
+            "relevance": 0.7,
+            "source": "linguistic_field_test_results.json"
+          }
+        ]
+      }
+    }
+  },
+  "knowledge_nodes": [
+    {
+      "type": "md_heading",
+      "name": "qfa线 SI5 升级自证报告",
+      "source_file": "qfa-SI5-self-cert-report.md",
+      "signature": "qfa-SI5-self-cert-report.md::heading:qfa线 SI5 升级自证报告",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "线基本信息",
+      "source_file": "qfa-SI5-self-cert-report.md",
+      "signature": "qfa-SI5-self-cert-report.md::heading:线基本信息",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "1. 升级资格评估",
+      "source_file": "qfa-SI5-self-cert-report.md",
+      "signature": "qfa-SI5-self-cert-report.md::heading:1. 升级资格评估",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "1.1 数据充分性: 0.89",
+      "source_file": "qfa-SI5-self-cert-report.md",
+      "signature": "qfa-SI5-self-cert-report.md::heading:1.1 数据充分性: 0.89",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "1.2 验证充分性: 0.90",
+      "source_file": "qfa-SI5-self-cert-report.md",
+      "signature": "qfa-SI5-self-cert-report.md::heading:1.2 验证充分性: 0.90",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "1.3 形式化程度: 0.95",
+      "source_file": "qfa-SI5-self-cert-report.md",
+      "signature": "qfa-SI5-self-cert-report.md::heading:1.3 形式化程度: 0.95",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "1.4 边界测试",
+      "source_file": "qfa-SI5-self-cert-report.md",
+      "signature": "qfa-SI5-self-cert-report.md::heading:1.4 边界测试",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "1.5 交叉验证: 0.93",
+      "source_file": "qfa-SI5-self-cert-report.md",
+      "signature": "qfa-SI5-self-cert-report.md::heading:1.5 交叉验证: 0.93",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "2. 核心能力演进",
+      "source_file": "qfa-SI5-self-cert-report.md",
+      "signature": "qfa-SI5-self-cert-report.md::heading:2. 核心能力演进",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "2.1 形式验证引擎 v4.0→v5.0",
+      "source_file": "qfa-SI5-self-cert-report.md",
+      "signature": "qfa-SI5-self-cert-report.md::heading:2.1 形式验证引擎 v4.0→v5.0",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "2.2 OMNI集成",
+      "source_file": "qfa-SI5-self-cert-report.md",
+      "signature": "qfa-SI5-self-cert-report.md::heading:2.2 OMNI集成",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "3. 验证数据附录",
+      "source_file": "qfa-SI5-self-cert-report.md",
+      "signature": "qfa-SI5-self-cert-report.md::heading:3. 验证数据附录",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "表A: 关键指标对比",
+      "source_file": "qfa-SI5-self-cert-report.md",
+      "signature": "qfa-SI5-self-cert-report.md::heading:表A: 关键指标对比",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "表B: 边界测试结果",
+      "source_file": "qfa-SI5-self-cert-report.md",
+      "signature": "qfa-SI5-self-cert-report.md::heading:表B: 边界测试结果",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "4. 结论",
+      "source_file": "qfa-SI5-self-cert-report.md",
+      "signature": "qfa-SI5-self-cert-report.md::heading:4. 结论",
+      "relevance": 0.75
+    },
+    {
+      "type": "python_class",
+      "name": "class",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::class:class",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "YonedaBinding",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::class:YonedaBinding",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "ChainHash",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::class:ChainHash",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "QuantumBase",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::class:QuantumBase",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_class",
+      "name": "QuantumTeleport",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::class:QuantumTeleport",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_class",
+      "name": "TaskonCapsule",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::class:TaskonCapsule",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "OMNIQuantumField",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::class:OMNIQuantumField",
+      "relevance": 0.7
+    },
+    {
+      "type": "python_function",
+      "name": "evolve",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::def:evolve",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "functor_repr",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::def:functor_repr",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "to_dict",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::def:to_dict",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "__init__",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::def:__init__",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "register_pattern",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::def:register_pattern",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "compute_hom",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::def:compute_hom",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "forward_yoneda",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::def:forward_yoneda",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "backward_yoneda",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::def:backward_yoneda",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_frobenius_similarity",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::def:_frobenius_similarity",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_structural_similarity",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::def:_structural_similarity",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "yoneda_isomorphism_check",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::def:yoneda_isomorphism_check",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_hash",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::def:_hash",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_convert_numpy",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::def:_convert_numpy",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_hash_pair",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::def:_hash_pair",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "append",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::def:append",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_rebuild_merkle_tree",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::def:_rebuild_merkle_tree",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "merkle_root",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::def:merkle_root",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "verify",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::def:verify",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_verify_merkle_membership",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::def:_verify_merkle_membership",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_merkle_path",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::def:get_merkle_path",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "chain_integrity",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::def:chain_integrity",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "tamper_detect",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::def:tamper_detect",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "classical_to_tensor",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::def:classical_to_tensor",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "tensor_to_amplitude",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::def:tensor_to_amplitude",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "set_state",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::def:set_state",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "apply_gate",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::def:apply_gate",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_single_qubit_gate_tensor",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::def:_single_qubit_gate_tensor",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_two_qubit_gate_tensor",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::def:_two_qubit_gate_tensor",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_build_permuted_gate",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::def:_build_permuted_gate",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "create_bell_pair",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::def:create_bell_pair",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "measure",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::def:measure",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_amplitudes",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::def:get_amplitudes",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "density_matrix",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::def:density_matrix",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "von_neumann_entropy",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::def:von_neumann_entropy",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "fidelity",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::def:fidelity",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "prepare_teleportation",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::def:prepare_teleportation",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "alice_operations",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::def:alice_operations",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "bob_correction",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::def:bob_correction",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "teleport",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::def:teleport",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_build_cnot",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::def:_build_cnot",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_build_single_gate",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::def:_build_single_gate",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_extract_qubit_state",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::def:_extract_qubit_state",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_embed_qubit_index",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::def:_embed_qubit_index",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_encode_payload_to_quantum",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::def:_encode_payload_to_quantum",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_function",
+      "name": "_sign_capsule",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::def:_sign_capsule",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "entangle",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::def:entangle",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "verify_payload",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::def:verify_payload",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "add_merkle_proof",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::def:add_merkle_proof",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_init_11_line_topology",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::def:_init_11_line_topology",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "build_pattern_network",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::def:build_pattern_network",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "reconstruct_pattern_tower",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::def:reconstruct_pattern_tower",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "create_capsule",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::def:create_capsule",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "teleport_capsule",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::def:teleport_capsule",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_system_state",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::def:get_system_state",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "run_experiments",
+      "source_file": "quantum_field.py",
+      "signature": "quantum_field.py::def:run_experiments",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "DimensionType",
+      "source_file": "field_entropy.py",
+      "signature": "field_entropy.py::class:DimensionType",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "class",
+      "source_file": "field_entropy.py",
+      "signature": "field_entropy.py::class:class",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "FieldEntropy",
+      "source_file": "field_entropy.py",
+      "signature": "field_entropy.py::class:FieldEntropy",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_class",
+      "name": "OMNIHUBSimulator",
+      "source_file": "field_entropy.py",
+      "signature": "field_entropy.py::class:OMNIHUBSimulator",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "EntropyExperiment",
+      "source_file": "field_entropy.py",
+      "signature": "field_entropy.py::class:EntropyExperiment",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "to_dict",
+      "source_file": "field_entropy.py",
+      "signature": "field_entropy.py::def:to_dict",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "__init__",
+      "source_file": "field_entropy.py",
+      "signature": "field_entropy.py::def:__init__",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_normalize_to_probability",
+      "source_file": "field_entropy.py",
+      "signature": "field_entropy.py::def:_normalize_to_probability",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_compute_shannon_entropy",
+      "source_file": "field_entropy.py",
+      "signature": "field_entropy.py::def:_compute_shannon_entropy",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "compute_field_entropy",
+      "source_file": "field_entropy.py",
+      "signature": "field_entropy.py::def:compute_field_entropy",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_function",
+      "name": "compute_joint_entropy",
+      "source_file": "field_entropy.py",
+      "signature": "field_entropy.py::def:compute_joint_entropy",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "compute_mutual_information",
+      "source_file": "field_entropy.py",
+      "signature": "field_entropy.py::def:compute_mutual_information",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "compute_cross_entropy",
+      "source_file": "field_entropy.py",
+      "signature": "field_entropy.py::def:compute_cross_entropy",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "compute_kl_divergence",
+      "source_file": "field_entropy.py",
+      "signature": "field_entropy.py::def:compute_kl_divergence",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "compute_conditional_entropy",
+      "source_file": "field_entropy.py",
+      "signature": "field_entropy.py::def:compute_conditional_entropy",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "entropy_profile",
+      "source_file": "field_entropy.py",
+      "signature": "field_entropy.py::def:entropy_profile",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_compute_entropy_gradient",
+      "source_file": "field_entropy.py",
+      "signature": "field_entropy.py::def:_compute_entropy_gradient",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "compute_debt_finding_entropy_map",
+      "source_file": "field_entropy.py",
+      "signature": "field_entropy.py::def:compute_debt_finding_entropy_map",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "entropy_flow",
+      "source_file": "field_entropy.py",
+      "signature": "field_entropy.py::def:entropy_flow",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "compute_entropy_current",
+      "source_file": "field_entropy.py",
+      "signature": "field_entropy.py::def:compute_entropy_current",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "compute_self_drive_index",
+      "source_file": "field_entropy.py",
+      "signature": "field_entropy.py::def:compute_self_drive_index",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "compute_system_temperature",
+      "source_file": "field_entropy.py",
+      "signature": "field_entropy.py::def:compute_system_temperature",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "generate_state",
+      "source_file": "field_entropy.py",
+      "signature": "field_entropy.py::def:generate_state",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "generate_spin_sequence",
+      "source_file": "field_entropy.py",
+      "signature": "field_entropy.py::def:generate_spin_sequence",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "run_experiment_1_basic_entropy",
+      "source_file": "field_entropy.py",
+      "signature": "field_entropy.py::def:run_experiment_1_basic_entropy",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "run_experiment_2_debt_finding_map",
+      "source_file": "field_entropy.py",
+      "signature": "field_entropy.py::def:run_experiment_2_debt_finding_map",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "run_experiment_3_entropy_flow",
+      "source_file": "field_entropy.py",
+      "signature": "field_entropy.py::def:run_experiment_3_entropy_flow",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "run_experiment_4_spin_dynamics",
+      "source_file": "field_entropy.py",
+      "signature": "field_entropy.py::def:run_experiment_4_spin_dynamics",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "run_experiment_5_entropy_law",
+      "source_file": "field_entropy.py",
+      "signature": "field_entropy.py::def:run_experiment_5_entropy_law",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "run_all_experiments",
+      "source_file": "field_entropy.py",
+      "signature": "field_entropy.py::def:run_all_experiments",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "save_results",
+      "source_file": "field_entropy.py",
+      "signature": "field_entropy.py::def:save_results",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "PulseShape",
+      "source_file": "field_transient_dynamics.py",
+      "signature": "field_transient_dynamics.py::class:PulseShape",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "DecayModel",
+      "source_file": "field_transient_dynamics.py",
+      "signature": "field_transient_dynamics.py::class:DecayModel",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "class",
+      "source_file": "field_transient_dynamics.py",
+      "signature": "field_transient_dynamics.py::class:class",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "FieldDynamics",
+      "source_file": "field_transient_dynamics.py",
+      "signature": "field_transient_dynamics.py::class:FieldDynamics",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_class",
+      "name": "TransientInjector",
+      "source_file": "field_transient_dynamics.py",
+      "signature": "field_transient_dynamics.py::class:TransientInjector",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "RipplePropagator",
+      "source_file": "field_transient_dynamics.py",
+      "signature": "field_transient_dynamics.py::class:RipplePropagator",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "BidirectionalDriveV2",
+      "source_file": "field_transient_dynamics.py",
+      "signature": "field_transient_dynamics.py::class:BidirectionalDriveV2",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "FieldAwareness",
+      "source_file": "field_transient_dynamics.py",
+      "signature": "field_transient_dynamics.py::class:FieldAwareness",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_class",
+      "name": "ExperimentRunner",
+      "source_file": "field_transient_dynamics.py",
+      "signature": "field_transient_dynamics.py::class:ExperimentRunner",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "__post_init__",
+      "source_file": "field_transient_dynamics.py",
+      "signature": "field_transient_dynamics.py::def:__post_init__",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "copy",
+      "source_file": "field_transient_dynamics.py",
+      "signature": "field_transient_dynamics.py::def:copy",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "to_dict",
+      "source_file": "field_transient_dynamics.py",
+      "signature": "field_transient_dynamics.py::def:to_dict",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "age",
+      "source_file": "field_transient_dynamics.py",
+      "signature": "field_transient_dynamics.py::def:age",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "__init__",
+      "source_file": "field_transient_dynamics.py",
+      "signature": "field_transient_dynamics.py::def:__init__",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_init_coupling_matrix",
+      "source_file": "field_transient_dynamics.py",
+      "signature": "field_transient_dynamics.py::def:_init_coupling_matrix",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_init_field_state",
+      "source_file": "field_transient_dynamics.py",
+      "signature": "field_transient_dynamics.py::def:_init_field_state",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_function",
+      "name": "_laplacian_1d",
+      "source_file": "field_transient_dynamics.py",
+      "signature": "field_transient_dynamics.py::def:_laplacian_1d",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "evolve",
+      "source_file": "field_transient_dynamics.py",
+      "signature": "field_transient_dynamics.py::def:evolve",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_record_state",
+      "source_file": "field_transient_dynamics.py",
+      "signature": "field_transient_dynamics.py::def:_record_state",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "potential_energy",
+      "source_file": "field_transient_dynamics.py",
+      "signature": "field_transient_dynamics.py::def:potential_energy",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_function",
+      "name": "kinetic_energy",
+      "source_file": "field_transient_dynamics.py",
+      "signature": "field_transient_dynamics.py::def:kinetic_energy",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_function",
+      "name": "total_energy",
+      "source_file": "field_transient_dynamics.py",
+      "signature": "field_transient_dynamics.py::def:total_energy",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_function",
+      "name": "field_gradient",
+      "source_file": "field_transient_dynamics.py",
+      "signature": "field_transient_dynamics.py::def:field_gradient",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_function",
+      "name": "equilibrium_point",
+      "source_file": "field_transient_dynamics.py",
+      "signature": "field_transient_dynamics.py::def:equilibrium_point",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "field_coherence",
+      "source_file": "field_transient_dynamics.py",
+      "signature": "field_transient_dynamics.py::def:field_coherence",
+      "relevance": 0.7
+    },
+    {
+      "type": "python_function",
+      "name": "get_state",
+      "source_file": "field_transient_dynamics.py",
+      "signature": "field_transient_dynamics.py::def:get_state",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "set_state",
+      "source_file": "field_transient_dynamics.py",
+      "signature": "field_transient_dynamics.py::def:set_state",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "inject",
+      "source_file": "field_transient_dynamics.py",
+      "signature": "field_transient_dynamics.py::def:inject",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_generate_pulse",
+      "source_file": "field_transient_dynamics.py",
+      "signature": "field_transient_dynamics.py::def:_generate_pulse",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "pulse_shape",
+      "source_file": "field_transient_dynamics.py",
+      "signature": "field_transient_dynamics.py::def:pulse_shape",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "decay_model",
+      "source_file": "field_transient_dynamics.py",
+      "signature": "field_transient_dynamics.py::def:decay_model",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "superpose",
+      "source_file": "field_transient_dynamics.py",
+      "signature": "field_transient_dynamics.py::def:superpose",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "measure_transient_lifetime",
+      "source_file": "field_transient_dynamics.py",
+      "signature": "field_transient_dynamics.py::def:measure_transient_lifetime",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "update_time",
+      "source_file": "field_transient_dynamics.py",
+      "signature": "field_transient_dynamics.py::def:update_time",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_active_pulses",
+      "source_file": "field_transient_dynamics.py",
+      "signature": "field_transient_dynamics.py::def:get_active_pulses",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "create_ripple",
+      "source_file": "field_transient_dynamics.py",
+      "signature": "field_transient_dynamics.py::def:create_ripple",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "propagate_step",
+      "source_file": "field_transient_dynamics.py",
+      "signature": "field_transient_dynamics.py::def:propagate_step",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_ripple_field",
+      "source_file": "field_transient_dynamics.py",
+      "signature": "field_transient_dynamics.py::def:_ripple_field",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_function",
+      "name": "damping",
+      "source_file": "field_transient_dynamics.py",
+      "signature": "field_transient_dynamics.py::def:damping",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "interference",
+      "source_file": "field_transient_dynamics.py",
+      "signature": "field_transient_dynamics.py::def:interference",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "recursive_ripple",
+      "source_file": "field_transient_dynamics.py",
+      "signature": "field_transient_dynamics.py::def:recursive_ripple",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "measure_ripple_amplitude",
+      "source_file": "field_transient_dynamics.py",
+      "signature": "field_transient_dynamics.py::def:measure_ripple_amplitude",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "visualize",
+      "source_file": "field_transient_dynamics.py",
+      "signature": "field_transient_dynamics.py::def:visualize",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_draw_ripple_tree",
+      "source_file": "field_transient_dynamics.py",
+      "signature": "field_transient_dynamics.py::def:_draw_ripple_tree",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "forward_drive",
+      "source_file": "field_transient_dynamics.py",
+      "signature": "field_transient_dynamics.py::def:forward_drive",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "reverse_drive",
+      "source_file": "field_transient_dynamics.py",
+      "signature": "field_transient_dynamics.py::def:reverse_drive",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "couple_drives",
+      "source_file": "field_transient_dynamics.py",
+      "signature": "field_transient_dynamics.py::def:couple_drives",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "drive_resonance",
+      "source_file": "field_transient_dynamics.py",
+      "signature": "field_transient_dynamics.py::def:drive_resonance",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "measure_drive_efficiency",
+      "source_file": "field_transient_dynamics.py",
+      "signature": "field_transient_dynamics.py::def:measure_drive_efficiency",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "field_perception",
+      "source_file": "field_transient_dynamics.py",
+      "signature": "field_transient_dynamics.py::def:field_perception",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_function",
+      "name": "field_memory",
+      "source_file": "field_transient_dynamics.py",
+      "signature": "field_transient_dynamics.py::def:field_memory",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_function",
+      "name": "field_intention",
+      "source_file": "field_transient_dynamics.py",
+      "signature": "field_transient_dynamics.py::def:field_intention",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_function",
+      "name": "field_emotion",
+      "source_file": "field_transient_dynamics.py",
+      "signature": "field_transient_dynamics.py::def:field_emotion",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_function",
+      "name": "run_all",
+      "source_file": "field_transient_dynamics.py",
+      "signature": "field_transient_dynamics.py::def:run_all",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "experiment_1_field_evolution",
+      "source_file": "field_transient_dynamics.py",
+      "signature": "field_transient_dynamics.py::def:experiment_1_field_evolution",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_function",
+      "name": "experiment_2_transient_injection",
+      "source_file": "field_transient_dynamics.py",
+      "signature": "field_transient_dynamics.py::def:experiment_2_transient_injection",
+      "relevance": 0.5
+    },
+    {
+      "type": "md_heading",
+      "name": "OMNI-HUB v3.9 - 场-瞬态-涟漪动力学架构实验报告",
+      "source_file": "field_transient_dynamics_report.md",
+      "signature": "field_transient_dynamics_report.md::heading:OMNI-HUB v3.9 - 场-瞬态-涟漪动力学架构实验报告",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "1. 架构概述",
+      "source_file": "field_transient_dynamics_report.md",
+      "signature": "field_transient_dynamics_report.md::heading:1. 架构概述",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "2. 实验结果",
+      "source_file": "field_transient_dynamics_report.md",
+      "signature": "field_transient_dynamics_report.md::heading:2. 实验结果",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "E1: 场演化 (Field Evolution)",
+      "source_file": "field_transient_dynamics_report.md",
+      "signature": "field_transient_dynamics_report.md::heading:E1: 场演化 (Field Evolution)",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "E2: 瞬态注入 (Transient Injection)",
+      "source_file": "field_transient_dynamics_report.md",
+      "signature": "field_transient_dynamics_report.md::heading:E2: 瞬态注入 (Transient Injection)",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "E3: 涟漪传播 (Ripple Propagation)",
+      "source_file": "field_transient_dynamics_report.md",
+      "signature": "field_transient_dynamics_report.md::heading:E3: 涟漪传播 (Ripple Propagation)",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "E4: 正反向驱动 (Bidirectional Drive)",
+      "source_file": "field_transient_dynamics_report.md",
+      "signature": "field_transient_dynamics_report.md::heading:E4: 正反向驱动 (Bidirectional Drive)",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "E5: 能量守恒 (Energy Conservation)",
+      "source_file": "field_transient_dynamics_report.md",
+      "signature": "field_transient_dynamics_report.md::heading:E5: 能量守恒 (Energy Conservation)",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "E6: 覆盖验证 (Coverage Validation)",
+      "source_file": "field_transient_dynamics_report.md",
+      "signature": "field_transient_dynamics_report.md::heading:E6: 覆盖验证 (Coverage Validation)",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "3. 关键发现",
+      "source_file": "field_transient_dynamics_report.md",
+      "signature": "field_transient_dynamics_report.md::heading:3. 关键发现",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "4. 架构优势 (vs 大讨论大协作)",
+      "source_file": "field_transient_dynamics_report.md",
+      "signature": "field_transient_dynamics_report.md::heading:4. 架构优势 (vs 大讨论大协作)",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "5. 可视化输出",
+      "source_file": "field_transient_dynamics_report.md",
+      "signature": "field_transient_dynamics_report.md::heading:5. 可视化输出",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "6. 代码文件",
+      "source_file": "field_transient_dynamics_report.md",
+      "signature": "field_transient_dynamics_report.md::heading:6. 代码文件",
+      "relevance": 0.75
+    },
+    {
+      "type": "python_class",
+      "name": "class",
+      "source_file": "hyper_field_mip_core.py",
+      "signature": "hyper_field_mip_core.py::class:class",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "HyperField",
+      "source_file": "hyper_field_mip_core.py",
+      "signature": "hyper_field_mip_core.py::class:HyperField",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_class",
+      "name": "FieldMIPVerifier",
+      "source_file": "hyper_field_mip_core.py",
+      "signature": "hyper_field_mip_core.py::class:FieldMIPVerifier",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_class",
+      "name": "HyperMIPStar",
+      "source_file": "hyper_field_mip_core.py",
+      "signature": "hyper_field_mip_core.py::class:HyperMIPStar",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "FieldEigenEngine",
+      "source_file": "hyper_field_mip_core.py",
+      "signature": "hyper_field_mip_core.py::class:FieldEigenEngine",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_class",
+      "name": "HyperFieldMIPCore",
+      "source_file": "hyper_field_mip_core.py",
+      "signature": "hyper_field_mip_core.py::class:HyperFieldMIPCore",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_function",
+      "name": "__init__",
+      "source_file": "hyper_field_mip_core.py",
+      "signature": "hyper_field_mip_core.py::def:__init__",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_build_hamiltonian",
+      "source_file": "hyper_field_mip_core.py",
+      "signature": "hyper_field_mip_core.py::def:_build_hamiltonian",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_function",
+      "name": "evolve",
+      "source_file": "hyper_field_mip_core.py",
+      "signature": "hyper_field_mip_core.py::def:evolve",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "add_pulse",
+      "source_file": "hyper_field_mip_core.py",
+      "signature": "hyper_field_mip_core.py::def:add_pulse",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "measure",
+      "source_file": "hyper_field_mip_core.py",
+      "signature": "hyper_field_mip_core.py::def:measure",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_entanglement_entropy",
+      "source_file": "hyper_field_mip_core.py",
+      "signature": "hyper_field_mip_core.py::def:get_entanglement_entropy",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_function",
+      "name": "get_correlation",
+      "source_file": "hyper_field_mip_core.py",
+      "signature": "hyper_field_mip_core.py::def:get_correlation",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "to_state_vector",
+      "source_file": "hyper_field_mip_core.py",
+      "signature": "hyper_field_mip_core.py::def:to_state_vector",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_field_metrics",
+      "source_file": "hyper_field_mip_core.py",
+      "signature": "hyper_field_mip_core.py::def:get_field_metrics",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_function",
+      "name": "register_prover",
+      "source_file": "hyper_field_mip_core.py",
+      "signature": "hyper_field_mip_core.py::def:register_prover",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "verify_field_consistency",
+      "source_file": "hyper_field_mip_core.py",
+      "signature": "hyper_field_mip_core.py::def:verify_field_consistency",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_function",
+      "name": "verify_field_causality",
+      "source_file": "hyper_field_mip_core.py",
+      "signature": "hyper_field_mip_core.py::def:verify_field_causality",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_function",
+      "name": "verify_field_unitarity",
+      "source_file": "hyper_field_mip_core.py",
+      "signature": "hyper_field_mip_core.py::def:verify_field_unitarity",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_function",
+      "name": "adaptive_threshold_from_field",
+      "source_file": "hyper_field_mip_core.py",
+      "signature": "hyper_field_mip_core.py::def:adaptive_threshold_from_field",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_function",
+      "name": "challenge_field",
+      "source_file": "hyper_field_mip_core.py",
+      "signature": "hyper_field_mip_core.py::def:challenge_field",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_function",
+      "name": "classical_value",
+      "source_file": "hyper_field_mip_core.py",
+      "signature": "hyper_field_mip_core.py::def:classical_value",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "tsirelson_bound",
+      "source_file": "hyper_field_mip_core.py",
+      "signature": "hyper_field_mip_core.py::def:tsirelson_bound",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "quantum_value",
+      "source_file": "hyper_field_mip_core.py",
+      "signature": "hyper_field_mip_core.py::def:quantum_value",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_function",
+      "name": "quantum_advantage",
+      "source_file": "hyper_field_mip_core.py",
+      "signature": "hyper_field_mip_core.py::def:quantum_advantage",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_function",
+      "name": "prove_re",
+      "source_file": "hyper_field_mip_core.py",
+      "signature": "hyper_field_mip_core.py::def:prove_re",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "eigen_decompose",
+      "source_file": "hyper_field_mip_core.py",
+      "signature": "hyper_field_mip_core.py::def:eigen_decompose",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_dominant_mode",
+      "source_file": "hyper_field_mip_core.py",
+      "signature": "hyper_field_mip_core.py::def:get_dominant_mode",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "filter_mode",
+      "source_file": "hyper_field_mip_core.py",
+      "signature": "hyper_field_mip_core.py::def:filter_mode",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "resonance_condition",
+      "source_file": "hyper_field_mip_core.py",
+      "signature": "hyper_field_mip_core.py::def:resonance_condition",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "initialize_field",
+      "source_file": "hyper_field_mip_core.py",
+      "signature": "hyper_field_mip_core.py::def:initialize_field",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_function",
+      "name": "field_challenge",
+      "source_file": "hyper_field_mip_core.py",
+      "signature": "hyper_field_mip_core.py::def:field_challenge",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_function",
+      "name": "run_field_verification_cycle",
+      "source_file": "hyper_field_mip_core.py",
+      "signature": "hyper_field_mip_core.py::def:run_field_verification_cycle",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_function",
+      "name": "get_mip_metrics",
+      "source_file": "hyper_field_mip_core.py",
+      "signature": "hyper_field_mip_core.py::def:get_mip_metrics",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "compute_combined_emergence",
+      "source_file": "hyper_field_mip_core.py",
+      "signature": "hyper_field_mip_core.py::def:compute_combined_emergence",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "LayerType",
+      "source_file": "linguistic_field.py",
+      "signature": "linguistic_field.py::class:LayerType",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "FlowDirection",
+      "source_file": "linguistic_field.py",
+      "signature": "linguistic_field.py::class:FlowDirection",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "EvolutionMode",
+      "source_file": "linguistic_field.py",
+      "signature": "linguistic_field.py::class:EvolutionMode",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "class",
+      "source_file": "linguistic_field.py",
+      "signature": "linguistic_field.py::class:class",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "ContextLayer",
+      "source_file": "linguistic_field.py",
+      "signature": "linguistic_field.py::class:ContextLayer",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "MockLineState",
+      "source_file": "linguistic_field.py",
+      "signature": "linguistic_field.py::class:MockLineState",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "GrammarLayer",
+      "source_file": "linguistic_field.py",
+      "signature": "linguistic_field.py::class:GrammarLayer",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "SemanticsLayer",
+      "source_file": "linguistic_field.py",
+      "signature": "linguistic_field.py::class:SemanticsLayer",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "to_dict",
+      "source_file": "linguistic_field.py",
+      "signature": "linguistic_field.py::def:to_dict",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "__init__",
+      "source_file": "linguistic_field.py",
+      "signature": "linguistic_field.py::def:__init__",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_init_line_states",
+      "source_file": "linguistic_field.py",
+      "signature": "linguistic_field.py::def:_init_line_states",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_init_propagation_weights",
+      "source_file": "linguistic_field.py",
+      "signature": "linguistic_field.py::def:_init_propagation_weights",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "generate_context",
+      "source_file": "linguistic_field.py",
+      "signature": "linguistic_field.py::def:generate_context",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_build_context_tensor_manual",
+      "source_file": "linguistic_field.py",
+      "signature": "linguistic_field.py::def:_build_context_tensor_manual",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_state_to_vector",
+      "source_file": "linguistic_field.py",
+      "signature": "linguistic_field.py::def:_state_to_vector",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "update_context",
+      "source_file": "linguistic_field.py",
+      "signature": "linguistic_field.py::def:update_context",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_diffuse_anomaly",
+      "source_file": "linguistic_field.py",
+      "signature": "linguistic_field.py::def:_diffuse_anomaly",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_apply_surge",
+      "source_file": "linguistic_field.py",
+      "signature": "linguistic_field.py::def:_apply_surge",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_apply_pragmatic_feedback",
+      "source_file": "linguistic_field.py",
+      "signature": "linguistic_field.py::def:_apply_pragmatic_feedback",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "propagate_context",
+      "source_file": "linguistic_field.py",
+      "signature": "linguistic_field.py::def:propagate_context",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_update_metrics",
+      "source_file": "linguistic_field.py",
+      "signature": "linguistic_field.py::def:_update_metrics",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_cosine_similarity",
+      "source_file": "linguistic_field.py",
+      "signature": "linguistic_field.py::def:_cosine_similarity",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_context_for_grammar",
+      "source_file": "linguistic_field.py",
+      "signature": "linguistic_field.py::def:get_context_for_grammar",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_context_vector",
+      "source_file": "linguistic_field.py",
+      "signature": "linguistic_field.py::def:get_context_vector",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_init_type_system",
+      "source_file": "linguistic_field.py",
+      "signature": "linguistic_field.py::def:_init_type_system",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_init_default_rules",
+      "source_file": "linguistic_field.py",
+      "signature": "linguistic_field.py::def:_init_default_rules",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "add_rule",
+      "source_file": "linguistic_field.py",
+      "signature": "linguistic_field.py::def:add_rule",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "parse",
+      "source_file": "linguistic_field.py",
+      "signature": "linguistic_field.py::def:parse",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_infer_type",
+      "source_file": "linguistic_field.py",
+      "signature": "linguistic_field.py::def:_infer_type",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_match_rule",
+      "source_file": "linguistic_field.py",
+      "signature": "linguistic_field.py::def:_match_rule",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_execute_rule_action",
+      "source_file": "linguistic_field.py",
+      "signature": "linguistic_field.py::def:_execute_rule_action",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_type_check",
+      "source_file": "linguistic_field.py",
+      "signature": "linguistic_field.py::def:_type_check",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_compute_parse_confidence",
+      "source_file": "linguistic_field.py",
+      "signature": "linguistic_field.py::def:_compute_parse_confidence",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "validate_syntax",
+      "source_file": "linguistic_field.py",
+      "signature": "linguistic_field.py::def:validate_syntax",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "evolve_grammar",
+      "source_file": "linguistic_field.py",
+      "signature": "linguistic_field.py::def:evolve_grammar",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_combine_rules",
+      "source_file": "linguistic_field.py",
+      "signature": "linguistic_field.py::def:_combine_rules",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_adjust_priorities",
+      "source_file": "linguistic_field.py",
+      "signature": "linguistic_field.py::def:_adjust_priorities",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_grammar_summary",
+      "source_file": "linguistic_field.py",
+      "signature": "linguistic_field.py::def:get_grammar_summary",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_grammar_hash",
+      "source_file": "linguistic_field.py",
+      "signature": "linguistic_field.py::def:get_grammar_hash",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_init_semantic_space",
+      "source_file": "linguistic_field.py",
+      "signature": "linguistic_field.py::def:_init_semantic_space",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_init_patterns",
+      "source_file": "linguistic_field.py",
+      "signature": "linguistic_field.py::def:_init_patterns",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "map_meaning",
+      "source_file": "linguistic_field.py",
+      "signature": "linguistic_field.py::def:map_meaning",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_map_message_meaning",
+      "source_file": "linguistic_field.py",
+      "signature": "linguistic_field.py::def:_map_message_meaning",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_detect_ambiguities",
+      "source_file": "linguistic_field.py",
+      "signature": "linguistic_field.py::def:_detect_ambiguities",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_resolve_ambiguity",
+      "source_file": "linguistic_field.py",
+      "signature": "linguistic_field.py::def:_resolve_ambiguity",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_compute_confidence",
+      "source_file": "linguistic_field.py",
+      "signature": "linguistic_field.py::def:_compute_confidence",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "semantic_consensus",
+      "source_file": "linguistic_field.py",
+      "signature": "linguistic_field.py::def:semantic_consensus",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "resolve_ambiguity",
+      "source_file": "linguistic_field.py",
+      "signature": "linguistic_field.py::def:resolve_ambiguity",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "shift_meaning",
+      "source_file": "linguistic_field.py",
+      "signature": "linguistic_field.py::def:shift_meaning",
+      "relevance": 0.5
+    },
+    {
+      "type": "md_heading",
+      "name": "OMNI-HUB Linguistic Field v3.8 测试验证报告",
+      "source_file": "linguistic_field_test_report.md",
+      "signature": "linguistic_field_test_report.md::heading:OMNI-HUB Linguistic Field v3.8 测试验证报告",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "1. 四层独立运行测试",
+      "source_file": "linguistic_field_test_report.md",
+      "signature": "linguistic_field_test_report.md::heading:1. 四层独立运行测试",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "语境层 (Context)",
+      "source_file": "linguistic_field_test_report.md",
+      "signature": "linguistic_field_test_report.md::heading:语境层 (Context)",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "语法层 (Grammar)",
+      "source_file": "linguistic_field_test_report.md",
+      "signature": "linguistic_field_test_report.md::heading:语法层 (Grammar)",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "语义层 (Semantics)",
+      "source_file": "linguistic_field_test_report.md",
+      "signature": "linguistic_field_test_report.md::heading:语义层 (Semantics)",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "语用层 (Pragmatics)",
+      "source_file": "linguistic_field_test_report.md",
+      "signature": "linguistic_field_test_report.md::heading:语用层 (Pragmatics)",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "2. 四层循环测试",
+      "source_file": "linguistic_field_test_report.md",
+      "signature": "linguistic_field_test_report.md::heading:2. 四层循环测试",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "3. 语用驱动进化测试",
+      "source_file": "linguistic_field_test_report.md",
+      "signature": "linguistic_field_test_report.md::heading:3. 语用驱动进化测试",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "进化链验证",
+      "source_file": "linguistic_field_test_report.md",
+      "signature": "linguistic_field_test_report.md::heading:进化链验证",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "场景报告",
+      "source_file": "linguistic_field_test_report.md",
+      "signature": "linguistic_field_test_report.md::heading:场景报告",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "4. 集成测试",
+      "source_file": "linguistic_field_test_report.md",
+      "signature": "linguistic_field_test_report.md::heading:4. 集成测试",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "集成循环验证",
+      "source_file": "linguistic_field_test_report.md",
+      "signature": "linguistic_field_test_report.md::heading:集成循环验证",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "5. 系统总结",
+      "source_file": "linguistic_field_test_report.md",
+      "signature": "linguistic_field_test_report.md::heading:5. 系统总结",
+      "relevance": 0.75
+    },
+    {
+      "type": "json_key",
+      "name": "independent",
+      "source_file": "linguistic_field_test_results.json",
+      "signature": "linguistic_field_test_results.json::key:independent",
+      "relevance": 0.7
+    },
+    {
+      "type": "json_key",
+      "name": "cycle",
+      "source_file": "linguistic_field_test_results.json",
+      "signature": "linguistic_field_test_results.json::key:cycle",
+      "relevance": 0.7
+    },
+    {
+      "type": "json_key",
+      "name": "evolution",
+      "source_file": "linguistic_field_test_results.json",
+      "signature": "linguistic_field_test_results.json::key:evolution",
+      "relevance": 0.7
+    },
+    {
+      "type": "json_key",
+      "name": "integration",
+      "source_file": "linguistic_field_test_results.json",
+      "signature": "linguistic_field_test_results.json::key:integration",
+      "relevance": 0.7
+    },
+    {
+      "type": "python_class",
+      "name": "SurgeLevel",
+      "source_file": "tensor_field.py",
+      "signature": "tensor_field.py::class:SurgeLevel",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "class",
+      "source_file": "tensor_field.py",
+      "signature": "tensor_field.py::class:class",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "TensorField",
+      "source_file": "tensor_field.py",
+      "signature": "tensor_field.py::class:TensorField",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_class",
+      "name": "BeatLevelEngine",
+      "source_file": "tensor_field.py",
+      "signature": "tensor_field.py::class:BeatLevelEngine",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "ComparisonExperiment",
+      "source_file": "tensor_field.py",
+      "signature": "tensor_field.py::class:ComparisonExperiment",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "to_vector",
+      "source_file": "tensor_field.py",
+      "signature": "tensor_field.py::def:to_vector",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "__init__",
+      "source_file": "tensor_field.py",
+      "signature": "tensor_field.py::def:__init__",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_init_weights",
+      "source_file": "tensor_field.py",
+      "signature": "tensor_field.py::def:_init_weights",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "build_tensor",
+      "source_file": "tensor_field.py",
+      "signature": "tensor_field.py::def:build_tensor",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_space_modulator",
+      "source_file": "tensor_field.py",
+      "signature": "tensor_field.py::def:_space_modulator",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "contract",
+      "source_file": "tensor_field.py",
+      "signature": "tensor_field.py::def:contract",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_predict_trend",
+      "source_file": "tensor_field.py",
+      "signature": "tensor_field.py::def:_predict_trend",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "detect_anomaly",
+      "source_file": "tensor_field.py",
+      "signature": "tensor_field.py::def:detect_anomaly",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_generate_recommendation",
+      "source_file": "tensor_field.py",
+      "signature": "tensor_field.py::def:_generate_recommendation",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "predict_trend",
+      "source_file": "tensor_field.py",
+      "signature": "tensor_field.py::def:predict_trend",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "surge_tensor_injection",
+      "source_file": "tensor_field.py",
+      "signature": "tensor_field.py::def:surge_tensor_injection",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "recover_from_surge",
+      "source_file": "tensor_field.py",
+      "signature": "tensor_field.py::def:recover_from_surge",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "update_baseline",
+      "source_file": "tensor_field.py",
+      "signature": "tensor_field.py::def:update_baseline",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "add_snapshot",
+      "source_file": "tensor_field.py",
+      "signature": "tensor_field.py::def:add_snapshot",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_field_topology",
+      "source_file": "tensor_field.py",
+      "signature": "tensor_field.py::def:get_field_topology",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_function",
+      "name": "_compute_entropy",
+      "source_file": "tensor_field.py",
+      "signature": "tensor_field.py::def:_compute_entropy",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "register_callback",
+      "source_file": "tensor_field.py",
+      "signature": "tensor_field.py::def:register_callback",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "beat_level_contraction",
+      "source_file": "tensor_field.py",
+      "signature": "tensor_field.py::def:beat_level_contraction",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "simulate_beats",
+      "source_file": "tensor_field.py",
+      "signature": "tensor_field.py::def:simulate_beats",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "generate_normal_state",
+      "source_file": "tensor_field.py",
+      "signature": "tensor_field.py::def:generate_normal_state",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "generate_degraded_state",
+      "source_file": "tensor_field.py",
+      "signature": "tensor_field.py::def:generate_degraded_state",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "generate_surge_state",
+      "source_file": "tensor_field.py",
+      "signature": "tensor_field.py::def:generate_surge_state",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "run_latency_experiment",
+      "source_file": "tensor_field.py",
+      "signature": "tensor_field.py::def:run_latency_experiment",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "run_accuracy_experiment",
+      "source_file": "tensor_field.py",
+      "signature": "tensor_field.py::def:run_accuracy_experiment",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "run_information_density_experiment",
+      "source_file": "tensor_field.py",
+      "signature": "tensor_field.py::def:run_information_density_experiment",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "run_full_comparison",
+      "source_file": "tensor_field.py",
+      "signature": "tensor_field.py::def:run_full_comparison",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "print_report",
+      "source_file": "tensor_field.py",
+      "signature": "tensor_field.py::def:print_report",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "run_surge_compatibility_experiment",
+      "source_file": "tensor_field.py",
+      "signature": "tensor_field.py::def:run_surge_compatibility_experiment",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "complex_state_generator",
+      "source_file": "tensor_field.py",
+      "signature": "tensor_field.py::def:complex_state_generator",
+      "relevance": 0.5
+    }
+  ],
+  "node_count": 312,
+  "si_level": 1,
+  "activity_level": 0.7128,
+  "contribution_score": 0.5678
+}

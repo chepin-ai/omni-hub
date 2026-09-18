@@ -1,0 +1,41 @@
+{
+  "operation": "entanglement_channel",
+  "line_a": "usrm",
+  "line_b": "vinf",
+  "timestamp": "2026-09-12T10:35:44.605478+00:00",
+  "description": "建立 usrm 与 vinf 之间的量子纠缠通道",
+  "strength": 0.67,
+  "bell_state": "psi_plus",
+  "entanglement_type": "moderate",
+  "correlated_distribution": {
+    "si0": {
+      "same_level_probability": 0.591,
+      "other_level_probability": 0.0818
+    },
+    "si1": {
+      "same_level_probability": 0.591,
+      "other_level_probability": 0.0818
+    },
+    "si2": {
+      "same_level_probability": 0.591,
+      "other_level_probability": 0.0818
+    },
+    "si3": {
+      "same_level_probability": 0.591,
+      "other_level_probability": 0.0818
+    },
+    "si4": {
+      "same_level_probability": 0.591,
+      "other_level_probability": 0.0818
+    },
+    "si5": {
+      "same_level_probability": 0.591,
+      "other_level_probability": 0.0818
+    }
+  },
+  "mutual_influence": {
+    "state_sync_threshold": 0.2,
+    "excite_propagation_prob": 0.67,
+    "health_correlation": 0.67
+  }
+}

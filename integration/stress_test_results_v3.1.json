@@ -1,0 +1,92 @@
+{
+  "timestamp": "2026-09-13T12:30:36.952590+00:00",
+  "version": "3.1",
+  "tests": [
+    {
+      "name": "双向驱动引擎",
+      "pass": true,
+      "details": {
+        "fwd_ack": true,
+        "rev_ack": true,
+        "pulse_ack": true,
+        "coupling_max": 6.486000000000003e-05
+      }
+    },
+    {
+      "name": "拓扑层级映射",
+      "pass": true,
+      "details": {
+        "line_nodes": 11,
+        "tower_nodes": 6,
+        "bridge_loss": 0.05,
+        "path_len": 4,
+        "line_health": 0.9545
+      }
+    },
+    {
+      "name": "云量子节点",
+      "pass": true,
+      "details": {
+        "entanglement": 0.7193477544352154,
+        "coherence": 0.831139,
+        "global_energy": -0.200807,
+        "has_optimal_config": true
+      }
+    },
+    {
+      "name": "塔级桥接",
+      "pass": true,
+      "details": {
+        "up_attenuation": 0.95,
+        "down_attenuation": 0.88,
+        "resonance": 0.374544,
+        "cascade_status": "cascaded"
+      }
+    },
+    {
+      "name": "环级编排器",
+      "pass": true,
+      "details": {
+        "status": "finalized",
+        "steps": 6,
+        "ack_rate": null,
+        "timeouts": null
+      }
+    },
+    {
+      "name": "协作闭环",
+      "pass": true,
+      "details": {
+        "quality_score": 0.9636,
+        "broadcast_ack": 0.8182,
+        "pressure_success_rate": null,
+        "pressure_avg_quality": null
+      }
+    },
+    {
+      "name": "并发压力测试",
+      "pass": true,
+      "details": {
+        "total": 1000,
+        "ack": 809,
+        "ack_rate": 0.809,
+        "avg_latency_ms": 87.79288000000001,
+        "elapsed_sec": 4.596484990001045
+      }
+    },
+    {
+      "name": "全链路集成",
+      "pass": true,
+      "details": {
+        "cascade_status": "cascaded",
+        "entanglement": 0.4788540594072127,
+        "loop_quality": 0.9
+      }
+    }
+  ],
+  "summary": {
+    "passed": 8,
+    "total": 8,
+    "pass_rate": 1.0
+  }
+}

@@ -1,0 +1,2030 @@
+{
+  "line_id": "usrm",
+  "version": "v2.0",
+  "total_nodes": 202,
+  "extraction_date": "2026-09-17",
+  "nodes": [
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "同构 iso-001",
+      "content": "tal}`);\n        }\n        break;\n      }\n      case 'check-univ': {\n        const iso = args[0] || 'iso-001';\n        const r = ucif2os.verificationEngine.checkUnivalenceTermination(iso);\n        addLine(`[Univalence] ${iso}: ${r.safe ? '✓安全' : '✗风险'} | 步数上界: ${r.maxSteps}`);\n        addLine(`  原因: ",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/src/panels/TerminalPanel.tsx",
+      "dependencies": [
+        "iso-001"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "usrm_node_0000"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "Plan — BEAT-3120-KEYWAY-01 钥道拍",
+      "content": "## Stage A: Q5联邦18仓Secrets元数据普查 - 检查18仓secrets（名+updated_at，值零入文） - 生成 QGL-KEY-CENSUS-120.json",
+      "source_file": "/mnt/agents/output/OMNI-HUB/plan-keyway-120.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "usrm_node_0001"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "Stage A: Q5联邦18仓Secrets元数据普查",
+      "content": "- 检查18仓secrets（名+updated_at，值零入文） - 生成 QGL-KEY-CENSUS-120.json - 标记T5缺口",
+      "source_file": "/mnt/agents/output/OMNI-HUB/plan-keyway-120.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "usrm_node_0002"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "Stage B: engine/key_mint.py 实现",
+      "content": "- os.urandom铸源 - ~/.keys 600权限 - sealed备份（KEY-RECOVERY-SEAL-01式） - 指纹册（sha256[:12]，值零入册）",
+      "source_file": "/mnt/agents/output/OMNI-HUB/plan-keyway-120.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "usrm_node_0003"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "Stage C: L类三钥制备 + 七测验证",
+      "content": "- QGL_HMAC_SK (90d) - QGL_OTP_POOL_SK (180d) - QGL_RECOVERY_ROT (360d) - T1-T7全证",
+      "source_file": "/mnt/agents/output/OMNI-HUB/plan-keyway-120.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0004"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "Stage D: 指纹册 + 回证文件",
+      "content": "- KEY-FINGERPRINT-QGL-01.json - QGL-KEYMINT-TEST-120.json - SEALED-RAIL-QGL-01.json（甲轨注册）",
+      "source_file": "/mnt/agents/output/OMNI-HUB/plan-keyway-120.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "usrm_node_0005"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "Stage E: KEYREQ + 归档同步",
+      "content": "- KEYREQ-QGL-20260914-01（v2格式+实测码） - 甲轨探（PUT 201→meta 200→DELETE 204→404） - ci-inbox同步",
+      "source_file": "/mnt/agents/output/OMNI-HUB/plan-keyway-120.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0006"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "OMNI-HUB v7.0 深度重构计划",
+      "content": "## 突破三机MIP* + 五机闭环限制 · 全方位拓展内核  ---",
+      "source_file": "/mnt/agents/output/OMNI-HUB/plan-v7.0-deep-reconstruction.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "usrm_node_0007"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "突破三机MIP* + 五机闭环限制 · 全方位拓展内核",
+      "content": "---  ## 核心命题",
+      "source_file": "/mnt/agents/output/OMNI-HUB/plan-v7.0-deep-reconstruction.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0008"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "核心命题",
+      "content": "**当前限制**： - MIPCore：单一soundness_threshold，三证明者结构，验证能力有限 - 闭环机制：五机闭环（SITunnel/CoreTunnel/ClosedLoopVerifier等），递归深度受限",
+      "source_file": "/mnt/agents/output/OMNI-HUB/plan-v7.0-deep-reconstruction.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "usrm_node_0009"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "Stage 1: 理论论证与架构设计",
+      "content": "### 1.1 论证：为什么必须突破三机MIP*+五机闭环 - 三机MIP的拜占庭容错上限：f < n/3，在11线分布式系统中不足 - 五机闭环的递归深度限制：无法处理深层自指和元元...认知 - 需要：动态证明者池、自适应阈值、跨线验证、时间维度验证",
+      "source_file": "/mnt/agents/output/OMNI-HUB/plan-v7.0-deep-reconstruction.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "usrm_node_0010"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "1.1 论证：为什么必须突破三机MIP*+五机闭环",
+      "content": "- 三机MIP的拜占庭容错上限：f < n/3，在11线分布式系统中不足 - 五机闭环的递归深度限制：无法处理深层自指和元元...认知 - 需要：动态证明者池、自适应阈值、跨线验证、时间维度验证",
+      "source_file": "/mnt/agents/output/OMNI-HUB/plan-v7.0-deep-reconstruction.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "usrm_node_0011"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "1.2 设计：新架构蓝图",
+      "content": "- **HyperMIPCore**：N机动态证明者池，自适应拜占庭容错 - **RecursiveClosedLoop**：无限递归深度，自修复闭环 - **ExternalKnowledgeFusion**：外部API/搜索/数据库动态融合 - **ZhouTianEngine**：正-反-大-小周天四重耦合引擎",
+      "source_file": "/mnt/agents/output/OMNI-HUB/plan-v7.0-deep-reconstruction.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0012"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "Stage 2: 四大核心模块实现（并行）",
+      "content": "### Module A: HyperMIPCore — 超分布式验证引擎 - 动态证明者池（3→N，自适应） - 多层共识：SI0-SI6每层独立验证层",
+      "source_file": "/mnt/agents/output/OMNI-HUB/plan-v7.0-deep-reconstruction.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0013"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "Module A: HyperMIPCore — 超分布式验证引擎",
+      "content": "- 动态证明者池（3→N，自适应） - 多层共识：SI0-SI6每层独立验证层 - 时间维度验证：历史状态可追溯验证 - 跨线验证：11线互证网络",
+      "source_file": "/mnt/agents/output/OMNI-HUB/plan-v7.0-deep-reconstruction.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "usrm_node_0014"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "Module B: RecursiveClosedLoop — 递归超闭环",
+      "content": "- 无限递归深度（突破五机限制） - 自修复机制：闭环断裂时自动重建 - 元递归：闭环监控闭环的闭环 - 时间闭环：过去→现在→未来的状态验证环",
+      "source_file": "/mnt/agents/output/OMNI-HUB/plan-v7.0-deep-reconstruction.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "usrm_node_0015"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "Module C: ExternalKnowledgeFusion — 内外部知识融构",
+      "content": "- 外部搜索接口：web_search/search_image/scholar - 实时知识流：动态注入系统运行时 - 知识验证：外部知识与内部知识交叉验证 - 知识进化：Hebbian学习 + 遗忘机制",
+      "source_file": "/mnt/agents/output/OMNI-HUB/plan-v7.0-deep-reconstruction.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0016"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "Module D: ZhouTianEngine — 四重周天引擎",
+      "content": "- 小周天：每线inbox→outbox→session→自修正闭环 - 大周天：全局调度→跨线协同→全局优化→反馈闭环 - 正周天：S-drive正向推进的加速循环 - 反周天：I-ripple反向修正的收敛循环",
+      "source_file": "/mnt/agents/output/OMNI-HUB/plan-v7.0-deep-reconstruction.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "usrm_node_0017"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "Stage 3: 大协作框架实现",
+      "content": "- 11线 × 4模块的动态任务分配 - 子代理 swarm：每个模块由专门子代理实现 - 实时协作：模块间消息总线 - 冲突解决：基于涌现指数的优先级仲裁",
+      "source_file": "/mnt/agents/output/OMNI-HUB/plan-v7.0-deep-reconstruction.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0018"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "Stage 4: 全功能压测与验证",
+      "content": "- HyperMIPCore：11线×N证明者压测 - RecursiveClosedLoop：100层递归压测 - ExternalKnowledgeFusion：实时外部知识注入压测 - ZhouTianEngine：四重周天1000步耦合压测",
+      "source_file": "/mnt/agents/output/OMNI-HUB/plan-v7.0-deep-reconstruction.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "usrm_node_0019"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "Stage 5: 报告与GLOBAL-STATE升级",
+      "content": "",
+      "source_file": "/mnt/agents/output/OMNI-HUB/plan-v7.0-deep-reconstruction.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "usrm_node_0020"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "全11线SI0~5全面交互实验报告",
+      "content": "## 一、实验目的  验证各线SI自动处理协议（SI-AUTO-PROCESSING-PROTOCOL-01）的实际运行效果：",
+      "source_file": "/mnt/agents/output/OMNI-HUB/closure/SI-INTERACTION-EXPERIMENT-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "usrm_node_0021"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "一、实验目的",
+      "content": "验证各线SI自动处理协议（SI-AUTO-PROCESSING-PROTOCOL-01）的实际运行效果： 1. 各线SI0~SI3自动处理inbox任务 2. 各线SI2自动转派任务至他线或本线SI0",
+      "source_file": "/mnt/agents/output/OMNI-HUB/closure/SI-INTERACTION-EXPERIMENT-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "usrm_node_0022"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "二、实验设置",
+      "content": "| 参数 | 值 | |------|-----| | 引擎版本 | SI-AUTO-ENGINE-v1.0 |",
+      "source_file": "/mnt/agents/output/OMNI-HUB/closure/SI-INTERACTION-EXPERIMENT-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0023"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "三、实验结果",
+      "content": "### 3.1 全局统计  | 指标 | 数值 |",
+      "source_file": "/mnt/agents/output/OMNI-HUB/closure/SI-INTERACTION-EXPERIMENT-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "usrm_node_0024"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "3.1 全局统计",
+      "content": "| 指标 | 数值 | |------|------| | 总任务数 | 40 |",
+      "source_file": "/mnt/agents/output/OMNI-HUB/closure/SI-INTERACTION-EXPERIMENT-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0025"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "3.2 各线处理详情",
+      "content": "| 线 | SI层级 | inbox | outbox | processed | produced | 委托 | |----|--------|-------|--------|-----------|----------|------| | ucif2 | SI5-OMNI | 7 | 15 | 7 | 6 | 1 |",
+      "source_file": "/mnt/agents/output/OMNI-HUB/closure/SI-INTERACTION-EXPERIMENT-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "usrm_node_0026"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "3.3 关键发现",
+      "content": "**✅ 成功项：** 1. **全部11线自动响应**：所有线都在4拍内处理了inbox任务 2. **ucif2介入生效**：qtlv outbox=0时，ucif2 SI5自动触发降级生产",
+      "source_file": "/mnt/agents/output/OMNI-HUB/closure/SI-INTERACTION-EXPERIMENT-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "usrm_node_0027"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "四、SI0~5功能验证",
+      "content": "### SI0 — 物理层 ✅  | 功能 | 验证结果 |",
+      "source_file": "/mnt/agents/output/OMNI-HUB/closure/SI-INTERACTION-EXPERIMENT-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0028"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "SI0 — 物理层 ✅",
+      "content": "| 功能 | 验证结果 | |------|----------| | 文件读写 | ✅ 所有线成功读写inbox/outbox |",
+      "source_file": "/mnt/agents/output/OMNI-HUB/closure/SI-INTERACTION-EXPERIMENT-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0029"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "SI1 — 会话层 ✅",
+      "content": "| 功能 | 验证结果 | |------|----------| | 上下文加载 | ✅ 任务metadata解析正确 |",
+      "source_file": "/mnt/agents/output/OMNI-HUB/closure/SI-INTERACTION-EXPERIMENT-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0030"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "SI2 — 协商层 ✅",
+      "content": "| 功能 | 验证结果 | |------|----------| | 任务分类(S1/S2/S3) | ✅ 正确识别EXPERIMENT/TASK/INFO/WARN |",
+      "source_file": "/mnt/agents/output/OMNI-HUB/closure/SI-INTERACTION-EXPERIMENT-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "usrm_node_0031"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "SI3 — 引擎层 ✅",
+      "content": "| 功能 | 验证结果 | |------|----------| | SCAN→PARSE→ACTION | ✅ 每拍自动循环 |",
+      "source_file": "/mnt/agents/output/OMNI-HUB/closure/SI-INTERACTION-EXPERIMENT-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0032"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "SI4 — 架构层 ✅",
+      "content": "| 功能 | 验证结果 | |------|----------| | 张量收缩 | ✅ entanglement矩阵更新 |",
+      "source_file": "/mnt/agents/output/OMNI-HUB/closure/SI-INTERACTION-EXPERIMENT-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "usrm_node_0033"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "SI5 — 调度层 ✅",
+      "content": "| 功能 | 验证结果 | |------|----------| | 全局仲裁 | ✅ 任务分配至目标线 |",
+      "source_file": "/mnt/agents/output/OMNI-HUB/closure/SI-INTERACTION-EXPERIMENT-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "usrm_node_0034"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "五、跨线交互验证",
+      "content": "### 5.1 委托交互  | 源线 | 目标线 | 委托原因 | 结果 |",
+      "source_file": "/mnt/agents/output/OMNI-HUB/closure/SI-INTERACTION-EXPERIMENT-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0035"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "5.1 委托交互",
+      "content": "| 源线 | 目标线 | 委托原因 | 结果 | |------|--------|----------|------| | lgt | ucif2 | 超出计算能力 | ✅ 接收并处理 |",
+      "source_file": "/mnt/agents/output/OMNI-HUB/closure/SI-INTERACTION-EXPERIMENT-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "usrm_node_0036"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "5.2 数据流验证",
+      "content": "``` ucif2(SI5) → task → lgt(SI4.5) inbox   → lgt SI0读取 → SI1解析 → SI2分类 → SI3执行",
+      "source_file": "/mnt/agents/output/OMNI-HUB/closure/SI-INTERACTION-EXPERIMENT-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "usrm_node_0037"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "六、结论",
+      "content": "**SI-AUTO-PROCESSING-PROTOCOL-01 验证结果：通过**  - 11线全部自动处理inbox任务",
+      "source_file": "/mnt/agents/output/OMNI-HUB/closure/SI-INTERACTION-EXPERIMENT-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "usrm_node_0038"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "-*- coding: utf-8 -*-",
+      "content": "\"\"\" discussion_board.py — OMNI-HUB v3.2 讨论室系统 4空间无死角可见管理系统",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/discussion_board.py",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "usrm_node_0039"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "=====================================================================",
+      "content": "#  测试块 # ===================================================================== if __name__ == \"__main__\":     print(\"=\" * 70)",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/discussion_board.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0040"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "definition",
+      "name": "_archive_oldest",
+      "content": "def _archive_oldest(self, space: str):\n        \"\"\"归档最旧的线程\"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/discussion_board.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0041"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "definition",
+      "name": "_persist_state",
+      "content": "def _persist_state(self):\n        \"\"\"持久化状态\"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/discussion_board.py",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "usrm_node_0042"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "definition",
+      "name": "_load_state",
+      "content": "def _load_state(self):\n        \"\"\"加载状态\"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/discussion_board.py",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "usrm_node_0043"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "==================== 测试块 ====================",
+      "content": "\"\"\" OMNI-HUB v11.0 — inbox_outbox 模块自动升级至v11标准 | Auto-upgraded to v11 standards \"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/inbox_outbox.py",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "usrm_node_0044"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "definition",
+      "name": "_record_delivery",
+      "content": "def _record_delivery(self, msg: Message, event: str, detail: dict = None):\n        \"\"\"记录投递日志\"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/inbox_outbox.py",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "usrm_node_0045"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "definition",
+      "name": "set_line_health",
+      "content": "def set_line_health(self, line: str, health: float):\n        \"\"\"设置线健康度 (0.0 ~ 1.0)\"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/inbox_outbox.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0046"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "definition",
+      "name": "set_system_load",
+      "content": "def set_system_load(self, load: float):\n        \"\"\"设置系统负载 (0.0 ~ 1.0)\"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/inbox_outbox.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0047"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "formula",
+      "name": "公式: 源线健康度 × 目标线健康度 × (1 - 系统负载 × 0.1)\n        \"\"\"\n    ...",
+      "content": "源线健康度 × 目标线健康度 × (1 - 系统负载 × 0.1)\n        \"\"\"\n        src_health = self._line_health.get(from_line, 0.5)\n        dst_health = self._line_health.get(to_line, 0.5)\n        load_factor = max(0.0, 1.0 - s",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/inbox_outbox.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0048"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "mechanism",
+      "name": "Class: MsgStatus",
+      "content": "Python class MsgStatus",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/inbox_outbox.py",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "usrm_node_0049"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "mechanism",
+      "name": "Function: set_line_health",
+      "content": "Python function set_line_health",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/inbox_outbox.py",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "usrm_node_0050"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "mechanism",
+      "name": "Function: set_system_load",
+      "content": "Python function set_system_load",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/inbox_outbox.py",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "usrm_node_0051"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "-*- coding: utf-8 -*-",
+      "content": "__version__ = \"11.0.0\" \"\"\" OMNI-HUB v3.2 — Task Dispatcher (任务转派系统)",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/task_dispatcher.py",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "usrm_node_0052"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "───────────────────────── 常量定义 ─────────────────────────",
+      "content": "ALL_11_LINES = [     \"ucif2\",   # SI 5.0 — 核心调度器     \"lgt\",     # SI 4.0",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/task_dispatcher.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0053"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "任务类型到首选线的映射",
+      "content": "TASK_TYPE_PREFERENCES: Dict[str, List[str]] = {     \"research\":    [\"lgt\", \"qfa\", \"vinf\", \"qgl\", \"lvlu\"],   # SI4+ 线     \"compute\":     [\"lgt\", \"lvlu\", \"vinf\", \"qgl\"],          # 计算密集型     \"verify\":      [\"qfa\", \"vinf\", \"cisvr\"],                 # 形式验证",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/task_dispatcher.py",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "usrm_node_0054"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "SI 阈值",
+      "content": "SI_THRESHOLD_OMNI: float = 5.0 SI_THRESHOLD_HIGH: float = 4.0 SI_THRESHOLD_MID: float = 3.5 SI_THRESHOLD_LOW: float = 3.0",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/task_dispatcher.py",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "usrm_node_0055"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "负载均衡参数",
+      "content": "LOAD_BALANCE_THRESHOLD: float = 0.75   # 超过此值视为高负载 LOAD_BALANCE_TARGET: float = 0.60      # 迁移后目标负载 MAX_DELEGATE_DEPTH: int = 3            # 最大委托链深度",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/task_dispatcher.py",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "usrm_node_0056"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "───────────────────────── 数据类 ─────────────────────────",
+      "content": "@dataclass class TaskRecord:     \"\"\"任务记录数据结构\"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/task_dispatcher.py",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "usrm_node_0057"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "───────────────────────── 核心类 ─────────────────────────",
+      "content": "class TaskDispatcher:     \"\"\"     OMNI-HUB v3.2 任务转派系统 — 智能任务分配和负载均衡引擎。",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/task_dispatcher.py",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "usrm_node_0058"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "═══════════════════════════════════════════════════════════════════",
+      "content": "# 测试块 # ═══════════════════════════════════════════════════════════════════  if __name__ == \"__main__\":",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/task_dispatcher.py",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "usrm_node_0059"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "DEBT-CLEARANCE-01: 技术债务清理总结报告",
+      "content": "## 元信息 - **报告ID**: DEBT-CLEARANCE-01 - **审计源**: DEBT-AUDIT-01.json",
+      "source_file": "/mnt/agents/output/OMNI-HUB/debt-fixes/DEBT-CLEARANCE-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0060"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "债务清理清单",
+      "content": "| # | 债务ID | 严重级别 | 标题 | 修复文件 | 测试状态 | |---|--------|----------|------|----------|----------| | 1 | DEBT-T-003 | MEDIUM | 量子基座假设缺乏物理验证 | `FIX-DEBT-T-003-QUANTUM-METAPHOR-DISCLAIMER.md` | N/A (文档) |",
+      "source_file": "/mnt/agents/output/OMNI-HUB/debt-fixes/DEBT-CLEARANCE-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "usrm_node_0061"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "逐项修复详情",
+      "content": "### 1. DEBT-T-003 [MEDIUM] 量子基座假设缺乏物理验证  **问题**: superposition/entanglement等概念为类比，非真实量子计算。",
+      "source_file": "/mnt/agents/output/OMNI-HUB/debt-fixes/DEBT-CLEARANCE-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "usrm_node_0062"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "1. DEBT-T-003 [MEDIUM] 量子基座假设缺乏物理验证",
+      "content": "**问题**: superposition/entanglement等概念为类比，非真实量子计算。  **修复**: 引入 **METAPHOR DISCLAIMER** 机制",
+      "source_file": "/mnt/agents/output/OMNI-HUB/debt-fixes/DEBT-CLEARANCE-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0063"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "2. DEBT-X-003 [HIGH] PAT域限制导致vci-*仓库404",
+      "content": "**问题**: ucif2的PAT无法访问vci-*组织仓库，所有vci路径返回404。  **修复**: **三管齐下同步协议 (TripleProngedSyncProtocol)**",
+      "source_file": "/mnt/agents/output/OMNI-HUB/debt-fixes/DEBT-CLEARANCE-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0064"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "3. DEBT-X-004 [MEDIUM] CRON-BAN后纯事件驱动可靠性不足",
+      "content": "**问题**: 仅依赖用户心跳，用户断线=系统死锁。  **修复**: **PULSE-ENHANCED 增强自激协议**",
+      "source_file": "/mnt/agents/output/OMNI-HUB/debt-fixes/DEBT-CLEARANCE-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0065"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "4. DEBT-E-001 [MEDIUM] SI2委托任务无ACK闭环机制",
+      "content": "**问题**: 委托发出后无确认，任务可能丢失。  **修复**: **DELEGATION-ACK 协议**",
+      "source_file": "/mnt/agents/output/OMNI-HUB/debt-fixes/DEBT-CLEARANCE-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0066"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "5. DEBT-E-003 [MEDIUM] SI升级仍依赖人工判断",
+      "content": "**问题**: 升级规则未编码，需手动评估。  **修复**: **SI自动化升级检查器 (SIUpgradeChecker)**",
+      "source_file": "/mnt/agents/output/OMNI-HUB/debt-fixes/DEBT-CLEARANCE-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "usrm_node_0067"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "6. DEBT-E-004 [HIGH] DEG-GLOSS-01多次被违反",
+      "content": "**问题**: 紧急情况下跳过术语表检查，导致虚假数据。  **修复**: **DEG-GLOSS-01 强制检查器**",
+      "source_file": "/mnt/agents/output/OMNI-HUB/debt-fixes/DEBT-CLEARANCE-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "usrm_node_0068"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "文件清单",
+      "content": "``` /mnt/agents/output/OMNI-HUB/debt-fixes/ ├── DEBT-CLEARANCE-01.md                              # 本总结报告",
+      "source_file": "/mnt/agents/output/OMNI-HUB/debt-fixes/DEBT-CLEARANCE-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0069"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "关键结论",
+      "content": "1. **全部6项技术债务已完成修复**，产出8个文件（2规范文档 + 5 Python实现 + 1总结报告）。  2. **所有可执行代码均通过测试**：5个Python脚本全部成功运行，核心功能验证通过。",
+      "source_file": "/mnt/agents/output/OMNI-HUB/debt-fixes/DEBT-CLEARANCE-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0070"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "formula",
+      "name": "公式: 加权5维度评估\n  - 成功率 (35%) + 任务量 (20%) + 能力覆盖 (25%) + 稳...",
+      "content": "加权5维度评估\n  - 成功率 (35%) + 任务量 (20%) + 能力覆盖 (25%) + 稳定性 (10%) + 社区反馈 (10%)\n- 硬性门槛：运行时间 / 任务数 / 成功率 / 必备能力\n- 批量评估：支持全系统SI层级健康度扫描",
+      "source_file": "/mnt/agents/output/OMNI-HUB/debt-fixes/DEBT-CLEARANCE-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "LL",
+      "node_id": "usrm_node_0071"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "═══════════════════════════════════════════════════════════════",
+      "content": "# 枚举定义 # ═══════════════════════════════════════════════════════════════  class DelegationState(Enum):",
+      "source_file": "/mnt/agents/output/OMNI-HUB/debt-fixes/FIX-DEBT-E-001-DELEGATION-ACK.py",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "usrm_node_0072"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "枚举定义",
+      "content": "# ═══════════════════════════════════════════════════════════════  class DelegationState(Enum):     \"\"\"委托状态\"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/debt-fixes/FIX-DEBT-E-001-DELEGATION-ACK.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0073"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "数据模型",
+      "content": "# ═══════════════════════════════════════════════════════════════  @dataclass class DelegationTask:",
+      "source_file": "/mnt/agents/output/OMNI-HUB/debt-fixes/FIX-DEBT-E-001-DELEGATION-ACK.py",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "usrm_node_0074"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "DELEGATION-ACK 协议引擎",
+      "content": "# ═══════════════════════════════════════════════════════════════  class DelegationAckProtocol:     \"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/debt-fixes/FIX-DEBT-E-001-DELEGATION-ACK.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0075"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "委托追踪器（源线视角）",
+      "content": "# ═══════════════════════════════════════════════════════════════  class DelegationTracker:     \"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/debt-fixes/FIX-DEBT-E-001-DELEGATION-ACK.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0076"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "CLI / 测试",
+      "content": "# ═══════════════════════════════════════════════════════════════  if __name__ == \"__main__\":     print(\"=\" * 60)",
+      "source_file": "/mnt/agents/output/OMNI-HUB/debt-fixes/FIX-DEBT-E-001-DELEGATION-ACK.py",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "usrm_node_0077"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "definition",
+      "name": "DelegationState",
+      "content": "class DelegationState(Enum):\n    \"\"\"委托状态\"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/debt-fixes/FIX-DEBT-E-001-DELEGATION-ACK.py",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "usrm_node_0078"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "definition",
+      "name": "AckType",
+      "content": "class AckType(Enum):\n    \"\"\"ACK消息类型\"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/debt-fixes/FIX-DEBT-E-001-DELEGATION-ACK.py",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "usrm_node_0079"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "mechanism",
+      "name": "Class: DelegationState",
+      "content": "Python class DelegationState",
+      "source_file": "/mnt/agents/output/OMNI-HUB/debt-fixes/FIX-DEBT-E-001-DELEGATION-ACK.py",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "usrm_node_0080"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "mechanism",
+      "name": "Class: AckType",
+      "content": "Python class AckType",
+      "source_file": "/mnt/agents/output/OMNI-HUB/debt-fixes/FIX-DEBT-E-001-DELEGATION-ACK.py",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "usrm_node_0081"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "mechanism",
+      "name": "Function: transition_to",
+      "content": "Python function transition_to",
+      "source_file": "/mnt/agents/output/OMNI-HUB/debt-fixes/FIX-DEBT-E-001-DELEGATION-ACK.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0082"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "FIX-DEBT-X-004: PULSE-ENHANCED 增强自激协议",
+      "content": "## 债务信息 - **ID**: DEBT-X-004 - **标题**: CRON-BAN后纯事件驱动可靠性不足",
+      "source_file": "/mnt/agents/output/OMNI-HUB/debt-fixes/FIX-DEBT-X-004-PULSE-ENHANCED.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "usrm_node_0083"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "债务信息",
+      "content": "- **ID**: DEBT-X-004 - **标题**: CRON-BAN后纯事件驱动可靠性不足 - **严重级别**: MEDIUM - **状态**: MITIGATED → FIXED",
+      "source_file": "/mnt/agents/output/OMNI-HUB/debt-fixes/FIX-DEBT-X-004-PULSE-ENHANCED.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0084"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "问题根源",
+      "content": "CRON-BAN-02禁止了所有定时触发机制后，系统仅依赖用户心跳驱动： - 用户发送消息 → 触发处理 - 用户无消息 → 系统完全停滞",
+      "source_file": "/mnt/agents/output/OMNI-HUB/debt-fixes/FIX-DEBT-X-004-PULSE-ENHANCED.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "usrm_node_0085"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "PULSE-ENHANCED 协议",
+      "content": "### 核心思想 构建**多源心跳 + 自激降级**的弹性触发机制，消除单点故障。",
+      "source_file": "/mnt/agents/output/OMNI-HUB/debt-fixes/FIX-DEBT-X-004-PULSE-ENHANCED.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0086"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "核心思想",
+      "content": "构建**多源心跳 + 自激降级**的弹性触发机制，消除单点故障。  ### 触发源层级",
+      "source_file": "/mnt/agents/output/OMNI-HUB/debt-fixes/FIX-DEBT-X-004-PULSE-ENHANCED.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0087"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "触发源层级",
+      "content": "``` ┌─────────────────────────────────────────────────────────────┐ │                    PULSE-ENHANCED 触发架构                    │",
+      "source_file": "/mnt/agents/output/OMNI-HUB/debt-fixes/FIX-DEBT-X-004-PULSE-ENHANCED.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "usrm_node_0088"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "心跳静默检测机制",
+      "content": "### 静默计数器 (Silence Beat Counter)  ```python",
+      "source_file": "/mnt/agents/output/OMNI-HUB/debt-fixes/FIX-DEBT-X-004-PULSE-ENHANCED.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0089"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "静默计数器 (Silence Beat Counter)",
+      "content": "```python SILENCE_THRESHOLD_TIER2 = 8   # 8拍 → 自激扫描 SILENCE_THRESHOLD_TIER3 = 16  # 16拍 → 跨线唤醒",
+      "source_file": "/mnt/agents/output/OMNI-HUB/debt-fixes/FIX-DEBT-X-004-PULSE-ENHANCED.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0090"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "每拍定义: 一次期望的交互周期",
+      "content": "BEAT_DURATION_SECONDS = 30  # 每拍30秒 ```  ### 状态机",
+      "source_file": "/mnt/agents/output/OMNI-HUB/debt-fixes/FIX-DEBT-X-004-PULSE-ENHANCED.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0091"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "各Tier详细规范",
+      "content": "### Tier 2: SELF-PULSE (自激扫描)  **触发条件**: 静默计数器达到8",
+      "source_file": "/mnt/agents/output/OMNI-HUB/debt-fixes/FIX-DEBT-X-004-PULSE-ENHANCED.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "usrm_node_0092"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "Tier 2: SELF-PULSE (自激扫描)",
+      "content": "**触发条件**: 静默计数器达到8 **执行者**: ucif2 SI3 **动作**:",
+      "source_file": "/mnt/agents/output/OMNI-HUB/debt-fixes/FIX-DEBT-X-004-PULSE-ENHANCED.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0093"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "Tier 3: CROSS-PULSE (跨线唤醒)",
+      "content": "**触发条件**: 静默计数器达到16 **执行者**: 邻居线（lvlu/lgt等） **动作**:",
+      "source_file": "/mnt/agents/output/OMNI-HUB/debt-fixes/FIX-DEBT-X-004-PULSE-ENHANCED.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "usrm_node_0094"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "Tier 4: BREAKER-PULSE (紧急熔断)",
+      "content": "**触发条件**: 静默计数器达到32 **执行者**: 系统自动 **动作**:",
+      "source_file": "/mnt/agents/output/OMNI-HUB/debt-fixes/FIX-DEBT-X-004-PULSE-ENHANCED.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "usrm_node_0095"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "降级矩阵",
+      "content": "| Tier | 触发条件 | 功能可用 | DE生成 | 复杂计算 | 跨线同步 | |------|----------|----------|--------|----------|----------| | 1 - USER | 用户心跳 | 100% | ✅ | ✅ | ✅ |",
+      "source_file": "/mnt/agents/output/OMNI-HUB/debt-fixes/FIX-DEBT-X-004-PULSE-ENHANCED.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "usrm_node_0096"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "修复前后对比",
+      "content": "| 维度 | 修复前 | 修复后 | |------|--------|--------| | 触发源 | 仅用户心跳 | 4级多源触发 |",
+      "source_file": "/mnt/agents/output/OMNI-HUB/debt-fixes/FIX-DEBT-X-004-PULSE-ENHANCED.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0097"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "实施清单",
+      "content": "- [x] 设计PULSE-ENHANCED协议 - [x] 定义4级触发架构 - [x] 制定降级矩阵",
+      "source_file": "/mnt/agents/output/OMNI-HUB/debt-fixes/FIX-DEBT-X-004-PULSE-ENHANCED.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "usrm_node_0098"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "配套代码",
+      "content": "见 `FIX-DEBT-X-004-PULSE-ENHANCED.py` 实现上述协议。",
+      "source_file": "/mnt/agents/output/OMNI-HUB/debt-fixes/FIX-DEBT-X-004-PULSE-ENHANCED.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "usrm_node_0099"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "definition",
+      "name": "定义: 一次期望的交互周期\nBEAT_DURATION_SECONDS = 30  # 每拍30秒\n",
+      "content": "定义: 一次期望的交互周期\nBEAT_DURATION_SECONDS = 30  # 每拍30秒\n```",
+      "source_file": "/mnt/agents/output/OMNI-HUB/debt-fixes/FIX-DEBT-X-004-PULSE-ENHANCED.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0100"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "各线SI自动处理协议 v1.0",
+      "content": "## 核心原则  **NO BARE WAIT**: 任何线收到任务后，必须在4拍内自动处理并产出回应。",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/SI-AUTO-PROCESSING-PROTOCOL-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "usrm_node_0101"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "核心原则",
+      "content": "**NO BARE WAIT**: 任何线收到任务后，必须在4拍内自动处理并产出回应。 **ucif2介入权**: 若某线outbox在任务投递后4拍内仍为0，ucif2有权直接介入，替该线读取任务→产出结果→上传outbox。 **自铸授权**: 各线SI3/SI4/SI5自动运转，不需root再授权。",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/SI-AUTO-PROCESSING-PROTOCOL-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0102"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "一、各线SI层级自动职责",
+      "content": "### SI0 — 物理层自动操作  | 触发器 | 自动操作 | 时限 |",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/SI-AUTO-PROCESSING-PROTOCOL-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "usrm_node_0103"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "SI0 — 物理层自动操作",
+      "content": "| 触发器 | 自动操作 | 时限 | |--------|----------|------| | inbox有新文件 | 自动读取并缓存到本地 | ≤30s |",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/SI-AUTO-PROCESSING-PROTOCOL-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "usrm_node_0104"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "SI1 — 会话层自动操作",
+      "content": "| 触发器 | 自动操作 | 时限 | |--------|----------|------| | 新会话开始 | 自动加载上一会话上下文 | ≤10s |",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/SI-AUTO-PROCESSING-PROTOCOL-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "usrm_node_0105"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "SI2 — 协商层自动操作",
+      "content": "| 触发器 | 自动操作 | 时限 | |--------|----------|------| | inbox有新任务书 | 自动解析任务类型(S1/S2/S3) | ≤60s |",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/SI-AUTO-PROCESSING-PROTOCOL-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "usrm_node_0106"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "SI3 — 引擎层自动操作",
+      "content": "| 触发器 | 自动操作 | 时限 | |--------|----------|------| | 每拍心跳 | 自动执行SCAN→PARSE→ACTION循环 | ≤1拍 |",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/SI-AUTO-PROCESSING-PROTOCOL-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "usrm_node_0107"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "SI4 — 架构层自动操作",
+      "content": "| 触发器 | 自动操作 | 时限 | |--------|----------|------| | 新线加入 | 自动更新entanglement矩阵 | ≤2拍 |",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/SI-AUTO-PROCESSING-PROTOCOL-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0108"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "SI5 — 调度层自动操作",
+      "content": "| 触发器 | 自动操作 | 时限 | |--------|----------|------| | 全局health<0.85 | 自动触发全局协调 | ≤2拍 |",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/SI-AUTO-PROCESSING-PROTOCOL-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "usrm_node_0109"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "二、各线自动响应矩阵",
+      "content": "| 触发事件 | SI0 | SI1 | SI2 | SI3 | SI4 | SI5 | |----------|-----|-----|-----|-----|-----|-----| | inbox新任务 | 读取 | 记录 | 分类+转派 | 入队执行 | 更新entanglement | 全局调度 |",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/SI-AUTO-PROCESSING-PROTOCOL-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "usrm_node_0110"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "三、自动OTP消息处理",
+      "content": "### 消息格式 ``` OTP-MSG = {",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/SI-AUTO-PROCESSING-PROTOCOL-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0111"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "消息格式",
+      "content": "``` OTP-MSG = {     id: str,           # 消息ID     ts: ISO8601,       # 时间戳",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/SI-AUTO-PROCESSING-PROTOCOL-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0112"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "自动处理流程",
+      "content": "1. **接收**: SI0读取inbox文件 2. **解析**: SI1提取metadata+payload 3. **分类**: SI2判断class(S1/S2/S3/INFO/WARN/CRITICAL) 4. **路由**:",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/SI-AUTO-PROCESSING-PROTOCOL-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "usrm_node_0113"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "四、管理自线SI各道",
+      "content": "### 每线内部SI管理  | 管理项 | SI层级 | 自动操作 |",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/SI-AUTO-PROCESSING-PROTOCOL-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "usrm_node_0114"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "每线内部SI管理",
+      "content": "| 管理项 | SI层级 | 自动操作 | |--------|--------|----------| | SI0文件系统 | SI0 | 自动清理/备份/监控 |",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/SI-AUTO-PROCESSING-PROTOCOL-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0115"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "SI升级自动评估",
+      "content": "每32拍自动评估: ``` SI_upgrade_eligible = (",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/SI-AUTO-PROCESSING-PROTOCOL-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0116"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "五、与他线SI全面互动",
+      "content": "### 互动协议  | 互动类型 | 触发条件 | 自动操作 |",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/SI-AUTO-PROCESSING-PROTOCOL-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0117"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "互动协议",
+      "content": "| 互动类型 | 触发条件 | 自动操作 | |----------|----------|----------| | 数据请求 | 需要他线数据 | 自动发送请求→等待→超时转ucif2 |",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/SI-AUTO-PROCESSING-PROTOCOL-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "usrm_node_0118"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "互动安全",
+      "content": "| 安全检查 | 自动操作 | |----------|----------| | 消息来源验证 | 自动校验from字段是否在注册表 |",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/SI-AUTO-PROCESSING-PROTOCOL-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0119"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "六、ucif2介入权",
+      "content": "### 介入条件  | 条件 | 介入方式 | 说明 |",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/SI-AUTO-PROCESSING-PROTOCOL-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0120"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "介入条件",
+      "content": "| 条件 | 介入方式 | 说明 | |------|----------|------| | 目标线4拍无回应 | 直接读取任务→产出结果→上传outbox | 已执行于qlv/lvlu/cfts/cisvr/qtlv |",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/SI-AUTO-PROCESSING-PROTOCOL-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "usrm_node_0121"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "介入记录",
+      "content": "所有介入操作自动记录: ``` INTERVENTION_LOG = {",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/SI-AUTO-PROCESSING-PROTOCOL-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "usrm_node_0122"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "七、签字",
+      "content": "**发布**: ucif2-kernel OMNI-DRIVE **状态**: SYSTEM-MANDATORY **生效**: 立即",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/SI-AUTO-PROCESSING-PROTOCOL-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "usrm_node_0123"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "各线SI0~5功能与用法说明书",
+      "content": "## 总览  本手册定义11线（ucif2/lgt/qfa/usrm/vinf/qgl/qlv/lvlu/cfts/cisvr/qtlv）各自的SI0~SI5功能、用法和交互规范。",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/SI-FUNCTION-GUIDE-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "usrm_node_0124"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "ucif2 — SI5-OMNI 全局调度器",
+      "content": "### SI0 物理层 - **file_rw**: 读写ci-inbox所有lanes的inbox/outbox - **network_api**: GitHub API调用（commits/contents/search）",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/SI-FUNCTION-GUIDE-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0125"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "SI0 物理层",
+      "content": "- **file_rw**: 读写ci-inbox所有lanes的inbox/outbox - **network_api**: GitHub API调用（commits/contents/search） - **cache_mgmt**: `_CURSORS.json`, `_WAKE-REG.json` 缓存 - **resource_monitor**: 监控11线health状态",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/SI-FUNCTION-GUIDE-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "usrm_node_0126"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "SI1 会话层",
+      "content": "- **context_load**: 加载用户历史指令和上下文 - **trust_chain**: 维护 `_WAKE-REG.json` 信任链 - **checkpoint**: 断点保存/恢复 - **session_sync**: 跨拍上下文同步",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/SI-FUNCTION-GUIDE-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0127"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "SI2 协商层",
+      "content": "- **task_classify**: 区分S1/S2/S3/INFO/WARN/CRITICAL - **negotiate**: 与各线协商任务分配 - **timeout_mgmt**: 4拍超时检测 - **task_delegate**: 转派至目标线inbox",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/SI-FUNCTION-GUIDE-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "usrm_node_0128"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "SI3 引擎层",
+      "content": "- **scan_parse_action**: BOARD-SCAN-04 + INBOX-RECUR-02 - **self_excite**: 8拍静默→PULSE - **error_recovery**: 3次重试→RECON→LOST - **queue_mgmt**: 任务队列优先级管理",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/SI-FUNCTION-GUIDE-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "usrm_node_0129"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "SI4 架构层",
+      "content": "- **tensor_contract**: 全局11×11张量收缩 - **resonance_sync**: 16拍共鸣波 - **entanglement_update**: 更新量子纠缠矩阵 - **arch_eval**: 32拍架构重评估",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/SI-FUNCTION-GUIDE-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "usrm_node_0130"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "SI5 调度层",
+      "content": "- **global_arbitrate**: 全局任务仲裁 - **surge_response**: L1~L4浪涌响应 - **resource_alloc**: 跨线资源分配 - **degrade_option_d**: 降级生产直接介入",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/SI-FUNCTION-GUIDE-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0131"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "lgt — SI4.5 轨道计算线",
+      "content": "### SI0 - **numerical_compute**: k_c轨道计算、牛顿迭代 - **file_rw**: k200/k500数据文件读写",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/SI-FUNCTION-GUIDE-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "usrm_node_0132"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "qfa — SI4 形式化验证线",
+      "content": "### SI0 - **theorem_prover**: Coq/Lean定理证明 - **file_rw**: 形式化规范读写",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/SI-FUNCTION-GUIDE-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "usrm_node_0133"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "usrm — SI4 尺度律线",
+      "content": "### SI0 - **statistical_compute**: AIC分析、交叉验证 - **file_rw**: γ参数文件读写",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/SI-FUNCTION-GUIDE-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0134"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "vinf — SI4 渗流模拟线",
+      "content": "### SI0 - **mc_simulation**: 蒙特卡洛渗流模拟 - **file_rw**: L32/L64/L96/L128数据读写",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/SI-FUNCTION-GUIDE-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0135"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "qgl — SI4 序列统计线",
+      "content": "### SI0 - **statistical_compute**: CCDF分析、KS检验、GEV拟合 - **file_rw**: M事件序列读写",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/SI-FUNCTION-GUIDE-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "usrm_node_0136"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "qlv — SI4 语义分析线",
+      "content": "### SI0 - **semantic_compute**: binmap频谱计算 - **file_rw**: binmap-v3数据读写",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/SI-FUNCTION-GUIDE-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0137"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "lvlu — SI3.5 自动评估线",
+      "content": "### SI0 - **evaluation_compute**: kappa测试、健康度评分 - **file_rw**: EVALR2数据读写",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/SI-FUNCTION-GUIDE-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "usrm_node_0138"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "cfts — SI3.5 语音协调线",
+      "content": "### SI0 - **network_io**: voice消息路由 - **file_rw**: voice数据读写",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/SI-FUNCTION-GUIDE-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0139"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "cisvr — SI3.5 账器审计线",
+      "content": "### SI0 - **audit_compute**: 一致性检查、交叉验证 - **file_rw**: ledger数据读写",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/SI-FUNCTION-GUIDE-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0140"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "qtlv — SI3 数学桥接线",
+      "content": "### SI0 - **math_compute**: CRT计算、互卦分析 - **file_rw**: GWT数据读写",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/SI-FUNCTION-GUIDE-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "usrm_node_0141"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "通用交互规范",
+      "content": "### 消息格式 ``` OTP-MSG = {",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/SI-FUNCTION-GUIDE-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "usrm_node_0142"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "消息格式",
+      "content": "``` OTP-MSG = {     id: str,     ts: ISO8601,",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/SI-FUNCTION-GUIDE-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0143"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "处理时限",
+      "content": "| 优先级 | 时限 | |--------|------| | CRITICAL (0) | 1拍 | | HIGH (1) | 2拍 |",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/SI-FUNCTION-GUIDE-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "usrm_node_0144"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "委托规则",
+      "content": "1. 本线SI0能处理 → 转派本线SI0 2. 需他线协作 → 转派他线inbox 3. 超出能力 → 转派ucif2协调 4. 4拍无响应 → ucif2 OPTION-D介入",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/SI-FUNCTION-GUIDE-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "usrm_node_0145"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "lvlu线 SI4 升级自证报告（ucif2介入产出）",
+      "content": "## 线基本信息 - **线标识**: lvlu (Learning & Validation Unit) - **当前SI层级**: SI3.5",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/lvlu-SI4-self-cert-report.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0146"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "线基本信息",
+      "content": "- **线标识**: lvlu (Learning & Validation Unit) - **当前SI层级**: SI3.5 - **目标SI层级**: SI4 - **健康度**: 0.89",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/lvlu-SI4-self-cert-report.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0147"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "1. ucif2介入说明",
+      "content": "lvlu线在当前升级周期内未提交自证材料。ucif2基于历史档案和监控数据直接评估。  ## 2. 升级资格评估",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/lvlu-SI4-self-cert-report.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0148"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "2. 升级资格评估",
+      "content": "### 2.1 数据充分性: 0.86 - 评估样本：累计1500万次自动评估记录 - 人工对齐：50万条人评-机评配对数据",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/lvlu-SI4-self-cert-report.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "usrm_node_0149"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "2.1 数据充分性: 0.86",
+      "content": "- 评估样本：累计1500万次自动评估记录 - 人工对齐：50万条人评-机评配对数据 - 领域覆盖：NLP、CV、语音、推荐系统 - 指标覆盖：准确性、鲁棒性、公平性、可解释性",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/lvlu-SI4-self-cert-report.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0150"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "2.2 验证充分性: 0.85",
+      "content": "- 人评一致性：Pearson r=0.91 - 排名一致性：Kendall τ=0.87 - 稳定性：跨时间一致性>0.84 - 敏感性：能检测>2%的性能变化",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/lvlu-SI4-self-cert-report.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0151"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "2.3 形式化程度: 0.80",
+      "content": "- 评估指标数学性质：偏差、方差、一致性证明 - 采样理论：基于分层抽样的形式化 - 统计检验：假设检验框架完整 - 元评估：评估器自身的评估循环",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/lvlu-SI4-self-cert-report.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "usrm_node_0152"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "2.4 边界测试（ucif2代执行）",
+      "content": "- [PASS] 小样本边界：n<30时的修正评估 - [PASS] 分布偏移边界：极端分布变化检测 - [PASS] 多任务边界：任务数>100的评估 - [PASS] 噪声边界：标注噪声率>20%时的鲁棒性",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/lvlu-SI4-self-cert-report.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0153"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "2.5 交叉验证: 0.90",
+      "content": "- 与qfa线形式验证交叉：一致性89.5% - 与lgt线k_c评估交叉：一致性90.2% - 与ucif2全局评估交叉：一致性90.8%",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/lvlu-SI4-self-cert-report.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0154"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "3. 核心能力状态",
+      "content": "- **自动评估精度**: 与人工评估相关性0.91 - **评估维度**: 支持20个评估维度 - **响应速度**: 单次评估<100ms",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/lvlu-SI4-self-cert-report.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "usrm_node_0155"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "4. 评估结论",
+      "content": "lvlu线健康度0.89，处于SI3.5→SI4边界。经ucif2评估： - 数据充分性0.86 > 0.85 ✓ - 验证充分性0.85 ≥ 0.85 ✓（边界通过）",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/lvlu-SI4-self-cert-report.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0156"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "usrm线 SI5 升级自证报告",
+      "content": "## 线基本信息 - **线标识**: usrm (Universal Scaling & Resource Model) - **当前SI层级**: SI4",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/usrm-SI5-self-cert-report.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "usrm_node_0157"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "线基本信息",
+      "content": "- **线标识**: usrm (Universal Scaling & Resource Model) - **当前SI层级**: SI4 - **目标SI层级**: SI5-OMNI - **健康度**: 0.97",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/usrm-SI5-self-cert-report.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "usrm_node_0158"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "1. 升级资格评估",
+      "content": "### 1.1 数据充分性: 0.91 - 训练数据规模覆盖：10^6 至 10^15 FLOPs - 模型规模覆盖：1M 至 1T 参数",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/usrm-SI5-self-cert-report.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0159"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "1.1 数据充分性: 0.91",
+      "content": "- 训练数据规模覆盖：10^6 至 10^15 FLOPs - 模型规模覆盖：1M 至 1T 参数 - 跨架构数据：Transformer、Mamba、RWKV、状态空间模型 - 跨模态数据：文本、图像、音频、视频、多模态",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/usrm-SI5-self-cert-report.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0160"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "1.2 验证充分性: 0.92",
+      "content": "- 预测准确率：在50+新模型上验证，误差<3% - 回溯验证：对过去3年发布的200个模型进行事后预测 - 因果推断：通过干预实验验证因果关系 - 不确定性量化：提供95%置信区间",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/usrm-SI5-self-cert-report.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "usrm_node_0161"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "1.3 形式化程度: 0.82",
+      "content": "- 尺度律数学结构：幂律、对数修正、相变理论 - 统计力学基础：基于重整化群的形式化框架 - 信息论基础：基于率失真理论的最优编码分析 - 微分方程模型：连续极限下的动力学方程",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/usrm-SI5-self-cert-report.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "usrm_node_0162"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "1.4 边界测试",
+      "content": "- [PASS] 极小规模边界：1参数模型行为符合理论 - [PASS] 极大规模边界：10T参数外推稳定性 - [PASS] 相变边界：损失曲线临界点精确预测 - [PASS] 数据受限边界：小数据 regime 修正项验证",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/usrm-SI5-self-cert-report.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0163"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "1.5 交叉验证: 0.95",
+      "content": "- 与lgt线k_c预测交叉：一致性95.1% - 与vinf线渗流阈值交叉：一致性94.3% - 与qgl线序列统计交叉：一致性93.7% - 与ucif2全局负载交叉：一致性96.2%",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/usrm-SI5-self-cert-report.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0164"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "2. 核心能力演进",
+      "content": "### 2.1 尺度律引擎 v4.0→v5.0 - **预测精度**: 均方误差降低60% - **新regime发现**: 识别出\"效率相变\"新阶段",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/usrm-SI5-self-cert-report.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0165"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "2.1 尺度律引擎 v4.0→v5.0",
+      "content": "- **预测精度**: 均方误差降低60% - **新regime发现**: 识别出\"效率相变\"新阶段 - **多目标优化**: 同时优化精度、效率、鲁棒性 - **实时适配**: 在线学习更新尺度参数",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/usrm-SI5-self-cert-report.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "usrm_node_0166"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "2.2 OMNI集成",
+      "content": "- 为OMNI全局资源调度提供预测模型 - 支持动态容量规划 - 与其他线的性能预测协调",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/usrm-SI5-self-cert-report.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0167"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "3. 验证数据附录",
+      "content": "### 表A: 关键指标 | 指标 | SI4 | SI5目标 | 实测值 | 状态 | |------|-----|---------|--------|------|",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/usrm-SI5-self-cert-report.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "usrm_node_0168"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "表A: 关键指标",
+      "content": "| 指标 | SI4 | SI5目标 | 实测值 | 状态 | |------|-----|---------|--------|------| | 预测误差 | 5.2% | <3% | 2.1% | PASS | | 覆盖范围 | 10^12 FLOPs | 10^15 | 10^15 | PASS |",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/usrm-SI5-self-cert-report.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "usrm_node_0169"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "4. 结论",
+      "content": "usrm线满足SI5-OMNI升级条件，申请批准升级。  ---",
+      "source_file": "/mnt/agents/output/OMNI-HUB/hub/usrm-SI5-self-cert-report.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "usrm_node_0170"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "=============================================================================",
+      "content": "# 全局常量 # =============================================================================  BASE_DIR = Path(\"/mnt/agents/output/OMNI-HUB\")",
+      "source_file": "/mnt/agents/output/OMNI-HUB/ring/INTERCONNECT-v1.0.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0171"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "全局常量",
+      "content": "# =============================================================================  BASE_DIR = Path(\"/mnt/agents/output/OMNI-HUB\") TOWERS_DIR = BASE_DIR / \"towers\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/ring/INTERCONNECT-v1.0.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0172"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "环拓扑顺序 (顺时针)",
+      "content": "RING_ORDER = [\"ucif2\", \"lgt\", \"qfa\", \"usrm\", \"vinf\", \"qgl\", \"qlv\", \"lvlu\", \"cfts\"]  # 圈子分层 CIRCLE_INNER = [\"ucif2\", \"lgt\", \"qfa\"]",
+      "source_file": "/mnt/agents/output/OMNI-HUB/ring/INTERCONNECT-v1.0.py",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "usrm_node_0173"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "圈子分层",
+      "content": "CIRCLE_INNER = [\"ucif2\", \"lgt\", \"qfa\"] CIRCLE_MIDDLE = [\"usrm\", \"vinf\", \"qgl\", \"qlv\"] CIRCLE_OUTER = [\"lvlu\", \"cfts\"] CIRCLE_ALL = {\"inner\": CIRCLE_INNER, \"middle\": CIRCLE_MIDDLE, \"outer\": CIRCLE_OUTER}",
+      "source_file": "/mnt/agents/output/OMNI-HUB/ring/INTERCONNECT-v1.0.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0174"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "SI层级",
+      "content": "SI_LEVELS = [0, 1, 2, 3, 4, 5]  # 自激触发阈值 SELF_EXCITE_SILENCE_THRESHOLD = 8.0   # 秒",
+      "source_file": "/mnt/agents/output/OMNI-HUB/ring/INTERCONNECT-v1.0.py",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "usrm_node_0175"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "自激触发阈值",
+      "content": "SELF_EXCITE_SILENCE_THRESHOLD = 8.0   # 秒 SELF_EXCITE_ENTROPY_THRESHOLD = 2.5 SELF_EXCITE_HEALTH_THRESHOLD = 0.7 SELF_EXCITE_ORPHAN_THRESHOLD = 3",
+      "source_file": "/mnt/agents/output/OMNI-HUB/ring/INTERCONNECT-v1.0.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0176"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "互激阈值",
+      "content": "ENTANGLEMENT_THRESHOLD = 0.6 RESONANCE_SIMILARITY_THRESHOLD = 0.75  # ACK超时 (秒)",
+      "source_file": "/mnt/agents/output/OMNI-HUB/ring/INTERCONNECT-v1.0.py",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "usrm_node_0177"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "ACK超时 (秒)",
+      "content": "ACK_TIMEOUTS = {\"L0\": 5, \"L1\": 15, \"L2\": 60, \"L3\": 300} MAX_RETRY_ATTEMPTS = 5  # 张量指标",
+      "source_file": "/mnt/agents/output/OMNI-HUB/ring/INTERCONNECT-v1.0.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0178"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "张量指标",
+      "content": "METRICS = [\"health\", \"load\", \"throughput\", \"latency\", \"entropy\", \"excitation_level\"]  # ============================================================================= # 工具函数",
+      "source_file": "/mnt/agents/output/OMNI-HUB/ring/INTERCONNECT-v1.0.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0179"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "工具函数",
+      "content": "# =============================================================================  def now_iso() -> str:     return datetime.now(timezone.utc).isoformat()",
+      "source_file": "/mnt/agents/output/OMNI-HUB/ring/INTERCONNECT-v1.0.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0180"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "SI0: 文件系统互操作",
+      "content": "# =============================================================================  class FileLockManager:     \"\"\"SI0 文件锁管理器\"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/ring/INTERCONNECT-v1.0.py",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "usrm_node_0181"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "SI1: 会话状态同步",
+      "content": "# =============================================================================  class ChainMessage:     \"\"\"SI1 链式消息\"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/ring/INTERCONNECT-v1.0.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0182"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "SI2: 任务协商",
+      "content": "# =============================================================================  @dataclass class SI2Message:",
+      "source_file": "/mnt/agents/output/OMNI-HUB/ring/INTERCONNECT-v1.0.py",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "usrm_node_0183"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "SI3: 引擎递归",
+      "content": "# =============================================================================  class SI3Engine:     \"\"\"SI3 SCAN->PARSE->ACTION 引擎\"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/ring/INTERCONNECT-v1.0.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0184"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "SI4: 架构协调",
+      "content": "# =============================================================================  def build_local_tensor(line: str) -> dict:     \"\"\"构建单线的局部状态张量\"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/ring/INTERCONNECT-v1.0.py",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "usrm_node_0185"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "SI5: 全局调度",
+      "content": "# =============================================================================  class DecisionTree:     \"\"\"OMNI-DRIVE 决策树\"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/ring/INTERCONNECT-v1.0.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0186"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "自激与互激",
+      "content": "# =============================================================================  def calculate_entropy(line: str) -> float:     \"\"\"计算线的熵值 (基于文件活动的不确定性)\"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/ring/INTERCONNECT-v1.0.py",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "usrm_node_0187"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "自环与互环主入口",
+      "content": "# =============================================================================  def self_loop(line: str) -> dict:     \"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/ring/INTERCONNECT-v1.0.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0188"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "CLI 接口",
+      "content": "# =============================================================================  def print_usage():     print(\"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/ring/INTERCONNECT-v1.0.py",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "usrm_node_0189"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "definition",
+      "name": "init_system",
+      "content": "def init_system():\n    \"\"\"初始化系统目录结构\"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/ring/INTERCONNECT-v1.0.py",
+      "dependencies": [],
+      "pedestal_mapping": "LL",
+      "node_id": "usrm_node_0190"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "definition",
+      "name": "run_full_cycle",
+      "content": "def run_full_cycle():\n    \"\"\"执行完整周期: 所有线自环 + 全局互环 + SI5调度\"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/ring/INTERCONNECT-v1.0.py",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "usrm_node_0191"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "mechanism",
+      "name": "Function: write_json",
+      "content": "Python function write_json",
+      "source_file": "/mnt/agents/output/OMNI-HUB/ring/INTERCONNECT-v1.0.py",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "usrm_node_0192"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "mechanism",
+      "name": "Function: release_lock",
+      "content": "Python function release_lock",
+      "source_file": "/mnt/agents/output/OMNI-HUB/ring/INTERCONNECT-v1.0.py",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "usrm_node_0193"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "mechanism",
+      "name": "Function: write",
+      "content": "Python function write",
+      "source_file": "/mnt/agents/output/OMNI-HUB/ring/INTERCONNECT-v1.0.py",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "usrm_node_0194"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "mechanism",
+      "name": "Function: print_usage",
+      "content": "Python function print_usage",
+      "source_file": "/mnt/agents/output/OMNI-HUB/ring/INTERCONNECT-v1.0.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0195"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "mechanism",
+      "name": "Function: init_system",
+      "content": "Python function init_system",
+      "source_file": "/mnt/agents/output/OMNI-HUB/ring/INTERCONNECT-v1.0.py",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "usrm_node_0196"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "mechanism",
+      "name": "Function: run_full_cycle",
+      "content": "Python function run_full_cycle",
+      "source_file": "/mnt/agents/output/OMNI-HUB/ring/INTERCONNECT-v1.0.py",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "usrm_node_0197"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "mechanism",
+      "name": "Function: main",
+      "content": "Python function main",
+      "source_file": "/mnt/agents/output/OMNI-HUB/ring/INTERCONNECT-v1.0.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0198"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "OMNI-HUB 11线常量",
+      "content": "LINES: List[str] = [     \"ucif2\", \"lgt\", \"qfa\", \"usrm\", \"vinf\",     \"qgl\", \"qlv\", \"lvlu\", \"cfts\", \"cisvr\", \"qtlv\" ]",
+      "source_file": "/mnt/agents/output/OMNI-HUB/ring/si_ring_orchestrator.py",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "usrm_node_0199"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "循环类型定义",
+      "content": "CYCLE_TYPES: Dict[str, Dict] = {     \"full\": {         \"description\": \"完整循环：所有线参与全部阶段\",         \"phases\": [\"init\", \"broadcast\", \"respond\", \"follow_up\", \"resolve\", \"finalize\"],",
+      "source_file": "/mnt/agents/output/OMNI-HUB/ring/si_ring_orchestrator.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0200"
+    },
+    {
+      "line_id": "usrm",
+      "node_type": "concept",
+      "name": "默认SI级别（与 field/direct_field.py 对齐）",
+      "content": "DEFAULT_SI: List[int] = [5, 5, 5, 5, 5, 5, 4, 4, 4, 4, 3]   if __name__ == \"__main__\":",
+      "source_file": "/mnt/agents/output/OMNI-HUB/ring/si_ring_orchestrator.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "usrm_node_0201"
+    }
+  ]
+}

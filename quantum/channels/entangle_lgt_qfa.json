@@ -1,0 +1,41 @@
+{
+  "operation": "entanglement_channel",
+  "line_a": "lgt",
+  "line_b": "qfa",
+  "timestamp": "2026-09-12T10:35:44.225775+00:00",
+  "description": "建立 lgt 与 qfa 之间的量子纠缠通道",
+  "strength": 0.78,
+  "bell_state": "phi_minus",
+  "entanglement_type": "strong",
+  "correlated_distribution": {
+    "si0": {
+      "same_level_probability": 0.6607,
+      "other_level_probability": 0.0679
+    },
+    "si1": {
+      "same_level_probability": 0.6607,
+      "other_level_probability": 0.0679
+    },
+    "si2": {
+      "same_level_probability": 0.6607,
+      "other_level_probability": 0.0679
+    },
+    "si3": {
+      "same_level_probability": 0.6607,
+      "other_level_probability": 0.0679
+    },
+    "si4": {
+      "same_level_probability": 0.6607,
+      "other_level_probability": 0.0679
+    },
+    "si5": {
+      "same_level_probability": 0.6607,
+      "other_level_probability": 0.0679
+    }
+  },
+  "mutual_influence": {
+    "state_sync_threshold": 0.2,
+    "excite_propagation_prob": 0.78,
+    "health_correlation": 0.78
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "timestamp": "2026-09-13T12:23:04.779906+00:00",
+  "module": "si_cloud_node",
+  "version": "1.0",
+  "sync_count": 5,
+  "entangle_results": [
+    {
+      "pair": [
+        "ucif2",
+        "lgt"
+      ],
+      "strength": 0.719338
+    },
+    {
+      "pair": [
+        "qfa",
+        "usrm"
+      ],
+      "strength": 0.683323
+    },
+    {
+      "pair": [
+        "vinf",
+        "qgl"
+      ],
+      "strength": 0.667593
+    }
+  ],
+  "coherence": {
+    "before_check": 0.953568,
+    "after_check": 0.825769
+  },
+  "collapse": {
+    "energy": -0.455116,
+    "proposals_count": 11,
+    "post_coherence": 0.809253
+  },
+  "snapshot": {
+    "field_shape": [
+      11,
+      64
+    ],
+    "line_norms": {
+      "ucif2": 1.0,
+      "lgt": 0.9999999999999999,
+      "qfa": 1.0,
+      "usrm": 1.0,
+      "vinf": 0.9999999999999999,
+      "qgl": 0.9999999999999999,
+      "qlv": 1.0,
+      "lvlu": 0.9999999999999999,
+      "cfts": 0.9999999999999998,
+      "cisvr": 1.0,
+      "qtlv": 1.0
+    },
+    "mean_norm": 1.0,
+    "coherence": 0.809253,
+    "synced_lines": [
+      "ucif2",
+      "lgt",
+      "qfa",
+      "usrm",
+      "vinf"
+    ],
+    "history_count": 1
+  },
+  "status": "PASS"
+}

@@ -1,0 +1,1224 @@
+{
+  "independent": {
+    "context": {
+      "tensor_shape": [
+        11,
+        7,
+        7
+      ],
+      "metrics": {
+        "coherence": 0.9694696129969916,
+        "stability": 0.5154232413741558,
+        "entropy": 5.1596323171359,
+        "surge_level": 2
+      },
+      "line_count": 11,
+      "history_size": 2,
+      "pass": true
+    },
+    "grammar": {
+      "parse_results": [
+        {
+          "valid": true,
+          "type": "command",
+          "confidence": 1.0,
+          "errors": 0
+        },
+        {
+          "valid": true,
+          "type": "query",
+          "confidence": 1.0,
+          "errors": 0
+        },
+        {
+          "valid": true,
+          "type": "message",
+          "confidence": 1.0,
+          "errors": 0
+        }
+      ],
+      "evolution_changes": [
+        "Added rule GR-TEST001: message.test == true"
+      ],
+      "total_rules": 9,
+      "pass": true
+    },
+    "semantics": {
+      "frame1_confidence": 0.799999999946812,
+      "frame2_pattern": "command",
+      "consensus": false,
+      "consensus_score": 0.34713768632271685,
+      "resolution": false,
+      "pass": true
+    },
+    "pragmatics": {
+      "effect_score": 0.3724999999999998,
+      "feedback_id": "FB-4E40769D",
+      "adjustment_count": 12,
+      "pass": true
+    }
+  },
+  "cycle": {
+    "total_cycles": 20,
+    "avg_information_flow": {
+      "context_to_grammar": 9.013844224655884,
+      "grammar_to_semantics": 1.0,
+      "semantics_to_pragmatics": 0.799999999957058,
+      "pragmatics_to_context": 0.0023071094742967892
+    },
+    "convergence_initial": 9.068052308989175,
+    "convergence_final": 0.42325111993760245,
+    "convergence_trend": "decreasing",
+    "evolution_generations": 11,
+    "final_fitness": 0.4261289738680981,
+    "layer_states": {
+      "context_metrics": {
+        "coherence": 0.9995335294099171,
+        "stability": 0.7048446847884224,
+        "entropy": 4.974416858489709,
+        "surge_level": 0
+      },
+      "grammar_rules": 9,
+      "semantic_frames": 20,
+      "pragmatic_effects": 20
+    }
+  },
+  "evolution": {
+    "scenario_reports": {
+      "normal": {
+        "scenario": "normal",
+        "total_cycles": 15,
+        "avg_information_flow": {
+          "context_to_grammar": 8.856828970947245,
+          "grammar_to_semantics": 1.0,
+          "semantics_to_pragmatics": 0.7999999999600003,
+          "pragmatics_to_context": 0.004447218745862225
+        },
+        "convergence_trend": {
+          "initial": 8.941263064504486,
+          "final": 0.39244718018827984,
+          "mean": 0.8953194918046478,
+          "decreasing": true
+        },
+        "pragmatic_trend": {
+          "initial": -0.005560901632713328,
+          "final": -0.00661194694906727,
+          "mean": -0.0016702377580358274,
+          "improving": false
+        },
+        "evolution_summary": [
+          {
+            "generation": 4,
+            "fitness": 0.4437817407864054,
+            "pragmatic_improvement": 0.0042829763118831955,
+            "grammar_changes": 0,
+            "semantic_shifts": 0
+          },
+          {
+            "generation": 5,
+            "fitness": 0.4313534259803835,
+            "pragmatic_improvement": -0.004959249468428456,
+            "grammar_changes": 0,
+            "semantic_shifts": 0
+          },
+          {
+            "generation": 6,
+            "fitness": 0.4077620325672777,
+            "pragmatic_improvement": 0.006707245705009086,
+            "grammar_changes": 0,
+            "semantic_shifts": 0
+          },
+          {
+            "generation": 7,
+            "fitness": 0.4774465739811615,
+            "pragmatic_improvement": 0.0007356865794049261,
+            "grammar_changes": 0,
+            "semantic_shifts": 0
+          },
+          {
+            "generation": 8,
+            "fitness": 0.42934895856753297,
+            "pragmatic_improvement": -0.0049284520633360255,
+            "grammar_changes": 0,
+            "semantic_shifts": 0
+          },
+          {
+            "generation": 9,
+            "fitness": 0.4156852960699521,
+            "pragmatic_improvement": -0.006372929595311877,
+            "grammar_changes": 0,
+            "semantic_shifts": 0
+          },
+          {
+            "generation": 10,
+            "fitness": 0.4385511682234229,
+            "pragmatic_improvement": -0.004821640425747901,
+            "grammar_changes": 0,
+            "semantic_shifts": 0
+          },
+          {
+            "generation": 11,
+            "fitness": 0.42459090110846787,
+            "pragmatic_improvement": -0.005861213384039358,
+            "grammar_changes": 0,
+            "semantic_shifts": 0
+          },
+          {
+            "generation": 12,
+            "fitness": 0.4275391811465113,
+            "pragmatic_improvement": 0.0035394929651317436,
+            "grammar_changes": 0,
+            "semantic_shifts": 0
+          },
+          {
+            "generation": 13,
+            "fitness": 0.41692405735441473,
+            "pragmatic_improvement": -0.00661194694906727,
+            "grammar_changes": 0,
+            "semantic_shifts": 0
+          }
+        ],
+        "layer_summaries": {
+          "context": {
+            "coherence": 0.9920357015327846,
+            "stability": 0.7047565533360698,
+            "entropy": 4.988459473427336,
+            "surge_level": 0
+          },
+          "grammar": {
+            "total_rules": 8,
+            "rule_types": {
+              "evolution": 1,
+              "protocol": 3,
+              "type": 2,
+              "syntax": 2
+            },
+            "avg_validity": 0.8788208703354751,
+            "avg_priority": 1.774942999532832,
+            "stats": {
+              "total_parses": 45,
+              "successful_parses": 45,
+              "rule_mutations": 0,
+              "rule_prunings": 0
+            },
+            "type_system": {
+              "base_types": [
+                "message",
+                "command",
+                "query",
+                "response",
+                "event",
+                "action"
+              ],
+              "composite_types": {
+                "request": {
+                  "from": "message",
+                  "to": "command"
+                },
+                "reply": {
+                  "from": "message",
+                  "to": "response"
+                },
+                "dispatch": {
+                  "from": "command",
+                  "to": "action"
+                }
+              },
+              "type_hierarchy": {
+                "message": [
+                  "command",
+                  "query",
+                  "response",
+                  "event"
+                ],
+                "command": [
+                  "action",
+                  "dispatch"
+                ],
+                "action": []
+              },
+              "constraints": {
+                "command": {
+                  "required": [
+                    "action_type",
+                    "payload"
+                  ]
+                },
+                "response": {
+                  "required": [
+                    "status",
+                    "data"
+                  ]
+                },
+                "query": {
+                  "required": [
+                    "query_type",
+                    "parameters"
+                  ]
+                }
+              }
+            }
+          },
+          "semantics": {
+            "semantic_dim": 64,
+            "concepts": [
+              "command",
+              "query",
+              "response",
+              "event",
+              "action",
+              "urgent",
+              "normal",
+              "low_priority",
+              "success",
+              "failure",
+              "pending",
+              "health",
+              "anomaly",
+              "recovery",
+              "dispatch",
+              "route",
+              "sync",
+              "debt",
+              "credit",
+              "balance",
+              "evolve",
+              "stable",
+              "degrade"
+            ],
+            "patterns": [
+              "command",
+              "query",
+              "response",
+              "event",
+              "action",
+              "urgent",
+              "normal",
+              "low_priority",
+              "success",
+              "failure",
+              "pending",
+              "health",
+              "anomaly",
+              "recovery",
+              "dispatch",
+              "route",
+              "sync",
+              "debt",
+              "credit",
+              "balance",
+              "evolve",
+              "stable",
+              "degrade"
+            ],
+            "frames_count": 15,
+            "stats": {
+              "total_mappings": 45,
+              "consensus_reached": 0,
+              "ambiguities_resolved": 0,
+              "meaning_shifts": 2
+            },
+            "consensus_history_count": 0
+          },
+          "pragmatics": {
+            "total_effects": 15,
+            "recent_avg_effect": -0.0016702377580358274,
+            "success_rate": 0.3333333333333333,
+            "feedback_queue_size": 15,
+            "adjustment_count": 0,
+            "mcode_registry_size": 0,
+            "effect_weights": {
+              "health_improvement": 0.25,
+              "si_level_change": 0.2,
+              "task_efficiency": 0.2,
+              "anomaly_reduction": 0.2,
+              "coherence_gain": 0.15
+            }
+          }
+        },
+        "final_fitness": 0.41692405735441473
+      },
+      "anomaly": {
+        "scenario": "anomaly",
+        "total_cycles": 15,
+        "avg_information_flow": {
+          "context_to_grammar": 7.002267034143765,
+          "grammar_to_semantics": 0.9997459894020218,
+          "semantics_to_pragmatics": 0.799999999957598,
+          "pragmatics_to_context": 0.014183127265511849
+        },
+        "convergence_trend": {
+          "initial": 3.5692235151165264,
+          "final": 0.39017731126131894,
+          "mean": 0.7258055220779649,
+          "decreasing": true
+        },
+        "pragmatic_trend": {
+          "initial": 0.015797972608714083,
+          "final": 0.009169694576567413,
+          "mean": 0.003686603886849659,
+          "improving": false
+        },
+        "evolution_summary": [
+          {
+            "generation": 19,
+            "fitness": 0.3501068520000336,
+            "pragmatic_improvement": 0.024005526891118678,
+            "grammar_changes": 0,
+            "semantic_shifts": 0
+          },
+          {
+            "generation": 20,
+            "fitness": 0.3886893892585598,
+            "pragmatic_improvement": 0.013434646557475569,
+            "grammar_changes": 0,
+            "semantic_shifts": 0
+          },
+          {
+            "generation": 21,
+            "fitness": 0.3765161354773459,
+            "pragmatic_improvement": 0.0155791997950361,
+            "grammar_changes": 1,
+            "semantic_shifts": 0
+          },
+          {
+            "generation": 22,
+            "fitness": 0.408366841108778,
+            "pragmatic_improvement": -0.010706853104221321,
+            "grammar_changes": 0,
+            "semantic_shifts": 0
+          },
+          {
+            "generation": 23,
+            "fitness": 0.3759751416298212,
+            "pragmatic_improvement": 0.01932778159725249,
+            "grammar_changes": 0,
+            "semantic_shifts": 0
+          },
+          {
+            "generation": 24,
+            "fitness": 0.3982954878776139,
+            "pragmatic_improvement": 0.010420068061131781,
+            "grammar_changes": 0,
+            "semantic_shifts": 0
+          },
+          {
+            "generation": 25,
+            "fitness": 0.3976985307592771,
+            "pragmatic_improvement": -0.013369497441456699,
+            "grammar_changes": 0,
+            "semantic_shifts": 0
+          },
+          {
+            "generation": 26,
+            "fitness": 0.396309996190652,
+            "pragmatic_improvement": -0.014005105068532853,
+            "grammar_changes": 0,
+            "semantic_shifts": 0
+          },
+          {
+            "generation": 27,
+            "fitness": 0.39696648693562053,
+            "pragmatic_improvement": 0.013074844175264042,
+            "grammar_changes": 0,
+            "semantic_shifts": 0
+          },
+          {
+            "generation": 28,
+            "fitness": 0.41072254124731467,
+            "pragmatic_improvement": 0.009169694576567413,
+            "grammar_changes": 0,
+            "semantic_shifts": 0
+          }
+        ],
+        "layer_summaries": {
+          "context": {
+            "coherence": 0.9920357015327846,
+            "stability": 0.7047565533360698,
+            "entropy": 4.988459473427336,
+            "surge_level": 0
+          },
+          "grammar": {
+            "total_rules": 9,
+            "rule_types": {
+              "protocol": 3,
+              "syntax": 2,
+              "evolution": 1,
+              "type": 2,
+              "composite": 1
+            },
+            "avg_validity": 0.8892198900724926,
+            "avg_priority": 1.8888888888888888,
+            "stats": {
+              "total_parses": 45,
+              "successful_parses": 45,
+              "rule_mutations": 0,
+              "rule_prunings": 0
+            },
+            "type_system": {
+              "base_types": [
+                "message",
+                "command",
+                "query",
+                "response",
+                "event",
+                "action"
+              ],
+              "composite_types": {
+                "request": {
+                  "from": "message",
+                  "to": "command"
+                },
+                "reply": {
+                  "from": "message",
+                  "to": "response"
+                },
+                "dispatch": {
+                  "from": "command",
+                  "to": "action"
+                }
+              },
+              "type_hierarchy": {
+                "message": [
+                  "command",
+                  "query",
+                  "response",
+                  "event"
+                ],
+                "command": [
+                  "action",
+                  "dispatch"
+                ],
+                "action": []
+              },
+              "constraints": {
+                "command": {
+                  "required": [
+                    "action_type",
+                    "payload"
+                  ]
+                },
+                "response": {
+                  "required": [
+                    "status",
+                    "data"
+                  ]
+                },
+                "query": {
+                  "required": [
+                    "query_type",
+                    "parameters"
+                  ]
+                }
+              }
+            }
+          },
+          "semantics": {
+            "semantic_dim": 64,
+            "concepts": [
+              "command",
+              "query",
+              "response",
+              "event",
+              "action",
+              "urgent",
+              "normal",
+              "low_priority",
+              "success",
+              "failure",
+              "pending",
+              "health",
+              "anomaly",
+              "recovery",
+              "dispatch",
+              "route",
+              "sync",
+              "debt",
+              "credit",
+              "balance",
+              "evolve",
+              "stable",
+              "degrade"
+            ],
+            "patterns": [
+              "command",
+              "query",
+              "response",
+              "event",
+              "action",
+              "urgent",
+              "normal",
+              "low_priority",
+              "success",
+              "failure",
+              "pending",
+              "health",
+              "anomaly",
+              "recovery",
+              "dispatch",
+              "route",
+              "sync",
+              "debt",
+              "credit",
+              "balance",
+              "evolve",
+              "stable",
+              "degrade"
+            ],
+            "frames_count": 30,
+            "stats": {
+              "total_mappings": 45,
+              "consensus_reached": 0,
+              "ambiguities_resolved": 0,
+              "meaning_shifts": 2
+            },
+            "consensus_history_count": 0
+          },
+          "pragmatics": {
+            "total_effects": 30,
+            "recent_avg_effect": 0.0010081830644069155,
+            "success_rate": 0.4666666666666667,
+            "feedback_queue_size": 30,
+            "adjustment_count": 0,
+            "mcode_registry_size": 0,
+            "effect_weights": {
+              "health_improvement": 0.25,
+              "si_level_change": 0.2,
+              "task_efficiency": 0.2,
+              "anomaly_reduction": 0.2,
+              "coherence_gain": 0.15
+            }
+          }
+        },
+        "final_fitness": 0.41072254124731467
+      },
+      "recovery": {
+        "scenario": "recovery",
+        "total_cycles": 15,
+        "avg_information_flow": {
+          "context_to_grammar": 5.948252542871837,
+          "grammar_to_semantics": 1.0,
+          "semantics_to_pragmatics": 0.7999999999527938,
+          "pragmatics_to_context": 0.01756628530918173
+        },
+        "convergence_trend": {
+          "initial": 2.608360233560666,
+          "final": 0.36044440270445455,
+          "mean": 0.717665502100785,
+          "decreasing": true
+        },
+        "pragmatic_trend": {
+          "initial": 0.020759159041822427,
+          "final": 0.008250128912934807,
+          "mean": 0.003797673903652926,
+          "improving": false
+        },
+        "evolution_summary": [
+          {
+            "generation": 34,
+            "fitness": 0.40008631639603315,
+            "pragmatic_improvement": 0.017523739489307303,
+            "grammar_changes": 1,
+            "semantic_shifts": 0
+          },
+          {
+            "generation": 35,
+            "fitness": 0.41227567510955426,
+            "pragmatic_improvement": 0.011776756246561857,
+            "grammar_changes": 0,
+            "semantic_shifts": 0
+          },
+          {
+            "generation": 36,
+            "fitness": 0.39434076886201264,
+            "pragmatic_improvement": 0.014005411757106317,
+            "grammar_changes": 0,
+            "semantic_shifts": 0
+          },
+          {
+            "generation": 37,
+            "fitness": 0.4355144717278035,
+            "pragmatic_improvement": 0.006762110218194034,
+            "grammar_changes": 0,
+            "semantic_shifts": 0
+          },
+          {
+            "generation": 38,
+            "fitness": 0.4035322164105055,
+            "pragmatic_improvement": -0.014112166351130195,
+            "grammar_changes": 0,
+            "semantic_shifts": 0
+          },
+          {
+            "generation": 39,
+            "fitness": 0.41464631220598913,
+            "pragmatic_improvement": 0.012658373293638014,
+            "grammar_changes": 0,
+            "semantic_shifts": 0
+          },
+          {
+            "generation": 40,
+            "fitness": 0.3947538033420967,
+            "pragmatic_improvement": -0.01571477265803452,
+            "grammar_changes": 0,
+            "semantic_shifts": 0
+          },
+          {
+            "generation": 41,
+            "fitness": 0.4000526282051138,
+            "pragmatic_improvement": -0.015168063685152264,
+            "grammar_changes": 0,
+            "semantic_shifts": 0
+          },
+          {
+            "generation": 42,
+            "fitness": 0.40318470017651825,
+            "pragmatic_improvement": 0.015153807534527542,
+            "grammar_changes": 0,
+            "semantic_shifts": 0
+          },
+          {
+            "generation": 43,
+            "fitness": 0.4252704187856827,
+            "pragmatic_improvement": 0.008250128912934807,
+            "grammar_changes": 0,
+            "semantic_shifts": 0
+          }
+        ],
+        "layer_summaries": {
+          "context": {
+            "coherence": 0.9920357015327846,
+            "stability": 0.7047565533360698,
+            "entropy": 4.988459473427336,
+            "surge_level": 0
+          },
+          "grammar": {
+            "total_rules": 10,
+            "rule_types": {
+              "protocol": 3,
+              "syntax": 2,
+              "evolution": 1,
+              "type": 2,
+              "composite": 2
+            },
+            "avg_validity": 0.8826667322395453,
+            "avg_priority": 1.9,
+            "stats": {
+              "total_parses": 45,
+              "successful_parses": 45,
+              "rule_mutations": 0,
+              "rule_prunings": 0
+            },
+            "type_system": {
+              "base_types": [
+                "message",
+                "command",
+                "query",
+                "response",
+                "event",
+                "action"
+              ],
+              "composite_types": {
+                "request": {
+                  "from": "message",
+                  "to": "command"
+                },
+                "reply": {
+                  "from": "message",
+                  "to": "response"
+                },
+                "dispatch": {
+                  "from": "command",
+                  "to": "action"
+                }
+              },
+              "type_hierarchy": {
+                "message": [
+                  "command",
+                  "query",
+                  "response",
+                  "event"
+                ],
+                "command": [
+                  "action",
+                  "dispatch"
+                ],
+                "action": []
+              },
+              "constraints": {
+                "command": {
+                  "required": [
+                    "action_type",
+                    "payload"
+                  ]
+                },
+                "response": {
+                  "required": [
+                    "status",
+                    "data"
+                  ]
+                },
+                "query": {
+                  "required": [
+                    "query_type",
+                    "parameters"
+                  ]
+                }
+              }
+            }
+          },
+          "semantics": {
+            "semantic_dim": 64,
+            "concepts": [
+              "command",
+              "query",
+              "response",
+              "event",
+              "action",
+              "urgent",
+              "normal",
+              "low_priority",
+              "success",
+              "failure",
+              "pending",
+              "health",
+              "anomaly",
+              "recovery",
+              "dispatch",
+              "route",
+              "sync",
+              "debt",
+              "credit",
+              "balance",
+              "evolve",
+              "stable",
+              "degrade"
+            ],
+            "patterns": [
+              "command",
+              "query",
+              "response",
+              "event",
+              "action",
+              "urgent",
+              "normal",
+              "low_priority",
+              "success",
+              "failure",
+              "pending",
+              "health",
+              "anomaly",
+              "recovery",
+              "dispatch",
+              "route",
+              "sync",
+              "debt",
+              "credit",
+              "balance",
+              "evolve",
+              "stable",
+              "degrade"
+            ],
+            "frames_count": 45,
+            "stats": {
+              "total_mappings": 45,
+              "consensus_reached": 0,
+              "ambiguities_resolved": 0,
+              "meaning_shifts": 2
+            },
+            "consensus_history_count": 0
+          },
+          "pragmatics": {
+            "total_effects": 45,
+            "recent_avg_effect": 0.0019380133441555863,
+            "success_rate": 0.5111111111111111,
+            "feedback_queue_size": 45,
+            "adjustment_count": 0,
+            "mcode_registry_size": 0,
+            "effect_weights": {
+              "health_improvement": 0.25,
+              "si_level_change": 0.2,
+              "task_efficiency": 0.2,
+              "anomaly_reduction": 0.2,
+              "coherence_gain": 0.15
+            }
+          }
+        },
+        "final_fitness": 0.4252704187856827
+      }
+    },
+    "evolution_analysis": [
+      {
+        "generation": 1,
+        "fitness": 0.4245572245319665,
+        "pragmatic_improvement": -0.005560901632713328,
+        "grammar_changes_count": 0,
+        "semantic_shifts_count": 0,
+        "context_adaptations_count": 1
+      },
+      {
+        "generation": 2,
+        "fitness": 0.4246585095543912,
+        "pragmatic_improvement": 0.005561955847269035,
+        "grammar_changes_count": 0,
+        "semantic_shifts_count": 0,
+        "context_adaptations_count": 1
+      },
+      {
+        "generation": 3,
+        "fitness": 0.4109830699913485,
+        "pragmatic_improvement": -0.006764590260591185,
+        "grammar_changes_count": 0,
+        "semantic_shifts_count": 0,
+        "context_adaptations_count": 2
+      },
+      {
+        "generation": 4,
+        "fitness": 0.4437817407864054,
+        "pragmatic_improvement": 0.0042829763118831955,
+        "grammar_changes_count": 0,
+        "semantic_shifts_count": 0,
+        "context_adaptations_count": 3
+      },
+      {
+        "generation": 5,
+        "fitness": 0.4313534259803835,
+        "pragmatic_improvement": -0.004959249468428456,
+        "grammar_changes_count": 0,
+        "semantic_shifts_count": 0,
+        "context_adaptations_count": 2
+      },
+      {
+        "generation": 6,
+        "fitness": 0.4077620325672777,
+        "pragmatic_improvement": 0.006707245705009086,
+        "grammar_changes_count": 0,
+        "semantic_shifts_count": 0,
+        "context_adaptations_count": 3
+      },
+      {
+        "generation": 7,
+        "fitness": 0.4774465739811615,
+        "pragmatic_improvement": 0.0007356865794049261,
+        "grammar_changes_count": 0,
+        "semantic_shifts_count": 0,
+        "context_adaptations_count": 2
+      },
+      {
+        "generation": 8,
+        "fitness": 0.42934895856753297,
+        "pragmatic_improvement": -0.0049284520633360255,
+        "grammar_changes_count": 0,
+        "semantic_shifts_count": 0,
+        "context_adaptations_count": 2
+      },
+      {
+        "generation": 9,
+        "fitness": 0.4156852960699521,
+        "pragmatic_improvement": -0.006372929595311877,
+        "grammar_changes_count": 0,
+        "semantic_shifts_count": 0,
+        "context_adaptations_count": 2
+      },
+      {
+        "generation": 10,
+        "fitness": 0.4385511682234229,
+        "pragmatic_improvement": -0.004821640425747901,
+        "grammar_changes_count": 0,
+        "semantic_shifts_count": 0,
+        "context_adaptations_count": 3
+      },
+      {
+        "generation": 11,
+        "fitness": 0.42459090110846787,
+        "pragmatic_improvement": -0.005861213384039358,
+        "grammar_changes_count": 0,
+        "semantic_shifts_count": 0,
+        "context_adaptations_count": 2
+      },
+      {
+        "generation": 12,
+        "fitness": 0.4275391811465113,
+        "pragmatic_improvement": 0.0035394929651317436,
+        "grammar_changes_count": 0,
+        "semantic_shifts_count": 0,
+        "context_adaptations_count": 1
+      },
+      {
+        "generation": 13,
+        "fitness": 0.41692405735441473,
+        "pragmatic_improvement": -0.00661194694906727,
+        "grammar_changes_count": 0,
+        "semantic_shifts_count": 0,
+        "context_adaptations_count": 3
+      },
+      {
+        "generation": 14,
+        "fitness": 0.38057066507360804,
+        "pragmatic_improvement": 0.015797972608714083,
+        "grammar_changes_count": 0,
+        "semantic_shifts_count": 0,
+        "context_adaptations_count": 7
+      },
+      {
+        "generation": 15,
+        "fitness": 0.38324720997505723,
+        "pragmatic_improvement": -0.013972036385196951,
+        "grammar_changes_count": 0,
+        "semantic_shifts_count": 0,
+        "context_adaptations_count": 6
+      },
+      {
+        "generation": 16,
+        "fitness": 0.39615736085520015,
+        "pragmatic_improvement": 0.013213249380151136,
+        "grammar_changes_count": 0,
+        "semantic_shifts_count": 0,
+        "context_adaptations_count": 7
+      },
+      {
+        "generation": 17,
+        "fitness": 0.3860987850106882,
+        "pragmatic_improvement": -0.013857773532670998,
+        "grammar_changes_count": 0,
+        "semantic_shifts_count": 0,
+        "context_adaptations_count": 5
+      },
+      {
+        "generation": 18,
+        "fitness": 0.38669651310487885,
+        "pragmatic_improvement": -0.012812659807887594,
+        "grammar_changes_count": 0,
+        "semantic_shifts_count": 0,
+        "context_adaptations_count": 4
+      },
+      {
+        "generation": 19,
+        "fitness": 0.3501068520000336,
+        "pragmatic_improvement": 0.024005526891118678,
+        "grammar_changes_count": 0,
+        "semantic_shifts_count": 0,
+        "context_adaptations_count": 7
+      },
+      {
+        "generation": 20,
+        "fitness": 0.3886893892585598,
+        "pragmatic_improvement": 0.013434646557475569,
+        "grammar_changes_count": 0,
+        "semantic_shifts_count": 0,
+        "context_adaptations_count": 7
+      },
+      {
+        "generation": 21,
+        "fitness": 0.3765161354773459,
+        "pragmatic_improvement": 0.0155791997950361,
+        "grammar_changes_count": 1,
+        "semantic_shifts_count": 0,
+        "context_adaptations_count": 7
+      },
+      {
+        "generation": 22,
+        "fitness": 0.408366841108778,
+        "pragmatic_improvement": -0.010706853104221321,
+        "grammar_changes_count": 0,
+        "semantic_shifts_count": 0,
+        "context_adaptations_count": 2
+      },
+      {
+        "generation": 23,
+        "fitness": 0.3759751416298212,
+        "pragmatic_improvement": 0.01932778159725249,
+        "grammar_changes_count": 0,
+        "semantic_shifts_count": 0,
+        "context_adaptations_count": 7
+      },
+      {
+        "generation": 24,
+        "fitness": 0.3982954878776139,
+        "pragmatic_improvement": 0.010420068061131781,
+        "grammar_changes_count": 0,
+        "semantic_shifts_count": 0,
+        "context_adaptations_count": 7
+      },
+      {
+        "generation": 25,
+        "fitness": 0.3976985307592771,
+        "pragmatic_improvement": -0.013369497441456699,
+        "grammar_changes_count": 0,
+        "semantic_shifts_count": 0,
+        "context_adaptations_count": 7
+      },
+      {
+        "generation": 26,
+        "fitness": 0.396309996190652,
+        "pragmatic_improvement": -0.014005105068532853,
+        "grammar_changes_count": 0,
+        "semantic_shifts_count": 0,
+        "context_adaptations_count": 5
+      },
+      {
+        "generation": 27,
+        "fitness": 0.39696648693562053,
+        "pragmatic_improvement": 0.013074844175264042,
+        "grammar_changes_count": 0,
+        "semantic_shifts_count": 0,
+        "context_adaptations_count": 7
+      },
+      {
+        "generation": 28,
+        "fitness": 0.41072254124731467,
+        "pragmatic_improvement": 0.009169694576567413,
+        "grammar_changes_count": 0,
+        "semantic_shifts_count": 0,
+        "context_adaptations_count": 7
+      },
+      {
+        "generation": 29,
+        "fitness": 0.3727640306052503,
+        "pragmatic_improvement": 0.020759159041822427,
+        "grammar_changes_count": 0,
+        "semantic_shifts_count": 0,
+        "context_adaptations_count": 11
+      },
+      {
+        "generation": 30,
+        "fitness": 0.39062035442996357,
+        "pragmatic_improvement": -0.020720632113501173,
+        "grammar_changes_count": 0,
+        "semantic_shifts_count": 0,
+        "context_adaptations_count": 8
+      },
+      {
+        "generation": 31,
+        "fitness": 0.2963215405271595,
+        "pragmatic_improvement": 0.05334020760216761,
+        "grammar_changes_count": 0,
+        "semantic_shifts_count": 2,
+        "context_adaptations_count": 12
+      },
+      {
+        "generation": 32,
+        "fitness": 0.3908193400985611,
+        "pragmatic_improvement": -0.018813221297751696,
+        "grammar_changes_count": 0,
+        "semantic_shifts_count": 0,
+        "context_adaptations_count": 5
+      },
+      {
+        "generation": 33,
+        "fitness": 0.39222555763883593,
+        "pragmatic_improvement": -0.018735729435896166,
+        "grammar_changes_count": 0,
+        "semantic_shifts_count": 0,
+        "context_adaptations_count": 7
+      },
+      {
+        "generation": 34,
+        "fitness": 0.40008631639603315,
+        "pragmatic_improvement": 0.017523739489307303,
+        "grammar_changes_count": 1,
+        "semantic_shifts_count": 0,
+        "context_adaptations_count": 10
+      },
+      {
+        "generation": 35,
+        "fitness": 0.41227567510955426,
+        "pragmatic_improvement": 0.011776756246561857,
+        "grammar_changes_count": 0,
+        "semantic_shifts_count": 0,
+        "context_adaptations_count": 10
+      },
+      {
+        "generation": 36,
+        "fitness": 0.39434076886201264,
+        "pragmatic_improvement": 0.014005411757106317,
+        "grammar_changes_count": 0,
+        "semantic_shifts_count": 0,
+        "context_adaptations_count": 10
+      },
+      {
+        "generation": 37,
+        "fitness": 0.4355144717278035,
+        "pragmatic_improvement": 0.006762110218194034,
+        "grammar_changes_count": 0,
+        "semantic_shifts_count": 0,
+        "context_adaptations_count": 8
+      },
+      {
+        "generation": 38,
+        "fitness": 0.4035322164105055,
+        "pragmatic_improvement": -0.014112166351130195,
+        "grammar_changes_count": 0,
+        "semantic_shifts_count": 0,
+        "context_adaptations_count": 6
+      },
+      {
+        "generation": 39,
+        "fitness": 0.41464631220598913,
+        "pragmatic_improvement": 0.012658373293638014,
+        "grammar_changes_count": 0,
+        "semantic_shifts_count": 0,
+        "context_adaptations_count": 8
+      },
+      {
+        "generation": 40,
+        "fitness": 0.3947538033420967,
+        "pragmatic_improvement": -0.01571477265803452,
+        "grammar_changes_count": 0,
+        "semantic_shifts_count": 0,
+        "context_adaptations_count": 5
+      },
+      {
+        "generation": 41,
+        "fitness": 0.4000526282051138,
+        "pragmatic_improvement": -0.015168063685152264,
+        "grammar_changes_count": 0,
+        "semantic_shifts_count": 0,
+        "context_adaptations_count": 4
+      },
+      {
+        "generation": 42,
+        "fitness": 0.40318470017651825,
+        "pragmatic_improvement": 0.015153807534527542,
+        "grammar_changes_count": 0,
+        "semantic_shifts_count": 0,
+        "context_adaptations_count": 8
+      },
+      {
+        "generation": 43,
+        "fitness": 0.4252704187856827,
+        "pragmatic_improvement": 0.008250128912934807,
+        "grammar_changes_count": 0,
+        "semantic_shifts_count": 0,
+        "context_adaptations_count": 8
+      }
+    ],
+    "evolution_chain_verified": {
+      "pragmatic_driven": true,
+      "grammar_to_semantic": true,
+      "semantic_to_context": true
+    },
+    "total_generations": 43,
+    "final_fitness": 0.4252704187856827,
+    "fitness_improvement": 0.0007131942537162428
+  },
+  "integration": {
+    "integration_status": {
+      "tensor_field": true,
+      "quantum_field": true,
+      "closed_loop": true,
+      "si_protocol": true
+    },
+    "cycle_result": {
+      "cycle_id": 1,
+      "information_flow": {
+        "context_to_grammar": 8.91064197908829,
+        "grammar_to_semantics": 1.0,
+        "semantics_to_pragmatics": 0.79999999996,
+        "pragmatics_to_context": 0.005924143092373671
+      },
+      "convergence_delta": 8.930140089226429
+    },
+    "all_modules_available": true
+  }
+}

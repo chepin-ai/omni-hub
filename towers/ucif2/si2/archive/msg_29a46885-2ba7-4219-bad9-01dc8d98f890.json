@@ -1,0 +1,33 @@
+{
+  "envelope": {
+    "msg_id": "29a46885-2ba7-4219-bad9-01dc8d98f890",
+    "version": "SI2-v1.0",
+    "timestamp": "2026-09-12T05:05:00.947863+00:00",
+    "ttl": 300,
+    "priority": 3,
+    "source": {
+      "line": "lgt",
+      "si_level": 2
+    },
+    "target": {
+      "line": "ucif2",
+      "si_level": 2,
+      "broadcast": false
+    }
+  },
+  "payload": {
+    "type": "TASK",
+    "task_id": "dc1f81d3-68cb-479c-ae92-9ee147704d64",
+    "content": {
+      "type": "mutual_excite",
+      "partner": "ucif2",
+      "entanglement": 17.0054
+    },
+    "dependencies": [],
+    "deadline": ""
+  },
+  "signature": {
+    "hash": "c016f1d34eac081174bae4e134584344724587d3da6d2c67537833e53b7614ac",
+    "chain_hash": ""
+  }
+}

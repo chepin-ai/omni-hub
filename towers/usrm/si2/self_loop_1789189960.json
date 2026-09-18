@@ -1,0 +1,21 @@
+{
+  "line": "usrm",
+  "ts": "2026-09-12T05:12:40.688394+00:00",
+  "processed": [
+    {
+      "msg_id": "3b58e1bf-6b93-4125-9e7a-e2c0fa53db9f",
+      "type": "TASK",
+      "status": "OK",
+      "action": "queued"
+    }
+  ],
+  "expired": [
+    {
+      "msg_id": "faaed072-0da6-4168-841b-54802ea5078b",
+      "age_sec": 476.193725
+    }
+  ],
+  "failed": [],
+  "pending_acks": 1,
+  "stalled": false
+}

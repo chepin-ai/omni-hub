@@ -1,0 +1,34 @@
+{
+  "line": "qlv",
+  "ts": "2026-09-12T05:12:43.410705+00:00",
+  "processed": [],
+  "expired": [
+    {
+      "msg_id": "01eae98d-b1d0-4e15-ac0c-3aacdb049ada",
+      "age_sec": 458.800098
+    },
+    {
+      "msg_id": "38dbc8e4-d126-437d-8a92-656ccb3b03d9",
+      "age_sec": 458.247582
+    },
+    {
+      "msg_id": "434a12eb-92c4-40e0-96be-72028735b999",
+      "age_sec": 472.885396
+    },
+    {
+      "msg_id": "6937e080-7611-4d49-8a3f-99d825ce9d1f",
+      "age_sec": 459.690046
+    },
+    {
+      "msg_id": "88a35bff-a361-4020-8d1d-69f4da73eea3",
+      "age_sec": 460.944594
+    },
+    {
+      "msg_id": "ade829cd-b711-44b2-837a-ce646efbdaff",
+      "age_sec": 462.021063
+    }
+  ],
+  "failed": [],
+  "pending_acks": 6,
+  "stalled": false
+}

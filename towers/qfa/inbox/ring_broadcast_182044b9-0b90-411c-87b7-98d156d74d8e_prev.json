@@ -1,0 +1,30 @@
+{
+  "msg_id": "182044b9-0b90-411c-87b7-98d156d74d8e",
+  "origin": "usrm",
+  "payload": {
+    "type": "SELF_EXCITE",
+    "line": "usrm",
+    "trigger": "silence_timeout",
+    "output": {
+      "line": "usrm",
+      "ts": "2026-09-12T05:04:58.858947+00:00",
+      "period": "last_10_messages",
+      "message_count": 1,
+      "summary": [
+        {
+          "file": "msg_faaed072-0da6-4168-841b-54802ea5078b.json",
+          "summary": "{'envelope': {'msg_id': 'faaed072-0da6-4168-841b-54802ea5078b', 'version': 'SI2-v1.0', 'timestamp': '2026-09-12T05:04:44.595072+00:00', 'ttl': 300, 'priority': 3, 'source': {'line': 'qfa', 'si_level':"
+        }
+      ],
+      "insight": "Line usrm has processed 1 messages recently. Health: 1.0"
+    },
+    "ts": "2026-09-12T05:04:58.944057+00:00"
+  },
+  "hop_count": 0,
+  "max_hops": 9,
+  "visited": [
+    "usrm"
+  ],
+  "ts": "2026-09-12T05:04:58.944114+00:00",
+  "direction": "prev"
+}

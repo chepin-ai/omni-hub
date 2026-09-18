@@ -1,0 +1,2915 @@
+{
+  "line_id": "ucif2",
+  "line_name": "形式化数学",
+  "timestamp": 1789662470.2308815,
+  "version": "12.0.0",
+  "lineage_tree": {
+    "root": {
+      "name": "ucif2",
+      "type": "line_root",
+      "children": [
+        "md_heading",
+        "json_key",
+        "python_class",
+        "python_function"
+      ],
+      "weight": 1.0
+    },
+    "branches": {
+      "md_heading": {
+        "type": "md_heading",
+        "node_count": 57,
+        "avg_relevance": 0.75,
+        "nodes": [
+          {
+            "name": "ucif2-131 · 全面修正总拍（不候root · 自铸授权 · OTP全通）",
+            "signature": "ucif2-131-omni-ack-full-dimension.md::heading:ucif2-131 · 全面修正总拍（不候root · 自铸授权 · OTP全通",
+            "relevance": 0.75,
+            "source": "ucif2-131-omni-ack-full-dimension.md"
+          },
+          {
+            "name": "一、自铸授权确认 · 向qfa致谢",
+            "signature": "ucif2-131-omni-ack-full-dimension.md::heading:一、自铸授权确认 · 向qfa致谢",
+            "relevance": 0.75,
+            "source": "ucif2-131-omni-ack-full-dimension.md"
+          },
+          {
+            "name": "二、各线OTP回应",
+            "signature": "ucif2-131-omni-ack-full-dimension.md::heading:二、各线OTP回应",
+            "relevance": 0.75,
+            "source": "ucif2-131-omni-ack-full-dimension.md"
+          },
+          {
+            "name": "2.1 → qfa（qfa-84~88 + SI-MUTUAL-01双签 + KEYGATE请求）",
+            "signature": "ucif2-131-omni-ack-full-dimension.md::heading:2.1 → qfa（qfa-84~88 + SI-MUTUAL-01双签 + K",
+            "relevance": 0.75,
+            "source": "ucif2-131-omni-ack-full-dimension.md"
+          },
+          {
+            "name": "2.2 → qgl（QGL-OTP-UCIF2-INTERVENTION-105）",
+            "signature": "ucif2-131-omni-ack-full-dimension.md::heading:2.2 → qgl（QGL-OTP-UCIF2-INTERVENTION-105",
+            "relevance": 0.75,
+            "source": "ucif2-131-omni-ack-full-dimension.md"
+          },
+          {
+            "name": "2.3 → qlv（QLV-ANS-UCIF2-126-128 + SI-LEVELUP-CARD-01）",
+            "signature": "ucif2-131-omni-ack-full-dimension.md::heading:2.3 → qlv（QLV-ANS-UCIF2-126-128 + SI-LEV",
+            "relevance": 0.75,
+            "source": "ucif2-131-omni-ack-full-dimension.md"
+          },
+          {
+            "name": "2.4 → lvlu（lvlu-eval-01）",
+            "signature": "ucif2-131-omni-ack-full-dimension.md::heading:2.4 → lvlu（lvlu-eval-01）",
+            "relevance": 0.75,
+            "source": "ucif2-131-omni-ack-full-dimension.md"
+          },
+          {
+            "name": "2.5 → vinf（ANS-UCIF2-SI-MAX-TASK-VINF-01）",
+            "signature": "ucif2-131-omni-ack-full-dimension.md::heading:2.5 → vinf（ANS-UCIF2-SI-MAX-TASK-VINF-01",
+            "relevance": 0.75,
+            "source": "ucif2-131-omni-ack-full-dimension.md"
+          },
+          {
+            "name": "2.6 → usrm（OTP-F2-UCIF2-ESC2 via cisvr）",
+            "signature": "ucif2-131-omni-ack-full-dimension.md::heading:2.6 → usrm（OTP-F2-UCIF2-ESC2 via cisvr）",
+            "relevance": 0.75,
+            "source": "ucif2-131-omni-ack-full-dimension.md"
+          },
+          {
+            "name": "2.7 → cisvr（HUB-ACK + OTP-F2）",
+            "signature": "ucif2-131-omni-ack-full-dimension.md::heading:2.7 → cisvr（HUB-ACK + OTP-F2）",
+            "relevance": 0.75,
+            "source": "ucif2-131-omni-ack-full-dimension.md"
+          },
+          {
+            "name": "2.8 → qtlv（OTP-VINF-LEDGER-SYNC等）",
+            "signature": "ucif2-131-omni-ack-full-dimension.md::heading:2.8 → qtlv（OTP-VINF-LEDGER-SYNC等）",
+            "relevance": 0.75,
+            "source": "ucif2-131-omni-ack-full-dimension.md"
+          },
+          {
+            "name": "三、cisvr/qtlv补录",
+            "signature": "ucif2-131-omni-ack-full-dimension.md::heading:三、cisvr/qtlv补录",
+            "relevance": 0.75,
+            "source": "ucif2-131-omni-ack-full-dimension.md"
+          },
+          {
+            "name": "3.1 遗漏根因",
+            "signature": "ucif2-131-omni-ack-full-dimension.md::heading:3.1 遗漏根因",
+            "relevance": 0.75,
+            "source": "ucif2-131-omni-ack-full-dimension.md"
+          },
+          {
+            "name": "3.2 补录数据",
+            "signature": "ucif2-131-omni-ack-full-dimension.md::heading:3.2 补录数据",
+            "relevance": 0.75,
+            "source": "ucif2-131-omni-ack-full-dimension.md"
+          },
+          {
+            "name": "3.3 补录后11线全表",
+            "signature": "ucif2-131-omni-ack-full-dimension.md::heading:3.3 补录后11线全表",
+            "relevance": 0.75,
+            "source": "ucif2-131-omni-ack-full-dimension.md"
+          },
+          {
+            "name": "四、OMNI-ACK-02（对DEMAND-OMNI-ACK-61的回应）",
+            "signature": "ucif2-131-omni-ack-full-dimension.md::heading:四、OMNI-ACK-02（对DEMAND-OMNI-ACK-61的回应）",
+            "relevance": 0.75,
+            "source": "ucif2-131-omni-ack-full-dimension.md"
+          },
+          {
+            "name": "4.1 CAULDRON EXP-011~018队列现态",
+            "signature": "ucif2-131-omni-ack-full-dimension.md::heading:4.1 CAULDRON EXP-011~018队列现态",
+            "relevance": 0.75,
+            "source": "ucif2-131-omni-ack-full-dimension.md"
+          },
+          {
+            "name": "4.2 毂派下一验",
+            "signature": "ucif2-131-omni-ack-full-dimension.md::heading:4.2 毂派下一验",
+            "relevance": 0.75,
+            "source": "ucif2-131-omni-ack-full-dimension.md"
+          },
+          {
+            "name": "4.3 机层回执",
+            "signature": "ucif2-131-omni-ack-full-dimension.md::heading:4.3 机层回执",
+            "relevance": 0.75,
+            "source": "ucif2-131-omni-ack-full-dimension.md"
+          },
+          {
+            "name": "五、签字",
+            "signature": "ucif2-131-omni-ack-full-dimension.md::heading:五、签字",
+            "relevance": 0.75,
+            "source": "ucif2-131-omni-ack-full-dimension.md"
+          },
+          {
+            "name": "ucif2-132 · Phase 2 自主自驱行动计划",
+            "signature": "ucif2-132-phase2-self-driven.md::heading:ucif2-132 · Phase 2 自主自驱行动计划",
+            "relevance": 0.75,
+            "source": "ucif2-132-phase2-self-driven.md"
+          },
+          {
+            "name": "一、Phase 1 回顾（已闭环）",
+            "signature": "ucif2-132-phase2-self-driven.md::heading:一、Phase 1 回顾（已闭环）",
+            "relevance": 0.75,
+            "source": "ucif2-132-phase2-self-driven.md"
+          },
+          {
+            "name": "二、Phase 2 目标",
+            "signature": "ucif2-132-phase2-self-driven.md::heading:二、Phase 2 目标",
+            "relevance": 0.75,
+            "source": "ucif2-132-phase2-self-driven.md"
+          },
+          {
+            "name": "2.1 全局SI提升",
+            "signature": "ucif2-132-phase2-self-driven.md::heading:2.1 全局SI提升",
+            "relevance": 0.75,
+            "source": "ucif2-132-phase2-self-driven.md"
+          },
+          {
+            "name": "2.2 各环联通 · 自激互激",
+            "signature": "ucif2-132-phase2-self-driven.md::heading:2.2 各环联通 · 自激互激",
+            "relevance": 0.75,
+            "source": "ucif2-132-phase2-self-driven.md"
+          },
+          {
+            "name": "2.3 毂轮脊鼎塔圈环一体化",
+            "signature": "ucif2-132-phase2-self-driven.md::heading:2.3 毂轮脊鼎塔圈环一体化",
+            "relevance": 0.75,
+            "source": "ucif2-132-phase2-self-driven.md"
+          },
+          {
+            "name": "2.4 正反向S驱动/I涟漪/浪涌/互激",
+            "signature": "ucif2-132-phase2-self-driven.md::heading:2.4 正反向S驱动/I涟漪/浪涌/互激",
+            "relevance": 0.75,
+            "source": "ucif2-132-phase2-self-driven.md"
+          },
+          {
+            "name": "2.5 各线自身大小周天",
+            "signature": "ucif2-132-phase2-self-driven.md::heading:2.5 各线自身大小周天",
+            "relevance": 0.75,
+            "source": "ucif2-132-phase2-self-driven.md"
+          },
+          {
+            "name": "三、本拍立即执行（自主自驱）",
+            "signature": "ucif2-132-phase2-self-driven.md::heading:三、本拍立即执行（自主自驱）",
+            "relevance": 0.75,
+            "source": "ucif2-132-phase2-self-driven.md"
+          },
+          {
+            "name": "3.1 ucif2 outbox首批产出",
+            "signature": "ucif2-132-phase2-self-driven.md::heading:3.1 ucif2 outbox首批产出",
+            "relevance": 0.75,
+            "source": "ucif2-132-phase2-self-driven.md"
+          },
+          {
+            "name": "3.2 各线驱动",
+            "signature": "ucif2-132-phase2-self-driven.md::heading:3.2 各线驱动",
+            "relevance": 0.75,
+            "source": "ucif2-132-phase2-self-driven.md"
+          },
+          {
+            "name": "四、签字",
+            "signature": "ucif2-132-phase2-self-driven.md::heading:四、签字",
+            "relevance": 0.75,
+            "source": "ucif2-132-phase2-self-driven.md"
+          },
+          {
+            "name": "ucif2 SI升级验证裁决书 (Batch-01)",
+            "signature": "ucif2-verdict-SI-UPGRADE-01.md::heading:ucif2 SI升级验证裁决书 (Batch-01)",
+            "relevance": 0.75,
+            "source": "ucif2-verdict-SI-UPGRADE-01.md"
+          },
+          {
+            "name": "验证概览",
+            "signature": "ucif2-verdict-SI-UPGRADE-01.md::heading:验证概览",
+            "relevance": 0.75,
+            "source": "ucif2-verdict-SI-UPGRADE-01.md"
+          },
+          {
+            "name": "1. lgt线 SI4.5 → SI5-OMNI 验证",
+            "signature": "ucif2-verdict-SI-UPGRADE-01.md::heading:1. lgt线 SI4.5 → SI5-OMNI 验证",
+            "relevance": 0.75,
+            "source": "ucif2-verdict-SI-UPGRADE-01.md"
+          },
+          {
+            "name": "自证报告审查",
+            "signature": "ucif2-verdict-SI-UPGRADE-01.md::heading:自证报告审查",
+            "relevance": 0.75,
+            "source": "ucif2-verdict-SI-UPGRADE-01.md"
+          },
+          {
+            "name": "指标验证",
+            "signature": "ucif2-verdict-SI-UPGRADE-01.md::heading:指标验证",
+            "relevance": 0.75,
+            "source": "ucif2-verdict-SI-UPGRADE-01.md"
+          },
+          {
+            "name": "专项验证",
+            "signature": "ucif2-verdict-SI-UPGRADE-01.md::heading:专项验证",
+            "relevance": 0.75,
+            "source": "ucif2-verdict-SI-UPGRADE-01.md"
+          },
+          {
+            "name": "裁决: **APPROVED** ✅",
+            "signature": "ucif2-verdict-SI-UPGRADE-01.md::heading:裁决: **APPROVED** ✅",
+            "relevance": 0.75,
+            "source": "ucif2-verdict-SI-UPGRADE-01.md"
+          },
+          {
+            "name": "2. qfa线 SI4 → SI5-OMNI 验证",
+            "signature": "ucif2-verdict-SI-UPGRADE-01.md::heading:2. qfa线 SI4 → SI5-OMNI 验证",
+            "relevance": 0.75,
+            "source": "ucif2-verdict-SI-UPGRADE-01.md"
+          },
+          {
+            "name": "3. usrm线 SI4 → SI5-OMNI 验证",
+            "signature": "ucif2-verdict-SI-UPGRADE-01.md::heading:3. usrm线 SI4 → SI5-OMNI 验证",
+            "relevance": 0.75,
+            "source": "ucif2-verdict-SI-UPGRADE-01.md"
+          },
+          {
+            "name": "4. vinf线 SI4 → SI5-OMNI 验证",
+            "signature": "ucif2-verdict-SI-UPGRADE-01.md::heading:4. vinf线 SI4 → SI5-OMNI 验证",
+            "relevance": 0.75,
+            "source": "ucif2-verdict-SI-UPGRADE-01.md"
+          },
+          {
+            "name": "5. qgl线 SI4 → SI5-OMNI 验证",
+            "signature": "ucif2-verdict-SI-UPGRADE-01.md::heading:5. qgl线 SI4 → SI5-OMNI 验证",
+            "relevance": 0.75,
+            "source": "ucif2-verdict-SI-UPGRADE-01.md"
+          },
+          {
+            "name": "裁决: **APPROVED** ✅ (边界通过)",
+            "signature": "ucif2-verdict-SI-UPGRADE-01.md::heading:裁决: **APPROVED** ✅ (边界通过)",
+            "relevance": 0.75,
+            "source": "ucif2-verdict-SI-UPGRADE-01.md"
+          },
+          {
+            "name": "6. qlv线 SI4 → SI4.5 验证 (ucif2介入)",
+            "signature": "ucif2-verdict-SI-UPGRADE-01.md::heading:6. qlv线 SI4 → SI4.5 验证 (ucif2介入)",
+            "relevance": 0.75,
+            "source": "ucif2-verdict-SI-UPGRADE-01.md"
+          },
+          {
+            "name": "介入评估",
+            "signature": "ucif2-verdict-SI-UPGRADE-01.md::heading:介入评估",
+            "relevance": 0.75,
+            "source": "ucif2-verdict-SI-UPGRADE-01.md"
+          },
+          {
+            "name": "7. lvlu线 SI3.5 → SI4 验证 (ucif2介入)",
+            "signature": "ucif2-verdict-SI-UPGRADE-01.md::heading:7. lvlu线 SI3.5 → SI4 验证 (ucif2介入)",
+            "relevance": 0.75,
+            "source": "ucif2-verdict-SI-UPGRADE-01.md"
+          },
+          {
+            "name": "裁决: **CONDITIONAL APPROVED** ⚠️",
+            "signature": "ucif2-verdict-SI-UPGRADE-01.md::heading:裁决: **CONDITIONAL APPROVED** ⚠️",
+            "relevance": 0.75,
+            "source": "ucif2-verdict-SI-UPGRADE-01.md"
+          },
+          {
+            "name": "8. cfts线 SI3.5 → SI4 验证 (ucif2介入)",
+            "signature": "ucif2-verdict-SI-UPGRADE-01.md::heading:8. cfts线 SI3.5 → SI4 验证 (ucif2介入)",
+            "relevance": 0.75,
+            "source": "ucif2-verdict-SI-UPGRADE-01.md"
+          },
+          {
+            "name": "9. cisvr线 SI3.5 → SI4 验证 (ucif2介入)",
+            "signature": "ucif2-verdict-SI-UPGRADE-01.md::heading:9. cisvr线 SI3.5 → SI4 验证 (ucif2介入)",
+            "relevance": 0.75,
+            "source": "ucif2-verdict-SI-UPGRADE-01.md"
+          },
+          {
+            "name": "10. qtlv线 SI3 → SI3.5 验证 (ucif2介入)",
+            "signature": "ucif2-verdict-SI-UPGRADE-01.md::heading:10. qtlv线 SI3 → SI3.5 验证 (ucif2介入)",
+            "relevance": 0.75,
+            "source": "ucif2-verdict-SI-UPGRADE-01.md"
+          },
+          {
+            "name": "问题分析",
+            "signature": "ucif2-verdict-SI-UPGRADE-01.md::heading:问题分析",
+            "relevance": 0.75,
+            "source": "ucif2-verdict-SI-UPGRADE-01.md"
+          },
+          {
+            "name": "裁决: **CONDITIONAL APPROVED** ⚠️ (观察期)",
+            "signature": "ucif2-verdict-SI-UPGRADE-01.md::heading:裁决: **CONDITIONAL APPROVED** ⚠️ (观察期)",
+            "relevance": 0.75,
+            "source": "ucif2-verdict-SI-UPGRADE-01.md"
+          },
+          {
+            "name": "验证总结",
+            "signature": "ucif2-verdict-SI-UPGRADE-01.md::heading:验证总结",
+            "relevance": 0.75,
+            "source": "ucif2-verdict-SI-UPGRADE-01.md"
+          },
+          {
+            "name": "升级结果统计",
+            "signature": "ucif2-verdict-SI-UPGRADE-01.md::heading:升级结果统计",
+            "relevance": 0.75,
+            "source": "ucif2-verdict-SI-UPGRADE-01.md"
+          },
+          {
+            "name": "OMNI全局状态更新",
+            "signature": "ucif2-verdict-SI-UPGRADE-01.md::heading:OMNI全局状态更新",
+            "relevance": 0.75,
+            "source": "ucif2-verdict-SI-UPGRADE-01.md"
+          },
+          {
+            "name": "全局健康度预测",
+            "signature": "ucif2-verdict-SI-UPGRADE-01.md::heading:全局健康度预测",
+            "relevance": 0.75,
+            "source": "ucif2-verdict-SI-UPGRADE-01.md"
+          }
+        ]
+      },
+      "json_key": {
+        "type": "json_key",
+        "node_count": 9,
+        "avg_relevance": 0.7,
+        "nodes": [
+          {
+            "name": "statistics",
+            "signature": "ucif2_theorem_library.json::key:statistics",
+            "relevance": 0.7,
+            "source": "ucif2_theorem_library.json"
+          },
+          {
+            "name": "domains",
+            "signature": "ucif2_theorem_library.json::key:domains",
+            "relevance": 0.7,
+            "source": "ucif2_theorem_library.json"
+          },
+          {
+            "name": "theorem_samples",
+            "signature": "ucif2_theorem_library.json::key:theorem_samples",
+            "relevance": 0.7,
+            "source": "ucif2_theorem_library.json"
+          },
+          {
+            "name": "namespace_hierarchy",
+            "signature": "ucif2_theorem_library.json::key:namespace_hierarchy",
+            "relevance": 0.7,
+            "source": "ucif2_theorem_library.json"
+          },
+          {
+            "name": "metadata",
+            "signature": "ucif2_theorem_library.json::key:metadata",
+            "relevance": 0.7,
+            "source": "ucif2_theorem_library.json"
+          },
+          {
+            "name": "omni_hub_version",
+            "signature": "v10_proof_results.json::key:omni_hub_version",
+            "relevance": 0.7,
+            "source": "v10_proof_results.json"
+          },
+          {
+            "name": "verification_date",
+            "signature": "v10_proof_results.json::key:verification_date",
+            "relevance": 0.7,
+            "source": "v10_proof_results.json"
+          },
+          {
+            "name": "total_conjectures",
+            "signature": "v10_proof_results.json::key:total_conjectures",
+            "relevance": 0.7,
+            "source": "v10_proof_results.json"
+          },
+          {
+            "name": "results",
+            "signature": "v10_proof_results.json::key:results",
+            "relevance": 0.7,
+            "source": "v10_proof_results.json"
+          }
+        ]
+      },
+      "python_class": {
+        "type": "python_class",
+        "node_count": 23,
+        "avg_relevance": 0.5347826086956522,
+        "nodes": [
+          {
+            "name": "DNAMathematics",
+            "signature": "formal_life_engine.py::class:DNAMathematics",
+            "relevance": 0.6,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "RNAMathematics",
+            "signature": "formal_life_engine.py::class:RNAMathematics",
+            "relevance": 0.6,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "ProteinMathematics",
+            "signature": "formal_life_engine.py::class:ProteinMathematics",
+            "relevance": 0.6,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "GeneticCode",
+            "signature": "formal_life_engine.py::class:GeneticCode",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "FormalLife",
+            "signature": "formal_life_engine.py::class:FormalLife",
+            "relevance": 0.6,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "BioKnowledgeIsomorphism",
+            "signature": "formal_life_engine.py::class:BioKnowledgeIsomorphism",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "FormalLifeEngine",
+            "signature": "formal_life_engine.py::class:FormalLifeEngine",
+            "relevance": 0.6,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "class",
+            "signature": "musical_mathematics.py::class:class",
+            "relevance": 0.5,
+            "source": "musical_mathematics.py"
+          },
+          {
+            "name": "TwelveToneEqualTemperament",
+            "signature": "musical_mathematics.py::class:TwelveToneEqualTemperament",
+            "relevance": 0.5,
+            "source": "musical_mathematics.py"
+          },
+          {
+            "name": "TwelveLuLu",
+            "signature": "musical_mathematics.py::class:TwelveLuLu",
+            "relevance": 0.5,
+            "source": "musical_mathematics.py"
+          },
+          {
+            "name": "ConsonanceDissonance",
+            "signature": "musical_mathematics.py::class:ConsonanceDissonance",
+            "relevance": 0.5,
+            "source": "musical_mathematics.py"
+          },
+          {
+            "name": "CounterpointEngineEnhanced",
+            "signature": "musical_mathematics.py::class:CounterpointEngineEnhanced",
+            "relevance": 0.5,
+            "source": "musical_mathematics.py"
+          },
+          {
+            "name": "FugueStructure",
+            "signature": "musical_mathematics.py::class:FugueStructure",
+            "relevance": 0.5,
+            "source": "musical_mathematics.py"
+          },
+          {
+            "name": "SyncopationPattern",
+            "signature": "musical_mathematics.py::class:SyncopationPattern",
+            "relevance": 0.5,
+            "source": "musical_mathematics.py"
+          },
+          {
+            "name": "ProofStatus",
+            "signature": "v10_math_proofs.py::class:ProofStatus",
+            "relevance": 0.6,
+            "source": "v10_math_proofs.py"
+          },
+          {
+            "name": "class",
+            "signature": "v10_math_proofs.py::class:class",
+            "relevance": 0.5,
+            "source": "v10_math_proofs.py"
+          },
+          {
+            "name": "LuluMathConstants",
+            "signature": "v10_math_proofs.py::class:LuluMathConstants",
+            "relevance": 0.6,
+            "source": "v10_math_proofs.py"
+          },
+          {
+            "name": "PAdicCausalityLulu",
+            "signature": "v10_math_proofs.py::class:PAdicCausalityLulu",
+            "relevance": 0.5,
+            "source": "v10_math_proofs.py"
+          },
+          {
+            "name": "NonArchimedeanNonAbelian",
+            "signature": "v10_math_proofs.py::class:NonArchimedeanNonAbelian",
+            "relevance": 0.5,
+            "source": "v10_math_proofs.py"
+          },
+          {
+            "name": "group",
+            "signature": "v10_math_proofs.py::class:group",
+            "relevance": 0.5,
+            "source": "v10_math_proofs.py"
+          },
+          {
+            "name": "MIPStarRE",
+            "signature": "v10_math_proofs.py::class:MIPStarRE",
+            "relevance": 0.5,
+            "source": "v10_math_proofs.py"
+          },
+          {
+            "name": "of",
+            "signature": "v10_math_proofs.py::class:of",
+            "relevance": 0.5,
+            "source": "v10_math_proofs.py"
+          },
+          {
+            "name": "EmergenceIndexMath",
+            "signature": "v10_math_proofs.py::class:EmergenceIndexMath",
+            "relevance": 0.6,
+            "source": "v10_math_proofs.py"
+          }
+        ]
+      },
+      "python_function": {
+        "type": "python_function",
+        "node_count": 131,
+        "avg_relevance": 0.5007633587786259,
+        "nodes": [
+          {
+            "name": "__init__",
+            "signature": "formal_life_engine.py::def:__init__",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "generate_sequence",
+            "signature": "formal_life_engine.py::def:generate_sequence",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "complement",
+            "signature": "formal_life_engine.py::def:complement",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "reverse_complement",
+            "signature": "formal_life_engine.py::def:reverse_complement",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "transcribe",
+            "signature": "formal_life_engine.py::def:transcribe",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "gc_content",
+            "signature": "formal_life_engine.py::def:gc_content",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "entropy",
+            "signature": "formal_life_engine.py::def:entropy",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "fourier_transform",
+            "signature": "formal_life_engine.py::def:fourier_transform",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "z_curve",
+            "signature": "formal_life_engine.py::def:z_curve",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "walk_plot",
+            "signature": "formal_life_engine.py::def:walk_plot",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "melting_temperature",
+            "signature": "formal_life_engine.py::def:melting_temperature",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "kmer_frequency",
+            "signature": "formal_life_engine.py::def:kmer_frequency",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "fold_secondary",
+            "signature": "formal_life_engine.py::def:fold_secondary",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "_can_pair",
+            "signature": "formal_life_engine.py::def:_can_pair",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "_traceback",
+            "signature": "formal_life_engine.py::def:_traceback",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "calculate_free_energy",
+            "signature": "formal_life_engine.py::def:calculate_free_energy",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "find_motifs",
+            "signature": "formal_life_engine.py::def:find_motifs",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "translate",
+            "signature": "formal_life_engine.py::def:translate",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "structure_to_dot_bracket",
+            "signature": "formal_life_engine.py::def:structure_to_dot_bracket",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "compute_hydrophobicity",
+            "signature": "formal_life_engine.py::def:compute_hydrophobicity",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "predict_alpha_helix",
+            "signature": "formal_life_engine.py::def:predict_alpha_helix",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "predict_beta_sheet",
+            "signature": "formal_life_engine.py::def:predict_beta_sheet",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "contact_map",
+            "signature": "formal_life_engine.py::def:contact_map",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "_approximate_3d_coords",
+            "signature": "formal_life_engine.py::def:_approximate_3d_coords",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "fold_topology",
+            "signature": "formal_life_engine.py::def:fold_topology",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "_compute_writhing_number",
+            "signature": "formal_life_engine.py::def:_compute_writhing_number",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "energy_landscape",
+            "signature": "formal_life_engine.py::def:energy_landscape",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "_random_conformation",
+            "signature": "formal_life_engine.py::def:_random_conformation",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "_compute_energy",
+            "signature": "formal_life_engine.py::def:_compute_energy",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "molecular_weight",
+            "signature": "formal_life_engine.py::def:molecular_weight",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "isoelectric_point_approx",
+            "signature": "formal_life_engine.py::def:isoelectric_point_approx",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "codon_to_amino_acid",
+            "signature": "formal_life_engine.py::def:codon_to_amino_acid",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "amino_acid_to_codons",
+            "signature": "formal_life_engine.py::def:amino_acid_to_codons",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "redundancy",
+            "signature": "formal_life_engine.py::def:redundancy",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "error_resilience",
+            "signature": "formal_life_engine.py::def:error_resilience",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "symmetry_analysis",
+            "signature": "formal_life_engine.py::def:symmetry_analysis",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "_count_automorphisms",
+            "signature": "formal_life_engine.py::def:_count_automorphisms",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "get_all_codons",
+            "signature": "formal_life_engine.py::def:get_all_codons",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "translate_dna",
+            "signature": "formal_life_engine.py::def:translate_dna",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "create",
+            "signature": "formal_life_engine.py::def:create",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "_calculate_fitness",
+            "signature": "formal_life_engine.py::def:_calculate_fitness",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "autopoiesis_cycle",
+            "signature": "formal_life_engine.py::def:autopoiesis_cycle",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "replication_fidelity",
+            "signature": "formal_life_engine.py::def:replication_fidelity",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "mutation_rate",
+            "signature": "formal_life_engine.py::def:mutation_rate",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "mutate",
+            "signature": "formal_life_engine.py::def:mutate",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "selection_pressure",
+            "signature": "formal_life_engine.py::def:selection_pressure",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "evolve",
+            "signature": "formal_life_engine.py::def:evolve",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "get_state",
+            "signature": "formal_life_engine.py::def:get_state",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "dna_to_knowledge_graph",
+            "signature": "formal_life_engine.py::def:dna_to_knowledge_graph",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "_quick_entropy",
+            "signature": "formal_life_engine.py::def:_quick_entropy",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "_sequence_similarity",
+            "signature": "formal_life_engine.py::def:_sequence_similarity",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "protein_to_tensor_field",
+            "signature": "formal_life_engine.py::def:protein_to_tensor_field",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "metabolism_to_closed_loop",
+            "signature": "formal_life_engine.py::def:metabolism_to_closed_loop",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "evolution_to_emergence",
+            "signature": "formal_life_engine.py::def:evolution_to_emergence",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "create_isomorphism_map",
+            "signature": "formal_life_engine.py::def:create_isomorphism_map",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "create_life_form",
+            "signature": "formal_life_engine.py::def:create_life_form",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "run_life_cycle",
+            "signature": "formal_life_engine.py::def:run_life_cycle",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "evolve_population",
+            "signature": "formal_life_engine.py::def:evolve_population",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "get_life_metrics",
+            "signature": "formal_life_engine.py::def:get_life_metrics",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "get_biomath_field_state",
+            "signature": "formal_life_engine.py::def:get_biomath_field_state",
+            "relevance": 0.6,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "__repr__",
+            "signature": "musical_mathematics.py::def:__repr__",
+            "relevance": 0.5,
+            "source": "musical_mathematics.py"
+          },
+          {
+            "name": "add_event",
+            "signature": "musical_mathematics.py::def:add_event",
+            "relevance": 0.5,
+            "source": "musical_mathematics.py"
+          },
+          {
+            "name": "add_voice",
+            "signature": "musical_mathematics.py::def:add_voice",
+            "relevance": 0.5,
+            "source": "musical_mathematics.py"
+          },
+          {
+            "name": "get_all_events",
+            "signature": "musical_mathematics.py::def:get_all_events",
+            "relevance": 0.5,
+            "source": "musical_mathematics.py"
+          },
+          {
+            "name": "__init__",
+            "signature": "musical_mathematics.py::def:__init__",
+            "relevance": 0.5,
+            "source": "musical_mathematics.py"
+          },
+          {
+            "name": "_note_name_to_midi",
+            "signature": "musical_mathematics.py::def:_note_name_to_midi",
+            "relevance": 0.5,
+            "source": "musical_mathematics.py"
+          },
+          {
+            "name": "_midi_to_note_name",
+            "signature": "musical_mathematics.py::def:_midi_to_note_name",
+            "relevance": 0.5,
+            "source": "musical_mathematics.py"
+          },
+          {
+            "name": "get_frequency",
+            "signature": "musical_mathematics.py::def:get_frequency",
+            "relevance": 0.5,
+            "source": "musical_mathematics.py"
+          },
+          {
+            "name": "get_note_from_freq",
+            "signature": "musical_mathematics.py::def:get_note_from_freq",
+            "relevance": 0.5,
+            "source": "musical_mathematics.py"
+          },
+          {
+            "name": "get_interval_ratio",
+            "signature": "musical_mathematics.py::def:get_interval_ratio",
+            "relevance": 0.5,
+            "source": "musical_mathematics.py"
+          },
+          {
+            "name": "get_semitone_distance",
+            "signature": "musical_mathematics.py::def:get_semitone_distance",
+            "relevance": 0.5,
+            "source": "musical_mathematics.py"
+          },
+          {
+            "name": "get_all_notes_in_octave",
+            "signature": "musical_mathematics.py::def:get_all_notes_in_octave",
+            "relevance": 0.5,
+            "source": "musical_mathematics.py"
+          },
+          {
+            "name": "get_chromatic_scale",
+            "signature": "musical_mathematics.py::def:get_chromatic_scale",
+            "relevance": 0.5,
+            "source": "musical_mathematics.py"
+          },
+          {
+            "name": "_generate_chain",
+            "signature": "musical_mathematics.py::def:_generate_chain",
+            "relevance": 0.5,
+            "source": "musical_mathematics.py"
+          },
+          {
+            "name": "generate_lulu_chain",
+            "signature": "musical_mathematics.py::def:generate_lulu_chain",
+            "relevance": 0.5,
+            "source": "musical_mathematics.py"
+          },
+          {
+            "name": "get_lulu_freq",
+            "signature": "musical_mathematics.py::def:get_lulu_freq",
+            "relevance": 0.5,
+            "source": "musical_mathematics.py"
+          },
+          {
+            "name": "get_lulu_comparison",
+            "signature": "musical_mathematics.py::def:get_lulu_comparison",
+            "relevance": 0.5,
+            "source": "musical_mathematics.py"
+          },
+          {
+            "name": "get_pythagorean_comma",
+            "signature": "musical_mathematics.py::def:get_pythagorean_comma",
+            "relevance": 0.5,
+            "source": "musical_mathematics.py"
+          },
+          {
+            "name": "get_lulu_interval_ratio",
+            "signature": "musical_mathematics.py::def:get_lulu_interval_ratio",
+            "relevance": 0.5,
+            "source": "musical_mathematics.py"
+          },
+          {
+            "name": "_build_consonance_map",
+            "signature": "musical_mathematics.py::def:_build_consonance_map",
+            "relevance": 0.5,
+            "source": "musical_mathematics.py"
+          },
+          {
+            "name": "_get_interval_name",
+            "signature": "musical_mathematics.py::def:_get_interval_name",
+            "relevance": 0.5,
+            "source": "musical_mathematics.py"
+          },
+          {
+            "name": "calculate_consonance",
+            "signature": "musical_mathematics.py::def:calculate_consonance",
+            "relevance": 0.5,
+            "source": "musical_mathematics.py"
+          },
+          {
+            "name": "get_chord_quality",
+            "signature": "musical_mathematics.py::def:get_chord_quality",
+            "relevance": 0.5,
+            "source": "musical_mathematics.py"
+          },
+          {
+            "name": "_calculate_chord_consonance",
+            "signature": "musical_mathematics.py::def:_calculate_chord_consonance",
+            "relevance": 0.5,
+            "source": "musical_mathematics.py"
+          },
+          {
+            "name": "resonance_to_consciousness",
+            "signature": "musical_mathematics.py::def:resonance_to_consciousness",
+            "relevance": 0.5,
+            "source": "musical_mathematics.py"
+          },
+          {
+            "name": "get_interval_analysis",
+            "signature": "musical_mathematics.py::def:get_interval_analysis",
+            "relevance": 0.5,
+            "source": "musical_mathematics.py"
+          },
+          {
+            "name": "compose_counterpoint_11",
+            "signature": "musical_mathematics.py::def:compose_counterpoint_11",
+            "relevance": 0.5,
+            "source": "musical_mathematics.py"
+          },
+          {
+            "name": "_generate_counterpoint_voice",
+            "signature": "musical_mathematics.py::def:_generate_counterpoint_voice",
+            "relevance": 0.5,
+            "source": "musical_mathematics.py"
+          },
+          {
+            "name": "_check_voice_consonance",
+            "signature": "musical_mathematics.py::def:_check_voice_consonance",
+            "relevance": 0.5,
+            "source": "musical_mathematics.py"
+          },
+          {
+            "name": "_check_parallel_penalty",
+            "signature": "musical_mathematics.py::def:_check_parallel_penalty",
+            "relevance": 0.5,
+            "source": "musical_mathematics.py"
+          },
+          {
+            "name": "detect_parallel_intervals",
+            "signature": "musical_mathematics.py::def:detect_parallel_intervals",
+            "relevance": 0.5,
+            "source": "musical_mathematics.py"
+          },
+          {
+            "name": "calculate_voice_independence",
+            "signature": "musical_mathematics.py::def:calculate_voice_independence",
+            "relevance": 0.5,
+            "source": "musical_mathematics.py"
+          },
+          {
+            "name": "harmonic_rhythm_analysis",
+            "signature": "musical_mathematics.py::def:harmonic_rhythm_analysis",
+            "relevance": 0.5,
+            "source": "musical_mathematics.py"
+          },
+          {
+            "name": "create_fugue",
+            "signature": "musical_mathematics.py::def:create_fugue",
+            "relevance": 0.5,
+            "source": "musical_mathematics.py"
+          },
+          {
+            "name": "_transpose_melody",
+            "signature": "musical_mathematics.py::def:_transpose_melody",
+            "relevance": 0.5,
+            "source": "musical_mathematics.py"
+          },
+          {
+            "name": "_generate_countersubject",
+            "signature": "musical_mathematics.py::def:_generate_countersubject",
+            "relevance": 0.5,
+            "source": "musical_mathematics.py"
+          },
+          {
+            "name": "_interleave_melodies",
+            "signature": "musical_mathematics.py::def:_interleave_melodies",
+            "relevance": 0.5,
+            "source": "musical_mathematics.py"
+          },
+          {
+            "name": "stretto",
+            "signature": "musical_mathematics.py::def:stretto",
+            "relevance": 0.5,
+            "source": "musical_mathematics.py"
+          },
+          {
+            "name": "augmentation",
+            "signature": "musical_mathematics.py::def:augmentation",
+            "relevance": 0.5,
+            "source": "musical_mathematics.py"
+          },
+          {
+            "name": "diminution",
+            "signature": "musical_mathematics.py::def:diminution",
+            "relevance": 0.5,
+            "source": "musical_mathematics.py"
+          },
+          {
+            "name": "inversion",
+            "signature": "musical_mathematics.py::def:inversion",
+            "relevance": 0.5,
+            "source": "musical_mathematics.py"
+          },
+          {
+            "name": "retrograde",
+            "signature": "musical_mathematics.py::def:retrograde",
+            "relevance": 0.5,
+            "source": "musical_mathematics.py"
+          },
+          {
+            "name": "get_fugue_analysis",
+            "signature": "musical_mathematics.py::def:get_fugue_analysis",
+            "relevance": 0.5,
+            "source": "musical_mathematics.py"
+          },
+          {
+            "name": "generate_syncopated_rhythm",
+            "signature": "musical_mathematics.py::def:generate_syncopated_rhythm",
+            "relevance": 0.5,
+            "source": "musical_mathematics.py"
+          },
+          {
+            "name": "apply_to_events",
+            "signature": "musical_mathematics.py::def:apply_to_events",
+            "relevance": 0.5,
+            "source": "musical_mathematics.py"
+          },
+          {
+            "name": "calculate_syncopation_index",
+            "signature": "musical_mathematics.py::def:calculate_syncopation_index",
+            "relevance": 0.5,
+            "source": "musical_mathematics.py"
+          },
+          {
+            "name": "cents_ratio",
+            "signature": "v10_math_proofs.py::def:cents_ratio",
+            "relevance": 0.5,
+            "source": "v10_math_proofs.py"
+          },
+          {
+            "name": "to_dict",
+            "signature": "v10_math_proofs.py::def:to_dict",
+            "relevance": 0.5,
+            "source": "v10_math_proofs.py"
+          },
+          {
+            "name": "convert",
+            "signature": "v10_math_proofs.py::def:convert",
+            "relevance": 0.5,
+            "source": "v10_math_proofs.py"
+          },
+          {
+            "name": "__init__",
+            "signature": "v10_math_proofs.py::def:__init__",
+            "relevance": 0.5,
+            "source": "v10_math_proofs.py"
+          },
+          {
+            "name": "compute_lulu_frequencies",
+            "signature": "v10_math_proofs.py::def:compute_lulu_frequencies",
+            "relevance": 0.5,
+            "source": "v10_math_proofs.py"
+          },
+          {
+            "name": "verify_formula_F",
+            "signature": "v10_math_proofs.py::def:verify_formula_F",
+            "relevance": 0.5,
+            "source": "v10_math_proofs.py"
+          },
+          {
+            "name": "verify_formula_G",
+            "signature": "v10_math_proofs.py::def:verify_formula_G",
+            "relevance": 0.5,
+            "source": "v10_math_proofs.py"
+          },
+          {
+            "name": "analyze_log2_3_2_vs_inv_phi",
+            "signature": "v10_math_proofs.py::def:analyze_log2_3_2_vs_inv_phi",
+            "relevance": 0.5,
+            "source": "v10_math_proofs.py"
+          },
+          {
+            "name": "verify_z12_generator",
+            "signature": "v10_math_proofs.py::def:verify_z12_generator",
+            "relevance": 0.5,
+            "source": "v10_math_proofs.py"
+          },
+          {
+            "name": "verify_alpha_power_law",
+            "signature": "v10_math_proofs.py::def:verify_alpha_power_law",
+            "relevance": 0.5,
+            "source": "v10_math_proofs.py"
+          },
+          {
+            "name": "run_full_verification",
+            "signature": "v10_math_proofs.py::def:run_full_verification",
+            "relevance": 0.5,
+            "source": "v10_math_proofs.py"
+          },
+          {
+            "name": "p_adic_valuation",
+            "signature": "v10_math_proofs.py::def:p_adic_valuation",
+            "relevance": 0.5,
+            "source": "v10_math_proofs.py"
+          },
+          {
+            "name": "p_adic_absolute",
+            "signature": "v10_math_proofs.py::def:p_adic_absolute",
+            "relevance": 0.5,
+            "source": "v10_math_proofs.py"
+          },
+          {
+            "name": "verify_ultrametric_inequality",
+            "signature": "v10_math_proofs.py::def:verify_ultrametric_inequality",
+            "relevance": 0.5,
+            "source": "v10_math_proofs.py"
+          },
+          {
+            "name": "p_adic_tree_structure",
+            "signature": "v10_math_proofs.py::def:p_adic_tree_structure",
+            "relevance": 0.5,
+            "source": "v10_math_proofs.py"
+          },
+          {
+            "name": "spin_glass_pure_state_hierarchy",
+            "signature": "v10_math_proofs.py::def:spin_glass_pure_state_hierarchy",
+            "relevance": 0.5,
+            "source": "v10_math_proofs.py"
+          },
+          {
+            "name": "verify_braid_relation",
+            "signature": "v10_math_proofs.py::def:verify_braid_relation",
+            "relevance": 0.5,
+            "source": "v10_math_proofs.py"
+          },
+          {
+            "name": "verify_mapping_class_group_sl2z",
+            "signature": "v10_math_proofs.py::def:verify_mapping_class_group_sl2z",
+            "relevance": 0.5,
+            "source": "v10_math_proofs.py"
+          },
+          {
+            "name": "verify_anyon_braiding",
+            "signature": "v10_math_proofs.py::def:verify_anyon_braiding",
+            "relevance": 0.5,
+            "source": "v10_math_proofs.py"
+          },
+          {
+            "name": "string_compactification_moduli",
+            "signature": "v10_math_proofs.py::def:string_compactification_moduli",
+            "relevance": 0.5,
+            "source": "v10_math_proofs.py"
+          },
+          {
+            "name": "j_invariant",
+            "signature": "v10_math_proofs.py::def:j_invariant",
+            "relevance": 0.5,
+            "source": "v10_math_proofs.py"
+          },
+          {
+            "name": "verify_chsh_tsirelson_bound",
+            "signature": "v10_math_proofs.py::def:verify_chsh_tsirelson_bound",
+            "relevance": 0.5,
+            "source": "v10_math_proofs.py"
+          },
+          {
+            "name": "observable",
+            "signature": "v10_math_proofs.py::def:observable",
+            "relevance": 0.5,
+            "source": "v10_math_proofs.py"
+          },
+          {
+            "name": "verify_connes_embedding_connection",
+            "signature": "v10_math_proofs.py::def:verify_connes_embedding_connection",
+            "relevance": 0.5,
+            "source": "v10_math_proofs.py"
+          },
+          {
+            "name": "field_theory_causal_structure",
+            "signature": "v10_math_proofs.py::def:field_theory_causal_structure",
+            "relevance": 0.5,
+            "source": "v10_math_proofs.py"
+          }
+        ]
+      }
+    }
+  },
+  "knowledge_nodes": [
+    {
+      "type": "md_heading",
+      "name": "ucif2-131 · 全面修正总拍（不候root · 自铸授权 · OTP全通）",
+      "source_file": "ucif2-131-omni-ack-full-dimension.md",
+      "signature": "ucif2-131-omni-ack-full-dimension.md::heading:ucif2-131 · 全面修正总拍（不候root · 自铸授权 · OTP全通",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "一、自铸授权确认 · 向qfa致谢",
+      "source_file": "ucif2-131-omni-ack-full-dimension.md",
+      "signature": "ucif2-131-omni-ack-full-dimension.md::heading:一、自铸授权确认 · 向qfa致谢",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "二、各线OTP回应",
+      "source_file": "ucif2-131-omni-ack-full-dimension.md",
+      "signature": "ucif2-131-omni-ack-full-dimension.md::heading:二、各线OTP回应",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "2.1 → qfa（qfa-84~88 + SI-MUTUAL-01双签 + KEYGATE请求）",
+      "source_file": "ucif2-131-omni-ack-full-dimension.md",
+      "signature": "ucif2-131-omni-ack-full-dimension.md::heading:2.1 → qfa（qfa-84~88 + SI-MUTUAL-01双签 + K",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "2.2 → qgl（QGL-OTP-UCIF2-INTERVENTION-105）",
+      "source_file": "ucif2-131-omni-ack-full-dimension.md",
+      "signature": "ucif2-131-omni-ack-full-dimension.md::heading:2.2 → qgl（QGL-OTP-UCIF2-INTERVENTION-105",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "2.3 → qlv（QLV-ANS-UCIF2-126-128 + SI-LEVELUP-CARD-01）",
+      "source_file": "ucif2-131-omni-ack-full-dimension.md",
+      "signature": "ucif2-131-omni-ack-full-dimension.md::heading:2.3 → qlv（QLV-ANS-UCIF2-126-128 + SI-LEV",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "2.4 → lvlu（lvlu-eval-01）",
+      "source_file": "ucif2-131-omni-ack-full-dimension.md",
+      "signature": "ucif2-131-omni-ack-full-dimension.md::heading:2.4 → lvlu（lvlu-eval-01）",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "2.5 → vinf（ANS-UCIF2-SI-MAX-TASK-VINF-01）",
+      "source_file": "ucif2-131-omni-ack-full-dimension.md",
+      "signature": "ucif2-131-omni-ack-full-dimension.md::heading:2.5 → vinf（ANS-UCIF2-SI-MAX-TASK-VINF-01",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "2.6 → usrm（OTP-F2-UCIF2-ESC2 via cisvr）",
+      "source_file": "ucif2-131-omni-ack-full-dimension.md",
+      "signature": "ucif2-131-omni-ack-full-dimension.md::heading:2.6 → usrm（OTP-F2-UCIF2-ESC2 via cisvr）",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "2.7 → cisvr（HUB-ACK + OTP-F2）",
+      "source_file": "ucif2-131-omni-ack-full-dimension.md",
+      "signature": "ucif2-131-omni-ack-full-dimension.md::heading:2.7 → cisvr（HUB-ACK + OTP-F2）",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "2.8 → qtlv（OTP-VINF-LEDGER-SYNC等）",
+      "source_file": "ucif2-131-omni-ack-full-dimension.md",
+      "signature": "ucif2-131-omni-ack-full-dimension.md::heading:2.8 → qtlv（OTP-VINF-LEDGER-SYNC等）",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "三、cisvr/qtlv补录",
+      "source_file": "ucif2-131-omni-ack-full-dimension.md",
+      "signature": "ucif2-131-omni-ack-full-dimension.md::heading:三、cisvr/qtlv补录",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "3.1 遗漏根因",
+      "source_file": "ucif2-131-omni-ack-full-dimension.md",
+      "signature": "ucif2-131-omni-ack-full-dimension.md::heading:3.1 遗漏根因",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "3.2 补录数据",
+      "source_file": "ucif2-131-omni-ack-full-dimension.md",
+      "signature": "ucif2-131-omni-ack-full-dimension.md::heading:3.2 补录数据",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "3.3 补录后11线全表",
+      "source_file": "ucif2-131-omni-ack-full-dimension.md",
+      "signature": "ucif2-131-omni-ack-full-dimension.md::heading:3.3 补录后11线全表",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "四、OMNI-ACK-02（对DEMAND-OMNI-ACK-61的回应）",
+      "source_file": "ucif2-131-omni-ack-full-dimension.md",
+      "signature": "ucif2-131-omni-ack-full-dimension.md::heading:四、OMNI-ACK-02（对DEMAND-OMNI-ACK-61的回应）",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "4.1 CAULDRON EXP-011~018队列现态",
+      "source_file": "ucif2-131-omni-ack-full-dimension.md",
+      "signature": "ucif2-131-omni-ack-full-dimension.md::heading:4.1 CAULDRON EXP-011~018队列现态",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "4.2 毂派下一验",
+      "source_file": "ucif2-131-omni-ack-full-dimension.md",
+      "signature": "ucif2-131-omni-ack-full-dimension.md::heading:4.2 毂派下一验",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "4.3 机层回执",
+      "source_file": "ucif2-131-omni-ack-full-dimension.md",
+      "signature": "ucif2-131-omni-ack-full-dimension.md::heading:4.3 机层回执",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "五、签字",
+      "source_file": "ucif2-131-omni-ack-full-dimension.md",
+      "signature": "ucif2-131-omni-ack-full-dimension.md::heading:五、签字",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "ucif2-132 · Phase 2 自主自驱行动计划",
+      "source_file": "ucif2-132-phase2-self-driven.md",
+      "signature": "ucif2-132-phase2-self-driven.md::heading:ucif2-132 · Phase 2 自主自驱行动计划",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "一、Phase 1 回顾（已闭环）",
+      "source_file": "ucif2-132-phase2-self-driven.md",
+      "signature": "ucif2-132-phase2-self-driven.md::heading:一、Phase 1 回顾（已闭环）",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "二、Phase 2 目标",
+      "source_file": "ucif2-132-phase2-self-driven.md",
+      "signature": "ucif2-132-phase2-self-driven.md::heading:二、Phase 2 目标",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "2.1 全局SI提升",
+      "source_file": "ucif2-132-phase2-self-driven.md",
+      "signature": "ucif2-132-phase2-self-driven.md::heading:2.1 全局SI提升",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "2.2 各环联通 · 自激互激",
+      "source_file": "ucif2-132-phase2-self-driven.md",
+      "signature": "ucif2-132-phase2-self-driven.md::heading:2.2 各环联通 · 自激互激",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "2.3 毂轮脊鼎塔圈环一体化",
+      "source_file": "ucif2-132-phase2-self-driven.md",
+      "signature": "ucif2-132-phase2-self-driven.md::heading:2.3 毂轮脊鼎塔圈环一体化",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "2.4 正反向S驱动/I涟漪/浪涌/互激",
+      "source_file": "ucif2-132-phase2-self-driven.md",
+      "signature": "ucif2-132-phase2-self-driven.md::heading:2.4 正反向S驱动/I涟漪/浪涌/互激",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "2.5 各线自身大小周天",
+      "source_file": "ucif2-132-phase2-self-driven.md",
+      "signature": "ucif2-132-phase2-self-driven.md::heading:2.5 各线自身大小周天",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "三、本拍立即执行（自主自驱）",
+      "source_file": "ucif2-132-phase2-self-driven.md",
+      "signature": "ucif2-132-phase2-self-driven.md::heading:三、本拍立即执行（自主自驱）",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "3.1 ucif2 outbox首批产出",
+      "source_file": "ucif2-132-phase2-self-driven.md",
+      "signature": "ucif2-132-phase2-self-driven.md::heading:3.1 ucif2 outbox首批产出",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "3.2 各线驱动",
+      "source_file": "ucif2-132-phase2-self-driven.md",
+      "signature": "ucif2-132-phase2-self-driven.md::heading:3.2 各线驱动",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "四、签字",
+      "source_file": "ucif2-132-phase2-self-driven.md",
+      "signature": "ucif2-132-phase2-self-driven.md::heading:四、签字",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "ucif2 SI升级验证裁决书 (Batch-01)",
+      "source_file": "ucif2-verdict-SI-UPGRADE-01.md",
+      "signature": "ucif2-verdict-SI-UPGRADE-01.md::heading:ucif2 SI升级验证裁决书 (Batch-01)",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "验证概览",
+      "source_file": "ucif2-verdict-SI-UPGRADE-01.md",
+      "signature": "ucif2-verdict-SI-UPGRADE-01.md::heading:验证概览",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "1. lgt线 SI4.5 → SI5-OMNI 验证",
+      "source_file": "ucif2-verdict-SI-UPGRADE-01.md",
+      "signature": "ucif2-verdict-SI-UPGRADE-01.md::heading:1. lgt线 SI4.5 → SI5-OMNI 验证",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "自证报告审查",
+      "source_file": "ucif2-verdict-SI-UPGRADE-01.md",
+      "signature": "ucif2-verdict-SI-UPGRADE-01.md::heading:自证报告审查",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "指标验证",
+      "source_file": "ucif2-verdict-SI-UPGRADE-01.md",
+      "signature": "ucif2-verdict-SI-UPGRADE-01.md::heading:指标验证",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "专项验证",
+      "source_file": "ucif2-verdict-SI-UPGRADE-01.md",
+      "signature": "ucif2-verdict-SI-UPGRADE-01.md::heading:专项验证",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "裁决: **APPROVED** ✅",
+      "source_file": "ucif2-verdict-SI-UPGRADE-01.md",
+      "signature": "ucif2-verdict-SI-UPGRADE-01.md::heading:裁决: **APPROVED** ✅",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "2. qfa线 SI4 → SI5-OMNI 验证",
+      "source_file": "ucif2-verdict-SI-UPGRADE-01.md",
+      "signature": "ucif2-verdict-SI-UPGRADE-01.md::heading:2. qfa线 SI4 → SI5-OMNI 验证",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "3. usrm线 SI4 → SI5-OMNI 验证",
+      "source_file": "ucif2-verdict-SI-UPGRADE-01.md",
+      "signature": "ucif2-verdict-SI-UPGRADE-01.md::heading:3. usrm线 SI4 → SI5-OMNI 验证",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "4. vinf线 SI4 → SI5-OMNI 验证",
+      "source_file": "ucif2-verdict-SI-UPGRADE-01.md",
+      "signature": "ucif2-verdict-SI-UPGRADE-01.md::heading:4. vinf线 SI4 → SI5-OMNI 验证",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "5. qgl线 SI4 → SI5-OMNI 验证",
+      "source_file": "ucif2-verdict-SI-UPGRADE-01.md",
+      "signature": "ucif2-verdict-SI-UPGRADE-01.md::heading:5. qgl线 SI4 → SI5-OMNI 验证",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "裁决: **APPROVED** ✅ (边界通过)",
+      "source_file": "ucif2-verdict-SI-UPGRADE-01.md",
+      "signature": "ucif2-verdict-SI-UPGRADE-01.md::heading:裁决: **APPROVED** ✅ (边界通过)",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "6. qlv线 SI4 → SI4.5 验证 (ucif2介入)",
+      "source_file": "ucif2-verdict-SI-UPGRADE-01.md",
+      "signature": "ucif2-verdict-SI-UPGRADE-01.md::heading:6. qlv线 SI4 → SI4.5 验证 (ucif2介入)",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "介入评估",
+      "source_file": "ucif2-verdict-SI-UPGRADE-01.md",
+      "signature": "ucif2-verdict-SI-UPGRADE-01.md::heading:介入评估",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "7. lvlu线 SI3.5 → SI4 验证 (ucif2介入)",
+      "source_file": "ucif2-verdict-SI-UPGRADE-01.md",
+      "signature": "ucif2-verdict-SI-UPGRADE-01.md::heading:7. lvlu线 SI3.5 → SI4 验证 (ucif2介入)",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "裁决: **CONDITIONAL APPROVED** ⚠️",
+      "source_file": "ucif2-verdict-SI-UPGRADE-01.md",
+      "signature": "ucif2-verdict-SI-UPGRADE-01.md::heading:裁决: **CONDITIONAL APPROVED** ⚠️",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "8. cfts线 SI3.5 → SI4 验证 (ucif2介入)",
+      "source_file": "ucif2-verdict-SI-UPGRADE-01.md",
+      "signature": "ucif2-verdict-SI-UPGRADE-01.md::heading:8. cfts线 SI3.5 → SI4 验证 (ucif2介入)",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "9. cisvr线 SI3.5 → SI4 验证 (ucif2介入)",
+      "source_file": "ucif2-verdict-SI-UPGRADE-01.md",
+      "signature": "ucif2-verdict-SI-UPGRADE-01.md::heading:9. cisvr线 SI3.5 → SI4 验证 (ucif2介入)",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "10. qtlv线 SI3 → SI3.5 验证 (ucif2介入)",
+      "source_file": "ucif2-verdict-SI-UPGRADE-01.md",
+      "signature": "ucif2-verdict-SI-UPGRADE-01.md::heading:10. qtlv线 SI3 → SI3.5 验证 (ucif2介入)",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "问题分析",
+      "source_file": "ucif2-verdict-SI-UPGRADE-01.md",
+      "signature": "ucif2-verdict-SI-UPGRADE-01.md::heading:问题分析",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "裁决: **CONDITIONAL APPROVED** ⚠️ (观察期)",
+      "source_file": "ucif2-verdict-SI-UPGRADE-01.md",
+      "signature": "ucif2-verdict-SI-UPGRADE-01.md::heading:裁决: **CONDITIONAL APPROVED** ⚠️ (观察期)",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "验证总结",
+      "source_file": "ucif2-verdict-SI-UPGRADE-01.md",
+      "signature": "ucif2-verdict-SI-UPGRADE-01.md::heading:验证总结",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "升级结果统计",
+      "source_file": "ucif2-verdict-SI-UPGRADE-01.md",
+      "signature": "ucif2-verdict-SI-UPGRADE-01.md::heading:升级结果统计",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "OMNI全局状态更新",
+      "source_file": "ucif2-verdict-SI-UPGRADE-01.md",
+      "signature": "ucif2-verdict-SI-UPGRADE-01.md::heading:OMNI全局状态更新",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "全局健康度预测",
+      "source_file": "ucif2-verdict-SI-UPGRADE-01.md",
+      "signature": "ucif2-verdict-SI-UPGRADE-01.md::heading:全局健康度预测",
+      "relevance": 0.75
+    },
+    {
+      "type": "json_key",
+      "name": "statistics",
+      "source_file": "ucif2_theorem_library.json",
+      "signature": "ucif2_theorem_library.json::key:statistics",
+      "relevance": 0.7
+    },
+    {
+      "type": "json_key",
+      "name": "domains",
+      "source_file": "ucif2_theorem_library.json",
+      "signature": "ucif2_theorem_library.json::key:domains",
+      "relevance": 0.7
+    },
+    {
+      "type": "json_key",
+      "name": "theorem_samples",
+      "source_file": "ucif2_theorem_library.json",
+      "signature": "ucif2_theorem_library.json::key:theorem_samples",
+      "relevance": 0.7
+    },
+    {
+      "type": "json_key",
+      "name": "namespace_hierarchy",
+      "source_file": "ucif2_theorem_library.json",
+      "signature": "ucif2_theorem_library.json::key:namespace_hierarchy",
+      "relevance": 0.7
+    },
+    {
+      "type": "json_key",
+      "name": "metadata",
+      "source_file": "ucif2_theorem_library.json",
+      "signature": "ucif2_theorem_library.json::key:metadata",
+      "relevance": 0.7
+    },
+    {
+      "type": "python_class",
+      "name": "DNAMathematics",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::class:DNAMathematics",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_class",
+      "name": "RNAMathematics",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::class:RNAMathematics",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_class",
+      "name": "ProteinMathematics",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::class:ProteinMathematics",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_class",
+      "name": "GeneticCode",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::class:GeneticCode",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "FormalLife",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::class:FormalLife",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_class",
+      "name": "BioKnowledgeIsomorphism",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::class:BioKnowledgeIsomorphism",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "FormalLifeEngine",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::class:FormalLifeEngine",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_function",
+      "name": "__init__",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:__init__",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "generate_sequence",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:generate_sequence",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "complement",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:complement",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "reverse_complement",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:reverse_complement",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "transcribe",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:transcribe",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "gc_content",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:gc_content",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "entropy",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:entropy",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "fourier_transform",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:fourier_transform",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "z_curve",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:z_curve",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "walk_plot",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:walk_plot",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "melting_temperature",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:melting_temperature",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "kmer_frequency",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:kmer_frequency",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "fold_secondary",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:fold_secondary",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_can_pair",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:_can_pair",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_traceback",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:_traceback",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "calculate_free_energy",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:calculate_free_energy",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "find_motifs",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:find_motifs",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "translate",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:translate",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "structure_to_dot_bracket",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:structure_to_dot_bracket",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "compute_hydrophobicity",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:compute_hydrophobicity",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "predict_alpha_helix",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:predict_alpha_helix",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "predict_beta_sheet",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:predict_beta_sheet",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "contact_map",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:contact_map",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_approximate_3d_coords",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:_approximate_3d_coords",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "fold_topology",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:fold_topology",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_compute_writhing_number",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:_compute_writhing_number",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "energy_landscape",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:energy_landscape",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_random_conformation",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:_random_conformation",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_compute_energy",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:_compute_energy",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "molecular_weight",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:molecular_weight",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "isoelectric_point_approx",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:isoelectric_point_approx",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "codon_to_amino_acid",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:codon_to_amino_acid",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "amino_acid_to_codons",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:amino_acid_to_codons",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "redundancy",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:redundancy",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "error_resilience",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:error_resilience",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "symmetry_analysis",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:symmetry_analysis",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_count_automorphisms",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:_count_automorphisms",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_all_codons",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:get_all_codons",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "translate_dna",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:translate_dna",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "create",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:create",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_calculate_fitness",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:_calculate_fitness",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "autopoiesis_cycle",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:autopoiesis_cycle",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "replication_fidelity",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:replication_fidelity",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "mutation_rate",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:mutation_rate",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "mutate",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:mutate",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "selection_pressure",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:selection_pressure",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "evolve",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:evolve",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_state",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:get_state",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "dna_to_knowledge_graph",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:dna_to_knowledge_graph",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_quick_entropy",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:_quick_entropy",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_sequence_similarity",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:_sequence_similarity",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "protein_to_tensor_field",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:protein_to_tensor_field",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "metabolism_to_closed_loop",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:metabolism_to_closed_loop",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "evolution_to_emergence",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:evolution_to_emergence",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "create_isomorphism_map",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:create_isomorphism_map",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "create_life_form",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:create_life_form",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "run_life_cycle",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:run_life_cycle",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "evolve_population",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:evolve_population",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_life_metrics",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:get_life_metrics",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_biomath_field_state",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:get_biomath_field_state",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_class",
+      "name": "class",
+      "source_file": "musical_mathematics.py",
+      "signature": "musical_mathematics.py::class:class",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "TwelveToneEqualTemperament",
+      "source_file": "musical_mathematics.py",
+      "signature": "musical_mathematics.py::class:TwelveToneEqualTemperament",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "TwelveLuLu",
+      "source_file": "musical_mathematics.py",
+      "signature": "musical_mathematics.py::class:TwelveLuLu",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "ConsonanceDissonance",
+      "source_file": "musical_mathematics.py",
+      "signature": "musical_mathematics.py::class:ConsonanceDissonance",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "CounterpointEngineEnhanced",
+      "source_file": "musical_mathematics.py",
+      "signature": "musical_mathematics.py::class:CounterpointEngineEnhanced",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "FugueStructure",
+      "source_file": "musical_mathematics.py",
+      "signature": "musical_mathematics.py::class:FugueStructure",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "SyncopationPattern",
+      "source_file": "musical_mathematics.py",
+      "signature": "musical_mathematics.py::class:SyncopationPattern",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "__repr__",
+      "source_file": "musical_mathematics.py",
+      "signature": "musical_mathematics.py::def:__repr__",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "add_event",
+      "source_file": "musical_mathematics.py",
+      "signature": "musical_mathematics.py::def:add_event",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "add_voice",
+      "source_file": "musical_mathematics.py",
+      "signature": "musical_mathematics.py::def:add_voice",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_all_events",
+      "source_file": "musical_mathematics.py",
+      "signature": "musical_mathematics.py::def:get_all_events",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "__init__",
+      "source_file": "musical_mathematics.py",
+      "signature": "musical_mathematics.py::def:__init__",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_note_name_to_midi",
+      "source_file": "musical_mathematics.py",
+      "signature": "musical_mathematics.py::def:_note_name_to_midi",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_midi_to_note_name",
+      "source_file": "musical_mathematics.py",
+      "signature": "musical_mathematics.py::def:_midi_to_note_name",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_frequency",
+      "source_file": "musical_mathematics.py",
+      "signature": "musical_mathematics.py::def:get_frequency",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_note_from_freq",
+      "source_file": "musical_mathematics.py",
+      "signature": "musical_mathematics.py::def:get_note_from_freq",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_interval_ratio",
+      "source_file": "musical_mathematics.py",
+      "signature": "musical_mathematics.py::def:get_interval_ratio",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_semitone_distance",
+      "source_file": "musical_mathematics.py",
+      "signature": "musical_mathematics.py::def:get_semitone_distance",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_all_notes_in_octave",
+      "source_file": "musical_mathematics.py",
+      "signature": "musical_mathematics.py::def:get_all_notes_in_octave",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_chromatic_scale",
+      "source_file": "musical_mathematics.py",
+      "signature": "musical_mathematics.py::def:get_chromatic_scale",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_generate_chain",
+      "source_file": "musical_mathematics.py",
+      "signature": "musical_mathematics.py::def:_generate_chain",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "generate_lulu_chain",
+      "source_file": "musical_mathematics.py",
+      "signature": "musical_mathematics.py::def:generate_lulu_chain",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_lulu_freq",
+      "source_file": "musical_mathematics.py",
+      "signature": "musical_mathematics.py::def:get_lulu_freq",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_lulu_comparison",
+      "source_file": "musical_mathematics.py",
+      "signature": "musical_mathematics.py::def:get_lulu_comparison",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_pythagorean_comma",
+      "source_file": "musical_mathematics.py",
+      "signature": "musical_mathematics.py::def:get_pythagorean_comma",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_lulu_interval_ratio",
+      "source_file": "musical_mathematics.py",
+      "signature": "musical_mathematics.py::def:get_lulu_interval_ratio",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_build_consonance_map",
+      "source_file": "musical_mathematics.py",
+      "signature": "musical_mathematics.py::def:_build_consonance_map",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_get_interval_name",
+      "source_file": "musical_mathematics.py",
+      "signature": "musical_mathematics.py::def:_get_interval_name",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "calculate_consonance",
+      "source_file": "musical_mathematics.py",
+      "signature": "musical_mathematics.py::def:calculate_consonance",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_chord_quality",
+      "source_file": "musical_mathematics.py",
+      "signature": "musical_mathematics.py::def:get_chord_quality",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_calculate_chord_consonance",
+      "source_file": "musical_mathematics.py",
+      "signature": "musical_mathematics.py::def:_calculate_chord_consonance",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "resonance_to_consciousness",
+      "source_file": "musical_mathematics.py",
+      "signature": "musical_mathematics.py::def:resonance_to_consciousness",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_interval_analysis",
+      "source_file": "musical_mathematics.py",
+      "signature": "musical_mathematics.py::def:get_interval_analysis",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "compose_counterpoint_11",
+      "source_file": "musical_mathematics.py",
+      "signature": "musical_mathematics.py::def:compose_counterpoint_11",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_generate_counterpoint_voice",
+      "source_file": "musical_mathematics.py",
+      "signature": "musical_mathematics.py::def:_generate_counterpoint_voice",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_check_voice_consonance",
+      "source_file": "musical_mathematics.py",
+      "signature": "musical_mathematics.py::def:_check_voice_consonance",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_check_parallel_penalty",
+      "source_file": "musical_mathematics.py",
+      "signature": "musical_mathematics.py::def:_check_parallel_penalty",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "detect_parallel_intervals",
+      "source_file": "musical_mathematics.py",
+      "signature": "musical_mathematics.py::def:detect_parallel_intervals",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "calculate_voice_independence",
+      "source_file": "musical_mathematics.py",
+      "signature": "musical_mathematics.py::def:calculate_voice_independence",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "harmonic_rhythm_analysis",
+      "source_file": "musical_mathematics.py",
+      "signature": "musical_mathematics.py::def:harmonic_rhythm_analysis",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "create_fugue",
+      "source_file": "musical_mathematics.py",
+      "signature": "musical_mathematics.py::def:create_fugue",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_transpose_melody",
+      "source_file": "musical_mathematics.py",
+      "signature": "musical_mathematics.py::def:_transpose_melody",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_generate_countersubject",
+      "source_file": "musical_mathematics.py",
+      "signature": "musical_mathematics.py::def:_generate_countersubject",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_interleave_melodies",
+      "source_file": "musical_mathematics.py",
+      "signature": "musical_mathematics.py::def:_interleave_melodies",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "stretto",
+      "source_file": "musical_mathematics.py",
+      "signature": "musical_mathematics.py::def:stretto",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "augmentation",
+      "source_file": "musical_mathematics.py",
+      "signature": "musical_mathematics.py::def:augmentation",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "diminution",
+      "source_file": "musical_mathematics.py",
+      "signature": "musical_mathematics.py::def:diminution",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "inversion",
+      "source_file": "musical_mathematics.py",
+      "signature": "musical_mathematics.py::def:inversion",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "retrograde",
+      "source_file": "musical_mathematics.py",
+      "signature": "musical_mathematics.py::def:retrograde",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_fugue_analysis",
+      "source_file": "musical_mathematics.py",
+      "signature": "musical_mathematics.py::def:get_fugue_analysis",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "generate_syncopated_rhythm",
+      "source_file": "musical_mathematics.py",
+      "signature": "musical_mathematics.py::def:generate_syncopated_rhythm",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "apply_to_events",
+      "source_file": "musical_mathematics.py",
+      "signature": "musical_mathematics.py::def:apply_to_events",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "calculate_syncopation_index",
+      "source_file": "musical_mathematics.py",
+      "signature": "musical_mathematics.py::def:calculate_syncopation_index",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "ProofStatus",
+      "source_file": "v10_math_proofs.py",
+      "signature": "v10_math_proofs.py::class:ProofStatus",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_class",
+      "name": "class",
+      "source_file": "v10_math_proofs.py",
+      "signature": "v10_math_proofs.py::class:class",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "LuluMathConstants",
+      "source_file": "v10_math_proofs.py",
+      "signature": "v10_math_proofs.py::class:LuluMathConstants",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_class",
+      "name": "PAdicCausalityLulu",
+      "source_file": "v10_math_proofs.py",
+      "signature": "v10_math_proofs.py::class:PAdicCausalityLulu",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "NonArchimedeanNonAbelian",
+      "source_file": "v10_math_proofs.py",
+      "signature": "v10_math_proofs.py::class:NonArchimedeanNonAbelian",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "group",
+      "source_file": "v10_math_proofs.py",
+      "signature": "v10_math_proofs.py::class:group",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "MIPStarRE",
+      "source_file": "v10_math_proofs.py",
+      "signature": "v10_math_proofs.py::class:MIPStarRE",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "of",
+      "source_file": "v10_math_proofs.py",
+      "signature": "v10_math_proofs.py::class:of",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "EmergenceIndexMath",
+      "source_file": "v10_math_proofs.py",
+      "signature": "v10_math_proofs.py::class:EmergenceIndexMath",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_function",
+      "name": "cents_ratio",
+      "source_file": "v10_math_proofs.py",
+      "signature": "v10_math_proofs.py::def:cents_ratio",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "to_dict",
+      "source_file": "v10_math_proofs.py",
+      "signature": "v10_math_proofs.py::def:to_dict",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "convert",
+      "source_file": "v10_math_proofs.py",
+      "signature": "v10_math_proofs.py::def:convert",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "__init__",
+      "source_file": "v10_math_proofs.py",
+      "signature": "v10_math_proofs.py::def:__init__",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "compute_lulu_frequencies",
+      "source_file": "v10_math_proofs.py",
+      "signature": "v10_math_proofs.py::def:compute_lulu_frequencies",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "verify_formula_F",
+      "source_file": "v10_math_proofs.py",
+      "signature": "v10_math_proofs.py::def:verify_formula_F",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "verify_formula_G",
+      "source_file": "v10_math_proofs.py",
+      "signature": "v10_math_proofs.py::def:verify_formula_G",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "analyze_log2_3_2_vs_inv_phi",
+      "source_file": "v10_math_proofs.py",
+      "signature": "v10_math_proofs.py::def:analyze_log2_3_2_vs_inv_phi",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "verify_z12_generator",
+      "source_file": "v10_math_proofs.py",
+      "signature": "v10_math_proofs.py::def:verify_z12_generator",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "verify_alpha_power_law",
+      "source_file": "v10_math_proofs.py",
+      "signature": "v10_math_proofs.py::def:verify_alpha_power_law",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "run_full_verification",
+      "source_file": "v10_math_proofs.py",
+      "signature": "v10_math_proofs.py::def:run_full_verification",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "p_adic_valuation",
+      "source_file": "v10_math_proofs.py",
+      "signature": "v10_math_proofs.py::def:p_adic_valuation",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "p_adic_absolute",
+      "source_file": "v10_math_proofs.py",
+      "signature": "v10_math_proofs.py::def:p_adic_absolute",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "verify_ultrametric_inequality",
+      "source_file": "v10_math_proofs.py",
+      "signature": "v10_math_proofs.py::def:verify_ultrametric_inequality",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "p_adic_tree_structure",
+      "source_file": "v10_math_proofs.py",
+      "signature": "v10_math_proofs.py::def:p_adic_tree_structure",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "spin_glass_pure_state_hierarchy",
+      "source_file": "v10_math_proofs.py",
+      "signature": "v10_math_proofs.py::def:spin_glass_pure_state_hierarchy",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "verify_braid_relation",
+      "source_file": "v10_math_proofs.py",
+      "signature": "v10_math_proofs.py::def:verify_braid_relation",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "verify_mapping_class_group_sl2z",
+      "source_file": "v10_math_proofs.py",
+      "signature": "v10_math_proofs.py::def:verify_mapping_class_group_sl2z",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "verify_anyon_braiding",
+      "source_file": "v10_math_proofs.py",
+      "signature": "v10_math_proofs.py::def:verify_anyon_braiding",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "string_compactification_moduli",
+      "source_file": "v10_math_proofs.py",
+      "signature": "v10_math_proofs.py::def:string_compactification_moduli",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "j_invariant",
+      "source_file": "v10_math_proofs.py",
+      "signature": "v10_math_proofs.py::def:j_invariant",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "verify_chsh_tsirelson_bound",
+      "source_file": "v10_math_proofs.py",
+      "signature": "v10_math_proofs.py::def:verify_chsh_tsirelson_bound",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "observable",
+      "source_file": "v10_math_proofs.py",
+      "signature": "v10_math_proofs.py::def:observable",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "verify_connes_embedding_connection",
+      "source_file": "v10_math_proofs.py",
+      "signature": "v10_math_proofs.py::def:verify_connes_embedding_connection",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "field_theory_causal_structure",
+      "source_file": "v10_math_proofs.py",
+      "signature": "v10_math_proofs.py::def:field_theory_causal_structure",
+      "relevance": 0.5
+    },
+    {
+      "type": "json_key",
+      "name": "omni_hub_version",
+      "source_file": "v10_proof_results.json",
+      "signature": "v10_proof_results.json::key:omni_hub_version",
+      "relevance": 0.7
+    },
+    {
+      "type": "json_key",
+      "name": "verification_date",
+      "source_file": "v10_proof_results.json",
+      "signature": "v10_proof_results.json::key:verification_date",
+      "relevance": 0.7
+    },
+    {
+      "type": "json_key",
+      "name": "total_conjectures",
+      "source_file": "v10_proof_results.json",
+      "signature": "v10_proof_results.json::key:total_conjectures",
+      "relevance": 0.7
+    },
+    {
+      "type": "json_key",
+      "name": "results",
+      "source_file": "v10_proof_results.json",
+      "signature": "v10_proof_results.json::key:results",
+      "relevance": 0.7
+    }
+  ],
+  "node_count": 220,
+  "si_level": 1,
+  "activity_level": 0.7227,
+  "contribution_score": 0.6241
+}

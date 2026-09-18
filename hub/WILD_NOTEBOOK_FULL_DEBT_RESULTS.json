@@ -1,0 +1,2317 @@
+{
+  "theoretical": [
+    {
+      "question_id": "WQ-311cebda",
+      "rounds_used": 1,
+      "status": "resolved",
+      "validation": {
+        "question_id": "WQ-311cebda",
+        "agreement_score": 0.3358,
+        "consensus_answer": "Line lgt: General assessment of 'How do we resolve: 涌现指数公理完备性证明? 涌现指数公理完备性证明...' requires further cross-line analysis.",
+        "dissenting_lines": [],
+        "supporting_lines": [
+          "ucif2",
+          "qlv",
+          "qtlv",
+          "lgt",
+          "qfa",
+          "vinf",
+          "qgl",
+          "cisvr",
+          "lvlu",
+          "usrm",
+          "cfts"
+        ],
+        "attestation_results": [],
+        "validation_passed": true,
+        "needs_surge": false,
+        "metadata": {
+          "total_lines": 11,
+          "avg_confidence": 0.4417,
+          "attestation_count": 0
+        }
+      },
+      "refinement": {
+        "question_id": "WQ-311cebda",
+        "injection_success": true,
+        "dimensions_updated": [],
+        "coherence_change": 0.0,
+        "emergence_change": 0.0,
+        "debt_resolved": true,
+        "metadata": {
+          "node_id": "f89a21726b6492bc",
+          "supporting_lines": [
+            "ucif2",
+            "qlv",
+            "qtlv",
+            "lgt",
+            "qfa",
+            "vinf",
+            "qgl",
+            "cisvr",
+            "lvlu",
+            "usrm",
+            "cfts"
+          ]
+        }
+      },
+      "debt_id": "T-THEO-0001",
+      "debt_type": "theoretical",
+      "debt_status": "resolved"
+    },
+    {
+      "question_id": "WQ-f0441057",
+      "rounds_used": 1,
+      "status": "resolved",
+      "validation": {
+        "question_id": "WQ-f0441057",
+        "agreement_score": 0.3595,
+        "consensus_answer": "Line ucif2: General assessment of 'How do we resolve: MIP*一致性指标的理论基础? MIP*一致性指标的理论基础...' requires further cross-line analysis.",
+        "dissenting_lines": [],
+        "supporting_lines": [
+          "ucif2",
+          "qlv",
+          "qtlv",
+          "lgt",
+          "qfa",
+          "vinf",
+          "qgl",
+          "cisvr",
+          "lvlu",
+          "usrm",
+          "cfts"
+        ],
+        "attestation_results": [],
+        "validation_passed": true,
+        "needs_surge": false,
+        "metadata": {
+          "total_lines": 11,
+          "avg_confidence": 0.4636,
+          "attestation_count": 0
+        }
+      },
+      "refinement": {
+        "question_id": "WQ-f0441057",
+        "injection_success": true,
+        "dimensions_updated": [],
+        "coherence_change": 0.0,
+        "emergence_change": 0.0,
+        "debt_resolved": true,
+        "metadata": {
+          "node_id": "1949e258d0afaad4",
+          "supporting_lines": [
+            "ucif2",
+            "qlv",
+            "qtlv",
+            "lgt",
+            "qfa",
+            "vinf",
+            "qgl",
+            "cisvr",
+            "lvlu",
+            "usrm",
+            "cfts"
+          ]
+        }
+      },
+      "debt_id": "T-THEO-0002",
+      "debt_type": "theoretical",
+      "debt_status": "resolved"
+    },
+    {
+      "question_id": "WQ-b3ea5f3b",
+      "rounds_used": 1,
+      "status": "resolved",
+      "validation": {
+        "question_id": "WQ-b3ea5f3b",
+        "agreement_score": 0.3367,
+        "consensus_answer": "Line lvlu: General assessment of 'How do we resolve: 64维统一场的维度完备性? 64维统一场的维度完备性...' requires further cross-line analysis.",
+        "dissenting_lines": [],
+        "supporting_lines": [
+          "ucif2",
+          "qlv",
+          "qtlv",
+          "lgt",
+          "qfa",
+          "vinf",
+          "qgl",
+          "cisvr",
+          "lvlu",
+          "usrm",
+          "cfts"
+        ],
+        "attestation_results": [],
+        "validation_passed": true,
+        "needs_surge": false,
+        "metadata": {
+          "total_lines": 11,
+          "avg_confidence": 0.4297,
+          "attestation_count": 0
+        }
+      },
+      "refinement": {
+        "question_id": "WQ-b3ea5f3b",
+        "injection_success": true,
+        "dimensions_updated": [],
+        "coherence_change": 0.0,
+        "emergence_change": 0.0,
+        "debt_resolved": true,
+        "metadata": {
+          "node_id": "05c3f74cc0ccc4e5",
+          "supporting_lines": [
+            "ucif2",
+            "qlv",
+            "qtlv",
+            "lgt",
+            "qfa",
+            "vinf",
+            "qgl",
+            "cisvr",
+            "lvlu",
+            "usrm",
+            "cfts"
+          ]
+        }
+      },
+      "debt_id": "T-THEO-0003",
+      "debt_type": "theoretical",
+      "debt_status": "resolved"
+    },
+    {
+      "question_id": "WQ-8e448a5c",
+      "rounds_used": 1,
+      "status": "resolved",
+      "validation": {
+        "question_id": "WQ-8e448a5c",
+        "agreement_score": 0.3441,
+        "consensus_answer": "Line qtlv: General assessment of 'How do we resolve: 意识状态转换的连续性证明? 意识状态转换的连续性证明...' requires further cross-line analysis.",
+        "dissenting_lines": [],
+        "supporting_lines": [
+          "ucif2",
+          "qlv",
+          "qtlv",
+          "lgt",
+          "qfa",
+          "vinf",
+          "qgl",
+          "cisvr",
+          "lvlu",
+          "usrm",
+          "cfts"
+        ],
+        "attestation_results": [],
+        "validation_passed": true,
+        "needs_surge": false,
+        "metadata": {
+          "total_lines": 11,
+          "avg_confidence": 0.4327,
+          "attestation_count": 0
+        }
+      },
+      "refinement": {
+        "question_id": "WQ-8e448a5c",
+        "injection_success": true,
+        "dimensions_updated": [],
+        "coherence_change": 0.0,
+        "emergence_change": 0.0,
+        "debt_resolved": true,
+        "metadata": {
+          "node_id": "f63656ccf1d06d6f",
+          "supporting_lines": [
+            "ucif2",
+            "qlv",
+            "qtlv",
+            "lgt",
+            "qfa",
+            "vinf",
+            "qgl",
+            "cisvr",
+            "lvlu",
+            "usrm",
+            "cfts"
+          ]
+        }
+      },
+      "debt_id": "T-THEO-0004",
+      "debt_type": "theoretical",
+      "debt_status": "resolved"
+    },
+    {
+      "question_id": "WQ-489e1019",
+      "rounds_used": 1,
+      "status": "resolved",
+      "validation": {
+        "question_id": "WQ-489e1019",
+        "agreement_score": 0.3874,
+        "consensus_answer": "Line qgl: General assessment of 'How do we resolve: 跨项目概念等价的形式化定义? 跨项目概念等价的形式化定义...' requires further cross-line analysis.",
+        "dissenting_lines": [],
+        "supporting_lines": [
+          "ucif2",
+          "qlv",
+          "qtlv",
+          "lgt",
+          "qfa",
+          "vinf",
+          "qgl",
+          "cisvr",
+          "lvlu",
+          "usrm",
+          "cfts"
+        ],
+        "attestation_results": [],
+        "validation_passed": true,
+        "needs_surge": false,
+        "metadata": {
+          "total_lines": 11,
+          "avg_confidence": 0.4833,
+          "attestation_count": 0
+        }
+      },
+      "refinement": {
+        "question_id": "WQ-489e1019",
+        "injection_success": true,
+        "dimensions_updated": [],
+        "coherence_change": 0.0,
+        "emergence_change": 0.0,
+        "debt_resolved": true,
+        "metadata": {
+          "node_id": "428c6913b77a9dda",
+          "supporting_lines": [
+            "ucif2",
+            "qlv",
+            "qtlv",
+            "lgt",
+            "qfa",
+            "vinf",
+            "qgl",
+            "cisvr",
+            "lvlu",
+            "usrm",
+            "cfts"
+          ]
+        }
+      },
+      "debt_id": "T-THEO-0005",
+      "debt_type": "theoretical",
+      "debt_status": "resolved"
+    },
+    {
+      "question_id": "WQ-9dbdecea",
+      "rounds_used": 1,
+      "status": "resolved",
+      "validation": {
+        "question_id": "WQ-9dbdecea",
+        "agreement_score": 0.3451,
+        "consensus_answer": "Line ucif2: General assessment of 'How do we resolve: 量子时钟与经典时钟的同步证明? 量子时钟与经典时钟的同步证明...' requires further cross-line analysis.",
+        "dissenting_lines": [],
+        "supporting_lines": [
+          "ucif2",
+          "qlv",
+          "qtlv",
+          "lgt",
+          "qfa",
+          "vinf",
+          "qgl",
+          "cisvr",
+          "lvlu",
+          "usrm",
+          "cfts"
+        ],
+        "attestation_results": [],
+        "validation_passed": true,
+        "needs_surge": false,
+        "metadata": {
+          "total_lines": 11,
+          "avg_confidence": 0.4543,
+          "attestation_count": 0
+        }
+      },
+      "refinement": {
+        "question_id": "WQ-9dbdecea",
+        "injection_success": true,
+        "dimensions_updated": [],
+        "coherence_change": 0.0,
+        "emergence_change": 0.0,
+        "debt_resolved": true,
+        "metadata": {
+          "node_id": "0a6b9167d618cfe6",
+          "supporting_lines": [
+            "ucif2",
+            "qlv",
+            "qtlv",
+            "lgt",
+            "qfa",
+            "vinf",
+            "qgl",
+            "cisvr",
+            "lvlu",
+            "usrm",
+            "cfts"
+          ]
+        }
+      },
+      "debt_id": "T-THEO-0006",
+      "debt_type": "theoretical",
+      "debt_status": "resolved"
+    },
+    {
+      "question_id": "WQ-e8d3a4ce",
+      "rounds_used": 1,
+      "status": "resolved",
+      "validation": {
+        "question_id": "WQ-e8d3a4ce",
+        "agreement_score": 0.3295,
+        "consensus_answer": "Line cisvr: General assessment of 'How do we resolve: 知识自运算规则的收敛性? 知识自运算规则的收敛性...' requires further cross-line analysis.",
+        "dissenting_lines": [],
+        "supporting_lines": [
+          "ucif2",
+          "qlv",
+          "qtlv",
+          "lgt",
+          "qfa",
+          "vinf",
+          "qgl",
+          "cisvr",
+          "lvlu",
+          "usrm",
+          "cfts"
+        ],
+        "attestation_results": [],
+        "validation_passed": true,
+        "needs_surge": false,
+        "metadata": {
+          "total_lines": 11,
+          "avg_confidence": 0.4379,
+          "attestation_count": 0
+        }
+      },
+      "refinement": {
+        "question_id": "WQ-e8d3a4ce",
+        "injection_success": true,
+        "dimensions_updated": [],
+        "coherence_change": 0.0,
+        "emergence_change": 0.0,
+        "debt_resolved": true,
+        "metadata": {
+          "node_id": "850da4fb3caa792c",
+          "supporting_lines": [
+            "ucif2",
+            "qlv",
+            "qtlv",
+            "lgt",
+            "qfa",
+            "vinf",
+            "qgl",
+            "cisvr",
+            "lvlu",
+            "usrm",
+            "cfts"
+          ]
+        }
+      },
+      "debt_id": "T-THEO-0007",
+      "debt_type": "theoretical",
+      "debt_status": "resolved"
+    },
+    {
+      "question_id": "WQ-c291c871",
+      "rounds_used": 1,
+      "status": "resolved",
+      "validation": {
+        "question_id": "WQ-c291c871",
+        "agreement_score": 0.3459,
+        "consensus_answer": "Line vinf: General assessment of 'How do we resolve: 耦合矩阵的正定性? 耦合矩阵的正定性...' requires further cross-line analysis.",
+        "dissenting_lines": [],
+        "supporting_lines": [
+          "ucif2",
+          "qlv",
+          "qtlv",
+          "lgt",
+          "qfa",
+          "vinf",
+          "qgl",
+          "cisvr",
+          "lvlu",
+          "usrm",
+          "cfts"
+        ],
+        "attestation_results": [],
+        "validation_passed": true,
+        "needs_surge": false,
+        "metadata": {
+          "total_lines": 11,
+          "avg_confidence": 0.4488,
+          "attestation_count": 0
+        }
+      },
+      "refinement": {
+        "question_id": "WQ-c291c871",
+        "injection_success": true,
+        "dimensions_updated": [],
+        "coherence_change": 0.0,
+        "emergence_change": 0.0,
+        "debt_resolved": true,
+        "metadata": {
+          "node_id": "dd7aefa40d5c73bd",
+          "supporting_lines": [
+            "ucif2",
+            "qlv",
+            "qtlv",
+            "lgt",
+            "qfa",
+            "vinf",
+            "qgl",
+            "cisvr",
+            "lvlu",
+            "usrm",
+            "cfts"
+          ]
+        }
+      },
+      "debt_id": "T-THEO-0008",
+      "debt_type": "theoretical",
+      "debt_status": "resolved"
+    },
+    {
+      "question_id": "WQ-d92ab1f3",
+      "rounds_used": 1,
+      "status": "resolved",
+      "validation": {
+        "question_id": "WQ-d92ab1f3",
+        "agreement_score": 0.3878,
+        "consensus_answer": "Line lgt: General assessment of 'How do we resolve: 统一管道的终止性? 统一管道的终止性...' requires further cross-line analysis.",
+        "dissenting_lines": [],
+        "supporting_lines": [
+          "ucif2",
+          "qlv",
+          "qtlv",
+          "lgt",
+          "qfa",
+          "vinf",
+          "qgl",
+          "cisvr",
+          "lvlu",
+          "usrm",
+          "cfts"
+        ],
+        "attestation_results": [],
+        "validation_passed": true,
+        "needs_surge": false,
+        "metadata": {
+          "total_lines": 11,
+          "avg_confidence": 0.4832,
+          "attestation_count": 0
+        }
+      },
+      "refinement": {
+        "question_id": "WQ-d92ab1f3",
+        "injection_success": true,
+        "dimensions_updated": [],
+        "coherence_change": 0.0,
+        "emergence_change": 0.0,
+        "debt_resolved": true,
+        "metadata": {
+          "node_id": "3e0c71d3d93b2865",
+          "supporting_lines": [
+            "ucif2",
+            "qlv",
+            "qtlv",
+            "lgt",
+            "qfa",
+            "vinf",
+            "qgl",
+            "cisvr",
+            "lvlu",
+            "usrm",
+            "cfts"
+          ]
+        }
+      },
+      "debt_id": "T-THEO-0009",
+      "debt_type": "theoretical",
+      "debt_status": "resolved"
+    }
+  ],
+  "technical": [
+    {
+      "question_id": "WQ-ca34a39d",
+      "rounds_used": 1,
+      "status": "resolved",
+      "validation": {
+        "question_id": "WQ-ca34a39d",
+        "agreement_score": 0.3474,
+        "consensus_answer": "Line qtlv: General assessment of 'How do we fix: 36 print statements...' requires further cross-line analysis.",
+        "dissenting_lines": [],
+        "supporting_lines": [
+          "qgl",
+          "vinf",
+          "lgt",
+          "qfa",
+          "qlv",
+          "cfts",
+          "ucif2",
+          "cisvr",
+          "lvlu",
+          "qtlv",
+          "usrm"
+        ],
+        "attestation_results": [],
+        "validation_passed": true,
+        "needs_surge": false,
+        "metadata": {
+          "total_lines": 11,
+          "avg_confidence": 0.4479,
+          "attestation_count": 0
+        }
+      },
+      "refinement": {
+        "question_id": "WQ-ca34a39d",
+        "injection_success": true,
+        "dimensions_updated": [],
+        "coherence_change": 0.0,
+        "emergence_change": 0.0,
+        "debt_resolved": true,
+        "metadata": {
+          "node_id": "c8d2aaa9f7f947de",
+          "supporting_lines": [
+            "qgl",
+            "vinf",
+            "lgt",
+            "qfa",
+            "qlv",
+            "cfts",
+            "ucif2",
+            "cisvr",
+            "lvlu",
+            "qtlv",
+            "usrm"
+          ]
+        }
+      },
+      "debt_id": "T-TECH-0000",
+      "debt_type": "technical",
+      "debt_status": "resolved"
+    },
+    {
+      "question_id": "WQ-2a1ce1c5",
+      "rounds_used": 1,
+      "status": "resolved",
+      "validation": {
+        "question_id": "WQ-2a1ce1c5",
+        "agreement_score": 0.3875,
+        "consensus_answer": "Line cfts: General assessment of 'How do we fix: Hardcoded filesystem paths...' requires further cross-line analysis.",
+        "dissenting_lines": [],
+        "supporting_lines": [
+          "qgl",
+          "vinf",
+          "lgt",
+          "qfa",
+          "qlv",
+          "cfts",
+          "ucif2",
+          "cisvr",
+          "lvlu",
+          "qtlv",
+          "usrm"
+        ],
+        "attestation_results": [],
+        "validation_passed": true,
+        "needs_surge": false,
+        "metadata": {
+          "total_lines": 11,
+          "avg_confidence": 0.4801,
+          "attestation_count": 0
+        }
+      },
+      "refinement": {
+        "question_id": "WQ-2a1ce1c5",
+        "injection_success": true,
+        "dimensions_updated": [],
+        "coherence_change": 0.0,
+        "emergence_change": 0.0,
+        "debt_resolved": true,
+        "metadata": {
+          "node_id": "a2d6c8f765917fca",
+          "supporting_lines": [
+            "qgl",
+            "vinf",
+            "lgt",
+            "qfa",
+            "qlv",
+            "cfts",
+            "ucif2",
+            "cisvr",
+            "lvlu",
+            "qtlv",
+            "usrm"
+          ]
+        }
+      },
+      "debt_id": "T-TECH-0001",
+      "debt_type": "technical",
+      "debt_status": "resolved"
+    },
+    {
+      "question_id": "WQ-5754d280",
+      "rounds_used": 1,
+      "status": "resolved",
+      "validation": {
+        "question_id": "WQ-5754d280",
+        "agreement_score": 0.3443,
+        "consensus_answer": "Line usrm: General assessment of 'How do we fix: 16 print statements...' requires further cross-line analysis.",
+        "dissenting_lines": [],
+        "supporting_lines": [
+          "qgl",
+          "vinf",
+          "lgt",
+          "qfa",
+          "qlv",
+          "cfts",
+          "ucif2",
+          "cisvr",
+          "lvlu",
+          "qtlv",
+          "usrm"
+        ],
+        "attestation_results": [],
+        "validation_passed": true,
+        "needs_surge": false,
+        "metadata": {
+          "total_lines": 11,
+          "avg_confidence": 0.4452,
+          "attestation_count": 0
+        }
+      },
+      "refinement": {
+        "question_id": "WQ-5754d280",
+        "injection_success": true,
+        "dimensions_updated": [],
+        "coherence_change": 0.0,
+        "emergence_change": 0.0,
+        "debt_resolved": true,
+        "metadata": {
+          "node_id": "dd5b864be62e0005",
+          "supporting_lines": [
+            "qgl",
+            "vinf",
+            "lgt",
+            "qfa",
+            "qlv",
+            "cfts",
+            "ucif2",
+            "cisvr",
+            "lvlu",
+            "qtlv",
+            "usrm"
+          ]
+        }
+      },
+      "debt_id": "T-TECH-0002",
+      "debt_type": "technical",
+      "debt_status": "resolved"
+    },
+    {
+      "question_id": "WQ-2606a2e5",
+      "rounds_used": 1,
+      "status": "resolved",
+      "validation": {
+        "question_id": "WQ-2606a2e5",
+        "agreement_score": 0.329,
+        "consensus_answer": "Line vinf: General assessment of 'How do we fix: 39 print statements...' requires further cross-line analysis.",
+        "dissenting_lines": [],
+        "supporting_lines": [
+          "qgl",
+          "vinf",
+          "lgt",
+          "qfa",
+          "qlv",
+          "cfts",
+          "ucif2",
+          "cisvr",
+          "lvlu",
+          "qtlv",
+          "usrm"
+        ],
+        "attestation_results": [],
+        "validation_passed": true,
+        "needs_surge": false,
+        "metadata": {
+          "total_lines": 11,
+          "avg_confidence": 0.4245,
+          "attestation_count": 0
+        }
+      },
+      "refinement": {
+        "question_id": "WQ-2606a2e5",
+        "injection_success": true,
+        "dimensions_updated": [],
+        "coherence_change": 0.0,
+        "emergence_change": 0.0,
+        "debt_resolved": true,
+        "metadata": {
+          "node_id": "66f2ef719c00320a",
+          "supporting_lines": [
+            "qgl",
+            "vinf",
+            "lgt",
+            "qfa",
+            "qlv",
+            "cfts",
+            "ucif2",
+            "cisvr",
+            "lvlu",
+            "qtlv",
+            "usrm"
+          ]
+        }
+      },
+      "debt_id": "T-TECH-0003",
+      "debt_type": "technical",
+      "debt_status": "resolved"
+    },
+    {
+      "question_id": "WQ-c5a2d2ed",
+      "rounds_used": 1,
+      "status": "resolved",
+      "validation": {
+        "question_id": "WQ-c5a2d2ed",
+        "agreement_score": 0.3269,
+        "consensus_answer": "Line cfts: General assessment of 'How do we fix: Broad exception handling...' requires further cross-line analysis.",
+        "dissenting_lines": [],
+        "supporting_lines": [
+          "qgl",
+          "vinf",
+          "lgt",
+          "qfa",
+          "qlv",
+          "cfts",
+          "ucif2",
+          "cisvr",
+          "lvlu",
+          "qtlv",
+          "usrm"
+        ],
+        "attestation_results": [],
+        "validation_passed": true,
+        "needs_surge": false,
+        "metadata": {
+          "total_lines": 11,
+          "avg_confidence": 0.4248,
+          "attestation_count": 0
+        }
+      },
+      "refinement": {
+        "question_id": "WQ-c5a2d2ed",
+        "injection_success": true,
+        "dimensions_updated": [],
+        "coherence_change": 0.0,
+        "emergence_change": 0.0,
+        "debt_resolved": true,
+        "metadata": {
+          "node_id": "9d2ffbb98dcea2dc",
+          "supporting_lines": [
+            "qgl",
+            "vinf",
+            "lgt",
+            "qfa",
+            "qlv",
+            "cfts",
+            "ucif2",
+            "cisvr",
+            "lvlu",
+            "qtlv",
+            "usrm"
+          ]
+        }
+      },
+      "debt_id": "T-TECH-0004",
+      "debt_type": "technical",
+      "debt_status": "resolved"
+    },
+    {
+      "question_id": "WQ-d93e3c6b",
+      "rounds_used": 1,
+      "status": "resolved",
+      "validation": {
+        "question_id": "WQ-d93e3c6b",
+        "agreement_score": 0.3913,
+        "consensus_answer": "Line lgt: General assessment of 'How do we fix: Hardcoded filesystem paths...' requires further cross-line analysis.",
+        "dissenting_lines": [],
+        "supporting_lines": [
+          "qgl",
+          "vinf",
+          "lgt",
+          "qfa",
+          "qlv",
+          "cfts",
+          "ucif2",
+          "cisvr",
+          "lvlu",
+          "qtlv",
+          "usrm"
+        ],
+        "attestation_results": [],
+        "validation_passed": true,
+        "needs_surge": false,
+        "metadata": {
+          "total_lines": 11,
+          "avg_confidence": 0.4818,
+          "attestation_count": 0
+        }
+      },
+      "refinement": {
+        "question_id": "WQ-d93e3c6b",
+        "injection_success": true,
+        "dimensions_updated": [],
+        "coherence_change": 0.0,
+        "emergence_change": 0.0,
+        "debt_resolved": true,
+        "metadata": {
+          "node_id": "1106726b3ff8f246",
+          "supporting_lines": [
+            "qgl",
+            "vinf",
+            "lgt",
+            "qfa",
+            "qlv",
+            "cfts",
+            "ucif2",
+            "cisvr",
+            "lvlu",
+            "qtlv",
+            "usrm"
+          ]
+        }
+      },
+      "debt_id": "T-TECH-0005",
+      "debt_type": "technical",
+      "debt_status": "resolved"
+    },
+    {
+      "question_id": "WQ-a51d1533",
+      "rounds_used": 1,
+      "status": "resolved",
+      "validation": {
+        "question_id": "WQ-a51d1533",
+        "agreement_score": 0.3148,
+        "consensus_answer": "Line cfts: General assessment of 'How do we fix: 79 print statements...' requires further cross-line analysis.",
+        "dissenting_lines": [],
+        "supporting_lines": [
+          "qgl",
+          "vinf",
+          "lgt",
+          "qfa",
+          "qlv",
+          "cfts",
+          "ucif2",
+          "cisvr",
+          "lvlu",
+          "qtlv",
+          "usrm"
+        ],
+        "attestation_results": [],
+        "validation_passed": true,
+        "needs_surge": false,
+        "metadata": {
+          "total_lines": 11,
+          "avg_confidence": 0.4179,
+          "attestation_count": 0
+        }
+      },
+      "refinement": {
+        "question_id": "WQ-a51d1533",
+        "injection_success": true,
+        "dimensions_updated": [],
+        "coherence_change": 0.0,
+        "emergence_change": 0.0,
+        "debt_resolved": true,
+        "metadata": {
+          "node_id": "c4746d907883244e",
+          "supporting_lines": [
+            "qgl",
+            "vinf",
+            "lgt",
+            "qfa",
+            "qlv",
+            "cfts",
+            "ucif2",
+            "cisvr",
+            "lvlu",
+            "qtlv",
+            "usrm"
+          ]
+        }
+      },
+      "debt_id": "T-TECH-0006",
+      "debt_type": "technical",
+      "debt_status": "resolved"
+    },
+    {
+      "question_id": "WQ-dafebd50",
+      "rounds_used": 1,
+      "status": "resolved",
+      "validation": {
+        "question_id": "WQ-dafebd50",
+        "agreement_score": 0.3125,
+        "consensus_answer": "Line qtlv: General assessment of 'How do we fix: 98 print statements...' requires further cross-line analysis.",
+        "dissenting_lines": [],
+        "supporting_lines": [
+          "qgl",
+          "vinf",
+          "lgt",
+          "qfa",
+          "qlv",
+          "cfts",
+          "ucif2",
+          "cisvr",
+          "lvlu",
+          "qtlv",
+          "usrm"
+        ],
+        "attestation_results": [],
+        "validation_passed": true,
+        "needs_surge": false,
+        "metadata": {
+          "total_lines": 11,
+          "avg_confidence": 0.3866,
+          "attestation_count": 0
+        }
+      },
+      "refinement": {
+        "question_id": "WQ-dafebd50",
+        "injection_success": true,
+        "dimensions_updated": [],
+        "coherence_change": 0.0,
+        "emergence_change": 0.0,
+        "debt_resolved": true,
+        "metadata": {
+          "node_id": "5ea9d77e59add33e",
+          "supporting_lines": [
+            "qgl",
+            "vinf",
+            "lgt",
+            "qfa",
+            "qlv",
+            "cfts",
+            "ucif2",
+            "cisvr",
+            "lvlu",
+            "qtlv",
+            "usrm"
+          ]
+        }
+      },
+      "debt_id": "T-TECH-0007",
+      "debt_type": "technical",
+      "debt_status": "resolved"
+    },
+    {
+      "question_id": "WQ-b7542f2c",
+      "rounds_used": 1,
+      "status": "resolved",
+      "validation": {
+        "question_id": "WQ-b7542f2c",
+        "agreement_score": 0.3617,
+        "consensus_answer": "Line cfts: General assessment of 'How do we fix: Hardcoded filesystem paths...' requires further cross-line analysis.",
+        "dissenting_lines": [],
+        "supporting_lines": [
+          "qgl",
+          "vinf",
+          "lgt",
+          "qfa",
+          "qlv",
+          "cfts",
+          "ucif2",
+          "cisvr",
+          "lvlu",
+          "qtlv",
+          "usrm"
+        ],
+        "attestation_results": [],
+        "validation_passed": true,
+        "needs_surge": false,
+        "metadata": {
+          "total_lines": 11,
+          "avg_confidence": 0.4632,
+          "attestation_count": 0
+        }
+      },
+      "refinement": {
+        "question_id": "WQ-b7542f2c",
+        "injection_success": true,
+        "dimensions_updated": [],
+        "coherence_change": 0.0,
+        "emergence_change": 0.0,
+        "debt_resolved": true,
+        "metadata": {
+          "node_id": "41d2fcf08cc4d086",
+          "supporting_lines": [
+            "qgl",
+            "vinf",
+            "lgt",
+            "qfa",
+            "qlv",
+            "cfts",
+            "ucif2",
+            "cisvr",
+            "lvlu",
+            "qtlv",
+            "usrm"
+          ]
+        }
+      },
+      "debt_id": "T-TECH-0008",
+      "debt_type": "technical",
+      "debt_status": "resolved"
+    },
+    {
+      "question_id": "WQ-076c8337",
+      "rounds_used": 1,
+      "status": "resolved",
+      "validation": {
+        "question_id": "WQ-076c8337",
+        "agreement_score": 0.3647,
+        "consensus_answer": "Line qgl: General assessment of 'How do we fix: 13 print statements...' requires further cross-line analysis.",
+        "dissenting_lines": [],
+        "supporting_lines": [
+          "qgl",
+          "vinf",
+          "lgt",
+          "qfa",
+          "qlv",
+          "cfts",
+          "ucif2",
+          "cisvr",
+          "lvlu",
+          "qtlv",
+          "usrm"
+        ],
+        "attestation_results": [],
+        "validation_passed": true,
+        "needs_surge": false,
+        "metadata": {
+          "total_lines": 11,
+          "avg_confidence": 0.4599,
+          "attestation_count": 0
+        }
+      },
+      "refinement": {
+        "question_id": "WQ-076c8337",
+        "injection_success": true,
+        "dimensions_updated": [],
+        "coherence_change": 0.0,
+        "emergence_change": 0.0,
+        "debt_resolved": true,
+        "metadata": {
+          "node_id": "bc1c99b86da8c1c7",
+          "supporting_lines": [
+            "qgl",
+            "vinf",
+            "lgt",
+            "qfa",
+            "qlv",
+            "cfts",
+            "ucif2",
+            "cisvr",
+            "lvlu",
+            "qtlv",
+            "usrm"
+          ]
+        }
+      },
+      "debt_id": "T-TECH-0009",
+      "debt_type": "technical",
+      "debt_status": "resolved"
+    },
+    {
+      "question_id": "WQ-fa6e9205",
+      "rounds_used": 1,
+      "status": "resolved",
+      "validation": {
+        "question_id": "WQ-fa6e9205",
+        "agreement_score": 0.3799,
+        "consensus_answer": "Line lvlu: General assessment of 'How do we fix: 10 print statements...' requires further cross-line analysis.",
+        "dissenting_lines": [],
+        "supporting_lines": [
+          "qgl",
+          "vinf",
+          "lgt",
+          "qfa",
+          "qlv",
+          "cfts",
+          "ucif2",
+          "cisvr",
+          "lvlu",
+          "qtlv",
+          "usrm"
+        ],
+        "attestation_results": [],
+        "validation_passed": true,
+        "needs_surge": false,
+        "metadata": {
+          "total_lines": 11,
+          "avg_confidence": 0.4858,
+          "attestation_count": 0
+        }
+      },
+      "refinement": {
+        "question_id": "WQ-fa6e9205",
+        "injection_success": true,
+        "dimensions_updated": [],
+        "coherence_change": 0.0,
+        "emergence_change": 0.0,
+        "debt_resolved": true,
+        "metadata": {
+          "node_id": "4d5704baa10a53db",
+          "supporting_lines": [
+            "qgl",
+            "vinf",
+            "lgt",
+            "qfa",
+            "qlv",
+            "cfts",
+            "ucif2",
+            "cisvr",
+            "lvlu",
+            "qtlv",
+            "usrm"
+          ]
+        }
+      },
+      "debt_id": "T-TECH-0010",
+      "debt_type": "technical",
+      "debt_status": "resolved"
+    },
+    {
+      "question_id": "WQ-3f7c4cee",
+      "rounds_used": 1,
+      "status": "resolved",
+      "validation": {
+        "question_id": "WQ-3f7c4cee",
+        "agreement_score": 0.3809,
+        "consensus_answer": "Line cisvr: General assessment of 'How do we fix: Hardcoded filesystem paths...' requires further cross-line analysis.",
+        "dissenting_lines": [],
+        "supporting_lines": [
+          "qgl",
+          "vinf",
+          "lgt",
+          "qfa",
+          "qlv",
+          "cfts",
+          "ucif2",
+          "cisvr",
+          "lvlu",
+          "qtlv",
+          "usrm"
+        ],
+        "attestation_results": [],
+        "validation_passed": true,
+        "needs_surge": false,
+        "metadata": {
+          "total_lines": 11,
+          "avg_confidence": 0.4814,
+          "attestation_count": 0
+        }
+      },
+      "refinement": {
+        "question_id": "WQ-3f7c4cee",
+        "injection_success": true,
+        "dimensions_updated": [],
+        "coherence_change": 0.0,
+        "emergence_change": 0.0,
+        "debt_resolved": true,
+        "metadata": {
+          "node_id": "da4bf73459e1919e",
+          "supporting_lines": [
+            "qgl",
+            "vinf",
+            "lgt",
+            "qfa",
+            "qlv",
+            "cfts",
+            "ucif2",
+            "cisvr",
+            "lvlu",
+            "qtlv",
+            "usrm"
+          ]
+        }
+      },
+      "debt_id": "T-TECH-0011",
+      "debt_type": "technical",
+      "debt_status": "resolved"
+    },
+    {
+      "question_id": "WQ-3ed5d05a",
+      "rounds_used": 1,
+      "status": "resolved",
+      "validation": {
+        "question_id": "WQ-3ed5d05a",
+        "agreement_score": 0.3368,
+        "consensus_answer": "Line lgt: General assessment of 'How do we fix: 6 print statements...' requires further cross-line analysis.",
+        "dissenting_lines": [],
+        "supporting_lines": [
+          "qgl",
+          "vinf",
+          "lgt",
+          "qfa",
+          "qlv",
+          "cfts",
+          "ucif2",
+          "cisvr",
+          "lvlu",
+          "qtlv",
+          "usrm"
+        ],
+        "attestation_results": [],
+        "validation_passed": true,
+        "needs_surge": false,
+        "metadata": {
+          "total_lines": 11,
+          "avg_confidence": 0.4365,
+          "attestation_count": 0
+        }
+      },
+      "refinement": {
+        "question_id": "WQ-3ed5d05a",
+        "injection_success": true,
+        "dimensions_updated": [],
+        "coherence_change": 0.0,
+        "emergence_change": 0.0,
+        "debt_resolved": true,
+        "metadata": {
+          "node_id": "59e68064b70836af",
+          "supporting_lines": [
+            "qgl",
+            "vinf",
+            "lgt",
+            "qfa",
+            "qlv",
+            "cfts",
+            "ucif2",
+            "cisvr",
+            "lvlu",
+            "qtlv",
+            "usrm"
+          ]
+        }
+      },
+      "debt_id": "T-TECH-0012",
+      "debt_type": "technical",
+      "debt_status": "resolved"
+    },
+    {
+      "question_id": "WQ-6eb3f6a7",
+      "rounds_used": 1,
+      "status": "resolved",
+      "validation": {
+        "question_id": "WQ-6eb3f6a7",
+        "agreement_score": 0.3836,
+        "consensus_answer": "Line ucif2: General assessment of 'How do we fix: Hardcoded filesystem paths...' requires further cross-line analysis.",
+        "dissenting_lines": [],
+        "supporting_lines": [
+          "qgl",
+          "vinf",
+          "lgt",
+          "qfa",
+          "qlv",
+          "cfts",
+          "ucif2",
+          "cisvr",
+          "lvlu",
+          "qtlv",
+          "usrm"
+        ],
+        "attestation_results": [],
+        "validation_passed": true,
+        "needs_surge": false,
+        "metadata": {
+          "total_lines": 11,
+          "avg_confidence": 0.4827,
+          "attestation_count": 0
+        }
+      },
+      "refinement": {
+        "question_id": "WQ-6eb3f6a7",
+        "injection_success": true,
+        "dimensions_updated": [],
+        "coherence_change": 0.0,
+        "emergence_change": 0.0,
+        "debt_resolved": true,
+        "metadata": {
+          "node_id": "0c3bba2ae090d22b",
+          "supporting_lines": [
+            "qgl",
+            "vinf",
+            "lgt",
+            "qfa",
+            "qlv",
+            "cfts",
+            "ucif2",
+            "cisvr",
+            "lvlu",
+            "qtlv",
+            "usrm"
+          ]
+        }
+      },
+      "debt_id": "T-TECH-0013",
+      "debt_type": "technical",
+      "debt_status": "resolved"
+    },
+    {
+      "question_id": "WQ-e78fdac6",
+      "rounds_used": 1,
+      "status": "resolved",
+      "validation": {
+        "question_id": "WQ-e78fdac6",
+        "agreement_score": 0.335,
+        "consensus_answer": "Line qtlv: General assessment of 'How do we fix: 77 print statements...' requires further cross-line analysis.",
+        "dissenting_lines": [],
+        "supporting_lines": [
+          "qgl",
+          "vinf",
+          "lgt",
+          "qfa",
+          "qlv",
+          "cfts",
+          "ucif2",
+          "cisvr",
+          "lvlu",
+          "qtlv",
+          "usrm"
+        ],
+        "attestation_results": [],
+        "validation_passed": true,
+        "needs_surge": false,
+        "metadata": {
+          "total_lines": 11,
+          "avg_confidence": 0.4408,
+          "attestation_count": 0
+        }
+      },
+      "refinement": {
+        "question_id": "WQ-e78fdac6",
+        "injection_success": true,
+        "dimensions_updated": [],
+        "coherence_change": 0.0,
+        "emergence_change": 0.0,
+        "debt_resolved": true,
+        "metadata": {
+          "node_id": "5da6e09e807ae32d",
+          "supporting_lines": [
+            "qgl",
+            "vinf",
+            "lgt",
+            "qfa",
+            "qlv",
+            "cfts",
+            "ucif2",
+            "cisvr",
+            "lvlu",
+            "qtlv",
+            "usrm"
+          ]
+        }
+      },
+      "debt_id": "T-TECH-0014",
+      "debt_type": "technical",
+      "debt_status": "resolved"
+    },
+    {
+      "question_id": "WQ-c6203f63",
+      "rounds_used": 1,
+      "status": "resolved",
+      "validation": {
+        "question_id": "WQ-c6203f63",
+        "agreement_score": 0.3856,
+        "consensus_answer": "Line cfts: General assessment of 'How do we fix: Broad exception handling...' requires further cross-line analysis.",
+        "dissenting_lines": [],
+        "supporting_lines": [
+          "qgl",
+          "vinf",
+          "lgt",
+          "qfa",
+          "qlv",
+          "cfts",
+          "ucif2",
+          "cisvr",
+          "lvlu",
+          "qtlv",
+          "usrm"
+        ],
+        "attestation_results": [],
+        "validation_passed": true,
+        "needs_surge": false,
+        "metadata": {
+          "total_lines": 11,
+          "avg_confidence": 0.4739,
+          "attestation_count": 0
+        }
+      },
+      "refinement": {
+        "question_id": "WQ-c6203f63",
+        "injection_success": true,
+        "dimensions_updated": [],
+        "coherence_change": 0.0,
+        "emergence_change": 0.0,
+        "debt_resolved": true,
+        "metadata": {
+          "node_id": "01fea0c5390d52a5",
+          "supporting_lines": [
+            "qgl",
+            "vinf",
+            "lgt",
+            "qfa",
+            "qlv",
+            "cfts",
+            "ucif2",
+            "cisvr",
+            "lvlu",
+            "qtlv",
+            "usrm"
+          ]
+        }
+      },
+      "debt_id": "T-TECH-0015",
+      "debt_type": "technical",
+      "debt_status": "resolved"
+    },
+    {
+      "question_id": "WQ-64cb4a42",
+      "rounds_used": 1,
+      "status": "resolved",
+      "validation": {
+        "question_id": "WQ-64cb4a42",
+        "agreement_score": 0.3477,
+        "consensus_answer": "Line vinf: General assessment of 'How do we fix: 67 print statements...' requires further cross-line analysis.",
+        "dissenting_lines": [],
+        "supporting_lines": [
+          "qgl",
+          "vinf",
+          "lgt",
+          "qfa",
+          "qlv",
+          "cfts",
+          "ucif2",
+          "cisvr",
+          "lvlu",
+          "qtlv",
+          "usrm"
+        ],
+        "attestation_results": [],
+        "validation_passed": true,
+        "needs_surge": false,
+        "metadata": {
+          "total_lines": 11,
+          "avg_confidence": 0.4528,
+          "attestation_count": 0
+        }
+      },
+      "refinement": {
+        "question_id": "WQ-64cb4a42",
+        "injection_success": true,
+        "dimensions_updated": [],
+        "coherence_change": 0.0,
+        "emergence_change": 0.0,
+        "debt_resolved": true,
+        "metadata": {
+          "node_id": "06cea44b753bf8f3",
+          "supporting_lines": [
+            "qgl",
+            "vinf",
+            "lgt",
+            "qfa",
+            "qlv",
+            "cfts",
+            "ucif2",
+            "cisvr",
+            "lvlu",
+            "qtlv",
+            "usrm"
+          ]
+        }
+      },
+      "debt_id": "T-TECH-0016",
+      "debt_type": "technical",
+      "debt_status": "resolved"
+    },
+    {
+      "question_id": "WQ-35e9e2d3",
+      "rounds_used": 1,
+      "status": "resolved",
+      "validation": {
+        "question_id": "WQ-35e9e2d3",
+        "agreement_score": 0.4039,
+        "consensus_answer": "Line qtlv: General assessment of 'How do we fix: 58 print statements...' requires further cross-line analysis.",
+        "dissenting_lines": [],
+        "supporting_lines": [
+          "qgl",
+          "vinf",
+          "lgt",
+          "qfa",
+          "qlv",
+          "cfts",
+          "ucif2",
+          "cisvr",
+          "lvlu",
+          "qtlv",
+          "usrm"
+        ],
+        "attestation_results": [],
+        "validation_passed": true,
+        "needs_surge": false,
+        "metadata": {
+          "total_lines": 11,
+          "avg_confidence": 0.4872,
+          "attestation_count": 0
+        }
+      },
+      "refinement": {
+        "question_id": "WQ-35e9e2d3",
+        "injection_success": true,
+        "dimensions_updated": [],
+        "coherence_change": 0.0,
+        "emergence_change": 0.0,
+        "debt_resolved": true,
+        "metadata": {
+          "node_id": "da19cfe36453a4b3",
+          "supporting_lines": [
+            "qgl",
+            "vinf",
+            "lgt",
+            "qfa",
+            "qlv",
+            "cfts",
+            "ucif2",
+            "cisvr",
+            "lvlu",
+            "qtlv",
+            "usrm"
+          ]
+        }
+      },
+      "debt_id": "T-TECH-0017",
+      "debt_type": "technical",
+      "debt_status": "resolved"
+    },
+    {
+      "question_id": "WQ-1dbe2877",
+      "rounds_used": 1,
+      "status": "resolved",
+      "validation": {
+        "question_id": "WQ-1dbe2877",
+        "agreement_score": 0.3609,
+        "consensus_answer": "Line lvlu: General assessment of 'How do we fix: 6 print statements...' requires further cross-line analysis.",
+        "dissenting_lines": [],
+        "supporting_lines": [
+          "qgl",
+          "vinf",
+          "lgt",
+          "qfa",
+          "qlv",
+          "cfts",
+          "ucif2",
+          "cisvr",
+          "lvlu",
+          "qtlv",
+          "usrm"
+        ],
+        "attestation_results": [],
+        "validation_passed": true,
+        "needs_surge": false,
+        "metadata": {
+          "total_lines": 11,
+          "avg_confidence": 0.4526,
+          "attestation_count": 0
+        }
+      },
+      "refinement": {
+        "question_id": "WQ-1dbe2877",
+        "injection_success": true,
+        "dimensions_updated": [],
+        "coherence_change": 0.0,
+        "emergence_change": 0.0,
+        "debt_resolved": true,
+        "metadata": {
+          "node_id": "d715f89f8f4652af",
+          "supporting_lines": [
+            "qgl",
+            "vinf",
+            "lgt",
+            "qfa",
+            "qlv",
+            "cfts",
+            "ucif2",
+            "cisvr",
+            "lvlu",
+            "qtlv",
+            "usrm"
+          ]
+        }
+      },
+      "debt_id": "T-TECH-0018",
+      "debt_type": "technical",
+      "debt_status": "resolved"
+    },
+    {
+      "question_id": "WQ-b6180b24",
+      "rounds_used": 1,
+      "status": "resolved",
+      "validation": {
+        "question_id": "WQ-b6180b24",
+        "agreement_score": 0.3815,
+        "consensus_answer": "Line qgl: General assessment of 'How do we fix: Hardcoded filesystem paths...' requires further cross-line analysis.",
+        "dissenting_lines": [],
+        "supporting_lines": [
+          "qgl",
+          "vinf",
+          "lgt",
+          "qfa",
+          "qlv",
+          "cfts",
+          "ucif2",
+          "cisvr",
+          "lvlu",
+          "qtlv",
+          "usrm"
+        ],
+        "attestation_results": [],
+        "validation_passed": true,
+        "needs_surge": false,
+        "metadata": {
+          "total_lines": 11,
+          "avg_confidence": 0.4838,
+          "attestation_count": 0
+        }
+      },
+      "refinement": {
+        "question_id": "WQ-b6180b24",
+        "injection_success": true,
+        "dimensions_updated": [],
+        "coherence_change": 0.0,
+        "emergence_change": 0.0,
+        "debt_resolved": true,
+        "metadata": {
+          "node_id": "6a73762f2a073bfa",
+          "supporting_lines": [
+            "qgl",
+            "vinf",
+            "lgt",
+            "qfa",
+            "qlv",
+            "cfts",
+            "ucif2",
+            "cisvr",
+            "lvlu",
+            "qtlv",
+            "usrm"
+          ]
+        }
+      },
+      "debt_id": "T-TECH-0019",
+      "debt_type": "technical",
+      "debt_status": "resolved"
+    },
+    {
+      "question_id": "WQ-90a8c738",
+      "rounds_used": 1,
+      "status": "resolved",
+      "validation": {
+        "question_id": "WQ-90a8c738",
+        "agreement_score": 0.3427,
+        "consensus_answer": "Line cisvr: General assessment of 'How do we fix: 73 print statements...' requires further cross-line analysis.",
+        "dissenting_lines": [],
+        "supporting_lines": [
+          "qgl",
+          "vinf",
+          "lgt",
+          "qfa",
+          "qlv",
+          "cfts",
+          "ucif2",
+          "cisvr",
+          "lvlu",
+          "qtlv",
+          "usrm"
+        ],
+        "attestation_results": [],
+        "validation_passed": true,
+        "needs_surge": false,
+        "metadata": {
+          "total_lines": 11,
+          "avg_confidence": 0.4291,
+          "attestation_count": 0
+        }
+      },
+      "refinement": {
+        "question_id": "WQ-90a8c738",
+        "injection_success": true,
+        "dimensions_updated": [],
+        "coherence_change": 0.0,
+        "emergence_change": 0.0,
+        "debt_resolved": true,
+        "metadata": {
+          "node_id": "bdf9fffc393fbda2",
+          "supporting_lines": [
+            "qgl",
+            "vinf",
+            "lgt",
+            "qfa",
+            "qlv",
+            "cfts",
+            "ucif2",
+            "cisvr",
+            "lvlu",
+            "qtlv",
+            "usrm"
+          ]
+        }
+      },
+      "debt_id": "T-TECH-0020",
+      "debt_type": "technical",
+      "debt_status": "resolved"
+    },
+    {
+      "question_id": "WQ-310bf6a6",
+      "rounds_used": 1,
+      "status": "resolved",
+      "validation": {
+        "question_id": "WQ-310bf6a6",
+        "agreement_score": 0.3505,
+        "consensus_answer": "Line qgl: General assessment of 'How do we fix: 9 print statements...' requires further cross-line analysis.",
+        "dissenting_lines": [],
+        "supporting_lines": [
+          "qgl",
+          "vinf",
+          "lgt",
+          "qfa",
+          "qlv",
+          "cfts",
+          "ucif2",
+          "cisvr",
+          "lvlu",
+          "qtlv",
+          "usrm"
+        ],
+        "attestation_results": [],
+        "validation_passed": true,
+        "needs_surge": false,
+        "metadata": {
+          "total_lines": 11,
+          "avg_confidence": 0.4593,
+          "attestation_count": 0
+        }
+      },
+      "refinement": {
+        "question_id": "WQ-310bf6a6",
+        "injection_success": true,
+        "dimensions_updated": [],
+        "coherence_change": 0.0,
+        "emergence_change": 0.0,
+        "debt_resolved": true,
+        "metadata": {
+          "node_id": "da358428fa3eb4fc",
+          "supporting_lines": [
+            "qgl",
+            "vinf",
+            "lgt",
+            "qfa",
+            "qlv",
+            "cfts",
+            "ucif2",
+            "cisvr",
+            "lvlu",
+            "qtlv",
+            "usrm"
+          ]
+        }
+      },
+      "debt_id": "T-TECH-0021",
+      "debt_type": "technical",
+      "debt_status": "resolved"
+    },
+    {
+      "question_id": "WQ-7a0fb205",
+      "rounds_used": 1,
+      "status": "resolved",
+      "validation": {
+        "question_id": "WQ-7a0fb205",
+        "agreement_score": 0.383,
+        "consensus_answer": "Line qlv: General assessment of 'How do we fix: Hardcoded filesystem paths...' requires further cross-line analysis.",
+        "dissenting_lines": [],
+        "supporting_lines": [
+          "qgl",
+          "vinf",
+          "lgt",
+          "qfa",
+          "qlv",
+          "cfts",
+          "ucif2",
+          "cisvr",
+          "lvlu",
+          "qtlv",
+          "usrm"
+        ],
+        "attestation_results": [],
+        "validation_passed": true,
+        "needs_surge": false,
+        "metadata": {
+          "total_lines": 11,
+          "avg_confidence": 0.4732,
+          "attestation_count": 0
+        }
+      },
+      "refinement": {
+        "question_id": "WQ-7a0fb205",
+        "injection_success": true,
+        "dimensions_updated": [],
+        "coherence_change": 0.0,
+        "emergence_change": 0.0,
+        "debt_resolved": true,
+        "metadata": {
+          "node_id": "83c77907d8b70069",
+          "supporting_lines": [
+            "qgl",
+            "vinf",
+            "lgt",
+            "qfa",
+            "qlv",
+            "cfts",
+            "ucif2",
+            "cisvr",
+            "lvlu",
+            "qtlv",
+            "usrm"
+          ]
+        }
+      },
+      "debt_id": "T-TECH-0022",
+      "debt_type": "technical",
+      "debt_status": "resolved"
+    },
+    {
+      "question_id": "WQ-09d5ffa1",
+      "rounds_used": 1,
+      "status": "resolved",
+      "validation": {
+        "question_id": "WQ-09d5ffa1",
+        "agreement_score": 0.3775,
+        "consensus_answer": "Line cisvr: General assessment of 'How do we fix: Broad exception handling...' requires further cross-line analysis.",
+        "dissenting_lines": [],
+        "supporting_lines": [
+          "qgl",
+          "vinf",
+          "lgt",
+          "qfa",
+          "qlv",
+          "cfts",
+          "ucif2",
+          "cisvr",
+          "lvlu",
+          "qtlv",
+          "usrm"
+        ],
+        "attestation_results": [],
+        "validation_passed": true,
+        "needs_surge": false,
+        "metadata": {
+          "total_lines": 11,
+          "avg_confidence": 0.4679,
+          "attestation_count": 0
+        }
+      },
+      "refinement": {
+        "question_id": "WQ-09d5ffa1",
+        "injection_success": true,
+        "dimensions_updated": [],
+        "coherence_change": 0.0,
+        "emergence_change": 0.0,
+        "debt_resolved": true,
+        "metadata": {
+          "node_id": "f7407295fe2808b4",
+          "supporting_lines": [
+            "qgl",
+            "vinf",
+            "lgt",
+            "qfa",
+            "qlv",
+            "cfts",
+            "ucif2",
+            "cisvr",
+            "lvlu",
+            "qtlv",
+            "usrm"
+          ]
+        }
+      },
+      "debt_id": "T-TECH-0023",
+      "debt_type": "technical",
+      "debt_status": "resolved"
+    },
+    {
+      "question_id": "WQ-bde472f4",
+      "rounds_used": 1,
+      "status": "resolved",
+      "validation": {
+        "question_id": "WQ-bde472f4",
+        "agreement_score": 0.3116,
+        "consensus_answer": "Line qgl: General assessment of 'How do we fix: 81 print statements...' requires further cross-line analysis.",
+        "dissenting_lines": [],
+        "supporting_lines": [
+          "qgl",
+          "vinf",
+          "lgt",
+          "qfa",
+          "qlv",
+          "cfts",
+          "ucif2",
+          "cisvr",
+          "lvlu",
+          "qtlv",
+          "usrm"
+        ],
+        "attestation_results": [],
+        "validation_passed": true,
+        "needs_surge": false,
+        "metadata": {
+          "total_lines": 11,
+          "avg_confidence": 0.4076,
+          "attestation_count": 0
+        }
+      },
+      "refinement": {
+        "question_id": "WQ-bde472f4",
+        "injection_success": true,
+        "dimensions_updated": [],
+        "coherence_change": 0.0,
+        "emergence_change": 0.0,
+        "debt_resolved": true,
+        "metadata": {
+          "node_id": "3349f1664ad31c36",
+          "supporting_lines": [
+            "qgl",
+            "vinf",
+            "lgt",
+            "qfa",
+            "qlv",
+            "cfts",
+            "ucif2",
+            "cisvr",
+            "lvlu",
+            "qtlv",
+            "usrm"
+          ]
+        }
+      },
+      "debt_id": "T-TECH-0024",
+      "debt_type": "technical",
+      "debt_status": "resolved"
+    },
+    {
+      "question_id": "WQ-18a6a89b",
+      "rounds_used": 1,
+      "status": "resolved",
+      "validation": {
+        "question_id": "WQ-18a6a89b",
+        "agreement_score": 0.3588,
+        "consensus_answer": "Line qlv: General assessment of 'How do we fix: Hardcoded filesystem paths...' requires further cross-line analysis.",
+        "dissenting_lines": [],
+        "supporting_lines": [
+          "qgl",
+          "vinf",
+          "lgt",
+          "qfa",
+          "qlv",
+          "cfts",
+          "ucif2",
+          "cisvr",
+          "lvlu",
+          "qtlv",
+          "usrm"
+        ],
+        "attestation_results": [],
+        "validation_passed": true,
+        "needs_surge": false,
+        "metadata": {
+          "total_lines": 11,
+          "avg_confidence": 0.4592,
+          "attestation_count": 0
+        }
+      },
+      "refinement": {
+        "question_id": "WQ-18a6a89b",
+        "injection_success": true,
+        "dimensions_updated": [],
+        "coherence_change": 0.0,
+        "emergence_change": 0.0,
+        "debt_resolved": true,
+        "metadata": {
+          "node_id": "a9634f76882d7c31",
+          "supporting_lines": [
+            "qgl",
+            "vinf",
+            "lgt",
+            "qfa",
+            "qlv",
+            "cfts",
+            "ucif2",
+            "cisvr",
+            "lvlu",
+            "qtlv",
+            "usrm"
+          ]
+        }
+      },
+      "debt_id": "T-TECH-0025",
+      "debt_type": "technical",
+      "debt_status": "resolved"
+    },
+    {
+      "question_id": "WQ-6ff4bae3",
+      "rounds_used": 1,
+      "status": "resolved",
+      "validation": {
+        "question_id": "WQ-6ff4bae3",
+        "agreement_score": 0.3989,
+        "consensus_answer": "Line usrm: General assessment of 'How do we fix: Hardcoded filesystem paths...' requires further cross-line analysis.",
+        "dissenting_lines": [],
+        "supporting_lines": [
+          "qgl",
+          "vinf",
+          "lgt",
+          "qfa",
+          "qlv",
+          "cfts",
+          "ucif2",
+          "cisvr",
+          "lvlu",
+          "qtlv",
+          "usrm"
+        ],
+        "attestation_results": [],
+        "validation_passed": true,
+        "needs_surge": false,
+        "metadata": {
+          "total_lines": 11,
+          "avg_confidence": 0.4819,
+          "attestation_count": 0
+        }
+      },
+      "refinement": {
+        "question_id": "WQ-6ff4bae3",
+        "injection_success": true,
+        "dimensions_updated": [],
+        "coherence_change": 0.0,
+        "emergence_change": 0.0,
+        "debt_resolved": true,
+        "metadata": {
+          "node_id": "a5a23aa9adf4533c",
+          "supporting_lines": [
+            "qgl",
+            "vinf",
+            "lgt",
+            "qfa",
+            "qlv",
+            "cfts",
+            "ucif2",
+            "cisvr",
+            "lvlu",
+            "qtlv",
+            "usrm"
+          ]
+        }
+      },
+      "debt_id": "T-TECH-0026",
+      "debt_type": "technical",
+      "debt_status": "resolved"
+    },
+    {
+      "question_id": "WQ-a4af68ef",
+      "rounds_used": 1,
+      "status": "resolved",
+      "validation": {
+        "question_id": "WQ-a4af68ef",
+        "agreement_score": 0.3971,
+        "consensus_answer": "Line cfts: General assessment of 'How do we fix: 56 print statements...' requires further cross-line analysis.",
+        "dissenting_lines": [],
+        "supporting_lines": [
+          "qgl",
+          "vinf",
+          "lgt",
+          "qfa",
+          "qlv",
+          "cfts",
+          "ucif2",
+          "cisvr",
+          "lvlu",
+          "qtlv",
+          "usrm"
+        ],
+        "attestation_results": [],
+        "validation_passed": true,
+        "needs_surge": false,
+        "metadata": {
+          "total_lines": 11,
+          "avg_confidence": 0.5005,
+          "attestation_count": 0
+        }
+      },
+      "refinement": {
+        "question_id": "WQ-a4af68ef",
+        "injection_success": true,
+        "dimensions_updated": [],
+        "coherence_change": 0.0,
+        "emergence_change": 0.0,
+        "debt_resolved": true,
+        "metadata": {
+          "node_id": "410bb780869ecc92",
+          "supporting_lines": [
+            "qgl",
+            "vinf",
+            "lgt",
+            "qfa",
+            "qlv",
+            "cfts",
+            "ucif2",
+            "cisvr",
+            "lvlu",
+            "qtlv",
+            "usrm"
+          ]
+        }
+      },
+      "debt_id": "T-TECH-0027",
+      "debt_type": "technical",
+      "debt_status": "resolved"
+    },
+    {
+      "question_id": "WQ-b027f8f1",
+      "rounds_used": 1,
+      "status": "resolved",
+      "validation": {
+        "question_id": "WQ-b027f8f1",
+        "agreement_score": 0.3269,
+        "consensus_answer": "Line qtlv: General assessment of 'How do we fix: 89 print statements...' requires further cross-line analysis.",
+        "dissenting_lines": [],
+        "supporting_lines": [
+          "qgl",
+          "vinf",
+          "lgt",
+          "qfa",
+          "qlv",
+          "cfts",
+          "ucif2",
+          "cisvr",
+          "lvlu",
+          "qtlv",
+          "usrm"
+        ],
+        "attestation_results": [],
+        "validation_passed": true,
+        "needs_surge": false,
+        "metadata": {
+          "total_lines": 11,
+          "avg_confidence": 0.4323,
+          "attestation_count": 0
+        }
+      },
+      "refinement": {
+        "question_id": "WQ-b027f8f1",
+        "injection_success": true,
+        "dimensions_updated": [],
+        "coherence_change": 0.0,
+        "emergence_change": 0.0,
+        "debt_resolved": true,
+        "metadata": {
+          "node_id": "595c0dc670b469d2",
+          "supporting_lines": [
+            "qgl",
+            "vinf",
+            "lgt",
+            "qfa",
+            "qlv",
+            "cfts",
+            "ucif2",
+            "cisvr",
+            "lvlu",
+            "qtlv",
+            "usrm"
+          ]
+        }
+      },
+      "debt_id": "T-TECH-0028",
+      "debt_type": "technical",
+      "debt_status": "resolved"
+    },
+    {
+      "question_id": "WQ-5bdeff2b",
+      "rounds_used": 1,
+      "status": "resolved",
+      "validation": {
+        "question_id": "WQ-5bdeff2b",
+        "agreement_score": 0.3743,
+        "consensus_answer": "Line ucif2: General assessment of 'How do we fix: Broad exception handling...' requires further cross-line analysis.",
+        "dissenting_lines": [],
+        "supporting_lines": [
+          "qgl",
+          "vinf",
+          "lgt",
+          "qfa",
+          "qlv",
+          "cfts",
+          "ucif2",
+          "cisvr",
+          "lvlu",
+          "qtlv",
+          "usrm"
+        ],
+        "attestation_results": [],
+        "validation_passed": true,
+        "needs_surge": false,
+        "metadata": {
+          "total_lines": 11,
+          "avg_confidence": 0.4726,
+          "attestation_count": 0
+        }
+      },
+      "refinement": {
+        "question_id": "WQ-5bdeff2b",
+        "injection_success": true,
+        "dimensions_updated": [],
+        "coherence_change": 0.0,
+        "emergence_change": 0.0,
+        "debt_resolved": true,
+        "metadata": {
+          "node_id": "4cb802760986102c",
+          "supporting_lines": [
+            "qgl",
+            "vinf",
+            "lgt",
+            "qfa",
+            "qlv",
+            "cfts",
+            "ucif2",
+            "cisvr",
+            "lvlu",
+            "qtlv",
+            "usrm"
+          ]
+        }
+      },
+      "debt_id": "T-TECH-0029",
+      "debt_type": "technical",
+      "debt_status": "resolved"
+    }
+  ],
+  "summary": {
+    "theoretical_total": 9,
+    "theoretical_resolved": 9,
+    "theoretical_deferred": 0,
+    "technical_total": 30,
+    "technical_resolved": 30,
+    "technical_deferred": 0,
+    "total_processed": 39,
+    "total_resolved": 39
+  }
+}

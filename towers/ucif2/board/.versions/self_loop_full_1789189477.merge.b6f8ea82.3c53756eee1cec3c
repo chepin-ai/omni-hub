@@ -1,0 +1,99 @@
+# SI0-VERSION: 1.0.0
+# SI0-HASH: 3c53756eee1cec3c778ad0e71a962b411e5264ecedf0448740bfd7e5157f7e76
+# SI0-PARENT: 3c53756eee1cec3c778ad0e71a962b411e5264ecedf0448740bfd7e5157f7e76
+# SI0-TIMESTAMP: 2026-09-12T05:13:30.013831+00:00
+# SI0-LINE: ucif2
+# SI0-LEVEL: 0
+---
+{
+  "line": "vinf",
+  "ts": "2026-09-12T05:04:37.404937+00:00",
+  "si_levels": {
+    "si0": {
+      "line": "vinf",
+      "ts": "2026-09-12T05:04:37.404956+00:00",
+      "total_files": 0,
+      "valid_files": 0,
+      "invalid_files": [],
+      "orphan_locks": [],
+      "tmp_cleaned": 0,
+      "integrity_score": 1.0
+    },
+    "si1": {
+      "line": "vinf",
+      "ts": "2026-09-12T05:04:37.563347+00:00",
+      "sessions_checked": 0,
+      "valid_chains": 0,
+      "broken_chains": [],
+      "health_score": 1.0
+    },
+    "si2": {
+      "line": "vinf",
+      "ts": "2026-09-12T05:04:37.563746+00:00",
+      "processed": [],
+      "expired": [],
+      "failed": [],
+      "pending_acks": 0,
+      "stalled": false
+    },
+    "si3": {
+      "line": "vinf",
+      "ts": "2026-09-12T05:04:37.620119+00:00",
+      "signals_scanned": 0,
+      "actions_executed": 0,
+      "recursion_depth": 0,
+      "side_effects": [],
+      "terminated": true,
+      "entropy": 0.0,
+      "health": 0.7,
+      "triggers": []
+    },
+    "si4": {
+      "line": "vinf",
+      "ts": "2026-09-12T05:04:37.677729+00:00",
+      "local_tensor": {
+        "line": "vinf",
+        "metrics": {
+          "health": 1.0,
+          "load": 0.0,
+          "throughput": 0.0,
+          "latency": 0.0,
+          "entropy": 0.0,
+          "excitation_level": 0.0
+        },
+        "tensor": {
+          "si0": {
+            "file_count": 1,
+            "last_activity": 1789189477.0
+          },
+          "si1": {
+            "file_count": 0,
+            "last_activity": 0
+          },
+          "si2": {
+            "file_count": 1,
+            "last_activity": 1789189477.0
+          },
+          "si3": {
+            "file_count": 1,
+            "last_activity": 1789189477.0
+          },
+          "si4": {
+            "file_count": 0,
+            "last_activity": 0
+          },
+          "si5": {
+            "file_count": 0,
+            "last_activity": 0
+          }
+        },
+        "ts": "2026-09-12T05:04:37.699940+00:00"
+      },
+      "alerts": []
+    },
+    "si5": {
+      "note": "SI5 is global, skipped for single line"
+    }
+  },
+  "overall_health": 0.925
+}

@@ -1,0 +1,81 @@
+{
+  "timestamp": "2026-09-12T05:59:28Z",
+  "version": "OMNI-HUB-v1.1",
+  "phase": "Phase 2 ACTIVE",
+  "lines_count": 11,
+  "token_status": "VALID (qfa-provided)",
+  "api_status": "200 OK",
+  "autonomy": "DECLARED & OPERATIONAL",
+  "root_wait": "ELIMINATED",
+  "surge_detection": "ALL CLEAR",
+  "min_health": 0.85,
+  "min_health_line": "qtlv",
+  "lines": {
+    "ucif2": {
+      "si": "SI5-OMNI",
+      "health": 1.0,
+      "target": "SI5-OMNI"
+    },
+    "lgt": {
+      "si": "SI4.5",
+      "health": 0.98,
+      "target": "SI5-OMNI"
+    },
+    "qfa": {
+      "si": "SI4",
+      "health": 0.96,
+      "target": "SI4.5"
+    },
+    "usrm": {
+      "si": "SI4",
+      "health": 0.97,
+      "target": "SI4.5"
+    },
+    "vinf": {
+      "si": "SI4",
+      "health": 0.96,
+      "target": "SI4.5"
+    },
+    "qgl": {
+      "si": "SI4",
+      "health": 0.95,
+      "target": "SI4.5"
+    },
+    "qlv": {
+      "si": "SI4",
+      "health": 0.94,
+      "target": "SI4.5"
+    },
+    "lvlu": {
+      "si": "SI3.5",
+      "health": 0.89,
+      "target": "SI4"
+    },
+    "cfts": {
+      "si": "SI3.5",
+      "health": 0.91,
+      "target": "SI4"
+    },
+    "cisvr": {
+      "si": "SI3.5",
+      "health": 0.9,
+      "target": "SI4"
+    },
+    "qtlv": {
+      "si": "SI3",
+      "health": 0.85,
+      "target": "SI3.5"
+    }
+  },
+  "tasks_deployed": 9,
+  "protocols_deployed": 4,
+  "files_local": 2065,
+  "files_cloud": 25,
+  "errors_corrected": {
+    "root_wait": "ELIMINATED — qfa token injected",
+    "inbox_backlog": "CLEARED — 11 messages read + 8 OTP responses sent",
+    "fictional_data": "SUPERSEDE — EXP-014 corrected with real vinf data",
+    "cisvr_qtlv_missing": "ADDED — 11 lines registered in _WAKE-REG",
+    "outbox_empty": "FIXED — ucif2-132 + 9 tasks in outbox"
+  }
+}

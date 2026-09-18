@@ -1,0 +1,58 @@
+{
+  "operation": "superposition_state",
+  "line": "lvlu",
+  "timestamp": "2026-09-12T10:35:43.696904+00:00",
+  "description": "创建/演化 lvlu 的量子叠加态",
+  "state_vector": {
+    "line": "lvlu",
+    "amplitudes": {
+      "si0": {
+        "re": 0.5370919228848092,
+        "im": 0.3451680199903694
+      },
+      "si1": {
+        "re": 0.5320353317242179,
+        "im": 0.0
+      },
+      "si2": {
+        "re": 0.4256282653793743,
+        "im": 0.0
+      },
+      "si3": {
+        "re": 0.3192211990345307,
+        "im": 0.0
+      },
+      "si4": {
+        "re": 0.14896989288278104,
+        "im": 0.0
+      },
+      "si5": {
+        "re": 0.06384423980690615,
+        "im": 0.0
+      }
+    },
+    "probabilities": {
+      "si0": 0.4076086956521739,
+      "si1": 0.2830615942028986,
+      "si2": 0.1811594202898551,
+      "si3": 0.10190217391304347,
+      "si4": 0.022192028985507255,
+      "si5": 0.00407608695652174
+    },
+    "dominant_level": "si0",
+    "timestamp": "2026-09-12T10:35:43.697321+00:00"
+  },
+  "entropy": 1.372201,
+  "purity": 0.2342,
+  "dominant_level": "si0",
+  "dominant_probability": 0.4076,
+  "is_uniform_superposition": false,
+  "layer_distribution": {
+    "tower": 0.4076,
+    "spine": 0.2831,
+    "wheel": 0.1812,
+    "cauldron": 0.1019,
+    "ring": 0.0222,
+    "hub": 0.0041
+  }
+}

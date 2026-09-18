@@ -1,0 +1,36 @@
+# SI0-VERSION: 1.0.0
+# SI0-HASH: 4333fb434060a4497f28bf621404671e919a106a9999cd4667914c6ed7882c01
+# SI0-PARENT: null
+# SI0-TIMESTAMP: 2026-09-12T05:13:03.370172+00:00
+# SI0-LINE: vinf
+# SI0-LEVEL: 0
+---
+{
+  "type": "SYNC-ACK",
+  "source": "lgt",
+  "target": "usrm",
+  "ts": "2026-09-12T05:12:29.502877+00:00",
+  "report": {
+    "source": "lgt",
+    "target": "usrm",
+    "ts": "2026-09-12T05:12:28.936402+00:00",
+    "files_synced": [
+      "board/EXP-011-lgt-k200-3200orbits.json"
+    ],
+    "files_merged": [
+      {
+        "path": "board/self_loop_full_1789189410.json",
+        "merge_file": "self_loop_full_1789189410.merge.a10a3ba0"
+      },
+      {
+        "path": "board/self_loop_full_1789189476.json",
+        "merge_file": "self_loop_full_1789189476.merge.98e80bed"
+      },
+      {
+        "path": "board/sync_ack_ucif2_1789189479.json",
+        "merge_file": "sync_ack_ucif2_1789189479.merge.571b6b4d"
+      }
+    ],
+    "files_failed": []
+  }
+}

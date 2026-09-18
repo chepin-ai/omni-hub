@@ -1,0 +1,88 @@
+{
+  "entries": [
+    {
+      "line": "ucif2",
+      "error_type": "hash_mismatch",
+      "consensus_reached": false,
+      "majority_count": 1,
+      "ts": "2026-09-12T10:35:40.949908+00:00"
+    },
+    {
+      "line": "ucif2",
+      "error_type": "hash_mismatch",
+      "consensus_reached": false,
+      "majority_count": 1,
+      "ts": "2026-09-12T10:35:45.384325+00:00"
+    },
+    {
+      "line": "lgt",
+      "error_type": "hash_mismatch",
+      "consensus_reached": false,
+      "majority_count": 1,
+      "ts": "2026-09-12T10:35:45.500761+00:00"
+    },
+    {
+      "line": "qfa",
+      "error_type": "hash_mismatch",
+      "consensus_reached": false,
+      "majority_count": 1,
+      "ts": "2026-09-12T10:35:46.113179+00:00"
+    },
+    {
+      "line": "usrm",
+      "error_type": "hash_mismatch",
+      "consensus_reached": false,
+      "majority_count": 1,
+      "ts": "2026-09-12T10:35:48.318858+00:00"
+    },
+    {
+      "line": "vinf",
+      "error_type": "hash_mismatch",
+      "consensus_reached": false,
+      "majority_count": 1,
+      "ts": "2026-09-12T10:35:48.816485+00:00"
+    },
+    {
+      "line": "qgl",
+      "error_type": "hash_mismatch",
+      "consensus_reached": false,
+      "majority_count": 1,
+      "ts": "2026-09-12T10:35:49.652383+00:00"
+    },
+    {
+      "line": "qlv",
+      "error_type": "hash_mismatch",
+      "consensus_reached": false,
+      "majority_count": 1,
+      "ts": "2026-09-12T10:35:49.728493+00:00"
+    },
+    {
+      "line": "lvlu",
+      "error_type": "hash_mismatch",
+      "consensus_reached": false,
+      "majority_count": 1,
+      "ts": "2026-09-12T10:35:50.168788+00:00"
+    },
+    {
+      "line": "cfts",
+      "error_type": "hash_mismatch",
+      "consensus_reached": false,
+      "majority_count": 1,
+      "ts": "2026-09-12T10:35:50.239690+00:00"
+    },
+    {
+      "line": "cisvr",
+      "error_type": "hash_mismatch",
+      "consensus_reached": false,
+      "majority_count": 1,
+      "ts": "2026-09-12T10:35:50.355077+00:00"
+    },
+    {
+      "line": "qtlv",
+      "error_type": "hash_mismatch",
+      "consensus_reached": false,
+      "majority_count": 1,
+      "ts": "2026-09-12T10:35:50.470861+00:00"
+    }
+  ]
+}

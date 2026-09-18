@@ -1,0 +1,10 @@
+{
+  "id": "TASK-usrm-20260912T094610-7653",
+  "timestamp": "2026-09-12T09:46:10.291988+00:00",
+  "from": "ucif2",
+  "to": "usrm",
+  "type": "EXPERIMENT",
+  "priority": 1,
+  "description": "EXP-022: k500 scale law prediction",
+  "deadline": 4
+}

@@ -1,0 +1,97 @@
+{
+  "entries": [
+    {
+      "lines": [
+        "ucif2",
+        "lgt",
+        "qfa",
+        "usrm",
+        "vinf",
+        "qgl",
+        "qlv",
+        "lvlu",
+        "cfts"
+      ],
+      "ts": "2026-09-12T05:04:59.817880+00:00",
+      "resonance_mode": "adaptive",
+      "pairs": [
+        {
+          "line1": "ucif2",
+          "line2": "lgt",
+          "entanglement": 17.0054
+        },
+        {
+          "line1": "ucif2",
+          "line2": "qfa",
+          "entanglement": 16.2811
+        },
+        {
+          "line1": "ucif2",
+          "line2": "vinf",
+          "entanglement": 10.1692
+        },
+        {
+          "line1": "ucif2",
+          "line2": "qlv",
+          "entanglement": 15.1685
+        },
+        {
+          "line1": "ucif2",
+          "line2": "cfts",
+          "entanglement": 16.8437
+        },
+        {
+          "line1": "lgt",
+          "line2": "qfa",
+          "entanglement": 16.2806
+        },
+        {
+          "line1": "lgt",
+          "line2": "vinf",
+          "entanglement": 10.1688
+        },
+        {
+          "line1": "lgt",
+          "line2": "qlv",
+          "entanglement": 15.1682
+        },
+        {
+          "line1": "lgt",
+          "line2": "cfts",
+          "entanglement": 16.8433
+        },
+        {
+          "line1": "qfa",
+          "line2": "vinf",
+          "entanglement": 9.8353
+        },
+        {
+          "line1": "qfa",
+          "line2": "qlv",
+          "entanglement": 14.6681
+        },
+        {
+          "line1": "qfa",
+          "line2": "cfts",
+          "entanglement": 16.2797
+        },
+        {
+          "line1": "vinf",
+          "line2": "qlv",
+          "entanglement": 9.1677
+        },
+        {
+          "line1": "vinf",
+          "line2": "cfts",
+          "entanglement": 10.1681
+        },
+        {
+          "line1": "qlv",
+          "line2": "cfts",
+          "entanglement": 15.1677
+        }
+      ],
+      "status": "resonance_triggered"
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "line": "cfts",
+  "ts": "2026-09-12T05:12:44.998439+00:00",
+  "si_levels": {
+    "si0": {
+      "line": "cfts",
+      "ts": "2026-09-12T05:12:44.998474+00:00",
+      "total_files": 0,
+      "valid_files": 0,
+      "invalid_files": [],
+      "orphan_locks": [],
+      "tmp_cleaned": 0,
+      "integrity_score": 1.0
+    },
+    "si1": {
+      "line": "cfts",
+      "ts": "2026-09-12T05:12:45.111140+00:00",
+      "sessions_checked": 0,
+      "valid_chains": 0,
+      "broken_chains": [],
+      "health_score": 1.0
+    },
+    "si2": {
+      "line": "cfts",
+      "ts": "2026-09-12T05:12:45.111650+00:00",
+      "processed": [],
+      "expired": [
+        {
+          "msg_id": "114bb1bb-e931-4396-bf77-5d5d8cfdc562",
+          "age_sec": 460.24952
+        },
+        {
+          "msg_id": "442c2193-e84f-4e12-9729-1d3ecda79f06",
+          "age_sec": 460.038542
+        },
+        {
+          "msg_id": "69f873ad-b46a-4941-a156-6e217e8e0285",
+          "age_sec": 462.140262
+        },
+        {
+          "msg_id": "73ef8795-981f-442d-ad75-02cf0de80fb9",
+          "age_sec": 470.714539
+        },
+        {
+          "msg_id": "8aa6a6c8-b647-4ef5-a8dc-701bb4fe0b1a",
+          "age_sec": 460.951977
+        },
+        {
+          "msg_id": "abfba0ab-271f-4f5c-ae2d-17a7b1d3cfe4",
+          "age_sec": 463.414222
+        }
+      ],
+      "failed": [],
+      "pending_acks": 6,
+      "stalled": false
+    },
+    "si3": {
+      "line": "cfts",
+      "ts": "2026-09-12T05:12:45.488017+00:00",
+      "signals_scanned": 21,
+      "actions_executed": 5,
+      "recursion_depth": 5,
+      "side_effects": [],
+      "terminated": true,
+      "low_confidence_signals": 16,
+      "entropy": 1.0,
+      "health": 1.0,
+      "triggers": []
+    },
+    "si4": {
+      "line": "cfts",
+      "ts": "2026-09-12T05:12:45.987581+00:00",
+      "local_tensor": {
+        "line": "cfts",
+        "metrics": {
+          "health": 1.0,
+          "load": 0.2,
+          "throughput": 0.0,
+          "latency": 10.0,
+          "entropy": 1.0,
+          "excitation_level": 0.0
+        },
+        "tensor": {
+          "si0": {
+            "file_count": 2,
+            "last_activity": 1789189965.0
+          },
+          "si1": {
+            "file_count": 0,
+            "last_activity": 0
+          },
+          "si2": {
+            "file_count": 2,
+            "last_activity": 1789189965.0
+          },
+          "si3": {
+            "file_count": 9,
+            "last_activity": 1789189965.0
+          },
+          "si4": {
+            "file_count": 1,
+            "last_activity": 1789189479.0
+          },
+          "si5": {
+            "file_count": 2,
+            "last_activity": 1789189917.0
+          }
+        },
+        "ts": "2026-09-12T05:12:46.012271+00:00"
+      },
+      "alerts": []
+    },
+    "si5": {
+      "note": "SI5 is global, skipped for single line"
+    }
+  },
+  "overall_health": 1.0
+}

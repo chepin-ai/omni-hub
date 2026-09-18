@@ -1,0 +1,528 @@
+{
+  "statistics": {
+    "total_creations": 427,
+    "total_cycles": 50,
+    "avg_novelty": 0.5409781398894912,
+    "std_novelty": 0.18028053074714254,
+    "avg_value": 0.8689161465853732,
+    "std_value": 0.057189482821693394,
+    "type_distribution": {
+      "combination": 273,
+      "association": 33,
+      "metaphor": 50,
+      "analogy": 50,
+      "divergent": 21
+    },
+    "cross_domain_ratio": 0.9718969555035128,
+    "emergence_potential_avg": 0.4693113688415938
+  },
+  "verifications": {
+    "novelty": {
+      "value": 0.5491162863824182,
+      "threshold": 0.3,
+      "pass": true
+    },
+    "value": {
+      "value": 0.8792325607129308,
+      "threshold": 0.3,
+      "pass": true
+    },
+    "cross_domain": {
+      "value": 0.9718969555035128,
+      "threshold": 0.2,
+      "pass": true
+    },
+    "productivity": {
+      "value": 427,
+      "threshold": 50,
+      "pass": true
+    },
+    "emergence": {
+      "value": 0.4817868991032255,
+      "threshold": 0.15,
+      "pass": true
+    },
+    "diversity": {
+      "value": 5,
+      "threshold": 4,
+      "pass": true
+    }
+  },
+  "sample_creations": [
+    {
+      "id": "92bb0cec",
+      "type": "combination",
+      "content": "递归 → 分形 → 代谢 的循环涌现",
+      "novelty": 0.6608,
+      "value": 0.9696,
+      "line_source": [
+        2
+      ],
+      "timestamp": 1789457109.860842,
+      "components": [
+        "递归",
+        "分形",
+        "代谢"
+      ],
+      "metadata": {
+        "is_new_pattern": true,
+        "num_elements": 3,
+        "emergence_potential": 0.6407120659314044
+      }
+    },
+    {
+      "id": "cd9ede0d",
+      "type": "combination",
+      "content": "[突变] 递归 → 分形 → 代谢 的循环涌现 → 替换分形为信任机制",
+      "novelty": 0.7174,
+      "value": 0.9413,
+      "line_source": [
+        2,
+        5
+      ],
+      "timestamp": 1789457109.893011,
+      "components": [
+        "递归",
+        "信任机制",
+        "代谢"
+      ],
+      "metadata": {
+        "is_new_pattern": true,
+        "num_elements": 3,
+        "mutated": true,
+        "original_id": "92bb0cec",
+        "emergence_potential": 0.6752637682154153
+      }
+    },
+    {
+      "id": "e6478f1f",
+      "type": "combination",
+      "content": "在生成 · 相变 · 张量场 · 集体智慧的交叉点上生成的新结构",
+      "novelty": 0.5681,
+      "value": 0.984,
+      "line_source": [
+        6,
+        10
+      ],
+      "timestamp": 1789457109.861042,
+      "components": [
+        "生成",
+        "相变",
+        "张量场",
+        "集体智慧"
+      ],
+      "metadata": {
+        "is_new_pattern": true,
+        "num_elements": 4,
+        "emergence_potential": 0.5589778749913796
+      }
+    },
+    {
+      "id": "504a70d0",
+      "type": "combination",
+      "content": "多元素复合体 [信任机制 · 纤维丛 · 编译器 · 分形] 的协同涌现",
+      "novelty": 0.457,
+      "value": 0.8452,
+      "line_source": [
+        0,
+        8,
+        5,
+        1
+      ],
+      "timestamp": 1789457109.8607564,
+      "components": [
+        "信任机制",
+        "纤维丛",
+        "编译器",
+        "分形"
+      ],
+      "metadata": {
+        "is_new_pattern": true,
+        "num_elements": 4,
+        "emergence_potential": 0.38627378503013765
+      }
+    },
+    {
+      "id": "05397a87",
+      "type": "association",
+      "content": "[突变] 纤维丛的拓扑在自组织的介质中展开，形成意外的对称 → 替换自组织为共生",
+      "novelty": 0.886,
+      "value": 0.857,
+      "line_source": [
+        5,
+        7,
+        2
+      ],
+      "timestamp": 1789457109.8834827,
+      "components": [
+        "纤维丛",
+        "共生"
+      ],
+      "metadata": {
+        "distance": 1.2933839073659505,
+        "mutated": true,
+        "original_id": "25bc2457",
+        "emergence_potential": 0.759318675325891
+      }
+    },
+    {
+      "id": "1b9337f8",
+      "type": "combination",
+      "content": "多元素复合体 [图式 · 虚无 · 纤维丛 · 分形] 的协同涌现",
+      "novelty": 0.4027,
+      "value": 0.818,
+      "line_source": [
+        9,
+        5
+      ],
+      "timestamp": 1789457109.8609364,
+      "components": [
+        "图式",
+        "虚无",
+        "纤维丛",
+        "分形"
+      ],
+      "metadata": {
+        "is_new_pattern": true,
+        "num_elements": 4,
+        "emergence_potential": 0.3294454079615695
+      }
+    },
+    {
+      "id": "ba252b15",
+      "type": "association",
+      "content": "[突变] 当复调遇见虚无：预测误差的爆炸性耦合 → 替换复调为重复",
+      "novelty": 0.7681,
+      "value": 0.7493,
+      "line_source": [
+        3,
+        9,
+        5
+      ],
+      "timestamp": 1789457109.886583,
+      "components": [
+        "重复",
+        "虚无"
+      ],
+      "metadata": {
+        "distance": 1.2023092535679072,
+        "mutated": true,
+        "original_id": "eb85ebbc",
+        "emergence_potential": 0.5755113762483126
+      }
+    },
+    {
+      "id": "86ce0691",
+      "type": "combination",
+      "content": "[突变] 多元素复合体 [自组织 · 主题 · 不和谐音 · 相变] 的协同涌现 → 替换主题为存在",
+      "novelty": 0.6308,
+      "value": 0.9013,
+      "line_source": [
+        7,
+        10,
+        5
+      ],
+      "timestamp": 1789457109.889834,
+      "components": [
+        "自组织",
+        "存在",
+        "不和谐音",
+        "相变"
+      ],
+      "metadata": {
+        "is_new_pattern": true,
+        "num_elements": 4,
+        "mutated": true,
+        "original_id": "92e0fe0d",
+        "emergence_potential": 0.5685057720013103
+      }
+    },
+    {
+      "id": "d4bd17b7",
+      "type": "metaphor",
+      "content": "将十二音的生成逻辑映射到存在：源域的拓扑约束在目标域中转化为组织原则",
+      "novelty": 0.883,
+      "value": 0.8585,
+      "line_source": [
+        6
+      ],
+      "timestamp": 1789457109.8798842,
+      "components": [
+        "十二音",
+        "存在"
+      ],
+      "metadata": {
+        "source_domain": "音乐",
+        "target_domain": "哲学",
+        "mapping": "十二音 → 存在",
+        "emergence_potential": 0.7580741651953792
+      }
+    },
+    {
+      "id": "16372031",
+      "type": "analogy",
+      "content": "结构映射 [信任机制 → 休止, 编译器 → 对位法, 代谢 → 十二音] 到音乐域：源结构的关系统律在目标域中获得保持",
+      "novelty": 0.8323,
+      "value": 0.7818,
+      "line_source": [
+        0,
+        8,
+        1,
+        2
+      ],
+      "timestamp": 1789457109.8801544,
+      "components": [
+        "信任机制",
+        "编译器",
+        "代谢",
+        "休止",
+        "对位法",
+        "十二音"
+      ],
+      "metadata": {
+        "source_structure": [
+          "信任机制",
+          "编译器",
+          "代谢"
+        ],
+        "mapping": {
+          "信任机制": "休止",
+          "编译器": "对位法",
+          "代谢": "十二音"
+        },
+        "target_domain": "音乐",
+        "fidelity": 0.808954319363138,
+        "emergence_potential": 0.6506789946578487
+      }
+    },
+    {
+      "id": "2d29ea2e",
+      "type": "combination",
+      "content": "流形 → 不和谐音 → 并行计算 的循环涌现",
+      "novelty": 0.4577,
+      "value": 0.9288,
+      "line_source": [
+        7
+      ],
+      "timestamp": 1789457109.902047,
+      "components": [
+        "流形",
+        "不和谐音",
+        "并行计算"
+      ],
+      "metadata": {
+        "is_new_pattern": true,
+        "num_elements": 3,
+        "emergence_potential": 0.42512047504973016
+      }
+    },
+    {
+      "id": "04dfe8f4",
+      "type": "combination",
+      "content": "演化与相变的异质共生",
+      "novelty": 0.454,
+      "value": 0.927,
+      "line_source": [
+        10
+      ],
+      "timestamp": 1789457109.9017558,
+      "components": [
+        "演化",
+        "相变"
+      ],
+      "metadata": {
+        "is_new_pattern": true,
+        "num_elements": 2,
+        "emergence_potential": 0.4208803690627468
+      }
+    },
+    {
+      "id": "8fc38d12",
+      "type": "combination",
+      "content": "多元素复合体 [虚无 · 演化 · 相变 · 流形] 的协同涌现",
+      "novelty": 0.3773,
+      "value": 0.8886,
+      "line_source": [
+        9,
+        10
+      ],
+      "timestamp": 1789457109.902178,
+      "components": [
+        "虚无",
+        "演化",
+        "相变",
+        "流形"
+      ],
+      "metadata": {
+        "is_new_pattern": true,
+        "num_elements": 4,
+        "emergence_potential": 0.33527775045248165
+      }
+    },
+    {
+      "id": "8edd0832",
+      "type": "combination",
+      "content": "不和谐音与生成的异质共生",
+      "novelty": 0.4397,
+      "value": 0.9198,
+      "line_source": [
+        6
+      ],
+      "timestamp": 1789457109.9022558,
+      "components": [
+        "不和谐音",
+        "生成"
+      ],
+      "metadata": {
+        "is_new_pattern": true,
+        "num_elements": 2,
+        "emergence_potential": 0.4044408692700918
+      }
+    },
+    {
+      "id": "5c12465c",
+      "type": "association",
+      "content": "[突变] 从信任机制到相变的远程跳跃：概念空间的量子隧穿 → 替换信任机制为分形",
+      "novelty": 0.7374,
+      "value": 0.848,
+      "line_source": [
+        0,
+        8,
+        10,
+        8
+      ],
+      "timestamp": 1789457109.9229853,
+      "components": [
+        "分形",
+        "相变"
+      ],
+      "metadata": {
+        "distance": 1.1407088043840259,
+        "mutated": true,
+        "original_id": "7a1bf466",
+        "emergence_potential": 0.6252796345774446
+      }
+    },
+    {
+      "id": "7ca5408b",
+      "type": "divergent",
+      "content": "重复与复调的异质杂交：预测误差的创造性整合",
+      "novelty": 0.8943,
+      "value": 0.8529,
+      "line_source": [
+        5
+      ],
+      "timestamp": 1789457109.905944,
+      "components": [
+        "重复",
+        "复调"
+      ],
+      "metadata": {
+        "strategy": "distant_hybrid",
+        "emergence_potential": 0.7626922703482271
+      }
+    },
+    {
+      "id": "eeb7e742",
+      "type": "divergent",
+      "content": "重复与主题的异质杂交：预测误差的创造性整合",
+      "novelty": 0.8411,
+      "value": 0.8795,
+      "line_source": [
+        6
+      ],
+      "timestamp": 1789457109.9059577,
+      "components": [
+        "重复",
+        "主题"
+      ],
+      "metadata": {
+        "strategy": "distant_hybrid",
+        "emergence_potential": 0.7396926919170403
+      }
+    },
+    {
+      "id": "cfa47b60",
+      "type": "combination",
+      "content": "在元认知 · 熵增 · 相变 · 测不准的交叉点上生成的新结构",
+      "novelty": 0.431,
+      "value": 0.7488,
+      "line_source": [
+        4,
+        10
+      ],
+      "timestamp": 1789457109.90191,
+      "components": [
+        "元认知",
+        "熵增",
+        "相变",
+        "测不准"
+      ],
+      "metadata": {
+        "is_new_pattern": true,
+        "num_elements": 4,
+        "emergence_potential": 0.32271626364162986
+      }
+    },
+    {
+      "id": "11e30bc6",
+      "type": "metaphor",
+      "content": "将虚无的生成逻辑映射到编译器：源域的拓扑约束在目标域中转化为组织原则",
+      "novelty": 0.7814,
+      "value": 0.9093,
+      "line_source": [
+        9
+      ],
+      "timestamp": 1789457109.9196658,
+      "components": [
+        "虚无",
+        "编译器"
+      ],
+      "metadata": {
+        "source_domain": "哲学",
+        "target_domain": "计算机",
+        "mapping": "虚无 → 编译器",
+        "emergence_potential": 0.7105203226936386
+      }
+    },
+    {
+      "id": "683b7790",
+      "type": "analogy",
+      "content": "从源域到计算机的类比迁移：信任机制 → 并行计算, 递归 → 递归, 代谢 → 图灵机 的对应关系揭示了深层同构",
+      "novelty": 0.711,
+      "value": 0.808,
+      "line_source": [
+        0,
+        8,
+        1,
+        3,
+        7,
+        2
+      ],
+      "timestamp": 1789457109.919804,
+      "components": [
+        "信任机制",
+        "递归",
+        "代谢",
+        "并行计算",
+        "递归",
+        "图灵机"
+      ],
+      "metadata": {
+        "source_structure": [
+          "信任机制",
+          "递归",
+          "代谢"
+        ],
+        "mapping": {
+          "信任机制": "并行计算",
+          "递归": "递归",
+          "代谢": "图灵机"
+        },
+        "target_domain": "计算机",
+        "fidelity": 0.8984804613004963,
+        "emergence_potential": 0.5745095452136848
+      }
+    }
+  ]
+}

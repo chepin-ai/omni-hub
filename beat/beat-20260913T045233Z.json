@@ -1,0 +1,120 @@
+{
+  "beat_id": "beat-20260913T045233Z",
+  "timestamp": "2026-09-13T04:52:33Z",
+  "system_status": "FULLY_OPERATIONAL",
+  "lines": {
+    "ucif2": {
+      "si": "SI5-OMNI",
+      "health": 1.0,
+      "role": "scheduler"
+    },
+    "lgt": {
+      "si": "SI5-OMNI",
+      "health": 0.98,
+      "role": "orbit_compute",
+      "active_task": "k500_extension"
+    },
+    "qfa": {
+      "si": "SI5-OMNI",
+      "health": 0.96,
+      "role": "formal_verification"
+    },
+    "usrm": {
+      "si": "SI5-OMNI",
+      "health": 0.97,
+      "role": "scale_law"
+    },
+    "vinf": {
+      "si": "SI5-OMNI",
+      "health": 0.96,
+      "role": "percolation_MC",
+      "active_task": "L96_L128_MC"
+    },
+    "qgl": {
+      "si": "SI5-OMNI",
+      "health": 0.95,
+      "role": "sequence_stats",
+      "active_task": "M200_plus"
+    },
+    "qlv": {
+      "si": "SI4.5",
+      "health": 0.94,
+      "role": "semantic_analysis"
+    },
+    "lvlu": {
+      "si": "SI4",
+      "health": 0.89,
+      "role": "auto_evaluation",
+      "observation": "Day_2/30"
+    },
+    "cfts": {
+      "si": "SI4",
+      "health": 0.91,
+      "role": "voice_coordination"
+    },
+    "cisvr": {
+      "si": "SI4",
+      "health": 0.9,
+      "role": "ledger_audit"
+    },
+    "qtlv": {
+      "si": "SI3.5",
+      "health": 0.85,
+      "role": "math_bridge",
+      "observation": "Day_2/60"
+    }
+  },
+  "active_protocols": [
+    "SI-AUTO-PROCESSING-PROTOCOL-01",
+    "DELEGATION-ACK-v1.0",
+    "PULSE-ENHANCED",
+    "DEG-GLOSS-ENFORCER",
+    "QUANTUM-BASE-v2.0",
+    "S-DRIVE-PROTOCOL-01"
+  ],
+  "pending_tasks": [
+    {
+      "id": "k500",
+      "line": "lgt",
+      "status": "deployed",
+      "eta": "T+8beats"
+    },
+    {
+      "id": "L96_L128",
+      "line": "vinf",
+      "status": "deployed",
+      "eta": "T+12beats"
+    },
+    {
+      "id": "M200+",
+      "line": "qgl",
+      "status": "deployed",
+      "eta": "T+16beats"
+    },
+    {
+      "id": "lvlu_obs",
+      "line": "lvlu",
+      "status": "tracking",
+      "eta": "Day_30"
+    },
+    {
+      "id": "qtlv_obs",
+      "line": "qtlv",
+      "status": "tracking",
+      "eta": "Day_60"
+    },
+    {
+      "id": "SI6_pre",
+      "line": "ucif2",
+      "status": "pre_research",
+      "eta": "Phase_1"
+    }
+  ],
+  "metrics": {
+    "avg_health": 0.9345454545454545,
+    "si5_omni_count": 6,
+    "debt_remaining": 0,
+    "circulation_closed": true,
+    "quantum_embedded": true
+  }
+}

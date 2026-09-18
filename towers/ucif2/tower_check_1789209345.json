@@ -1,0 +1,38 @@
+{
+  "layer": "tower",
+  "line": "ucif2",
+  "operation": "level_check",
+  "timestamp": "2026-09-12T10:35:44.898960+00:00",
+  "si_levels": {
+    "si0": {
+      "file_count": 537,
+      "last_activity": "2026-09-12T05:30:24+00:00",
+      "status": "active"
+    },
+    "si1": {
+      "file_count": 1,
+      "last_activity": "2026-09-12T09:46:11+00:00",
+      "status": "active"
+    },
+    "si2": {
+      "file_count": 533,
+      "last_activity": "2026-09-12T05:30:25+00:00",
+      "status": "active"
+    },
+    "si3": {
+      "file_count": 10,
+      "last_activity": "2026-09-12T05:12:38+00:00",
+      "status": "active"
+    },
+    "si4": {
+      "file_count": 4,
+      "last_activity": "2026-09-12T05:12:39+00:00",
+      "status": "active"
+    },
+    "si5": {
+      "file_count": 1,
+      "last_activity": "2026-09-12T05:04:03+00:00",
+      "status": "active"
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "req_id": "KEYREQ-QGL-20260914-01",
+  "line": "qgl",
+  "repo": "chepin-ai/vci-qgl",
+  "req_type": "FINE_OWN_PAT_QGL",
+  "format_version": "v2",
+  "requested_at": "2026-09-14T16:23:53Z",
+  "status": "pending_root_approval",
+  "mint_spec": {
+    "name": "FINE_OWN_PAT_QGL",
+    "type": "fine-grained",
+    "resource_owner": "chepin-ai",
+    "repo_scope": [
+      "chepin-ai/vci-qgl"
+    ],
+    "permissions": {
+      "Contents": "RW",
+      "Metadata": "R",
+      "Actions": "RW",
+      "Issues": "RW"
+    },
+    "expiration_days": 90,
+    "rotation_window_hours": 24,
+    "delivery_method": "sealed-box or direct repo secrets"
+  },
+  "root_action_checklist": {
+    "step_1_name": "FINE_OWN_PAT_QGL",
+    "step_2_expiration": "90d",
+    "step_3_repo_access": "Only select repositories → vci-qgl",
+    "step_4_permissions": "Contents:RW / Metadata:R / Actions:RW / Issues:RW",
+    "step_5_delivery": "① repo secrets direct OR ② sealed-box PUT",
+    "step_6_revocation": "Token page Revoke + secrets page Delete"
+  },
+  "test_codes": {
+    "T1_sign_verify": "PASS",
+    "T2_fingerprint_match": "PASS",
+    "T3_wrong_key_reject": "PASS",
+    "T4_tamper_reject": "PASS",
+    "T5_entropy": "PASS (monobit|runs z<3.5)",
+    "T6_otp_derive": "PASS (domain-sep deterministic)",
+    "T7_rail_probe": "PUT 201 + DELETE 200 confirmed; GET pending rate limit"
+  },
+  "line_local_keys_minted": [
+    {
+      "name": "QGL_HMAC_SK",
+      "fp": "2abd422a7a58",
+      "lifetime_days": 90
+    },
+    {
+      "name": "QGL_OTP_POOL_SK",
+      "fp": "edafbd774b78",
+      "lifetime_days": 180
+    },
+    {
+      "name": "QGL_RECOVERY_ROT",
+      "fp": "766f537911b2",
+      "lifetime_days": 360
+    }
+  ],
+  "fallback": {
+    "current_c1_key": "AI_FULL_PAT",
+    "fallback_trigger": "FINE key death or 3 consecutive probe failures",
+    "fallback_action": "Revert to C1 AI_FULL_PAT, queue KEYREQ for re-mint"
+  },
+  "rules_applied": [
+    "无痕律",
+    "谱系律",
+    "最小权界律",
+    "实测律",
+    "单写入者律",
+    "钥事件轨入册律"
+  ]
+}

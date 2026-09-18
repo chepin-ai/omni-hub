@@ -1,0 +1,59 @@
+{
+  "operation": "observe_collapse",
+  "line": "ucif2",
+  "observer": "ucif2-hub",
+  "trigger_type": "health_check",
+  "timestamp": "2026-09-12T10:35:41.012493+00:00",
+  "description": "ucif2-hub 观测 ucif2，触发波函数坍缩",
+  "pre_collapse_state": {
+    "line": "ucif2",
+    "amplitudes": {
+      "si0": {
+        "re": 0.7103030886596741,
+        "im": 0.0
+      },
+      "si1": {
+        "re": 0.5073593490426244,
+        "im": 0.0
+      },
+      "si2": {
+        "re": 0.4058874792340995,
+        "im": 0.0
+      },
+      "si3": {
+        "re": 0.24353248754045967,
+        "im": 0.0
+      },
+      "si4": {
+        "re": 0.10147186980852488,
+        "im": 0.0
+      },
+      "si5": {
+        "re": 0.06088312188511492,
+        "im": 0.0
+      }
+    },
+    "probabilities": {
+      "si0": 0.5045304777594728,
+      "si1": 0.25741350906095556,
+      "si2": 0.16474464579901157,
+      "si3": 0.059308072487644144,
+      "si4": 0.010296540362438223,
+      "si5": 0.003706754530477759
+    },
+    "dominant_level": "si0",
+    "timestamp": "2026-09-12T10:35:38.432002+00:00"
+  },
+  "adjusted_probabilities": {
+    "si0": 0.3287,
+    "si1": 0.1677,
+    "si2": 0.3578,
+    "si3": 0.1288,
+    "si4": 0.0089,
+    "si5": 0.0081
+  },
+  "collapsed_to": "si2",
+  "collapse_probability": 0.3578,
+  "uncertainty_before": 1.226996,
+  "uncertainty_after": 0.0
+}

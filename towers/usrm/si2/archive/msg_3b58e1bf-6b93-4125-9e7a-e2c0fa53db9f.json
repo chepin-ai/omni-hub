@@ -1,0 +1,32 @@
+{
+  "envelope": {
+    "msg_id": "3b58e1bf-6b93-4125-9e7a-e2c0fa53db9f",
+    "version": "SI2-v1.0",
+    "timestamp": "2026-09-12T05:12:29.539353+00:00",
+    "ttl": 300,
+    "priority": 3,
+    "source": {
+      "line": "lgt",
+      "si_level": 2
+    },
+    "target": {
+      "line": "usrm",
+      "si_level": 2,
+      "broadcast": false
+    }
+  },
+  "payload": {
+    "type": "TASK",
+    "task_id": "b5ed1cb3-0bf4-4464-ac07-1ef0f2e31985",
+    "content": {
+      "type": "cross_loop",
+      "description": "Cross-loop from lgt to usrm"
+    },
+    "dependencies": [],
+    "deadline": ""
+  },
+  "signature": {
+    "hash": "b18304f692bca81723b87d521acff65a1dc487649b2fdd66866cf3f593eb59fb",
+    "chain_hash": ""
+  }
+}

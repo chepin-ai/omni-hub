@@ -1,0 +1,10 @@
+{
+  "id": "TASK-cisvr-20260912T094610-9318",
+  "timestamp": "2026-09-12T09:46:10.216605+00:00",
+  "from": "ucif2",
+  "to": "cisvr",
+  "type": "EXPERIMENT",
+  "priority": 1,
+  "description": "EXP-026: ledger automation deployment",
+  "deadline": 4
+}

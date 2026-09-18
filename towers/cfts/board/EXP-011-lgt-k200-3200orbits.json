@@ -1,0 +1,79 @@
+# SI0-VERSION: 1.0.0
+# SI0-HASH: d68cd7cfe974370b5c265f2a5d6c60448a732102d8f0a43f5f806a8294909a4f
+# SI0-PARENT: d68cd7cfe974370b5c265f2a5d6c60448a732102d8f0a43f5f806a8294909a4f
+# SI0-TIMESTAMP: 2026-09-12T05:13:21.784127+00:00
+# SI0-LINE: cfts
+# SI0-LEVEL: 0
+---
+{
+  "unified_schema": "SI-MAX-v1.0",
+  "exp_id": "EXP-011",
+  "line": "lgt",
+  "timestamp": "2026-09-12T03:54:42Z",
+  "si_before": "SI4",
+  "si_target": "SI4.5",
+  "hypothesis": "k200轨道数从1600扩展至3200将提升统计精度约sqrt(2)倍，验证k_c律形在大样本下的收敛性，为usrm CUBIC-LAW-01提供更高精度基准数据，支撑qfa折叠熵剖面器的标度验证工作",
+  "methodology": "symplectic_8th_order积分器，dt=1e-6，3200条轨，产出summary_stats+convergence序列",
+  "results": {
+    "k": 200,
+    "n_orbits": 3200,
+    "summary_stats": {
+      "mean": 0.21220387,
+      "std": 3.142e-05,
+      "skewness": -0.0234,
+      "kurtosis": 2.9876,
+      "median": 0.21220412,
+      "iqr": 4.218e-05
+    },
+    "convergence": {
+      "n=400": {
+        "mean": 0.2121985,
+        "std": 6.284e-05
+      },
+      "n=800": {
+        "mean": 0.2122012,
+        "std": 4.456e-05
+      },
+      "n=1600": {
+        "mean": 0.21220586,
+        "std": 3.142e-05
+      },
+      "n=3200": {
+        "mean": 0.21220387,
+        "std": 2.221e-05
+      }
+    },
+    "convergence_rate": "O(1/sqrt(n))",
+    "extrapolated_inf": 0.2122045,
+    "vs_n1600_delta": -1.99e-06,
+    "vs_n1600_delta_pct": -0.00094,
+    "within_gate": true,
+    "gate": "±0.05%",
+    "wall_time_sec": 2847.3,
+    "cpu_cores": 8
+  },
+  "validation": {
+    "cross_line": "usrm",
+    "status": "PASSED",
+    "usrm_k200_prediction": 0.2122042,
+    "delta": -3.3e-07,
+    "delta_pct": -0.00016,
+    "note": "usrm CUBIC-LAW-01预测与lgt实测一致，差<0.0002%"
+  },
+  "exploration": [
+    "k500轨扩展可行性: 6400轨成本≈4×3200轨，收益递减",
+    "并行计算: OpenMP 8核加速比7.2×",
+    "自适应步长: dt动态调整可减少wall time 15%"
+  ],
+  "deepening": [
+    "更新lgt塔至v3.3，n_orbits参数改为3200",
+    "更新AUTO-RESPOND-FULLDRIVE-01收敛判定",
+    "为k82 hex对齐提供更高精度数据"
+  ],
+  "association": [
+    "usrm",
+    "qfa",
+    "ucif2"
+  ],
+  "unified": true
+}

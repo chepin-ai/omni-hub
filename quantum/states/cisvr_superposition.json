@@ -1,0 +1,58 @@
+{
+  "operation": "superposition_state",
+  "line": "cisvr",
+  "timestamp": "2026-09-12T10:35:43.858922+00:00",
+  "description": "创建/演化 cisvr 的量子叠加态",
+  "state_vector": {
+    "line": "cisvr",
+    "amplitudes": {
+      "si0": {
+        "re": 0.4702750214305931,
+        "im": 0.30222740481044275
+      },
+      "si1": {
+        "re": 0.447213595499958,
+        "im": 0.0
+      },
+      "si2": {
+        "re": 0.5590169943749475,
+        "im": 0.0
+      },
+      "si3": {
+        "re": 0.33541019662496846,
+        "im": 0.0
+      },
+      "si4": {
+        "re": 0.223606797749979,
+        "im": 0.0
+      },
+      "si5": {
+        "re": 0.1118033988749895,
+        "im": 0.0
+      }
+    },
+    "probabilities": {
+      "si0": 0.31250000000000006,
+      "si1": 0.20000000000000004,
+      "si2": 0.31250000000000006,
+      "si3": 0.1125,
+      "si4": 0.05000000000000001,
+      "si5": 0.012500000000000002
+    },
+    "dominant_level": "si0",
+    "timestamp": "2026-09-12T10:35:43.859335+00:00"
+  },
+  "entropy": 1.499209,
+  "purity": 0.1633,
+  "dominant_level": "si0",
+  "dominant_probability": 0.3125,
+  "is_uniform_superposition": false,
+  "layer_distribution": {
+    "tower": 0.3125,
+    "spine": 0.2,
+    "wheel": 0.3125,
+    "cauldron": 0.1125,
+    "ring": 0.05,
+    "hub": 0.0125
+  }
+}

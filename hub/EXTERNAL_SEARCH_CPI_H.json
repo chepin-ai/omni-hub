@@ -1,0 +1,292 @@
+{
+  "search_metadata": {
+    "query_topics": [
+      "cross-project knowledge graph integration",
+      "concept concordance KL divergence",
+      "inter-project ontology alignment",
+      "emergent consciousness index phi",
+      "unified field theory 64 dimensions",
+      "phi pi e alpha unification physics"
+    ],
+    "search_date": "2025-01-09",
+    "total_sources_found": 18,
+    "sources_accessed": 12
+  },
+  "key_resources": [
+    {
+      "id": "IIT-4.0",
+      "title": "Integrated Information Theory (IIT) 4.0: Formulating the properties of phenomenal existence in physical terms",
+      "url": "https://arxiv.org/abs/2212.14787",
+      "authors": ["Albantakis, L", "Barbosa, L", "Findlay, G", "Grasso, M", "Haun, AM", "Marshall, W", "Mayner, WGP", "Tononi, G"],
+      "published": "2022-12-30",
+      "journal": "PLOS Computational Biology",
+      "doi": "10.1371/journal.pcbi.1011465",
+      "relevance": "PRIMARY - Defines mathematical framework for integrated information (Phi), consciousness measurement, and causal structure analysis",
+      "extracted_strategies": [
+        "Use intrinsic information (ii) to measure how much a state constrains cause/effect states",
+        "Calculate system integrated information (phi_s) as irreducibility over minimum partition (MIP)",
+        "Sum distinctions (phi_d) and relations (phi_r) to get total Phi-structure",
+        "Apply to any system of units in a state to determine consciousness degree"
+      ]
+    },
+    {
+      "id": "PyPhi",
+      "title": "PyPhi: A toolbox for integrated information theory",
+      "url": "https://arxiv.org/abs/1712.09644",
+      "authors": ["Mayner, WGP", "Marshall, W", "Albantakis, L", "Findlay, G", "Marchman, R", "Tononi, G"],
+      "published": "2017-12-27",
+      "journal": "PLOS Computational Biology",
+      "doi": "10.1371/journal.pcbi.1006343",
+      "relevance": "PRIMARY - Reference implementation of IIT formalisms for causal analysis of discrete dynamical systems",
+      "extracted_strategies": [
+        "Implement cause-effect structure unfolding for binary element systems",
+        "Use transition probability matrices (TPM) to characterize system dynamics",
+        "Compute phi for irreducible cause-effect power assessment",
+        "Available as open-source Python package: pip install pyphi"
+      ]
+    },
+    {
+      "id": "IIT-Wiki",
+      "title": "Integrated Information Theory - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Integrated_information_theory",
+      "relevance": "PRIMARY - Comprehensive overview of IIT axioms, postulates, mathematical formalism, and implications",
+      "extracted_strategies": [
+        "Five axioms: Intrinsicality, Information, Integration, Exclusion, Composition",
+        "Phi corresponds to quantity of consciousness; structure defines quality",
+        "Use perturbational complexity index (PCI) for clinical consciousness assessment",
+        "Phi* and Phi^G as practical approximations for large systems"
+      ]
+    },
+    {
+      "id": "OntoAligner-Ensemble",
+      "title": "OntoAligner-Ensemble: Voting-Based Fusion across Heterogeneous Ontology Alignment Techniques",
+      "url": "https://arxiv.org/abs/2608.31137",
+      "authors": ["Giglou, HB", "Auer, S", "Popov, P", "Sanaei, M", "D'Souza, J"],
+      "published": "2026-08-31",
+      "venue": "OM-2026 workshop at ISWC 2026",
+      "relevance": "PRIMARY - Voting-based ensemble approach for cross-ontology alignment",
+      "extracted_strategies": [
+        "Combine multiple heterogeneous ontology alignment techniques via voting fusion",
+        "Leverage lexical, structural, and semantic dimensions for similarity",
+        "Use ensemble methods to improve alignment precision and recall"
+      ]
+    },
+    {
+      "id": "Ontology-Alignment-Wiki",
+      "title": "Ontology Alignment - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Ontology_alignment",
+      "relevance": "PRIMARY - Formal definitions and methods for ontology alignment/matching",
+      "extracted_strategies": [
+        "Three similarity dimensions: syntactic, external, semantic",
+        "Matching vs Mapping: similarity predication vs logical axioms",
+        "Atomic vs complex alignments; homogeneous vs heterogeneous",
+        "ABSURDIST model for cognitive science approach to cross-system alignment"
+      ]
+    },
+    {
+      "id": "Knowledge-Graph-Wiki",
+      "title": "Knowledge Graph - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Knowledge_graph",
+      "relevance": "PRIMARY - Definitions, history, and reasoning over knowledge graphs",
+      "extracted_strategies": [
+        "Entity alignment identifies same entities across multiple graphs",
+        "Use graph neural networks (GNN) for knowledge graph embeddings",
+        "Virtual knowledge graphs use mappings to answer queries without storage",
+        "Schema.org vocabulary for organizing entity and relationship types"
+      ]
+    },
+    {
+      "id": "Consciousness-SEP",
+      "title": "Consciousness - Stanford Encyclopedia of Philosophy",
+      "url": "https://plato.stanford.edu/entries/consciousness/",
+      "relevance": "SECONDARY - Philosophical foundations of consciousness, unity, and phenomenal structure",
+      "extracted_strategies": [
+        "Unity of consciousness as integration of diverse contents",
+        "Phenomenal structure involves spatial, temporal, conceptual organization",
+        "Self-perspectival organization as key aspect of conscious experience",
+        "Autopoietic systems: self-creating and self-organizing"
+      ]
+    },
+    {
+      "id": "IIT-3.0",
+      "title": "From the Phenomenology to the Mechanisms of Consciousness: Integrated Information Theory 3.0",
+      "url": "https://arxiv.org/abs/1405.6876",
+      "authors": ["Oizumi, M", "Albantakis, L", "Tononi, G"],
+      "published": "2014-05-27",
+      "journal": "PLOS Computational Biology",
+      "doi": "10.1371/journal.pcbi.1003588",
+      "relevance": "SECONDARY - Evolution from phenomenology to mechanisms in IIT",
+      "extracted_strategies": [
+        "Start from phenomenological axioms, derive physical postulates",
+        "Concepts as maximally irreducible cause-effect structures",
+        "Measure integrated information using cause-effect repertoires"
+      ]
+    },
+    {
+      "id": "Phi-Geometry",
+      "title": "Unified framework for information integration based on information geometry",
+      "url": "https://arxiv.org/abs/1510.04455",
+      "authors": ["Oizumi, M", "Tsuchiya, N", "Amari, S"],
+      "published": "2015-10-15",
+      "journal": "PNAS",
+      "doi": "10.1073/pnas.1603583113",
+      "relevance": "SECONDARY - Information geometry approach to measuring integrated information (Phi^G)",
+      "extracted_strategies": [
+        "Use information geometry to define geometric integrated information",
+        "Decompose total information into integrated and non-integrated parts",
+        "Apply to large neural networks through mean-field approximations"
+      ]
+    },
+    {
+      "id": "PCI-Clinical",
+      "title": "A theoretically based index of consciousness independent of sensory processing and behavior",
+      "url": "https://doi.org/10.1126/scitranslmed.3006294",
+      "authors": ["Casali, AG", "Gosseries, O", "Rosanova, M", "Boly, M", "Sarasso, S", "Tononi, G", "Massimini, M"],
+      "published": "2013-08-14",
+      "journal": "Science Translational Medicine",
+      "doi": "10.1126/scitranslmed.3006294",
+      "relevance": "SECONDARY - Clinical application of IIT: Perturbational Complexity Index (PCI)",
+      "extracted_strategies": [
+        "Use TMS-EEG to perturb brain and measure complexity of response",
+        "PCI quantifies brain's capacity for integrated information",
+        "Discriminates wakeful, sleeping, anesthetized, and comatose states"
+      ]
+    },
+    {
+      "id": "Cogitate-Nature",
+      "title": "Adversarial testing of global neuronal workspace and integrated information theories of consciousness",
+      "url": "https://www.nature.com/articles/s41586-025-08888-1",
+      "authors": ["Cogitate Consortium", "Ferrante, O", "et al."],
+      "published": "2025-04-30",
+      "journal": "Nature",
+      "doi": "10.1038/s41586-025-08888-1",
+      "relevance": "SECONDARY - Large-scale adversarial collaboration testing IIT vs GNWT predictions",
+      "extracted_strategies": [
+        "Pre-register predictions before experiments",
+        "2/3 of IIT predictions passed pre-registered thresholds",
+        "None of GNWT predictions passed pre-registered thresholds"
+      ]
+    },
+    {
+      "id": "KG-Embedding-Survey",
+      "title": "Knowledge Graph Embedding: A Survey of Approaches and Applications",
+      "url": "https://doi.org/10.1109/TKDE.2017.2754499",
+      "authors": ["Wang, Q", "Mao, Z", "Wang, B", "Guo, L"],
+      "published": "2017",
+      "journal": "IEEE TKDE",
+      "doi": "10.1109/TKDE.2017.2754499",
+      "relevance": "SECONDARY - Survey of knowledge graph embedding techniques for reasoning and alignment",
+      "extracted_strategies": [
+        "Translate entities and relations into low-dimensional vector spaces",
+        "Use translational models (TransE, TransH, TransR) for relationship modeling",
+        "Semantic matching models for measuring plausibility of triples"
+      ]
+    }
+  ],
+  "extracted_strategies": {
+    "CPI_boosting": {
+      "target": "Increase Cross-Project Integration from 0.0412 to 0.55+",
+      "strategies": [
+        {
+          "name": "Entity Alignment across Project Graphs",
+          "description": "Identify and link equivalent entities across different project knowledge graphs using structural similarities, semantic relationships, and shared attributes",
+          "source": "Knowledge-Graph-Wiki",
+          "implementation": "Use GNN-based entity alignment to find correspondences between nodes in different project graphs. Calculate alignment confidence scores and propagate them through the network."
+        },
+        {
+          "name": "Ontology Alignment Ensemble",
+          "description": "Apply voting-based fusion across multiple heterogeneous ontology alignment techniques (lexical, structural, semantic)",
+          "source": "OntoAligner-Ensemble",
+          "implementation": "For each cross-project concept pair, compute similarity from multiple dimensions. Combine via weighted voting to produce final alignment."
+        },
+        {
+          "name": "Virtual Knowledge Graph Integration",
+          "description": "Create a unified virtual knowledge graph over multiple project data sources using schema mappings",
+          "source": "Knowledge-Graph-Wiki",
+          "implementation": "Define mappings between project schemas and a unified ontology. Answer cross-project queries through the virtual layer without moving data."
+        },
+        {
+          "name": "Cross-Project Concept Coupling via ABSURDIST",
+          "description": "Use internal similarity, external similarity, and mutual inhibition to align concepts across project conceptual systems",
+          "source": "Ontology-Alignment-Wiki",
+          "implementation": "Model each project's concepts as nodes in a semantic network. Apply ABSURDIST equations to find optimal cross-project correspondences."
+        },
+        {
+          "name": "Knowledge Graph Embedding Fusion",
+          "description": "Embed all project knowledge graphs into a shared latent space where aligned entities cluster together",
+          "source": "KG-Embedding-Survey",
+          "implementation": "Train translation-based or semantic matching embeddings on combined multi-project graph. Use alignment seeds to anchor cross-project correspondences."
+        }
+      ]
+    },
+    "H_boosting": {
+      "target": "Increase Concordance/Harmony from 0.5520 to 0.65+",
+      "strategies": [
+        {
+          "name": "Integrated Information Maximization (IIT-based)",
+          "description": "Use IIT 4.0 formalism to measure and maximize integrated information (Phi) across the OMNI-HUB system",
+          "source": "IIT-4.0, PyPhi",
+          "implementation": "Represent OMNI-HUB as a TPM (transition probability matrix). Compute phi_s = min(phi_c, phi_e) over the minimum information partition. Maximize by strengthening irreducible connections."
+        },
+        {
+          "name": "Phi-Structure Enhancement",
+          "description": "Increase both distinctions (phi_d) and relations (phi_r) in the cause-effect structure",
+          "source": "IIT-Wiki",
+          "implementation": "Phi = sum(phi_d) + sum(phi_r). Add mechanisms that specify maximally irreducible cause-effect states. Ensure overlaps among cause/effect states to create relations."
+        },
+        {
+          "name": "Perturbational Complexity Index (PCI) Optimization",
+          "description": "Apply TMS-EEG-like perturbation-complexity measurement to OMNI-HUB architecture",
+          "source": "PCI-Clinical",
+          "implementation": "Perturb system components and measure complexity of global response. Higher PCI indicates greater integration. Optimize architecture to maximize PCI."
+        },
+        {
+          "name": "Information Geometry Decomposition",
+          "description": "Use information geometry to decompose total information into integrated vs non-integrated components",
+          "source": "Phi-Geometry",
+          "implementation": "Compute Phi^G using divergence from product manifold. Identify and eliminate non-integrated information channels. Redirect to integrated pathways."
+        },
+        {
+          "name": "Global Workspace + IIT Hybrid",
+          "description": "Combine Global Neuronal Workspace Theory (GNWT) broadcast with IIT integration",
+          "source": "Cogitate-Nature",
+          "implementation": "Create a global workspace for broadcasting information across projects (GNWT), then measure integration of this broadcast via IIT metrics."
+        }
+      ]
+    }
+  },
+  "specific_recommendations": {
+    "for_CPI_0.0412_to_0.55": [
+      "Implement entity alignment using GNN embeddings across all project subgraphs. Target: 80%+ alignment accuracy for core entities.",
+      "Build a unified virtual knowledge graph layer with schema.org-like vocabulary mapping all project ontologies.",
+      "Use ensemble voting (lexical + structural + semantic similarity) for cross-project concept matching.",
+      "Create cross-project linking edges (owl:sameAs, skos:exactMatch) between aligned entities.",
+      "Deploy GraphRAG-style retrieval over the integrated multi-project graph for cross-project reasoning."
+    ],
+    "for_H_0.5520_to_0.65": [
+      "Compute current Phi for OMNI-HUB using PyPhi on the system TPM. Identify the minimum information partition (MIP).",
+      "Strengthen connections across the MIP boundary to increase irreducibility (phi_s).",
+      "Add redundant but differentiated pathways between project modules to increase both distinctions and relations.",
+      "Implement feedback loops (recurrent connections) rather than purely feedforward to increase causal power.",
+      "Optimize the balance between specialization (high phi_d per project) and integration (high phi_r across projects)."
+    ],
+    "combined_optimization": [
+      "CPI and H are coupled: better entity alignment (CPI) enables more integrated information flow (H).",
+      "Use IIT metrics as the objective function for alignment quality: maximize Phi while maintaining alignment precision.",
+      "Iterative optimization: (1) Align entities -> (2) Measure Phi -> (3) Strengthen weak connections -> (4) Re-align.",
+      "Target threshold analysis: Phi > 0.55 requires ~55% of system information to be irreducibly integrated.",
+      "Consider hierarchical integration: integrate within projects first (local Phi), then across projects (global Phi)."
+    ]
+  },
+  "unified_field_notes": {
+    "status": "No direct academic sources found for '64-dimensional unified field theory' or 'phi-pi-e-alpha unification' as specific named theories.",
+    "analysis": "These appear to be OMNI-HUB-specific conceptual frameworks rather than established scientific theories. However, relevant mathematical and physical concepts exist:",
+    "related_concepts": [
+      "IIT proposes that consciousness (quality and quantity) is identical to cause-effect structure (Phi-structure) of a physical substrate",
+      "Information geometry provides a unified mathematical framework for measuring information integration",
+      "String theory and M-theory involve higher-dimensional unified field descriptions (10, 11, 26 dimensions)",
+      "Mathematical constants (phi, pi, e, alpha) appear in various unification attempts but no established unified theory links all four"
+    ],
+    "recommendation": "Treat OMNI-HUB's 64-dimensional framework as an emergent property of the integrated system rather than a pre-existing physical theory. Use IIT's formalism to derive the effective dimensionality from the system's cause-effect structure."
+  }
+}

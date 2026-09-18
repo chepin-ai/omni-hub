@@ -1,0 +1,255 @@
+{
+  "report_title": "OMNI-HUB v11 Statistical Validation Report",
+  "timestamp": 1789638783.549181,
+  "datetime": "2026-09-17 17:53:03",
+  "bootstrap": {
+    "metric_name": "emergence_index",
+    "point_estimate": 0.05626347470272895,
+    "ci_percentile": [
+      0.07892716602763458,
+      0.09298833267778621
+    ],
+    "ci_bca": [
+      0.07403046828565243,
+      0.07403046828565243
+    ],
+    "standard_error": 0.0035797596524135963,
+    "bias": 0.02988067630661513,
+    "n_bootstrap": 1000,
+    "acceleration": -0.011916560453451365,
+    "bias_correction": -6.3609388694051,
+    "alpha": 0.050000000000000044
+  },
+  "monte_carlo": {
+    "results": [
+      {
+        "noise_level": 0.01,
+        "mean_E": 0.056870871120388564,
+        "std_E": 0.0011803147556654241,
+        "cv_E": 0.020754293584968032,
+        "min_E": 0.05237421445165508,
+        "max_E": 0.060150804150886944,
+        "n_trials": 1000,
+        "is_stable": true,
+        "cv_threshold": 0.05
+      },
+      {
+        "noise_level": 0.05,
+        "mean_E": 0.06298003027949317,
+        "std_E": 0.0019487722481785629,
+        "cv_E": 0.03094270103603141,
+        "min_E": 0.05674868635978926,
+        "max_E": 0.06917446670875481,
+        "n_trials": 1000,
+        "is_stable": true,
+        "cv_threshold": 0.05
+      },
+      {
+        "noise_level": 0.1,
+        "mean_E": 0.07685561258860311,
+        "std_E": 0.0029378975205593856,
+        "cv_E": 0.03822619352844824,
+        "min_E": 0.06797230800592016,
+        "max_E": 0.08627619823893334,
+        "n_trials": 1000,
+        "is_stable": true,
+        "cv_threshold": 0.05
+      },
+      {
+        "noise_level": 0.2,
+        "mean_E": 0.1141828708564626,
+        "std_E": 0.004724454600849604,
+        "cv_E": 0.04137621138277945,
+        "min_E": 0.09859954149373057,
+        "max_E": 0.12985134496724005,
+        "n_trials": 1000,
+        "is_stable": true,
+        "cv_threshold": 0.05
+      }
+    ],
+    "overall_stable": true,
+    "critical_noise_level": null,
+    "correlation_with_noise": 0.9030481720806145
+  },
+  "cross_validation": {
+    "jackknife_results": [
+      {
+        "metric_name": "emergence_index",
+        "full_estimate": 0.05626347470272895,
+        "jackknife_estimate": 0.0501266159062795,
+        "jackknife_variance": 8.846104651262289e-05,
+        "jackknife_se": 0.009405373278749914,
+        "ci_normal": [
+          0.031688369938832756,
+          0.06856486187372625
+        ],
+        "most_influential_item": 32,
+        "least_influential_item": 13
+      },
+      {
+        "metric_name": "coherence",
+        "full_estimate": 0.07757734389967923,
+        "jackknife_estimate": 0.07393279318229148,
+        "jackknife_variance": 5.583201376561853e-06,
+        "jackknife_se": 0.0023628798904222477,
+        "ci_normal": [
+          0.0693006154558026,
+          0.07856497090878037
+        ],
+        "most_influential_item": 19,
+        "least_influential_item": 41
+      },
+      {
+        "metric_name": "spectral_radius",
+        "full_estimate": 3.6170171760954712,
+        "jackknife_estimate": 6.477825101301574,
+        "jackknife_variance": 0.023856195785875462,
+        "jackknife_se": 0.15445451040962016,
+        "ci_normal": [
+          6.175033264198363,
+          6.780616938404786
+        ],
+        "most_influential_item": 19,
+        "least_influential_item": 9
+      },
+      {
+        "metric_name": "trace_normalized",
+        "full_estimate": 0.24158212618214298,
+        "jackknife_estimate": 0.24158212618214273,
+        "jackknife_variance": 0.00017273739967191526,
+        "jackknife_se": 0.013142960080283103,
+        "ci_normal": [
+          0.2158167340474031,
+          0.26734751831688236
+        ],
+        "most_influential_item": 4,
+        "least_influential_item": 28
+      },
+      {
+        "metric_name": "network_density",
+        "full_estimate": 0.5255198487712666,
+        "jackknife_estimate": 0.5149758454106292,
+        "jackknife_variance": 0.00023151065369086523,
+        "jackknife_se": 0.01521547415267974,
+        "ci_normal": [
+          0.485147507223107,
+          0.5448041835981515
+        ],
+        "most_influential_item": 26,
+        "least_influential_item": 4
+      },
+      {
+        "metric_name": "clustering_coefficient",
+        "full_estimate": 0.022040401544998058,
+        "jackknife_estimate": 0.02204040154499768,
+        "jackknife_variance": 1.4452322750208095e-06,
+        "jackknife_se": 0.0012021781378068765,
+        "ci_normal": [
+          0.01968365763440231,
+          0.02439714545559305
+        ],
+        "most_influential_item": 26,
+        "least_influential_item": 12
+      }
+    ],
+    "stability_score": 0.24957769065280488,
+    "dependency_rating": "moderate"
+  },
+  "hypothesis_tests": [
+    {
+      "test_name": "binomial_test(module_activation_rate)",
+      "statistic": 1.0,
+      "p_value": 1.4210854715202004e-14,
+      "null_hypothesis": "p = 0.5",
+      "alternative_hypothesis": "p > 0.5",
+      "significant": true,
+      "alpha": 0.05,
+      "effect_size": 0.5,
+      "confidence_interval": [
+        0.922895154765326,
+        0.9999999999999999
+      ],
+      "k_success": 46,
+      "n_trials": 46,
+      "observed_rate": 1.0,
+      "expected_rate": 0.5
+    },
+    {
+      "test_name": "welch_t_test(version_1_vs_version_2)",
+      "statistic": -7.601806378036515,
+      "p_value": 3.6830506912316264e-14,
+      "null_hypothesis": "mean(version_1) = mean(version_2)",
+      "alternative_hypothesis": "mean(version_1) != mean(version_2)",
+      "significant": true,
+      "alpha": 0.05,
+      "effect_size": -0.23370821039898987,
+      "confidence_interval": [
+        -0.039171789764396565,
+        -0.023110179017621878
+      ],
+      "mean_1": 0.07757734389967923,
+      "mean_2": 0.10871832829068845,
+      "std_1": 0.10445506014750808,
+      "std_2": 0.15684010341745466,
+      "n_1": 2116,
+      "n_2": 2116,
+      "df": 3682.7825106650853
+    },
+    {
+      "test_name": "ks_test(version_1_vs_version_2)",
+      "statistic": 0.13468809073724008,
+      "p_value": 3.187450874977052e-17,
+      "null_hypothesis": "version_1 and version_2 come from the same distribution",
+      "alternative_hypothesis": "version_1 and version_2 come from different distributions",
+      "significant": true,
+      "alpha": 0.05,
+      "n_1": 2116,
+      "n_2": 2116,
+      "kolmogorov_distance": 0.13468809073724008
+    }
+  ],
+  "power_analysis": [
+    {
+      "effect_size": 0.2,
+      "alpha": 0.05,
+      "desired_power": 0.8,
+      "required_sample_size": 786,
+      "actual_power": 0.9999990496887284,
+      "method": "normal_approximation_welch_ttest"
+    },
+    {
+      "effect_size": 0.5,
+      "alpha": 0.05,
+      "desired_power": 0.8,
+      "required_sample_size": 126,
+      "actual_power": 0.9999990622051311,
+      "method": "normal_approximation_welch_ttest"
+    },
+    {
+      "effect_size": 0.8,
+      "alpha": 0.05,
+      "desired_power": 0.8,
+      "required_sample_size": 50,
+      "actual_power": 0.9999991601135934,
+      "method": "normal_approximation_welch_ttest"
+    }
+  ],
+  "metadata": {
+    "matrix_shape": [
+      46,
+      46
+    ],
+    "n_modules": 46,
+    "rng_seed": 42
+  },
+  "summary": {
+    "bootstrap_E_estimate": 0.056263,
+    "bootstrap_E_ci_width": 0.0,
+    "bootstrap_E_relative_precision": 0.0,
+    "monte_carlo_stable": true,
+    "monte_carlo_critical_noise": null,
+    "cv_dependency_rating": "moderate",
+    "hypothesis_tests_total": 3,
+    "hypothesis_tests_significant": 3
+  }
+}

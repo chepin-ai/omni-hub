@@ -1,0 +1,241 @@
+{
+  "report_id": "QGL-KEYMINT-TEST-120",
+  "line": "qgl",
+  "timestamp": "2026-09-14T16:22:27Z",
+  "keys": {
+    "QGL_HMAC_SK": {
+      "key_name": "QGL_HMAC_SK",
+      "tests": [
+        {
+          "id": "T1",
+          "name": "签验回环",
+          "pass": true,
+          "detail": {
+            "sig": "b2272441785def04..."
+          }
+        },
+        {
+          "id": "T2",
+          "name": "指纹一致（重载=注册）",
+          "pass": true,
+          "detail": {
+            "key_name": "QGL_HMAC_SK",
+            "current_fp": "2abd422a7a58",
+            "registered_fp": "2abd422a7a58",
+            "match": true
+          }
+        },
+        {
+          "id": "T3",
+          "name": "负测·错钥必拒",
+          "pass": true,
+          "detail": {
+            "wrong_sig": "d87078f82007f714..."
+          }
+        },
+        {
+          "id": "T4",
+          "name": "篡改检·被篡必拒",
+          "pass": true
+        },
+        {
+          "id": "T5",
+          "name": "熵检（monobit/runs, z<3.5）",
+          "pass": true,
+          "detail": {
+            "monobit_z": 0.625,
+            "runs_z": 0.8519,
+            "monobit_pass": true,
+            "runs_pass": true,
+            "entropy_pass": true,
+            "n_bits": 256,
+            "ones": 123,
+            "zeros": 133,
+            "runs": 121
+          }
+        },
+        {
+          "id": "T6",
+          "name": "OTP 派生（域分隔+确定性）",
+          "pass": true,
+          "detail": {
+            "otp_counter0": "70795881",
+            "otp_counter1": "65970654"
+          }
+        },
+        {
+          "id": "T7",
+          "name": "甲轨探（PUT→存在→DELETE→消失）",
+          "pass": true,
+          "detail": {
+            "put_exists": true,
+            "delete_gone": true,
+            "nonce_fp": "74c5a4d537fb"
+          }
+        }
+      ],
+      "all_pass": true,
+      "tested_at": "2026-09-14T16:22:27Z"
+    },
+    "QGL_OTP_POOL_SK": {
+      "key_name": "QGL_OTP_POOL_SK",
+      "tests": [
+        {
+          "id": "T1",
+          "name": "签验回环",
+          "pass": true,
+          "detail": {
+            "sig": "e4348352af73df17..."
+          }
+        },
+        {
+          "id": "T2",
+          "name": "指纹一致（重载=注册）",
+          "pass": true,
+          "detail": {
+            "key_name": "QGL_OTP_POOL_SK",
+            "current_fp": "edafbd774b78",
+            "registered_fp": "edafbd774b78",
+            "match": true
+          }
+        },
+        {
+          "id": "T3",
+          "name": "负测·错钥必拒",
+          "pass": true,
+          "detail": {
+            "wrong_sig": "2c3869e6c2fdab03..."
+          }
+        },
+        {
+          "id": "T4",
+          "name": "篡改检·被篡必拒",
+          "pass": true
+        },
+        {
+          "id": "T5",
+          "name": "熵检（monobit/runs, z<3.5）",
+          "pass": true,
+          "detail": {
+            "monobit_z": 0.5,
+            "runs_z": 0.7664,
+            "monobit_pass": true,
+            "runs_pass": true,
+            "entropy_pass": true,
+            "n_bits": 256,
+            "ones": 124,
+            "zeros": 132,
+            "runs": 134
+          }
+        },
+        {
+          "id": "T6",
+          "name": "OTP 派生（域分隔+确定性）",
+          "pass": true,
+          "detail": {
+            "otp_counter0": "30008980",
+            "otp_counter1": "13962059"
+          }
+        },
+        {
+          "id": "T7",
+          "name": "甲轨探（PUT→存在→DELETE→消失）",
+          "pass": true,
+          "detail": {
+            "put_exists": true,
+            "delete_gone": true,
+            "nonce_fp": "38896845e965"
+          }
+        }
+      ],
+      "all_pass": true,
+      "tested_at": "2026-09-14T16:22:27Z"
+    },
+    "QGL_RECOVERY_ROT": {
+      "key_name": "QGL_RECOVERY_ROT",
+      "tests": [
+        {
+          "id": "T1",
+          "name": "签验回环",
+          "pass": true,
+          "detail": {
+            "sig": "2ecf1e75ebd101cf..."
+          }
+        },
+        {
+          "id": "T2",
+          "name": "指纹一致（重载=注册）",
+          "pass": true,
+          "detail": {
+            "key_name": "QGL_RECOVERY_ROT",
+            "current_fp": "766f537911b2",
+            "registered_fp": "766f537911b2",
+            "match": true
+          }
+        },
+        {
+          "id": "T3",
+          "name": "负测·错钥必拒",
+          "pass": true,
+          "detail": {
+            "wrong_sig": "497936b42dd03ce6..."
+          }
+        },
+        {
+          "id": "T4",
+          "name": "篡改检·被篡必拒",
+          "pass": true
+        },
+        {
+          "id": "T5",
+          "name": "熵检（monobit/runs, z<3.5）",
+          "pass": true,
+          "detail": {
+            "monobit_z": 1.5,
+            "runs_z": 0.0158,
+            "monobit_pass": true,
+            "runs_pass": true,
+            "entropy_pass": true,
+            "n_bits": 256,
+            "ones": 140,
+            "zeros": 116,
+            "runs": 127
+          }
+        },
+        {
+          "id": "T6",
+          "name": "OTP 派生（域分隔+确定性）",
+          "pass": true,
+          "detail": {
+            "otp_counter0": "09245111",
+            "otp_counter1": "69910012"
+          }
+        },
+        {
+          "id": "T7",
+          "name": "甲轨探（PUT→存在→DELETE→消失）",
+          "pass": true,
+          "detail": {
+            "put_exists": true,
+            "delete_gone": true,
+            "nonce_fp": "80b5c847fa04"
+          }
+        }
+      ],
+      "all_pass": true,
+      "tested_at": "2026-09-14T16:22:27Z"
+    }
+  },
+  "all_pass": true,
+  "github_probe": {
+    "t7_github": {
+      "put_201": true,
+      "get_200": false,
+      "delete_200": true,
+      "post_get_404": false,
+      "note": "GET/post-GET 403 due to rate limit; DELETE confirmed by 200; nonce value burned",
+      "nonce_fp": "0f3dd36d1aec"
+    },
+    "overall_verdict": "7/7 local tests PASS; GitHub probe PUT+DELETE confirmed; GET verification pending rate limit reset"
+  }
+}

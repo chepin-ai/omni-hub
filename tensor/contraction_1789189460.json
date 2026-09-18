@@ -1,0 +1,27 @@
+{
+  "nodes": [
+    "ucif2",
+    "lgt",
+    "qfa"
+  ],
+  "node_count": 3,
+  "ts": "2026-09-12T05:04:20.652433+00:00",
+  "global_metrics": {
+    "health": 0.8,
+    "load": 0.04,
+    "throughput": 0.0167,
+    "latency": 3.3333,
+    "entropy": 0.3333,
+    "excitation_level": 0.0333
+  },
+  "entanglement": {
+    "ucif2:lgt": 0.1169,
+    "ucif2:qfa": 0.1171,
+    "lgt:qfa": 0.0819
+  },
+  "contraction_order": [
+    "ucif2",
+    "lgt",
+    "qfa"
+  ]
+}

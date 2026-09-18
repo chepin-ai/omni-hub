@@ -1,0 +1,15 @@
+{
+  "type": "ENTANGLEMENT_SYNC",
+  "source": "lgt",
+  "target": "qfa",
+  "entanglement": 17.01,
+  "sync_metrics": {
+    "health": 1.0,
+    "load": 0.25,
+    "throughput": 0.0167,
+    "latency": 10.0,
+    "entropy": 1.0,
+    "excitation_level": 0.0
+  },
+  "ts": "2026-09-12T05:12:56.699316+00:00"
+}

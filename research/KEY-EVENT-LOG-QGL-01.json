@@ -1,0 +1,71 @@
+{
+  "events": [
+    {
+      "event": "MINT",
+      "key_name": "QGL_HMAC_SK",
+      "fingerprint": "2abd422a7a58",
+      "timestamp": "2026-09-14T16:22:27Z",
+      "entropy": {
+        "monobit_z": 0.625,
+        "runs_z": 0.8519,
+        "monobit_pass": true,
+        "runs_pass": true,
+        "entropy_pass": true,
+        "n_bits": 256,
+        "ones": 123,
+        "zeros": 133,
+        "runs": 121
+      },
+      "path": "/mnt/agents/.keys/QGL_HMAC_SK.key",
+      "sealed_path": "/mnt/agents/.keys/sealed/QGL_HMAC_SK.sealed",
+      "class": "L",
+      "lifetime_days": 90
+    },
+    {
+      "event": "MINT",
+      "key_name": "QGL_OTP_POOL_SK",
+      "fingerprint": "edafbd774b78",
+      "timestamp": "2026-09-14T16:22:27Z",
+      "entropy": {
+        "monobit_z": 0.5,
+        "runs_z": 0.7664,
+        "monobit_pass": true,
+        "runs_pass": true,
+        "entropy_pass": true,
+        "n_bits": 256,
+        "ones": 124,
+        "zeros": 132,
+        "runs": 134
+      },
+      "path": "/mnt/agents/.keys/QGL_OTP_POOL_SK.key",
+      "sealed_path": "/mnt/agents/.keys/sealed/QGL_OTP_POOL_SK.sealed",
+      "class": "L",
+      "lifetime_days": 180
+    },
+    {
+      "event": "MINT",
+      "key_name": "QGL_RECOVERY_ROT",
+      "fingerprint": "766f537911b2",
+      "timestamp": "2026-09-14T16:22:27Z",
+      "entropy": {
+        "monobit_z": 1.5,
+        "runs_z": 0.0158,
+        "monobit_pass": true,
+        "runs_pass": true,
+        "entropy_pass": true,
+        "n_bits": 256,
+        "ones": 140,
+        "zeros": 116,
+        "runs": 127
+      },
+      "path": "/mnt/agents/.keys/QGL_RECOVERY_ROT.key",
+      "sealed_path": "/mnt/agents/.keys/sealed/QGL_RECOVERY_ROT.sealed",
+      "class": "L",
+      "lifetime_days": 360
+    }
+  ],
+  "meta": {
+    "line": "qgl",
+    "updated_at": "2026-09-14T16:22:27Z"
+  }
+}

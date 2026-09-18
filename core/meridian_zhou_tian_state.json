@@ -1,0 +1,508 @@
+{
+  "system": {
+    "num_lines": 11,
+    "num_meridians": 12,
+    "num_vessels": 8,
+    "num_acupoints": 393,
+    "cycle_count": 0,
+    "emergence_index": 0.09018587713165853,
+    "field_state_mean": 55.528810993612645,
+    "field_state_std": 157.66700123633697,
+    "ziwu_hour": 0,
+    "microcosmic_cycles": 10,
+    "macrocosmic_cycles": 5,
+    "phase_coherence": 0.9404501339603613,
+    "energy_entropy": 2.3988597834408707
+  },
+  "meridians": {
+    "手太阴肺经": {
+      "name": "手太阴肺经",
+      "element": "金",
+      "hours": [
+        3,
+        5
+      ],
+      "qi_flow": 0.9272589824290509,
+      "num_acupoints": 11,
+      "total_energy": 10.19984880671956,
+      "avg_activation": 0.0927258982429051,
+      "is_extraordinary": false,
+      "si_level": null,
+      "line_id": 0
+    },
+    "手阳明大肠经": {
+      "name": "手阳明大肠经",
+      "element": "金",
+      "hours": [
+        5,
+        7
+      ],
+      "qi_flow": 0.509992440335978,
+      "num_acupoints": 20,
+      "total_energy": 10.19984880671956,
+      "avg_activation": 0.050999244033597804,
+      "is_extraordinary": false,
+      "si_level": null,
+      "line_id": 1
+    },
+    "足阳明胃经": {
+      "name": "足阳明胃经",
+      "element": "土",
+      "hours": [
+        7,
+        9
+      ],
+      "qi_flow": 0.22666330681599034,
+      "num_acupoints": 45,
+      "total_energy": 10.199848806719562,
+      "avg_activation": 0.02266633068159903,
+      "is_extraordinary": false,
+      "si_level": null,
+      "line_id": 2
+    },
+    "足太阴脾经": {
+      "name": "足太阴脾经",
+      "element": "土",
+      "hours": [
+        9,
+        11
+      ],
+      "qi_flow": 0.48570708603426493,
+      "num_acupoints": 21,
+      "total_energy": 10.19984880671956,
+      "avg_activation": 0.04857070860342648,
+      "is_extraordinary": false,
+      "si_level": null,
+      "line_id": 3
+    },
+    "手少阴心经": {
+      "name": "手少阴心经",
+      "element": "火",
+      "hours": [
+        11,
+        13
+      ],
+      "qi_flow": 1.133316534079951,
+      "num_acupoints": 9,
+      "total_energy": 10.19984880671956,
+      "avg_activation": 0.11333165340799511,
+      "is_extraordinary": false,
+      "si_level": null,
+      "line_id": 4
+    },
+    "手太阳小肠经": {
+      "name": "手太阳小肠经",
+      "element": "火",
+      "hours": [
+        13,
+        15
+      ],
+      "qi_flow": 0.5368341477220823,
+      "num_acupoints": 19,
+      "total_energy": 10.199848806719562,
+      "avg_activation": 0.05368341477220821,
+      "is_extraordinary": false,
+      "si_level": null,
+      "line_id": 5
+    },
+    "足太阳膀胱经": {
+      "name": "足太阳膀胱经",
+      "element": "水",
+      "hours": [
+        15,
+        17
+      ],
+      "qi_flow": 0.15223654935402334,
+      "num_acupoints": 67,
+      "total_energy": 10.199848806719562,
+      "avg_activation": 0.015223654935402332,
+      "is_extraordinary": false,
+      "si_level": null,
+      "line_id": 6
+    },
+    "足少阴肾经": {
+      "name": "足少阴肾经",
+      "element": "水",
+      "hours": [
+        17,
+        19
+      ],
+      "qi_flow": 0.3777721780266503,
+      "num_acupoints": 27,
+      "total_energy": 10.19984880671956,
+      "avg_activation": 0.03777721780266503,
+      "is_extraordinary": false,
+      "si_level": null,
+      "line_id": 7
+    },
+    "手厥阴心包经": {
+      "name": "手厥阴心包经",
+      "element": "火",
+      "hours": [
+        19,
+        21
+      ],
+      "qi_flow": 1.133316534079951,
+      "num_acupoints": 9,
+      "total_energy": 10.19984880671956,
+      "avg_activation": 0.11333165340799511,
+      "is_extraordinary": false,
+      "si_level": null,
+      "line_id": 8
+    },
+    "手少阳三焦经": {
+      "name": "手少阳三焦经",
+      "element": "火",
+      "hours": [
+        21,
+        23
+      ],
+      "qi_flow": 0.373842347864789,
+      "num_acupoints": 23,
+      "total_energy": 8.598374000890145,
+      "avg_activation": 0.037384234786478884,
+      "is_extraordinary": false,
+      "si_level": null,
+      "line_id": 9
+    },
+    "足少阳胆经": {
+      "name": "足少阳胆经",
+      "element": "木",
+      "hours": [
+        23,
+        1
+      ],
+      "qi_flow": 0.000981091792488493,
+      "num_acupoints": 44,
+      "total_energy": 0.04316803886949367,
+      "avg_activation": 9.810917924884926e-05,
+      "is_extraordinary": false,
+      "si_level": null,
+      "line_id": 10
+    },
+    "足厥阴肝经": {
+      "name": "足厥阴肝经",
+      "element": "木",
+      "hours": [
+        1,
+        3
+      ],
+      "qi_flow": 0.6419133919528636,
+      "num_acupoints": 14,
+      "total_energy": 8.986787487340088,
+      "avg_activation": 0.06419133919528634,
+      "is_extraordinary": false,
+      "si_level": null,
+      "line_id": 10
+    }
+  },
+  "vessels": {
+    "任脉": {
+      "name": "任脉",
+      "element": "",
+      "hours": [
+        0,
+        24
+      ],
+      "qi_flow": 1.0,
+      "num_acupoints": 24,
+      "total_energy": 0.0,
+      "avg_activation": 0.0,
+      "is_extraordinary": true,
+      "si_level": 4,
+      "line_id": null
+    },
+    "督脉": {
+      "name": "督脉",
+      "element": "",
+      "hours": [
+        0,
+        24
+      ],
+      "qi_flow": 1.0,
+      "num_acupoints": 28,
+      "total_energy": 0.0,
+      "avg_activation": 0.0,
+      "is_extraordinary": true,
+      "si_level": 5,
+      "line_id": null
+    },
+    "冲脉": {
+      "name": "冲脉",
+      "element": "",
+      "hours": [
+        0,
+        24
+      ],
+      "qi_flow": 1.0,
+      "num_acupoints": 11,
+      "total_energy": 0.0,
+      "avg_activation": 0.0,
+      "is_extraordinary": true,
+      "si_level": 3,
+      "line_id": null
+    },
+    "带脉": {
+      "name": "带脉",
+      "element": "",
+      "hours": [
+        0,
+        24
+      ],
+      "qi_flow": 1.0,
+      "num_acupoints": 3,
+      "total_energy": 0.0,
+      "avg_activation": 0.0,
+      "is_extraordinary": true,
+      "si_level": 2,
+      "line_id": null
+    },
+    "阴跷脉": {
+      "name": "阴跷脉",
+      "element": "",
+      "hours": [
+        0,
+        24
+      ],
+      "qi_flow": 1.0,
+      "num_acupoints": 2,
+      "total_energy": 0.0,
+      "avg_activation": 0.0,
+      "is_extraordinary": true,
+      "si_level": 1,
+      "line_id": null
+    },
+    "阳跷脉": {
+      "name": "阳跷脉",
+      "element": "",
+      "hours": [
+        0,
+        24
+      ],
+      "qi_flow": 1.0,
+      "num_acupoints": 2,
+      "total_energy": 0.0,
+      "avg_activation": 0.0,
+      "is_extraordinary": true,
+      "si_level": 0,
+      "line_id": null
+    },
+    "阴维脉": {
+      "name": "阴维脉",
+      "element": "",
+      "hours": [
+        0,
+        24
+      ],
+      "qi_flow": 1.0,
+      "num_acupoints": 7,
+      "total_energy": 0.0,
+      "avg_activation": 0.0,
+      "is_extraordinary": true,
+      "si_level": 6,
+      "line_id": null
+    },
+    "阳维脉": {
+      "name": "阳维脉",
+      "element": "",
+      "hours": [
+        0,
+        24
+      ],
+      "qi_flow": 1.0,
+      "num_acupoints": 7,
+      "total_energy": 0.0,
+      "avg_activation": 0.0,
+      "is_extraordinary": true,
+      "si_level": -1,
+      "line_id": null
+    }
+  },
+  "diagnosis": {
+    "timestamp": 1789502295.0911205,
+    "overall_pulse": "迟、滑",
+    "excess_deficiency": {
+      "手太阴肺经": "平",
+      "手阳明大肠经": "平",
+      "足阳明胃经": "平",
+      "足太阴脾经": "平",
+      "手少阴心经": "平",
+      "手太阳小肠经": "平",
+      "足太阳膀胱经": "平",
+      "足少阴肾经": "平",
+      "手厥阴心包经": "平",
+      "手少阳三焦经": "平",
+      "足少阳胆经": "虚",
+      "足厥阴肝经": "平"
+    },
+    "element_balance": {
+      "木": "弱",
+      "火": "旺",
+      "土": "平",
+      "金": "平",
+      "水": "平"
+    },
+    "zhou_tian_status": {
+      "microcosmic": {
+        "cycles": 10,
+        "energy": 12.743907896686794,
+        "quality": 0.9885525255573899,
+        "direction": "forward"
+      },
+      "macrocosmic": {
+        "cycles": 5,
+        "total_energy": 696.8615092890238,
+        "quality": 0.9529109888383746,
+        "current_meridian": "足厥阴肝经"
+      }
+    },
+    "ziwu_status": {
+      "current_hour": 0,
+      "active_meridian": "足少阳胆经",
+      "all_active": [
+        "足少阳胆经",
+        "手少阳三焦经",
+        "足厥阴肝经"
+      ]
+    },
+    "line_status": {
+      "ucif2": {
+        "energy": 10.19984880671956,
+        "meridians": [
+          "手太阴肺经"
+        ]
+      },
+      "lvlu": {
+        "energy": 10.19984880671956,
+        "meridians": [
+          "手阳明大肠经"
+        ]
+      },
+      "lgt": {
+        "energy": 10.199848806719562,
+        "meridians": [
+          "足阳明胃经"
+        ]
+      },
+      "qfa": {
+        "energy": 10.19984880671956,
+        "meridians": [
+          "足太阴脾经"
+        ]
+      },
+      "vinf": {
+        "energy": 10.19984880671956,
+        "meridians": [
+          "手少阴心经"
+        ]
+      },
+      "qgl": {
+        "energy": 10.199848806719562,
+        "meridians": [
+          "手太阳小肠经"
+        ]
+      },
+      "qlv": {
+        "energy": 10.199848806719562,
+        "meridians": [
+          "足太阳膀胱经"
+        ]
+      },
+      "cisvr": {
+        "energy": 10.19984880671956,
+        "meridians": [
+          "足少阴肾经"
+        ]
+      },
+      "qtlv": {
+        "energy": 10.19984880671956,
+        "meridians": [
+          "手厥阴心包经"
+        ]
+      },
+      "usrm": {
+        "energy": 8.598374000890145,
+        "meridians": [
+          "手少阳三焦经"
+        ]
+      },
+      "cfts": {
+        "energy": 9.029955526209582,
+        "meridians": [
+          "足少阳胆经",
+          "足厥阴肝经"
+        ]
+      }
+    },
+    "recommendations": [
+      "足少阳胆经气虚，建议在11时用补法刺激足临泣",
+      "木行偏弱，建议补水行以生木"
+    ]
+  },
+  "field_state": [
+    0.9272589824290509,
+    0.509992440335978,
+    0.22666330681599026,
+    0.48570708603426477,
+    1.1333165340799511,
+    0.5368341477220822,
+    0.1522365493540233,
+    0.37777217802665036,
+    1.1333165340799511,
+    0.37384234786478887,
+    0.0009810917924884925,
+    0.6419133919528635,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    4.514977763104791,
+    9.799480105262207,
+    10.199848806719562,
+    10.19984880671956,
+    10.199848806719562,
+    353.9554781219733,
+    799.6257236650464,
+    416.1476627197538,
+    416.1476627197538,
+    184.20836219747903,
+    -11.369742087229541,
+    18.798222807609708,
+    0.04316803886949367,
+    8.986787487340088,
+    10.19984880671956,
+    10.19984880671956,
+    10.199848806719562,
+    10.19984880671956,
+    10.19984880671956,
+    10.199848806719562,
+    10.199848806719562,
+    10.19984880671956,
+    10.19984880671956,
+    8.598374000890145,
+    10.19984880671956,
+    10.19984880671956,
+    10.199848806719562,
+    10.19984880671956,
+    10.19984880671956,
+    10.199848806719562,
+    10.199848806719562,
+    10.19984880671956,
+    10.19984880671956,
+    8.598374000890145,
+    9.029955526209582,
+    0.0,
+    0.09018587713165853,
+    12.743907896686794,
+    696.8615092890238,
+    0.9404501339603613,
+    2.3988597834408707,
+    0.0,
+    393.0,
+    0.027844012414141417
+  ]
+}

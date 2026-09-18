@@ -1,0 +1,62 @@
+{
+  "cp_id": "3329d7f1c6bf",
+  "timestamp": "2026-09-15T13:28:42.723460Z",
+  "sync_counter": 0,
+  "lines": {
+    "L01": {
+      "os_hash": "af470ae8d82bbc3e",
+      "si1_hash": "46fd9762fe011af2",
+      "in_sync": false
+    },
+    "L02": {
+      "os_hash": "25f5297f7097bc2b",
+      "si1_hash": "079e2af50ac15236",
+      "in_sync": false
+    },
+    "L03": {
+      "os_hash": "d822d561238c60f0",
+      "si1_hash": "f608dbea5e4b6451",
+      "in_sync": false
+    },
+    "L04": {
+      "os_hash": "3100d68aadfd066b",
+      "si1_hash": "d7119d22907aa9e0",
+      "in_sync": false
+    },
+    "L05": {
+      "os_hash": "b3f425f9e7bc4dd4",
+      "si1_hash": "c46684fa9129e0a7",
+      "in_sync": false
+    },
+    "L06": {
+      "os_hash": "7601f4881c35bc7c",
+      "si1_hash": "72451888072240c8",
+      "in_sync": false
+    },
+    "L07": {
+      "os_hash": "3068bcd9b49fa5a3",
+      "si1_hash": "8fd55240f32ede6d",
+      "in_sync": false
+    },
+    "L08": {
+      "os_hash": "7832ef6d48fe0ee5",
+      "si1_hash": "5be5907f6706e31d",
+      "in_sync": false
+    },
+    "L09": {
+      "os_hash": "8a780892d4a8a6fc",
+      "si1_hash": "3e94de6270e44faf",
+      "in_sync": false
+    },
+    "L10": {
+      "os_hash": "a6d70b49fe028de6",
+      "si1_hash": "dd10361e5ed1a38f",
+      "in_sync": false
+    },
+    "L11": {
+      "os_hash": "ce34acd4fd7d0b7a",
+      "si1_hash": "a3ffb872cbfdfc8c",
+      "in_sync": false
+    }
+  }
+}

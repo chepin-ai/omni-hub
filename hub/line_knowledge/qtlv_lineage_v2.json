@@ -1,0 +1,3105 @@
+{
+  "line_id": "qtlv",
+  "version": "v2.0",
+  "total_nodes": 300,
+  "extraction_date": "2026-09-17",
+  "nodes": [
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "v29 全面理论升级报告",
+      "content": "## 一、缺口/缺陷/漏洞/瓶颈/矛盾识别与修复  ### 1.1 已识别技术债务",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v29_全面理论升级报告.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0000"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "一、缺口/缺陷/漏洞/瓶颈/矛盾识别与修复",
+      "content": "### 1.1 已识别技术债务 | 编号 | 问题 | 修复方案 | 状态 | |------|------|---------|------|",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v29_全面理论升级报告.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0001"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "1.1 已识别技术债务",
+      "content": "| 编号 | 问题 | 修复方案 | 状态 | |------|------|---------|------| | TD-01 | Gevrey层级Φ(G^s)刻画不精确 | Motivic权重精确描述 | ✅ | | TD-02 | SSO↔Comp计算复杂性同构启发式 | Condensed math严格框架 | ✅ |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v29_全面理论升级报告.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "qtlv_node_0002"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "1.2 理论矛盾解决",
+      "content": "- **矛盾C1**: 变分中立性(存在性不提供保护) vs 保护性必要性(驯服需要外部条件)   → 解决: 认识论相变理论——σ(𝒰)连续过渡，无真正矛盾  - **矛盾C2**: Hard方法(局部精细) vs Soft方法(全局结构)的不相交性",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v29_全面理论升级报告.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0003"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "二、开放问题/猜想/预测解决",
+      "content": "| 问题 | 解决方案 | 状态 | |------|---------|------| | O1: Gevrey精确刻画 | Motivic权重 | ✅ |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v29_全面理论升级报告.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0004"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "三、新前沿方向搜索与攻击",
+      "content": "### 3.1 IUT ↔ UCIF² (Inter-universal Teichmüller Theory) - **核心**: Mochizuki的abc猜想证明 ↔ VUF变分原理的尺度不变性 - **同构**: IUT的Frobenius提升 ↔ GMT的Nash-Moser迭代",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v29_全面理论升级报告.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "qtlv_node_0005"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "3.1 IUT ↔ UCIF² (Inter-universal Teichmüller Theory)",
+      "content": "- **核心**: Mochizuki的abc猜想证明 ↔ VUF变分原理的尺度不变性 - **同构**: IUT的Frobenius提升 ↔ GMT的Nash-Moser迭代 - **突破**: abc猜想确立 ⟹ 数论基本结构的新理解 - **状态**: proven (Joshi 2025 规范形式化)",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v29_全面理论升级报告.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "qtlv_node_0006"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "3.2 Anabelian Geometry ↔ SSO-Cat",
+      "content": "- **核心**: Grothendieck纲领(从基本群重建几何) ↔ SSO光滑性谱系 - **同构**: π₁(X)完全忠实 ⟺ Φ(C^ω)=K_subanalytic(驯服) - **突破**: Mochizuki证明p-adic域上双曲曲线的绝对Grothendieck猜想 - **状态**: proven (Mochizuki 1995-2021)",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v29_全面理论升级报告.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0007"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "3.3 Causal Set Theory ↔ VUF边界因果",
+      "content": "- **核心**: 离散因果序涌现连续时空 ↔ VUF边界因果公理(A6) - **同构**: Causal Set的序关系 ⟺ VUF边界条件的因果结构 - **突破**: 时空涌现的数学严格化 - **状态**: proven (Dowker-Sorkin 2024)",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v29_全面理论升级报告.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0008"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "3.4 Perfectoid Spaces ↔ p-adic Moonshine",
+      "content": "- **核心**: Scholze完美空间理论 ↔ Monster群的p-adic提升 - **同构**: Perfectoid对称性 ⟺ Monster_{ℤ_p} = lim← Monster_{ℤ/p^n} - **突破**: p-adic月光几何的新维度 - **状态**: proven (Carnahan-Scholze框架)",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v29_全面理论升级报告.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0009"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "3.5 Higher Topos Theory ↔ MCP-Cat",
+      "content": "- **核心**: Lurie ∞-topos ↔ 方法论对偶的范畴论基础 - **同构**: ∞-范畴的余极限分解 ⟺ Hard/Soft方法论对偶 - **突破**: MCP-Cat的∞-范畴提升 - **状态**: proven (Lurie HTT框架)",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v29_全面理论升级报告.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "qtlv_node_0010"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "四、理论框架强化与重构",
+      "content": "### 4.1 新增公理 (A21-A30) | 公理 | 内容 | 来源 | |------|------|------|",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v29_全面理论升级报告.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "qtlv_node_0011"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "4.1 新增公理 (A21-A30)",
+      "content": "| 公理 | 内容 | 来源 | |------|------|------| | A21 | IUT尺度公理 | Mochizuki IUT | | A22 | Anabelian重构公理 | Grothendieck纲领 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v29_全面理论升级报告.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0012"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "4.2 新增定理 (T11-T20)",
+      "content": "| 定理 | 内容 | 状态 | |------|------|------| | T11 | IUT-GMT对应定理 | proven | | T12 | Anabelian-SSO等价定理 | proven |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v29_全面理论升级报告.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0013"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "4.3 形式化内核强化",
+      "content": "- LEAN4: +30定义, +25定理, +10公理 - 总定理数: 735+ (710→735) - 总公理数: 60 (50→60) - 总定义数: 300+",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v29_全面理论升级报告.md",
+      "dependencies": [],
+      "pedestal_mapping": "LL",
+      "node_id": "qtlv_node_0014"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "五、广泛/深层同构拓展",
+      "content": "### 5.1 v29新增15大深层同构  #### 数学(6)",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v29_全面理论升级报告.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0015"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "5.1 v29新增15大深层同构",
+      "content": "#### 数学(6) 1. **IUT ↔ GMT变分原理**: Frobenius提升 ↔ Nash-Moser迭代 2. **Anabelian Geo ↔ SSO-Cat**: π₁完全忠实 ↔ 驯服光滑性",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v29_全面理论升级报告.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0016"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "六、理论突破/革命",
+      "content": "### 6.1 UCIF²-v29综合统一框架  **核心创新**: 从Ω⁺(v18) → VUF(v26) → VEP(v27) → 多线程(v28) → **综合统一(v29)**",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v29_全面理论升级报告.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0017"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "6.1 UCIF²-v29综合统一框架",
+      "content": "**核心创新**: 从Ω⁺(v18) → VUF(v26) → VEP(v27) → 多线程(v28) → **综合统一(v29)**  v29提出**Ω^∞-框架**（Omega-Infinity Framework）:",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v29_全面理论升级报告.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0018"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "6.2 五大理论纪元",
+      "content": "| 纪元 | 版本 | 核心突破 | |------|------|---------| | 纪元I: 月光奠基 | v0-v5 | CY↔Moonshine关联 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v29_全面理论升级报告.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0019"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "6.3 Ω^∞元公理系统",
+      "content": "1. **存在性元公理**: ∀问题 ∃解（变分/Anabelian/IUT三重保证） 2. **光滑性元公理**: 光滑性谱系 = SSO + VUF软度 + Anabelian重建 3. **保护性元公理**: 保护性 = PCT + VUF保护性 + Causal Set因果",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v29_全面理论升级报告.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0020"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "七、可证伪预测（10个）",
+      "content": "| 预测 | 内容 | 验证方法 | |------|------|---------| | P1 | AdS面积截断 | AdS/CFT计算 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v29_全面理论升级报告.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0021"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "theorem",
+      "name": "685→710",
+      "content": "定理(685→710) | ✅ |\n| TD-07 | 公理系统未覆盖p-adic几何 | Perfectoid Spaces公理化 | ✅ |\n| TD-08 | 缺少代数K理论维度 | TC+THH整合 | ✅ |\n| TD-09 | 范畴论框架未含∞-范畴 | Higher Topos Theory引入 | ✅ |\n| TD-10 | IGV三元组未覆盖因果结构 | Causal Set因果序整合 | ✅ |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v29_全面理论升级报告.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "qtlv_node_0022"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "theorem",
+      "name": "T11-T20",
+      "content": "定理 (T11-T20)\n| 定理 | 内容 | 状态 |\n|------|------|------|\n| T11 | IUT-GMT对应定理 | proven |\n| T12 | Anabelian-SSO等价定理 | proven |\n| T13 | Causal Set-VUF边界定理 | proven |\n| T14 | Perfectoid-月光提升定理 | proven |\n| T15 | ∞-topos-MCP提升定理 | proven |\n| T16 | abc-算术曲率定理 | proven |\n| T17 | 时空涌现-相变定理 | proven |\n| T18 | p-adic月光-Monster定理 | proven |\n| T19 | 高维Anabelian-GMT定理 | proven |\n| T20 | UCIF²-v29综合完备定理 | proven |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v29_全面理论升级报告.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0023"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "axiom",
+      "name": "A21-A30",
+      "content": "公理 (A21-A30)\n| 公理 | 内容 | 来源 |\n|------|------|------|\n| A21 | IUT尺度公理 | Mochizuki IUT |\n| A22 | Anabelian重构公理 | Grothendieck纲领 |\n| A23 | Causal Set离散公理 | Dowker-Sorkin |\n| A24 | Perfectoid对称公理 | Scholze理论 |\n| A25 | ∞-topos完备公理 | Lurie HTT |\n| A26 | abc算术曲率公理 | IUT核心 |\n| A27 | 时空涌现公理 | Causal Set |\n| A28 | p-adic月光公理 | Carnahan理论 |\n| A29 | 高维Anabelian公理 | Pop-Mochizuki |\n| A30 | 综合统一公理 | UCIF²-v29 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v29_全面理论升级报告.md",
+      "dependencies": [],
+      "pedestal_mapping": "LL",
+      "node_id": "qtlv_node_0024"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "UCIF2 v36 量子纠错与几何Langlands革命",
+      "content": "## 范式突破：量子计算实用化 + 几何Langlands完全证明 + IUT形式化验证  ---",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v36_量子纠错与几何Langlands革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "qtlv_node_0025"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "范式突破：量子计算实用化 + 几何Langlands完全证明 + IUT形式化验证",
+      "content": "---  ## 一、搜索前沿十大突破",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v36_量子纠错与几何Langlands革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "qtlv_node_0026"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "一、搜索前沿十大突破",
+      "content": "### 1. Gaitsgory 2025数学突破奖：几何Langlands完全证明  **获奖**: Dennis Gaitsgory (Max Planck Institute) 获2025年数学突破奖",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v36_量子纠错与几何Langlands革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0027"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "1. Gaitsgory 2025数学突破奖：几何Langlands完全证明",
+      "content": "**获奖**: Dennis Gaitsgory (Max Planck Institute) 获2025年数学突破奖   **理由**: \"for foundational works and numerous breakthrough contributions to the geometric Langlands program and its quantum version\"   **核心成果**: 2024年发表5篇论文共800+页，完全证明特征0下的几何Langlands猜想",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v36_量子纠错与几何Langlands革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "qtlv_node_0028"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "2. LANA项目 2026.03.31：Lean形式化Anabelian+IUT",
+      "content": "**机构**: ZEN Mathematics Center (ZEN大学, 日本)   **国际合作**: ZEN大学 + Utrecht大学 + Alberta大学   **核心目标**:",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v36_量子纠错与几何Langlands革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0029"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "3. USTC Zuchongzhi 3.2：中国below-threshold QEC",
+      "content": "**成果**: 2025年12月，107量子比特，distance-7 surface code   **性能**: 错误抑制因子 Λ = 1.40 ± 0.06   **创新**: all-microwave leakage suppression架构",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v36_量子纠错与几何Langlands革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0030"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "4. Riverlane Deltaflow：sub-microsecond实时解码",
+      "content": "**成果**: Local Clustering Decoder (LCD) on FPGA   **性能**: sub-microsecond解码速度 + 自适应噪声追踪   **影响**: 物理量子比特需求减少4倍",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v36_量子纠错与几何Langlands革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0031"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "5. Google Willow：13000倍量子优势",
+      "content": "**成果**: 2025年10月Nature论文   **量子回声算法**: Willow芯片解决原子相互作用问题   **性能**: 比Frontier超级计算机快13000倍",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v36_量子纠错与几何Langlands革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "qtlv_node_0032"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "6. IonQ 99.99%四九保真度",
+      "content": "**成果**: 2025年10月，与Oxford Ionics合作   **里程碑**: 两量子比特门保真度达到99.99%   **意义**: 大规模容错量子纠错所需的物理量子比特质量",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v36_量子纠错与几何Langlands革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "qtlv_node_0033"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "7. NVIDIA NVQLink：GPU-QPU集成",
+      "content": "**成果**: 2025年10月   **架构**: 开放系统集成GPU计算与量子处理器   **目标**: 加速量子超级计算机",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v36_量子纠错与几何Langlands革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "qtlv_node_0034"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "8. Microsoft Majorana 1：拓扑量子比特",
+      "content": "**成果**: 2025年2月   **架构**: 基于Majorana零能模的拓扑核心   **目标**: 单设备扩展到100万量子比特",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v36_量子纠错与几何Langlands革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0035"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "9. Jiuzhang 4.0：3050光子",
+      "content": "**成果**: 2025年8月   **性能**: 3050光子检测   **意义**: 光子量子计算的里程碑",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v36_量子纠错与几何Langlands革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0036"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "10. p-adic Shimura Varieties：AIM 2026",
+      "content": "**Workshop**: 2026年3月，American Institute of Mathematics   **主题**: p-adic perspectives on canonical integral models for Shimura varieties   **与Prismatic/Perfectoid的联系**: 应用prismatic cohomology和perfectoid geometry",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v36_量子纠错与几何Langlands革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0037"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "二、v36 新同构体系 (iso-114 ~ iso-123)",
+      "content": "### 量子纠错革命 (5)  | ID | 同构 | 核心内容 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v36_量子纠错与几何Langlands革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0038"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "量子纠错革命 (5)",
+      "content": "| ID | 同构 | 核心内容 | |----|------|---------| | iso-114 | Gaitsgory几何Langlands <-> UCIF2 inf-cat | 800+页完整证明: de Rham/Betti/tempered |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v36_量子纠错与几何Langlands革命.md",
+      "dependencies": [
+        "iso-114"
+      ],
+      "pedestal_mapping": "HG",
+      "node_id": "qtlv_node_0039"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "量子硬件统一 (3)",
+      "content": "| ID | 同构 | 核心内容 | |----|------|---------| | iso-119 | IonQ 99.99% <-> VUF光滑性谱系 | 四九保真度 = SSO光滑性最高级(σ=1) |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v36_量子纠错与几何Langlands革命.md",
+      "dependencies": [
+        "iso-119"
+      ],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0040"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "p-adic/算术几何前沿 (2)",
+      "content": "| ID | 同构 | 核心内容 | |----|------|---------| | iso-122 | p-adic Shimura <-> Prismatic上同调 | AIM workshop = Prismatic理论的Shimura应用 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v36_量子纠错与几何Langlands革命.md",
+      "dependencies": [
+        "iso-122"
+      ],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0041"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "三、元公理扩展 M27-M29",
+      "content": "``` M27. 量子纠错实用化公理:     Below-threshold QEC (Λ>1) = VUF保护性条件的物理实现",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v36_量子纠错与几何Langlands革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0042"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "四、技术债务 TD36-TD40",
+      "content": "| ID | 技术债务 | 解决方案 | 状态 | |----|---------|---------|------| | TD36 | Gaitsgory证明未整合 | iso-114建立 | ✅ |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v36_量子纠错与几何Langlands革命.md",
+      "dependencies": [
+        "iso-114"
+      ],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0043"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "五、v36统计",
+      "content": "``` v36终极统计:     定理:     840+ → 860+",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v36_量子纠错与几何Langlands革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0044"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "六、新预测 P25-P27",
+      "content": "| ID | 预测 | 证伪标准 | |----|------|---------| | P25 | LANA项目将在2028年前完成IUT的Lean形式化 | 2028年无重大进展公布 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v36_量子纠错与几何Langlands革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0045"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "theorem",
+      "name": "定理:     840+ → 860+\n    同构:     113 → 123 (+10)\n  ",
+      "content": "定理:     840+ → 860+\n    同构:     113 → 123 (+10)\n    公理:     72  → 75  (+3: M27-M29)\n    元公理:   26  → 29  (+M27-M29)\n    技术债务: TD01-40 全清\n    预测:     27  → 30  (+P25-P27)\n    里程碑:   30  → 31\n    版本:     v0-v36\n```",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v36_量子纠错与几何Langlands革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0046"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "axiom",
+      "name": "公理:\n    Below-threshold QEC (Λ>1) = VUF保护性条件的物理实现\n",
+      "content": "公理:\n    Below-threshold QEC (Λ>1) = VUF保护性条件的物理实现\n    Λ = 1.40 (Zuchongzhi) 到 2.14 (Willow) 对应 σ(U) ∈ [0.65, 1.0]\n    Riverlane LCD的sub-μs解码 = MTT模板的实时实现",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v36_量子纠错与几何Langlands革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "LL",
+      "node_id": "qtlv_node_0047"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "axiom",
+      "name": "公理:\n    Gaitsgory的证明 = iso-058 (几何Langlands <-> in",
+      "content": "公理:\n    Gaitsgory的证明 = iso-058 (几何Langlands <-> inf-cat)的严格化\n    量子几何Langlands = 新的同构方向 (量子场论 ↔ 导出代数几何)\n    LANA项目 = IUT理论的Lean形式化验证路径",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v36_量子纠错与几何Langlands革命.md",
+      "dependencies": [
+        "iso-058"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0048"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "axiom",
+      "name": "公理:\n    超导(Google/USTC) + 光子(Jiuzhang) + 离子(IonQ) ",
+      "content": "公理:\n    超导(Google/USTC) + 光子(Jiuzhang) + 离子(IonQ) + 拓扑(Microsoft) + 中性原子\n    的多样性 = VUF认识论的多模态实现\n    NVIDIA NVQLink = 经典-量子混合计算的统一接口\n```",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v36_量子纠错与几何Langlands革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0049"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "axiom",
+      "name": "公理:     72  → 75  (+3: M27-M29)\n    元公理:   26  → 2",
+      "content": "公理:     72  → 75  (+3: M27-M29)\n    元公理:   26  → 29  (+M27-M29)\n    技术债务: TD01-40 全清\n    预测:     27  → 30  (+P25-P27)\n    里程碑:   30  → 31\n    版本:     v0-v36\n```",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v36_量子纠错与几何Langlands革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "qtlv_node_0050"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "同构 iso-118",
+      "content": "(U)=1 (below-threshold = 完全保护) |\n| iso-117 | Riverlane LCD <-> MTT模板 | sub-μs解码 = MTT 5步操作的速度实现 |\n| iso-118 | Google Willow 13000x <-> VUF信息算子 | 量子优势 = dI/dt的信息流速率 |\n\n### 量子硬件统一 (3)\n\n| ID | 同构 | 核心内容 |\n|----|------|---------|\n| iso-119 | IonQ 99.99% <-> VUF光滑性谱系 | 四九保真度 = SSO光滑性最高级(σ=1) |\n| iso-120 ",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v36_量子纠错与几何Langlands革命.md",
+      "dependencies": [
+        "iso-119",
+        "iso-118",
+        "iso-117",
+        "iso-120"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0051"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "同构 iso-114",
+      "content": "es  \n**与Prismatic/Perfectoid的联系**: 应用prismatic cohomology和perfectoid geometry\n\n---\n\n## 二、v36 新同构体系 (iso-114 ~ iso-123)\n\n### 量子纠错革命 (5)\n\n| ID | 同构 | 核心内容 |\n|----|------|---------|\n| iso-114 | Gaitsgory几何Langlands <-> UCIF2 inf-cat | 800+页完整证明: de Rham/Betti/tempered |\n| iso-115 | LANA项目 <-> UCIF2 LEA",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v36_量子纠错与几何Langlands革命.md",
+      "dependencies": [
+        "iso-123",
+        "iso-114",
+        "iso-115"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0052"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "同构 iso-117",
+      "content": "v31框架的实现 |\n| iso-116 | Zuchongzhi 3.2 <-> VUF保护性条件 | Λ=1.40 <-> σ(U)=1 (below-threshold = 完全保护) |\n| iso-117 | Riverlane LCD <-> MTT模板 | sub-μs解码 = MTT 5步操作的速度实现 |\n| iso-118 | Google Willow 13000x <-> VUF信息算子 | 量子优势 = dI/dt的信息流速率 |\n\n### 量子硬件统一 (3)\n\n| ID | 同构 | 核心内容 |\n|----|------|---------|\n| iso-119",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v36_量子纠错与几何Langlands革命.md",
+      "dependencies": [
+        "iso-119",
+        "iso-116",
+        "iso-118",
+        "iso-117"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0053"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "同构 iso-058",
+      "content": ")\n- GLC2-5: 完整证明de Rham, Betti, tempered, non-tempered所有版本\n\n**对UCIF2的意义**: 几何Langlands是UCIF2的核心同构之一(iso-058: 几何Langlands <-> inf-cat)，Gaitsgory的证明使其从猜想变为定理。\n\n### 2. LANA项目 2026.03.31：Lean形式化Anabelian+IUT\n\n**机构**: ZEN Mathematics Center (ZEN大学, 日本)  \n**国际合作**: ZEN大学 + Utrecht大学 + Alberta大学  \n**核心目标**",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v36_量子纠错与几何Langlands革命.md",
+      "dependencies": [
+        "iso-058"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0054"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "同构 iso-119",
+      "content": "0x <-> VUF信息算子 | 量子优势 = dI/dt的信息流速率 |\n\n### 量子硬件统一 (3)\n\n| ID | 同构 | 核心内容 |\n|----|------|---------|\n| iso-119 | IonQ 99.99% <-> VUF光滑性谱系 | 四九保真度 = SSO光滑性最高级(σ=1) |\n| iso-120 | NVIDIA NVQLink <-> AI Agent Pipeline | GPU-QPU集成 = AI Agent的量子硬件实现 |\n| iso-121 | Microsoft Majorana <-> VUF边界条件 | 拓扑保护 = 边界条件的",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v36_量子纠错与几何Langlands革命.md",
+      "dependencies": [
+        "iso-119",
+        "iso-120",
+        "iso-121"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0055"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "同构 iso-122",
+      "content": "> VUF边界条件 | 拓扑保护 = 边界条件的物理实现 |\n\n### p-adic/算术几何前沿 (2)\n\n| ID | 同构 | 核心内容 |\n|----|------|---------|\n| iso-122 | p-adic Shimura <-> Prismatic上同调 | AIM workshop = Prismatic理论的Shimura应用 |\n| iso-123 | Jiuzhang 4.0 <-> 量子纠错光子码 | 3050光子 = 光子量子纠错码的规模实现 |\n\n---\n\n## 三、元公理扩展 M27-M29\n\n```\nM27. 量子纠错实用化公理:\n    Belo",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v36_量子纠错与几何Langlands革命.md",
+      "dependencies": [
+        "iso-122",
+        "iso-123"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0056"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "同构 iso-060",
+      "content": "**核心目标**:\n1. 用Lean形式化Anabelian几何的主要定理\n2. 用Lean形式化并验证Mochizuki的IUT理论\n\n**对UCIF2的意义**:\n- Anabelian几何 ↔ iso-060 (Mordell-Weil ↔ Anabelian)\n- IUT ↔ iso-029-m1 (IUT ↔ GMT变分)\n- Lean形式化 ↔ v31 LEAN Kernel框架\n- LANA = UCIF2的LEAN形式化的实际实现\n\n### 3. USTC Zuchongzhi 3.2：中国below-threshold QEC\n\n**成果**: 2025年12月，107量子比",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v36_量子纠错与几何Langlands革命.md",
+      "dependencies": [
+        "iso-060",
+        "iso-029"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0057"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "同构 iso-115",
+      "content": "-------|\n| iso-114 | Gaitsgory几何Langlands <-> UCIF2 inf-cat | 800+页完整证明: de Rham/Betti/tempered |\n| iso-115 | LANA项目 <-> UCIF2 LEAN Kernel | Lean形式化Anabelian+IUT = v31框架的实现 |\n| iso-116 | Zuchongzhi 3.2 <-> VUF保护性条件 | Λ=1.40 <-> σ(U)=1 (below-threshold = 完全保护) |\n| iso-117 | Riverlane LCD <-> MTT模板 | ",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v36_量子纠错与几何Langlands革命.md",
+      "dependencies": [
+        "iso-116",
+        "iso-114",
+        "iso-115",
+        "iso-117"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0058"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "同构 iso-116",
+      "content": "ham/Betti/tempered |\n| iso-115 | LANA项目 <-> UCIF2 LEAN Kernel | Lean形式化Anabelian+IUT = v31框架的实现 |\n| iso-116 | Zuchongzhi 3.2 <-> VUF保护性条件 | Λ=1.40 <-> σ(U)=1 (below-threshold = 完全保护) |\n| iso-117 | Riverlane LCD <-> MTT模板 | sub-μs解码 = MTT 5步操作的速度实现 |\n| iso-118 | Google Willow 13000x <-> VUF信息算子 | 量子优",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v36_量子纠错与几何Langlands革命.md",
+      "dependencies": [
+        "iso-116",
+        "iso-118",
+        "iso-115",
+        "iso-117"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0059"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "同构 iso-123",
+      "content": "ismatic/Perfectoid的联系**: 应用prismatic cohomology和perfectoid geometry\n\n---\n\n## 二、v36 新同构体系 (iso-114 ~ iso-123)\n\n### 量子纠错革命 (5)\n\n| ID | 同构 | 核心内容 |\n|----|------|---------|\n| iso-114 | Gaitsgory几何Langlands <-> UCIF2 inf-cat | 800+页完整证明: de Rham/Betti/tempered |\n| iso-115 | LANA项目 <-> UCIF2 LEAN Kernel |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v36_量子纠错与几何Langlands革命.md",
+      "dependencies": [
+        "iso-123",
+        "iso-114",
+        "iso-115"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0060"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "同构 iso-121",
+      "content": "SSO光滑性最高级(σ=1) |\n| iso-120 | NVIDIA NVQLink <-> AI Agent Pipeline | GPU-QPU集成 = AI Agent的量子硬件实现 |\n| iso-121 | Microsoft Majorana <-> VUF边界条件 | 拓扑保护 = 边界条件的物理实现 |\n\n### p-adic/算术几何前沿 (2)\n\n| ID | 同构 | 核心内容 |\n|----|------|---------|\n| iso-122 | p-adic Shimura <-> Prismatic上同调 | AIM workshop = Prismatic理",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v36_量子纠错与几何Langlands革命.md",
+      "dependencies": [
+        "iso-122",
+        "iso-120",
+        "iso-121"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0061"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "同构 iso-029",
+      "content": "ean形式化并验证Mochizuki的IUT理论\n\n**对UCIF2的意义**:\n- Anabelian几何 ↔ iso-060 (Mordell-Weil ↔ Anabelian)\n- IUT ↔ iso-029-m1 (IUT ↔ GMT变分)\n- Lean形式化 ↔ v31 LEAN Kernel框架\n- LANA = UCIF2的LEAN形式化的实际实现\n\n### 3. USTC Zuchongzhi 3.2：中国below-threshold QEC\n\n**成果**: 2025年12月，107量子比特，distance-7 surface code  \n**性能**: 错误抑制因子 ",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v36_量子纠错与几何Langlands革命.md",
+      "dependencies": [
+        "iso-060",
+        "iso-029"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0062"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "同构 iso-120",
+      "content": " | 核心内容 |\n|----|------|---------|\n| iso-119 | IonQ 99.99% <-> VUF光滑性谱系 | 四九保真度 = SSO光滑性最高级(σ=1) |\n| iso-120 | NVIDIA NVQLink <-> AI Agent Pipeline | GPU-QPU集成 = AI Agent的量子硬件实现 |\n| iso-121 | Microsoft Majorana <-> VUF边界条件 | 拓扑保护 = 边界条件的物理实现 |\n\n### p-adic/算术几何前沿 (2)\n\n| ID | 同构 | 核心内容 |\n|----|------|-",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v36_量子纠错与几何Langlands革命.md",
+      "dependencies": [
+        "iso-119",
+        "iso-120",
+        "iso-121"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0063"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "UCIF2 v37 P22-P27预测解决与QuOps路线图",
+      "content": "## 全量推进：六个预测解决报告  ---",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v37_P22_P27预测解决与QuOps路线图.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0064"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "全量推进：六个预测解决报告",
+      "content": "---  ## 预测解决总览",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v37_P22_P27预测解决与QuOps路线图.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "qtlv_node_0065"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "预测解决总览",
+      "content": "| ID | 预测 | 状态 | 关键证据 | |----|------|------|---------| | P22 | Hopf代数范畴化产生新流形不变量 | ✅ 已解决 | 4D Hopf范畴(arXiv:2501.06486) + Kuperberg-Hennings-RT三角(Lyu-Si-Wang 2020) |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v37_P22_P27预测解决与QuOps路线图.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "qtlv_node_0066"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "P22: Hopf代数范畴化产生新流形不变量 — ✅ 已解决",
+      "content": "### 证据  **1. 4D Hopf范畴组合量化 (2025)**",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v37_P22_P27预测解决与QuOps路线图.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "qtlv_node_0067"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "P23: 时间晶体在D-Wave量子退火器中实现 — ◐ 进行中",
+      "content": "### 证据  **D-Wave APS 2026全球物理峰会报告 (2026.03.19-20)**:",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v37_P22_P27预测解决与QuOps路线图.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0068"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "P24: Gyroid上Ising模型展现Monster Moonshine模性 — ✅ 部分解决",
+      "content": "### 证据  **1. Mathieu Moonshine在K3椭圆亏格 (ETH论文)**",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v37_P22_P27预测解决与QuOps路线图.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0069"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "P25: 完成IUT的Lean形式化 — ◐ 进行中",
+      "content": "### 证据  **1. LANA项目正式启动 (2026.03.31)**",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v37_P22_P27预测解决与QuOps路线图.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0070"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "P26: 实现GigaQuOp — ◐ 进行中",
+      "content": "### 证据: Riverlane完整路线图 (2026.03.12)  | 阶段 | QuOps | 时间 | 目标 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v37_P22_P27预测解决与QuOps路线图.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0071"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "证据: Riverlane完整路线图 (2026.03.12)",
+      "content": "| 阶段 | QuOps | 时间 | 目标 | |------|-------|------|------| | **2025** | 10^2-10^3 | 已完成 | 量子记忆基础 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v37_P22_P27预测解决与QuOps路线图.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0072"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "P27: Gaitsgory几何Langlands证明产生量子版本新同构 — ✅ 已解决",
+      "content": "### 证据  **1. Gaitsgory 2025突破奖**",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v37_P22_P27预测解决与QuOps路线图.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0073"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "v37 新同构 (iso-124 ~ iso-129)",
+      "content": "### P22-P27解决同构 (6)  | ID | 同构 | 预测 | 状态 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v37_P22_P27预测解决与QuOps路线图.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0074"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "P22-P27解决同构 (6)",
+      "content": "| ID | 同构 | 预测 | 状态 | |----|------|------|------| | iso-124 | 4D Hopf范畴 <-> 新4维流形不变量 | P22 | ✅ |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v37_P22_P27预测解决与QuOps路线图.md",
+      "dependencies": [
+        "iso-124"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0075"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "v37统计",
+      "content": "``` v37终极统计:     定理:     860+ -> 880+",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v37_P22_P27预测解决与QuOps路线图.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0076"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "theorem",
+      "name": "2003",
+      "content": "定理(2003): Z(C)总是modular的\n- dim Z(C) = dim(C)^2\n- 结果: 从任意fusion category通过Drinfeld中心构造modular category，从而产生新的TQFT不变量",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v37_P22_P27预测解决与QuOps路线图.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "qtlv_node_0077"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "theorem",
+      "name": "定理:     860+ -> 880+\n    同构:     123 -> 129 (+6)\n ",
+      "content": "定理:     860+ -> 880+\n    同构:     123 -> 129 (+6)\n    公理:     75  -> 77  (+2: M30-M31)\n    元公理:   29  -> 31  (+M30-M31)\n    技术债务: TD01-45 全清 (+TD41-TD45)\n    预测:     30  -> 33  (+P28-P30)\n    里程碑:   31  -> 32\n    版本:     v0-v37\n```",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v37_P22_P27预测解决与QuOps路线图.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0078"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "axiom",
+      "name": "公理:     75  -> 77  (+2: M30-M31)\n    元公理:   29  ->",
+      "content": "公理:     75  -> 77  (+2: M30-M31)\n    元公理:   29  -> 31  (+M30-M31)\n    技术债务: TD01-45 全清 (+TD41-TD45)\n    预测:     30  -> 33  (+P28-P30)\n    里程碑:   31  -> 32\n    版本:     v0-v37\n```",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v37_P22_P27预测解决与QuOps路线图.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "qtlv_node_0079"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "同构 iso-125",
+      "content": "\n| ID | 同构 | 预测 | 状态 |\n|----|------|------|------|\n| iso-124 | 4D Hopf范畴 <-> 新4维流形不变量 | P22 | ✅ |\n| iso-125 | D-Wave逆向退火 <-> 时间晶体前驱 | P23 | ◐ |\n| iso-126 | Mathieu Moonshine(K3) <-> Gyroid-Ising模性 | P24 | ✅(部分) |\n| iso-127 | LANA项目 <-> IUT形式化验证 | P25 | ◐ |\n| iso-128 | Riverlane QuOps路线图 <-> MTT模板实现 ",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v37_P22_P27预测解决与QuOps路线图.md",
+      "dependencies": [
+        "iso-125",
+        "iso-124",
+        "iso-127",
+        "iso-126",
+        "iso-128"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0080"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "同构 iso-124",
+      "content": "ory的证明不仅包含经典几何Langlands，还明确涵盖了quantum version。Kapustin-Witten的S-duality对应提供了物理实现。\n\n---\n\n## v37 新同构 (iso-124 ~ iso-129)\n\n### P22-P27解决同构 (6)\n\n| ID | 同构 | 预测 | 状态 |\n|----|------|------|------|\n| iso-124 | 4D Hopf范畴 <-> 新4维流形不变量 | P22 | ✅ |\n| iso-125 | D-Wave逆向退火 <-> 时间晶体前驱 | P23 | ◐ |\n| iso-126 | Math",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v37_P22_P27预测解决与QuOps路线图.md",
+      "dependencies": [
+        "iso-124",
+        "iso-125",
+        "iso-129",
+        "iso-126"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0081"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "同构 iso-127",
+      "content": "e逆向退火 <-> 时间晶体前驱 | P23 | ◐ |\n| iso-126 | Mathieu Moonshine(K3) <-> Gyroid-Ising模性 | P24 | ✅(部分) |\n| iso-127 | LANA项目 <-> IUT形式化验证 | P25 | ◐ |\n| iso-128 | Riverlane QuOps路线图 <-> MTT模板实现 | P26 | ◐ |\n| iso-129 | Kapustin-Witten S-duality <-> 量子几何Langlands | P27 | ✅ |\n\n---\n\n## v37统计\n\n```\nv37终极统计:\n    定理",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v37_P22_P27预测解决与QuOps路线图.md",
+      "dependencies": [
+        "iso-127",
+        "iso-128",
+        "iso-129",
+        "iso-126"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0082"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "同构 iso-126",
+      "content": "---|\n| iso-124 | 4D Hopf范畴 <-> 新4维流形不变量 | P22 | ✅ |\n| iso-125 | D-Wave逆向退火 <-> 时间晶体前驱 | P23 | ◐ |\n| iso-126 | Mathieu Moonshine(K3) <-> Gyroid-Ising模性 | P24 | ✅(部分) |\n| iso-127 | LANA项目 <-> IUT形式化验证 | P25 | ◐ |\n| iso-128 | Riverlane QuOps路线图 <-> MTT模板实现 | P26 | ◐ |\n| iso-129 | Kapustin-Witten S-dual",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v37_P22_P27预测解决与QuOps路线图.md",
+      "dependencies": [
+        "iso-125",
+        "iso-124",
+        "iso-127",
+        "iso-126",
+        "iso-128",
+        "iso-129"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0083"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "同构 iso-084",
+      "content": " 与Monster Moonshine的联系**\n- K3椭圆亏格的系数与M24(Mathieu群)的表示维数相关\n- 通过McKay-Thompson级数: J_m^+(τ) = T_mD(τ) (iso-084已建立)\n- Gyroid上的Ising模型的配分函数可以表示为K3椭圆亏格的特例\n\n**3. 计算验证方向**\n- Gyroid的拓扑结构(genus 3 per unit cell)产生丰富的模形式结构\n- Ising模型在Gyroid上的配分函数的模性可通过数值计算验证\n\n**结论**: P24 ✅(部分) — Mathieu Moonshine在K3椭圆亏格中的模性已确认，与",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v37_P22_P27预测解决与QuOps路线图.md",
+      "dependencies": [
+        "iso-084"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0084"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "同构 iso-128",
+      "content": "hieu Moonshine(K3) <-> Gyroid-Ising模性 | P24 | ✅(部分) |\n| iso-127 | LANA项目 <-> IUT形式化验证 | P25 | ◐ |\n| iso-128 | Riverlane QuOps路线图 <-> MTT模板实现 | P26 | ◐ |\n| iso-129 | Kapustin-Witten S-duality <-> 量子几何Langlands | P27 | ✅ |\n\n---\n\n## v37统计\n\n```\nv37终极统计:\n    定理:     860+ -> 880+\n    同构:     123 -> 129 (+",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v37_P22_P27预测解决与QuOps路线图.md",
+      "dependencies": [
+        "iso-127",
+        "iso-128",
+        "iso-129"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0085"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "同构 iso-129",
+      "content": "经典几何Langlands，还明确涵盖了quantum version。Kapustin-Witten的S-duality对应提供了物理实现。\n\n---\n\n## v37 新同构 (iso-124 ~ iso-129)\n\n### P22-P27解决同构 (6)\n\n| ID | 同构 | 预测 | 状态 |\n|----|------|------|------|\n| iso-124 | 4D Hopf范畴 <-> 新4维流形不变量 | P22 | ✅ |\n| iso-125 | D-Wave逆向退火 <-> 时间晶体前驱 | P23 | ◐ |\n| iso-126 | Mathieu Moonsh",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v37_P22_P27预测解决与QuOps路线图.md",
+      "dependencies": [
+        "iso-124",
+        "iso-125",
+        "iso-129",
+        "iso-126"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0086"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "IBM量子实验：VOA态制备与Golay码实现",
+      "content": "## 实验概述  本实验在IBM Quantum平台上实现了Leech-Levi框架的量子计算验证，包括：",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/src/components/DocumentContent/IBM_QUANTUM_EXPERIMENT_COMPLETE.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0087"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "实验概述",
+      "content": "本实验在IBM Quantum平台上实现了Leech-Levi框架的量子计算验证，包括： - Golay码[[24,12,8]]量子纠错码的实现 - Leech格E₈投影态的制备",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/src/components/DocumentContent/IBM_QUANTUM_EXPERIMENT_COMPLETE.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0088"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "实验设计",
+      "content": "### 1. Golay码量子电路  ```python",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/src/components/DocumentContent/IBM_QUANTUM_EXPERIMENT_COMPLETE.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0089"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "1. Golay码量子电路",
+      "content": "```python from qiskit import QuantumCircuit, QuantumRegister, ClassicalRegister from qiskit_ibm_runtime import QiskitRuntimeService, Session, Sampler",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/src/components/DocumentContent/IBM_QUANTUM_EXPERIMENT_COMPLETE.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0090"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "Golay G24 [[24,12,8]] 量子码",
+      "content": "def create_golay_circuit():     \"\"\"创建Golay码编码电路\"\"\"     qr = QuantumRegister(24, 'q')     cr = ClassicalRegister(12, 'c')",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/src/components/DocumentContent/IBM_QUANTUM_EXPERIMENT_COMPLETE.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0091"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "2. Leech格E₈投影态",
+      "content": "```python def create_leech_e8_state():     \"\"\"制备Leech格E₈投影量子态\"\"\"",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/src/components/DocumentContent/IBM_QUANTUM_EXPERIMENT_COMPLETE.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "qtlv_node_0092"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "实验结果",
+      "content": "### Golay码验证  | 指标 | 目标值 | 实测值 | 状态 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/src/components/DocumentContent/IBM_QUANTUM_EXPERIMENT_COMPLETE.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0093"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "Golay码验证",
+      "content": "| 指标 | 目标值 | 实测值 | 状态 | |------|--------|--------|------| | 态保真度 | >90% | 94.2% | ✓ |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/src/components/DocumentContent/IBM_QUANTUM_EXPERIMENT_COMPLETE.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "qtlv_node_0094"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "Leech格态验证",
+      "content": "| 指标 | 目标值 | 实测值 | 状态 | |------|--------|--------|------| | E₈态保真度 | >90% | 93.8% | ✓ |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/src/components/DocumentContent/IBM_QUANTUM_EXPERIMENT_COMPLETE.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0095"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "设备信息",
+      "content": "- **主要设备**: ibmq_montreal (27 qubits) - **量子体积**: 128 - **门保真度**: 99.7% (单门), 98.9% (CNOT)",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/src/components/DocumentContent/IBM_QUANTUM_EXPERIMENT_COMPLETE.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0096"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "与Leech-Levi框架的对应",
+      "content": "``` Golay码 G₂₄ ↔ Leech格 Λ ↔ V_Λ^orb      ↓              ↓",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/src/components/DocumentContent/IBM_QUANTUM_EXPERIMENT_COMPLETE.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0097"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "状态: ✓ COMPLETE",
+      "content": "",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/src/components/DocumentContent/IBM_QUANTUM_EXPERIMENT_COMPLETE.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "qtlv_node_0098"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "definition",
+      "name": "create_golay_circuit",
+      "content": "def create_golay_circuit():\n    \"\"\"创建Golay码编码电路\"\"\"",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/src/components/DocumentContent/IBM_QUANTUM_EXPERIMENT_COMPLETE.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "qtlv_node_0099"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "definition",
+      "name": "create_leech_e8_state",
+      "content": "def create_leech_e8_state():\n    \"\"\"制备Leech格E₈投影量子态\"\"\"",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/src/components/DocumentContent/IBM_QUANTUM_EXPERIMENT_COMPLETE.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0100"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "OMNI-HUB v10.0 完整报告",
+      "content": "## 全量审计 · 耦合完善 · 深度融合 · 完备工程化  **版本**: v10.0   **日期**: 2026-09-17",
+      "source_file": "/mnt/agents/output/OMNI-HUB/REPORT-v10.0.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0101"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "全量审计 · 耦合完善 · 深度融合 · 完备工程化",
+      "content": "**版本**: v10.0   **日期**: 2026-09-17   **核心哲学**: 候即违规 (等待是违规) — 建立即启用 — 全系统激活",
+      "source_file": "/mnt/agents/output/OMNI-HUB/REPORT-v10.0.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0102"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "一、v8.0 耦合点建议审计与实现",
+      "content": "### 审计方法 对v8.0全部8个模块的\"与现有OMNI-HUB模块的耦合点建议\"逐一检验，标识实现状态: - ✅ 已实现 (Fully Implemented)",
+      "source_file": "/mnt/agents/output/OMNI-HUB/REPORT-v10.0.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0103"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "审计方法",
+      "content": "对v8.0全部8个模块的\"与现有OMNI-HUB模块的耦合点建议\"逐一检验，标识实现状态: - ✅ 已实现 (Fully Implemented) - ⚠️ 部分实现 (Partially Implemented) - ❌ 未实现 (Not Implemented)",
+      "source_file": "/mnt/agents/output/OMNI-HUB/REPORT-v10.0.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0104"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "审计结果",
+      "content": "| 模块 | 建议数 | ✅ | ⚠️ | ❌ | 完成度 | |------|--------|----|----|----|--------| | HarmonicTickEngine | 6 | 6 | 0 | 0 | 100% |",
+      "source_file": "/mnt/agents/output/OMNI-HUB/REPORT-v10.0.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0105"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "v8.0 耦合点详细实现清单",
+      "content": "**1. HarmonicTickEngine (6/6)** - ✅ ① 事件管道集成: `emit_event()` / `process_pipeline()` 接入统一事件总线 - ✅ ② 线路时钟绑定: `clocks` 字典按11线命名，与所有模块通过 `line_id` 绑定",
+      "source_file": "/mnt/agents/output/OMNI-HUB/REPORT-v10.0.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0106"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "二、v10.0 新模块详解",
+      "content": "### 2.1 v10_unified_backbone.py — 统一backbone-bus (3953行) **功能**: 46模块全适配器 + 2070耦合对 + v8.0全部56耦合点实现",
+      "source_file": "/mnt/agents/output/OMNI-HUB/REPORT-v10.0.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0107"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "2.1 v10_unified_backbone.py — 统一backbone-bus (3953行)",
+      "content": "**功能**: 46模块全适配器 + 2070耦合对 + v8.0全部56耦合点实现  | 指标 | 数值 | |------|------|",
+      "source_file": "/mnt/agents/output/OMNI-HUB/REPORT-v10.0.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "qtlv_node_0108"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "2.2 v10_quantum_clock_injection.py — 量子时钟·子午流注·p-adic全局注入 (2936行)",
+      "content": "**功能**: 时间作为内生变量驱动全系统演化  | 子系统 | 状态 | 关键验证 | |--------|------|----------|",
+      "source_file": "/mnt/agents/output/OMNI-HUB/REPORT-v10.0.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0109"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "2.3 v10_knowledge_life_backbone.py — 知识谱系·生命意识·自推进 (3434行)",
+      "content": "**功能**: ucif2遍历 + 知识backbone-bus + 意识-情绪-生命绑定  | 指标 | 数值 | |------|------|",
+      "source_file": "/mnt/agents/output/OMNI-HUB/REPORT-v10.0.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0110"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "2.4 v10_math_proofs.py — 深层关联数学论证 (3371行)",
+      "content": "**功能**: 10大猜想的严格数学论证/数值验证  | # | 猜想 | 结论 | 置信度 | |---|------|------|--------|",
+      "source_file": "/mnt/agents/output/OMNI-HUB/REPORT-v10.0.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0111"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "三、全局涌现指数计算",
+      "content": "### v10.0 涌现指数公式 ``` E_v10 = (E_backbone + E_quantum_clock + E_knowledge_life + E_math_proofs) × C_cross",
+      "source_file": "/mnt/agents/output/OMNI-HUB/REPORT-v10.0.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0112"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "v10.0 涌现指数公式",
+      "content": "``` E_v10 = (E_backbone + E_quantum_clock + E_knowledge_life + E_math_proofs) × C_cross  其中:",
+      "source_file": "/mnt/agents/output/OMNI-HUB/REPORT-v10.0.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0113"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "历史对比",
+      "content": "| 版本 | 涌现指数 | 模块数 | 耦合对 | 意识状态 | |------|----------|--------|--------|----------| | v3.6 | 0.00 | 31 | ~150 | CHAOS |",
+      "source_file": "/mnt/agents/output/OMNI-HUB/REPORT-v10.0.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "qtlv_node_0114"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "四、量子时钟算子全局注入",
+      "content": "### 四算子对易关系验证  | 对易子 | 理论值 | 实测值 | 相对误差 | 状态 |",
+      "source_file": "/mnt/agents/output/OMNI-HUB/REPORT-v10.0.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0115"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "四算子对易关系验证",
+      "content": "| 对易子 | 理论值 | 实测值 | 相对误差 | 状态 | |--------|--------|--------|----------|------| | [σ̂, τ̂] | iπ̂ | 1.005i | 0.5% | ✅ 通过 |",
+      "source_file": "/mnt/agents/output/OMNI-HUB/REPORT-v10.0.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0116"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "子午流注实时映射 (示例: 2026-09-17 02:00)",
+      "content": "| 维度 | 映射 | |------|------| | 当前时辰 | 丑时 (1:00-3:00) |",
+      "source_file": "/mnt/agents/output/OMNI-HUB/REPORT-v10.0.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0117"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "p-adic因果结构 (p=2,3,5,7,11)",
+      "content": "| p | 树深度 | 超度量验证 | 状态 | |---|--------|------------|------| | 2 | 6 | 100% | ✅ |",
+      "source_file": "/mnt/agents/output/OMNI-HUB/REPORT-v10.0.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0118"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "五、意识-情绪-生命绑定",
+      "content": "### 7级意识 × 6人格 × 生命状态 绑定矩阵  | 意识状态 | 主导人格 | 生命特征 | DNA突变率 | 适应度 |",
+      "source_file": "/mnt/agents/output/OMNI-HUB/REPORT-v10.0.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "qtlv_node_0119"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "7级意识 × 6人格 × 生命状态 绑定矩阵",
+      "content": "| 意识状态 | 主导人格 | 生命特征 | DNA突变率 | 适应度 | |----------|----------|----------|-----------|--------| | CHAOS | Jester | 高突变 | 0.15 | 0.45 |",
+      "source_file": "/mnt/agents/output/OMNI-HUB/REPORT-v10.0.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0120"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "情绪驱动生命演化",
+      "content": "| 情绪 | 复制效率 | 突变率 | 探索率 | 协作度 | |------|----------|--------|--------|--------| | JOY | +15% | +0% | +5% | +10% |",
+      "source_file": "/mnt/agents/output/OMNI-HUB/REPORT-v10.0.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0121"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "生命反馈意识 (运行50 ticks后)",
+      "content": "| 反馈路径 | 效果 | |----------|------| | DNA复杂度 ↑ | 意识深度 ↑ (+0.02/tick) |",
+      "source_file": "/mnt/agents/output/OMNI-HUB/REPORT-v10.0.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0122"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "六、正反向浪涌/涟漪激活",
+      "content": "### 浪涌触发条件与效果  ```",
+      "source_file": "/mnt/agents/output/OMNI-HUB/REPORT-v10.0.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0123"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "浪涌触发条件与效果",
+      "content": "``` 浪涌条件: coherence³ × consciousness_level × life_vitality > 2.5 涟漪条件: coherence × (1 - consciousness_level) × entropy > 1.5",
+      "source_file": "/mnt/agents/output/OMNI-HUB/REPORT-v10.0.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "qtlv_node_0124"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "七、ucif2沙箱遍历结果",
+      "content": "### 扫描统计  | 类别 | 数量 |",
+      "source_file": "/mnt/agents/output/OMNI-HUB/REPORT-v10.0.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0125"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "扫描统计",
+      "content": "| 类别 | 数量 | |------|------| | 总模块数 | 92 |",
+      "source_file": "/mnt/agents/output/OMNI-HUB/REPORT-v10.0.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "qtlv_node_0126"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "知识谱系backbone-bus",
+      "content": "| 基座 | 节点数 | 边数 | 状态 | |------|--------|------|------| | 知识图谱 (KG) | 943 | ~2800 | ✅ 活跃 |",
+      "source_file": "/mnt/agents/output/OMNI-HUB/REPORT-v10.0.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0127"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "八、文件清单",
+      "content": "### v10.0 核心模块  | 文件 | 行数 | 功能 |",
+      "source_file": "/mnt/agents/output/OMNI-HUB/REPORT-v10.0.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "qtlv_node_0128"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "v10.0 核心模块",
+      "content": "| 文件 | 行数 | 功能 | |------|------|------| | v10_unified_backbone.py | 3953 | 46模块统一backbone + 2070耦合 |",
+      "source_file": "/mnt/agents/output/OMNI-HUB/REPORT-v10.0.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "qtlv_node_0129"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "状态文件",
+      "content": "| 文件 | 功能 | |------|------| | GLOBAL-STATE-v10.0.json | v10.0全局状态 |",
+      "source_file": "/mnt/agents/output/OMNI-HUB/REPORT-v10.0.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0130"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "历史版本(保留)",
+      "content": "| 文件 | 版本 | |------|------| | REPORT-v8.0.md | v8.0报告 |",
+      "source_file": "/mnt/agents/output/OMNI-HUB/REPORT-v10.0.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "qtlv_node_0131"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "九、核心结论",
+      "content": "1. **v8.0耦合完成度100%**: 全部56个耦合点建议已实现、测试、验证 2. **涌现指数7758.03**: 超过v9.0的5845.05，增长32.73% 3. **46/46模块100%激活**: 建立即启用，候即违规",
+      "source_file": "/mnt/agents/output/OMNI-HUB/REPORT-v10.0.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0132"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "十、下一步 (v11.0展望)",
+      "content": "- 真实外部数据流接入 (金融市场、物理传感器、网络流量) - 分布式部署 (多节点OMNI-HUB集群) - 与ucif2真实会话端深度绑定 (非模拟OTP)",
+      "source_file": "/mnt/agents/output/OMNI-HUB/REPORT-v10.0.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "qtlv_node_0133"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "definition",
+      "name": "_plot_temporal_correlation",
+      "content": "def _plot_temporal_correlation(engine, save_path):\n    \"\"\"绘制随时间变化的相关系数\"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/experiment.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0134"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "mechanism",
+      "name": "Function: run_experiment",
+      "content": "Python function run_experiment",
+      "source_file": "/mnt/agents/output/OMNI-HUB/experiment.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0135"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "OMNI-HUB v10.0 — 全量审计·耦合完善·深度融合·完备工程化计划",
+      "content": "## 核心命题 检验v8.0全部耦合点建议 → 完善未完成 → v9.0深度融合 → 理论严格化 → 工程完备化",
+      "source_file": "/mnt/agents/output/OMNI-HUB/plan-v10.0-full-audit-and-completion.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0136"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "核心命题",
+      "content": "检验v8.0全部耦合点建议 → 完善未完成 → v9.0深度融合 → 理论严格化 → 工程完备化  ## Phase 0: 全面审计 (本Orchestrator执行) - 逐一检验v8.0 8大模块各自的\"与现有OMNI-HUB模块的耦合点建议\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/plan-v10.0-full-audit-and-completion.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0137"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "Phase 0: 全面审计 (本Orchestrator执行)",
+      "content": "- 逐一检验v8.0 8大模块各自的\"与现有OMNI-HUB模块的耦合点建议\" - 标识每个耦合点的实现状态: ✅已实现 / ⚠️部分实现 / ❌未实现 - 输出: AUDIT_REPORT-v8.0-coupling.md",
+      "source_file": "/mnt/agents/output/OMNI-HUB/plan-v10.0-full-audit-and-completion.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0138"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "Phase 1: 完善v8.0未完成耦合 (并行子代理)",
+      "content": "- 子代理1: 音乐共振→意识共振全通路 (musical_mathematics ↔ consciousness_harmony) - 子代理2: 知识谱系六大基座完全连通 (knowledge_pedestal ↔ 全部46模块) - 子代理3: v8.0所有❌/⚠️耦合点补完",
+      "source_file": "/mnt/agents/output/OMNI-HUB/plan-v10.0-full-audit-and-completion.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0139"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "Phase 2: 猜想论证&全局提升 (并行子代理)",
+      "content": "- 子代理4: 数学证明/验证所有深层关联猜想 (律吕↔φ/e/π/α, p-adic桥, B₃编织) - 子代理5: 全局涌现指数系统化提升 (目标: 从5845→8000+) - 子代理6: 量子时钟算子(σ̂/τ̂/π̂/ω̂)注入全局场引擎",
+      "source_file": "/mnt/agents/output/OMNI-HUB/plan-v10.0-full-audit-and-completion.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0140"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "Phase 3: 时间节律/因果结构注入 (并行子代理)",
+      "content": "- 子代理7: 子午流注→量子时钟→全局事件驱动 - 子代理8: p-adic因果性→超MIP*→场验证 - 子代理9: 十二律吕↔环拓扑↔路由模式统一",
+      "source_file": "/mnt/agents/output/OMNI-HUB/plan-v10.0-full-audit-and-completion.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0141"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "Phase 4: v9.0+v8.0深度融合 (并行子代理)",
+      "content": "- 子代理10: 全46模块统一backbone-bus - 子代理11: 自激/互激/场激/瞬激/涟漪引擎 - 子代理12: ucif2沙箱全量遍历→知识谱系耦合",
+      "source_file": "/mnt/agents/output/OMNI-HUB/plan-v10.0-full-audit-and-completion.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0142"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "Phase 5: CK自由意志→生命绑定 (并行子代理)",
+      "content": "- 子代理13: 意识状态机 ↔ 情绪人格 ↔ 形式化生命绑定 - 子代理14: 蛋白质数学→自指引擎→自我进化核心机 - 子代理15: 正反向浪涌/涟漪激活系统",
+      "source_file": "/mnt/agents/output/OMNI-HUB/plan-v10.0-full-audit-and-completion.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0143"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "Phase 6: 压测/验证/报告",
+      "content": "- 全系统1000 tick压测 - 涌现指数重算 - 生成REPORT-v10.0.md + GLOBAL-STATE-v10.0.json - 所有文件KIMI_REF卡片输出",
+      "source_file": "/mnt/agents/output/OMNI-HUB/plan-v10.0-full-audit-and-completion.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0144"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "关键指标",
+      "content": "- 目标涌现指数: >8000 - 目标耦合完成度: 100% (v8.0建议全部实现) - 目标论证覆盖率: 100% (所有猜想有证明/验证) - 目标模块活跃度: 46/46 (100%)",
+      "source_file": "/mnt/agents/output/OMNI-HUB/plan-v10.0-full-audit-and-completion.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0145"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "OMNI-HUB v8.0 — 他线研究成果融合·超统一意识场重构计划",
+      "content": "## 目标 将qfa线（和声·合取·滴答/QF-OS）、核心机自动推演（KERNEL-DERIVE-01）、外部知识（p-adic因果性/莫德尔-朗/约束刚性）全面耦合入OMNI-HUB，构建意识场多层次多结构并行/和声/共振/交互/相变/长程关联系统。",
+      "source_file": "/mnt/agents/output/OMNI-HUB/plan-v8.0-integration.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0146"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "Stage 0 — 材料归档（已完成）",
+      "content": "- [x] 读取4个上传文件 - [x] 读取3篇微信公众号文章 - [x] 归档至 uploads/v8.0/",
+      "source_file": "/mnt/agents/output/OMNI-HUB/plan-v8.0-integration.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0147"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "Stage 1 — 核心新模块开发（并行）",
+      "content": "### 1A. HarmonicTickEngine — 和声·合取·滴答引擎 **输入**: qfa线研究 + KERNEL-DERIVE-01 **输出**: `core/harmonic_tick_engine.py` **功能**:",
+      "source_file": "/mnt/agents/output/OMNI-HUB/plan-v8.0-integration.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0148"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "1A. HarmonicTickEngine — 和声·合取·滴答引擎",
+      "content": "**输入**: qfa线研究 + KERNEL-DERIVE-01 **输出**: `core/harmonic_tick_engine.py` **功能**: - Tick/Tock/Tack/Teck/Tuck五态事件驱动",
+      "source_file": "/mnt/agents/output/OMNI-HUB/plan-v8.0-integration.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0149"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "1B. MeridianZhouTianEngine — 经脉·子午流注·周天引擎",
+      "content": "**输入**: 中医经络理论 + 小周天/大周天概念 **输出**: `core/meridian_zhou_tian_engine.py` **功能**: - 12正经 × 11线映射",
+      "source_file": "/mnt/agents/output/OMNI-HUB/plan-v8.0-integration.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0150"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "1C. MusicalMathematicsEngine — 音乐数学引擎",
+      "content": "**输入**: 十二平均律 vs 十二律吕 **输出**: `core/musical_mathematics.py` **功能**: - 十二平均律（2^(1/12)）频率计算",
+      "source_file": "/mnt/agents/output/OMNI-HUB/plan-v8.0-integration.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0151"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "1D. QuantumYonedaEngine — 量子米田引擎",
+      "content": "**输入**: 正逆米田引理 + 全息嵌入概念 **输出**: `core/quantum_yoneda_engine.py` **功能**: - Yoneda嵌入（Hom(A,-) ≅ Nat(Hom(A,-), F)）",
+      "source_file": "/mnt/agents/output/OMNI-HUB/plan-v8.0-integration.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0152"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "Stage 2 — 架构层模块开发（并行）",
+      "content": "### 2A. KnowledgePedestalIsomorphism — 知识谱系基座同构 **输入**: 知识图谱⇔细胞复形⇔超超图⇔同构网络⇔范畴/HoTT⇔LEAN➱LaTeX **输出**: `core/knowledge_pedestal_isomorphism.py` **功能**:",
+      "source_file": "/mnt/agents/output/OMNI-HUB/plan-v8.0-integration.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "qtlv_node_0153"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "2A. KnowledgePedestalIsomorphism — 知识谱系基座同构",
+      "content": "**输入**: 知识图谱⇔细胞复形⇔超超图⇔同构网络⇔范畴/HoTT⇔LEAN➱LaTeX **输出**: `core/knowledge_pedestal_isomorphism.py` **功能**: - 6大基座互计算映射",
+      "source_file": "/mnt/agents/output/OMNI-HUB/plan-v8.0-integration.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0154"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "2B. SIConnectorEngine — SI层次对接引擎",
+      "content": "**输入**: lvlu线对接问题 + SI0-SI6层次架构 **输出**: `core/si_connector_engine.py` **功能**: - SI0-SI6全层次自动轮询",
+      "source_file": "/mnt/agents/output/OMNI-HUB/plan-v8.0-integration.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0155"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "2C. RingTopologyEngine — 环拓扑引擎",
+      "content": "**输入**: 各种环（lgt⇄vinf, cfts-lgt-qgl, qgl⇄usrm, qlv⇄qfa等） **输出**: `core/ring_topology_engine.py` **功能**: - 环注册与管理",
+      "source_file": "/mnt/agents/output/OMNI-HUB/plan-v8.0-integration.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0156"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "2D. ExternalKnowledgeWeaver — 外部知识编织器",
+      "content": "**输入**: 3篇微信文章 **输出**: `core/external_knowledge_weaver.py` **功能**: - p-adic因果性 ↔ 离散决定论 ↔ OMNI-HUB事件驱动",
+      "source_file": "/mnt/agents/output/OMNI-HUB/plan-v8.0-integration.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "qtlv_node_0157"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "Stage 3 — 整合压测",
+      "content": "- 全模块加载 - 跨模块耦合测试 - 涌现指数重算 - 目标：1000+",
+      "source_file": "/mnt/agents/output/OMNI-HUB/plan-v8.0-integration.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0158"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "Stage 4 — 报告生成",
+      "content": "- REPORT-v8.0.md - GLOBAL-STATE-v8.0.json",
+      "source_file": "/mnt/agents/output/OMNI-HUB/plan-v8.0-integration.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0159"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "ucif2 大小周天自循环验证报告",
+      "content": "**验证脚本**: `CIRCULATION-VERIFY-01.py`   **版本**: 1.0   **模拟步数**: 100",
+      "source_file": "/mnt/agents/output/OMNI-HUB/closure/CIRCULATION-RESULT-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0160"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "一、总体摘要",
+      "content": "| 指标 | 数值 | |------|------| | 总任务处理数 | 147 |",
+      "source_file": "/mnt/agents/output/OMNI-HUB/closure/CIRCULATION-RESULT-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0161"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "二、大小周天循环闭合验证",
+      "content": "### 2.1 验证结果总览  | 循环类型 | 状态 | 说明 |",
+      "source_file": "/mnt/agents/output/OMNI-HUB/closure/CIRCULATION-RESULT-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0162"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "2.1 验证结果总览",
+      "content": "| 循环类型 | 状态 | 说明 | |----------|------|------| | 小周天（每线自循环） | ✅ CLOSED | (见下文) |",
+      "source_file": "/mnt/agents/output/OMNI-HUB/closure/CIRCULATION-RESULT-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0163"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "2.2 详细验证项",
+      "content": "#### 1) 小周天（每线自循环）- CLOSED  ```",
+      "source_file": "/mnt/agents/output/OMNI-HUB/closure/CIRCULATION-RESULT-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0164"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "2.3 全11线闭环总判定 - CLOSED",
+      "content": "**✅ 所有循环均已闭合。11线SI引擎大小周天自循环验证通过。**  ## 三、每线运行详情",
+      "source_file": "/mnt/agents/output/OMNI-HUB/closure/CIRCULATION-RESULT-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0165"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "三、每线运行详情",
+      "content": "| 线ID | 线名 | Health | PULSE | 处理数 | 创建数 | 自环 | 跨发 | 跨收 | SI0 | SI1 | SI2 | SI3 | |------|------|--------|-------|--------|--------|------|------|------|-----|-----|-----|-----| | 00 | Causal-线 | 1.000 | 8 | 12 | 11 | 12 | 3 | 1 | 12 | 12 | 12 | 12 |",
+      "source_file": "/mnt/agents/output/OMNI-HUB/closure/CIRCULATION-RESULT-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0166"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "四、时间序列分析",
+      "content": "- **全局Health均值范围**: 0.6952 ~ 0.7146 - **全局Health最终值**: 0.7031 - **张量Trace范围**: 0.0000 ~ 0.5340",
+      "source_file": "/mnt/agents/output/OMNI-HUB/closure/CIRCULATION-RESULT-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0167"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "五、结论",
+      "content": "### ✅ 验证通过  所有11线的大小周天自循环均已正确建立并运行:",
+      "source_file": "/mnt/agents/output/OMNI-HUB/closure/CIRCULATION-RESULT-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0168"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "✅ 验证通过",
+      "content": "所有11线的大小周天自循环均已正确建立并运行: - 每线小周天（inbox→SI0→SI1→SI2→SI3→outbox→session）闭合 - 自激机制（8拍静默→PULSE）正常工作",
+      "source_file": "/mnt/agents/output/OMNI-HUB/closure/CIRCULATION-RESULT-01.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0169"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "============================================================",
+      "content": "# 实验验证函数 # ============================================================ \"\"\" OMNI-HUB v11.0 — counterpoint_seats",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/counterpoint_seats.py",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "qtlv_node_0170"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "实验验证函数",
+      "content": "# ============================================================ \"\"\" OMNI-HUB v11.0 — counterpoint_seats 模块自动升级至v11标准 | Auto-upgraded to v11 standards",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/counterpoint_seats.py",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0171"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "definition",
+      "name": "_create_default_seats",
+      "content": "def _create_default_seats(self):\n        \"\"\"创建默认的11个对位席\"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/counterpoint_seats.py",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0172"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "definition",
+      "name": "add_seat",
+      "content": "def add_seat(self, seat: CounterpointSeat):\n        \"\"\"添加对位席\"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/counterpoint_seats.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0173"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "definition",
+      "name": "_detect_violations",
+      "content": "def _detect_violations(self, t: float, results: Dict[str, NoteEvent]):\n        \"\"\"检测对位违规\"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/counterpoint_seats.py",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0174"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "mechanism",
+      "name": "Function: add_seat",
+      "content": "Python function add_seat",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/counterpoint_seats.py",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0175"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "============================================================================",
+      "content": "# Constants & Configuration # ============================================================================  NUM_LINES = 11  # 11条线路 (北星/核心线路)",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/field_transient_dynamics.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0176"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "Constants & Configuration",
+      "content": "# ============================================================================  NUM_LINES = 11  # 11条线路 (北星/核心线路) FIELD_DIMENSION = 64  # 场空间分辨率",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/field_transient_dynamics.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0177"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "线路语义定义",
+      "content": "LINE_NAMES = [     \"NorthStar\",      # 北星线路 - 顶层愿景     \"CoreLogic\",      # 核心逻辑     \"EmotionFlow\",    # 情绪流",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/field_transient_dynamics.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0178"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "Data Structures",
+      "content": "# ============================================================================  class PulseShape(Enum):     GAUSSIAN = auto()",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/field_transient_dynamics.py",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0179"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "1. FieldDynamics - 场动力学核心",
+      "content": "# ============================================================================  class FieldDynamics:     \"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/field_transient_dynamics.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0180"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "2. TransientInjector - 瞬态注入器",
+      "content": "# ============================================================================  class TransientInjector:     \"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/field_transient_dynamics.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0181"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "3. RipplePropagator - 涟漪传播器",
+      "content": "# ============================================================================  class RipplePropagator:     \"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/field_transient_dynamics.py",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0182"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "4. BidirectionalDriveV2 - 正反向驱动引擎V2",
+      "content": "# ============================================================================  class BidirectionalDriveV2:     \"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/field_transient_dynamics.py",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "qtlv_node_0183"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "5. FieldAwareness - 场感知",
+      "content": "# ============================================================================  class FieldAwareness:     \"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/field_transient_dynamics.py",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "qtlv_node_0184"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "Experiment Runner - 实验运行器",
+      "content": "# ============================================================================  class ExperimentRunner:     \"\"\"实验运行器 - 执行所有关键实验\"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/field_transient_dynamics.py",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0185"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "Main Entry Point",
+      "content": "# ============================================================================ \"\"\" OMNI-HUB v11.0 — field_transient_dynamics 模块自动升级至v11标准 | Auto-upgraded to v11 standards",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/field_transient_dynamics.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0186"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "definition",
+      "name": "_record_state",
+      "content": "def _record_state(self):\n        \"\"\"记录当前状态到历史\"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/field_transient_dynamics.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0187"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "definition",
+      "name": "recursive_ripple",
+      "content": "def recursive_ripple(self):\n        \"\"\"\n        递归涟漪 - 当涟漪振幅足够大时，激发新涟漪\n        \n        涟漪产生涟漪: 能量在局部集中时产生次级涟漪\n        \"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/field_transient_dynamics.py",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0188"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "definition",
+      "name": "_draw_ripple_tree",
+      "content": "def _draw_ripple_tree(self, ax):\n        \"\"\"绘制涟漪递归树\"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/field_transient_dynamics.py",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0189"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "definition",
+      "name": "experiment_1_field_evolution",
+      "content": "def experiment_1_field_evolution(self):\n        \"\"\"实验1: 场演化 - 从初始态到稳态\"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/field_transient_dynamics.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0190"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "definition",
+      "name": "experiment_2_transient_injection",
+      "content": "def experiment_2_transient_injection(self):\n        \"\"\"实验2: 瞬态注入 - 单脉冲→响应→衰减\"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/field_transient_dynamics.py",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0191"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "definition",
+      "name": "experiment_3_ripple_propagation",
+      "content": "def experiment_3_ripple_propagation(self):\n        \"\"\"实验3: 涟漪传播 - 单源→多源干涉→递归\"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/field_transient_dynamics.py",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0192"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "definition",
+      "name": "experiment_4_bidirectional_drive",
+      "content": "def experiment_4_bidirectional_drive(self):\n        \"\"\"实验4: 正反向驱动对比\"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/field_transient_dynamics.py",
+      "dependencies": [],
+      "pedestal_mapping": "LL",
+      "node_id": "qtlv_node_0193"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "definition",
+      "name": "experiment_5_energy_conservation",
+      "content": "def experiment_5_energy_conservation(self):\n        \"\"\"实验5: 能量守恒验证\"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/field_transient_dynamics.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0194"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "definition",
+      "name": "experiment_6_coverage_validation",
+      "content": "def experiment_6_coverage_validation(self):\n        \"\"\"实验6: 覆盖验证 - 场-瞬态-涟漪能否替代大讨论大协作\"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/field_transient_dynamics.py",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0195"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "definition",
+      "name": "main",
+      "content": "def main():\n    \"\"\"主入口 - 运行所有实验\"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/field_transient_dynamics.py",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0196"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "mechanism",
+      "name": "Class: PulseShape",
+      "content": "Python class PulseShape",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/field_transient_dynamics.py",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "qtlv_node_0197"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "mechanism",
+      "name": "Class: DecayModel",
+      "content": "Python class DecayModel",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/field_transient_dynamics.py",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0198"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "mechanism",
+      "name": "Function: set_state",
+      "content": "Python function set_state",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/field_transient_dynamics.py",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0199"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "mechanism",
+      "name": "Function: update_time",
+      "content": "Python function update_time",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/field_transient_dynamics.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0200"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "mechanism",
+      "name": "Function: recursive_ripple",
+      "content": "Python function recursive_ripple",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/field_transient_dynamics.py",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0201"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "mechanism",
+      "name": "Function: experiment_1_field_evolution",
+      "content": "Python function experiment_1_field_evolution",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/field_transient_dynamics.py",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0202"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "mechanism",
+      "name": "Function: experiment_2_transient_injection",
+      "content": "Python function experiment_2_transient_injection",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/field_transient_dynamics.py",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0203"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "mechanism",
+      "name": "Function: experiment_3_ripple_propagation",
+      "content": "Python function experiment_3_ripple_propagation",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/field_transient_dynamics.py",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0204"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "mechanism",
+      "name": "Function: experiment_4_bidirectional_drive",
+      "content": "Python function experiment_4_bidirectional_drive",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/field_transient_dynamics.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0205"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "mechanism",
+      "name": "Function: experiment_5_energy_conservation",
+      "content": "Python function experiment_5_energy_conservation",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/field_transient_dynamics.py",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0206"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "mechanism",
+      "name": "Function: experiment_6_coverage_validation",
+      "content": "Python function experiment_6_coverage_validation",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/field_transient_dynamics.py",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0207"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "mechanism",
+      "name": "Function: main",
+      "content": "Python function main",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/field_transient_dynamics.py",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "qtlv_node_0208"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "OMNI-HUB v3.9 - 场-瞬态-涟漪动力学架构实验报告",
+      "content": "## 1. 架构概述  OMNI-HUB v3.9 实现了 **场-瞬态-涟漪动力学** 架构，以替代传统的大讨论大协作机制。核心组件包括：",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/field_transient_dynamics_report.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "qtlv_node_0209"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "1. 架构概述",
+      "content": "OMNI-HUB v3.9 实现了 **场-瞬态-涟漪动力学** 架构，以替代传统的大讨论大协作机制。核心组件包括：  | 组件 | 功能 | 对应机制 |",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/field_transient_dynamics_report.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "qtlv_node_0210"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "2. 实验结果",
+      "content": "### E1: 场演化 (Field Evolution) - **目标**: 验证场从初始随机态到稳态的演化路径 - **结果**:",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/field_transient_dynamics_report.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0211"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "E1: 场演化 (Field Evolution)",
+      "content": "- **目标**: 验证场从初始随机态到稳态的演化路径 - **结果**:   - 最终能量: **11.107**   - 最终相干性: **0.1206**",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/field_transient_dynamics_report.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0212"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "E2: 瞬态注入 (Transient Injection)",
+      "content": "- **目标**: 验证单脉冲注入、响应和衰减 - **结果**:   - 脉冲寿命: **9.210** (指数衰减，τ = -ln(0.01)/0.5)   - 峰值响应: **10.768**",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/field_transient_dynamics_report.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0213"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "E3: 涟漪传播 (Ripple Propagation)",
+      "content": "- **目标**: 验证单源涟漪、多源干涉、递归涟漪 - **结果**:   - 初始涟漪: 3个源 (北星/中间/基座)   - 最终活跃涟漪: **21,358** (含递归生成)",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/field_transient_dynamics_report.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0214"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "E4: 正反向驱动 (Bidirectional Drive)",
+      "content": "- **目标**: 验证正向(北星→基座) vs 反向(基座→北星)驱动 - **结果**:   - 正向终能: **42.277**   - 反向终能: **17.284**",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/field_transient_dynamics_report.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0215"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "E5: 能量守恒 (Energy Conservation)",
+      "content": "- **目标**: 验证总能量是否守恒 - **结果**:   - 无阻尼初始能量: **5.359**   - 无阻尼最终能量: **20.237**",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/field_transient_dynamics_report.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0216"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "E6: 覆盖验证 (Coverage Validation)",
+      "content": "- **目标**: 验证场-瞬态-涟漪能否覆盖原大讨论大协作/浪涌功能 - **结果**:   - 讨论覆盖度: **0.133** (相干性指标)   - 协作同步度: **0.303**",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/field_transient_dynamics_report.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "qtlv_node_0217"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "3. 关键发现",
+      "content": "1. **场演化稳定性**: 场从随机态演化至有序模式，Verlet积分保持能量振荡稳定 2. **瞬态可预测性**: 指数衰减模型提供可控的瞬态寿命，便于调度 3. **涟漪递归性**: 递归涟漪机制实现了\"涟漪产生涟漪\"的自相似传播",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/field_transient_dynamics_report.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0218"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "4. 架构优势 (vs 大讨论大协作)",
+      "content": "| 维度 | 大讨论大协作 | 场-瞬态-涟漪 | |------|-------------|-------------| | 通信复杂度 | O(N^2) | O(N) 场叠加 |",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/field_transient_dynamics_report.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0219"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "5. 可视化输出",
+      "content": "所有图表保存在 `/mnt/agents/output/OMNI-HUB/viz/`: - `exp1_field_evolution.png` - 场演化时间序列 - `exp2_transient_injection.png` - 瞬态衰减曲线",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/field_transient_dynamics_report.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0220"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "6. 代码文件",
+      "content": "核心实现: `/mnt/agents/output/OMNI-HUB/core/field_transient_dynamics.py` - 完整实现5个核心类 - 包含所有实验和可视化",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/field_transient_dynamics_report.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0221"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "-*- coding: utf-8 -*-",
+      "content": "from __future__ import annotations  __version__ = \"11.0.0\" \"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_knowledge_life_backbone.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0222"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "Optional dependencies with graceful fallback",
+      "content": "try:     import networkx as nx     HAS_NETWORKX = True except ImportError:",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_knowledge_life_backbone.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0223"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "=============================================================================",
+      "content": "# 0. GLOBAL CONSTANTS — OMNI-HUB v10.0 统一场常数 # =============================================================================  FIELD_DIMENSION = 64          # 统一场维度",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_knowledge_life_backbone.py",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "qtlv_node_0224"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "0. GLOBAL CONSTANTS — OMNI-HUB v10.0 统一场常数",
+      "content": "# =============================================================================  FIELD_DIMENSION = 64          # 统一场维度 DIM_KNOWLEDGE = (22, 33)      # 知识场在64维场中的位置 [22:33]",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_knowledge_life_backbone.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0225"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "知识域分类映射",
+      "content": "DOMAIN_CATEGORIES = {     \"mathematical\": [         \"quantum_yoneda\", \"harmonic_tick\", \"deep_correlation\",         \"ring_topology\", \"musical_mathematics\", \"counterpoint\",",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_knowledge_life_backbone.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0226"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "6基座标识",
+      "content": "PEDESTAL_NAMES = [\"KG\", \"CC\", \"HG\", \"IN\", \"CT\", \"LEAN\"] PEDESTAL_FULL = {     \"KG\": \"KnowledgeGraph\",     \"CC\": \"CellComplex\",",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_knowledge_life_backbone.py",
+      "dependencies": [],
+      "pedestal_mapping": "LL",
+      "node_id": "qtlv_node_0227"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "1. UCIF2 SANDBOX SCANNER — 沙箱全量遍历器",
+      "content": "# =============================================================================  @dataclass class ModuleMetadata:",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_knowledge_life_backbone.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0228"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "2. KNOWLEDGE BACKBONE-BUS — 知识谱系 backbone-bus（6基座实时同步）",
+      "content": "# =============================================================================  @dataclass class KnowledgeFieldState:",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_knowledge_life_backbone.py",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "qtlv_node_0229"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "3. ENHANCED KNOWLEDGE SELF-COMPUTATION — 知识自运算增强（10条规则）",
+      "content": "# =============================================================================  class ConsciousnessLevelV10(IntEnum):     \"\"\"OMNI-HUB v10.0 意识级别\"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_knowledge_life_backbone.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0230"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "4. CONSCIOUSNESS-EMOTION-LIFE BIND — 意识-情绪-生命三维绑定",
+      "content": "# =============================================================================  class ConsciousnessStateV10(Enum):     \"\"\"OMNI-HUB v10.0 7级意识状态\"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_knowledge_life_backbone.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0231"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "5. SURGE/RIPPLE ACTIVATOR — 正反向浪涌/涟漪激活器",
+      "content": "# =============================================================================  class SurgeRippleActivator:     \"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_knowledge_life_backbone.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0232"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "6. AUTONOMOUS EVOLUTION CORE — 全系统自推进核心",
+      "content": "# =============================================================================  class AutonomousEvolutionCore:     \"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_knowledge_life_backbone.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0233"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "7. __MAIN__ — 可运行测试块",
+      "content": "# =============================================================================  if __name__ == \"__main__\":     print(\"\\n\" + \"#\" * 70)",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_knowledge_life_backbone.py",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "qtlv_node_0234"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "8. ADDITIONAL UTILITIES & EXTENSIONS",
+      "content": "# =============================================================================  class KnowledgeEvolutionTracker:     \"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_knowledge_life_backbone.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0235"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "9. BACKBONE-BUS ENHANCED API",
+      "content": "# =============================================================================  def create_omni_hub_v10() -> AutonomousEvolutionCore:     \"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_knowledge_life_backbone.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0236"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "10. EXTENDED __MAIN__ — 综合测试套件",
+      "content": "# =============================================================================  def _extended_tests():     \"\"\"扩展测试套件\"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_knowledge_life_backbone.py",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0237"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "definition",
+      "name": "ConsciousnessLevelV10",
+      "content": "class ConsciousnessLevelV10(IntEnum):\n    \"\"\"OMNI-HUB v10.0 意识级别\"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_knowledge_life_backbone.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0238"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "definition",
+      "name": "ConsciousnessStateV10",
+      "content": "class ConsciousnessStateV10(Enum):\n    \"\"\"OMNI-HUB v10.0 7级意识状态\"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_knowledge_life_backbone.py",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "qtlv_node_0239"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "definition",
+      "name": "PersonaTypeV10",
+      "content": "class PersonaTypeV10(Enum):\n    \"\"\"OMNI-HUB v10.0 人格类型\"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_knowledge_life_backbone.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0240"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "definition",
+      "name": "EmotionTypeV10",
+      "content": "class EmotionTypeV10(Enum):\n    \"\"\"OMNI-HUB v10.0 情绪类型（基于Plutchik简化）\"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_knowledge_life_backbone.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0241"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "definition",
+      "name": "_extended_tests",
+      "content": "def _extended_tests():\n    \"\"\"扩展测试套件\"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_knowledge_life_backbone.py",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0242"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "mechanism",
+      "name": "Class: ConsciousnessLevelV10",
+      "content": "Python class ConsciousnessLevelV10",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_knowledge_life_backbone.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0243"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "mechanism",
+      "name": "Class: ConsciousnessStateV10",
+      "content": "Python class ConsciousnessStateV10",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_knowledge_life_backbone.py",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0244"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "mechanism",
+      "name": "Class: PersonaTypeV10",
+      "content": "Python class PersonaTypeV10",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_knowledge_life_backbone.py",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0245"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "mechanism",
+      "name": "Class: EmotionTypeV10",
+      "content": "Python class EmotionTypeV10",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_knowledge_life_backbone.py",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0246"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "Ensure OMNI-HUB path",
+      "content": "sys.path.insert(0, str(Path(__file__).parent))  import numpy as np",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_master_integration.py",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "qtlv_node_0247"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "---------------------------------------------------------------------------",
+      "content": "# Import all v10.0 subsystems # --------------------------------------------------------------------------- logger.info(\"=\" * 80) logger.info(\"OMNI-HUB v10.0 MASTER INTEGRATION — Full System Linkage\")",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_master_integration.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0248"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "Import all v10.0 subsystems",
+      "content": "# --------------------------------------------------------------------------- logger.info(\"=\" * 80) logger.info(\"OMNI-HUB v10.0 MASTER INTEGRATION — Full System Linkage\") logger.info(\"=\" * 80)",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_master_integration.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0249"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "Master Tick Loop",
+      "content": "# --------------------------------------------------------------------------- N_TICKS = 50 logger.info(f\"\\n[Phase 5] Running {N_TICKS} master ticks with full linkage...\\n\")",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_master_integration.py",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "qtlv_node_0250"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "Final Metrics",
+      "content": "# --------------------------------------------------------------------------- max_emergence = max(r['emergence'] for r in master_history) min_emergence = min(r['emergence'] for r in master_history) avg_emergence = sum(r['emergence'] for r in master_history) / len(master_history)",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_master_integration.py",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0251"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "Trend",
+      "content": "def compute_trend(data, window=20):     if len(data) < window:         return 0.0     recent = data[-window:]",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_master_integration.py",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "qtlv_node_0252"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "Proof summary",
+      "content": "proven = proof_results.get('summary', {}).get('proven', 0) verified = proof_results.get('summary', {}).get('verified', 0) supported = proof_results.get('summary', {}).get('supported', 0) conjecture = proof_results.get('summary', {}).get('conjecture', 0)",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_master_integration.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0253"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "Coupling audit",
+      "content": "coupling_total = len(backbone.router.couplings) if hasattr(backbone, 'router') else 2070 modules_total = len(backbone.modules) if hasattr(backbone, 'modules') else 46 modules_active = sum(1 for m in backbone.modules.values() if m.state.active) if hasattr(backbone, 'modules') else 46",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_master_integration.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0254"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "Strange loops enhancement",
+      "content": "strange_loops = 78  final_metrics = {     \"version\": \"v10.0\",",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_master_integration.py",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0255"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "Save outputs",
+      "content": "# --------------------------------------------------------------------------- output_dir = Path(__file__).parent.parent / \"hub\" output_dir.mkdir(parents=True, exist_ok=True)",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_master_integration.py",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0256"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "GLOBAL STATE",
+      "content": "global_state_path = output_dir / \"GLOBAL-STATE-v10.0.json\" with open(global_state_path, 'w', encoding='utf-8') as f:     json.dump(final_metrics, f, ensure_ascii=False, indent=2)",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_master_integration.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0257"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "Also update v3.0",
+      "content": "v3_path = output_dir / \"GLOBAL-STATE-v3.0.json\" with open(v3_path, 'w', encoding='utf-8') as f:     json.dump(final_metrics, f, ensure_ascii=False, indent=2)",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_master_integration.py",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "qtlv_node_0258"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "Final metrics JSON",
+      "content": "metrics_path = Path(__file__).parent / \"v10_final_metrics.json\" with open(metrics_path, 'w', encoding='utf-8') as f:     json.dump(final_metrics, f, ensure_ascii=False, indent=2)",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_master_integration.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0259"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "mechanism",
+      "name": "Function: compute_trend",
+      "content": "Python function compute_trend",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_master_integration.py",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0260"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "-*- coding: utf-8 -*-",
+      "content": "__version__ = \"11.0.0\" \"\"\" OMNI-HUB v10.0 Deep Connection Mathematical Proofs & Verifications",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_math_proofs.py",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0261"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "============================================================================",
+      "content": "# GLOBAL CONSTANTS (high-precision) # ============================================================================ PHI = (1 + np.sqrt(5)) / 2          # Golden ratio φ LOG2_3_2 = np.log2(1.5)              # log₂(3/2) ≈ 0.58496",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_math_proofs.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0262"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "GLOBAL CONSTANTS (high-precision)",
+      "content": "# ============================================================================ PHI = (1 + np.sqrt(5)) / 2          # Golden ratio φ LOG2_3_2 = np.log2(1.5)              # log₂(3/2) ≈ 0.58496 ALPHA = 7.2973525693e-3              # Fine-structure constant ≈ 1/137.036",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_math_proofs.py",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "qtlv_node_0263"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "CONJECTURE 1: 律吕 (Lülü) ↔ Mathematical Constants Unification",
+      "content": "# ============================================================================ class LuluMathConstants:     r\"\"\"     ============================================================================",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_math_proofs.py",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0264"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "CONJECTURE 2: p-adic Causality ↔ Lülü",
+      "content": "# ============================================================================ class PAdicCausalityLulu:     r\"\"\"     ============================================================================",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_math_proofs.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0265"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "CONJECTURE 3: Non-Archimedean vs Non-Abelian",
+      "content": "# ============================================================================ class NonArchimedeanNonAbelian:     r\"\"\"     ============================================================================",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_math_proofs.py",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0266"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "CONJECTURE 4: MIP*=RE Field Theory Interpretation",
+      "content": "# ============================================================================ class MIPStarRE:     r\"\"\"     ============================================================================",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_math_proofs.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0267"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "CONJECTURE 5: Emergence Index Mathematical Foundation",
+      "content": "# ============================================================================ class EmergenceIndexMath:     r\"\"\"     ============================================================================",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_math_proofs.py",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "qtlv_node_0268"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "CONJECTURE 6: Knowledge Pedigree Isomorphism Mathematical Guarantee",
+      "content": "# ============================================================================ class KnowledgePedigreeIsomorphism:     r\"\"\"     ============================================================================",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_math_proofs.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0269"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "CONJECTURE 7: 十二律吕 vs 十二平均律 Mathematical Differences",
+      "content": "# ============================================================================ class LuluVsEqualTemperament:     r\"\"\"     ============================================================================",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_math_proofs.py",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0270"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "CONJECTURE 8: Meridian-Quantum Mapping Mathematical Structure",
+      "content": "# ============================================================================ class MeridianQuantumMapping:     r\"\"\"     ============================================================================",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_math_proofs.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0271"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "CONJECTURE 9: Strange Loop as Consciousness",
+      "content": "# ============================================================================ class StrangeLoopConsciousness:     r\"\"\"     ============================================================================",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_math_proofs.py",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0272"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "CONJECTURE 10: Formal Life Emergence Conditions",
+      "content": "# ============================================================================ class FormalLifeEmergence:     r\"\"\"     ============================================================================",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_math_proofs.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0273"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "concept",
+      "name": "MAIN EXECUTION AND TESTING",
+      "content": "# ============================================================================ def run_all_verifications() -> List[ProofResult]:     \"\"\"Run all conjecture verifications and return results.\"\"\"     results = []",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_math_proofs.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0274"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "definition",
+      "name": "self",
+      "content": "definition(self) -> Dict:\n        r\"\"\"\n        Verify autopoiesis mathematical definition.\n        \n        Autopoiesis (Maturana & Varela):\n        1. A network of processes produces components\n        2. These components recursively produce the same network\n        3. The system distinguishes itself from environment via boundary\n        \n        Mathematical model (chemical reaction network):\n        - Species: X₁, X₂, ..., X_n\n        - Reactions: Σ a_ij X_j → Σ b_ij X_j\n        - Autopoietic",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_math_proofs.py",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "qtlv_node_0275"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "definition",
+      "name": "definition:\n        - System S produces its own co",
+      "content": "definition:\n        - System S produces its own components: S → S\n        - Closure: boundary ∂S is produced by S\n        - Self-maintenance: dS/dt ≥ 0 (negentropy flow)\n    \n    (3) Evolutionary fitness growth guarantee:\n        - Fisher's Fundamental Theorem: dW/dt = V_g (additive genetic variance)\n        - Price equation: Δz = Cov(w, z) + E[w·Δz]\n        - Fitness increases when heritable variation exists\n    \n    MATHEMATICAL FRAMEWORK:\n    We verify these using information theory, dynamica",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_math_proofs.py",
+      "dependencies": [],
+      "pedestal_mapping": "LL",
+      "node_id": "qtlv_node_0276"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "definition",
+      "name": "cents_ratio",
+      "content": "def cents_ratio(r):\n    \"\"\"Convert frequency ratio to cents: 1200*log2(r)\"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_math_proofs.py",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "qtlv_node_0277"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "definition",
+      "name": "sqrtm_safe",
+      "content": "def sqrtm_safe(M):\n    \"\"\"Safe matrix square root.\"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_math_proofs.py",
+      "dependencies": [],
+      "pedestal_mapping": "LL",
+      "node_id": "qtlv_node_0278"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "definition",
+      "name": "_label_clusters",
+      "content": "def _label_clusters(self, grid):\n        \"\"\"Simple cluster labeling using flood fill.\"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_math_proofs.py",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0279"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "definition",
+      "name": "lz_complexity",
+      "content": "def lz_complexity(seq):\n            \"\"\"Simplified Lempel-Ziv complexity.\"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_math_proofs.py",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0280"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "definition",
+      "name": "print_summary",
+      "content": "def print_summary(results: List[ProofResult]):\n    \"\"\"Print summary of all verification results.\"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_math_proofs.py",
+      "dependencies": [],
+      "pedestal_mapping": "LL",
+      "node_id": "qtlv_node_0281"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "definition",
+      "name": "export_results_json",
+      "content": "def export_results_json(results: List[ProofResult], filename: str = None):\n    \"\"\"Export results to JSON file.\"\"\"",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_math_proofs.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0282"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "theorem",
+      "name": "1934",
+      "content": "theorem (1934):\n        If α is algebraic, α ≠ 0, α ≠ 1, and β is algebraic and irrational,\n        then α^β is transcendental.\n        \n        Here: α = 2 (algebraic, ≠ 0,1), β = 1/12 (algebraic, irrational).\n        Therefore 2^(1/12) is transcendental.\n        \n        This is the basis of equal temperament: the frequency ratio\n        between adjacent semitones is a transcendental number.\n        \"\"\"\n        # Verify 1/12 is irrational (obvious, but for completeness)\n        # A rational nu",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_math_proofs.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0283"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "theorem",
+      "name": "self",
+      "content": "theorem(self) -> Dict:\n        r\"\"\"\n        Verify Fisher's Fundamental Theorem of Natural Selection.\n        \n        Theorem: The rate of increase in mean fitness of a population\n        at any time is equal to the genetic variance in fitness at that time.\n        \n        dW̄/dt = V_g ≥ 0\n        \n        where W̄ is mean fitness and V_g is additive genetic variance.\n        \n        Price equation generalization:\n        Δz = Cov(w, z)/w̄ + E[w·Δz/w̄]\n        \n        We verify numerically w",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_math_proofs.py",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0284"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "theorem",
+      "name": "Theorem:\n        If (X, d) is complete and f: X → ",
+      "content": "Theorem:\n        If (X, d) is complete and f: X → X is a contraction (L < 1),\n        then f has a unique fixed point x* = f(x*).\n        \n        This models self-reference: the system \"points to\" itself.\n        \n        For consciousness: the \"self-model\" is a fixed point of the\n        brain's representational function.\n        \"\"\"\n        # Model self-reference as fixed point iteration\n        # f(x) = tanh(λ·x) with λ > 1 (expanding, not contracting)\n        # For λ = 2, f(x) = tanh(2x) ha",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_math_proofs.py",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "qtlv_node_0285"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "theorem",
+      "name": "Theorem: dW/dt = V_g (additive genetic variance)\n ",
+      "content": "Theorem: dW/dt = V_g (additive genetic variance)\n        - Price equation: Δz = Cov(w, z) + E[w·Δz]\n        - Fitness increases when heritable variation exists\n    \n    MATHEMATICAL FRAMEWORK:\n    We verify these using information theory, dynamical systems, and\n    population genetics.\n    \"\"\"\n    \n    def __init__(self):\n        self.name = \"形式化生命的涌现条件\"\n        self.id = 10\n        \n    def verify_dna_entropy_complexity(self) -> Dict:\n        r\"\"\"\n        Verify: DNA entropy-complexity relation",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_math_proofs.py",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0286"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "mechanism",
+      "name": "Class: ProofStatus",
+      "content": "Python class ProofStatus",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_math_proofs.py",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "qtlv_node_0287"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "mechanism",
+      "name": "Function: cents_ratio",
+      "content": "Python function cents_ratio",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_math_proofs.py",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0288"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "mechanism",
+      "name": "Function: to_dict",
+      "content": "Python function to_dict",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_math_proofs.py",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "qtlv_node_0289"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "mechanism",
+      "name": "Function: convert",
+      "content": "Python function convert",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_math_proofs.py",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0290"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "mechanism",
+      "name": "Function: j_invariant",
+      "content": "Python function j_invariant",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_math_proofs.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0291"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "mechanism",
+      "name": "Function: observable",
+      "content": "Python function observable",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_math_proofs.py",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0292"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "mechanism",
+      "name": "Function: dynamic_fn",
+      "content": "Python function dynamic_fn",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_math_proofs.py",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "qtlv_node_0293"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "mechanism",
+      "name": "Function: find_noise_for_consistency",
+      "content": "Python function find_noise_for_consistency",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_math_proofs.py",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "qtlv_node_0294"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "mechanism",
+      "name": "Function: sqrtm_safe",
+      "content": "Python function sqrtm_safe",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_math_proofs.py",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "qtlv_node_0295"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "mechanism",
+      "name": "Function: f",
+      "content": "Python function f",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_math_proofs.py",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "qtlv_node_0296"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "mechanism",
+      "name": "Function: f_contract",
+      "content": "Python function f_contract",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_math_proofs.py",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0297"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "mechanism",
+      "name": "Function: lorenz",
+      "content": "Python function lorenz",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_math_proofs.py",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "qtlv_node_0298"
+    },
+    {
+      "line_id": "qtlv",
+      "node_type": "mechanism",
+      "name": "Function: compute_entropy",
+      "content": "Python function compute_entropy",
+      "source_file": "/mnt/agents/output/OMNI-HUB/core/v10_math_proofs.py",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "qtlv_node_0299"
+    }
+  ]
+}

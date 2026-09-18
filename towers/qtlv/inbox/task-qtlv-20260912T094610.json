@@ -1,0 +1,10 @@
+{
+  "id": "TASK-qtlv-20260912T094610-4802",
+  "timestamp": "2026-09-12T09:46:10.266728+00:00",
+  "from": "ucif2",
+  "to": "qtlv",
+  "type": "EXPERIMENT",
+  "priority": 1,
+  "description": "EXP-027: GWT-03 mathematical API packaging",
+  "deadline": 4
+}

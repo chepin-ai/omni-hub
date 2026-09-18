@@ -1,0 +1,62 @@
+{
+  "cycle_result_keys": [
+    "cycle",
+    "field_before",
+    "field_after",
+    "circle",
+    "tensor",
+    "status"
+  ],
+  "verification": {
+    "timestamp": "2026-09-17T18:25:14.929735+00:00",
+    "version": "1.2.0",
+    "tests": {
+      "field_state": {
+        "status": "PASS",
+        "energy": 9.242
+      },
+      "circle_topology": {
+        "status": "PASS",
+        "session_count": 11,
+        "matrix_shape": [
+          11,
+          11
+        ]
+      },
+      "tensor_network": {
+        "status": "PASS",
+        "scalar": 16.806943,
+        "node_count": 4
+      },
+      "bridge_field_to_circle": {
+        "status": "PASS",
+        "attachments": 11
+      },
+      "bridge_circle_to_tensor": {
+        "status": "PASS",
+        "scalar": 83.847591
+      },
+      "bridge_tensor_to_field": {
+        "status": "PASS",
+        "cycle_count": 1,
+        "energy_delta": 0.7639
+      },
+      "full_cycle": {
+        "status": "PASS",
+        "cycle": 1
+      },
+      "si11_integration": {
+        "status": "PASS",
+        "line_count": 11,
+        "cycle": 1
+      },
+      "multi_cycle": {
+        "status": "PASS",
+        "n_cycles": 3
+      }
+    },
+    "overall_status": "ALL_PASS",
+    "pass_count": 9,
+    "total_tests": 9
+  }
+}

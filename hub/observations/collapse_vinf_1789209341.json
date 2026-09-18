@@ -1,0 +1,59 @@
+{
+  "operation": "observe_collapse",
+  "line": "vinf",
+  "observer": "ucif2-hub",
+  "trigger_type": "health_check",
+  "timestamp": "2026-09-12T10:35:41.726379+00:00",
+  "description": "ucif2-hub 观测 vinf，触发波函数坍缩",
+  "pre_collapse_state": {
+    "line": "vinf",
+    "amplitudes": {
+      "si0": {
+        "re": 0.5661385170722978,
+        "im": 0.0
+      },
+      "si1": {
+        "re": 0.45291081365783825,
+        "im": 0.0
+      },
+      "si2": {
+        "re": 0.45291081365783825,
+        "im": 0.0
+      },
+      "si3": {
+        "re": 0.45291081365783825,
+        "im": 0.0
+      },
+      "si4": {
+        "re": 0.22645540682891913,
+        "im": 0.0
+      },
+      "si5": {
+        "re": 0.11322770341445956,
+        "im": 0.0
+      }
+    },
+    "probabilities": {
+      "si0": 0.32051282051282043,
+      "si1": 0.2051282051282051,
+      "si2": 0.2051282051282051,
+      "si3": 0.2051282051282051,
+      "si4": 0.05128205128205127,
+      "si5": 0.012820512820512818
+    },
+    "dominant_level": "si0",
+    "timestamp": "2026-09-12T10:35:32.890943+00:00"
+  },
+  "adjusted_probabilities": {
+    "si0": 0.1599,
+    "si1": 0.1023,
+    "si2": 0.3412,
+    "si3": 0.3412,
+    "si4": 0.0341,
+    "si5": 0.0213
+  },
+  "collapsed_to": "si2",
+  "collapse_probability": 0.3412,
+  "uncertainty_before": 1.547717,
+  "uncertainty_after": 0.0
+}

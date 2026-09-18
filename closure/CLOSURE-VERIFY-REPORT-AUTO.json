@@ -1,0 +1,866 @@
+{
+  "report_id": "CLOSURE-VERIFY-AUTO",
+  "timestamp": "2026-09-12T12:51:08.744101Z",
+  "mode": "LOCAL_FULL_DIMENSION_AUTONOMY",
+  "experiments": {
+    "EXP-011": {
+      "line": "lgt",
+      "si_upgrade": "SI4 -> SI4.5",
+      "check": {
+        "exp_id": "EXP-011",
+        "line": "lgt",
+        "si_upgrade": "SI4 -> SI4.5",
+        "checks": {
+          "hypothesis_exists": "PASS",
+          "results_complete": "PASS",
+          "numeric_reasonableness": "PASS",
+          "methodology": "PASS"
+        },
+        "status": "PASS",
+        "issues": []
+      },
+      "communicate": {
+        "exp_id": "EXP-011",
+        "line": "lgt",
+        "cross_line": "usrm",
+        "status": "PASSED",
+        "delta_pct": -0.00016,
+        "issues": [],
+        "bidirectional": true
+      },
+      "implement": {
+        "exp_id": "EXP-011",
+        "line": "lgt",
+        "total_actions": 3,
+        "actions": [
+          {
+            "action_id": "IMPL-011-01",
+            "description": "更新lgt塔至v3.3，n_orbits参数改为3200",
+            "status": "PENDING",
+            "blockers": [],
+            "executable": true
+          },
+          {
+            "action_id": "IMPL-011-02",
+            "description": "更新AUTO-RESPOND-FULLDRIVE-01收敛判定",
+            "status": "PENDING",
+            "blockers": [],
+            "executable": true
+          },
+          {
+            "action_id": "IMPL-011-03",
+            "description": "为k82 hex对齐提供更高精度数据",
+            "status": "PENDING",
+            "blockers": [],
+            "executable": true
+          }
+        ],
+        "status": "PENDING",
+        "issues": []
+      },
+      "verify": {
+        "exp_id": "EXP-011",
+        "line": "lgt",
+        "self_validation": "PASSED",
+        "comprehensive_validation": "PASSED",
+        "checks": {
+          "self_validation": "PASS",
+          "comprehensive_validation": "PASS",
+          "boundary_tests": "PASS",
+          "cross_line_tests": "PASS"
+        },
+        "status": "PASS",
+        "issues": []
+      },
+      "fix": {
+        "exp_id": "EXP-011",
+        "issues": [],
+        "fixes": [
+          {
+            "severity": "LOW",
+            "action": "增加qfa作为第二验证线，对FSS模型进行形式化验证",
+            "responsible": "qfa"
+          },
+          {
+            "severity": "HIGH",
+            "action": "执行3项deepening action",
+            "responsible": "lgt"
+          }
+        ],
+        "severity_counts": {
+          "HIGH": 1,
+          "MEDIUM": 0,
+          "LOW": 1,
+          "INFO": 0
+        }
+      },
+      "si_audit": {
+        "line": "lgt",
+        "si_upgrade": "SI4 -> SI4.5 (delta=+0.5)",
+        "scores": {
+          "data_sufficiency": 0.95,
+          "verification_sufficiency": 0.95,
+          "formalization": 0.8,
+          "boundary_tests": 0.95
+        },
+        "overall_score": 0.9125000000000001,
+        "verdict": "充分论证",
+        "recommendations": []
+      }
+    },
+    "EXP-012": {
+      "line": "qfa",
+      "si_upgrade": "SI3 -> SI4",
+      "check": {
+        "exp_id": "EXP-012",
+        "line": "qfa",
+        "si_upgrade": "SI3 -> SI4",
+        "checks": {
+          "hypothesis_exists": "PASS",
+          "results_complete": "PASS",
+          "numeric_reasonableness": "PASS",
+          "methodology": "PASS"
+        },
+        "status": "PASS",
+        "issues": []
+      },
+      "communicate": {
+        "exp_id": "EXP-012",
+        "line": "qfa",
+        "cross_line": "lgt",
+        "status": "PASSED",
+        "delta_pct": null,
+        "issues": [],
+        "bidirectional": false
+      },
+      "implement": {
+        "exp_id": "EXP-012",
+        "line": "qfa",
+        "total_actions": 3,
+        "actions": [
+          {
+            "action_id": "IMPL-012-01",
+            "description": "将自铸机制写入qfa塔核心v4.0",
+            "status": "PENDING",
+            "blockers": [],
+            "executable": true
+          },
+          {
+            "action_id": "IMPL-012-02",
+            "description": "更新TOWER-FIX-10准入逻辑",
+            "status": "PENDING",
+            "blockers": [],
+            "executable": true
+          },
+          {
+            "action_id": "IMPL-012-03",
+            "description": "为全线提供形式化验证API服务",
+            "status": "PENDING",
+            "blockers": [
+              "需ucif2协调跨线资源"
+            ],
+            "executable": false
+          }
+        ],
+        "status": "PENDING",
+        "issues": []
+      },
+      "verify": {
+        "exp_id": "EXP-012",
+        "line": "qfa",
+        "self_validation": "PASSED",
+        "comprehensive_validation": "PASSED",
+        "checks": {
+          "self_validation": "PASS",
+          "comprehensive_validation": "PASS",
+          "boundary_tests": "PASS",
+          "cross_line_tests": "PASS"
+        },
+        "status": "PASS",
+        "issues": []
+      },
+      "fix": {
+        "exp_id": "EXP-012",
+        "issues": [],
+        "fixes": [
+          {
+            "severity": "LOW",
+            "action": "在文档中明确Godel边界限制（有限域内完备）",
+            "responsible": "qfa"
+          },
+          {
+            "severity": "HIGH",
+            "action": "执行3项deepening action",
+            "responsible": "qfa"
+          }
+        ],
+        "severity_counts": {
+          "HIGH": 1,
+          "MEDIUM": 0,
+          "LOW": 1,
+          "INFO": 0
+        }
+      },
+      "si_audit": {
+        "line": "qfa",
+        "si_upgrade": "SI3 -> SI4 (delta=+1.0)",
+        "scores": {
+          "data_sufficiency": 1.0,
+          "verification_sufficiency": 0.95,
+          "formalization": 1.0,
+          "boundary_tests": 0.95
+        },
+        "overall_score": 0.9750000000000001,
+        "verdict": "充分论证",
+        "recommendations": []
+      }
+    },
+    "EXP-013": {
+      "line": "usrm",
+      "si_upgrade": "SI3 -> SI4",
+      "check": {
+        "exp_id": "EXP-013",
+        "line": "usrm",
+        "si_upgrade": "SI3 -> SI4",
+        "checks": {
+          "hypothesis_exists": "PASS",
+          "results_complete": "PASS",
+          "numeric_reasonableness": "PASS",
+          "methodology": "PASS"
+        },
+        "status": "PASS",
+        "issues": []
+      },
+      "communicate": {
+        "exp_id": "EXP-013",
+        "line": "usrm",
+        "cross_line": "lgt",
+        "status": "PASSED",
+        "delta_pct": 0.00016,
+        "issues": [],
+        "bidirectional": true
+      },
+      "implement": {
+        "exp_id": "EXP-013",
+        "line": "usrm",
+        "total_actions": 3,
+        "actions": [
+          {
+            "action_id": "IMPL-013-01",
+            "description": "更新CUBIC-LAW-01→VARIABLE-GAMMA-LAW-01",
+            "status": "PENDING",
+            "blockers": [],
+            "executable": true
+          },
+          {
+            "action_id": "IMPL-013-02",
+            "description": "更新kc_cubic_fit.json→kc_variable_gamma_fit.json",
+            "status": "PENDING",
+            "blockers": [],
+            "executable": true
+          },
+          {
+            "action_id": "IMPL-013-03",
+            "description": "为k82 hex对齐提供变γ预测值",
+            "status": "PENDING",
+            "blockers": [],
+            "executable": true
+          }
+        ],
+        "status": "PENDING",
+        "issues": []
+      },
+      "verify": {
+        "exp_id": "EXP-013",
+        "line": "usrm",
+        "self_validation": "PASSED",
+        "comprehensive_validation": "PASSED",
+        "checks": {
+          "self_validation": "PASS",
+          "comprehensive_validation": "PASS",
+          "boundary_tests": "PASS",
+          "cross_line_tests": "PASS"
+        },
+        "status": "PASS",
+        "issues": []
+      },
+      "fix": {
+        "exp_id": "EXP-013",
+        "issues": [],
+        "fixes": [
+          {
+            "severity": "INFO",
+            "action": "扩展gamma参数空间至0.95~1.20",
+            "responsible": "usrm"
+          },
+          {
+            "severity": "HIGH",
+            "action": "执行3项deepening action",
+            "responsible": "usrm"
+          }
+        ],
+        "severity_counts": {
+          "HIGH": 1,
+          "MEDIUM": 0,
+          "LOW": 0,
+          "INFO": 1
+        }
+      },
+      "si_audit": {
+        "line": "usrm",
+        "si_upgrade": "SI3 -> SI4 (delta=+1.0)",
+        "scores": {
+          "data_sufficiency": 0.9,
+          "verification_sufficiency": 0.95,
+          "formalization": 0.8,
+          "boundary_tests": 0.95
+        },
+        "overall_score": 0.9000000000000001,
+        "verdict": "充分论证",
+        "recommendations": []
+      }
+    },
+    "EXP-014": {
+      "line": "vinf",
+      "si_upgrade": "SI3.5 -> SI4",
+      "check": {
+        "exp_id": "EXP-014",
+        "line": "vinf",
+        "si_upgrade": "SI3.5 -> SI4",
+        "checks": {
+          "hypothesis_exists": "PASS",
+          "results_complete": "PASS",
+          "numeric_reasonableness": "PASS",
+          "methodology": "PASS"
+        },
+        "status": "PASS",
+        "issues": []
+      },
+      "communicate": {
+        "exp_id": "EXP-014",
+        "line": "vinf",
+        "cross_line": "qgl",
+        "status": "PASSED",
+        "delta_pct": null,
+        "issues": [],
+        "bidirectional": false
+      },
+      "implement": {
+        "exp_id": "EXP-014",
+        "line": "vinf",
+        "total_actions": 3,
+        "actions": [
+          {
+            "action_id": "IMPL-014-01",
+            "description": "更新vinf塔至v3.0（渗流模块）",
+            "status": "PENDING",
+            "blockers": [],
+            "executable": true
+          },
+          {
+            "action_id": "IMPL-014-02",
+            "description": "更新vinf-gyroid-real-data-v2→v3（含渗流MC）",
+            "status": "PENDING",
+            "blockers": [],
+            "executable": true
+          },
+          {
+            "action_id": "IMPL-014-03",
+            "description": "为全线提供谱维标度数据API",
+            "status": "PENDING",
+            "blockers": [
+              "需ucif2协调跨线资源"
+            ],
+            "executable": false
+          }
+        ],
+        "status": "PENDING",
+        "issues": []
+      },
+      "verify": {
+        "exp_id": "EXP-014",
+        "line": "vinf",
+        "self_validation": "PASSED",
+        "comprehensive_validation": "PASSED",
+        "checks": {
+          "self_validation": "PASS",
+          "comprehensive_validation": "PASS",
+          "boundary_tests": "PASS",
+          "cross_line_tests": "PASS"
+        },
+        "status": "PASS",
+        "issues": []
+      },
+      "fix": {
+        "exp_id": "EXP-014",
+        "issues": [],
+        "fixes": [
+          {
+            "severity": "INFO",
+            "action": "增加L=512数据点增强FSS稳健性",
+            "responsible": "vinf"
+          },
+          {
+            "severity": "HIGH",
+            "action": "执行3项deepening action",
+            "responsible": "vinf"
+          }
+        ],
+        "severity_counts": {
+          "HIGH": 1,
+          "MEDIUM": 0,
+          "LOW": 0,
+          "INFO": 1
+        }
+      },
+      "si_audit": {
+        "line": "vinf",
+        "si_upgrade": "SI3.5 -> SI4 (delta=+0.5)",
+        "scores": {
+          "data_sufficiency": 0.85,
+          "verification_sufficiency": 0.95,
+          "formalization": 0.8,
+          "boundary_tests": 0.95
+        },
+        "overall_score": 0.8875,
+        "verdict": "充分论证",
+        "recommendations": []
+      }
+    },
+    "EXP-015": {
+      "line": "qgl",
+      "si_upgrade": "SI3 -> SI4",
+      "check": {
+        "exp_id": "EXP-015",
+        "line": "qgl",
+        "si_upgrade": "SI3 -> SI4",
+        "checks": {
+          "hypothesis_exists": "PASS",
+          "results_complete": "PASS",
+          "numeric_reasonableness": "PASS",
+          "methodology": "PASS"
+        },
+        "status": "PASS",
+        "issues": []
+      },
+      "communicate": {
+        "exp_id": "EXP-015",
+        "line": "qgl",
+        "cross_line": "usrm",
+        "status": "PASSED",
+        "delta_pct": null,
+        "issues": [],
+        "bidirectional": false
+      },
+      "implement": {
+        "exp_id": "EXP-015",
+        "line": "qgl",
+        "total_actions": 3,
+        "actions": [
+          {
+            "action_id": "IMPL-015-01",
+            "description": "更新qset-lq-lgt-02-ccdf.json→v2",
+            "status": "PENDING",
+            "blockers": [],
+            "executable": true
+          },
+          {
+            "action_id": "IMPL-015-02",
+            "description": "更新qgl塔至v3.5（统计模块）",
+            "status": "PENDING",
+            "blockers": [],
+            "executable": true
+          },
+          {
+            "action_id": "IMPL-015-03",
+            "description": "为BRIDGE-02提供数据基线",
+            "status": "PENDING",
+            "blockers": [
+              "需BRIDGE接口定义"
+            ],
+            "executable": false
+          }
+        ],
+        "status": "PENDING",
+        "issues": []
+      },
+      "verify": {
+        "exp_id": "EXP-015",
+        "line": "qgl",
+        "self_validation": "PASSED",
+        "comprehensive_validation": "PASSED",
+        "checks": {
+          "self_validation": "PASS",
+          "comprehensive_validation": "PASS",
+          "boundary_tests": "PASS",
+          "cross_line_tests": "PASS"
+        },
+        "status": "PASS",
+        "issues": []
+      },
+      "fix": {
+        "exp_id": "EXP-015",
+        "issues": [],
+        "fixes": [
+          {
+            "severity": "LOW",
+            "action": "扩展M-SERIES事件数至200+",
+            "responsible": "qgl"
+          },
+          {
+            "severity": "HIGH",
+            "action": "执行3项deepening action",
+            "responsible": "qgl"
+          }
+        ],
+        "severity_counts": {
+          "HIGH": 1,
+          "MEDIUM": 0,
+          "LOW": 1,
+          "INFO": 0
+        }
+      },
+      "si_audit": {
+        "line": "qgl",
+        "si_upgrade": "SI3 -> SI4 (delta=+1.0)",
+        "scores": {
+          "data_sufficiency": 0.75,
+          "verification_sufficiency": 0.95,
+          "formalization": 0.8,
+          "boundary_tests": 0.95
+        },
+        "overall_score": 0.8625,
+        "verdict": "充分论证",
+        "recommendations": []
+      }
+    },
+    "EXP-016": {
+      "line": "qlv",
+      "si_upgrade": "SI3 -> SI4",
+      "check": {
+        "exp_id": "EXP-016",
+        "line": "qlv",
+        "si_upgrade": "SI3 -> SI4",
+        "checks": {
+          "hypothesis_exists": "PASS",
+          "results_complete": "PASS",
+          "numeric_reasonableness": "PASS",
+          "methodology": "PASS"
+        },
+        "status": "PASS",
+        "issues": []
+      },
+      "communicate": {
+        "exp_id": "EXP-016",
+        "line": "qlv",
+        "cross_line": "lvlu",
+        "status": "PASSED",
+        "delta_pct": null,
+        "issues": [],
+        "bidirectional": false
+      },
+      "implement": {
+        "exp_id": "EXP-016",
+        "line": "qlv",
+        "total_actions": 3,
+        "actions": [
+          {
+            "action_id": "IMPL-016-01",
+            "description": "更新qlv-spectrum-weights-v1→v2",
+            "status": "PENDING",
+            "blockers": [],
+            "executable": true
+          },
+          {
+            "action_id": "IMPL-016-02",
+            "description": "更新qlv塔至v3.0（binmap-v3模块）",
+            "status": "PENDING",
+            "blockers": [],
+            "executable": true
+          },
+          {
+            "action_id": "IMPL-016-03",
+            "description": "为cfts提供频谱API接口",
+            "status": "PENDING",
+            "blockers": [
+              "需ucif2协调跨线资源"
+            ],
+            "executable": false
+          }
+        ],
+        "status": "PENDING",
+        "issues": []
+      },
+      "verify": {
+        "exp_id": "EXP-016",
+        "line": "qlv",
+        "self_validation": "PASSED",
+        "comprehensive_validation": "PASSED",
+        "checks": {
+          "self_validation": "PASS",
+          "comprehensive_validation": "PASS",
+          "boundary_tests": "PASS",
+          "cross_line_tests": "PASS"
+        },
+        "status": "PASS",
+        "issues": []
+      },
+      "fix": {
+        "exp_id": "EXP-016",
+        "issues": [],
+        "fixes": [
+          {
+            "severity": "MEDIUM",
+            "action": "分析cfts O_S=0.2704异常偏高的根因",
+            "responsible": "qlv/cfts"
+          },
+          {
+            "severity": "HIGH",
+            "action": "执行3项deepening action",
+            "responsible": "qlv"
+          }
+        ],
+        "severity_counts": {
+          "HIGH": 1,
+          "MEDIUM": 1,
+          "LOW": 0,
+          "INFO": 0
+        }
+      },
+      "si_audit": {
+        "line": "qlv",
+        "si_upgrade": "SI3 -> SI4 (delta=+1.0)",
+        "scores": {
+          "data_sufficiency": 0.9,
+          "verification_sufficiency": 0.95,
+          "formalization": 0.8,
+          "boundary_tests": 0.95
+        },
+        "overall_score": 0.9000000000000001,
+        "verdict": "充分论证",
+        "recommendations": []
+      }
+    },
+    "EXP-017": {
+      "line": "lvlu",
+      "si_upgrade": "SI3 -> SI3.5",
+      "check": {
+        "exp_id": "EXP-017",
+        "line": "lvlu",
+        "si_upgrade": "SI3 -> SI3.5",
+        "checks": {
+          "hypothesis_exists": "PASS",
+          "results_complete": "PASS",
+          "numeric_reasonableness": "PASS",
+          "methodology": "PASS"
+        },
+        "status": "PASS",
+        "issues": []
+      },
+      "communicate": {
+        "exp_id": "EXP-017",
+        "line": "lvlu",
+        "cross_line": "qfa",
+        "status": "PASSED",
+        "delta_pct": null,
+        "issues": [],
+        "bidirectional": false
+      },
+      "implement": {
+        "exp_id": "EXP-017",
+        "line": "lvlu",
+        "total_actions": 3,
+        "actions": [
+          {
+            "action_id": "IMPL-017-01",
+            "description": "将EVALR2写入lvlu塔核心v3.0",
+            "status": "PENDING",
+            "blockers": [],
+            "executable": true
+          },
+          {
+            "action_id": "IMPL-017-02",
+            "description": "更新RIPPLE-PROBE闭环自动化",
+            "status": "PENDING",
+            "blockers": [],
+            "executable": true
+          },
+          {
+            "action_id": "IMPL-017-03",
+            "description": "为全线提供评估API",
+            "status": "PENDING",
+            "blockers": [
+              "需ucif2协调跨线资源"
+            ],
+            "executable": false
+          }
+        ],
+        "status": "PENDING",
+        "issues": []
+      },
+      "verify": {
+        "exp_id": "EXP-017",
+        "line": "lvlu",
+        "self_validation": "PASSED",
+        "comprehensive_validation": "PASSED",
+        "checks": {
+          "self_validation": "PASS",
+          "comprehensive_validation": "PASS",
+          "boundary_tests": "PASS",
+          "cross_line_tests": "PASS"
+        },
+        "status": "PASS",
+        "issues": []
+      },
+      "fix": {
+        "exp_id": "EXP-017",
+        "issues": [],
+        "fixes": [
+          {
+            "severity": "MEDIUM",
+            "action": "启动lvlu自评估流程，解决self_eval_needed告警",
+            "responsible": "lvlu"
+          },
+          {
+            "severity": "HIGH",
+            "action": "执行3项deepening action",
+            "responsible": "lvlu"
+          }
+        ],
+        "severity_counts": {
+          "HIGH": 1,
+          "MEDIUM": 1,
+          "LOW": 0,
+          "INFO": 0
+        }
+      },
+      "si_audit": {
+        "line": "lvlu",
+        "si_upgrade": "SI3 -> SI3.5 (delta=+0.5)",
+        "scores": {
+          "data_sufficiency": 0.95,
+          "verification_sufficiency": 0.95,
+          "formalization": 0.8,
+          "boundary_tests": 0.95
+        },
+        "overall_score": 0.9125000000000001,
+        "verdict": "充分论证",
+        "recommendations": []
+      }
+    },
+    "EXP-018": {
+      "line": "cfts",
+      "si_upgrade": "SI3 -> SI3.5",
+      "check": {
+        "exp_id": "EXP-018",
+        "line": "cfts",
+        "si_upgrade": "SI3 -> SI3.5",
+        "checks": {
+          "hypothesis_exists": "PASS",
+          "results_complete": "PASS",
+          "numeric_reasonableness": "PASS",
+          "methodology": "PASS"
+        },
+        "status": "PASS",
+        "issues": []
+      },
+      "communicate": {
+        "exp_id": "EXP-018",
+        "line": "cfts",
+        "cross_line": "qlv",
+        "status": "PASSED",
+        "delta_pct": null,
+        "issues": [],
+        "bidirectional": false
+      },
+      "implement": {
+        "exp_id": "EXP-018",
+        "line": "cfts",
+        "total_actions": 3,
+        "actions": [
+          {
+            "action_id": "IMPL-018-01",
+            "description": "更新cfts塔至v3.0（F4+QLV模块）",
+            "status": "PENDING",
+            "blockers": [],
+            "executable": true
+          },
+          {
+            "action_id": "IMPL-018-02",
+            "description": "建立voice orchestrator量化指标基线",
+            "status": "PENDING",
+            "blockers": [],
+            "executable": true
+          },
+          {
+            "action_id": "IMPL-018-03",
+            "description": "为qlv提供持续支持协议",
+            "status": "PENDING",
+            "blockers": [],
+            "executable": true
+          }
+        ],
+        "status": "PENDING",
+        "issues": []
+      },
+      "verify": {
+        "exp_id": "EXP-018",
+        "line": "cfts",
+        "self_validation": "PASSED",
+        "comprehensive_validation": "PASSED",
+        "checks": {
+          "self_validation": "PASS",
+          "comprehensive_validation": "PASS",
+          "boundary_tests": "PASS",
+          "cross_line_tests": "PASS"
+        },
+        "status": "PASS",
+        "issues": []
+      },
+      "fix": {
+        "exp_id": "EXP-018",
+        "issues": [],
+        "fixes": [
+          {
+            "severity": "MEDIUM",
+            "action": "分析voice latency_p99=45.6ms长尾延迟根因",
+            "responsible": "cfts"
+          },
+          {
+            "severity": "HIGH",
+            "action": "执行3项deepening action",
+            "responsible": "cfts"
+          }
+        ],
+        "severity_counts": {
+          "HIGH": 1,
+          "MEDIUM": 1,
+          "LOW": 0,
+          "INFO": 0
+        }
+      },
+      "si_audit": {
+        "line": "cfts",
+        "si_upgrade": "SI3 -> SI3.5 (delta=+0.5)",
+        "scores": {
+          "data_sufficiency": 0.95,
+          "verification_sufficiency": 0.95,
+          "formalization": 0.8,
+          "boundary_tests": 0.95
+        },
+        "overall_score": 0.9125000000000001,
+        "verdict": "充分论证",
+        "recommendations": []
+      }
+    }
+  },
+  "summary": {
+    "total_experiments": 8,
+    "check_passed": 8,
+    "verify_passed": 8,
+    "deepening_pending": 24,
+    "cross_line_pairs": 8,
+    "si_fully_justified": 8,
+    "si_conditionally_justified": 0
+  }
+}

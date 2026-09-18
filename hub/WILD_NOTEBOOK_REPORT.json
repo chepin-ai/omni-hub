@@ -1,0 +1,1936 @@
+{
+  "version": "12.0.0",
+  "timestamp": 1789658787.0952199,
+  "stats": {
+    "questions_generated": 8,
+    "questions_resolved": 6,
+    "questions_rejected": 0,
+    "surges_initiated": 0,
+    "debts_processed": 3,
+    "knowledge_injections": 6,
+    "total_iterations": 6,
+    "total_questions": 11,
+    "pending": 5,
+    "answering": 0,
+    "resolved": 6,
+    "rejected": 0,
+    "surging": 0,
+    "validated": 0,
+    "cycles": 1,
+    "generator": {
+      "total_generated": 11,
+      "templates_available": 20
+    }
+  },
+  "questions": [
+    {
+      "id": "WQ-91eebe66",
+      "content": "Are there hidden symmetries in KG?",
+      "category": "exploratory",
+      "priority": 0.9,
+      "status": "pending",
+      "created_at": 1789658787.0905185,
+      "resolved_at": null,
+      "attestation_requests": [],
+      "prerequisite_chain": [],
+      "line_assignments": {
+        "ucif2": 0.09090909090909091,
+        "lvlu": 0.09090909090909091,
+        "lgt": 0.09090909090909091,
+        "qfa": 0.09090909090909091,
+        "vinf": 0.09090909090909091,
+        "qgl": 0.09090909090909091,
+        "qlv": 0.09090909090909091,
+        "cisvr": 0.09090909090909091,
+        "qtlv": 0.09090909090909091,
+        "usrm": 0.09090909090909091,
+        "cfts": 0.09090909090909091
+      },
+      "responses": {},
+      "validation": null,
+      "surge_result": null,
+      "refinement": null,
+      "metadata": {
+        "source_gap": {
+          "type": "no_edges",
+          "location": "KG",
+          "description": "Knowledge Graph has no edges",
+          "severity": 0.9,
+          "pedestal": "KG"
+        },
+        "generation_method": "template_filling"
+      },
+      "iteration_count": 0,
+      "max_iterations": 5,
+      "debt_id": null
+    },
+    {
+      "id": "WQ-6277b4c3",
+      "content": "What happens if we modify no_propositions?",
+      "category": "exploratory",
+      "priority": 0.9,
+      "status": "pending",
+      "created_at": 1789658787.0905488,
+      "resolved_at": null,
+      "attestation_requests": [],
+      "prerequisite_chain": [],
+      "line_assignments": {
+        "ucif2": 0.09090909090909091,
+        "lvlu": 0.09090909090909091,
+        "lgt": 0.09090909090909091,
+        "qfa": 0.09090909090909091,
+        "vinf": 0.09090909090909091,
+        "qgl": 0.09090909090909091,
+        "qlv": 0.09090909090909091,
+        "cisvr": 0.09090909090909091,
+        "qtlv": 0.09090909090909091,
+        "usrm": 0.09090909090909091,
+        "cfts": 0.09090909090909091
+      },
+      "responses": {},
+      "validation": null,
+      "surge_result": null,
+      "refinement": null,
+      "metadata": {
+        "source_gap": {
+          "type": "no_propositions",
+          "location": "LL",
+          "description": "LL has no propositions",
+          "severity": 0.9,
+          "pedestal": "LL"
+        },
+        "generation_method": "template_filling"
+      },
+      "iteration_count": 0,
+      "max_iterations": 5,
+      "debt_id": null
+    },
+    {
+      "id": "WQ-568779a4",
+      "content": "Are there hidden symmetries in CC?",
+      "category": "exploratory",
+      "priority": 0.8,
+      "status": "pending",
+      "created_at": 1789658787.0905683,
+      "resolved_at": null,
+      "attestation_requests": [],
+      "prerequisite_chain": [],
+      "line_assignments": {
+        "ucif2": 0.09090909090909091,
+        "lvlu": 0.09090909090909091,
+        "lgt": 0.09090909090909091,
+        "qfa": 0.09090909090909091,
+        "vinf": 0.09090909090909091,
+        "qgl": 0.09090909090909091,
+        "qlv": 0.09090909090909091,
+        "cisvr": 0.09090909090909091,
+        "qtlv": 0.09090909090909091,
+        "usrm": 0.09090909090909091,
+        "cfts": 0.09090909090909091
+      },
+      "responses": {},
+      "validation": null,
+      "surge_result": null,
+      "refinement": null,
+      "metadata": {
+        "source_gap": {
+          "type": "no_cells",
+          "location": "CC",
+          "description": "Cellular Complex is empty",
+          "severity": 0.8,
+          "pedestal": "CC"
+        },
+        "generation_method": "template_filling"
+      },
+      "iteration_count": 0,
+      "max_iterations": 5,
+      "debt_id": null
+    },
+    {
+      "id": "WQ-4c1de8cd",
+      "content": "What happens if we modify no_hyperedges?",
+      "category": "exploratory",
+      "priority": 0.7,
+      "status": "pending",
+      "created_at": 1789658787.0905843,
+      "resolved_at": null,
+      "attestation_requests": [],
+      "prerequisite_chain": [],
+      "line_assignments": {
+        "ucif2": 0.09090909090909091,
+        "lvlu": 0.09090909090909091,
+        "lgt": 0.09090909090909091,
+        "qfa": 0.09090909090909091,
+        "vinf": 0.09090909090909091,
+        "qgl": 0.09090909090909091,
+        "qlv": 0.09090909090909091,
+        "cisvr": 0.09090909090909091,
+        "qtlv": 0.09090909090909091,
+        "usrm": 0.09090909090909091,
+        "cfts": 0.09090909090909091
+      },
+      "responses": {},
+      "validation": null,
+      "surge_result": null,
+      "refinement": null,
+      "metadata": {
+        "source_gap": {
+          "type": "no_hyperedges",
+          "location": "HG",
+          "description": "Hypergraph empty",
+          "severity": 0.7,
+          "pedestal": "HG"
+        },
+        "generation_method": "template_filling"
+      },
+      "iteration_count": 0,
+      "max_iterations": 5,
+      "debt_id": null
+    },
+    {
+      "id": "WQ-c7f82f28",
+      "content": "What emergent properties arise from current setup?",
+      "category": "exploratory",
+      "priority": 0.7,
+      "status": "pending",
+      "created_at": 1789658787.090599,
+      "resolved_at": null,
+      "attestation_requests": [],
+      "prerequisite_chain": [],
+      "line_assignments": {
+        "ucif2": 0.09090909090909091,
+        "lvlu": 0.09090909090909091,
+        "lgt": 0.09090909090909091,
+        "qfa": 0.09090909090909091,
+        "vinf": 0.09090909090909091,
+        "qgl": 0.09090909090909091,
+        "qlv": 0.09090909090909091,
+        "cisvr": 0.09090909090909091,
+        "qtlv": 0.09090909090909091,
+        "usrm": 0.09090909090909091,
+        "cfts": 0.09090909090909091
+      },
+      "responses": {},
+      "validation": null,
+      "surge_result": null,
+      "refinement": null,
+      "metadata": {
+        "source_gap": {
+          "type": "no_morphisms",
+          "location": "CT",
+          "description": "CT has no morphisms",
+          "severity": 0.7,
+          "pedestal": "CT"
+        },
+        "generation_method": "template_filling"
+      },
+      "iteration_count": 0,
+      "max_iterations": 5,
+      "debt_id": null
+    },
+    {
+      "id": "WQ-a00ff78e",
+      "content": "How do we resolve: Sample Emergence Completeness? Prove unified field emergence is complete under 64 dimensions.",
+      "category": "theoretical",
+      "priority": 0.7,
+      "status": "resolved",
+      "created_at": 1789658787.0906518,
+      "resolved_at": 1789658787.0913606,
+      "attestation_requests": [],
+      "prerequisite_chain": [],
+      "line_assignments": {
+        "ucif2": 0.18,
+        "qlv": 0.18,
+        "qtlv": 0.14,
+        "lgt": 0.14,
+        "qfa": 0.1,
+        "vinf": 0.08,
+        "qgl": 0.08,
+        "cisvr": 0.05,
+        "lvlu": 0.03,
+        "usrm": 0.01,
+        "cfts": 0.01
+      },
+      "responses": {
+        "ucif2": {
+          "line_name": "ucif2",
+          "question_id": "WQ-a00ff78e",
+          "answer": "Line ucif2: General assessment of 'How do we resolve: Sample Emergence Completeness? ...' requires further cross-line analysis.",
+          "confidence": 0.4891,
+          "field_state_delta": {},
+          "metadata": {
+            "relevance": 0.2
+          },
+          "timestamp": 1789658787.0906847,
+          "attestation_requests": []
+        },
+        "qlv": {
+          "line_name": "qlv",
+          "question_id": "WQ-a00ff78e",
+          "answer": "Line qlv: General assessment of 'How do we resolve: Sample Emergence Completeness? ...' requires further cross-line analysis.",
+          "confidence": 0.3585,
+          "field_state_delta": {},
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.0907044,
+          "attestation_requests": []
+        },
+        "qtlv": {
+          "line_name": "qtlv",
+          "question_id": "WQ-a00ff78e",
+          "answer": "Line qtlv: General assessment of 'How do we resolve: Sample Emergence Completeness? ...' requires further cross-line analysis.",
+          "confidence": 0.4075,
+          "field_state_delta": {
+            "15": 0.04074584762960884,
+            "13": 0.04074584762960884
+          },
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.0907161,
+          "attestation_requests": []
+        },
+        "lgt": {
+          "line_name": "lgt",
+          "question_id": "WQ-a00ff78e",
+          "answer": "Line lgt: General assessment of 'How do we resolve: Sample Emergence Completeness? ...' requires further cross-line analysis.",
+          "confidence": 0.5625,
+          "field_state_delta": {
+            "15": 0.05625438220029342,
+            "13": 0.05625438220029342
+          },
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.0907257,
+          "attestation_requests": []
+        },
+        "qfa": {
+          "line_name": "qfa",
+          "question_id": "WQ-a00ff78e",
+          "answer": "Line qfa: General assessment of 'How do we resolve: Sample Emergence Completeness? ...' requires further cross-line analysis.",
+          "confidence": 0.3104,
+          "field_state_delta": {
+            "0": 0.03103505440593922,
+            "16": 0.03103505440593922
+          },
+          "metadata": {
+            "relevance": 0.2
+          },
+          "timestamp": 1789658787.0907362,
+          "attestation_requests": []
+        },
+        "vinf": {
+          "line_name": "vinf",
+          "question_id": "WQ-a00ff78e",
+          "answer": "Line vinf: General assessment of 'How do we resolve: Sample Emergence Completeness? ...' requires further cross-line analysis.",
+          "confidence": 0.4351,
+          "field_state_delta": {
+            "0": 0.04351474270162264,
+            "16": 0.04351474270162264
+          },
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.0907445,
+          "attestation_requests": []
+        },
+        "qgl": {
+          "line_name": "qgl",
+          "question_id": "WQ-a00ff78e",
+          "answer": "Line qgl: General assessment of 'How do we resolve: Sample Emergence Completeness? ...' requires further cross-line analysis.",
+          "confidence": 0.5428,
+          "field_state_delta": {},
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.0907514,
+          "attestation_requests": []
+        },
+        "cisvr": {
+          "line_name": "cisvr",
+          "question_id": "WQ-a00ff78e",
+          "answer": "Line cisvr: General assessment of 'How do we resolve: Sample Emergence Completeness? ...' requires further cross-line analysis.",
+          "confidence": 0.4466,
+          "field_state_delta": {
+            "34": 0.044664472052779874,
+            "39": 0.044664472052779874
+          },
+          "metadata": {
+            "relevance": 0.2
+          },
+          "timestamp": 1789658787.0907614,
+          "attestation_requests": []
+        },
+        "lvlu": {
+          "line_name": "lvlu",
+          "question_id": "WQ-a00ff78e",
+          "answer": "Line lvlu: General assessment of 'How do we resolve: Sample Emergence Completeness? ...' requires further cross-line analysis.",
+          "confidence": 0.4551,
+          "field_state_delta": {},
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.0907736,
+          "attestation_requests": []
+        },
+        "usrm": {
+          "line_name": "usrm",
+          "question_id": "WQ-a00ff78e",
+          "answer": "Line usrm: General assessment of 'How do we resolve: Sample Emergence Completeness? ...' requires further cross-line analysis.",
+          "confidence": 0.4044,
+          "field_state_delta": {
+            "34": 0.04044071664110372,
+            "39": 0.04044071664110372
+          },
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.0907807,
+          "attestation_requests": []
+        },
+        "cfts": {
+          "line_name": "cfts",
+          "question_id": "WQ-a00ff78e",
+          "answer": "Line cfts: General assessment of 'How do we resolve: Sample Emergence Completeness? ...' requires further cross-line analysis.",
+          "confidence": 0.4603,
+          "field_state_delta": {},
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.0907872,
+          "attestation_requests": []
+        }
+      },
+      "validation": {
+        "question_id": "WQ-a00ff78e",
+        "agreement_score": 0.3553,
+        "consensus_answer": "Line lgt: General assessment of 'How do we resolve: Sample Emergence Completeness? ...' requires further cross-line analysis.",
+        "dissenting_lines": [],
+        "supporting_lines": [
+          "ucif2",
+          "qlv",
+          "qtlv",
+          "lgt",
+          "qfa",
+          "vinf",
+          "qgl",
+          "cisvr",
+          "lvlu",
+          "usrm",
+          "cfts"
+        ],
+        "attestation_results": [],
+        "validation_passed": true,
+        "needs_surge": false,
+        "metadata": {
+          "total_lines": 11,
+          "avg_confidence": 0.4429,
+          "attestation_count": 0
+        }
+      },
+      "surge_result": null,
+      "refinement": {
+        "question_id": "WQ-a00ff78e",
+        "injection_success": true,
+        "dimensions_updated": [
+          "DIM_KNOWLEDGE",
+          "DIM_COHERENCE"
+        ],
+        "coherence_change": 0.0,
+        "emergence_change": 0.0,
+        "debt_resolved": true,
+        "metadata": {
+          "node_id": "4a252dbaab50f5ae",
+          "supporting_lines": [
+            "ucif2",
+            "qlv",
+            "qtlv",
+            "lgt",
+            "qfa",
+            "vinf",
+            "qgl",
+            "cisvr",
+            "lvlu",
+            "usrm",
+            "cfts"
+          ]
+        }
+      },
+      "metadata": {
+        "source_debt": "T-THEO-SAMPLE-001",
+        "debt_type": "theoretical",
+        "severity": "high"
+      },
+      "iteration_count": 1,
+      "max_iterations": 5,
+      "debt_id": "T-THEO-SAMPLE-001"
+    },
+    {
+      "id": "WQ-8522d5d8",
+      "content": "How do we fix: Hardcoded path in module loader prevents cross-platform deployment.",
+      "category": "technical",
+      "priority": 0.5,
+      "status": "resolved",
+      "created_at": 1789658787.0914516,
+      "resolved_at": 1789658787.092123,
+      "attestation_requests": [],
+      "prerequisite_chain": [],
+      "line_assignments": {
+        "qgl": 0.18,
+        "vinf": 0.18,
+        "lgt": 0.14,
+        "qfa": 0.14,
+        "qlv": 0.1,
+        "cfts": 0.1,
+        "ucif2": 0.08,
+        "cisvr": 0.05,
+        "lvlu": 0.02,
+        "qtlv": 0.005,
+        "usrm": 0.005
+      },
+      "responses": {
+        "qgl": {
+          "line_name": "qgl",
+          "question_id": "WQ-8522d5d8",
+          "answer": "Line qgl: General assessment of 'How do we fix: Hardcoded path in module loader pre...' requires further cross-line analysis.",
+          "confidence": 0.3148,
+          "field_state_delta": {},
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.091476,
+          "attestation_requests": []
+        },
+        "vinf": {
+          "line_name": "vinf",
+          "question_id": "WQ-8522d5d8",
+          "answer": "Line vinf: General assessment of 'How do we fix: Hardcoded path in module loader pre...' requires further cross-line analysis.",
+          "confidence": 0.5573,
+          "field_state_delta": {
+            "0": 0.055729935707304,
+            "16": 0.055729935707304
+          },
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.091486,
+          "attestation_requests": []
+        },
+        "lgt": {
+          "line_name": "lgt",
+          "question_id": "WQ-8522d5d8",
+          "answer": "Line lgt: General assessment of 'How do we fix: Hardcoded path in module loader pre...' requires further cross-line analysis.",
+          "confidence": 0.3412,
+          "field_state_delta": {
+            "15": 0.03411571125677838,
+            "13": 0.03411571125677838
+          },
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.0914943,
+          "attestation_requests": []
+        },
+        "qfa": {
+          "line_name": "qfa",
+          "question_id": "WQ-8522d5d8",
+          "answer": "Line qfa: General assessment of 'How do we fix: Hardcoded path in module loader pre...' requires further cross-line analysis.",
+          "confidence": 0.5008,
+          "field_state_delta": {
+            "0": 0.050079687560187304,
+            "16": 0.050079687560187304
+          },
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.091509,
+          "attestation_requests": []
+        },
+        "qlv": {
+          "line_name": "qlv",
+          "question_id": "WQ-8522d5d8",
+          "answer": "Line qlv: General assessment of 'How do we fix: Hardcoded path in module loader pre...' requires further cross-line analysis.",
+          "confidence": 0.3843,
+          "field_state_delta": {},
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.091515,
+          "attestation_requests": []
+        },
+        "cfts": {
+          "line_name": "cfts",
+          "question_id": "WQ-8522d5d8",
+          "answer": "Line cfts: General assessment of 'How do we fix: Hardcoded path in module loader pre...' requires further cross-line analysis.",
+          "confidence": 0.3313,
+          "field_state_delta": {},
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.091521,
+          "attestation_requests": []
+        },
+        "ucif2": {
+          "line_name": "ucif2",
+          "question_id": "WQ-8522d5d8",
+          "answer": "Line ucif2: General assessment of 'How do we fix: Hardcoded path in module loader pre...' requires further cross-line analysis.",
+          "confidence": 0.5366,
+          "field_state_delta": {},
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.0915277,
+          "attestation_requests": []
+        },
+        "cisvr": {
+          "line_name": "cisvr",
+          "question_id": "WQ-8522d5d8",
+          "answer": "Line cisvr: General assessment of 'How do we fix: Hardcoded path in module loader pre...' requires further cross-line analysis.",
+          "confidence": 0.5945,
+          "field_state_delta": {
+            "34": 0.05945282946767372,
+            "39": 0.05945282946767372
+          },
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.0915349,
+          "attestation_requests": []
+        },
+        "lvlu": {
+          "line_name": "lvlu",
+          "question_id": "WQ-8522d5d8",
+          "answer": "Line lvlu: General assessment of 'How do we fix: Hardcoded path in module loader pre...' requires further cross-line analysis.",
+          "confidence": 0.4879,
+          "field_state_delta": {},
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.091541,
+          "attestation_requests": []
+        },
+        "qtlv": {
+          "line_name": "qtlv",
+          "question_id": "WQ-8522d5d8",
+          "answer": "Line qtlv: General assessment of 'How do we fix: Hardcoded path in module loader pre...' requires further cross-line analysis.",
+          "confidence": 0.5196,
+          "field_state_delta": {
+            "15": 0.05195913439449865,
+            "13": 0.05195913439449865
+          },
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.0915477,
+          "attestation_requests": []
+        },
+        "usrm": {
+          "line_name": "usrm",
+          "question_id": "WQ-8522d5d8",
+          "answer": "Line usrm: General assessment of 'How do we fix: Hardcoded path in module loader pre...' requires further cross-line analysis.",
+          "confidence": 0.3952,
+          "field_state_delta": {
+            "34": 0.039524550123876484,
+            "39": 0.039524550123876484
+          },
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.0915544,
+          "attestation_requests": []
+        }
+      },
+      "validation": {
+        "question_id": "WQ-8522d5d8",
+        "agreement_score": 0.3527,
+        "consensus_answer": "Line cisvr: General assessment of 'How do we fix: Hardcoded path in module loader pre...' requires further cross-line analysis.",
+        "dissenting_lines": [],
+        "supporting_lines": [
+          "qgl",
+          "vinf",
+          "lgt",
+          "qfa",
+          "qlv",
+          "cfts",
+          "ucif2",
+          "cisvr",
+          "lvlu",
+          "qtlv",
+          "usrm"
+        ],
+        "attestation_results": [],
+        "validation_passed": true,
+        "needs_surge": false,
+        "metadata": {
+          "total_lines": 11,
+          "avg_confidence": 0.4512,
+          "attestation_count": 0
+        }
+      },
+      "surge_result": null,
+      "refinement": {
+        "question_id": "WQ-8522d5d8",
+        "injection_success": true,
+        "dimensions_updated": [
+          "DIM_KNOWLEDGE",
+          "DIM_COHERENCE"
+        ],
+        "coherence_change": 0.0,
+        "emergence_change": 0.0,
+        "debt_resolved": true,
+        "metadata": {
+          "node_id": "d195754c454b3a4d",
+          "supporting_lines": [
+            "qgl",
+            "vinf",
+            "lgt",
+            "qfa",
+            "qlv",
+            "cfts",
+            "ucif2",
+            "cisvr",
+            "lvlu",
+            "qtlv",
+            "usrm"
+          ]
+        }
+      },
+      "metadata": {
+        "source_debt": "T-TECH-SAMPLE-001",
+        "debt_type": "technical",
+        "severity": "medium"
+      },
+      "iteration_count": 1,
+      "max_iterations": 5,
+      "debt_id": "T-TECH-SAMPLE-001"
+    },
+    {
+      "id": "WQ-955e7de6",
+      "content": "How do we engineer: Missing integration tests for 11-line cross-validation pipeline.",
+      "category": "engineering",
+      "priority": 0.6,
+      "status": "resolved",
+      "created_at": 1789658787.092187,
+      "resolved_at": 1789658787.0927422,
+      "attestation_requests": [],
+      "prerequisite_chain": [],
+      "line_assignments": {
+        "cfts": 0.22,
+        "vinf": 0.18,
+        "qgl": 0.14,
+        "qfa": 0.12,
+        "lgt": 0.12,
+        "qlv": 0.1,
+        "ucif2": 0.06,
+        "cisvr": 0.04,
+        "lvlu": 0.01,
+        "qtlv": 0.005,
+        "usrm": 0.005
+      },
+      "responses": {
+        "cfts": {
+          "line_name": "cfts",
+          "question_id": "WQ-955e7de6",
+          "answer": "Line cfts: General assessment of 'How do we engineer: Missing integration tests for ...' requires further cross-line analysis.",
+          "confidence": 0.5537,
+          "field_state_delta": {},
+          "metadata": {
+            "relevance": 0.2
+          },
+          "timestamp": 1789658787.0922096,
+          "attestation_requests": []
+        },
+        "vinf": {
+          "line_name": "vinf",
+          "question_id": "WQ-955e7de6",
+          "answer": "Line vinf: General assessment of 'How do we engineer: Missing integration tests for ...' requires further cross-line analysis.",
+          "confidence": 0.5889,
+          "field_state_delta": {
+            "0": 0.058887784841139434,
+            "16": 0.058887784841139434
+          },
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.0922196,
+          "attestation_requests": []
+        },
+        "qgl": {
+          "line_name": "qgl",
+          "question_id": "WQ-955e7de6",
+          "answer": "Line qgl: General assessment of 'How do we engineer: Missing integration tests for ...' requires further cross-line analysis.",
+          "confidence": 0.5642,
+          "field_state_delta": {},
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.0922265,
+          "attestation_requests": []
+        },
+        "qfa": {
+          "line_name": "qfa",
+          "question_id": "WQ-955e7de6",
+          "answer": "Line qfa: General assessment of 'How do we engineer: Missing integration tests for ...' requires further cross-line analysis.",
+          "confidence": 0.5934,
+          "field_state_delta": {
+            "0": 0.05933714743720489,
+            "16": 0.05933714743720489
+          },
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.092233,
+          "attestation_requests": []
+        },
+        "lgt": {
+          "line_name": "lgt",
+          "question_id": "WQ-955e7de6",
+          "answer": "Line lgt: General assessment of 'How do we engineer: Missing integration tests for ...' requires further cross-line analysis.",
+          "confidence": 0.3375,
+          "field_state_delta": {
+            "15": 0.033745857493753584,
+            "13": 0.033745857493753584
+          },
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.0922406,
+          "attestation_requests": []
+        },
+        "qlv": {
+          "line_name": "qlv",
+          "question_id": "WQ-955e7de6",
+          "answer": "Line qlv: General assessment of 'How do we engineer: Missing integration tests for ...' requires further cross-line analysis.",
+          "confidence": 0.5833,
+          "field_state_delta": {},
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.0922465,
+          "attestation_requests": []
+        },
+        "ucif2": {
+          "line_name": "ucif2",
+          "question_id": "WQ-955e7de6",
+          "answer": "Line ucif2: General assessment of 'How do we engineer: Missing integration tests for ...' requires further cross-line analysis.",
+          "confidence": 0.4277,
+          "field_state_delta": {},
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.0922525,
+          "attestation_requests": []
+        },
+        "cisvr": {
+          "line_name": "cisvr",
+          "question_id": "WQ-955e7de6",
+          "answer": "Line cisvr: General assessment of 'How do we engineer: Missing integration tests for ...' requires further cross-line analysis.",
+          "confidence": 0.5822,
+          "field_state_delta": {
+            "34": 0.05822412061853195,
+            "39": 0.05822412061853195
+          },
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.092262,
+          "attestation_requests": []
+        },
+        "lvlu": {
+          "line_name": "lvlu",
+          "question_id": "WQ-955e7de6",
+          "answer": "Line lvlu: General assessment of 'How do we engineer: Missing integration tests for ...' requires further cross-line analysis.",
+          "confidence": 0.4353,
+          "field_state_delta": {},
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.092268,
+          "attestation_requests": []
+        },
+        "qtlv": {
+          "line_name": "qtlv",
+          "question_id": "WQ-955e7de6",
+          "answer": "Line qtlv: General assessment of 'How do we engineer: Missing integration tests for ...' requires further cross-line analysis.",
+          "confidence": 0.4462,
+          "field_state_delta": {
+            "15": 0.04462482512077185,
+            "13": 0.04462482512077185
+          },
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.0922744,
+          "attestation_requests": []
+        },
+        "usrm": {
+          "line_name": "usrm",
+          "question_id": "WQ-955e7de6",
+          "answer": "Line usrm: General assessment of 'How do we engineer: Missing integration tests for ...' requires further cross-line analysis.",
+          "confidence": 0.5731,
+          "field_state_delta": {
+            "34": 0.05730731672013383,
+            "39": 0.05730731672013383
+          },
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.092281,
+          "attestation_requests": []
+        }
+      },
+      "validation": {
+        "question_id": "WQ-955e7de6",
+        "agreement_score": 0.4192,
+        "consensus_answer": "Line qfa: General assessment of 'How do we engineer: Missing integration tests for ...' requires further cross-line analysis.",
+        "dissenting_lines": [],
+        "supporting_lines": [
+          "cfts",
+          "vinf",
+          "qgl",
+          "qfa",
+          "lgt",
+          "qlv",
+          "ucif2",
+          "cisvr",
+          "lvlu",
+          "qtlv",
+          "usrm"
+        ],
+        "attestation_results": [],
+        "validation_passed": true,
+        "needs_surge": false,
+        "metadata": {
+          "total_lines": 11,
+          "avg_confidence": 0.5169,
+          "attestation_count": 0
+        }
+      },
+      "surge_result": null,
+      "refinement": {
+        "question_id": "WQ-955e7de6",
+        "injection_success": true,
+        "dimensions_updated": [
+          "DIM_KNOWLEDGE",
+          "DIM_COHERENCE"
+        ],
+        "coherence_change": 0.0,
+        "emergence_change": 0.0,
+        "debt_resolved": true,
+        "metadata": {
+          "node_id": "0fe73ed26e235fc0",
+          "supporting_lines": [
+            "cfts",
+            "vinf",
+            "qgl",
+            "qfa",
+            "lgt",
+            "qlv",
+            "ucif2",
+            "cisvr",
+            "lvlu",
+            "qtlv",
+            "usrm"
+          ]
+        }
+      },
+      "metadata": {
+        "source_debt": "T-ENG-SAMPLE-001",
+        "debt_type": "engineering",
+        "severity": "high"
+      },
+      "iteration_count": 1,
+      "max_iterations": 5,
+      "debt_id": "T-ENG-SAMPLE-001"
+    },
+    {
+      "id": "WQ-3bb80c52",
+      "content": "What emergent properties arise from current setup?",
+      "category": "exploratory",
+      "priority": 0.9,
+      "status": "resolved",
+      "created_at": 1789658787.092853,
+      "resolved_at": 1789658787.0934417,
+      "attestation_requests": [],
+      "prerequisite_chain": [],
+      "line_assignments": {
+        "ucif2": 0.09090909090909091,
+        "lvlu": 0.09090909090909091,
+        "lgt": 0.09090909090909091,
+        "qfa": 0.09090909090909091,
+        "vinf": 0.09090909090909091,
+        "qgl": 0.09090909090909091,
+        "qlv": 0.09090909090909091,
+        "cisvr": 0.09090909090909091,
+        "qtlv": 0.09090909090909091,
+        "usrm": 0.09090909090909091,
+        "cfts": 0.09090909090909091
+      },
+      "responses": {
+        "ucif2": {
+          "line_name": "ucif2",
+          "question_id": "WQ-3bb80c52",
+          "answer": "Line ucif2: General assessment of 'What emergent properties arise from current setup?...' requires further cross-line analysis.",
+          "confidence": 0.3653,
+          "field_state_delta": {},
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.0929039,
+          "attestation_requests": []
+        },
+        "lvlu": {
+          "line_name": "lvlu",
+          "question_id": "WQ-3bb80c52",
+          "answer": "Line lvlu: General assessment of 'What emergent properties arise from current setup?...' requires further cross-line analysis.",
+          "confidence": 0.474,
+          "field_state_delta": {},
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.092912,
+          "attestation_requests": []
+        },
+        "lgt": {
+          "line_name": "lgt",
+          "question_id": "WQ-3bb80c52",
+          "answer": "Line lgt: General assessment of 'What emergent properties arise from current setup?...' requires further cross-line analysis.",
+          "confidence": 0.3836,
+          "field_state_delta": {
+            "15": 0.03835633534631472,
+            "13": 0.03835633534631472
+          },
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.092919,
+          "attestation_requests": []
+        },
+        "qfa": {
+          "line_name": "qfa",
+          "question_id": "WQ-3bb80c52",
+          "answer": "Line qfa: General assessment of 'What emergent properties arise from current setup?...' requires further cross-line analysis.",
+          "confidence": 0.5227,
+          "field_state_delta": {
+            "0": 0.052266463576866144,
+            "16": 0.052266463576866144
+          },
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.092926,
+          "attestation_requests": []
+        },
+        "vinf": {
+          "line_name": "vinf",
+          "question_id": "WQ-3bb80c52",
+          "answer": "Line vinf: General assessment of 'What emergent properties arise from current setup?...' requires further cross-line analysis.",
+          "confidence": 0.3252,
+          "field_state_delta": {
+            "0": 0.032523430340343475,
+            "16": 0.032523430340343475
+          },
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.0929317,
+          "attestation_requests": []
+        },
+        "qgl": {
+          "line_name": "qgl",
+          "question_id": "WQ-3bb80c52",
+          "answer": "Line qgl: General assessment of 'What emergent properties arise from current setup?...' requires further cross-line analysis.",
+          "confidence": 0.5215,
+          "field_state_delta": {},
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.092938,
+          "attestation_requests": []
+        },
+        "qlv": {
+          "line_name": "qlv",
+          "question_id": "WQ-3bb80c52",
+          "answer": "Line qlv: General assessment of 'What emergent properties arise from current setup?...' requires further cross-line analysis.",
+          "confidence": 0.3827,
+          "field_state_delta": {},
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.0929437,
+          "attestation_requests": []
+        },
+        "cisvr": {
+          "line_name": "cisvr",
+          "question_id": "WQ-3bb80c52",
+          "answer": "Line cisvr: General assessment of 'What emergent properties arise from current setup?...' requires further cross-line analysis.",
+          "confidence": 0.3524,
+          "field_state_delta": {
+            "34": 0.03523614706937397,
+            "39": 0.03523614706937397
+          },
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.0929499,
+          "attestation_requests": []
+        },
+        "qtlv": {
+          "line_name": "qtlv",
+          "question_id": "WQ-3bb80c52",
+          "answer": "Line qtlv: General assessment of 'What emergent properties arise from current setup?...' requires further cross-line analysis.",
+          "confidence": 0.5471,
+          "field_state_delta": {
+            "15": 0.054706636400382605,
+            "13": 0.054706636400382605
+          },
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.0929558,
+          "attestation_requests": []
+        },
+        "usrm": {
+          "line_name": "usrm",
+          "question_id": "WQ-3bb80c52",
+          "answer": "Line usrm: General assessment of 'What emergent properties arise from current setup?...' requires further cross-line analysis.",
+          "confidence": 0.5062,
+          "field_state_delta": {
+            "34": 0.05061780867936516,
+            "39": 0.05061780867936516
+          },
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.092962,
+          "attestation_requests": []
+        },
+        "cfts": {
+          "line_name": "cfts",
+          "question_id": "WQ-3bb80c52",
+          "answer": "Line cfts: General assessment of 'What emergent properties arise from current setup?...' requires further cross-line analysis.",
+          "confidence": 0.4207,
+          "field_state_delta": {},
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.0929675,
+          "attestation_requests": []
+        }
+      },
+      "validation": {
+        "question_id": "WQ-3bb80c52",
+        "agreement_score": 0.3435,
+        "consensus_answer": "Line qtlv: General assessment of 'What emergent properties arise from current setup?...' requires further cross-line analysis.",
+        "dissenting_lines": [],
+        "supporting_lines": [
+          "ucif2",
+          "lvlu",
+          "lgt",
+          "qfa",
+          "vinf",
+          "qgl",
+          "qlv",
+          "cisvr",
+          "qtlv",
+          "usrm",
+          "cfts"
+        ],
+        "attestation_results": [],
+        "validation_passed": true,
+        "needs_surge": false,
+        "metadata": {
+          "total_lines": 11,
+          "avg_confidence": 0.4365,
+          "attestation_count": 0
+        }
+      },
+      "surge_result": null,
+      "refinement": {
+        "question_id": "WQ-3bb80c52",
+        "injection_success": true,
+        "dimensions_updated": [
+          "DIM_KNOWLEDGE",
+          "DIM_COHERENCE"
+        ],
+        "coherence_change": 0.0,
+        "emergence_change": 0.0,
+        "debt_resolved": false,
+        "metadata": {
+          "node_id": "e59ca7abb39429bc",
+          "supporting_lines": [
+            "ucif2",
+            "lvlu",
+            "lgt",
+            "qfa",
+            "vinf",
+            "qgl",
+            "qlv",
+            "cisvr",
+            "qtlv",
+            "usrm",
+            "cfts"
+          ]
+        }
+      },
+      "metadata": {
+        "source_gap": {
+          "type": "no_propositions",
+          "location": "LL",
+          "description": "LL has no propositions",
+          "severity": 0.9,
+          "pedestal": "LL"
+        },
+        "generation_method": "template_filling"
+      },
+      "iteration_count": 1,
+      "max_iterations": 5,
+      "debt_id": null
+    },
+    {
+      "id": "WQ-f03563cc",
+      "content": "Are there hidden symmetries in CC?",
+      "category": "exploratory",
+      "priority": 0.8,
+      "status": "resolved",
+      "created_at": 1789658787.0928705,
+      "resolved_at": 1789658787.0942962,
+      "attestation_requests": [],
+      "prerequisite_chain": [],
+      "line_assignments": {
+        "ucif2": 0.09090909090909091,
+        "lvlu": 0.09090909090909091,
+        "lgt": 0.09090909090909091,
+        "qfa": 0.09090909090909091,
+        "vinf": 0.09090909090909091,
+        "qgl": 0.09090909090909091,
+        "qlv": 0.09090909090909091,
+        "cisvr": 0.09090909090909091,
+        "qtlv": 0.09090909090909091,
+        "usrm": 0.09090909090909091,
+        "cfts": 0.09090909090909091
+      },
+      "responses": {
+        "ucif2": {
+          "line_name": "ucif2",
+          "question_id": "WQ-f03563cc",
+          "answer": "Line ucif2: General assessment of 'Are there hidden symmetries in CC?...' requires further cross-line analysis.",
+          "confidence": 0.3681,
+          "field_state_delta": {},
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.0934887,
+          "attestation_requests": []
+        },
+        "lvlu": {
+          "line_name": "lvlu",
+          "question_id": "WQ-f03563cc",
+          "answer": "Line lvlu: General assessment of 'Are there hidden symmetries in CC?...' requires further cross-line analysis.",
+          "confidence": 0.3306,
+          "field_state_delta": {},
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.0935006,
+          "attestation_requests": []
+        },
+        "lgt": {
+          "line_name": "lgt",
+          "question_id": "WQ-f03563cc",
+          "answer": "Line lgt: General assessment of 'Are there hidden symmetries in CC?...' requires further cross-line analysis.",
+          "confidence": 0.3532,
+          "field_state_delta": {
+            "15": 0.03532254535976096,
+            "13": 0.03532254535976096
+          },
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.0935082,
+          "attestation_requests": []
+        },
+        "qfa": {
+          "line_name": "qfa",
+          "question_id": "WQ-f03563cc",
+          "answer": "Line qfa: General assessment of 'Are there hidden symmetries in CC?...' requires further cross-line analysis.",
+          "confidence": 0.5906,
+          "field_state_delta": {
+            "0": 0.05905576272731797,
+            "16": 0.05905576272731797
+          },
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.093515,
+          "attestation_requests": []
+        },
+        "vinf": {
+          "line_name": "vinf",
+          "question_id": "WQ-f03563cc",
+          "answer": "Line vinf: General assessment of 'Are there hidden symmetries in CC?...' requires further cross-line analysis.",
+          "confidence": 0.3151,
+          "field_state_delta": {
+            "0": 0.03151188596563883,
+            "16": 0.03151188596563883
+          },
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.0937214,
+          "attestation_requests": []
+        },
+        "qgl": {
+          "line_name": "qgl",
+          "question_id": "WQ-f03563cc",
+          "answer": "Line qgl: General assessment of 'Are there hidden symmetries in CC?...' requires further cross-line analysis.",
+          "confidence": 0.5645,
+          "field_state_delta": {},
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.0937314,
+          "attestation_requests": []
+        },
+        "qlv": {
+          "line_name": "qlv",
+          "question_id": "WQ-f03563cc",
+          "answer": "Line qlv: General assessment of 'Are there hidden symmetries in CC?...' requires further cross-line analysis.",
+          "confidence": 0.4307,
+          "field_state_delta": {},
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.093737,
+          "attestation_requests": []
+        },
+        "cisvr": {
+          "line_name": "cisvr",
+          "question_id": "WQ-f03563cc",
+          "answer": "Line cisvr: General assessment of 'Are there hidden symmetries in CC?...' requires further cross-line analysis.",
+          "confidence": 0.4634,
+          "field_state_delta": {
+            "34": 0.04633552103489968,
+            "39": 0.04633552103489968
+          },
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.0937436,
+          "attestation_requests": []
+        },
+        "qtlv": {
+          "line_name": "qtlv",
+          "question_id": "WQ-f03563cc",
+          "answer": "Line qtlv: General assessment of 'Are there hidden symmetries in CC?...' requires further cross-line analysis.",
+          "confidence": 0.3532,
+          "field_state_delta": {
+            "15": 0.03531734185419904,
+            "13": 0.03531734185419904
+          },
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.0937517,
+          "attestation_requests": []
+        },
+        "usrm": {
+          "line_name": "usrm",
+          "question_id": "WQ-f03563cc",
+          "answer": "Line usrm: General assessment of 'Are there hidden symmetries in CC?...' requires further cross-line analysis.",
+          "confidence": 0.3494,
+          "field_state_delta": {
+            "34": 0.03493724744644638,
+            "39": 0.03493724744644638
+          },
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.0937622,
+          "attestation_requests": []
+        },
+        "cfts": {
+          "line_name": "cfts",
+          "question_id": "WQ-f03563cc",
+          "answer": "Line cfts: General assessment of 'Are there hidden symmetries in CC?...' requires further cross-line analysis.",
+          "confidence": 0.4578,
+          "field_state_delta": {},
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.0937717,
+          "attestation_requests": []
+        }
+      },
+      "validation": {
+        "question_id": "WQ-f03563cc",
+        "agreement_score": 0.3172,
+        "consensus_answer": "Line qfa: General assessment of 'Are there hidden symmetries in CC?...' requires further cross-line analysis.",
+        "dissenting_lines": [],
+        "supporting_lines": [
+          "ucif2",
+          "lvlu",
+          "lgt",
+          "qfa",
+          "vinf",
+          "qgl",
+          "qlv",
+          "cisvr",
+          "qtlv",
+          "usrm",
+          "cfts"
+        ],
+        "attestation_results": [],
+        "validation_passed": true,
+        "needs_surge": false,
+        "metadata": {
+          "total_lines": 11,
+          "avg_confidence": 0.4161,
+          "attestation_count": 0
+        }
+      },
+      "surge_result": null,
+      "refinement": {
+        "question_id": "WQ-f03563cc",
+        "injection_success": true,
+        "dimensions_updated": [
+          "DIM_KNOWLEDGE",
+          "DIM_COHERENCE"
+        ],
+        "coherence_change": 0.0,
+        "emergence_change": 0.0,
+        "debt_resolved": false,
+        "metadata": {
+          "node_id": "d0acd5c0351e546e",
+          "supporting_lines": [
+            "ucif2",
+            "lvlu",
+            "lgt",
+            "qfa",
+            "vinf",
+            "qgl",
+            "qlv",
+            "cisvr",
+            "qtlv",
+            "usrm",
+            "cfts"
+          ]
+        }
+      },
+      "metadata": {
+        "source_gap": {
+          "type": "no_cells",
+          "location": "CC",
+          "description": "Cellular Complex is empty",
+          "severity": 0.8,
+          "pedestal": "CC"
+        },
+        "generation_method": "template_filling"
+      },
+      "iteration_count": 1,
+      "max_iterations": 5,
+      "debt_id": null
+    },
+    {
+      "id": "WQ-bb5893ed",
+      "content": "What unknown relationships exist between HG and related systems?",
+      "category": "exploratory",
+      "priority": 0.7,
+      "status": "resolved",
+      "created_at": 1789658787.092885,
+      "resolved_at": 1789658787.0949106,
+      "attestation_requests": [],
+      "prerequisite_chain": [],
+      "line_assignments": {
+        "ucif2": 0.09090909090909091,
+        "lvlu": 0.09090909090909091,
+        "lgt": 0.09090909090909091,
+        "qfa": 0.09090909090909091,
+        "vinf": 0.09090909090909091,
+        "qgl": 0.09090909090909091,
+        "qlv": 0.09090909090909091,
+        "cisvr": 0.09090909090909091,
+        "qtlv": 0.09090909090909091,
+        "usrm": 0.09090909090909091,
+        "cfts": 0.09090909090909091
+      },
+      "responses": {
+        "ucif2": {
+          "line_name": "ucif2",
+          "question_id": "WQ-bb5893ed",
+          "answer": "Line ucif2: General assessment of 'What unknown relationships exist between HG and re...' requires further cross-line analysis.",
+          "confidence": 0.5828,
+          "field_state_delta": {},
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.0943685,
+          "attestation_requests": []
+        },
+        "lvlu": {
+          "line_name": "lvlu",
+          "question_id": "WQ-bb5893ed",
+          "answer": "Line lvlu: General assessment of 'What unknown relationships exist between HG and re...' requires further cross-line analysis.",
+          "confidence": 0.3136,
+          "field_state_delta": {},
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.0943775,
+          "attestation_requests": []
+        },
+        "lgt": {
+          "line_name": "lgt",
+          "question_id": "WQ-bb5893ed",
+          "answer": "Line lgt: General assessment of 'What unknown relationships exist between HG and re...' requires further cross-line analysis.",
+          "confidence": 0.5667,
+          "field_state_delta": {
+            "15": 0.056669929029765045,
+            "13": 0.056669929029765045
+          },
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.0943873,
+          "attestation_requests": []
+        },
+        "qfa": {
+          "line_name": "qfa",
+          "question_id": "WQ-bb5893ed",
+          "answer": "Line qfa: General assessment of 'What unknown relationships exist between HG and re...' requires further cross-line analysis.",
+          "confidence": 0.328,
+          "field_state_delta": {
+            "0": 0.03279978912952095,
+            "16": 0.03279978912952095
+          },
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.0943987,
+          "attestation_requests": []
+        },
+        "vinf": {
+          "line_name": "vinf",
+          "question_id": "WQ-bb5893ed",
+          "answer": "Line vinf: General assessment of 'What unknown relationships exist between HG and re...' requires further cross-line analysis.",
+          "confidence": 0.5133,
+          "field_state_delta": {
+            "0": 0.05133120437246688,
+            "16": 0.05133120437246688
+          },
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.0944102,
+          "attestation_requests": []
+        },
+        "qgl": {
+          "line_name": "qgl",
+          "question_id": "WQ-bb5893ed",
+          "answer": "Line qgl: General assessment of 'What unknown relationships exist between HG and re...' requires further cross-line analysis.",
+          "confidence": 0.3864,
+          "field_state_delta": {},
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.0944211,
+          "attestation_requests": []
+        },
+        "qlv": {
+          "line_name": "qlv",
+          "question_id": "WQ-bb5893ed",
+          "answer": "Line qlv: General assessment of 'What unknown relationships exist between HG and re...' requires further cross-line analysis.",
+          "confidence": 0.5873,
+          "field_state_delta": {},
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.0944288,
+          "attestation_requests": []
+        },
+        "cisvr": {
+          "line_name": "cisvr",
+          "question_id": "WQ-bb5893ed",
+          "answer": "Line cisvr: General assessment of 'What unknown relationships exist between HG and re...' requires further cross-line analysis.",
+          "confidence": 0.5498,
+          "field_state_delta": {
+            "34": 0.05497519105715362,
+            "39": 0.05497519105715362
+          },
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.0944357,
+          "attestation_requests": []
+        },
+        "qtlv": {
+          "line_name": "qtlv",
+          "question_id": "WQ-bb5893ed",
+          "answer": "Line qtlv: General assessment of 'What unknown relationships exist between HG and re...' requires further cross-line analysis.",
+          "confidence": 0.3616,
+          "field_state_delta": {
+            "15": 0.03616139549214017,
+            "13": 0.03616139549214017
+          },
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.0944426,
+          "attestation_requests": []
+        },
+        "usrm": {
+          "line_name": "usrm",
+          "question_id": "WQ-bb5893ed",
+          "answer": "Line usrm: General assessment of 'What unknown relationships exist between HG and re...' requires further cross-line analysis.",
+          "confidence": 0.5988,
+          "field_state_delta": {
+            "34": 0.05988255297180756,
+            "39": 0.05988255297180756
+          },
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.0944488,
+          "attestation_requests": []
+        },
+        "cfts": {
+          "line_name": "cfts",
+          "question_id": "WQ-bb5893ed",
+          "answer": "Line cfts: General assessment of 'What unknown relationships exist between HG and re...' requires further cross-line analysis.",
+          "confidence": 0.4728,
+          "field_state_delta": {},
+          "metadata": {
+            "relevance": 0
+          },
+          "timestamp": 1789658787.0944548,
+          "attestation_requests": []
+        }
+      },
+      "validation": {
+        "question_id": "WQ-bb5893ed",
+        "agreement_score": 0.3675,
+        "consensus_answer": "Line usrm: General assessment of 'What unknown relationships exist between HG and re...' requires further cross-line analysis.",
+        "dissenting_lines": [],
+        "supporting_lines": [
+          "ucif2",
+          "lvlu",
+          "lgt",
+          "qfa",
+          "vinf",
+          "qgl",
+          "qlv",
+          "cisvr",
+          "qtlv",
+          "usrm",
+          "cfts"
+        ],
+        "attestation_results": [],
+        "validation_passed": true,
+        "needs_surge": false,
+        "metadata": {
+          "total_lines": 11,
+          "avg_confidence": 0.4783,
+          "attestation_count": 0
+        }
+      },
+      "surge_result": null,
+      "refinement": {
+        "question_id": "WQ-bb5893ed",
+        "injection_success": true,
+        "dimensions_updated": [
+          "DIM_KNOWLEDGE",
+          "DIM_COHERENCE"
+        ],
+        "coherence_change": 0.0,
+        "emergence_change": 0.0,
+        "debt_resolved": false,
+        "metadata": {
+          "node_id": "d764b7ed4845e80c",
+          "supporting_lines": [
+            "ucif2",
+            "lvlu",
+            "lgt",
+            "qfa",
+            "vinf",
+            "qgl",
+            "qlv",
+            "cisvr",
+            "qtlv",
+            "usrm",
+            "cfts"
+          ]
+        }
+      },
+      "metadata": {
+        "source_gap": {
+          "type": "no_hyperedges",
+          "location": "HG",
+          "description": "Hypergraph empty",
+          "severity": 0.7,
+          "pedestal": "HG"
+        },
+        "generation_method": "template_filling"
+      },
+      "iteration_count": 1,
+      "max_iterations": 5,
+      "debt_id": null
+    }
+  ],
+  "pedestal_summary": {
+    "total_nodes": 6,
+    "kg_edges": 66,
+    "cc_cells": 0,
+    "hg_hyperedges": 0,
+    "in_clusters": 0,
+    "ct_morphisms": 0,
+    "ll_propositions": 0,
+    "stats": {
+      "KG": {
+        "nodes": 6,
+        "edges": 0,
+        "created": "2026-09-17T15:26:27Z"
+      },
+      "CC": {
+        "nodes": 6,
+        "edges": 0,
+        "created": "2026-09-17T15:26:27Z"
+      },
+      "HG": {
+        "nodes": 6,
+        "edges": 0,
+        "created": "2026-09-17T15:26:27Z"
+      },
+      "IN": {
+        "nodes": 6,
+        "edges": 0,
+        "created": "2026-09-17T15:26:27Z"
+      },
+      "CT": {
+        "nodes": 6,
+        "edges": 0,
+        "created": "2026-09-17T15:26:27Z"
+      },
+      "LL": {
+        "nodes": 6,
+        "edges": 0,
+        "created": "2026-09-17T15:26:27Z"
+      }
+    }
+  },
+  "cycle_history": [
+    {
+      "cycle": 1,
+      "gaps_discovered": 5,
+      "questions_generated": 3,
+      "questions_resolved": 3,
+      "questions_unresolved": 0,
+      "results": [
+        {
+          "question_id": "WQ-3bb80c52",
+          "category": "exploratory",
+          "priority": 0.9,
+          "result": {
+            "question_id": "WQ-3bb80c52",
+            "rounds_used": 1,
+            "status": "resolved",
+            "validation": {
+              "question_id": "WQ-3bb80c52",
+              "agreement_score": 0.3435,
+              "consensus_answer": "Line qtlv: General assessment of 'What emergent properties arise from current setup?...' requires further cross-line analysis.",
+              "dissenting_lines": [],
+              "supporting_lines": [
+                "ucif2",
+                "lvlu",
+                "lgt",
+                "qfa",
+                "vinf",
+                "qgl",
+                "qlv",
+                "cisvr",
+                "qtlv",
+                "usrm",
+                "cfts"
+              ],
+              "attestation_results": [],
+              "validation_passed": true,
+              "needs_surge": false,
+              "metadata": {
+                "total_lines": 11,
+                "avg_confidence": 0.4365,
+                "attestation_count": 0
+              }
+            },
+            "refinement": {
+              "question_id": "WQ-3bb80c52",
+              "injection_success": true,
+              "dimensions_updated": [
+                "DIM_KNOWLEDGE",
+                "DIM_COHERENCE"
+              ],
+              "coherence_change": 0.0,
+              "emergence_change": 0.0,
+              "debt_resolved": false,
+              "metadata": {
+                "node_id": "e59ca7abb39429bc",
+                "supporting_lines": [
+                  "ucif2",
+                  "lvlu",
+                  "lgt",
+                  "qfa",
+                  "vinf",
+                  "qgl",
+                  "qlv",
+                  "cisvr",
+                  "qtlv",
+                  "usrm",
+                  "cfts"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "question_id": "WQ-f03563cc",
+          "category": "exploratory",
+          "priority": 0.8,
+          "result": {
+            "question_id": "WQ-f03563cc",
+            "rounds_used": 1,
+            "status": "resolved",
+            "validation": {
+              "question_id": "WQ-f03563cc",
+              "agreement_score": 0.3172,
+              "consensus_answer": "Line qfa: General assessment of 'Are there hidden symmetries in CC?...' requires further cross-line analysis.",
+              "dissenting_lines": [],
+              "supporting_lines": [
+                "ucif2",
+                "lvlu",
+                "lgt",
+                "qfa",
+                "vinf",
+                "qgl",
+                "qlv",
+                "cisvr",
+                "qtlv",
+                "usrm",
+                "cfts"
+              ],
+              "attestation_results": [],
+              "validation_passed": true,
+              "needs_surge": false,
+              "metadata": {
+                "total_lines": 11,
+                "avg_confidence": 0.4161,
+                "attestation_count": 0
+              }
+            },
+            "refinement": {
+              "question_id": "WQ-f03563cc",
+              "injection_success": true,
+              "dimensions_updated": [
+                "DIM_KNOWLEDGE",
+                "DIM_COHERENCE"
+              ],
+              "coherence_change": 0.0,
+              "emergence_change": 0.0,
+              "debt_resolved": false,
+              "metadata": {
+                "node_id": "d0acd5c0351e546e",
+                "supporting_lines": [
+                  "ucif2",
+                  "lvlu",
+                  "lgt",
+                  "qfa",
+                  "vinf",
+                  "qgl",
+                  "qlv",
+                  "cisvr",
+                  "qtlv",
+                  "usrm",
+                  "cfts"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "question_id": "WQ-bb5893ed",
+          "category": "exploratory",
+          "priority": 0.7,
+          "result": {
+            "question_id": "WQ-bb5893ed",
+            "rounds_used": 1,
+            "status": "resolved",
+            "validation": {
+              "question_id": "WQ-bb5893ed",
+              "agreement_score": 0.3675,
+              "consensus_answer": "Line usrm: General assessment of 'What unknown relationships exist between HG and re...' requires further cross-line analysis.",
+              "dissenting_lines": [],
+              "supporting_lines": [
+                "ucif2",
+                "lvlu",
+                "lgt",
+                "qfa",
+                "vinf",
+                "qgl",
+                "qlv",
+                "cisvr",
+                "qtlv",
+                "usrm",
+                "cfts"
+              ],
+              "attestation_results": [],
+              "validation_passed": true,
+              "needs_surge": false,
+              "metadata": {
+                "total_lines": 11,
+                "avg_confidence": 0.4783,
+                "attestation_count": 0
+              }
+            },
+            "refinement": {
+              "question_id": "WQ-bb5893ed",
+              "injection_success": true,
+              "dimensions_updated": [
+                "DIM_KNOWLEDGE",
+                "DIM_COHERENCE"
+              ],
+              "coherence_change": 0.0,
+              "emergence_change": 0.0,
+              "debt_resolved": false,
+              "metadata": {
+                "node_id": "d764b7ed4845e80c",
+                "supporting_lines": [
+                  "ucif2",
+                  "lvlu",
+                  "lgt",
+                  "qfa",
+                  "vinf",
+                  "qgl",
+                  "qlv",
+                  "cisvr",
+                  "qtlv",
+                  "usrm",
+                  "cfts"
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "stats": {
+        "questions_generated": 8,
+        "questions_resolved": 6,
+        "questions_rejected": 0,
+        "surges_initiated": 0,
+        "debts_processed": 3,
+        "knowledge_injections": 6,
+        "total_iterations": 6
+      },
+      "timestamp": 1789658787.0949564
+    }
+  ],
+  "surge_history": []
+}

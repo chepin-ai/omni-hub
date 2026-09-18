@@ -1,0 +1,59 @@
+{
+  "operation": "observe_collapse",
+  "line": "lvlu",
+  "observer": "ucif2-hub",
+  "trigger_type": "health_check",
+  "timestamp": "2026-09-12T10:35:42.325992+00:00",
+  "description": "ucif2-hub 观测 lvlu，触发波函数坍缩",
+  "pre_collapse_state": {
+    "line": "lvlu",
+    "amplitudes": {
+      "si0": {
+        "re": 0.6384423980690614,
+        "im": 0.0
+      },
+      "si1": {
+        "re": 0.5320353317242179,
+        "im": 0.0
+      },
+      "si2": {
+        "re": 0.4256282653793743,
+        "im": 0.0
+      },
+      "si3": {
+        "re": 0.3192211990345307,
+        "im": 0.0
+      },
+      "si4": {
+        "re": 0.14896989288278104,
+        "im": 0.0
+      },
+      "si5": {
+        "re": 0.06384423980690615,
+        "im": 0.0
+      }
+    },
+    "probabilities": {
+      "si0": 0.4076086956521739,
+      "si1": 0.2830615942028986,
+      "si2": 0.1811594202898551,
+      "si3": 0.10190217391304347,
+      "si4": 0.022192028985507255,
+      "si5": 0.00407608695652174
+    },
+    "dominant_level": "si0",
+    "timestamp": "2026-09-12T10:35:33.164987+00:00"
+  },
+  "adjusted_probabilities": {
+    "si0": 0.243,
+    "si1": 0.1688,
+    "si2": 0.36,
+    "si3": 0.2025,
+    "si4": 0.0176,
+    "si5": 0.0081
+  },
+  "collapsed_to": "si0",
+  "collapse_probability": 0.243,
+  "uncertainty_before": 1.372201,
+  "uncertainty_after": 0.0
+}

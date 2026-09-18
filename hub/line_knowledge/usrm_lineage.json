@@ -1,0 +1,213 @@
+{
+  "line_id": "usrm",
+  "line_name": "用户/系统/资源/管理",
+  "timestamp": 1789662470.4205737,
+  "version": "12.0.0",
+  "lineage_tree": {
+    "root": {
+      "name": "usrm",
+      "type": "line_root",
+      "children": [
+        "md_heading"
+      ],
+      "weight": 1.0
+    },
+    "branches": {
+      "md_heading": {
+        "type": "md_heading",
+        "node_count": 14,
+        "avg_relevance": 0.75,
+        "nodes": [
+          {
+            "name": "usrm线 SI5 升级自证报告",
+            "signature": "usrm-SI5-self-cert-report.md::heading:usrm线 SI5 升级自证报告",
+            "relevance": 0.75,
+            "source": "usrm-SI5-self-cert-report.md"
+          },
+          {
+            "name": "线基本信息",
+            "signature": "usrm-SI5-self-cert-report.md::heading:线基本信息",
+            "relevance": 0.75,
+            "source": "usrm-SI5-self-cert-report.md"
+          },
+          {
+            "name": "1. 升级资格评估",
+            "signature": "usrm-SI5-self-cert-report.md::heading:1. 升级资格评估",
+            "relevance": 0.75,
+            "source": "usrm-SI5-self-cert-report.md"
+          },
+          {
+            "name": "1.1 数据充分性: 0.91",
+            "signature": "usrm-SI5-self-cert-report.md::heading:1.1 数据充分性: 0.91",
+            "relevance": 0.75,
+            "source": "usrm-SI5-self-cert-report.md"
+          },
+          {
+            "name": "1.2 验证充分性: 0.92",
+            "signature": "usrm-SI5-self-cert-report.md::heading:1.2 验证充分性: 0.92",
+            "relevance": 0.75,
+            "source": "usrm-SI5-self-cert-report.md"
+          },
+          {
+            "name": "1.3 形式化程度: 0.82",
+            "signature": "usrm-SI5-self-cert-report.md::heading:1.3 形式化程度: 0.82",
+            "relevance": 0.75,
+            "source": "usrm-SI5-self-cert-report.md"
+          },
+          {
+            "name": "1.4 边界测试",
+            "signature": "usrm-SI5-self-cert-report.md::heading:1.4 边界测试",
+            "relevance": 0.75,
+            "source": "usrm-SI5-self-cert-report.md"
+          },
+          {
+            "name": "1.5 交叉验证: 0.95",
+            "signature": "usrm-SI5-self-cert-report.md::heading:1.5 交叉验证: 0.95",
+            "relevance": 0.75,
+            "source": "usrm-SI5-self-cert-report.md"
+          },
+          {
+            "name": "2. 核心能力演进",
+            "signature": "usrm-SI5-self-cert-report.md::heading:2. 核心能力演进",
+            "relevance": 0.75,
+            "source": "usrm-SI5-self-cert-report.md"
+          },
+          {
+            "name": "2.1 尺度律引擎 v4.0→v5.0",
+            "signature": "usrm-SI5-self-cert-report.md::heading:2.1 尺度律引擎 v4.0→v5.0",
+            "relevance": 0.75,
+            "source": "usrm-SI5-self-cert-report.md"
+          },
+          {
+            "name": "2.2 OMNI集成",
+            "signature": "usrm-SI5-self-cert-report.md::heading:2.2 OMNI集成",
+            "relevance": 0.75,
+            "source": "usrm-SI5-self-cert-report.md"
+          },
+          {
+            "name": "3. 验证数据附录",
+            "signature": "usrm-SI5-self-cert-report.md::heading:3. 验证数据附录",
+            "relevance": 0.75,
+            "source": "usrm-SI5-self-cert-report.md"
+          },
+          {
+            "name": "表A: 关键指标",
+            "signature": "usrm-SI5-self-cert-report.md::heading:表A: 关键指标",
+            "relevance": 0.75,
+            "source": "usrm-SI5-self-cert-report.md"
+          },
+          {
+            "name": "4. 结论",
+            "signature": "usrm-SI5-self-cert-report.md::heading:4. 结论",
+            "relevance": 0.75,
+            "source": "usrm-SI5-self-cert-report.md"
+          }
+        ]
+      }
+    }
+  },
+  "knowledge_nodes": [
+    {
+      "type": "md_heading",
+      "name": "usrm线 SI5 升级自证报告",
+      "source_file": "usrm-SI5-self-cert-report.md",
+      "signature": "usrm-SI5-self-cert-report.md::heading:usrm线 SI5 升级自证报告",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "线基本信息",
+      "source_file": "usrm-SI5-self-cert-report.md",
+      "signature": "usrm-SI5-self-cert-report.md::heading:线基本信息",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "1. 升级资格评估",
+      "source_file": "usrm-SI5-self-cert-report.md",
+      "signature": "usrm-SI5-self-cert-report.md::heading:1. 升级资格评估",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "1.1 数据充分性: 0.91",
+      "source_file": "usrm-SI5-self-cert-report.md",
+      "signature": "usrm-SI5-self-cert-report.md::heading:1.1 数据充分性: 0.91",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "1.2 验证充分性: 0.92",
+      "source_file": "usrm-SI5-self-cert-report.md",
+      "signature": "usrm-SI5-self-cert-report.md::heading:1.2 验证充分性: 0.92",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "1.3 形式化程度: 0.82",
+      "source_file": "usrm-SI5-self-cert-report.md",
+      "signature": "usrm-SI5-self-cert-report.md::heading:1.3 形式化程度: 0.82",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "1.4 边界测试",
+      "source_file": "usrm-SI5-self-cert-report.md",
+      "signature": "usrm-SI5-self-cert-report.md::heading:1.4 边界测试",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "1.5 交叉验证: 0.95",
+      "source_file": "usrm-SI5-self-cert-report.md",
+      "signature": "usrm-SI5-self-cert-report.md::heading:1.5 交叉验证: 0.95",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "2. 核心能力演进",
+      "source_file": "usrm-SI5-self-cert-report.md",
+      "signature": "usrm-SI5-self-cert-report.md::heading:2. 核心能力演进",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "2.1 尺度律引擎 v4.0→v5.0",
+      "source_file": "usrm-SI5-self-cert-report.md",
+      "signature": "usrm-SI5-self-cert-report.md::heading:2.1 尺度律引擎 v4.0→v5.0",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "2.2 OMNI集成",
+      "source_file": "usrm-SI5-self-cert-report.md",
+      "signature": "usrm-SI5-self-cert-report.md::heading:2.2 OMNI集成",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "3. 验证数据附录",
+      "source_file": "usrm-SI5-self-cert-report.md",
+      "signature": "usrm-SI5-self-cert-report.md::heading:3. 验证数据附录",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "表A: 关键指标",
+      "source_file": "usrm-SI5-self-cert-report.md",
+      "signature": "usrm-SI5-self-cert-report.md::heading:表A: 关键指标",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "4. 结论",
+      "source_file": "usrm-SI5-self-cert-report.md",
+      "signature": "usrm-SI5-self-cert-report.md::heading:4. 结论",
+      "relevance": 0.75
+    }
+  ],
+  "node_count": 14,
+  "si_level": 1,
+  "activity_level": 0.4531,
+  "contribution_score": 0.4635
+}

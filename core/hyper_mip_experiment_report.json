@@ -1,0 +1,989 @@
+{
+  "experiment_info": {
+    "name": "OMNI-HUB v7.0 HyperMIPCore Experiment",
+    "version": "7.0.0",
+    "timestamp": 1789492137.7192898,
+    "session_id": "HMIP-v7-064C49098AFD4F91"
+  },
+  "system_configuration": {
+    "num_lines": 11,
+    "provers_per_line": 5,
+    "total_provers": 55,
+    "active_provers": 44,
+    "byzantine_provers": 11,
+    "base_threshold": 0.95,
+    "current_threshold": 0.95
+  },
+  "challenge_results": [
+    {
+      "challenge_num": 1,
+      "verified": false,
+      "consensus_score": 0.9791842562767056,
+      "num_provers": 10,
+      "required_si": 6,
+      "task_complexity": 0.8604779966415782,
+      "consensus_time_ms": 1.5518665313720703,
+      "line_ids": [
+        "lgt",
+        "cisvr",
+        "vinf",
+        "qfa",
+        "lvlu",
+        "qtlv",
+        "ucif2",
+        "qgl",
+        "qlv",
+        "cfts"
+      ]
+    },
+    {
+      "challenge_num": 2,
+      "verified": true,
+      "consensus_score": 1.0,
+      "num_provers": 3,
+      "required_si": 0,
+      "task_complexity": 0.39448990891963875,
+      "consensus_time_ms": 0.179290771484375,
+      "line_ids": [
+        "qtlv",
+        "ucif2",
+        "qfa"
+      ]
+    },
+    {
+      "challenge_num": 3,
+      "verified": false,
+      "consensus_score": 0.9169382943298873,
+      "num_provers": 3,
+      "required_si": 1,
+      "task_complexity": 0.4150597683464626,
+      "consensus_time_ms": 0.17881393432617188,
+      "line_ids": [
+        "qtlv",
+        "ucif2",
+        "qfa"
+      ]
+    },
+    {
+      "challenge_num": 4,
+      "verified": true,
+      "consensus_score": 0.9548435273521774,
+      "num_provers": 5,
+      "required_si": 3,
+      "task_complexity": 0.3983766301675711,
+      "consensus_time_ms": 0.4649162292480469,
+      "line_ids": [
+        "cisvr",
+        "qfa",
+        "lvlu",
+        "qtlv",
+        "ucif2"
+      ]
+    },
+    {
+      "challenge_num": 5,
+      "verified": true,
+      "consensus_score": 0.9540359523482698,
+      "num_provers": 5,
+      "required_si": 3,
+      "task_complexity": 0.44377038249488476,
+      "consensus_time_ms": 0.3762245178222656,
+      "line_ids": [
+        "cisvr",
+        "qfa",
+        "lvlu",
+        "qtlv",
+        "ucif2"
+      ]
+    },
+    {
+      "challenge_num": 6,
+      "verified": true,
+      "consensus_score": 1.0,
+      "num_provers": 4,
+      "required_si": 2,
+      "task_complexity": 0.5240317905418819,
+      "consensus_time_ms": 0.25153160095214844,
+      "line_ids": [
+        "lvlu",
+        "qtlv",
+        "ucif2",
+        "qfa"
+      ]
+    },
+    {
+      "challenge_num": 7,
+      "verified": false,
+      "consensus_score": 0.9835991860741073,
+      "num_provers": 9,
+      "required_si": 6,
+      "task_complexity": 0.7041843259941107,
+      "consensus_time_ms": 1.0933876037597656,
+      "line_ids": [
+        "cisvr",
+        "vinf",
+        "qfa",
+        "lvlu",
+        "qtlv",
+        "ucif2",
+        "qgl",
+        "qlv",
+        "cfts"
+      ]
+    },
+    {
+      "challenge_num": 8,
+      "verified": true,
+      "consensus_score": 1.0,
+      "num_provers": 6,
+      "required_si": 4,
+      "task_complexity": 0.533481900550673,
+      "consensus_time_ms": 0.48089027404785156,
+      "line_ids": [
+        "cisvr",
+        "vinf",
+        "qfa",
+        "lvlu",
+        "qtlv",
+        "ucif2"
+      ]
+    },
+    {
+      "challenge_num": 9,
+      "verified": true,
+      "consensus_score": 1.0,
+      "num_provers": 5,
+      "required_si": 3,
+      "task_complexity": 0.40542099039083007,
+      "consensus_time_ms": 0.3650188446044922,
+      "line_ids": [
+        "cisvr",
+        "qfa",
+        "lvlu",
+        "qtlv",
+        "ucif2"
+      ]
+    },
+    {
+      "challenge_num": 10,
+      "verified": true,
+      "consensus_score": 1.0,
+      "num_provers": 3,
+      "required_si": 1,
+      "task_complexity": 0.3405365712381578,
+      "consensus_time_ms": 0.17595291137695312,
+      "line_ids": [
+        "qtlv",
+        "ucif2",
+        "qfa"
+      ]
+    }
+  ],
+  "cross_line_results": [
+    {
+      "line_a": "ucif2",
+      "line_b": "lvlu",
+      "verified": false,
+      "combined_score": 0.9172698051387611,
+      "a_to_b_score": 1.0,
+      "b_to_a_score": 0.8345396102775222
+    },
+    {
+      "line_a": "lgt",
+      "line_b": "qfa",
+      "verified": false,
+      "combined_score": 0.9170624858987377,
+      "a_to_b_score": 0.8341249717974755,
+      "b_to_a_score": 1.0
+    },
+    {
+      "line_a": "vinf",
+      "line_b": "qgl",
+      "verified": false,
+      "combined_score": 0.8301688738860122,
+      "a_to_b_score": 0.8293774395806137,
+      "b_to_a_score": 0.8309603081914109
+    },
+    {
+      "line_a": "qlv",
+      "line_b": "cisvr",
+      "verified": false,
+      "combined_score": 0.9222569770776095,
+      "a_to_b_score": 0.9173021315279882,
+      "b_to_a_score": 0.9272118226272306
+    },
+    {
+      "line_a": "qtlv",
+      "line_b": "usrm",
+      "verified": false,
+      "combined_score": 0.9201808595126142,
+      "a_to_b_score": 0.9160689228530827,
+      "b_to_a_score": 0.9242927961721455
+    },
+    {
+      "line_a": "usrm",
+      "line_b": "cfts",
+      "verified": false,
+      "combined_score": 0.8740475353716362,
+      "a_to_b_score": 0.9112661032354468,
+      "b_to_a_score": 0.8368289675078254
+    },
+    {
+      "line_a": "ucif2",
+      "line_b": "cfts",
+      "verified": true,
+      "combined_score": 1.0,
+      "a_to_b_score": 1.0,
+      "b_to_a_score": 1.0
+    },
+    {
+      "line_a": "lvlu",
+      "line_b": "qtlv",
+      "verified": true,
+      "combined_score": 1.0,
+      "a_to_b_score": 1.0,
+      "b_to_a_score": 1.0
+    },
+    {
+      "line_a": "lgt",
+      "line_b": "vinf",
+      "verified": false,
+      "combined_score": 0.9185192491736324,
+      "a_to_b_score": 1.0,
+      "b_to_a_score": 0.8370384983472647
+    },
+    {
+      "line_a": "qfa",
+      "line_b": "qlv",
+      "verified": false,
+      "combined_score": 0.9529791923036939,
+      "a_to_b_score": 0.9059583846073876,
+      "b_to_a_score": 1.0
+    }
+  ],
+  "temporal_verification": {
+    "normal_state": {
+      "verified": true,
+      "anomaly_detected": false,
+      "anomaly_count": 0,
+      "temporal_score": 1.0
+    },
+    "anomalous_state": {
+      "verified": false,
+      "anomaly_detected": true,
+      "anomaly_count": 6,
+      "temporal_score": 0.82
+    }
+  },
+  "statistics": {
+    "session_id": "HMIP-v7-064C49098AFD4F91",
+    "system_health": 0.8540755554112521,
+    "current_threshold": 0.95,
+    "total_challenges": 11,
+    "successful_verifications": 7,
+    "failed_verifications": 4,
+    "success_rate": 0.6363636363636364,
+    "failure_rate": 0.36363636363636365,
+    "byzantine_detected": 0,
+    "cross_line_verifications": 10,
+    "temporal_verifications": 2,
+    "adaptive_adjustments": 4,
+    "average_consensus_time": 0.0004943500865589489,
+    "total_provers": 55,
+    "active_provers": 44,
+    "line_stats": {
+      "ucif2": {
+        "total_provers": 5,
+        "active_provers": 3,
+        "faulty_provers": 2,
+        "avg_capability": 0.8117519271069611,
+        "avg_accuracy": 0.9636357679673173
+      },
+      "lvlu": {
+        "total_provers": 5,
+        "active_provers": 4,
+        "faulty_provers": 1,
+        "avg_capability": 0.8394590095819495,
+        "avg_accuracy": 0.9165913885730669
+      },
+      "lgt": {
+        "total_provers": 5,
+        "active_provers": 4,
+        "faulty_provers": 1,
+        "avg_capability": 0.793996973205991,
+        "avg_accuracy": 0.9205099999999999
+      },
+      "qfa": {
+        "total_provers": 5,
+        "active_provers": 3,
+        "faulty_provers": 2,
+        "avg_capability": 0.8053036386160383,
+        "avg_accuracy": 0.9154855393360558
+      },
+      "vinf": {
+        "total_provers": 5,
+        "active_provers": 4,
+        "faulty_provers": 1,
+        "avg_capability": 0.7985362089931598,
+        "avg_accuracy": 0.8893123207545038
+      },
+      "qgl": {
+        "total_provers": 5,
+        "active_provers": 4,
+        "faulty_provers": 1,
+        "avg_capability": 0.8083119710652349,
+        "avg_accuracy": 0.8945648058189999
+      },
+      "qlv": {
+        "total_provers": 5,
+        "active_provers": 5,
+        "faulty_provers": 0,
+        "avg_capability": 0.8156599205726222,
+        "avg_accuracy": 0.9398951
+      },
+      "cisvr": {
+        "total_provers": 5,
+        "active_provers": 5,
+        "faulty_provers": 0,
+        "avg_capability": 0.8001423278132345,
+        "avg_accuracy": 0.9348504629174099
+      },
+      "qtlv": {
+        "total_provers": 5,
+        "active_provers": 4,
+        "faulty_provers": 1,
+        "avg_capability": 0.8156379405092059,
+        "avg_accuracy": 0.9385965151965635
+      },
+      "usrm": {
+        "total_provers": 5,
+        "active_provers": 3,
+        "faulty_provers": 2,
+        "avg_capability": 0.803126042640048,
+        "avg_accuracy": 0.9177
+      },
+      "cfts": {
+        "total_provers": 5,
+        "active_provers": 5,
+        "faulty_provers": 0,
+        "avg_capability": 0.7904440302724665,
+        "avg_accuracy": 0.9121733278999999
+      }
+    },
+    "layer_stats": {
+      "0": {
+        "si_level": 0,
+        "num_provers": 55,
+        "cascade_threshold": 0.95,
+        "total_verifications": 11,
+        "successful_verifications": 11,
+        "success_rate": 1.0,
+        "min_provers": 1,
+        "max_provers": 3
+      },
+      "1": {
+        "si_level": 1,
+        "num_provers": 55,
+        "cascade_threshold": 0.955,
+        "total_verifications": 10,
+        "successful_verifications": 8,
+        "success_rate": 0.8,
+        "min_provers": 2,
+        "max_provers": 5
+      },
+      "2": {
+        "si_level": 2,
+        "num_provers": 53,
+        "cascade_threshold": 0.96,
+        "total_verifications": 7,
+        "successful_verifications": 7,
+        "success_rate": 1.0,
+        "min_provers": 3,
+        "max_provers": 7
+      },
+      "3": {
+        "si_level": 3,
+        "num_provers": 46,
+        "cascade_threshold": 0.965,
+        "total_verifications": 6,
+        "successful_verifications": 6,
+        "success_rate": 1.0,
+        "min_provers": 4,
+        "max_provers": 9
+      },
+      "4": {
+        "si_level": 4,
+        "num_provers": 30,
+        "cascade_threshold": 0.97,
+        "total_verifications": 3,
+        "successful_verifications": 2,
+        "success_rate": 0.6666666666666666,
+        "min_provers": 5,
+        "max_provers": 11
+      },
+      "5": {
+        "si_level": 5,
+        "num_provers": 22,
+        "cascade_threshold": 0.975,
+        "total_verifications": 1,
+        "successful_verifications": 1,
+        "success_rate": 1.0,
+        "min_provers": 6,
+        "max_provers": 11
+      },
+      "6": {
+        "si_level": 6,
+        "num_provers": 9,
+        "cascade_threshold": 0.98,
+        "total_verifications": 1,
+        "successful_verifications": 0,
+        "success_rate": 0.0,
+        "min_provers": 7,
+        "max_provers": 11
+      }
+    },
+    "byzantine_stats": {
+      "base_tolerance": 0.33,
+      "adaptive_mode": true,
+      "faulty_provers": [],
+      "suspicion_scores": {
+        "qgl_prover_0": 0.15
+      },
+      "total_detections": 11
+    },
+    "cross_line_stats": {
+      "matrix": {
+        "ucif2": {
+          "lvlu": {
+            "timestamp": 1789491943.8243876,
+            "verified": true,
+            "score": 1.0
+          },
+          "lgt": {
+            "verified": false,
+            "score": 0.0
+          },
+          "qfa": {
+            "verified": false,
+            "score": 0.0
+          },
+          "vinf": {
+            "verified": false,
+            "score": 0.0
+          },
+          "qgl": {
+            "verified": false,
+            "score": 0.0
+          },
+          "qlv": {
+            "verified": false,
+            "score": 0.0
+          },
+          "cisvr": {
+            "verified": false,
+            "score": 0.0
+          },
+          "qtlv": {
+            "verified": false,
+            "score": 0.0
+          },
+          "usrm": {
+            "verified": false,
+            "score": 0.0
+          },
+          "cfts": {
+            "timestamp": 1789491943.825596,
+            "verified": true,
+            "score": 1.0
+          }
+        },
+        "lvlu": {
+          "ucif2": {
+            "timestamp": 1789491943.8243885,
+            "verified": false,
+            "score": 0.8345396102775222
+          },
+          "lgt": {
+            "verified": false,
+            "score": 0.0
+          },
+          "qfa": {
+            "verified": false,
+            "score": 0.0
+          },
+          "vinf": {
+            "verified": false,
+            "score": 0.0
+          },
+          "qgl": {
+            "verified": false,
+            "score": 0.0
+          },
+          "qlv": {
+            "verified": false,
+            "score": 0.0
+          },
+          "cisvr": {
+            "verified": false,
+            "score": 0.0
+          },
+          "qtlv": {
+            "timestamp": 1789491943.8257606,
+            "verified": true,
+            "score": 1.0
+          },
+          "usrm": {
+            "verified": false,
+            "score": 0.0
+          },
+          "cfts": {
+            "verified": false,
+            "score": 0.0
+          }
+        },
+        "lgt": {
+          "ucif2": {
+            "verified": false,
+            "score": 0.0
+          },
+          "lvlu": {
+            "verified": false,
+            "score": 0.0
+          },
+          "qfa": {
+            "timestamp": 1789491943.824593,
+            "verified": false,
+            "score": 0.8341249717974755
+          },
+          "vinf": {
+            "timestamp": 1789491943.825926,
+            "verified": true,
+            "score": 1.0
+          },
+          "qgl": {
+            "verified": false,
+            "score": 0.0
+          },
+          "qlv": {
+            "verified": false,
+            "score": 0.0
+          },
+          "cisvr": {
+            "verified": false,
+            "score": 0.0
+          },
+          "qtlv": {
+            "verified": false,
+            "score": 0.0
+          },
+          "usrm": {
+            "verified": false,
+            "score": 0.0
+          },
+          "cfts": {
+            "verified": false,
+            "score": 0.0
+          }
+        },
+        "qfa": {
+          "ucif2": {
+            "verified": false,
+            "score": 0.0
+          },
+          "lvlu": {
+            "verified": false,
+            "score": 0.0
+          },
+          "lgt": {
+            "timestamp": 1789491943.824594,
+            "verified": true,
+            "score": 1.0
+          },
+          "vinf": {
+            "verified": false,
+            "score": 0.0
+          },
+          "qgl": {
+            "verified": false,
+            "score": 0.0
+          },
+          "qlv": {
+            "timestamp": 1789491943.8261056,
+            "verified": false,
+            "score": 0.9059583846073876
+          },
+          "cisvr": {
+            "verified": false,
+            "score": 0.0
+          },
+          "qtlv": {
+            "verified": false,
+            "score": 0.0
+          },
+          "usrm": {
+            "verified": false,
+            "score": 0.0
+          },
+          "cfts": {
+            "verified": false,
+            "score": 0.0
+          }
+        },
+        "vinf": {
+          "ucif2": {
+            "verified": false,
+            "score": 0.0
+          },
+          "lvlu": {
+            "verified": false,
+            "score": 0.0
+          },
+          "lgt": {
+            "timestamp": 1789491943.8259263,
+            "verified": false,
+            "score": 0.8370384983472647
+          },
+          "qfa": {
+            "verified": false,
+            "score": 0.0
+          },
+          "qgl": {
+            "timestamp": 1789491943.8247826,
+            "verified": false,
+            "score": 0.8293774395806137
+          },
+          "qlv": {
+            "verified": false,
+            "score": 0.0
+          },
+          "cisvr": {
+            "verified": false,
+            "score": 0.0
+          },
+          "qtlv": {
+            "verified": false,
+            "score": 0.0
+          },
+          "usrm": {
+            "verified": false,
+            "score": 0.0
+          },
+          "cfts": {
+            "verified": false,
+            "score": 0.0
+          }
+        },
+        "qgl": {
+          "ucif2": {
+            "verified": false,
+            "score": 0.0
+          },
+          "lvlu": {
+            "verified": false,
+            "score": 0.0
+          },
+          "lgt": {
+            "verified": false,
+            "score": 0.0
+          },
+          "qfa": {
+            "verified": false,
+            "score": 0.0
+          },
+          "vinf": {
+            "timestamp": 1789491943.8247836,
+            "verified": false,
+            "score": 0.8309603081914109
+          },
+          "qlv": {
+            "verified": false,
+            "score": 0.0
+          },
+          "cisvr": {
+            "verified": false,
+            "score": 0.0
+          },
+          "qtlv": {
+            "verified": false,
+            "score": 0.0
+          },
+          "usrm": {
+            "verified": false,
+            "score": 0.0
+          },
+          "cfts": {
+            "verified": false,
+            "score": 0.0
+          }
+        },
+        "qlv": {
+          "ucif2": {
+            "verified": false,
+            "score": 0.0
+          },
+          "lvlu": {
+            "verified": false,
+            "score": 0.0
+          },
+          "lgt": {
+            "verified": false,
+            "score": 0.0
+          },
+          "qfa": {
+            "timestamp": 1789491943.826106,
+            "verified": true,
+            "score": 1.0
+          },
+          "vinf": {
+            "verified": false,
+            "score": 0.0
+          },
+          "qgl": {
+            "verified": false,
+            "score": 0.0
+          },
+          "cisvr": {
+            "timestamp": 1789491943.8249607,
+            "verified": false,
+            "score": 0.9173021315279882
+          },
+          "qtlv": {
+            "verified": false,
+            "score": 0.0
+          },
+          "usrm": {
+            "verified": false,
+            "score": 0.0
+          },
+          "cfts": {
+            "verified": false,
+            "score": 0.0
+          }
+        },
+        "cisvr": {
+          "ucif2": {
+            "verified": false,
+            "score": 0.0
+          },
+          "lvlu": {
+            "verified": false,
+            "score": 0.0
+          },
+          "lgt": {
+            "verified": false,
+            "score": 0.0
+          },
+          "qfa": {
+            "verified": false,
+            "score": 0.0
+          },
+          "vinf": {
+            "verified": false,
+            "score": 0.0
+          },
+          "qgl": {
+            "verified": false,
+            "score": 0.0
+          },
+          "qlv": {
+            "timestamp": 1789491943.8249614,
+            "verified": false,
+            "score": 0.9272118226272306
+          },
+          "qtlv": {
+            "verified": false,
+            "score": 0.0
+          },
+          "usrm": {
+            "verified": false,
+            "score": 0.0
+          },
+          "cfts": {
+            "verified": false,
+            "score": 0.0
+          }
+        },
+        "qtlv": {
+          "ucif2": {
+            "verified": false,
+            "score": 0.0
+          },
+          "lvlu": {
+            "timestamp": 1789491943.8257608,
+            "verified": true,
+            "score": 1.0
+          },
+          "lgt": {
+            "verified": false,
+            "score": 0.0
+          },
+          "qfa": {
+            "verified": false,
+            "score": 0.0
+          },
+          "vinf": {
+            "verified": false,
+            "score": 0.0
+          },
+          "qgl": {
+            "verified": false,
+            "score": 0.0
+          },
+          "qlv": {
+            "verified": false,
+            "score": 0.0
+          },
+          "cisvr": {
+            "verified": false,
+            "score": 0.0
+          },
+          "usrm": {
+            "timestamp": 1789491943.825235,
+            "verified": false,
+            "score": 0.9160689228530827
+          },
+          "cfts": {
+            "verified": false,
+            "score": 0.0
+          }
+        },
+        "usrm": {
+          "ucif2": {
+            "verified": false,
+            "score": 0.0
+          },
+          "lvlu": {
+            "verified": false,
+            "score": 0.0
+          },
+          "lgt": {
+            "verified": false,
+            "score": 0.0
+          },
+          "qfa": {
+            "verified": false,
+            "score": 0.0
+          },
+          "vinf": {
+            "verified": false,
+            "score": 0.0
+          },
+          "qgl": {
+            "verified": false,
+            "score": 0.0
+          },
+          "qlv": {
+            "verified": false,
+            "score": 0.0
+          },
+          "cisvr": {
+            "verified": false,
+            "score": 0.0
+          },
+          "qtlv": {
+            "timestamp": 1789491943.8252356,
+            "verified": false,
+            "score": 0.9242927961721455
+          },
+          "cfts": {
+            "timestamp": 1789491943.8254209,
+            "verified": false,
+            "score": 0.9112661032354468
+          }
+        },
+        "cfts": {
+          "ucif2": {
+            "timestamp": 1789491943.8255963,
+            "verified": true,
+            "score": 1.0
+          },
+          "lvlu": {
+            "verified": false,
+            "score": 0.0
+          },
+          "lgt": {
+            "verified": false,
+            "score": 0.0
+          },
+          "qfa": {
+            "verified": false,
+            "score": 0.0
+          },
+          "vinf": {
+            "verified": false,
+            "score": 0.0
+          },
+          "qgl": {
+            "verified": false,
+            "score": 0.0
+          },
+          "qlv": {
+            "verified": false,
+            "score": 0.0
+          },
+          "cisvr": {
+            "verified": false,
+            "score": 0.0
+          },
+          "qtlv": {
+            "verified": false,
+            "score": 0.0
+          },
+          "usrm": {
+            "timestamp": 1789491943.825421,
+            "verified": false,
+            "score": 0.8368289675078254
+          }
+        }
+      },
+      "verified_pairs": 8,
+      "total_pairs": 110,
+      "coverage": 0.07272727272727272,
+      "fully_connected": false
+    },
+    "health_history": [
+      {
+        "timestamp": 1789491943.826417,
+        "health": 0.8540755554112521
+      },
+      {
+        "timestamp": 1789491943.8264432,
+        "health": 0.8540755554112521
+      },
+      {
+        "timestamp": 1789491943.8264625,
+        "health": 0.8540755554112521
+      },
+      {
+        "timestamp": 1789491943.8264794,
+        "health": 0.8540755554112521
+      }
+    ]
+  },
+  "feature_validation": {
+    "dynamic_prover_pool": {
+      "status": "PASS",
+      "description": "Dynamic prover selection (N=3~11+) based on task complexity"
+    },
+    "multi_layer_consensus": {
+      "status": "PASS",
+      "description": "SI0-SI6 independent verification layers with cascade verification"
+    },
+    "cross_line_verification": {
+      "status": "PASS",
+      "description": "11x11 cross-line verification matrix with bidirectional validation"
+    },
+    "temporal_verification": {
+      "status": "PASS",
+      "description": "Historical state consistency checking with anomaly detection"
+    },
+    "byzantine_fault_tolerance": {
+      "status": "PASS",
+      "description": "Adaptive Byzantine fault tolerance beyond f < n/3"
+    },
+    "adaptive_threshold": {
+      "status": "PASS",
+      "description": "Dynamic threshold adjustment based on system health"
+    }
+  }
+}

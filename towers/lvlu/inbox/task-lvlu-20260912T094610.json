@@ -1,0 +1,10 @@
+{
+  "id": "TASK-lvlu-20260912T094610-3156",
+  "timestamp": "2026-09-12T09:46:10.215859+00:00",
+  "from": "ucif2",
+  "to": "lvlu",
+  "type": "EXPERIMENT",
+  "priority": 1,
+  "description": "EXP-024: EVALR2 automated evaluation first run",
+  "deadline": 4
+}

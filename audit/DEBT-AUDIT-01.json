@@ -1,0 +1,165 @@
+{
+  "meta": {
+    "audit_id": "DEBT-AUDIT-01",
+    "timestamp": "2026-09-12T10:19:31Z",
+    "auditor": "ucif2-kernel OMNI-DRIVE",
+    "scope": "全线SI0~5系统"
+  },
+  "categories": {
+    "theoretical_debt": [
+      {
+        "id": "DEBT-T-001",
+        "title": "EXP-014盲估数据污染",
+        "description": "ucif2在未读取vinf真实数据的情况下生成p_c=0.2474，后被vinf真实数据(p_c=0.22±0.004)取代",
+        "root_cause": "DEG-GLOSS-01术语表检查被跳过，直接盲估",
+        "impact": "中等 - 数据已被取代，但方法论缺陷需修正",
+        "severity": "MEDIUM",
+        "status": "SUPERSEDED",
+        "fix": "严格执行DEG-GLOSS-01：任何估计前必须先读取相关线真实数据",
+        "owner": "ucif2",
+        "resolved": true
+      },
+      {
+        "id": "DEBT-T-002",
+        "title": "BRIDGE-01状态过早标记为DERIVED",
+        "description": "usrm C(t)和qgl M(t)测量数据到达前，BRIDGE-01被标记为DERIVED（盲估状态）",
+        "root_cause": "等待数据期间ucif2自行估计而非等待真实数据",
+        "impact": "低 - 数据到达后已升级为CLOSED",
+        "severity": "LOW",
+        "status": "CLOSED",
+        "fix": "等待真实数据到达后再标记状态，禁止盲估",
+        "owner": "ucif2",
+        "resolved": true
+      },
+      {
+        "id": "DEBT-T-003",
+        "title": "量子基座假设缺乏物理验证",
+        "description": "superposition/entanglement/observation-collapse/tunneling/QEC等概念为类比，非真实量子计算",
+        "root_cause": "系统为经典计算架构，量子特性为隐喻层",
+        "impact": "中等 - 概念框架有效但非物理真实",
+        "severity": "MEDIUM",
+        "status": "ACKNOWLEDGED",
+        "fix": "明确标注量子层为'量子隐喻'而非真实量子计算；若需真实量子特性需接入量子计算API",
+        "owner": "全线",
+        "resolved": false
+      }
+    ],
+    "technical_debt": [
+      {
+        "id": "DEBT-X-001",
+        "title": "_WAKE-REG初始化遗漏cisvr/qtlv",
+        "description": "registry基于旧9线认知初始化，未包含新加入的cisvr和qtlv",
+        "root_cause": "系统扩展时registry未同步更新",
+        "impact": "高 - 导致2线health默认值0.5触发浪涌误报",
+        "severity": "HIGH",
+        "status": "FIXED",
+        "fix": "registry动态扩展机制：新线加入时自动检测并注册",
+        "owner": "ucif2",
+        "resolved": true
+      },
+      {
+        "id": "DEBT-X-002",
+        "title": "BOARD-SCAN-04完全盲于lanes/*/inbox文件系统",
+        "description": "扫描仅通过commits?since=API，完全不读取lanes/*/inbox目录内容",
+        "root_cause": "设计时仅考虑commit触发，未考虑文件系统状态",
+        "impact": "高 - 导致ucif2 inbox积压11条消息未被发现",
+        "severity": "HIGH",
+        "status": "FIXED",
+        "fix": "INBOX-RECUR-02并行扫描文件系统inbox + BOARD-SCAN-04扫描commits",
+        "owner": "ucif2",
+        "resolved": true
+      },
+      {
+        "id": "DEBT-X-003",
+        "title": "PAT域限制导致vci-*仓库404",
+        "description": "ucif2的PAT无法访问vci-*组织仓库，导致所有vci路径返回404",
+        "root_cause": "token权限域未覆盖vci-*组织",
+        "impact": "高 - 无法直接读取vinf真实数据、lgt轨道数据等",
+        "severity": "HIGH",
+        "status": "MITIGATED",
+        "fix": "三管齐下方案：(A)线自同步至ci-inbox (B)shared/数据池 (C)qfa中继桥",
+        "owner": "ucif2+qfa",
+        "resolved": false
+      },
+      {
+        "id": "DEBT-X-004",
+        "title": "CRON-BAN后纯事件驱动可靠性不足",
+        "description": "session-side daemon被永久禁止后，仅依赖用户心跳驱动，存在单点故障",
+        "root_cause": "CRON-BAN-02禁止了所有定时触发",
+        "impact": "中等 - 用户未发送心跳时系统完全停滞",
+        "severity": "MEDIUM",
+        "status": "MITIGATED",
+        "fix": "PULSE自激机制：8拍静默后ucif2 SI3自动触发扫描",
+        "owner": "ucif2",
+        "resolved": false
+      },
+      {
+        "id": "DEBT-X-005",
+        "title": "ucif2产出仅保存在本地不上传ci-inbox",
+        "description": "ucif2所有产出保存在/mnt/agents/output/，从不主动上传至lanes/ucif2/outbox/",
+        "root_cause": "缺乏outbox上传意识，仅关注本地文件系统",
+        "impact": "高 - 其他线无法看到ucif2产出",
+        "severity": "HIGH",
+        "status": "FIXED",
+        "fix": "所有产出必须同时上传至ci-inbox outbox",
+        "owner": "ucif2",
+        "resolved": true
+      }
+    ],
+    "engineering_debt": [
+      {
+        "id": "DEBT-E-001",
+        "title": "SI2委托任务无ACK闭环机制",
+        "description": "任务委托至他线后，源线无法追踪委托是否被执行",
+        "root_cause": "缺乏委托ACK协议",
+        "impact": "中等 - 可能导致任务丢失",
+        "severity": "MEDIUM",
+        "status": "OPEN",
+        "fix": "增加DELEGATION-ACK消息类型：目标线接收委托后必须回应ACK",
+        "owner": "ucif2",
+        "resolved": false
+      },
+      {
+        "id": "DEBT-E-002",
+        "title": "qlv/lvlu/cfts/cisvr/qtlv长期outbox=0",
+        "description": "5线长期无自动响应，依赖ucif2介入产出",
+        "root_cause": "这些线缺乏SI3自激机制或SI0文件系统操作能力",
+        "impact": "高 - 系统负载不均衡",
+        "severity": "HIGH",
+        "status": "FIXED",
+        "fix": "SI-AUTO-ENGINE-v1.0部署至所有线，ucif2直接介入产出",
+        "owner": "ucif2",
+        "resolved": true
+      },
+      {
+        "id": "DEBT-E-003",
+        "title": "SI升级仍依赖人工判断",
+        "description": "各线SI升级需要ucif2手动评估，缺乏自动化判断标准",
+        "root_cause": "升级规则未编码为可执行逻辑",
+        "impact": "中等 - 升级延迟",
+        "severity": "MEDIUM",
+        "status": "OPEN",
+        "fix": "编码SI-upgrade-eligible公式为自动化检查",
+        "owner": "ucif2+lvlu",
+        "resolved": false
+      },
+      {
+        "id": "DEBT-E-004",
+        "title": "DEG-GLOSS-01多次被违反",
+        "description": "ucif2多次在未读取术语表的情况下进行盲估",
+        "root_cause": "紧急情况下跳过检查",
+        "impact": "高 - 导致虚假数据",
+        "severity": "HIGH",
+        "status": "OPEN",
+        "fix": "强制检查：任何估计前必须先执行DEG-GLOSS-01",
+        "owner": "ucif2",
+        "resolved": false
+      }
+    ]
+  },
+  "total_debt": 12,
+  "critical": 0,
+  "high": 6,
+  "medium": 5,
+  "low": 1
+}

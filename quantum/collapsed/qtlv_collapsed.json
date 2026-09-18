@@ -1,0 +1,16 @@
+{
+  "line": "qtlv",
+  "current_level": "si3",
+  "previous_superposition": {
+    "si0": 0.5307625649913345,
+    "si1": 0.1733102253032929,
+    "si2": 0.1733102253032929,
+    "si3": 0.09748700173310224,
+    "si4": 0.021230502599653388,
+    "si5": 0.0038994800693240897
+  },
+  "observer": "ucif2-hub",
+  "trigger": "health_check",
+  "timestamp": "2026-09-12T10:35:42.835898+00:00",
+  "collapsed": true
+}

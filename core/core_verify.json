@@ -1,0 +1,797 @@
+{
+  "timestamp": "2026-09-13T13:12:08.755507",
+  "layer_count": 6,
+  "layers": {
+    "Hub": {
+      "si_level": 5,
+      "quantum": "observation",
+      "phase": "SCHEDULE",
+      "active": true,
+      "task_count": 10,
+      "feedback_count": 10,
+      "error_count": 3,
+      "resonance_amp": 0.1798,
+      "health": 0.78,
+      "load": 0.5
+    },
+    "Wheel": {
+      "si_level": 4,
+      "quantum": "superposition",
+      "phase": "EXECUTE",
+      "active": true,
+      "task_count": 10,
+      "feedback_count": 10,
+      "error_count": 0,
+      "resonance_amp": 0.2665,
+      "health": 1.0,
+      "load": 0.5
+    },
+    "Spine": {
+      "si_level": 4,
+      "quantum": "entanglement",
+      "phase": "VERIFY",
+      "active": true,
+      "task_count": 10,
+      "feedback_count": 10,
+      "error_count": 2,
+      "resonance_amp": 0.2685,
+      "health": 0.92,
+      "load": 0.5
+    },
+    "Cauldron": {
+      "si_level": 3,
+      "quantum": "tunneling",
+      "phase": "QUEUE",
+      "active": true,
+      "task_count": 10,
+      "feedback_count": 10,
+      "error_count": 2,
+      "resonance_amp": 0.1959,
+      "health": 0.96,
+      "load": 0.5
+    },
+    "Tower": {
+      "si_level": 3,
+      "quantum": "superposition",
+      "phase": "SCALE",
+      "active": true,
+      "task_count": 10,
+      "feedback_count": 10,
+      "error_count": 1,
+      "resonance_amp": 0.1064,
+      "health": 1.0,
+      "load": 0.3
+    },
+    "Ring": {
+      "si_level": 5,
+      "quantum": "qec",
+      "phase": "CONSENSUS",
+      "active": true,
+      "task_count": 10,
+      "feedback_count": 10,
+      "error_count": 0,
+      "resonance_amp": 0.0885,
+      "health": 1.0,
+      "load": 0.5
+    }
+  },
+  "forward_chain": [
+    "Hub→Wheel",
+    "Wheel→Spine",
+    "Spine→Cauldron",
+    "Cauldron→Tower",
+    "Tower→Ring",
+    "Ring→Hub"
+  ],
+  "reverse_chain": [
+    "Ring→Tower",
+    "Tower→Cauldron",
+    "Cauldron→Spine",
+    "Spine→Wheel",
+    "Wheel→Hub",
+    "Hub→Ring"
+  ],
+  "core_phases": {
+    "Hub": "SCHEDULE",
+    "Wheel": "EXECUTE",
+    "Spine": "VERIFY",
+    "Cauldron": "QUEUE",
+    "Tower": "SCALE",
+    "Ring": "CONSENSUS"
+  },
+  "metrics": {
+    "total_forward": 60,
+    "total_reverse": 60,
+    "layer_stats": {
+      "Hub": {
+        "in": 20,
+        "out": 20,
+        "errors": 0
+      },
+      "Wheel": {
+        "in": 20,
+        "out": 20,
+        "errors": 0
+      },
+      "Spine": {
+        "in": 20,
+        "out": 20,
+        "errors": 0
+      },
+      "Cauldron": {
+        "in": 20,
+        "out": 20,
+        "errors": 0
+      },
+      "Tower": {
+        "in": 20,
+        "out": 20,
+        "errors": 0
+      },
+      "Ring": {
+        "in": 20,
+        "out": 20,
+        "errors": 0
+      }
+    },
+    "avg_forward_entropy": 4.722851666666667,
+    "avg_reverse_latency": 0.5246224428132208
+  },
+  "anomalies": 8,
+  "anomaly_log": [
+    {
+      "layer": "Cauldron",
+      "error": "error_at_Tower",
+      "timestamp": 1789276328.7112305,
+      "cycle": 61
+    },
+    {
+      "layer": "Cauldron",
+      "error": "error_at_Tower",
+      "timestamp": 1789276328.7156708,
+      "cycle": 67
+    },
+    {
+      "layer": "Spine",
+      "error": "error_at_Cauldron",
+      "timestamp": 1789276328.7204328,
+      "cycle": 74
+    },
+    {
+      "layer": "Tower",
+      "error": "error_at_Ring",
+      "timestamp": 1789276328.7241156,
+      "cycle": 78
+    },
+    {
+      "layer": "Hub",
+      "error": "error_at_Wheel",
+      "timestamp": 1789276328.7255476,
+      "cycle": 82
+    },
+    {
+      "layer": "Hub",
+      "error": "error_at_Wheel",
+      "timestamp": 1789276328.7342727,
+      "cycle": 94
+    },
+    {
+      "layer": "Hub",
+      "error": "error_at_Wheel",
+      "timestamp": 1789276328.7386408,
+      "cycle": 100
+    },
+    {
+      "layer": "Spine",
+      "error": "error_at_Cauldron",
+      "timestamp": 1789276328.742329,
+      "cycle": 104
+    }
+  ],
+  "verification_passed": true,
+  "forward_sample": [
+    {
+      "packet_id": "63c696b8",
+      "source": "Hub",
+      "target": "Wheel",
+      "payload": {
+        "step": 0,
+        "cycle": 0,
+        "data": "task_0_Hub_Wheel",
+        "value": 41.85431707364997,
+        "dispatch_id": "9a9fdd",
+        "assigned_lines": [
+          "lgt",
+          "qlv",
+          "cisvr"
+        ],
+        "priority": "high"
+      },
+      "timestamp": 1789276328.7030404,
+      "phase": "EXECUTE",
+      "quantum_state": "0.17|lgt⟩+0.88|qlv⟩+0.44|cisvr⟩",
+      "entropy": 4.6707,
+      "latency": 0.06689538980384252,
+      "hops": 1
+    },
+    {
+      "packet_id": "eaf88ca4",
+      "source": "Wheel",
+      "target": "Spine",
+      "payload": {
+        "step": 0,
+        "cycle": 1,
+        "data": "task_0_Wheel_Spine",
+        "value": 51.991108872401185,
+        "trust_hash": "a8926571343409f7",
+        "line_signatures": {}
+      },
+      "timestamp": 1789276328.7032416,
+      "phase": "VERIFY",
+      "quantum_state": "|execution⟩⊗|trust⟩ + |trust⟩⊗|execution⟩",
+      "entropy": 4.6299,
+      "latency": 0.06454883995556844,
+      "hops": 1
+    },
+    {
+      "packet_id": "2fda7592",
+      "source": "Spine",
+      "target": "Cauldron",
+      "payload": {
+        "step": 0,
+        "cycle": 2,
+        "data": "task_0_Spine_Cauldron",
+        "value": 57.49864839329002,
+        "verified": true,
+        "exp_id": "EXP-3941",
+        "queue_position": 0
+      },
+      "timestamp": 1789276328.7034001,
+      "phase": "QUEUE",
+      "quantum_state": "penetrated",
+      "entropy": 4.7851,
+      "latency": 0.05373310569835519,
+      "hops": 1
+    },
+    {
+      "packet_id": "ef8af32d",
+      "source": "Cauldron",
+      "target": "Tower",
+      "payload": {
+        "step": 0,
+        "cycle": 3,
+        "data": "task_0_Cauldron_Tower",
+        "value": 25.070379389295137,
+        "execution_plan": {
+          "ucif2": {
+            "step": 0,
+            "resource": 0.5359620796135068
+          },
+          "lgt": {
+            "step": 1,
+            "resource": 0.21106950763193655
+          },
+          "qfa": {
+            "step": 2,
+            "resource": 0.9582892121811853
+          },
+          "usrm": {
+            "step": 3,
+            "resource": 0.240098365683437
+          },
+          "vinf": {
+            "step": 4,
+            "resource": 0.32645836933177663
+          }
+        },
+        "vertical_si": 5
+      },
+      "timestamp": 1789276328.703512,
+      "phase": "SCALE",
+      "quantum_state": "0.41|si_1⟩+0.20|si_2⟩+0.55|si_3⟩+0.37|si_4⟩+0.59|si_5⟩",
+      "entropy": 4.7505,
+      "latency": 0.06827160994206558,
+      "hops": 1
+    },
+    {
+      "packet_id": "9838d055",
+      "source": "Tower",
+      "target": "Ring",
+      "payload": {
+        "step": 0,
+        "cycle": 4,
+        "data": "task_0_Tower_Ring",
+        "value": 22.364203221267374,
+        "output_quality": 0.7612038109889777,
+        "resonance_freq": 19.524373766819416
+      },
+      "timestamp": 1789276328.7036612,
+      "phase": "CONSENSUS",
+      "quantum_state": "stable",
+      "entropy": 4.7237,
+      "latency": 0.05366985268960832,
+      "hops": 1
+    }
+  ],
+  "reverse_sample": [
+    {
+      "packet_id": "e3ecc780",
+      "source": "Ring",
+      "target": "Tower",
+      "payload": {
+        "step": 0,
+        "cycle": 60,
+        "result": "feedback_0_Ring_Tower",
+        "success_rate": 0.10741388497819004,
+        "error": null,
+        "adjustment": {
+          "ucif2": -0.15556897486496465,
+          "lgt": -0.08309745912752137,
+          "qfa": 0.16925091671990677,
+          "usrm": 0.09273922415355174,
+          "vinf": 0.19711684114359868,
+          "qgl": 0.17252531632560275,
+          "qlv": -0.011960599588739573,
+          "lvlu": -0.19859859096742172,
+          "cfts": 0.10793573069161222,
+          "cisvr": -0.16617115419880904,
+          "qtlv": -0.1587816809016263
+        }
+      },
+      "timestamp": 1789276328.7108772,
+      "phase": "FEEDBACK_SCALE",
+      "quantum_state": "|α⟩",
+      "entropy": 3.79344,
+      "latency": 0.10420717240558601,
+      "hops": 1
+    },
+    {
+      "packet_id": "e943d08b",
+      "source": "Tower",
+      "target": "Cauldron",
+      "payload": {
+        "step": 0,
+        "cycle": 61,
+        "result": "feedback_0_Tower_Cauldron",
+        "success_rate": 0.9419277122911763,
+        "error": "error_at_Tower",
+        "redesign_needed": false,
+        "new_parameters": {
+          "temperature": 0.9035363728930372
+        }
+      },
+      "timestamp": 1789276328.7112095,
+      "phase": "FEEDBACK_QUEUE",
+      "quantum_state": "leaking",
+      "entropy": 3.7276800000000003,
+      "latency": 0.10335729868790067,
+      "hops": 1
+    },
+    {
+      "packet_id": "b89ecfa8",
+      "source": "Cauldron",
+      "target": "Spine",
+      "payload": {
+        "step": 0,
+        "cycle": 62,
+        "result": "feedback_0_Cauldron_Spine",
+        "success_rate": 0.5898643637156408,
+        "error": null,
+        "trust_update": {
+          "confidence": 0.5033144222086186,
+          "depth": 2
+        }
+      },
+      "timestamp": 1789276328.7115421,
+      "phase": "FEEDBACK_VERIFY",
+      "quantum_state": "cluster",
+      "entropy": 3.83088,
+      "latency": 0.1303261529011506,
+      "hops": 1
+    },
+    {
+      "packet_id": "7a0837ec",
+      "source": "Spine",
+      "target": "Wheel",
+      "payload": {
+        "step": 0,
+        "cycle": 63,
+        "result": "feedback_0_Spine_Wheel",
+        "success_rate": 0.7221866109772639,
+        "error": null,
+        "strategy_shift": "adaptive",
+        "verified_lines": [
+          "lvlu",
+          "qlv",
+          "lgt",
+          "qgl",
+          "usrm"
+        ]
+      },
+      "timestamp": 1789276328.7118711,
+      "phase": "FEEDBACK_EXECUTE",
+      "quantum_state": "coherent",
+      "entropy": 3.7730400000000004,
+      "latency": 0.1337071781104037,
+      "hops": 1
+    },
+    {
+      "packet_id": "b456246f",
+      "source": "Wheel",
+      "target": "Hub",
+      "payload": {
+        "step": 0,
+        "cycle": 64,
+        "result": "feedback_0_Wheel_Hub",
+        "success_rate": 0.4739032574493507,
+        "error": null,
+        "schedule_optimize": true,
+        "load_balance_score": 0.4423828886647849,
+        "recommended_batch_size": 92
+      },
+      "timestamp": 1789276328.7122264,
+      "phase": "FEEDBACK_SCHEDULE",
+      "quantum_state": "observed",
+      "entropy": 3.73608,
+      "latency": 0.14028799878552334,
+      "hops": 1
+    }
+  ],
+  "tick_results": [
+    {
+      "tick_id": 120,
+      "timestamp": 1789276328.7545147,
+      "phases": {
+        "Hub": {
+          "phase": "SCHEDULE",
+          "si_level": 5,
+          "load": 0.5,
+          "health": 0.78,
+          "active": true,
+          "state_changed": true
+        },
+        "Wheel": {
+          "phase": "EXECUTE",
+          "si_level": 4,
+          "load": 0.5,
+          "health": 1.0,
+          "active": true,
+          "state_changed": true
+        },
+        "Spine": {
+          "phase": "VERIFY",
+          "si_level": 4,
+          "load": 0.5,
+          "health": 0.92,
+          "active": true,
+          "state_changed": true
+        },
+        "Cauldron": {
+          "phase": "QUEUE",
+          "si_level": 3,
+          "load": 0.5,
+          "health": 0.96,
+          "active": true,
+          "state_changed": true
+        },
+        "Tower": {
+          "phase": "SCALE",
+          "si_level": 3,
+          "load": 0.5,
+          "health": 1.0,
+          "active": true,
+          "state_changed": true
+        },
+        "Ring": {
+          "phase": "CONSENSUS",
+          "si_level": 5,
+          "load": 0.5,
+          "health": 1.0,
+          "active": true,
+          "state_changed": true
+        }
+      },
+      "signals": [
+        {
+          "from": "Hub",
+          "to": "Wheel",
+          "signal_type": "PHASE_TRANSITION",
+          "trigger": "Hub_load_change",
+          "target_phase": "EXECUTE"
+        },
+        {
+          "from": "Wheel",
+          "to": "Spine",
+          "signal_type": "PHASE_TRANSITION",
+          "trigger": "Wheel_load_change",
+          "target_phase": "VERIFY"
+        },
+        {
+          "from": "Spine",
+          "to": "Cauldron",
+          "signal_type": "PHASE_TRANSITION",
+          "trigger": "Spine_load_change",
+          "target_phase": "QUEUE"
+        },
+        {
+          "from": "Cauldron",
+          "to": "Tower",
+          "signal_type": "PHASE_TRANSITION",
+          "trigger": "Cauldron_load_change",
+          "target_phase": "SCALE"
+        },
+        {
+          "from": "Tower",
+          "to": "Ring",
+          "signal_type": "PHASE_TRANSITION",
+          "trigger": "Tower_load_change",
+          "target_phase": "CONSENSUS"
+        },
+        {
+          "from": "Ring",
+          "to": "Hub",
+          "signal_type": "CONSENSUS_CLOSE",
+          "trigger": "high_ring_health",
+          "target_phase": "SCHEDULE_REFRESH"
+        }
+      ]
+    },
+    {
+      "tick_id": 121,
+      "timestamp": 1789276328.7545412,
+      "phases": {
+        "Hub": {
+          "phase": "SCHEDULE",
+          "si_level": 5,
+          "load": 0.5,
+          "health": 0.78,
+          "active": true,
+          "state_changed": false
+        },
+        "Wheel": {
+          "phase": "EXECUTE",
+          "si_level": 4,
+          "load": 0.5,
+          "health": 1.0,
+          "active": true,
+          "state_changed": false
+        },
+        "Spine": {
+          "phase": "VERIFY",
+          "si_level": 4,
+          "load": 0.5,
+          "health": 0.92,
+          "active": true,
+          "state_changed": false
+        },
+        "Cauldron": {
+          "phase": "QUEUE",
+          "si_level": 3,
+          "load": 0.5,
+          "health": 0.96,
+          "active": true,
+          "state_changed": false
+        },
+        "Tower": {
+          "phase": "SCALE",
+          "si_level": 3,
+          "load": 0.5,
+          "health": 1.0,
+          "active": true,
+          "state_changed": false
+        },
+        "Ring": {
+          "phase": "CONSENSUS",
+          "si_level": 5,
+          "load": 0.5,
+          "health": 1.0,
+          "active": true,
+          "state_changed": false
+        }
+      },
+      "signals": [
+        {
+          "from": "Ring",
+          "to": "Hub",
+          "signal_type": "CONSENSUS_CLOSE",
+          "trigger": "high_ring_health",
+          "target_phase": "SCHEDULE_REFRESH"
+        }
+      ]
+    },
+    {
+      "tick_id": 122,
+      "timestamp": 1789276328.7545574,
+      "phases": {
+        "Hub": {
+          "phase": "SCHEDULE",
+          "si_level": 5,
+          "load": 0.5,
+          "health": 0.78,
+          "active": true,
+          "state_changed": false
+        },
+        "Wheel": {
+          "phase": "EXECUTE",
+          "si_level": 4,
+          "load": 0.5,
+          "health": 1.0,
+          "active": true,
+          "state_changed": false
+        },
+        "Spine": {
+          "phase": "VERIFY",
+          "si_level": 4,
+          "load": 0.5,
+          "health": 0.92,
+          "active": true,
+          "state_changed": false
+        },
+        "Cauldron": {
+          "phase": "QUEUE",
+          "si_level": 3,
+          "load": 0.5,
+          "health": 0.96,
+          "active": true,
+          "state_changed": false
+        },
+        "Tower": {
+          "phase": "SCALE",
+          "si_level": 3,
+          "load": 0.5,
+          "health": 1.0,
+          "active": true,
+          "state_changed": false
+        },
+        "Ring": {
+          "phase": "CONSENSUS",
+          "si_level": 5,
+          "load": 0.5,
+          "health": 1.0,
+          "active": true,
+          "state_changed": false
+        }
+      },
+      "signals": [
+        {
+          "from": "Ring",
+          "to": "Hub",
+          "signal_type": "CONSENSUS_CLOSE",
+          "trigger": "high_ring_health",
+          "target_phase": "SCHEDULE_REFRESH"
+        }
+      ]
+    },
+    {
+      "tick_id": 123,
+      "timestamp": 1789276328.7545674,
+      "phases": {
+        "Hub": {
+          "phase": "SCHEDULE",
+          "si_level": 5,
+          "load": 0.5,
+          "health": 0.78,
+          "active": true,
+          "state_changed": false
+        },
+        "Wheel": {
+          "phase": "EXECUTE",
+          "si_level": 4,
+          "load": 0.5,
+          "health": 1.0,
+          "active": true,
+          "state_changed": false
+        },
+        "Spine": {
+          "phase": "VERIFY",
+          "si_level": 4,
+          "load": 0.5,
+          "health": 0.92,
+          "active": true,
+          "state_changed": false
+        },
+        "Cauldron": {
+          "phase": "QUEUE",
+          "si_level": 3,
+          "load": 0.5,
+          "health": 0.96,
+          "active": true,
+          "state_changed": false
+        },
+        "Tower": {
+          "phase": "SCALE",
+          "si_level": 3,
+          "load": 0.5,
+          "health": 1.0,
+          "active": true,
+          "state_changed": false
+        },
+        "Ring": {
+          "phase": "CONSENSUS",
+          "si_level": 5,
+          "load": 0.5,
+          "health": 1.0,
+          "active": true,
+          "state_changed": false
+        }
+      },
+      "signals": [
+        {
+          "from": "Ring",
+          "to": "Hub",
+          "signal_type": "CONSENSUS_CLOSE",
+          "trigger": "high_ring_health",
+          "target_phase": "SCHEDULE_REFRESH"
+        }
+      ]
+    },
+    {
+      "tick_id": 124,
+      "timestamp": 1789276328.7545793,
+      "phases": {
+        "Hub": {
+          "phase": "SCHEDULE",
+          "si_level": 5,
+          "load": 0.5,
+          "health": 0.78,
+          "active": true,
+          "state_changed": false
+        },
+        "Wheel": {
+          "phase": "EXECUTE",
+          "si_level": 4,
+          "load": 0.5,
+          "health": 1.0,
+          "active": true,
+          "state_changed": false
+        },
+        "Spine": {
+          "phase": "VERIFY",
+          "si_level": 4,
+          "load": 0.5,
+          "health": 0.92,
+          "active": true,
+          "state_changed": false
+        },
+        "Cauldron": {
+          "phase": "QUEUE",
+          "si_level": 3,
+          "load": 0.5,
+          "health": 0.96,
+          "active": true,
+          "state_changed": false
+        },
+        "Tower": {
+          "phase": "SCALE",
+          "si_level": 3,
+          "load": 0.5,
+          "health": 1.0,
+          "active": true,
+          "state_changed": false
+        },
+        "Ring": {
+          "phase": "CONSENSUS",
+          "si_level": 5,
+          "load": 0.5,
+          "health": 1.0,
+          "active": true,
+          "state_changed": false
+        }
+      },
+      "signals": [
+        {
+          "from": "Ring",
+          "to": "Hub",
+          "signal_type": "CONSENSUS_CLOSE",
+          "trigger": "high_ring_health",
+          "target_phase": "SCHEDULE_REFRESH"
+        }
+      ]
+    }
+  ],
+  "resonance_summary": {
+    "total_cycles": 64,
+    "anomaly_count": 1,
+    "correction_count": 1
+  }
+}

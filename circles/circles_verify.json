@@ -1,0 +1,515 @@
+{
+  "timestamp": "2026-09-13T05:09:27.619362+00:00",
+  "verification_version": "ucif2-four-circles-v1.0",
+  "results": {
+    "session_circle": {
+      "interactions": [
+        {
+          "interaction": 1,
+          "line": "ucif2",
+          "attachment_id": "att_ucif2_1789276167619",
+          "hash": "2209f6f65d11f49d",
+          "visible_to": 4
+        },
+        {
+          "interaction": 2,
+          "line": "lgt",
+          "attachment_id": "att_lgt_1789276167619",
+          "hash": "e271b64f14081d81",
+          "visible_to": 5
+        },
+        {
+          "interaction": 3,
+          "line": "qfa",
+          "attachment_id": "att_qfa_1789276167619",
+          "hash": "fd746832272335d8",
+          "visible_to": 3
+        },
+        {
+          "interaction": 4,
+          "line": "usrm",
+          "attachment_id": "att_usrm_1789276167619",
+          "hash": "62000ecc2722f76b",
+          "visible_to": 11
+        },
+        {
+          "interaction": 5,
+          "line": "vinf",
+          "attachment_id": "att_vinf_1789276167619",
+          "hash": "c274b1442829e691",
+          "visible_to": 3
+        },
+        {
+          "interaction": 6,
+          "line": "qgl",
+          "attachment_id": "att_qgl_1789276167619",
+          "hash": "3422e485cce0dee3",
+          "visible_to": 7
+        },
+        {
+          "interaction": 7,
+          "line": "qlv",
+          "attachment_id": "att_qlv_1789276167619",
+          "hash": "22ae64c9b9b11a0a",
+          "visible_to": 8
+        },
+        {
+          "interaction": 8,
+          "line": "lvlu",
+          "attachment_id": "att_lvlu_1789276167619",
+          "hash": "931fc2023ff985df",
+          "visible_to": 9
+        },
+        {
+          "interaction": 9,
+          "line": "cfts",
+          "attachment_id": "att_cfts_1789276167619",
+          "hash": "14d0b5f19323622f",
+          "visible_to": 6
+        },
+        {
+          "interaction": 10,
+          "line": "cisvr",
+          "attachment_id": "att_cisvr_1789276167619",
+          "hash": "6f59a3e335c040d7",
+          "visible_to": 10
+        }
+      ],
+      "sync_report": {
+        "sync_id": 1,
+        "timestamp": "2026-09-13T05:09:27.619710+00:00",
+        "total_attachments": 10,
+        "line_snapshots": {
+          "ucif2": {
+            "count": 7,
+            "latest_hash": "6f59a3e335c040d7",
+            "attachment_ids": [
+              "att_ucif2_1789276167619",
+              "att_lgt_1789276167619",
+              "att_usrm_1789276167619",
+              "att_qgl_1789276167619",
+              "att_qlv_1789276167619",
+              "att_lvlu_1789276167619",
+              "att_cisvr_1789276167619"
+            ]
+          },
+          "lgt": {
+            "count": 7,
+            "latest_hash": "6f59a3e335c040d7",
+            "attachment_ids": [
+              "att_lgt_1789276167619",
+              "att_qfa_1789276167619",
+              "att_usrm_1789276167619",
+              "att_qgl_1789276167619",
+              "att_lvlu_1789276167619",
+              "att_cfts_1789276167619",
+              "att_cisvr_1789276167619"
+            ]
+          },
+          "qfa": {
+            "count": 6,
+            "latest_hash": "6f59a3e335c040d7",
+            "attachment_ids": [
+              "att_usrm_1789276167619",
+              "att_vinf_1789276167619",
+              "att_qgl_1789276167619",
+              "att_lvlu_1789276167619",
+              "att_cfts_1789276167619",
+              "att_cisvr_1789276167619"
+            ]
+          },
+          "usrm": {
+            "count": 7,
+            "latest_hash": "6f59a3e335c040d7",
+            "attachment_ids": [
+              "att_ucif2_1789276167619",
+              "att_qfa_1789276167619",
+              "att_usrm_1789276167619",
+              "att_qgl_1789276167619",
+              "att_qlv_1789276167619",
+              "att_cfts_1789276167619",
+              "att_cisvr_1789276167619"
+            ]
+          },
+          "vinf": {
+            "count": 6,
+            "latest_hash": "6f59a3e335c040d7",
+            "attachment_ids": [
+              "att_ucif2_1789276167619",
+              "att_usrm_1789276167619",
+              "att_qlv_1789276167619",
+              "att_lvlu_1789276167619",
+              "att_cfts_1789276167619",
+              "att_cisvr_1789276167619"
+            ]
+          },
+          "qgl": {
+            "count": 6,
+            "latest_hash": "6f59a3e335c040d7",
+            "attachment_ids": [
+              "att_usrm_1789276167619",
+              "att_vinf_1789276167619",
+              "att_qgl_1789276167619",
+              "att_qlv_1789276167619",
+              "att_lvlu_1789276167619",
+              "att_cisvr_1789276167619"
+            ]
+          },
+          "qlv": {
+            "count": 6,
+            "latest_hash": "6f59a3e335c040d7",
+            "attachment_ids": [
+              "att_lgt_1789276167619",
+              "att_usrm_1789276167619",
+              "att_vinf_1789276167619",
+              "att_qgl_1789276167619",
+              "att_lvlu_1789276167619",
+              "att_cisvr_1789276167619"
+            ]
+          },
+          "lvlu": {
+            "count": 2,
+            "latest_hash": "22ae64c9b9b11a0a",
+            "attachment_ids": [
+              "att_usrm_1789276167619",
+              "att_qlv_1789276167619"
+            ]
+          },
+          "cfts": {
+            "count": 7,
+            "latest_hash": "6f59a3e335c040d7",
+            "attachment_ids": [
+              "att_ucif2_1789276167619",
+              "att_lgt_1789276167619",
+              "att_usrm_1789276167619",
+              "att_qlv_1789276167619",
+              "att_lvlu_1789276167619",
+              "att_cfts_1789276167619",
+              "att_cisvr_1789276167619"
+            ]
+          },
+          "cisvr": {
+            "count": 7,
+            "latest_hash": "6f59a3e335c040d7",
+            "attachment_ids": [
+              "att_qfa_1789276167619",
+              "att_usrm_1789276167619",
+              "att_qgl_1789276167619",
+              "att_qlv_1789276167619",
+              "att_lvlu_1789276167619",
+              "att_cfts_1789276167619",
+              "att_cisvr_1789276167619"
+            ]
+          },
+          "qtlv": {
+            "count": 5,
+            "latest_hash": "6f59a3e335c040d7",
+            "attachment_ids": [
+              "att_lgt_1789276167619",
+              "att_usrm_1789276167619",
+              "att_qlv_1789276167619",
+              "att_lvlu_1789276167619",
+              "att_cisvr_1789276167619"
+            ]
+          }
+        },
+        "status": "全量同步完成"
+      },
+      "ucif2_view_count": 7,
+      "line_stats": {
+        "ucif2": 1,
+        "lgt": 1,
+        "qfa": 1,
+        "usrm": 1,
+        "vinf": 1,
+        "qgl": 1,
+        "qlv": 1,
+        "lvlu": 1,
+        "cfts": 1,
+        "cisvr": 1,
+        "qtlv": 0
+      },
+      "status": "PASS"
+    },
+    "consensus_circle": {
+      "interactions": [
+        {
+          "interaction": 1,
+          "proposal_id": "prop_ucif2_1789276167619",
+          "qfa_passed": true,
+          "endorsements": 3,
+          "status": "ENDORSED"
+        },
+        {
+          "interaction": 2,
+          "proposal_id": "prop_lgt_1789276167619",
+          "qfa_passed": true,
+          "endorsements": 0,
+          "status": "PROPOSED"
+        },
+        {
+          "interaction": 3,
+          "proposal_id": "prop_qfa_1789276167619",
+          "qfa_passed": true,
+          "endorsements": 3,
+          "status": "ENDORSED"
+        },
+        {
+          "interaction": 4,
+          "proposal_id": "prop_usrm_1789276167619",
+          "qfa_passed": true,
+          "endorsements": 0,
+          "status": "PROPOSED"
+        },
+        {
+          "interaction": 5,
+          "proposal_id": "prop_vinf_1789276167619",
+          "qfa_passed": true,
+          "endorsements": 3,
+          "status": "ENDORSED"
+        },
+        {
+          "interaction": 6,
+          "proposal_id": "prop_qgl_1789276167619",
+          "qfa_passed": true,
+          "endorsements": 0,
+          "status": "PROPOSED"
+        },
+        {
+          "interaction": 7,
+          "proposal_id": "prop_qlv_1789276167619",
+          "qfa_passed": true,
+          "endorsements": 3,
+          "status": "ENDORSED"
+        },
+        {
+          "interaction": 8,
+          "proposal_id": "prop_lvlu_1789276167619",
+          "qfa_passed": true,
+          "endorsements": 0,
+          "status": "PROPOSED"
+        },
+        {
+          "interaction": 9,
+          "proposal_id": "prop_cfts_1789276167619",
+          "qfa_passed": true,
+          "endorsements": 3,
+          "status": "ENDORSED"
+        },
+        {
+          "interaction": 10,
+          "proposal_id": "prop_cisvr_1789276167619",
+          "qfa_passed": true,
+          "endorsements": 0,
+          "status": "PROPOSED"
+        }
+      ],
+      "stats": {
+        "total_proposals": 10,
+        "status_breakdown": {
+          "ENDORSED": 5,
+          "PROPOSED": 5
+        },
+        "trust_chain_length": 15
+      },
+      "trust_chain_length": 15,
+      "status": "PASS"
+    },
+    "command_circle": {
+      "interactions": [
+        {
+          "interaction": 1,
+          "task_id": "task_ucif2_qfa_1789276167620",
+          "from": "ucif2",
+          "to": "qfa",
+          "final_status": "DISPATCHED",
+          "closed": false
+        },
+        {
+          "interaction": 2,
+          "task_id": "task_lgt_usrm_1789276167620",
+          "from": "lgt",
+          "to": "usrm",
+          "final_status": "COMPLETED",
+          "closed": true
+        },
+        {
+          "interaction": 3,
+          "task_id": "task_qfa_vinf_1789276167620",
+          "from": "qfa",
+          "to": "vinf",
+          "final_status": "COMPLETED",
+          "closed": true
+        },
+        {
+          "interaction": 4,
+          "task_id": "task_usrm_qgl_1789276167620",
+          "from": "usrm",
+          "to": "qgl",
+          "final_status": "DISPATCHED",
+          "closed": false
+        },
+        {
+          "interaction": 5,
+          "task_id": "task_vinf_qlv_1789276167620",
+          "from": "vinf",
+          "to": "qlv",
+          "final_status": "COMPLETED",
+          "closed": true
+        },
+        {
+          "interaction": 6,
+          "task_id": "task_qgl_lvlu_1789276167620",
+          "from": "qgl",
+          "to": "lvlu",
+          "final_status": "COMPLETED",
+          "closed": true
+        },
+        {
+          "interaction": 7,
+          "task_id": "task_qlv_cfts_1789276167620",
+          "from": "qlv",
+          "to": "cfts",
+          "final_status": "OPTION_D",
+          "closed": true
+        },
+        {
+          "interaction": 8,
+          "task_id": "task_lvlu_cisvr_1789276167620",
+          "from": "lvlu",
+          "to": "cisvr",
+          "final_status": "COMPLETED",
+          "closed": true
+        },
+        {
+          "interaction": 9,
+          "task_id": "task_cfts_qtlv_1789276167620",
+          "from": "cfts",
+          "to": "qtlv",
+          "final_status": "COMPLETED",
+          "closed": true
+        },
+        {
+          "interaction": 10,
+          "task_id": "task_cisvr_ucif2_1789276167620",
+          "from": "cisvr",
+          "to": "ucif2",
+          "final_status": "DISPATCHED",
+          "closed": false
+        }
+      ],
+      "stats": {
+        "total_tasks": 10,
+        "status_breakdown": {
+          "OPTION_D": 3,
+          "COMPLETED": 6,
+          "DISPATCHED": 1
+        },
+        "closed_loops": 7,
+        "current_beat": 30
+      },
+      "status": "PASS"
+    },
+    "relay_circle": {
+      "interactions": [
+        {
+          "interaction": 1,
+          "strategy": "broadcast",
+          "from": "ucif2",
+          "target_count": 10,
+          "msg_id": "msg_81befb07_1789276167620"
+        },
+        {
+          "interaction": 2,
+          "strategy": "nearest",
+          "from": "lgt",
+          "target_count": 3,
+          "msg_id": "msg_3b56f08e_1789276167620"
+        },
+        {
+          "interaction": 3,
+          "strategy": "spectrum",
+          "from": "qfa",
+          "target_count": 5,
+          "msg_id": "msg_8ad0988e_1789276167620"
+        },
+        {
+          "interaction": 4,
+          "strategy": "entropy",
+          "from": "usrm",
+          "target_count": 3,
+          "msg_id": "msg_bf0f2d2c_1789276167620"
+        },
+        {
+          "interaction": 5,
+          "strategy": "broadcast",
+          "from": "vinf",
+          "target_count": 10,
+          "msg_id": "msg_b8d33759_1789276167620"
+        },
+        {
+          "interaction": 6,
+          "strategy": "nearest",
+          "from": "qgl",
+          "target_count": 3,
+          "msg_id": "msg_20360c53_1789276167620"
+        },
+        {
+          "interaction": 7,
+          "strategy": "spectrum",
+          "from": "qlv",
+          "target_count": 5,
+          "msg_id": "msg_76b416d4_1789276167620"
+        },
+        {
+          "interaction": 8,
+          "strategy": "entropy",
+          "from": "lvlu",
+          "target_count": 3,
+          "msg_id": "msg_8e9ac265_1789276167620"
+        },
+        {
+          "interaction": 9,
+          "strategy": "broadcast",
+          "from": "cfts",
+          "target_count": 10,
+          "msg_id": "msg_d3bffc5f_1789276167620"
+        },
+        {
+          "interaction": 10,
+          "strategy": "nearest",
+          "from": "cisvr",
+          "target_count": 3,
+          "msg_id": "msg_47de85c0_1789276167620"
+        }
+      ],
+      "stats": {
+        "total_routes": 10,
+        "strategy_breakdown": {
+          "broadcast": 3,
+          "nearest": 3,
+          "spectrum": 2,
+          "entropy": 2
+        },
+        "total_relays": 5,
+        "cfts_channels": 11
+      },
+      "cfts_channels": {
+        "ucif2": "ch_ucif2",
+        "lgt": "ch_lgt",
+        "qfa": "ch_qfa",
+        "usrm": "ch_usrm",
+        "vinf": "ch_vinf",
+        "qgl": "ch_qgl",
+        "qlv": "ch_qlv",
+        "lvlu": "ch_lvlu",
+        "cfts": "ch_cfts",
+        "cisvr": "ch_cisvr",
+        "qtlv": "ch_qtlv"
+      },
+      "status": "PASS"
+    }
+  },
+  "overall_status": "ALL_PASS",
+  "total_interactions": 40
+}

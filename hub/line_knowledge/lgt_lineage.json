@@ -1,0 +1,252 @@
+{
+  "line_id": "lgt",
+  "line_name": "逻辑/语言",
+  "timestamp": 1789662470.2895262,
+  "version": "12.0.0",
+  "lineage_tree": {
+    "root": {
+      "name": "lgt",
+      "type": "line_root",
+      "children": [
+        "md_heading"
+      ],
+      "weight": 1.0
+    },
+    "branches": {
+      "md_heading": {
+        "type": "md_heading",
+        "node_count": 17,
+        "avg_relevance": 0.75,
+        "nodes": [
+          {
+            "name": "lgt线 SI5-OMNI 升级自证报告",
+            "signature": "lgt-SI5-OMNI-self-cert-report.md::heading:lgt线 SI5-OMNI 升级自证报告",
+            "relevance": 0.75,
+            "source": "lgt-SI5-OMNI-self-cert-report.md"
+          },
+          {
+            "name": "线基本信息",
+            "signature": "lgt-SI5-OMNI-self-cert-report.md::heading:线基本信息",
+            "relevance": 0.75,
+            "source": "lgt-SI5-OMNI-self-cert-report.md"
+          },
+          {
+            "name": "1. 升级资格评估",
+            "signature": "lgt-SI5-OMNI-self-cert-report.md::heading:1. 升级资格评估",
+            "relevance": 0.75,
+            "source": "lgt-SI5-OMNI-self-cert-report.md"
+          },
+          {
+            "name": "1.1 数据充分性: 0.92",
+            "signature": "lgt-SI5-OMNI-self-cert-report.md::heading:1.1 数据充分性: 0.92",
+            "relevance": 0.75,
+            "source": "lgt-SI5-OMNI-self-cert-report.md"
+          },
+          {
+            "name": "1.2 验证充分性: 0.91",
+            "signature": "lgt-SI5-OMNI-self-cert-report.md::heading:1.2 验证充分性: 0.91",
+            "relevance": 0.75,
+            "source": "lgt-SI5-OMNI-self-cert-report.md"
+          },
+          {
+            "name": "1.3 形式化程度: 0.88",
+            "signature": "lgt-SI5-OMNI-self-cert-report.md::heading:1.3 形式化程度: 0.88",
+            "relevance": 0.75,
+            "source": "lgt-SI5-OMNI-self-cert-report.md"
+          },
+          {
+            "name": "1.4 边界测试",
+            "signature": "lgt-SI5-OMNI-self-cert-report.md::heading:1.4 边界测试",
+            "relevance": 0.75,
+            "source": "lgt-SI5-OMNI-self-cert-report.md"
+          },
+          {
+            "name": "1.5 交叉验证: 0.94",
+            "signature": "lgt-SI5-OMNI-self-cert-report.md::heading:1.5 交叉验证: 0.94",
+            "relevance": 0.75,
+            "source": "lgt-SI5-OMNI-self-cert-report.md"
+          },
+          {
+            "name": "2. 核心能力演进",
+            "signature": "lgt-SI5-OMNI-self-cert-report.md::heading:2. 核心能力演进",
+            "relevance": 0.75,
+            "source": "lgt-SI5-OMNI-self-cert-report.md"
+          },
+          {
+            "name": "2.1 k_c计算引擎 v4.5→v5.0",
+            "signature": "lgt-SI5-OMNI-self-cert-report.md::heading:2.1 k_c计算引擎 v4.5→v5.0",
+            "relevance": 0.75,
+            "source": "lgt-SI5-OMNI-self-cert-report.md"
+          },
+          {
+            "name": "2.2 OMNI兼容性",
+            "signature": "lgt-SI5-OMNI-self-cert-report.md::heading:2.2 OMNI兼容性",
+            "relevance": 0.75,
+            "source": "lgt-SI5-OMNI-self-cert-report.md"
+          },
+          {
+            "name": "3. 验证数据附录",
+            "signature": "lgt-SI5-OMNI-self-cert-report.md::heading:3. 验证数据附录",
+            "relevance": 0.75,
+            "source": "lgt-SI5-OMNI-self-cert-report.md"
+          },
+          {
+            "name": "表A: 关键指标对比",
+            "signature": "lgt-SI5-OMNI-self-cert-report.md::heading:表A: 关键指标对比",
+            "relevance": 0.75,
+            "source": "lgt-SI5-OMNI-self-cert-report.md"
+          },
+          {
+            "name": "表B: 边界测试详细结果",
+            "signature": "lgt-SI5-OMNI-self-cert-report.md::heading:表B: 边界测试详细结果",
+            "relevance": 0.75,
+            "source": "lgt-SI5-OMNI-self-cert-report.md"
+          },
+          {
+            "name": "表C: 交叉验证矩阵",
+            "signature": "lgt-SI5-OMNI-self-cert-report.md::heading:表C: 交叉验证矩阵",
+            "relevance": 0.75,
+            "source": "lgt-SI5-OMNI-self-cert-report.md"
+          },
+          {
+            "name": "4. 升级承诺",
+            "signature": "lgt-SI5-OMNI-self-cert-report.md::heading:4. 升级承诺",
+            "relevance": 0.75,
+            "source": "lgt-SI5-OMNI-self-cert-report.md"
+          },
+          {
+            "name": "5. 结论",
+            "signature": "lgt-SI5-OMNI-self-cert-report.md::heading:5. 结论",
+            "relevance": 0.75,
+            "source": "lgt-SI5-OMNI-self-cert-report.md"
+          }
+        ]
+      }
+    }
+  },
+  "knowledge_nodes": [
+    {
+      "type": "md_heading",
+      "name": "lgt线 SI5-OMNI 升级自证报告",
+      "source_file": "lgt-SI5-OMNI-self-cert-report.md",
+      "signature": "lgt-SI5-OMNI-self-cert-report.md::heading:lgt线 SI5-OMNI 升级自证报告",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "线基本信息",
+      "source_file": "lgt-SI5-OMNI-self-cert-report.md",
+      "signature": "lgt-SI5-OMNI-self-cert-report.md::heading:线基本信息",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "1. 升级资格评估",
+      "source_file": "lgt-SI5-OMNI-self-cert-report.md",
+      "signature": "lgt-SI5-OMNI-self-cert-report.md::heading:1. 升级资格评估",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "1.1 数据充分性: 0.92",
+      "source_file": "lgt-SI5-OMNI-self-cert-report.md",
+      "signature": "lgt-SI5-OMNI-self-cert-report.md::heading:1.1 数据充分性: 0.92",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "1.2 验证充分性: 0.91",
+      "source_file": "lgt-SI5-OMNI-self-cert-report.md",
+      "signature": "lgt-SI5-OMNI-self-cert-report.md::heading:1.2 验证充分性: 0.91",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "1.3 形式化程度: 0.88",
+      "source_file": "lgt-SI5-OMNI-self-cert-report.md",
+      "signature": "lgt-SI5-OMNI-self-cert-report.md::heading:1.3 形式化程度: 0.88",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "1.4 边界测试",
+      "source_file": "lgt-SI5-OMNI-self-cert-report.md",
+      "signature": "lgt-SI5-OMNI-self-cert-report.md::heading:1.4 边界测试",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "1.5 交叉验证: 0.94",
+      "source_file": "lgt-SI5-OMNI-self-cert-report.md",
+      "signature": "lgt-SI5-OMNI-self-cert-report.md::heading:1.5 交叉验证: 0.94",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "2. 核心能力演进",
+      "source_file": "lgt-SI5-OMNI-self-cert-report.md",
+      "signature": "lgt-SI5-OMNI-self-cert-report.md::heading:2. 核心能力演进",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "2.1 k_c计算引擎 v4.5→v5.0",
+      "source_file": "lgt-SI5-OMNI-self-cert-report.md",
+      "signature": "lgt-SI5-OMNI-self-cert-report.md::heading:2.1 k_c计算引擎 v4.5→v5.0",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "2.2 OMNI兼容性",
+      "source_file": "lgt-SI5-OMNI-self-cert-report.md",
+      "signature": "lgt-SI5-OMNI-self-cert-report.md::heading:2.2 OMNI兼容性",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "3. 验证数据附录",
+      "source_file": "lgt-SI5-OMNI-self-cert-report.md",
+      "signature": "lgt-SI5-OMNI-self-cert-report.md::heading:3. 验证数据附录",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "表A: 关键指标对比",
+      "source_file": "lgt-SI5-OMNI-self-cert-report.md",
+      "signature": "lgt-SI5-OMNI-self-cert-report.md::heading:表A: 关键指标对比",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "表B: 边界测试详细结果",
+      "source_file": "lgt-SI5-OMNI-self-cert-report.md",
+      "signature": "lgt-SI5-OMNI-self-cert-report.md::heading:表B: 边界测试详细结果",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "表C: 交叉验证矩阵",
+      "source_file": "lgt-SI5-OMNI-self-cert-report.md",
+      "signature": "lgt-SI5-OMNI-self-cert-report.md::heading:表C: 交叉验证矩阵",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "4. 升级承诺",
+      "source_file": "lgt-SI5-OMNI-self-cert-report.md",
+      "signature": "lgt-SI5-OMNI-self-cert-report.md::heading:4. 升级承诺",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "5. 结论",
+      "source_file": "lgt-SI5-OMNI-self-cert-report.md",
+      "signature": "lgt-SI5-OMNI-self-cert-report.md::heading:5. 结论",
+      "relevance": 0.75
+    }
+  ],
+  "node_count": 17,
+  "si_level": 1,
+  "activity_level": 0.4578,
+  "contribution_score": 0.4661
+}

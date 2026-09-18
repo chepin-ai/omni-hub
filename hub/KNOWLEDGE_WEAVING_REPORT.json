@@ -1,0 +1,347 @@
+{
+  "meta": {
+    "version": "12.0.0",
+    "generated_at": "2026-09-17T16:41:09Z",
+    "engine": "KnowledgeWeavingEngine"
+  },
+  "extraction_summary": {
+    "sources": {
+      "FULL_MD": {
+        "files": 1169,
+        "formulas": 30597,
+        "theorems": 1414,
+        "definitions": 418,
+        "conjectures": 135,
+        "open_problems": 249
+      },
+      "UCIF2": {
+        "files": 35,
+        "axioms": 106,
+        "theorems": 215,
+        "definitions": 245
+      },
+      "CAYLEY24": {
+        "files": 29,
+        "concepts": 440,
+        "formulas": 375,
+        "theorems": 46
+      },
+      "CFTS": {
+        "files": 87
+      }
+    },
+    "total_extracted_knowledge_items": 34240
+  },
+  "weaving_summary": {
+    "pedestals": {
+      "KG": {
+        "nodes": 14399,
+        "edges": 18008,
+        "density": 0.000174
+      },
+      "CC": {
+        "nodes": 28,
+        "edges": 43005,
+        "density": 113.769841
+      },
+      "HG": {
+        "nodes": 60,
+        "edges": 45,
+        "density": 0.025424
+      },
+      "IN": {
+        "nodes": 6,
+        "edges": 191,
+        "density": 12.733333
+      },
+      "CT": {
+        "nodes": 14663,
+        "edges": 10595,
+        "density": 9.9e-05
+      },
+      "LL": {
+        "nodes": 311,
+        "edges": 207,
+        "density": 0.004294
+      }
+    },
+    "total_woven_items": 29637
+  },
+  "kg_detail": {
+    "total_nodes": 14399,
+    "total_edges": 18008,
+    "node_type_distribution": {
+      "file": 1090,
+      "formula": 6819,
+      "theorem": 1101,
+      "definition": 382,
+      "open_problem": 300,
+      "numerical_result": 3398,
+      "conjecture": 110,
+      "cross_reference": 688,
+      "axiom": 67,
+      "dependency": 15,
+      "concept": 386,
+      "connection": 28,
+      "physical_constant": 4,
+      "mathematical_relation": 7,
+      "module": 4
+    },
+    "source_distribution": {
+      "FULL_MD": 13245,
+      "UCIF2": 211,
+      "CAYLEY24": 928,
+      "CFTS": 15
+    }
+  },
+  "cc_detail": {
+    "total_cells": 28,
+    "total_concepts_mapped": 8108
+  },
+  "hg_detail": {
+    "total_hyperedges": 45,
+    "shared_concepts": 46,
+    "top_shared_concepts": [
+      {
+        "concept": "mckaythompson级数",
+        "sources": [
+          "CAYLEY24"
+        ],
+        "count": 4
+      },
+      {
+        "concept": "leech格",
+        "sources": [
+          "CAYLEY24"
+        ],
+        "count": 4
+      },
+      {
+        "concept": "page曲线",
+        "sources": [
+          "CAYLEY24"
+        ],
+        "count": 3
+      },
+      {
+        "concept": "j函数",
+        "sources": [
+          "CAYLEY24"
+        ],
+        "count": 3
+      },
+      {
+        "concept": "扭变扇区",
+        "sources": [
+          "CAYLEY24"
+        ],
+        "count": 3
+      },
+      {
+        "concept": "virasoro代数",
+        "sources": [
+          "CAYLEY24"
+        ],
+        "count": 3
+      },
+      {
+        "concept": "镜像对称",
+        "sources": [
+          "CAYLEY24"
+        ],
+        "count": 3
+      },
+      {
+        "concept": "niemeier格",
+        "sources": [
+          "CAYLEY24"
+        ],
+        "count": 3
+      },
+      {
+        "concept": "theta级数",
+        "sources": [
+          "CAYLEY24"
+        ],
+        "count": 3
+      },
+      {
+        "concept": "量子纠错",
+        "sources": [
+          "CAYLEY24"
+        ],
+        "count": 3
+      },
+      {
+        "concept": "yoneda乘法",
+        "sources": [
+          "CAYLEY24"
+        ],
+        "count": 2
+      },
+      {
+        "concept": "扩展golay码",
+        "sources": [
+          "CAYLEY24"
+        ],
+        "count": 2
+      },
+      {
+        "concept": "量子纠错码",
+        "sources": [
+          "CAYLEY24"
+        ],
+        "count": 2
+      },
+      {
+        "concept": "chiralderham复形",
+        "sources": [
+          "CAYLEY24"
+        ],
+        "count": 2
+      },
+      {
+        "concept": "cayley24统一框架",
+        "sources": [
+          "CAYLEY24"
+        ],
+        "count": 2
+      },
+      {
+        "concept": "k3曲面",
+        "sources": [
+          "CAYLEY24"
+        ],
+        "count": 2
+      },
+      {
+        "concept": "d膜",
+        "sources": [
+          "CAYLEY24"
+        ],
+        "count": 2
+      },
+      {
+        "concept": "gopakumarvafa不变量",
+        "sources": [
+          "CAYLEY24"
+        ],
+        "count": 2
+      },
+      {
+        "concept": "gromovwitten不变量",
+        "sources": [
+          "CAYLEY24"
+        ],
+        "count": 2
+      },
+      {
+        "concept": "bps态",
+        "sources": [
+          "CAYLEY24"
+        ],
+        "count": 2
+      }
+    ]
+  },
+  "in_detail": {
+    "total_isomorphisms": 191,
+    "total_clusters": 6
+  },
+  "ct_detail": {
+    "total_objects": 14663,
+    "total_morphisms": 10595,
+    "composition_rules": {
+      "KG→CC": "KG→CC:570",
+      "CC→HG": "CC→HG:9",
+      "HG→IN": "HG→IN:277",
+      "IN→CT": "IN→CT:9550",
+      "CT→LL": "CT→LL:100",
+      "LL→KG": "LL→KG:89"
+    }
+  },
+  "ll_detail": {
+    "total_propositions": 311,
+    "proven_count": 207,
+    "proposition_type_distribution": {
+      "lean_theorem": 191,
+      "axiom": 67,
+      "theorem": 46,
+      "mathematical_relation": 7
+    }
+  },
+  "roundtrip_consistency": {
+    "KG→CC": {
+      "forward": 8571,
+      "forward_rate": 0.5952,
+      "backward": 28,
+      "backward_rate": 1.0,
+      "consistency": 0.5952
+    },
+    "CC→HG": {
+      "forward": 18,
+      "forward_rate": 0.6429,
+      "backward": 45,
+      "backward_rate": 1.0,
+      "consistency": 0.6429
+    },
+    "HG→IN": {
+      "forward": 45,
+      "forward_rate": 1.0,
+      "backward": 190,
+      "backward_rate": 0.9948,
+      "consistency": 0.9948
+    },
+    "IN→CT": {
+      "forward": 191,
+      "forward_rate": 1.0,
+      "backward": 10595,
+      "backward_rate": 1.0,
+      "consistency": 1.0
+    },
+    "CT→LL": {
+      "forward": 10595,
+      "forward_rate": 1.0,
+      "backward": 311,
+      "backward_rate": 1.0,
+      "consistency": 1.0
+    },
+    "LL→KG": {
+      "forward": 311,
+      "forward_rate": 1.0,
+      "backward": 14399,
+      "backward_rate": 1.0,
+      "consistency": 1.0
+    },
+    "OVERALL": {
+      "geometric_mean_consistency": 0.8513,
+      "arithmetic_mean_consistency": 0.8721,
+      "min_consistency": 0.5952,
+      "max_consistency": 1.0,
+      "full_roundtrip_nodes": 8402,
+      "full_roundtrip_rate": 0.5835,
+      "step_consistencies": {
+        "KG→CC": 0.5952,
+        "CC→HG": 0.6429,
+        "HG→IN": 0.9948,
+        "IN→CT": 1.0,
+        "CT→LL": 1.0,
+        "LL→KG": 1.0
+      },
+      "mapping_stats": {
+        "kg_cc": 122897,
+        "cc_hg": 192,
+        "hg_in": 457,
+        "ll_kg": 15300,
+        "in_ct": 10595,
+        "ct_ll": 11068
+      }
+    }
+  },
+  "global_coverage": {
+    "extracted_nodes": 34240,
+    "woven_nodes": 29637,
+    "coverage_rate": 0.8656,
+    "coverage_percent": 86.56
+  }
+}

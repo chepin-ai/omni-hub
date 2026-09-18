@@ -1,0 +1,16 @@
+{
+  "line": "vinf",
+  "current_level": "si2",
+  "previous_superposition": {
+    "si0": 0.32051282051282043,
+    "si1": 0.2051282051282051,
+    "si2": 0.2051282051282051,
+    "si3": 0.2051282051282051,
+    "si4": 0.05128205128205127,
+    "si5": 0.012820512820512818
+  },
+  "observer": "ucif2-hub",
+  "trigger": "health_check",
+  "timestamp": "2026-09-12T10:35:41.778629+00:00",
+  "collapsed": true
+}

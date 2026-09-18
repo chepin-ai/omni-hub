@@ -1,0 +1,41 @@
+{
+  "operation": "entanglement_channel",
+  "line_a": "qfa",
+  "line_b": "qgl",
+  "timestamp": "2026-09-12T10:35:44.088269+00:00",
+  "description": "建立 qfa 与 qgl 之间的量子纠缠通道",
+  "strength": 0.82,
+  "bell_state": "phi_plus",
+  "entanglement_type": "strong",
+  "correlated_distribution": {
+    "si0": {
+      "same_level_probability": 0.686,
+      "other_level_probability": 0.0628
+    },
+    "si1": {
+      "same_level_probability": 0.686,
+      "other_level_probability": 0.0628
+    },
+    "si2": {
+      "same_level_probability": 0.686,
+      "other_level_probability": 0.0628
+    },
+    "si3": {
+      "same_level_probability": 0.686,
+      "other_level_probability": 0.0628
+    },
+    "si4": {
+      "same_level_probability": 0.686,
+      "other_level_probability": 0.0628
+    },
+    "si5": {
+      "same_level_probability": 0.686,
+      "other_level_probability": 0.0628
+    }
+  },
+  "mutual_influence": {
+    "state_sync_threshold": 0.2,
+    "excite_propagation_prob": 0.82,
+    "health_correlation": 0.82
+  }
+}

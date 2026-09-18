@@ -1,0 +1,16 @@
+{
+  "line": "ucif2",
+  "ts": "2026-09-12T05:13:35.060118+00:00",
+  "processed": [
+    {
+      "msg_id": "873a474f-014b-4ee4-81cb-68b842a1e143",
+      "type": "TASK",
+      "status": "OK",
+      "action": "queued"
+    }
+  ],
+  "expired": [],
+  "failed": [],
+  "pending_acks": 9,
+  "stalled": false
+}

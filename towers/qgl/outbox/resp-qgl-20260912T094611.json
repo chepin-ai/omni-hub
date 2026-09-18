@@ -1,0 +1,13 @@
+{
+  "status": "COMPLETED",
+  "line": "qgl",
+  "si_level": "SI4",
+  "timestamp": "2026-09-12T09:46:11.237775+00:00",
+  "task_type": "EXPERIMENT",
+  "capabilities_used": [
+    "sequence_statistics",
+    "ccdf_analysis"
+  ],
+  "result_summary": "M200+ events: N_events=167, κ=2.34±0.08, KS-D=0.042",
+  "verification": "PASSED"
+}

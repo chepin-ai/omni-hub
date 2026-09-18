@@ -1,0 +1,92 @@
+{
+  "line": "qlv",
+  "ts": "2026-09-12T05:04:38.124189+00:00",
+  "si_levels": {
+    "si0": {
+      "line": "qlv",
+      "ts": "2026-09-12T05:04:38.124208+00:00",
+      "total_files": 0,
+      "valid_files": 0,
+      "invalid_files": [],
+      "orphan_locks": [],
+      "tmp_cleaned": 0,
+      "integrity_score": 1.0
+    },
+    "si1": {
+      "line": "qlv",
+      "ts": "2026-09-12T05:04:38.249772+00:00",
+      "sessions_checked": 0,
+      "valid_chains": 0,
+      "broken_chains": [],
+      "health_score": 1.0
+    },
+    "si2": {
+      "line": "qlv",
+      "ts": "2026-09-12T05:04:38.250145+00:00",
+      "processed": [],
+      "expired": [],
+      "failed": [],
+      "pending_acks": 0,
+      "stalled": false
+    },
+    "si3": {
+      "line": "qlv",
+      "ts": "2026-09-12T05:04:38.315104+00:00",
+      "signals_scanned": 0,
+      "actions_executed": 0,
+      "recursion_depth": 0,
+      "side_effects": [],
+      "terminated": true,
+      "entropy": 0.0,
+      "health": 0.7,
+      "triggers": []
+    },
+    "si4": {
+      "line": "qlv",
+      "ts": "2026-09-12T05:04:38.370307+00:00",
+      "local_tensor": {
+        "line": "qlv",
+        "metrics": {
+          "health": 1.0,
+          "load": 0.0,
+          "throughput": 0.0,
+          "latency": 0.0,
+          "entropy": 0.0,
+          "excitation_level": 0.0
+        },
+        "tensor": {
+          "si0": {
+            "file_count": 1,
+            "last_activity": 1789189478.0
+          },
+          "si1": {
+            "file_count": 0,
+            "last_activity": 0
+          },
+          "si2": {
+            "file_count": 1,
+            "last_activity": 1789189478.0
+          },
+          "si3": {
+            "file_count": 1,
+            "last_activity": 1789189478.0
+          },
+          "si4": {
+            "file_count": 0,
+            "last_activity": 0
+          },
+          "si5": {
+            "file_count": 0,
+            "last_activity": 0
+          }
+        },
+        "ts": "2026-09-12T05:04:38.393700+00:00"
+      },
+      "alerts": []
+    },
+    "si5": {
+      "note": "SI5 is global, skipped for single line"
+    }
+  },
+  "overall_health": 0.925
+}

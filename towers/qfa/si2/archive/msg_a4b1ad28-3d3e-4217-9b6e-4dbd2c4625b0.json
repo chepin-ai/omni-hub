@@ -1,0 +1,32 @@
+{
+  "envelope": {
+    "msg_id": "a4b1ad28-3d3e-4217-9b6e-4dbd2c4625b0",
+    "version": "SI2-v1.0",
+    "timestamp": "2026-09-12T05:03:58.073388+00:00",
+    "ttl": 300,
+    "priority": 3,
+    "source": {
+      "line": "ucif2",
+      "si_level": 2
+    },
+    "target": {
+      "line": "qfa",
+      "si_level": 2,
+      "broadcast": false
+    }
+  },
+  "payload": {
+    "type": "TASK",
+    "task_id": "5b4702d1-625e-42ce-b76d-aaa3a54207b0",
+    "content": {
+      "type": "cross_loop",
+      "description": "Cross-loop from ucif2 to qfa"
+    },
+    "dependencies": [],
+    "deadline": ""
+  },
+  "signature": {
+    "hash": "8c20473ae24b2e0d8c8a70d6d4e28bc6c0291fcbb55c9546058043e010f325d4",
+    "chain_hash": ""
+  }
+}

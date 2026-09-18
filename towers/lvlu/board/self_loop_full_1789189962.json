@@ -1,0 +1,125 @@
+# SI0-VERSION: 1.0.0
+# SI0-HASH: 715ed18be15b44996a38ca9b7972838c5037750a78d3635300c4f010283bfdae
+# SI0-PARENT: 715ed18be15b44996a38ca9b7972838c5037750a78d3635300c4f010283bfdae
+# SI0-TIMESTAMP: 2026-09-12T05:13:18.551020+00:00
+# SI0-LINE: lvlu
+# SI0-LEVEL: 0
+---
+{
+  "line": "vinf",
+  "ts": "2026-09-12T05:12:41.512526+00:00",
+  "si_levels": {
+    "si0": {
+      "line": "vinf",
+      "ts": "2026-09-12T05:12:41.512549+00:00",
+      "total_files": 0,
+      "valid_files": 0,
+      "invalid_files": [],
+      "orphan_locks": [],
+      "tmp_cleaned": 0,
+      "integrity_score": 1.0
+    },
+    "si1": {
+      "line": "vinf",
+      "ts": "2026-09-12T05:12:41.642998+00:00",
+      "sessions_checked": 0,
+      "valid_chains": 0,
+      "broken_chains": [],
+      "health_score": 1.0
+    },
+    "si2": {
+      "line": "vinf",
+      "ts": "2026-09-12T05:12:41.643494+00:00",
+      "processed": [],
+      "expired": [
+        {
+          "msg_id": "0d0e0b18-95da-43e6-9872-ab32def736e8",
+          "age_sec": 459.269895
+        },
+        {
+          "msg_id": "350e4118-2c9d-4a49-b463-6b58aa483c19",
+          "age_sec": 460.343339
+        },
+        {
+          "msg_id": "57dd51d8-a2ec-43b0-91d5-24e55b5c84a6",
+          "age_sec": 474.578227
+        },
+        {
+          "msg_id": "aa3f2053-c7aa-41a0-be63-bd97b59896a9",
+          "age_sec": 457.040996
+        },
+        {
+          "msg_id": "bb20cae8-c96d-40a4-9dfe-2437413446b9",
+          "age_sec": 456.831696
+        },
+        {
+          "msg_id": "e64fce21-1247-4c97-b612-fa5670ef251c",
+          "age_sec": 458.405421
+        }
+      ],
+      "failed": [],
+      "pending_acks": 6,
+      "stalled": false
+    },
+    "si3": {
+      "line": "vinf",
+      "ts": "2026-09-12T05:12:42.047879+00:00",
+      "signals_scanned": 13,
+      "actions_executed": 3,
+      "recursion_depth": 3,
+      "side_effects": [],
+      "terminated": true,
+      "low_confidence_signals": 10,
+      "entropy": 1.0,
+      "health": 1.0,
+      "triggers": []
+    },
+    "si4": {
+      "line": "vinf",
+      "ts": "2026-09-12T05:12:42.412395+00:00",
+      "local_tensor": {
+        "line": "vinf",
+        "metrics": {
+          "health": 1.0,
+          "load": 0.16,
+          "throughput": 0.0,
+          "latency": 1.0,
+          "entropy": 1.0,
+          "excitation_level": 0.0
+        },
+        "tensor": {
+          "si0": {
+            "file_count": 2,
+            "last_activity": 1789189961.0
+          },
+          "si1": {
+            "file_count": 0,
+            "last_activity": 0
+          },
+          "si2": {
+            "file_count": 2,
+            "last_activity": 1789189962.0
+          },
+          "si3": {
+            "file_count": 9,
+            "last_activity": 1789189962.0
+          },
+          "si4": {
+            "file_count": 1,
+            "last_activity": 1789189477.0
+          },
+          "si5": {
+            "file_count": 2,
+            "last_activity": 1789189917.0
+          }
+        },
+        "ts": "2026-09-12T05:12:42.438974+00:00"
+      },
+      "alerts": []
+    },
+    "si5": {
+      "note": "SI5 is global, skipped for single line"
+    }
+  },
+  "overall_health": 1.0
+}

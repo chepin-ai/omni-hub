@@ -1,0 +1,132 @@
+# =============================================================================
+# OMNI-HUB v12.0 — Docker Compose Configuration
+# =============================================================================
+# 用法:
+#   docker-compose -f deploy/docker-compose.yml up -d     # 启动
+#   docker-compose -f deploy/docker-compose.yml logs -f   # 查看日志
+#   docker-compose -f deploy/docker-compose.yml down      # 停止
+# =============================================================================
+
+version: "3.8"
+
+services:
+  omni-hub:
+    build:
+      context: ../
+      dockerfile: deploy/Dockerfile
+    image: omni-hub:v12.0
+    container_name: omni-hub
+    hostname: omni-hub
+    restart: unless-stopped
+
+    # 端口映射
+    ports:
+      - "7641:7641"   # 主服务端口 (E=7641.82)
+      - "9090:9090"   # 监控指标端口
+
+    # 环境变量
+    env_file:
+      - .env
+    environment:
+      - OMNI_HUB_VERSION=12.0.0
+      - OMNI_HUB_MODE=production
+      - OMNI_HUB_LOG_DIR=/var/log/omni-hub
+      - OMNI_HUB_STATE_DIR=/var/lib/omni-hub
+      - PYTHONUNBUFFERED=1
+
+    # 数据卷
+    volumes:
+      - omni-hub-logs:/var/log/omni-hub
+      - omni-hub-state:/var/lib/omni-hub
+      - omni-hub-hub:/opt/omni-hub/hub
+      - ./.env:/opt/omni-hub/deploy/.env:ro
+
+    # 资源限制
+    deploy:
+      resources:
+        limits:
+          cpus: '4.0'
+          memory: 8G
+        reservations:
+          cpus: '2.0'
+          memory: 4G
+
+    # 健康检查
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:7641/health')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+
+    # 网络
+    networks:
+      - omni-hub-net
+
+    # 日志配置
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100m"
+        max-file: "10"
+        labels: "service"
+        env: "OMNI_HUB_VERSION"
+
+  # 可选: Redis 缓存/消息队列
+  redis:
+    image: redis:7-alpine
+    container_name: omni-hub-redis
+    restart: unless-stopped
+    volumes:
+      - redis-data:/data
+    networks:
+      - omni-hub-net
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 1G
+    profiles:
+      - with-redis
+
+  # 可选: PostgreSQL 数据库
+  postgres:
+    image: postgres:15-alpine
+    container_name: omni-hub-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: omni_hub
+      POSTGRES_USER: omni
+      POSTGRES_PASSWORD: ${OMNI_DB_PASSWORD:-omni_hub_secret}
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    networks:
+      - omni-hub-net
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 2G
+    profiles:
+      - with-db
+
+# 数据卷声明
+volumes:
+  omni-hub-logs:
+    driver: local
+  omni-hub-state:
+    driver: local
+  omni-hub-hub:
+    driver: local
+  redis-data:
+    driver: local
+  postgres-data:
+    driver: local
+
+# 网络声明
+networks:
+  omni-hub-net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16

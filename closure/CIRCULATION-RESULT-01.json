@@ -1,0 +1,333 @@
+{
+  "meta": {
+    "script": "CIRCULATION-VERIFY-01.py",
+    "version": "1.0",
+    "lines": 11,
+    "steps": 100,
+    "silence_threshold": 8
+  },
+  "summary": {
+    "total_tasks_processed": 147,
+    "total_self_pulses": 103,
+    "total_self_loops": 147,
+    "total_cross_signals_sent": 12,
+    "total_cross_signals_recv": 12,
+    "scheduler_cycles": 100,
+    "tensor_contract_calls": 100,
+    "ring_broadcast_calls": 100,
+    "final_global_health_mean": 0.7031,
+    "final_global_health_std": 0.005,
+    "final_tensor_trace": 0.1354
+  },
+  "circulation_checks": {
+    "small_circulation": {
+      "name": "小周天（每线自循环）",
+      "status": "CLOSED",
+      "all_lines_closed": true,
+      "details": [
+        {
+          "line": "Causal-线",
+          "closed": true,
+          "loops": 12
+        },
+        {
+          "line": "Semantic-线",
+          "closed": true,
+          "loops": 15
+        },
+        {
+          "line": "Temporal-线",
+          "closed": true,
+          "loops": 13
+        },
+        {
+          "line": "Spatial-线",
+          "closed": true,
+          "loops": 12
+        },
+        {
+          "line": "Agentic-线",
+          "closed": true,
+          "loops": 17
+        },
+        {
+          "line": "Narrative-线",
+          "closed": true,
+          "loops": 12
+        },
+        {
+          "line": "Modal-线",
+          "closed": true,
+          "loops": 13
+        },
+        {
+          "line": "Ontological-线",
+          "closed": true,
+          "loops": 13
+        },
+        {
+          "line": "Epistemic-线",
+          "closed": true,
+          "loops": 12
+        },
+        {
+          "line": "Ethical-线",
+          "closed": true,
+          "loops": 16
+        },
+        {
+          "line": "Aesthetic-线",
+          "closed": true,
+          "loops": 12
+        }
+      ]
+    },
+    "self_excite": {
+      "name": "自激 (self_excite)",
+      "status": "ACTIVE",
+      "all_lines_pulsed": true,
+      "pulse_counts": {
+        "Causal-线": 8,
+        "Semantic-线": 10,
+        "Temporal-线": 9,
+        "Spatial-线": 10,
+        "Agentic-线": 8,
+        "Narrative-线": 9,
+        "Modal-线": 9,
+        "Ontological-线": 10,
+        "Epistemic-线": 11,
+        "Ethical-线": 9,
+        "Aesthetic-线": 10
+      }
+    },
+    "mutual_excite": {
+      "name": "互激 (mutual_excite)",
+      "status": "ACTIVE",
+      "total_signals_sent": 12,
+      "total_signals_recv": 12
+    },
+    "self_loop": {
+      "name": "自环 (self_loop)",
+      "status": "CLOSED",
+      "all_health_tracked": true
+    },
+    "cross_loop": {
+      "name": "互环 (cross_loop)",
+      "status": "CLOSED",
+      "cross_traffic_exists": true
+    },
+    "tensor_contract": {
+      "name": "张量收缩 (tensor_contract)",
+      "status": "CLOSED",
+      "calls": 100,
+      "expected": 100,
+      "final_trace": 0.1354
+    },
+    "ring_broadcast": {
+      "name": "全局广播 (ring_broadcast)",
+      "status": "CLOSED",
+      "calls": 100,
+      "expected": 100
+    },
+    "big_circulation": {
+      "name": "大周天（全局循环）",
+      "status": "CLOSED",
+      "scheduler_cycles": 100,
+      "expected": 100
+    },
+    "global_closure": {
+      "name": "全11线闭环",
+      "status": "CLOSED",
+      "all_checks_pass": true
+    }
+  },
+  "line_details": [
+    {
+      "line_id": 0,
+      "name": "Causal-线",
+      "health": 1.0,
+      "pulse_count": 8,
+      "tasks_processed": 12,
+      "tasks_created": 11,
+      "self_loops": 12,
+      "cross_sent": 3,
+      "cross_recv": 1,
+      "si_counts": {
+        "si0": 12,
+        "si1": 12,
+        "si2": 12,
+        "si3": 12
+      }
+    },
+    {
+      "line_id": 1,
+      "name": "Semantic-线",
+      "health": 0.99,
+      "pulse_count": 10,
+      "tasks_processed": 15,
+      "tasks_created": 14,
+      "self_loops": 15,
+      "cross_sent": 2,
+      "cross_recv": 2,
+      "si_counts": {
+        "si0": 15,
+        "si1": 15,
+        "si2": 15,
+        "si3": 15
+      }
+    },
+    {
+      "line_id": 2,
+      "name": "Temporal-线",
+      "health": 1.0,
+      "pulse_count": 9,
+      "tasks_processed": 13,
+      "tasks_created": 13,
+      "self_loops": 13,
+      "cross_sent": 2,
+      "cross_recv": 0,
+      "si_counts": {
+        "si0": 13,
+        "si1": 13,
+        "si2": 13,
+        "si3": 13
+      }
+    },
+    {
+      "line_id": 3,
+      "name": "Spatial-线",
+      "health": 1.0,
+      "pulse_count": 10,
+      "tasks_processed": 12,
+      "tasks_created": 11,
+      "self_loops": 12,
+      "cross_sent": 2,
+      "cross_recv": 1,
+      "si_counts": {
+        "si0": 12,
+        "si1": 12,
+        "si2": 12,
+        "si3": 12
+      }
+    },
+    {
+      "line_id": 4,
+      "name": "Agentic-线",
+      "health": 1.0,
+      "pulse_count": 8,
+      "tasks_processed": 17,
+      "tasks_created": 15,
+      "self_loops": 17,
+      "cross_sent": 0,
+      "cross_recv": 2,
+      "si_counts": {
+        "si0": 17,
+        "si1": 17,
+        "si2": 17,
+        "si3": 17
+      }
+    },
+    {
+      "line_id": 5,
+      "name": "Narrative-线",
+      "health": 1.0,
+      "pulse_count": 9,
+      "tasks_processed": 12,
+      "tasks_created": 12,
+      "self_loops": 12,
+      "cross_sent": 1,
+      "cross_recv": 0,
+      "si_counts": {
+        "si0": 12,
+        "si1": 12,
+        "si2": 12,
+        "si3": 12
+      }
+    },
+    {
+      "line_id": 6,
+      "name": "Modal-线",
+      "health": 1.0,
+      "pulse_count": 9,
+      "tasks_processed": 13,
+      "tasks_created": 12,
+      "self_loops": 13,
+      "cross_sent": 1,
+      "cross_recv": 1,
+      "si_counts": {
+        "si0": 13,
+        "si1": 13,
+        "si2": 13,
+        "si3": 13
+      }
+    },
+    {
+      "line_id": 7,
+      "name": "Ontological-线",
+      "health": 1.0,
+      "pulse_count": 10,
+      "tasks_processed": 13,
+      "tasks_created": 11,
+      "self_loops": 13,
+      "cross_sent": 0,
+      "cross_recv": 2,
+      "si_counts": {
+        "si0": 13,
+        "si1": 13,
+        "si2": 13,
+        "si3": 13
+      }
+    },
+    {
+      "line_id": 8,
+      "name": "Epistemic-线",
+      "health": 0.99,
+      "pulse_count": 11,
+      "tasks_processed": 12,
+      "tasks_created": 11,
+      "self_loops": 12,
+      "cross_sent": 1,
+      "cross_recv": 2,
+      "si_counts": {
+        "si0": 12,
+        "si1": 12,
+        "si2": 12,
+        "si3": 12
+      }
+    },
+    {
+      "line_id": 9,
+      "name": "Ethical-线",
+      "health": 1.0,
+      "pulse_count": 9,
+      "tasks_processed": 16,
+      "tasks_created": 16,
+      "self_loops": 16,
+      "cross_sent": 0,
+      "cross_recv": 1,
+      "si_counts": {
+        "si0": 16,
+        "si1": 16,
+        "si2": 16,
+        "si3": 16
+      }
+    },
+    {
+      "line_id": 10,
+      "name": "Aesthetic-线",
+      "health": 0.99,
+      "pulse_count": 10,
+      "tasks_processed": 12,
+      "tasks_created": 13,
+      "self_loops": 12,
+      "cross_sent": 0,
+      "cross_recv": 0,
+      "si_counts": {
+        "si0": 12,
+        "si1": 12,
+        "si2": 12,
+        "si3": 12
+      }
+    }
+  ]
+}

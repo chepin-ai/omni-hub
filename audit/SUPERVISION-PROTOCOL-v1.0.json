@@ -1,0 +1,1429 @@
+{
+  "protocol_id": "SUPERVISION-PROTOCOL-v1.0",
+  "schema_version": "SI-MAX-v1.0",
+  "generated_at": "2026-09-12T04:45:13Z",
+  "mode": "LOCAL_FULL_DIMENSION_AUTONOMY",
+  "github_api_status": "401_UNAVAILABLE",
+  "basis": "8_experiment_files_SI-MAX-01",
+  "metadata": {
+    "description": "本地自治模式下的持续监督修正协议，基于SI-MAX-01批次8个并行实验的真实数据",
+    "experiment_files_audited": [
+      "EXP-011-lgt-k200-3200orbits.json",
+      "EXP-012-qfa-quantum-self-bootstrap.json",
+      "EXP-013-usrm-cubic-to-variable-gamma.json",
+      "EXP-014-vinf-gyroid-percolation-MC.json",
+      "EXP-015-qgl-M-series-full-stats.json",
+      "EXP-016-qlv-binmap-v3-O_S.json",
+      "EXP-017-lvlu-EVALR2-automation.json",
+      "EXP-018-cfts-F4-QLV-dequarantine.json"
+    ],
+    "lines": [
+      "lgt",
+      "qfa",
+      "usrm",
+      "vinf",
+      "qgl",
+      "qlv",
+      "lvlu",
+      "cfts",
+      "ucif2"
+    ],
+    "n_lines": 9,
+    "audit_scope": "Full 9x9 cross-validation matrix with self-checks and cross-audits"
+  },
+  "line_health_snapshot": {
+    "ucif2": {
+      "si": "SI5-OMNI",
+      "health": 1.0,
+      "trend": "stable",
+      "source": "EXP-017 line_statuses"
+    },
+    "lgt": {
+      "si": "SI4-FULLDRIVE",
+      "health": 0.97,
+      "trend": "improving",
+      "source": "EXP-017 line_statuses"
+    },
+    "qfa": {
+      "si": "SI3-FULLDRIVE",
+      "health": 0.94,
+      "trend": "improving",
+      "source": "EXP-017 line_statuses"
+    },
+    "usrm": {
+      "si": "SI3-FULLDRIVE",
+      "health": 0.96,
+      "trend": "improving",
+      "source": "EXP-017 line_statuses"
+    },
+    "vinf": {
+      "si": "SI3.5",
+      "health": 0.95,
+      "trend": "improving",
+      "source": "EXP-017 line_statuses"
+    },
+    "qgl": {
+      "si": "SI3-FULLDRIVE",
+      "health": 0.93,
+      "trend": "improving",
+      "source": "EXP-017 line_statuses"
+    },
+    "qlv": {
+      "si": "SI3-ACTIVE",
+      "health": 0.91,
+      "trend": "improving",
+      "source": "EXP-017 line_statuses"
+    },
+    "lvlu": {
+      "si": "SI3-EVAL",
+      "health": 0.89,
+      "trend": "improving",
+      "source": "EXP-017 line_statuses",
+      "alerts": [
+        "self_eval_needed"
+      ]
+    },
+    "cfts": {
+      "si": "SI3-VOICE",
+      "health": 0.88,
+      "trend": "stable",
+      "source": "EXP-017 line_statuses",
+      "alerts": [
+        "F4_completion_needed"
+      ]
+    }
+  },
+  "cross_validation_matrix": {
+    "matrix_definition": {
+      "rows": "Auditor (监督者)",
+      "cols": "Target (被监督者)",
+      "diagonal": "Self-check (自检)",
+      "off_diagonal": "Cross-audit (交叉审计)"
+    },
+    "lines_order": [
+      "lgt",
+      "qfa",
+      "usrm",
+      "vinf",
+      "qgl",
+      "qlv",
+      "lvlu",
+      "cfts",
+      "ucif2"
+    ],
+    "matrix": {
+      "lgt": {
+        "lgt": {
+          "type": "self_check",
+          "status": "PASSED",
+          "score": 0.9999,
+          "details": {
+            "within_gate": true,
+            "gate_threshold": "±0.05%",
+            "actual_delta_pct": -0.00094,
+            "convergence_rate": "O(1/sqrt(n))",
+            "n_orbits_tested": 3200
+          }
+        },
+        "qfa": {
+          "type": "cross_audit_reverse",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "indirect",
+          "details": {
+            "note": "No direct audit from lgt to qfa; reverse validation exists in qfa's experiment",
+            "reverse_validation_status": "PASSED"
+          }
+        },
+        "usrm": {
+          "type": "cross_audit",
+          "status": "PASSED",
+          "score": 0.9999984,
+          "delta_pct": 0.00016,
+          "metric": "k200_prediction_vs_measured",
+          "details": {
+            "usrm_prediction": 0.2122042,
+            "lgt_measured": 0.21220387,
+            "absolute_delta": 3.3e-07
+          }
+        },
+        "vinf": {
+          "type": "cross_audit",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "none",
+          "details": {
+            "note": "No direct or indirect cross-validation data between lgt and vinf in experiment files"
+          }
+        },
+        "qgl": {
+          "type": "cross_audit",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "none",
+          "details": {
+            "note": "No direct or indirect cross-validation data between lgt and qgl in experiment files"
+          }
+        },
+        "qlv": {
+          "type": "cross_audit",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "none",
+          "details": {
+            "note": "No direct or indirect cross-validation data between lgt and qlv in experiment files"
+          }
+        },
+        "lvlu": {
+          "type": "cross_audit",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "none",
+          "details": {
+            "note": "No direct or indirect cross-validation data between lgt and lvlu in experiment files"
+          }
+        },
+        "cfts": {
+          "type": "cross_audit",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "none",
+          "details": {
+            "note": "No direct or indirect cross-validation data between lgt and cfts in experiment files"
+          }
+        },
+        "ucif2": {
+          "type": "cross_audit",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "none",
+          "details": {
+            "note": "No direct or indirect cross-validation data between lgt and ucif2 in experiment files"
+          }
+        }
+      },
+      "qfa": {
+        "lgt": {
+          "type": "cross_audit",
+          "status": "PASSED",
+          "score": 1.0,
+          "metric": "formal_verification_F_alpha",
+          "details": {
+            "test_case": "qset_logic",
+            "coq_verdict": "F_α(qset_logic) = true",
+            "coverage": "100% branch coverage"
+          }
+        },
+        "qfa": {
+          "type": "self_check",
+          "status": "PASSED",
+          "score": 1.0,
+          "details": {
+            "self_bootstrap_proof": "COMPLETE",
+            "n_axioms": 10,
+            "theorem_coverage_pct": 100.0,
+            "coq_check": "PASSED (0 errors, 0 warnings)",
+            "lean_check": "PASSED (0 errors, 0 warnings)",
+            "model_check": "PASSED (100% branch coverage)"
+          }
+        },
+        "usrm": {
+          "type": "cross_audit",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "none",
+          "details": {
+            "note": "No direct or indirect cross-validation data between qfa and usrm in experiment files"
+          }
+        },
+        "vinf": {
+          "type": "cross_audit",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "none",
+          "details": {
+            "note": "No direct or indirect cross-validation data between qfa and vinf in experiment files"
+          }
+        },
+        "qgl": {
+          "type": "cross_audit",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "none",
+          "details": {
+            "note": "No direct or indirect cross-validation data between qfa and qgl in experiment files"
+          }
+        },
+        "qlv": {
+          "type": "cross_audit",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "none",
+          "details": {
+            "note": "No direct or indirect cross-validation data between qfa and qlv in experiment files"
+          }
+        },
+        "lvlu": {
+          "type": "cross_audit_reverse",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "indirect",
+          "details": {
+            "note": "No direct audit from qfa to lvlu; reverse validation exists in lvlu's experiment",
+            "reverse_validation_status": "PASSED"
+          }
+        },
+        "cfts": {
+          "type": "cross_audit",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "none",
+          "details": {
+            "note": "No direct or indirect cross-validation data between qfa and cfts in experiment files"
+          }
+        },
+        "ucif2": {
+          "type": "cross_audit",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "none",
+          "details": {
+            "note": "No direct or indirect cross-validation data between qfa and ucif2 in experiment files"
+          }
+        }
+      },
+      "usrm": {
+        "lgt": {
+          "type": "cross_audit",
+          "status": "PASSED",
+          "score": 0.9999984,
+          "delta_pct": 0.00016,
+          "metric": "k200_predicted_vs_measured",
+          "details": {
+            "usrm_predicted": 0.2122042,
+            "lgt_measured": 0.21220387,
+            "absolute_delta": 3.3e-07
+          }
+        },
+        "qfa": {
+          "type": "cross_audit",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "none",
+          "details": {
+            "note": "No direct or indirect cross-validation data between usrm and qfa in experiment files"
+          }
+        },
+        "usrm": {
+          "type": "self_check",
+          "status": "PASSED",
+          "score": 0.999,
+          "details": {
+            "best_model": "variable_gamma_1.05",
+            "best_AIC": -154.12,
+            "AIC_improvement_over_cubic": -1.92,
+            "gamma_CI_95": [
+              1.02,
+              1.08
+            ],
+            "bootstrap_n": 10000,
+            "LOO_max_pct": 0.47
+          }
+        },
+        "vinf": {
+          "type": "cross_audit",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "none",
+          "details": {
+            "note": "No direct or indirect cross-validation data between usrm and vinf in experiment files"
+          }
+        },
+        "qgl": {
+          "type": "cross_audit_reverse",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "indirect",
+          "details": {
+            "note": "No direct audit from usrm to qgl; reverse validation exists in qgl's experiment",
+            "reverse_validation_status": "PASSED"
+          }
+        },
+        "qlv": {
+          "type": "cross_audit",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "none",
+          "details": {
+            "note": "No direct or indirect cross-validation data between usrm and qlv in experiment files"
+          }
+        },
+        "lvlu": {
+          "type": "cross_audit",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "none",
+          "details": {
+            "note": "No direct or indirect cross-validation data between usrm and lvlu in experiment files"
+          }
+        },
+        "cfts": {
+          "type": "cross_audit",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "none",
+          "details": {
+            "note": "No direct or indirect cross-validation data between usrm and cfts in experiment files"
+          }
+        },
+        "ucif2": {
+          "type": "cross_audit",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "none",
+          "details": {
+            "note": "No direct or indirect cross-validation data between usrm and ucif2 in experiment files"
+          }
+        }
+      },
+      "vinf": {
+        "lgt": {
+          "type": "cross_audit",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "none",
+          "details": {
+            "note": "No direct or indirect cross-validation data between vinf and lgt in experiment files"
+          }
+        },
+        "qfa": {
+          "type": "cross_audit",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "none",
+          "details": {
+            "note": "No direct or indirect cross-validation data between vinf and qfa in experiment files"
+          }
+        },
+        "usrm": {
+          "type": "cross_audit",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "none",
+          "details": {
+            "note": "No direct or indirect cross-validation data between vinf and usrm in experiment files"
+          }
+        },
+        "vinf": {
+          "type": "self_check",
+          "status": "PASSED",
+          "score": 0.997,
+          "details": {
+            "new_universality_class": true,
+            "FSS_error": 0.0003,
+            "goodness_of_fit_p": 0.27,
+            "p_c_extrapolated": 0.2474,
+            "n_samples": 100000,
+            "L_values": [
+              32,
+              64,
+              128,
+              256
+            ]
+          }
+        },
+        "qgl": {
+          "type": "cross_audit",
+          "status": "PASSED",
+          "score": 0.9994,
+          "delta": 0.001,
+          "metric": "critical_gamma_exponent_comparison",
+          "details": {
+            "qgl_M_series_exponent": 1.79,
+            "vinf_gamma_exponent": 1.789,
+            "relative_delta_pct": 0.056
+          }
+        },
+        "qlv": {
+          "type": "cross_audit",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "none",
+          "details": {
+            "note": "No direct or indirect cross-validation data between vinf and qlv in experiment files"
+          }
+        },
+        "lvlu": {
+          "type": "cross_audit",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "none",
+          "details": {
+            "note": "No direct or indirect cross-validation data between vinf and lvlu in experiment files"
+          }
+        },
+        "cfts": {
+          "type": "cross_audit",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "none",
+          "details": {
+            "note": "No direct or indirect cross-validation data between vinf and cfts in experiment files"
+          }
+        },
+        "ucif2": {
+          "type": "cross_audit",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "none",
+          "details": {
+            "note": "No direct or indirect cross-validation data between vinf and ucif2 in experiment files"
+          }
+        }
+      },
+      "qgl": {
+        "lgt": {
+          "type": "cross_audit",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "none",
+          "details": {
+            "note": "No direct or indirect cross-validation data between qgl and lgt in experiment files"
+          }
+        },
+        "qfa": {
+          "type": "cross_audit",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "none",
+          "details": {
+            "note": "No direct or indirect cross-validation data between qgl and qfa in experiment files"
+          }
+        },
+        "usrm": {
+          "type": "cross_audit",
+          "status": "PASSED",
+          "score": 0.982,
+          "delta": 0.008,
+          "metric": "L_skewness_tau3_comparison",
+          "details": {
+            "usrm_C_ccdf_tau3": 0.448,
+            "qgl_M_ccdf_tau3": 0.456,
+            "note": "序统计同构确认"
+          }
+        },
+        "vinf": {
+          "type": "cross_audit_reverse",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "indirect",
+          "details": {
+            "note": "No direct audit from qgl to vinf; reverse validation exists in vinf's experiment",
+            "reverse_validation_status": "PASSED"
+          }
+        },
+        "qgl": {
+          "type": "self_check",
+          "status": "PASSED",
+          "score": 0.92,
+          "details": {
+            "ks_test_p": 0.87,
+            "ad_test_p": 0.92,
+            "best_fit": "LQ-lgt-02",
+            "n_events": 125,
+            "tail_behavior": "heavy_tailed",
+            "silent_ratio": 0.3675
+          }
+        },
+        "qlv": {
+          "type": "cross_audit",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "none",
+          "details": {
+            "note": "No direct or indirect cross-validation data between qgl and qlv in experiment files"
+          }
+        },
+        "lvlu": {
+          "type": "cross_audit",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "none",
+          "details": {
+            "note": "No direct or indirect cross-validation data between qgl and lvlu in experiment files"
+          }
+        },
+        "cfts": {
+          "type": "cross_audit",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "none",
+          "details": {
+            "note": "No direct or indirect cross-validation data between qgl and cfts in experiment files"
+          }
+        },
+        "ucif2": {
+          "type": "cross_audit",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "none",
+          "details": {
+            "note": "No direct or indirect cross-validation data between qgl and ucif2 in experiment files"
+          }
+        }
+      },
+      "qlv": {
+        "lgt": {
+          "type": "cross_audit",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "none",
+          "details": {
+            "note": "No direct or indirect cross-validation data between qlv and lgt in experiment files"
+          }
+        },
+        "qfa": {
+          "type": "cross_audit",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "none",
+          "details": {
+            "note": "No direct or indirect cross-validation data between qlv and qfa in experiment files"
+          }
+        },
+        "usrm": {
+          "type": "cross_audit",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "none",
+          "details": {
+            "note": "No direct or indirect cross-validation data between qlv and usrm in experiment files"
+          }
+        },
+        "vinf": {
+          "type": "cross_audit",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "none",
+          "details": {
+            "note": "No direct or indirect cross-validation data between qlv and vinf in experiment files"
+          }
+        },
+        "qgl": {
+          "type": "cross_audit",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "none",
+          "details": {
+            "note": "No direct or indirect cross-validation data between qlv and qgl in experiment files"
+          }
+        },
+        "qlv": {
+          "type": "self_check",
+          "status": "PASSED",
+          "score": 0.91,
+          "details": {
+            "chi2_test_p": 0.26,
+            "human_agreement_kappa": 0.83,
+            "loo_accuracy": 0.91,
+            "n_basis": 2048,
+            "binmap_version": "v3",
+            "information_gain_v2_vs_v1": 0.234
+          }
+        },
+        "lvlu": {
+          "type": "cross_audit",
+          "status": "PASSED",
+          "score": 0.87,
+          "correlation": 0.87,
+          "metric": "O_S_vs_manual_eval_correlation",
+          "details": {
+            "lvlu_eval_correlation": 0.87,
+            "note": "qlv O_S与lvlu手动评估相关性强"
+          }
+        },
+        "cfts": {
+          "type": "cross_audit_reverse",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "indirect",
+          "details": {
+            "note": "No direct audit from qlv to cfts; reverse validation exists in cfts's experiment",
+            "reverse_validation_status": "PASSED"
+          }
+        },
+        "ucif2": {
+          "type": "cross_audit",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "none",
+          "details": {
+            "note": "No direct or indirect cross-validation data between qlv and ucif2 in experiment files"
+          }
+        }
+      },
+      "lvlu": {
+        "lgt": {
+          "type": "cross_audit",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "none",
+          "details": {
+            "note": "No direct or indirect cross-validation data between lvlu and lgt in experiment files"
+          }
+        },
+        "qfa": {
+          "type": "cross_audit",
+          "status": "PASSED",
+          "score": 1.0,
+          "metric": "formal_verdict_EVALR2_metrics",
+          "details": {
+            "qfa_formal_verdict": "EVALR2自动化指标定义形式化正确",
+            "note": "qfa确认评估指标的形式化定义完备"
+          }
+        },
+        "usrm": {
+          "type": "cross_audit",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "none",
+          "details": {
+            "note": "No direct or indirect cross-validation data between lvlu and usrm in experiment files"
+          }
+        },
+        "vinf": {
+          "type": "cross_audit",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "none",
+          "details": {
+            "note": "No direct or indirect cross-validation data between lvlu and vinf in experiment files"
+          }
+        },
+        "qgl": {
+          "type": "cross_audit",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "none",
+          "details": {
+            "note": "No direct or indirect cross-validation data between lvlu and qgl in experiment files"
+          }
+        },
+        "qlv": {
+          "type": "cross_audit_reverse",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "indirect",
+          "details": {
+            "note": "No direct audit from lvlu to qlv; reverse validation exists in qlv's experiment",
+            "reverse_validation_status": "PASSED"
+          }
+        },
+        "lvlu": {
+          "type": "self_check",
+          "status": "PASSED",
+          "score": 0.93,
+          "details": {
+            "cohens_kappa": 0.87,
+            "accuracy": 0.93,
+            "precision": 0.91,
+            "recall": 0.95,
+            "f1": 0.93,
+            "si_estimator_accuracy": 0.93
+          }
+        },
+        "cfts": {
+          "type": "cross_audit",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "none",
+          "details": {
+            "note": "No direct or indirect cross-validation data between lvlu and cfts in experiment files"
+          }
+        },
+        "ucif2": {
+          "type": "cross_audit",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "none",
+          "details": {
+            "note": "No direct or indirect cross-validation data between lvlu and ucif2 in experiment files"
+          }
+        }
+      },
+      "cfts": {
+        "lgt": {
+          "type": "cross_audit",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "none",
+          "details": {
+            "note": "No direct or indirect cross-validation data between cfts and lgt in experiment files"
+          }
+        },
+        "qfa": {
+          "type": "cross_audit",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "none",
+          "details": {
+            "note": "No direct or indirect cross-validation data between cfts and qfa in experiment files"
+          }
+        },
+        "usrm": {
+          "type": "cross_audit",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "none",
+          "details": {
+            "note": "No direct or indirect cross-validation data between cfts and usrm in experiment files"
+          }
+        },
+        "vinf": {
+          "type": "cross_audit",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "none",
+          "details": {
+            "note": "No direct or indirect cross-validation data between cfts and vinf in experiment files"
+          }
+        },
+        "qgl": {
+          "type": "cross_audit",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "none",
+          "details": {
+            "note": "No direct or indirect cross-validation data between cfts and qgl in experiment files"
+          }
+        },
+        "qlv": {
+          "type": "cross_audit",
+          "status": "PASSED",
+          "score": 1.0,
+          "metric": "dequarantine_four_checks",
+          "details": {
+            "qlv_dequarantine_confirm": "ALL_CHECKS_PASSED",
+            "ucif2_verification": "lanes/qlv/ accessible, outbox writable",
+            "note": "qlv确认+ucif2验证双重通过"
+          }
+        },
+        "lvlu": {
+          "type": "cross_audit",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "none",
+          "details": {
+            "note": "No direct or indirect cross-validation data between cfts and lvlu in experiment files"
+          }
+        },
+        "cfts": {
+          "type": "self_check",
+          "status": "PASSED",
+          "score": 0.997,
+          "details": {
+            "f4_total_percent": 100.0,
+            "voice_success_rate": 0.997,
+            "latency_avg_ms": 12.3,
+            "n_lines_coordinated": 9,
+            "n_messages_routed": 2847
+          }
+        },
+        "ucif2": {
+          "type": "cross_audit",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "none",
+          "details": {
+            "note": "No direct or indirect cross-validation data between cfts and ucif2 in experiment files"
+          }
+        }
+      },
+      "ucif2": {
+        "lgt": {
+          "type": "cross_audit",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "none",
+          "details": {
+            "note": "No direct or indirect cross-validation data between ucif2 and lgt in experiment files"
+          }
+        },
+        "qfa": {
+          "type": "cross_audit",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "none",
+          "details": {
+            "note": "No direct or indirect cross-validation data between ucif2 and qfa in experiment files"
+          }
+        },
+        "usrm": {
+          "type": "cross_audit",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "none",
+          "details": {
+            "note": "No direct or indirect cross-validation data between ucif2 and usrm in experiment files"
+          }
+        },
+        "vinf": {
+          "type": "cross_audit",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "none",
+          "details": {
+            "note": "No direct or indirect cross-validation data between ucif2 and vinf in experiment files"
+          }
+        },
+        "qgl": {
+          "type": "cross_audit",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "none",
+          "details": {
+            "note": "No direct or indirect cross-validation data between ucif2 and qgl in experiment files"
+          }
+        },
+        "qlv": {
+          "type": "cross_audit",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "none",
+          "details": {
+            "note": "No direct or indirect cross-validation data between ucif2 and qlv in experiment files"
+          }
+        },
+        "lvlu": {
+          "type": "cross_audit",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "none",
+          "details": {
+            "note": "No direct or indirect cross-validation data between ucif2 and lvlu in experiment files"
+          }
+        },
+        "cfts": {
+          "type": "cross_audit",
+          "status": "NO_DATA",
+          "score": null,
+          "metric": "none",
+          "details": {
+            "note": "No direct or indirect cross-validation data between ucif2 and cfts in experiment files"
+          }
+        },
+        "ucif2": {
+          "type": "self_check",
+          "status": "ACTIVE",
+          "score": 1.0,
+          "details": {
+            "mode": "LOCAL_FULL_DIMENSION_AUTONOMY",
+            "github_api_status": "401_UNAVAILABLE",
+            "note": "Global supervision node operating in local autonomy"
+          }
+        }
+      }
+    }
+  },
+  "anomaly_detection_thresholds": {
+    "si_health_thresholds": {
+      "description": "SI健康度分级阈值，基于EXP-017 line_statuses真实数据",
+      "CRITICAL": {
+        "threshold": 0.7,
+        "condition": "health < 0.70",
+        "action": "立即触发PULSE自激 + 全局警报",
+        "current_violations": [],
+        "note": "当前所有线health均>=0.88，无CRITICAL violation"
+      },
+      "WARN": {
+        "threshold": 0.85,
+        "condition": "health < 0.85",
+        "action": "触发WARN警报 + 建议PULSE自激",
+        "current_violations": [
+          {
+            "line": "cfts",
+            "health": 0.88,
+            "note": "cfts health=0.88，高于WARN阈值0.85但低于0.90，需关注"
+          },
+          {
+            "line": "lvlu",
+            "health": 0.89,
+            "note": "lvlu health=0.89，高于WARN阈值0.85但存在self_eval_needed alert"
+          }
+        ],
+        "note": "当前无health<0.85的线，但cfts(0.88)和lvlu(0.89)接近阈值"
+      },
+      "MONITOR": {
+        "threshold": 0.9,
+        "condition": "health < 0.90",
+        "action": "纳入高频监控列表",
+        "current_lines": [
+          "cfts",
+          "lvlu"
+        ],
+        "note": "cfts(0.88)和lvlu(0.89)处于MONITOR区间"
+      }
+    },
+    "cross_line_validation_thresholds": {
+      "description": "跨线验证差异阈值",
+      "review_trigger": {
+        "threshold_pct": 5.0,
+        "condition": "跨线验证差异超过5%",
+        "action": "触发BRIDGE协调审查",
+        "current_max_delta_pct": {
+          "value": 0.056,
+          "between": [
+            "vinf",
+            "qgl"
+          ],
+          "metric": "critical_gamma_exponent",
+          "note": "vinf gamma=1.789 vs qgl gamma=1.79，相对差异0.056%，远低于5%阈值"
+        },
+        "all_deltas": [
+          {
+            "pair": [
+              "lgt",
+              "usrm"
+            ],
+            "delta_pct": 0.00016,
+            "metric": "k200_value"
+          },
+          {
+            "pair": [
+              "vinf",
+              "qgl"
+            ],
+            "delta_pct": 0.056,
+            "metric": "critical_gamma_exponent"
+          },
+          {
+            "pair": [
+              "qgl",
+              "usrm"
+            ],
+            "delta_pct": 1.79,
+            "metric": "L_skewness_tau3"
+          },
+          {
+            "pair": [
+              "qlv",
+              "lvlu"
+            ],
+            "correlation": 0.87,
+            "metric": "O_S_eval_correlation"
+          }
+        ],
+        "violations": [],
+        "note": "所有跨线验证差异均远低于5%阈值，无review_trigger violation"
+      }
+    },
+    "file_size_anomaly_thresholds": {
+      "description": "实验文件大小异常检测阈值",
+      "threshold_pct": 50.0,
+      "condition": "文件大小与同类实验平均偏差>50%",
+      "action": "触发RECON重建检查",
+      "statistics": {
+        "avg_bytes": 2647.2,
+        "median_bytes": 2678,
+        "min_bytes": 2011,
+        "max_bytes": 3958,
+        "std_bytes": 637.8,
+        "n_files": 8
+      },
+      "file_audit": {
+        "EXP-011": {
+          "line": "lgt",
+          "size": 2022,
+          "dev_pct": -23.6,
+          "status": "NORMAL"
+        },
+        "EXP-012": {
+          "line": "qfa",
+          "size": 2266,
+          "dev_pct": -14.4,
+          "status": "NORMAL"
+        },
+        "EXP-013": {
+          "line": "usrm",
+          "size": 2953,
+          "dev_pct": 11.5,
+          "status": "NORMAL"
+        },
+        "EXP-014": {
+          "line": "vinf",
+          "size": 2011,
+          "dev_pct": -24.0,
+          "status": "NORMAL"
+        },
+        "EXP-015": {
+          "line": "qgl",
+          "size": 2313,
+          "dev_pct": -12.6,
+          "status": "NORMAL"
+        },
+        "EXP-016": {
+          "line": "qlv",
+          "size": 2678,
+          "dev_pct": 1.2,
+          "status": "NORMAL"
+        },
+        "EXP-017": {
+          "line": "lvlu",
+          "size": 3958,
+          "dev_pct": 49.5,
+          "status": "NORMAL"
+        },
+        "EXP-018": {
+          "line": "cfts",
+          "size": 2977,
+          "dev_pct": 12.5,
+          "status": "NORMAL"
+        }
+      },
+      "violations": [],
+      "note": "所有文件大小偏差均<50%。lvlu(EXP-017)偏差49.5%接近阈值，因包含全九线状态数据导致较大体积，属合理范围。",
+      "closest_to_threshold": {
+        "file": "EXP-017-lvlu-EVALR2-automation.json",
+        "dev_pct": 49.5,
+        "reason": "包含9条线完整状态数据、自动化组件配置、评估指标等，内容量大"
+      }
+    },
+    "timestamp_consistency_check": {
+      "description": "实验时间戳一致性检查",
+      "threshold_sec": 300,
+      "condition": "同批次实验时间戳差异>5分钟",
+      "action": "触发时序审计",
+      "timestamps": {
+        "EXP-011": "2026-09-12T03:54:42Z",
+        "EXP-012": "2026-09-12T03:54:42Z",
+        "EXP-013": "2026-09-12T03:54:42Z",
+        "EXP-014": "2026-09-12T03:56:05Z",
+        "EXP-015": "2026-09-12T03:56:05Z",
+        "EXP-016": "2026-09-12T03:56:05Z",
+        "EXP-017": "2026-09-12T03:57:23Z",
+        "EXP-018": "2026-09-12T03:57:23Z"
+      },
+      "max_diff_sec": 161,
+      "groups": [
+        {
+          "time": "03:54:42Z",
+          "files": [
+            "EXP-011",
+            "EXP-012",
+            "EXP-013"
+          ]
+        },
+        {
+          "time": "03:56:05Z",
+          "files": [
+            "EXP-014",
+            "EXP-015",
+            "EXP-016"
+          ]
+        },
+        {
+          "time": "03:57:23Z",
+          "files": [
+            "EXP-017",
+            "EXP-018"
+          ]
+        }
+      ],
+      "violations": [],
+      "note": "时间戳分组合理，同组内完全一致，组间最大差161秒(<300秒阈值)，反映并行实验的批次执行特征"
+    }
+  },
+  "mutual_supervision_protocol": {
+    "description": "九线相互监督协议——每条线对其他线的产出进行抽样审计",
+    "supervision_assignments": [
+      {
+        "supervisor": "lgt",
+        "supervises": [
+          "usrm"
+        ],
+        "focus": "标度律预测",
+        "audit_metric": "k_c律形预测精度",
+        "frequency": "per_experiment",
+        "method": "实测值与预测值比对",
+        "current_status": "ACTIVE",
+        "last_audit": {
+          "target": "usrm",
+          "result": "PASSED",
+          "delta_pct": 0.00016,
+          "source": "EXP-011 validation"
+        }
+      },
+      {
+        "supervisor": "qfa",
+        "supervises": [
+          "lgt",
+          "usrm",
+          "vinf",
+          "qgl",
+          "qlv",
+          "lvlu",
+          "cfts",
+          "ucif2"
+        ],
+        "focus": "形式化声明",
+        "audit_metric": "形式化验证完备性",
+        "frequency": "per_experiment",
+        "method": "Coq/Lean形式化证明 + 模型检验",
+        "current_status": "ACTIVE",
+        "last_audits": [
+          {
+            "target": "lgt",
+            "result": "PASSED",
+            "metric": "F_α(qset_logic)=true",
+            "source": "EXP-012 validation"
+          },
+          {
+            "target": "lvlu",
+            "result": "PASSED",
+            "metric": "EVALR2指标定义形式化正确",
+            "source": "EXP-017 validation"
+          }
+        ],
+        "note": "qfa作为形式化验证中心，监督所有线的形式化声明"
+      },
+      {
+        "supervisor": "usrm",
+        "supervises": [
+          "lgt"
+        ],
+        "focus": "统计收敛",
+        "audit_metric": "统计收敛率与精度",
+        "frequency": "per_experiment",
+        "method": "AIC比较 + LOO交叉验证 + Bootstrap置信区间",
+        "current_status": "ACTIVE",
+        "last_audit": {
+          "target": "lgt",
+          "result": "PASSED",
+          "delta_pct": 0.00016,
+          "source": "EXP-013 validation"
+        }
+      },
+      {
+        "supervisor": "vinf",
+        "supervises": [
+          "qgl"
+        ],
+        "focus": "临界指数",
+        "audit_metric": "临界指数一致性",
+        "frequency": "per_experiment",
+        "method": "有限尺寸标度(FSS) + 蒙特卡洛模拟",
+        "current_status": "ACTIVE",
+        "last_audit": {
+          "target": "qgl",
+          "result": "PASSED",
+          "delta": 0.001,
+          "metric": "gamma_exponent",
+          "source": "EXP-014 validation"
+        }
+      },
+      {
+        "supervisor": "qgl",
+        "supervises": [
+          "usrm"
+        ],
+        "focus": "序统计",
+        "audit_metric": "序统计同构性",
+        "frequency": "per_experiment",
+        "method": "CCDF + KS检验 + AD检验 + L-moments",
+        "current_status": "ACTIVE",
+        "last_audit": {
+          "target": "usrm",
+          "result": "PASSED",
+          "delta": 0.008,
+          "metric": "L_skewness_tau3",
+          "source": "EXP-015 validation"
+        }
+      },
+      {
+        "supervisor": "qlv",
+        "supervises": [
+          "lvlu"
+        ],
+        "focus": "评估指标",
+        "audit_metric": "O_S与手动评估一致性",
+        "frequency": "per_experiment",
+        "method": "信息增益 + 卡方检验 + 留一法交叉验证",
+        "current_status": "ACTIVE",
+        "last_audit": {
+          "target": "lvlu",
+          "result": "PASSED",
+          "correlation": 0.87,
+          "source": "EXP-016 validation"
+        }
+      },
+      {
+        "supervisor": "lvlu",
+        "supervises": [
+          "lgt",
+          "qfa",
+          "usrm",
+          "vinf",
+          "qgl",
+          "qlv",
+          "cfts",
+          "ucif2"
+        ],
+        "focus": "SI评级",
+        "audit_metric": "全线SI健康度评估",
+        "frequency": "continuous",
+        "method": "规则引擎 + 轻量ML + 回溯验证",
+        "current_status": "ACTIVE",
+        "last_audit": {
+          "result": "PASSED",
+          "cohens_kappa": 0.87,
+          "accuracy": 0.93,
+          "source": "EXP-017 validation_vs_manual"
+        },
+        "note": "lvlu作为评估中心，监督所有线的SI评级"
+      },
+      {
+        "supervisor": "cfts",
+        "supervises": [
+          "qlv"
+        ],
+        "focus": "隔离状态",
+        "audit_metric": "解隔离四检通过率",
+        "frequency": "per_experiment",
+        "method": "逐项审计 + 证据收集 + qlv确认 + ucif2验证",
+        "current_status": "ACTIVE",
+        "last_audit": {
+          "target": "qlv",
+          "result": "PASSED",
+          "confirm": "ALL_CHECKS_PASSED",
+          "source": "EXP-018 validation"
+        }
+      },
+      {
+        "supervisor": "ucif2",
+        "supervises": [
+          "lgt",
+          "qfa",
+          "usrm",
+          "vinf",
+          "qgl",
+          "qlv",
+          "lvlu",
+          "cfts"
+        ],
+        "focus": "全局监督",
+        "audit_metric": "全局协调一致性 + 协议合规性",
+        "frequency": "continuous",
+        "method": "全局状态聚合 + 交叉验证矩阵审计 + 异常检测",
+        "current_status": "ACTIVE",
+        "mode": "LOCAL_FULL_DIMENSION_AUTONOMY",
+        "github_api": "401_UNAVAILABLE",
+        "note": "ucif2作为全局监督节点，在当前本地自治模式下执行全局审计"
+      }
+    ],
+    "supervision_coverage": {
+      "description": "监督覆盖率分析",
+      "total_possible_pairs": 72,
+      "directly_validated_pairs": 8,
+      "indirectly_covered_pairs": 16,
+      "coverage_pct": 33.3,
+      "note": "8个实验产生8条直接交叉验证关系。相互监督协议通过指派间接覆盖了更多线对，但建议增加更多直接交叉验证实验以提升覆盖率。"
+    }
+  },
+  "auto_correction_triggers": {
+    "description": "自动修正触发器——基于异常检测结果自动执行修正动作",
+    "triggers": [
+      {
+        "trigger_id": "TRG-PULSE-01",
+        "name": "PULSE自激触发器",
+        "condition": "某线health < 0.85",
+        "severity": "WARN",
+        "action": "PULSE",
+        "description": "触发该线的自激修复协议，包括：自检重启、参数重校准、依赖重连",
+        "current_status": "ARMED",
+        "would_trigger_for": [],
+        "note": "当前无health<0.85的线，PULSE未触发。但cfts(0.88)和lvlu(0.89)接近阈值，建议预激活。"
+      },
+      {
+        "trigger_id": "TRG-BRIDGE-01",
+        "name": "BRIDGE协调触发器",
+        "condition": "跨线验证失败（status != PASSED）或跨线差异>5%",
+        "severity": "WARN",
+        "action": "BRIDGE",
+        "description": "触发跨线协调协议，包括：差异定位、基准线选择、联合重算、共识达成",
+        "current_status": "ARMED",
+        "would_trigger_for": [],
+        "note": "当前所有跨线验证均PASSED，差异均<5%，BRIDGE未触发。"
+      },
+      {
+        "trigger_id": "TRG-RECON-01",
+        "name": "RECON重建触发器",
+        "condition": "文件审计失败（文件大小偏差>50%或文件损坏/缺失）",
+        "severity": "CRITICAL",
+        "action": "RECON",
+        "description": "触发实验重建协议，包括：数据备份恢复、实验重跑、交叉验证重执行、报告重生成",
+        "current_status": "ARMED",
+        "would_trigger_for": [],
+        "note": "当前所有文件大小偏差<50%，无文件损坏/缺失，RECON未触发。"
+      },
+      {
+        "trigger_id": "TRG-PULSE-02",
+        "name": "PULSE自激增强触发器",
+        "condition": "某线health < 0.70",
+        "severity": "CRITICAL",
+        "action": "PULSE-ENHANCED",
+        "description": "触发增强型自激修复，包括：全线资源倾斜、专家线介入、降级运行模式",
+        "current_status": "ARMED",
+        "would_trigger_for": [],
+        "note": "当前所有线health>=0.88，无CRITICAL health violation。"
+      },
+      {
+        "trigger_id": "TRG-SYNC-01",
+        "name": "SYNC同步触发器",
+        "condition": "同批次实验时间戳差异>5分钟",
+        "severity": "INFO",
+        "action": "SYNC",
+        "description": "触发时序同步协议，确保实验批次的时间一致性",
+        "current_status": "ARMED",
+        "would_trigger_for": [],
+        "note": "当前最大时间戳差异161秒(<300秒阈值)，SYNC未触发。"
+      }
+    ],
+    "trigger_arming_status": {
+      "all_triggers_armed": true,
+      "last_armed": "2026-09-12T04:45:13Z",
+      "autonomous_mode": true
+    }
+  },
+  "audit_summary": {
+    "total_experiments_audited": 8,
+    "total_lines": 9,
+    "cross_validation_pairs_validated": 8,
+    "cross_validation_pairs_passed": 8,
+    "cross_validation_pairs_failed": 0,
+    "health_violations_WARN": 0,
+    "health_violations_CRITICAL": 0,
+    "file_size_anomalies": 0,
+    "timestamp_anomalies": 0,
+    "overall_status": "HEALTHY",
+    "risk_level": "LOW",
+    "key_findings": [
+      "所有8个实验的交叉验证状态均为PASSED，无失败项",
+      "跨线验证最大差异为vinf-qgl的gamma临界指数差异0.001(0.056%)，远低于5%审查阈值",
+      "lgt-usrm的k200预测/实测一致性极高，差异仅0.00016%",
+      "qgl-usrm的序统计同构性得到确认，L-skewness差异0.008",
+      "qlv-lvlu的评估相关性0.87，表明自动化评估与手动评估高度一致",
+      "cfts health=0.88为全系统最低，存在F4_completion_needed alert",
+      "lvlu health=0.89，存在self_eval_needed alert",
+      "所有实验文件大小偏差均<50%，最大偏差lvlu(49.5%)因包含全九线数据而合理",
+      "时间戳分三组(03:54:42, 03:56:05, 03:57:23)，最大差161秒，符合并行批次特征",
+      "ucif2在LOCAL FULL DIMENSION AUTONOMY模式下正常运行，health=1.0"
+    ],
+    "recommendations": [
+      "cfts: 优先完成F4后续工作以提升health至0.90+",
+      "lvlu: 执行自动化部署后的self-evaluate",
+      "建议增加更多直接交叉验证实验以提升监督覆盖率(当前33.3%)",
+      "建议为ucif2建立独立实验文件以完善9x9矩阵对角线",
+      "建议监控lvlu文件大小趋势，当前已接近50%阈值"
+    ]
+  }
+}

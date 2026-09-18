@@ -1,0 +1,14 @@
+{
+  "lanes": {
+    "ucif2": {
+      "capabilities": [
+        "sync",
+        "compute",
+        "relay"
+      ],
+      "registered_at": "2026-09-12T10:33:24.159601+00:00",
+      "last_heartbeat": "2026-09-12T10:33:24.159614+00:00"
+    }
+  },
+  "last_updated": "2026-09-12T10:33:24.159617+00:00"
+}

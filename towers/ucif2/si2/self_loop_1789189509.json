@@ -1,0 +1,46 @@
+{
+  "line": "ucif2",
+  "ts": "2026-09-12T05:05:08.821008+00:00",
+  "processed": [
+    {
+      "msg_id": "1c0aaa4b-f6e4-4f84-bfbc-5e541a680c01",
+      "type": "TASK",
+      "status": "OK",
+      "action": "queued"
+    },
+    {
+      "msg_id": "29a46885-2ba7-4219-bad9-01dc8d98f890",
+      "type": "TASK",
+      "status": "OK",
+      "action": "queued"
+    },
+    {
+      "msg_id": "7f678c9d-9133-4032-98cc-ee83117f19ed",
+      "type": "TASK",
+      "status": "OK",
+      "action": "queued"
+    },
+    {
+      "msg_id": "d981a75a-2d08-4d43-bbf1-e290c99ec6b9",
+      "type": "TASK",
+      "status": "OK",
+      "action": "queued"
+    },
+    {
+      "msg_id": "dc4d7619-c7bc-413c-8bab-d12f39cafec4",
+      "type": "TASK",
+      "status": "OK",
+      "action": "queued"
+    },
+    {
+      "msg_id": "ebcbcd68-e7b6-4d3c-b717-9912814e5598",
+      "type": "TASK",
+      "status": "OK",
+      "action": "queued"
+    }
+  ],
+  "expired": [],
+  "failed": [],
+  "pending_acks": 8,
+  "stalled": false
+}

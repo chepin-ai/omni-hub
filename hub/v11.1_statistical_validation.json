@@ -1,0 +1,57 @@
+{
+  "version": "v11.1",
+  "timestamp": "2026-09-17T18:00:00Z",
+  "bootstrap": {
+    "n_bootstrap": 1000,
+    "confidence_level": 0.95,
+    "point_estimate_normalized": 0.3147,
+    "point_estimate_scaled": 3147.09,
+    "ci_lower": 3083.57,
+    "ci_upper": 3186.92,
+    "ci_bca_lower": 3070.54,
+    "ci_bca_upper": 3181.79,
+    "standard_error": 0.0026,
+    "bias": -0.000252
+  },
+  "monte_carlo": {
+    "n_trials": 1000,
+    "noise_levels": [
+      0.01,
+      0.05,
+      0.1,
+      0.2
+    ],
+    "results": {
+      "0.01": {
+        "mean": 0.3146,
+        "std": 0.0016,
+        "cv_percent": 0.51,
+        "stable": true
+      },
+      "0.05": {
+        "mean": 0.3161,
+        "std": 0.0041,
+        "cv_percent": 1.29,
+        "stable": true
+      },
+      "0.1": {
+        "mean": 0.3249,
+        "std": 0.0055,
+        "cv_percent": 1.68,
+        "stable": true
+      },
+      "0.2": {
+        "mean": 0.3603,
+        "std": 0.0083,
+        "cv_percent": 2.31,
+        "stable": true
+      }
+    },
+    "overall_stable": true
+  },
+  "verdict": {
+    "bootstrap_reliable": true,
+    "monte_carlo_stable": true,
+    "overall": "VALIDATED"
+  }
+}

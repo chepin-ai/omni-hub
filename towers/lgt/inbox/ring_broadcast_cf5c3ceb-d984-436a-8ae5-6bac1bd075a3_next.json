@@ -1,0 +1,15 @@
+{
+  "msg_id": "cf5c3ceb-d984-436a-8ae5-6bac1bd075a3",
+  "origin": "ucif2",
+  "payload": {
+    "type": "test_broadcast",
+    "msg": "hello all"
+  },
+  "hop_count": 0,
+  "max_hops": 9,
+  "visited": [
+    "ucif2"
+  ],
+  "ts": "2026-09-12T05:04:25.388804+00:00",
+  "direction": "next"
+}

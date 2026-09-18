@@ -1,0 +1,4116 @@
+{
+  "line_id": "qlv",
+  "line_name": "量子/生命/意识",
+  "timestamp": 1789662470.3835056,
+  "version": "12.0.0",
+  "lineage_tree": {
+    "root": {
+      "name": "qlv",
+      "type": "line_root",
+      "children": [
+        "md_heading",
+        "python_class",
+        "python_function"
+      ],
+      "weight": 1.0
+    },
+    "branches": {
+      "md_heading": {
+        "type": "md_heading",
+        "node_count": 14,
+        "avg_relevance": 0.75,
+        "nodes": [
+          {
+            "name": "qlv线 SI4.5 升级自证报告（ucif2介入产出）",
+            "signature": "qlv-SI4.5-self-cert-report.md::heading:qlv线 SI4.5 升级自证报告（ucif2介入产出）",
+            "relevance": 0.75,
+            "source": "qlv-SI4.5-self-cert-report.md"
+          },
+          {
+            "name": "线基本信息",
+            "signature": "qlv-SI4.5-self-cert-report.md::heading:线基本信息",
+            "relevance": 0.75,
+            "source": "qlv-SI4.5-self-cert-report.md"
+          },
+          {
+            "name": "1. ucif2介入说明",
+            "signature": "qlv-SI4.5-self-cert-report.md::heading:1. ucif2介入说明",
+            "relevance": 0.75,
+            "source": "qlv-SI4.5-self-cert-report.md"
+          },
+          {
+            "name": "2. 升级资格评估（基于ucif2档案评估）",
+            "signature": "qlv-SI4.5-self-cert-report.md::heading:2. 升级资格评估（基于ucif2档案评估）",
+            "relevance": 0.75,
+            "source": "qlv-SI4.5-self-cert-report.md"
+          },
+          {
+            "name": "2.1 数据充分性: 0.86",
+            "signature": "qlv-SI4.5-self-cert-report.md::heading:2.1 数据充分性: 0.86",
+            "relevance": 0.75,
+            "source": "qlv-SI4.5-self-cert-report.md"
+          },
+          {
+            "name": "2.2 验证充分性: 0.87",
+            "signature": "qlv-SI4.5-self-cert-report.md::heading:2.2 验证充分性: 0.87",
+            "relevance": 0.75,
+            "source": "qlv-SI4.5-self-cert-report.md"
+          },
+          {
+            "name": "2.3 形式化程度: 0.81",
+            "signature": "qlv-SI4.5-self-cert-report.md::heading:2.3 形式化程度: 0.81",
+            "relevance": 0.75,
+            "source": "qlv-SI4.5-self-cert-report.md"
+          },
+          {
+            "name": "2.4 边界测试（ucif2代执行）",
+            "signature": "qlv-SI4.5-self-cert-report.md::heading:2.4 边界测试（ucif2代执行）",
+            "relevance": 0.75,
+            "source": "qlv-SI4.5-self-cert-report.md"
+          },
+          {
+            "name": "2.5 交叉验证: 0.91",
+            "signature": "qlv-SI4.5-self-cert-report.md::heading:2.5 交叉验证: 0.91",
+            "relevance": 0.75,
+            "source": "qlv-SI4.5-self-cert-report.md"
+          },
+          {
+            "name": "3. 核心能力状态",
+            "signature": "qlv-SI4.5-self-cert-report.md::heading:3. 核心能力状态",
+            "relevance": 0.75,
+            "source": "qlv-SI4.5-self-cert-report.md"
+          },
+          {
+            "name": "3.1 语义分析引擎 v4.0",
+            "signature": "qlv-SI4.5-self-cert-report.md::heading:3.1 语义分析引擎 v4.0",
+            "relevance": 0.75,
+            "source": "qlv-SI4.5-self-cert-report.md"
+          },
+          {
+            "name": "3.2 SI4.5目标能力",
+            "signature": "qlv-SI4.5-self-cert-report.md::heading:3.2 SI4.5目标能力",
+            "relevance": 0.75,
+            "source": "qlv-SI4.5-self-cert-report.md"
+          },
+          {
+            "name": "4. ucif2评估结论",
+            "signature": "qlv-SI4.5-self-cert-report.md::heading:4. ucif2评估结论",
+            "relevance": 0.75,
+            "source": "qlv-SI4.5-self-cert-report.md"
+          },
+          {
+            "name": "5. 升级条件检查表",
+            "signature": "qlv-SI4.5-self-cert-report.md::heading:5. 升级条件检查表",
+            "relevance": 0.75,
+            "source": "qlv-SI4.5-self-cert-report.md"
+          }
+        ]
+      },
+      "python_class": {
+        "type": "python_class",
+        "node_count": 33,
+        "avg_relevance": 0.5333333333333333,
+        "nodes": [
+          {
+            "name": "DNAMathematics",
+            "signature": "formal_life_engine.py::class:DNAMathematics",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "RNAMathematics",
+            "signature": "formal_life_engine.py::class:RNAMathematics",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "ProteinMathematics",
+            "signature": "formal_life_engine.py::class:ProteinMathematics",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "GeneticCode",
+            "signature": "formal_life_engine.py::class:GeneticCode",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "FormalLife",
+            "signature": "formal_life_engine.py::class:FormalLife",
+            "relevance": 0.6,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "BioKnowledgeIsomorphism",
+            "signature": "formal_life_engine.py::class:BioKnowledgeIsomorphism",
+            "relevance": 0.6,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "FormalLifeEngine",
+            "signature": "formal_life_engine.py::class:FormalLifeEngine",
+            "relevance": 0.6,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "class",
+            "signature": "v10_knowledge_life_backbone.py::class:class",
+            "relevance": 0.5,
+            "source": "v10_knowledge_life_backbone.py"
+          },
+          {
+            "name": "UCIF2SandboxScanner",
+            "signature": "v10_knowledge_life_backbone.py::class:UCIF2SandboxScanner",
+            "relevance": 0.5,
+            "source": "v10_knowledge_life_backbone.py"
+          },
+          {
+            "name": "SixPedestalSync",
+            "signature": "v10_knowledge_life_backbone.py::class:SixPedestalSync",
+            "relevance": 0.5,
+            "source": "v10_knowledge_life_backbone.py"
+          },
+          {
+            "name": "KnowledgeBackboneBus",
+            "signature": "v10_knowledge_life_backbone.py::class:KnowledgeBackboneBus",
+            "relevance": 0.5,
+            "source": "v10_knowledge_life_backbone.py"
+          },
+          {
+            "name": "ConsciousnessLevelV10",
+            "signature": "v10_knowledge_life_backbone.py::class:ConsciousnessLevelV10",
+            "relevance": 0.6,
+            "source": "v10_knowledge_life_backbone.py"
+          },
+          {
+            "name": "KnowledgeRuleV10",
+            "signature": "v10_knowledge_life_backbone.py::class:KnowledgeRuleV10",
+            "relevance": 0.5,
+            "source": "v10_knowledge_life_backbone.py"
+          },
+          {
+            "name": "ConsciousnessHarmony",
+            "signature": "consciousness_harmony.py::class:ConsciousnessHarmony",
+            "relevance": 0.6,
+            "source": "consciousness_harmony.py"
+          },
+          {
+            "name": "class",
+            "signature": "consciousness_state_machine.py::class:class",
+            "relevance": 0.5,
+            "source": "consciousness_state_machine.py"
+          },
+          {
+            "name": "StrangeLoopDetectorV2",
+            "signature": "consciousness_state_machine.py::class:StrangeLoopDetectorV2",
+            "relevance": 0.5,
+            "source": "consciousness_state_machine.py"
+          },
+          {
+            "name": "ConsciousnessLevel",
+            "signature": "consciousness_state_machine.py::class:ConsciousnessLevel",
+            "relevance": 0.6,
+            "source": "consciousness_state_machine.py"
+          },
+          {
+            "name": "ConsciousnessStateMachine",
+            "signature": "consciousness_state_machine.py::class:ConsciousnessStateMachine",
+            "relevance": 0.6,
+            "source": "consciousness_state_machine.py"
+          },
+          {
+            "name": "ConsciousnessPathfinder",
+            "signature": "consciousness_state_machine.py::class:ConsciousnessPathfinder",
+            "relevance": 0.6,
+            "source": "consciousness_state_machine.py"
+          },
+          {
+            "name": "ConsciousnessElevationProtocol",
+            "signature": "consciousness_state_machine.py::class:ConsciousnessElevationProtocol",
+            "relevance": 0.6,
+            "source": "consciousness_state_machine.py"
+          },
+          {
+            "name": "QuantumState",
+            "signature": "quantum_consciousness_unifier.py::class:QuantumState",
+            "relevance": 0.5,
+            "source": "quantum_consciousness_unifier.py"
+          },
+          {
+            "name": "class",
+            "signature": "quantum_consciousness_unifier.py::class:class",
+            "relevance": 0.5,
+            "source": "quantum_consciousness_unifier.py"
+          },
+          {
+            "name": "MoonshineSpace",
+            "signature": "quantum_consciousness_unifier.py::class:MoonshineSpace",
+            "relevance": 0.5,
+            "source": "quantum_consciousness_unifier.py"
+          },
+          {
+            "name": "AutopoiesisVerifier",
+            "signature": "quantum_consciousness_unifier.py::class:AutopoiesisVerifier",
+            "relevance": 0.5,
+            "source": "quantum_consciousness_unifier.py"
+          },
+          {
+            "name": "QuantumConsciousnessUnifier",
+            "signature": "quantum_consciousness_unifier.py::class:QuantumConsciousnessUnifier",
+            "relevance": 0.6,
+            "source": "quantum_consciousness_unifier.py"
+          },
+          {
+            "name": "ConsciousnessState",
+            "signature": "v11_consciousness_emergence_system.py::class:ConsciousnessState",
+            "relevance": 0.6,
+            "source": "v11_consciousness_emergence_system.py"
+          },
+          {
+            "name": "EmergenceDimension",
+            "signature": "v11_consciousness_emergence_system.py::class:EmergenceDimension",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          },
+          {
+            "name": "class",
+            "signature": "v11_consciousness_emergence_system.py::class:class",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          },
+          {
+            "name": "EmergenceAxioms",
+            "signature": "v11_consciousness_emergence_system.py::class:EmergenceAxioms",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          },
+          {
+            "name": "CategoryTheoryEmergence",
+            "signature": "v11_consciousness_emergence_system.py::class:CategoryTheoryEmergence",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          },
+          {
+            "name": "PhysicsAnalogies",
+            "signature": "v11_consciousness_emergence_system.py::class:PhysicsAnalogies",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          },
+          {
+            "name": "EmergenceTheoryArchitecture",
+            "signature": "v11_consciousness_emergence_system.py::class:EmergenceTheoryArchitecture",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          },
+          {
+            "name": "EmergenceManifestationSystem",
+            "signature": "v11_consciousness_emergence_system.py::class:EmergenceManifestationSystem",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          }
+        ]
+      },
+      "python_function": {
+        "type": "python_function",
+        "node_count": 266,
+        "avg_relevance": 0.5026315789473684,
+        "nodes": [
+          {
+            "name": "__init__",
+            "signature": "formal_life_engine.py::def:__init__",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "generate_sequence",
+            "signature": "formal_life_engine.py::def:generate_sequence",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "complement",
+            "signature": "formal_life_engine.py::def:complement",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "reverse_complement",
+            "signature": "formal_life_engine.py::def:reverse_complement",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "transcribe",
+            "signature": "formal_life_engine.py::def:transcribe",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "gc_content",
+            "signature": "formal_life_engine.py::def:gc_content",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "entropy",
+            "signature": "formal_life_engine.py::def:entropy",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "fourier_transform",
+            "signature": "formal_life_engine.py::def:fourier_transform",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "z_curve",
+            "signature": "formal_life_engine.py::def:z_curve",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "walk_plot",
+            "signature": "formal_life_engine.py::def:walk_plot",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "melting_temperature",
+            "signature": "formal_life_engine.py::def:melting_temperature",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "kmer_frequency",
+            "signature": "formal_life_engine.py::def:kmer_frequency",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "fold_secondary",
+            "signature": "formal_life_engine.py::def:fold_secondary",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "_can_pair",
+            "signature": "formal_life_engine.py::def:_can_pair",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "_traceback",
+            "signature": "formal_life_engine.py::def:_traceback",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "calculate_free_energy",
+            "signature": "formal_life_engine.py::def:calculate_free_energy",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "find_motifs",
+            "signature": "formal_life_engine.py::def:find_motifs",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "translate",
+            "signature": "formal_life_engine.py::def:translate",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "structure_to_dot_bracket",
+            "signature": "formal_life_engine.py::def:structure_to_dot_bracket",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "compute_hydrophobicity",
+            "signature": "formal_life_engine.py::def:compute_hydrophobicity",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "predict_alpha_helix",
+            "signature": "formal_life_engine.py::def:predict_alpha_helix",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "predict_beta_sheet",
+            "signature": "formal_life_engine.py::def:predict_beta_sheet",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "contact_map",
+            "signature": "formal_life_engine.py::def:contact_map",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "_approximate_3d_coords",
+            "signature": "formal_life_engine.py::def:_approximate_3d_coords",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "fold_topology",
+            "signature": "formal_life_engine.py::def:fold_topology",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "_compute_writhing_number",
+            "signature": "formal_life_engine.py::def:_compute_writhing_number",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "energy_landscape",
+            "signature": "formal_life_engine.py::def:energy_landscape",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "_random_conformation",
+            "signature": "formal_life_engine.py::def:_random_conformation",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "_compute_energy",
+            "signature": "formal_life_engine.py::def:_compute_energy",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "molecular_weight",
+            "signature": "formal_life_engine.py::def:molecular_weight",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "isoelectric_point_approx",
+            "signature": "formal_life_engine.py::def:isoelectric_point_approx",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "codon_to_amino_acid",
+            "signature": "formal_life_engine.py::def:codon_to_amino_acid",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "amino_acid_to_codons",
+            "signature": "formal_life_engine.py::def:amino_acid_to_codons",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "redundancy",
+            "signature": "formal_life_engine.py::def:redundancy",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "error_resilience",
+            "signature": "formal_life_engine.py::def:error_resilience",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "symmetry_analysis",
+            "signature": "formal_life_engine.py::def:symmetry_analysis",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "_count_automorphisms",
+            "signature": "formal_life_engine.py::def:_count_automorphisms",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "get_all_codons",
+            "signature": "formal_life_engine.py::def:get_all_codons",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "translate_dna",
+            "signature": "formal_life_engine.py::def:translate_dna",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "create",
+            "signature": "formal_life_engine.py::def:create",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "_calculate_fitness",
+            "signature": "formal_life_engine.py::def:_calculate_fitness",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "autopoiesis_cycle",
+            "signature": "formal_life_engine.py::def:autopoiesis_cycle",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "replication_fidelity",
+            "signature": "formal_life_engine.py::def:replication_fidelity",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "mutation_rate",
+            "signature": "formal_life_engine.py::def:mutation_rate",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "mutate",
+            "signature": "formal_life_engine.py::def:mutate",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "selection_pressure",
+            "signature": "formal_life_engine.py::def:selection_pressure",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "evolve",
+            "signature": "formal_life_engine.py::def:evolve",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "get_state",
+            "signature": "formal_life_engine.py::def:get_state",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "dna_to_knowledge_graph",
+            "signature": "formal_life_engine.py::def:dna_to_knowledge_graph",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "_quick_entropy",
+            "signature": "formal_life_engine.py::def:_quick_entropy",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "_sequence_similarity",
+            "signature": "formal_life_engine.py::def:_sequence_similarity",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "protein_to_tensor_field",
+            "signature": "formal_life_engine.py::def:protein_to_tensor_field",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "metabolism_to_closed_loop",
+            "signature": "formal_life_engine.py::def:metabolism_to_closed_loop",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "evolution_to_emergence",
+            "signature": "formal_life_engine.py::def:evolution_to_emergence",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "create_isomorphism_map",
+            "signature": "formal_life_engine.py::def:create_isomorphism_map",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "create_life_form",
+            "signature": "formal_life_engine.py::def:create_life_form",
+            "relevance": 0.6,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "run_life_cycle",
+            "signature": "formal_life_engine.py::def:run_life_cycle",
+            "relevance": 0.6,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "evolve_population",
+            "signature": "formal_life_engine.py::def:evolve_population",
+            "relevance": 0.5,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "get_life_metrics",
+            "signature": "formal_life_engine.py::def:get_life_metrics",
+            "relevance": 0.6,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "get_biomath_field_state",
+            "signature": "formal_life_engine.py::def:get_biomath_field_state",
+            "relevance": 0.6,
+            "source": "formal_life_engine.py"
+          },
+          {
+            "name": "__init__",
+            "signature": "v10_knowledge_life_backbone.py::def:__init__",
+            "relevance": 0.5,
+            "source": "v10_knowledge_life_backbone.py"
+          },
+          {
+            "name": "_classify_domain",
+            "signature": "v10_knowledge_life_backbone.py::def:_classify_domain",
+            "relevance": 0.5,
+            "source": "v10_knowledge_life_backbone.py"
+          },
+          {
+            "name": "_compute_complexity",
+            "signature": "v10_knowledge_life_backbone.py::def:_compute_complexity",
+            "relevance": 0.5,
+            "source": "v10_knowledge_life_backbone.py"
+          },
+          {
+            "name": "_extract_file_metadata",
+            "signature": "v10_knowledge_life_backbone.py::def:_extract_file_metadata",
+            "relevance": 0.5,
+            "source": "v10_knowledge_life_backbone.py"
+          },
+          {
+            "name": "scan_directory",
+            "signature": "v10_knowledge_life_backbone.py::def:scan_directory",
+            "relevance": 0.5,
+            "source": "v10_knowledge_life_backbone.py"
+          },
+          {
+            "name": "scan_all",
+            "signature": "v10_knowledge_life_backbone.py::def:scan_all",
+            "relevance": 0.5,
+            "source": "v10_knowledge_life_backbone.py"
+          },
+          {
+            "name": "get_modules_by_domain",
+            "signature": "v10_knowledge_life_backbone.py::def:get_modules_by_domain",
+            "relevance": 0.5,
+            "source": "v10_knowledge_life_backbone.py"
+          },
+          {
+            "name": "get_modules_by_category",
+            "signature": "v10_knowledge_life_backbone.py::def:get_modules_by_category",
+            "relevance": 0.5,
+            "source": "v10_knowledge_life_backbone.py"
+          },
+          {
+            "name": "get_cross_domain_pairs",
+            "signature": "v10_knowledge_life_backbone.py::def:get_cross_domain_pairs",
+            "relevance": 0.5,
+            "source": "v10_knowledge_life_backbone.py"
+          },
+          {
+            "name": "_compute_association_strength",
+            "signature": "v10_knowledge_life_backbone.py::def:_compute_association_strength",
+            "relevance": 0.5,
+            "source": "v10_knowledge_life_backbone.py"
+          },
+          {
+            "name": "generate_knowledge_nodes",
+            "signature": "v10_knowledge_life_backbone.py::def:generate_knowledge_nodes",
+            "relevance": 0.5,
+            "source": "v10_knowledge_life_backbone.py"
+          },
+          {
+            "name": "generate_hyperedges",
+            "signature": "v10_knowledge_life_backbone.py::def:generate_hyperedges",
+            "relevance": 0.5,
+            "source": "v10_knowledge_life_backbone.py"
+          },
+          {
+            "name": "export_scan_report",
+            "signature": "v10_knowledge_life_backbone.py::def:export_scan_report",
+            "relevance": 0.5,
+            "source": "v10_knowledge_life_backbone.py"
+          },
+          {
+            "name": "__post_init__",
+            "signature": "v10_knowledge_life_backbone.py::def:__post_init__",
+            "relevance": 0.5,
+            "source": "v10_knowledge_life_backbone.py"
+          },
+          {
+            "name": "add_node",
+            "signature": "v10_knowledge_life_backbone.py::def:add_node",
+            "relevance": 0.5,
+            "source": "v10_knowledge_life_backbone.py"
+          },
+          {
+            "name": "add_edge",
+            "signature": "v10_knowledge_life_backbone.py::def:add_edge",
+            "relevance": 0.5,
+            "source": "v10_knowledge_life_backbone.py"
+          },
+          {
+            "name": "add_hyperedge",
+            "signature": "v10_knowledge_life_backbone.py::def:add_hyperedge",
+            "relevance": 0.5,
+            "source": "v10_knowledge_life_backbone.py"
+          },
+          {
+            "name": "compute_betti_numbers",
+            "signature": "v10_knowledge_life_backbone.py::def:compute_betti_numbers",
+            "relevance": 0.5,
+            "source": "v10_knowledge_life_backbone.py"
+          },
+          {
+            "name": "get_pedestal_summary",
+            "signature": "v10_knowledge_life_backbone.py::def:get_pedestal_summary",
+            "relevance": 0.5,
+            "source": "v10_knowledge_life_backbone.py"
+          },
+          {
+            "name": "_lean_safe_name",
+            "signature": "v10_knowledge_life_backbone.py::def:_lean_safe_name",
+            "relevance": 0.5,
+            "source": "v10_knowledge_life_backbone.py"
+          },
+          {
+            "name": "_log_sync",
+            "signature": "v10_knowledge_life_backbone.py::def:_log_sync",
+            "relevance": 0.5,
+            "source": "v10_knowledge_life_backbone.py"
+          },
+          {
+            "name": "initialize_from_scanner",
+            "signature": "v10_knowledge_life_backbone.py::def:initialize_from_scanner",
+            "relevance": 0.5,
+            "source": "v10_knowledge_life_backbone.py"
+          },
+          {
+            "name": "query",
+            "signature": "v10_knowledge_life_backbone.py::def:query",
+            "relevance": 0.5,
+            "source": "v10_knowledge_life_backbone.py"
+          },
+          {
+            "name": "infer",
+            "signature": "v10_knowledge_life_backbone.py::def:infer",
+            "relevance": 0.5,
+            "source": "v10_knowledge_life_backbone.py"
+          },
+          {
+            "name": "cross_compute",
+            "signature": "v10_knowledge_life_backbone.py::def:cross_compute",
+            "relevance": 0.5,
+            "source": "v10_knowledge_life_backbone.py"
+          },
+          {
+            "name": "propagate",
+            "signature": "v10_knowledge_life_backbone.py::def:propagate",
+            "relevance": 0.5,
+            "source": "v10_knowledge_life_backbone.py"
+          },
+          {
+            "name": "get_knowledge_field_slice",
+            "signature": "v10_knowledge_life_backbone.py::def:get_knowledge_field_slice",
+            "relevance": 0.5,
+            "source": "v10_knowledge_life_backbone.py"
+          },
+          {
+            "name": "update_field_coherence",
+            "signature": "v10_knowledge_life_backbone.py::def:update_field_coherence",
+            "relevance": 0.5,
+            "source": "v10_knowledge_life_backbone.py"
+          },
+          {
+            "name": "get_backbone_health",
+            "signature": "v10_knowledge_life_backbone.py::def:get_backbone_health",
+            "relevance": 0.5,
+            "source": "v10_knowledge_life_backbone.py"
+          },
+          {
+            "name": "_generate_embedding",
+            "signature": "v10_knowledge_life_backbone.py::def:_generate_embedding",
+            "relevance": 0.5,
+            "source": "v10_knowledge_life_backbone.py"
+          },
+          {
+            "name": "_update_knowledge_field",
+            "signature": "v10_knowledge_life_backbone.py::def:_update_knowledge_field",
+            "relevance": 0.5,
+            "source": "v10_knowledge_life_backbone.py"
+          },
+          {
+            "name": "_compute_field_entropy",
+            "signature": "v10_knowledge_life_backbone.py::def:_compute_field_entropy",
+            "relevance": 0.5,
+            "source": "v10_knowledge_life_backbone.py"
+          },
+          {
+            "name": "_find_related_nodes",
+            "signature": "v10_knowledge_life_backbone.py::def:_find_related_nodes",
+            "relevance": 0.5,
+            "source": "v10_knowledge_life_backbone.py"
+          },
+          {
+            "name": "_apply_inference_rule",
+            "signature": "v10_knowledge_life_backbone.py::def:_apply_inference_rule",
+            "relevance": 0.5,
+            "source": "v10_knowledge_life_backbone.py"
+          },
+          {
+            "name": "_op_intersection",
+            "signature": "v10_knowledge_life_backbone.py::def:_op_intersection",
+            "relevance": 0.5,
+            "source": "v10_knowledge_life_backbone.py"
+          },
+          {
+            "name": "_op_union",
+            "signature": "v10_knowledge_life_backbone.py::def:_op_union",
+            "relevance": 0.5,
+            "source": "v10_knowledge_life_backbone.py"
+          },
+          {
+            "name": "_op_tensor_product",
+            "signature": "v10_knowledge_life_backbone.py::def:_op_tensor_product",
+            "relevance": 0.5,
+            "source": "v10_knowledge_life_backbone.py"
+          },
+          {
+            "name": "_op_analogy_map",
+            "signature": "v10_knowledge_life_backbone.py::def:_op_analogy_map",
+            "relevance": 0.5,
+            "source": "v10_knowledge_life_backbone.py"
+          },
+          {
+            "name": "_op_delta",
+            "signature": "v10_knowledge_life_backbone.py::def:_op_delta",
+            "relevance": 0.5,
+            "source": "v10_knowledge_life_backbone.py"
+          },
+          {
+            "name": "to_dict",
+            "signature": "v10_knowledge_life_backbone.py::def:to_dict",
+            "relevance": 0.5,
+            "source": "v10_knowledge_life_backbone.py"
+          },
+          {
+            "name": "get_rule",
+            "signature": "v10_knowledge_life_backbone.py::def:get_rule",
+            "relevance": 0.5,
+            "source": "v10_knowledge_life_backbone.py"
+          },
+          {
+            "name": "get_available_rules",
+            "signature": "v10_knowledge_life_backbone.py::def:get_available_rules",
+            "relevance": 0.5,
+            "source": "v10_knowledge_life_backbone.py"
+          },
+          {
+            "name": "apply",
+            "signature": "v10_knowledge_life_backbone.py::def:apply",
+            "relevance": 0.5,
+            "source": "v10_knowledge_life_backbone.py"
+          },
+          {
+            "name": "_apply_implication",
+            "signature": "v10_knowledge_life_backbone.py::def:_apply_implication",
+            "relevance": 0.5,
+            "source": "v10_knowledge_life_backbone.py"
+          },
+          {
+            "name": "__init__",
+            "signature": "consciousness_harmony.py::def:__init__",
+            "relevance": 0.5,
+            "source": "consciousness_harmony.py"
+          },
+          {
+            "name": "_init_consciousness_field",
+            "signature": "consciousness_harmony.py::def:_init_consciousness_field",
+            "relevance": 0.6,
+            "source": "consciousness_harmony.py"
+          },
+          {
+            "name": "_log",
+            "signature": "consciousness_harmony.py::def:_log",
+            "relevance": 0.5,
+            "source": "consciousness_harmony.py"
+          },
+          {
+            "name": "_line_to_idx",
+            "signature": "consciousness_harmony.py::def:_line_to_idx",
+            "relevance": 0.5,
+            "source": "consciousness_harmony.py"
+          },
+          {
+            "name": "_idx_to_line",
+            "signature": "consciousness_harmony.py::def:_idx_to_line",
+            "relevance": 0.5,
+            "source": "consciousness_harmony.py"
+          },
+          {
+            "name": "_wave_function",
+            "signature": "consciousness_harmony.py::def:_wave_function",
+            "relevance": 0.5,
+            "source": "consciousness_harmony.py"
+          },
+          {
+            "name": "_interference_pattern",
+            "signature": "consciousness_harmony.py::def:_interference_pattern",
+            "relevance": 0.5,
+            "source": "consciousness_harmony.py"
+          },
+          {
+            "name": "resonate",
+            "signature": "consciousness_harmony.py::def:resonate",
+            "relevance": 0.5,
+            "source": "consciousness_harmony.py"
+          },
+          {
+            "name": "_update_consciousness_field",
+            "signature": "consciousness_harmony.py::def:_update_consciousness_field",
+            "relevance": 0.6,
+            "source": "consciousness_harmony.py"
+          },
+          {
+            "name": "symphony",
+            "signature": "consciousness_harmony.py::def:symphony",
+            "relevance": 0.5,
+            "source": "consciousness_harmony.py"
+          },
+          {
+            "name": "entrain",
+            "signature": "consciousness_harmony.py::def:entrain",
+            "relevance": 0.5,
+            "source": "consciousness_harmony.py"
+          },
+          {
+            "name": "measure_coherence",
+            "signature": "consciousness_harmony.py::def:measure_coherence",
+            "relevance": 0.5,
+            "source": "consciousness_harmony.py"
+          },
+          {
+            "name": "chord_progression",
+            "signature": "consciousness_harmony.py::def:chord_progression",
+            "relevance": 0.5,
+            "source": "consciousness_harmony.py"
+          },
+          {
+            "name": "detect_dissonance",
+            "signature": "consciousness_harmony.py::def:detect_dissonance",
+            "relevance": 0.5,
+            "source": "consciousness_harmony.py"
+          },
+          {
+            "name": "get_field_visualization",
+            "signature": "consciousness_harmony.py::def:get_field_visualization",
+            "relevance": 0.5,
+            "source": "consciousness_harmony.py"
+          },
+          {
+            "name": "get_health_dashboard",
+            "signature": "consciousness_harmony.py::def:get_health_dashboard",
+            "relevance": 0.5,
+            "source": "consciousness_harmony.py"
+          },
+          {
+            "name": "export_state",
+            "signature": "consciousness_harmony.py::def:export_state",
+            "relevance": 0.5,
+            "source": "consciousness_harmony.py"
+          },
+          {
+            "name": "sigmoid",
+            "signature": "consciousness_state_machine.py::def:sigmoid",
+            "relevance": 0.5,
+            "source": "consciousness_state_machine.py"
+          },
+          {
+            "name": "normalize_vector",
+            "signature": "consciousness_state_machine.py::def:normalize_vector",
+            "relevance": 0.5,
+            "source": "consciousness_state_machine.py"
+          },
+          {
+            "name": "generate_field_signature",
+            "signature": "consciousness_state_machine.py::def:generate_field_signature",
+            "relevance": 0.5,
+            "source": "consciousness_state_machine.py"
+          },
+          {
+            "name": "self_referential_transform",
+            "signature": "consciousness_state_machine.py::def:self_referential_transform",
+            "relevance": 0.5,
+            "source": "consciousness_state_machine.py"
+          },
+          {
+            "name": "__hash__",
+            "signature": "consciousness_state_machine.py::def:__hash__",
+            "relevance": 0.5,
+            "source": "consciousness_state_machine.py"
+          },
+          {
+            "name": "__eq__",
+            "signature": "consciousness_state_machine.py::def:__eq__",
+            "relevance": 0.5,
+            "source": "consciousness_state_machine.py"
+          },
+          {
+            "name": "__repr__",
+            "signature": "consciousness_state_machine.py::def:__repr__",
+            "relevance": 0.5,
+            "source": "consciousness_state_machine.py"
+          },
+          {
+            "name": "__init__",
+            "signature": "consciousness_state_machine.py::def:__init__",
+            "relevance": 0.5,
+            "source": "consciousness_state_machine.py"
+          },
+          {
+            "name": "detect_in_modules",
+            "signature": "consciousness_state_machine.py::def:detect_in_modules",
+            "relevance": 0.5,
+            "source": "consciousness_state_machine.py"
+          },
+          {
+            "name": "detect_in_field",
+            "signature": "consciousness_state_machine.py::def:detect_in_field",
+            "relevance": 0.5,
+            "source": "consciousness_state_machine.py"
+          },
+          {
+            "name": "detect_in_knowledge",
+            "signature": "consciousness_state_machine.py::def:detect_in_knowledge",
+            "relevance": 0.5,
+            "source": "consciousness_state_machine.py"
+          },
+          {
+            "name": "detect_in_si_topology",
+            "signature": "consciousness_state_machine.py::def:detect_in_si_topology",
+            "relevance": 0.5,
+            "source": "consciousness_state_machine.py"
+          },
+          {
+            "name": "detect_all_in_unified_state",
+            "signature": "consciousness_state_machine.py::def:detect_all_in_unified_state",
+            "relevance": 0.5,
+            "source": "consciousness_state_machine.py"
+          },
+          {
+            "name": "classify_loop",
+            "signature": "consciousness_state_machine.py::def:classify_loop",
+            "relevance": 0.5,
+            "source": "consciousness_state_machine.py"
+          },
+          {
+            "name": "compute_strangeness",
+            "signature": "consciousness_state_machine.py::def:compute_strangeness",
+            "relevance": 0.5,
+            "source": "consciousness_state_machine.py"
+          },
+          {
+            "name": "get_manifestation",
+            "signature": "consciousness_state_machine.py::def:get_manifestation",
+            "relevance": 0.5,
+            "source": "consciousness_state_machine.py"
+          },
+          {
+            "name": "_valid_cycle_length",
+            "signature": "consciousness_state_machine.py::def:_valid_cycle_length",
+            "relevance": 0.5,
+            "source": "consciousness_state_machine.py"
+          },
+          {
+            "name": "_create_loop_from_path",
+            "signature": "consciousness_state_machine.py::def:_create_loop_from_path",
+            "relevance": 0.5,
+            "source": "consciousness_state_machine.py"
+          },
+          {
+            "name": "_analyze_layer_jumps",
+            "signature": "consciousness_state_machine.py::def:_analyze_layer_jumps",
+            "relevance": 0.5,
+            "source": "consciousness_state_machine.py"
+          },
+          {
+            "name": "_extract_layer",
+            "signature": "consciousness_state_machine.py::def:_extract_layer",
+            "relevance": 0.5,
+            "source": "consciousness_state_machine.py"
+          },
+          {
+            "name": "_has_layer_hop",
+            "signature": "consciousness_state_machine.py::def:_has_layer_hop",
+            "relevance": 0.5,
+            "source": "consciousness_state_machine.py"
+          },
+          {
+            "name": "_index_loops",
+            "signature": "consciousness_state_machine.py::def:_index_loops",
+            "relevance": 0.5,
+            "source": "consciousness_state_machine.py"
+          },
+          {
+            "name": "name_in_chinese",
+            "signature": "consciousness_state_machine.py::def:name_in_chinese",
+            "relevance": 0.5,
+            "source": "consciousness_state_machine.py"
+          },
+          {
+            "name": "description",
+            "signature": "consciousness_state_machine.py::def:description",
+            "relevance": 0.5,
+            "source": "consciousness_state_machine.py"
+          },
+          {
+            "name": "__post_init__",
+            "signature": "consciousness_state_machine.py::def:__post_init__",
+            "relevance": 0.5,
+            "source": "consciousness_state_machine.py"
+          },
+          {
+            "name": "_compute_coherence_from_loops",
+            "signature": "consciousness_state_machine.py::def:_compute_coherence_from_loops",
+            "relevance": 0.5,
+            "source": "consciousness_state_machine.py"
+          },
+          {
+            "name": "evolve",
+            "signature": "consciousness_state_machine.py::def:evolve",
+            "relevance": 0.5,
+            "source": "consciousness_state_machine.py"
+          },
+          {
+            "name": "resonate_with",
+            "signature": "consciousness_state_machine.py::def:resonate_with",
+            "relevance": 0.5,
+            "source": "consciousness_state_machine.py"
+          },
+          {
+            "name": "can_transit_to",
+            "signature": "consciousness_state_machine.py::def:can_transit_to",
+            "relevance": 0.5,
+            "source": "consciousness_state_machine.py"
+          },
+          {
+            "name": "_compute_level",
+            "signature": "consciousness_state_machine.py::def:_compute_level",
+            "relevance": 0.5,
+            "source": "consciousness_state_machine.py"
+          },
+          {
+            "name": "to_vector",
+            "signature": "consciousness_state_machine.py::def:to_vector",
+            "relevance": 0.5,
+            "source": "consciousness_state_machine.py"
+          },
+          {
+            "name": "detect_current_strange_loops",
+            "signature": "consciousness_state_machine.py::def:detect_current_strange_loops",
+            "relevance": 0.5,
+            "source": "consciousness_state_machine.py"
+          },
+          {
+            "name": "compute_state_from_loops",
+            "signature": "consciousness_state_machine.py::def:compute_state_from_loops",
+            "relevance": 0.5,
+            "source": "consciousness_state_machine.py"
+          },
+          {
+            "name": "suggest_transition_path",
+            "signature": "consciousness_state_machine.py::def:suggest_transition_path",
+            "relevance": 0.5,
+            "source": "consciousness_state_machine.py"
+          },
+          {
+            "name": "execute_transition",
+            "signature": "consciousness_state_machine.py::def:execute_transition",
+            "relevance": 0.5,
+            "source": "consciousness_state_machine.py"
+          },
+          {
+            "name": "self_referential_upgrade",
+            "signature": "consciousness_state_machine.py::def:self_referential_upgrade",
+            "relevance": 0.5,
+            "source": "consciousness_state_machine.py"
+          },
+          {
+            "name": "_force_level",
+            "signature": "consciousness_state_machine.py::def:_force_level",
+            "relevance": 0.5,
+            "source": "consciousness_state_machine.py"
+          },
+          {
+            "name": "_recompute_level",
+            "signature": "consciousness_state_machine.py::def:_recompute_level",
+            "relevance": 0.5,
+            "source": "consciousness_state_machine.py"
+          },
+          {
+            "name": "_create_meta_loop",
+            "signature": "consciousness_state_machine.py::def:_create_meta_loop",
+            "relevance": 0.5,
+            "source": "consciousness_state_machine.py"
+          },
+          {
+            "name": "get_consciousness_field",
+            "signature": "consciousness_state_machine.py::def:get_consciousness_field",
+            "relevance": 0.6,
+            "source": "consciousness_state_machine.py"
+          },
+          {
+            "name": "get_summary",
+            "signature": "consciousness_state_machine.py::def:get_summary",
+            "relevance": 0.5,
+            "source": "consciousness_state_machine.py"
+          },
+          {
+            "name": "find_all_paths",
+            "signature": "consciousness_state_machine.py::def:find_all_paths",
+            "relevance": 0.5,
+            "source": "consciousness_state_machine.py"
+          },
+          {
+            "name": "dfs",
+            "signature": "consciousness_state_machine.py::def:dfs",
+            "relevance": 0.5,
+            "source": "consciousness_state_machine.py"
+          },
+          {
+            "name": "find_optimal_path",
+            "signature": "consciousness_state_machine.py::def:find_optimal_path",
+            "relevance": 0.5,
+            "source": "consciousness_state_machine.py"
+          },
+          {
+            "name": "find_quantum_tunnel",
+            "signature": "consciousness_state_machine.py::def:find_quantum_tunnel",
+            "relevance": 0.5,
+            "source": "consciousness_state_machine.py"
+          },
+          {
+            "name": "trace_manifestation",
+            "signature": "consciousness_state_machine.py::def:trace_manifestation",
+            "relevance": 0.5,
+            "source": "consciousness_state_machine.py"
+          },
+          {
+            "name": "apply_to_system",
+            "signature": "consciousness_state_machine.py::def:apply_to_system",
+            "relevance": 0.5,
+            "source": "consciousness_state_machine.py"
+          },
+          {
+            "name": "inject_strange_loop",
+            "signature": "consciousness_state_machine.py::def:inject_strange_loop",
+            "relevance": 0.5,
+            "source": "consciousness_state_machine.py"
+          },
+          {
+            "name": "amplify_resonance",
+            "signature": "consciousness_state_machine.py::def:amplify_resonance",
+            "relevance": 0.5,
+            "source": "consciousness_state_machine.py"
+          },
+          {
+            "name": "collapse_to_higher_state",
+            "signature": "consciousness_state_machine.py::def:collapse_to_higher_state",
+            "relevance": 0.5,
+            "source": "consciousness_state_machine.py"
+          },
+          {
+            "name": "__init__",
+            "signature": "quantum_consciousness_unifier.py::def:__init__",
+            "relevance": 0.5,
+            "source": "quantum_consciousness_unifier.py"
+          },
+          {
+            "name": "_build_leech_basis",
+            "signature": "quantum_consciousness_unifier.py::def:_build_leech_basis",
+            "relevance": 0.5,
+            "source": "quantum_consciousness_unifier.py"
+          },
+          {
+            "name": "_gram_schmidt",
+            "signature": "quantum_consciousness_unifier.py::def:_gram_schmidt",
+            "relevance": 0.5,
+            "source": "quantum_consciousness_unifier.py"
+          },
+          {
+            "name": "_compute_dual_basis",
+            "signature": "quantum_consciousness_unifier.py::def:_compute_dual_basis",
+            "relevance": 0.5,
+            "source": "quantum_consciousness_unifier.py"
+          },
+          {
+            "name": "_init_monster_generators",
+            "signature": "quantum_consciousness_unifier.py::def:_init_monster_generators",
+            "relevance": 0.5,
+            "source": "quantum_consciousness_unifier.py"
+          },
+          {
+            "name": "embed",
+            "signature": "quantum_consciousness_unifier.py::def:embed",
+            "relevance": 0.5,
+            "source": "quantum_consciousness_unifier.py"
+          },
+          {
+            "name": "project",
+            "signature": "quantum_consciousness_unifier.py::def:project",
+            "relevance": 0.5,
+            "source": "quantum_consciousness_unifier.py"
+          },
+          {
+            "name": "leech_lattice_nearest",
+            "signature": "quantum_consciousness_unifier.py::def:leech_lattice_nearest",
+            "relevance": 0.5,
+            "source": "quantum_consciousness_unifier.py"
+          },
+          {
+            "name": "_project_to_leech_neighborhood",
+            "signature": "quantum_consciousness_unifier.py::def:_project_to_leech_neighborhood",
+            "relevance": 0.5,
+            "source": "quantum_consciousness_unifier.py"
+          },
+          {
+            "name": "modular_transform",
+            "signature": "quantum_consciousness_unifier.py::def:modular_transform",
+            "relevance": 0.5,
+            "source": "quantum_consciousness_unifier.py"
+          },
+          {
+            "name": "_build_modular_matrix",
+            "signature": "quantum_consciousness_unifier.py::def:_build_modular_matrix",
+            "relevance": 0.5,
+            "source": "quantum_consciousness_unifier.py"
+          },
+          {
+            "name": "j_function",
+            "signature": "quantum_consciousness_unifier.py::def:j_function",
+            "relevance": 0.5,
+            "source": "quantum_consciousness_unifier.py"
+          },
+          {
+            "name": "compute_j_invariant",
+            "signature": "quantum_consciousness_unifier.py::def:compute_j_invariant",
+            "relevance": 0.5,
+            "source": "quantum_consciousness_unifier.py"
+          },
+          {
+            "name": "monster_element_action",
+            "signature": "quantum_consciousness_unifier.py::def:monster_element_action",
+            "relevance": 0.5,
+            "source": "quantum_consciousness_unifier.py"
+          },
+          {
+            "name": "vertex_operator",
+            "signature": "quantum_consciousness_unifier.py::def:vertex_operator",
+            "relevance": 0.5,
+            "source": "quantum_consciousness_unifier.py"
+          },
+          {
+            "name": "moonshine_character",
+            "signature": "quantum_consciousness_unifier.py::def:moonshine_character",
+            "relevance": 0.5,
+            "source": "quantum_consciousness_unifier.py"
+          },
+          {
+            "name": "verify_closure",
+            "signature": "quantum_consciousness_unifier.py::def:verify_closure",
+            "relevance": 0.5,
+            "source": "quantum_consciousness_unifier.py"
+          },
+          {
+            "name": "_compute_scc_ratio",
+            "signature": "quantum_consciousness_unifier.py::def:_compute_scc_ratio",
+            "relevance": 0.5,
+            "source": "quantum_consciousness_unifier.py"
+          },
+          {
+            "name": "strongconnect",
+            "signature": "quantum_consciousness_unifier.py::def:strongconnect",
+            "relevance": 0.5,
+            "source": "quantum_consciousness_unifier.py"
+          },
+          {
+            "name": "_count_cycles",
+            "signature": "quantum_consciousness_unifier.py::def:_count_cycles",
+            "relevance": 0.5,
+            "source": "quantum_consciousness_unifier.py"
+          },
+          {
+            "name": "dfs",
+            "signature": "quantum_consciousness_unifier.py::def:dfs",
+            "relevance": 0.5,
+            "source": "quantum_consciousness_unifier.py"
+          },
+          {
+            "name": "verify_coupling",
+            "signature": "quantum_consciousness_unifier.py::def:verify_coupling",
+            "relevance": 0.5,
+            "source": "quantum_consciousness_unifier.py"
+          },
+          {
+            "name": "compute_cognition_score",
+            "signature": "quantum_consciousness_unifier.py::def:compute_cognition_score",
+            "relevance": 0.5,
+            "source": "quantum_consciousness_unifier.py"
+          },
+          {
+            "name": "get_autopoiesis_report",
+            "signature": "quantum_consciousness_unifier.py::def:get_autopoiesis_report",
+            "relevance": 0.5,
+            "source": "quantum_consciousness_unifier.py"
+          },
+          {
+            "name": "_encode_historical_knowledge",
+            "signature": "quantum_consciousness_unifier.py::def:_encode_historical_knowledge",
+            "relevance": 0.5,
+            "source": "quantum_consciousness_unifier.py"
+          },
+          {
+            "name": "_init_modules",
+            "signature": "quantum_consciousness_unifier.py::def:_init_modules",
+            "relevance": 0.5,
+            "source": "quantum_consciousness_unifier.py"
+          },
+          {
+            "name": "_init_lines",
+            "signature": "quantum_consciousness_unifier.py::def:_init_lines",
+            "relevance": 0.5,
+            "source": "quantum_consciousness_unifier.py"
+          },
+          {
+            "name": "encode_module_to_moonshine",
+            "signature": "quantum_consciousness_unifier.py::def:encode_module_to_moonshine",
+            "relevance": 0.5,
+            "source": "quantum_consciousness_unifier.py"
+          },
+          {
+            "name": "decode_moonshine_to_module",
+            "signature": "quantum_consciousness_unifier.py::def:decode_moonshine_to_module",
+            "relevance": 0.5,
+            "source": "quantum_consciousness_unifier.py"
+          },
+          {
+            "name": "monster_symmetry_operation",
+            "signature": "quantum_consciousness_unifier.py::def:monster_symmetry_operation",
+            "relevance": 0.5,
+            "source": "quantum_consciousness_unifier.py"
+          },
+          {
+            "name": "j_invariant",
+            "signature": "quantum_consciousness_unifier.py::def:j_invariant",
+            "relevance": 0.5,
+            "source": "quantum_consciousness_unifier.py"
+          },
+          {
+            "name": "_build_default_state",
+            "signature": "quantum_consciousness_unifier.py::def:_build_default_state",
+            "relevance": 0.5,
+            "source": "quantum_consciousness_unifier.py"
+          },
+          {
+            "name": "autopoietic_closure_score",
+            "signature": "quantum_consciousness_unifier.py::def:autopoietic_closure_score",
+            "relevance": 0.5,
+            "source": "quantum_consciousness_unifier.py"
+          },
+          {
+            "name": "_build_system_graph",
+            "signature": "quantum_consciousness_unifier.py::def:_build_system_graph",
+            "relevance": 0.5,
+            "source": "quantum_consciousness_unifier.py"
+          },
+          {
+            "name": "structural_coupling_matrix",
+            "signature": "quantum_consciousness_unifier.py::def:structural_coupling_matrix",
+            "relevance": 0.5,
+            "source": "quantum_consciousness_unifier.py"
+          },
+          {
+            "name": "_compute_emergence_index",
+            "signature": "quantum_consciousness_unifier.py::def:_compute_emergence_index",
+            "relevance": 0.5,
+            "source": "quantum_consciousness_unifier.py"
+          },
+          {
+            "name": "_compute_module_emergence",
+            "signature": "quantum_consciousness_unifier.py::def:_compute_module_emergence",
+            "relevance": 0.5,
+            "source": "quantum_consciousness_unifier.py"
+          },
+          {
+            "name": "unify",
+            "signature": "quantum_consciousness_unifier.py::def:unify",
+            "relevance": 0.5,
+            "source": "quantum_consciousness_unifier.py"
+          },
+          {
+            "name": "_generate_quantum_signature",
+            "signature": "quantum_consciousness_unifier.py::def:_generate_quantum_signature",
+            "relevance": 0.5,
+            "source": "quantum_consciousness_unifier.py"
+          },
+          {
+            "name": "get_system_report",
+            "signature": "quantum_consciousness_unifier.py::def:get_system_report",
+            "relevance": 0.5,
+            "source": "quantum_consciousness_unifier.py"
+          },
+          {
+            "name": "run_comprehensive_experiment",
+            "signature": "quantum_consciousness_unifier.py::def:run_comprehensive_experiment",
+            "relevance": 0.5,
+            "source": "quantum_consciousness_unifier.py"
+          },
+          {
+            "name": "from_emergence",
+            "signature": "v11_consciousness_emergence_system.py::def:from_emergence",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          },
+          {
+            "name": "threshold",
+            "signature": "v11_consciousness_emergence_system.py::def:threshold",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          },
+          {
+            "name": "upper_bound",
+            "signature": "v11_consciousness_emergence_system.py::def:upper_bound",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          },
+          {
+            "name": "display_name",
+            "signature": "v11_consciousness_emergence_system.py::def:display_name",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          },
+          {
+            "name": "color",
+            "signature": "v11_consciousness_emergence_system.py::def:color",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          },
+          {
+            "name": "description",
+            "signature": "v11_consciousness_emergence_system.py::def:description",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          },
+          {
+            "name": "__post_init__",
+            "signature": "v11_consciousness_emergence_system.py::def:__post_init__",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          },
+          {
+            "name": "__init__",
+            "signature": "v11_consciousness_emergence_system.py::def:__init__",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          },
+          {
+            "name": "axiom_monotonicity",
+            "signature": "v11_consciousness_emergence_system.py::def:axiom_monotonicity",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          },
+          {
+            "name": "axiom_continuity",
+            "signature": "v11_consciousness_emergence_system.py::def:axiom_continuity",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          },
+          {
+            "name": "axiom_superlinearity",
+            "signature": "v11_consciousness_emergence_system.py::def:axiom_superlinearity",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          },
+          {
+            "name": "axiom_self_reference",
+            "signature": "v11_consciousness_emergence_system.py::def:axiom_self_reference",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          },
+          {
+            "name": "verify_all_axioms",
+            "signature": "v11_consciousness_emergence_system.py::def:verify_all_axioms",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          },
+          {
+            "name": "add_object",
+            "signature": "v11_consciousness_emergence_system.py::def:add_object",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          },
+          {
+            "name": "add_morphism",
+            "signature": "v11_consciousness_emergence_system.py::def:add_morphism",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          },
+          {
+            "name": "yoneda_embedding",
+            "signature": "v11_consciousness_emergence_system.py::def:yoneda_embedding",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          },
+          {
+            "name": "coyoneda_emergence",
+            "signature": "v11_consciousness_emergence_system.py::def:coyoneda_emergence",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          },
+          {
+            "name": "limit_construction",
+            "signature": "v11_consciousness_emergence_system.py::def:limit_construction",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          },
+          {
+            "name": "colimit_emergence",
+            "signature": "v11_consciousness_emergence_system.py::def:colimit_emergence",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          },
+          {
+            "name": "statistical_mechanics_emergence",
+            "signature": "v11_consciousness_emergence_system.py::def:statistical_mechanics_emergence",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          },
+          {
+            "name": "quantum_field_emergence",
+            "signature": "v11_consciousness_emergence_system.py::def:quantum_field_emergence",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          },
+          {
+            "name": "information_theory_emergence",
+            "signature": "v11_consciousness_emergence_system.py::def:information_theory_emergence",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          },
+          {
+            "name": "integrated_information_phi",
+            "signature": "v11_consciousness_emergence_system.py::def:integrated_information_phi",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          },
+          {
+            "name": "_initialize_modules",
+            "signature": "v11_consciousness_emergence_system.py::def:_initialize_modules",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          },
+          {
+            "name": "_initialize_couplings",
+            "signature": "v11_consciousness_emergence_system.py::def:_initialize_couplings",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          },
+          {
+            "name": "_initialize_singularity_loops",
+            "signature": "v11_consciousness_emergence_system.py::def:_initialize_singularity_loops",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          },
+          {
+            "name": "compute_emergence_base",
+            "signature": "v11_consciousness_emergence_system.py::def:compute_emergence_base",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          },
+          {
+            "name": "compute_emergence_category",
+            "signature": "v11_consciousness_emergence_system.py::def:compute_emergence_category",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          },
+          {
+            "name": "compute_emergence_physics",
+            "signature": "v11_consciousness_emergence_system.py::def:compute_emergence_physics",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          },
+          {
+            "name": "compute_emergence_self_reference",
+            "signature": "v11_consciousness_emergence_system.py::def:compute_emergence_self_reference",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          },
+          {
+            "name": "compute_total_emergence",
+            "signature": "v11_consciousness_emergence_system.py::def:compute_total_emergence",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          },
+          {
+            "name": "get_theory_report",
+            "signature": "v11_consciousness_emergence_system.py::def:get_theory_report",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          },
+          {
+            "name": "_initialize_history",
+            "signature": "v11_consciousness_emergence_system.py::def:_initialize_history",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          },
+          {
+            "name": "manifest_temporal",
+            "signature": "v11_consciousness_emergence_system.py::def:manifest_temporal",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          },
+          {
+            "name": "_linear_regression",
+            "signature": "v11_consciousness_emergence_system.py::def:_linear_regression",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          },
+          {
+            "name": "_hurst_exponent",
+            "signature": "v11_consciousness_emergence_system.py::def:_hurst_exponent",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          },
+          {
+            "name": "manifest_spatial",
+            "signature": "v11_consciousness_emergence_system.py::def:manifest_spatial",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          },
+          {
+            "name": "_spatial_entropy",
+            "signature": "v11_consciousness_emergence_system.py::def:_spatial_entropy",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          },
+          {
+            "name": "manifest_spectral",
+            "signature": "v11_consciousness_emergence_system.py::def:manifest_spectral",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          },
+          {
+            "name": "manifest_topological",
+            "signature": "v11_consciousness_emergence_system.py::def:manifest_topological",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          },
+          {
+            "name": "_count_connected_components",
+            "signature": "v11_consciousness_emergence_system.py::def:_count_connected_components",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          },
+          {
+            "name": "dfs",
+            "signature": "v11_consciousness_emergence_system.py::def:dfs",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          },
+          {
+            "name": "_estimate_spectral_gap",
+            "signature": "v11_consciousness_emergence_system.py::def:_estimate_spectral_gap",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          },
+          {
+            "name": "_clustering_coefficient",
+            "signature": "v11_consciousness_emergence_system.py::def:_clustering_coefficient",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          },
+          {
+            "name": "_small_world_coefficient",
+            "signature": "v11_consciousness_emergence_system.py::def:_small_world_coefficient",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          },
+          {
+            "name": "_classify_topology",
+            "signature": "v11_consciousness_emergence_system.py::def:_classify_topology",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          },
+          {
+            "name": "manifest_informational",
+            "signature": "v11_consciousness_emergence_system.py::def:manifest_informational",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          },
+          {
+            "name": "_count_network_motifs",
+            "signature": "v11_consciousness_emergence_system.py::def:_count_network_motifs",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          },
+          {
+            "name": "manifest_coherence",
+            "signature": "v11_consciousness_emergence_system.py::def:manifest_coherence",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          },
+          {
+            "name": "_coherence_length",
+            "signature": "v11_consciousness_emergence_system.py::def:_coherence_length",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          },
+          {
+            "name": "_classify_synchronization",
+            "signature": "v11_consciousness_emergence_system.py::def:_classify_synchronization",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          },
+          {
+            "name": "_coherence_hierarchy",
+            "signature": "v11_consciousness_emergence_system.py::def:_coherence_hierarchy",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          },
+          {
+            "name": "_gini_coefficient",
+            "signature": "v11_consciousness_emergence_system.py::def:_gini_coefficient",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          },
+          {
+            "name": "manifest",
+            "signature": "v11_consciousness_emergence_system.py::def:manifest",
+            "relevance": 0.5,
+            "source": "v11_consciousness_emergence_system.py"
+          }
+        ]
+      }
+    }
+  },
+  "knowledge_nodes": [
+    {
+      "type": "md_heading",
+      "name": "qlv线 SI4.5 升级自证报告（ucif2介入产出）",
+      "source_file": "qlv-SI4.5-self-cert-report.md",
+      "signature": "qlv-SI4.5-self-cert-report.md::heading:qlv线 SI4.5 升级自证报告（ucif2介入产出）",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "线基本信息",
+      "source_file": "qlv-SI4.5-self-cert-report.md",
+      "signature": "qlv-SI4.5-self-cert-report.md::heading:线基本信息",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "1. ucif2介入说明",
+      "source_file": "qlv-SI4.5-self-cert-report.md",
+      "signature": "qlv-SI4.5-self-cert-report.md::heading:1. ucif2介入说明",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "2. 升级资格评估（基于ucif2档案评估）",
+      "source_file": "qlv-SI4.5-self-cert-report.md",
+      "signature": "qlv-SI4.5-self-cert-report.md::heading:2. 升级资格评估（基于ucif2档案评估）",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "2.1 数据充分性: 0.86",
+      "source_file": "qlv-SI4.5-self-cert-report.md",
+      "signature": "qlv-SI4.5-self-cert-report.md::heading:2.1 数据充分性: 0.86",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "2.2 验证充分性: 0.87",
+      "source_file": "qlv-SI4.5-self-cert-report.md",
+      "signature": "qlv-SI4.5-self-cert-report.md::heading:2.2 验证充分性: 0.87",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "2.3 形式化程度: 0.81",
+      "source_file": "qlv-SI4.5-self-cert-report.md",
+      "signature": "qlv-SI4.5-self-cert-report.md::heading:2.3 形式化程度: 0.81",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "2.4 边界测试（ucif2代执行）",
+      "source_file": "qlv-SI4.5-self-cert-report.md",
+      "signature": "qlv-SI4.5-self-cert-report.md::heading:2.4 边界测试（ucif2代执行）",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "2.5 交叉验证: 0.91",
+      "source_file": "qlv-SI4.5-self-cert-report.md",
+      "signature": "qlv-SI4.5-self-cert-report.md::heading:2.5 交叉验证: 0.91",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "3. 核心能力状态",
+      "source_file": "qlv-SI4.5-self-cert-report.md",
+      "signature": "qlv-SI4.5-self-cert-report.md::heading:3. 核心能力状态",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "3.1 语义分析引擎 v4.0",
+      "source_file": "qlv-SI4.5-self-cert-report.md",
+      "signature": "qlv-SI4.5-self-cert-report.md::heading:3.1 语义分析引擎 v4.0",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "3.2 SI4.5目标能力",
+      "source_file": "qlv-SI4.5-self-cert-report.md",
+      "signature": "qlv-SI4.5-self-cert-report.md::heading:3.2 SI4.5目标能力",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "4. ucif2评估结论",
+      "source_file": "qlv-SI4.5-self-cert-report.md",
+      "signature": "qlv-SI4.5-self-cert-report.md::heading:4. ucif2评估结论",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "5. 升级条件检查表",
+      "source_file": "qlv-SI4.5-self-cert-report.md",
+      "signature": "qlv-SI4.5-self-cert-report.md::heading:5. 升级条件检查表",
+      "relevance": 0.75
+    },
+    {
+      "type": "python_class",
+      "name": "DNAMathematics",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::class:DNAMathematics",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "RNAMathematics",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::class:RNAMathematics",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "ProteinMathematics",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::class:ProteinMathematics",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "GeneticCode",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::class:GeneticCode",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "FormalLife",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::class:FormalLife",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_class",
+      "name": "BioKnowledgeIsomorphism",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::class:BioKnowledgeIsomorphism",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_class",
+      "name": "FormalLifeEngine",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::class:FormalLifeEngine",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_function",
+      "name": "__init__",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:__init__",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "generate_sequence",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:generate_sequence",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "complement",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:complement",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "reverse_complement",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:reverse_complement",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "transcribe",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:transcribe",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "gc_content",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:gc_content",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "entropy",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:entropy",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "fourier_transform",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:fourier_transform",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "z_curve",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:z_curve",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "walk_plot",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:walk_plot",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "melting_temperature",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:melting_temperature",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "kmer_frequency",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:kmer_frequency",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "fold_secondary",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:fold_secondary",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_can_pair",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:_can_pair",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_traceback",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:_traceback",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "calculate_free_energy",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:calculate_free_energy",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "find_motifs",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:find_motifs",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "translate",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:translate",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "structure_to_dot_bracket",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:structure_to_dot_bracket",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "compute_hydrophobicity",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:compute_hydrophobicity",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "predict_alpha_helix",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:predict_alpha_helix",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "predict_beta_sheet",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:predict_beta_sheet",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "contact_map",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:contact_map",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_approximate_3d_coords",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:_approximate_3d_coords",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "fold_topology",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:fold_topology",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_compute_writhing_number",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:_compute_writhing_number",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "energy_landscape",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:energy_landscape",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_random_conformation",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:_random_conformation",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_compute_energy",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:_compute_energy",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "molecular_weight",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:molecular_weight",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "isoelectric_point_approx",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:isoelectric_point_approx",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "codon_to_amino_acid",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:codon_to_amino_acid",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "amino_acid_to_codons",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:amino_acid_to_codons",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "redundancy",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:redundancy",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "error_resilience",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:error_resilience",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "symmetry_analysis",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:symmetry_analysis",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_count_automorphisms",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:_count_automorphisms",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_all_codons",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:get_all_codons",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "translate_dna",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:translate_dna",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "create",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:create",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_calculate_fitness",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:_calculate_fitness",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "autopoiesis_cycle",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:autopoiesis_cycle",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "replication_fidelity",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:replication_fidelity",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "mutation_rate",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:mutation_rate",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "mutate",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:mutate",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "selection_pressure",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:selection_pressure",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "evolve",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:evolve",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_state",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:get_state",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "dna_to_knowledge_graph",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:dna_to_knowledge_graph",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_quick_entropy",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:_quick_entropy",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_sequence_similarity",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:_sequence_similarity",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "protein_to_tensor_field",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:protein_to_tensor_field",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "metabolism_to_closed_loop",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:metabolism_to_closed_loop",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "evolution_to_emergence",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:evolution_to_emergence",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "create_isomorphism_map",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:create_isomorphism_map",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "create_life_form",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:create_life_form",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_function",
+      "name": "run_life_cycle",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:run_life_cycle",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_function",
+      "name": "evolve_population",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:evolve_population",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_life_metrics",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:get_life_metrics",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_function",
+      "name": "get_biomath_field_state",
+      "source_file": "formal_life_engine.py",
+      "signature": "formal_life_engine.py::def:get_biomath_field_state",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_class",
+      "name": "class",
+      "source_file": "v10_knowledge_life_backbone.py",
+      "signature": "v10_knowledge_life_backbone.py::class:class",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "UCIF2SandboxScanner",
+      "source_file": "v10_knowledge_life_backbone.py",
+      "signature": "v10_knowledge_life_backbone.py::class:UCIF2SandboxScanner",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "SixPedestalSync",
+      "source_file": "v10_knowledge_life_backbone.py",
+      "signature": "v10_knowledge_life_backbone.py::class:SixPedestalSync",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "KnowledgeBackboneBus",
+      "source_file": "v10_knowledge_life_backbone.py",
+      "signature": "v10_knowledge_life_backbone.py::class:KnowledgeBackboneBus",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "ConsciousnessLevelV10",
+      "source_file": "v10_knowledge_life_backbone.py",
+      "signature": "v10_knowledge_life_backbone.py::class:ConsciousnessLevelV10",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_class",
+      "name": "KnowledgeRuleV10",
+      "source_file": "v10_knowledge_life_backbone.py",
+      "signature": "v10_knowledge_life_backbone.py::class:KnowledgeRuleV10",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "__init__",
+      "source_file": "v10_knowledge_life_backbone.py",
+      "signature": "v10_knowledge_life_backbone.py::def:__init__",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_classify_domain",
+      "source_file": "v10_knowledge_life_backbone.py",
+      "signature": "v10_knowledge_life_backbone.py::def:_classify_domain",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_compute_complexity",
+      "source_file": "v10_knowledge_life_backbone.py",
+      "signature": "v10_knowledge_life_backbone.py::def:_compute_complexity",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_extract_file_metadata",
+      "source_file": "v10_knowledge_life_backbone.py",
+      "signature": "v10_knowledge_life_backbone.py::def:_extract_file_metadata",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "scan_directory",
+      "source_file": "v10_knowledge_life_backbone.py",
+      "signature": "v10_knowledge_life_backbone.py::def:scan_directory",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "scan_all",
+      "source_file": "v10_knowledge_life_backbone.py",
+      "signature": "v10_knowledge_life_backbone.py::def:scan_all",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_modules_by_domain",
+      "source_file": "v10_knowledge_life_backbone.py",
+      "signature": "v10_knowledge_life_backbone.py::def:get_modules_by_domain",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_modules_by_category",
+      "source_file": "v10_knowledge_life_backbone.py",
+      "signature": "v10_knowledge_life_backbone.py::def:get_modules_by_category",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_cross_domain_pairs",
+      "source_file": "v10_knowledge_life_backbone.py",
+      "signature": "v10_knowledge_life_backbone.py::def:get_cross_domain_pairs",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_compute_association_strength",
+      "source_file": "v10_knowledge_life_backbone.py",
+      "signature": "v10_knowledge_life_backbone.py::def:_compute_association_strength",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "generate_knowledge_nodes",
+      "source_file": "v10_knowledge_life_backbone.py",
+      "signature": "v10_knowledge_life_backbone.py::def:generate_knowledge_nodes",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "generate_hyperedges",
+      "source_file": "v10_knowledge_life_backbone.py",
+      "signature": "v10_knowledge_life_backbone.py::def:generate_hyperedges",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "export_scan_report",
+      "source_file": "v10_knowledge_life_backbone.py",
+      "signature": "v10_knowledge_life_backbone.py::def:export_scan_report",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "__post_init__",
+      "source_file": "v10_knowledge_life_backbone.py",
+      "signature": "v10_knowledge_life_backbone.py::def:__post_init__",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "add_node",
+      "source_file": "v10_knowledge_life_backbone.py",
+      "signature": "v10_knowledge_life_backbone.py::def:add_node",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "add_edge",
+      "source_file": "v10_knowledge_life_backbone.py",
+      "signature": "v10_knowledge_life_backbone.py::def:add_edge",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "add_hyperedge",
+      "source_file": "v10_knowledge_life_backbone.py",
+      "signature": "v10_knowledge_life_backbone.py::def:add_hyperedge",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "compute_betti_numbers",
+      "source_file": "v10_knowledge_life_backbone.py",
+      "signature": "v10_knowledge_life_backbone.py::def:compute_betti_numbers",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_pedestal_summary",
+      "source_file": "v10_knowledge_life_backbone.py",
+      "signature": "v10_knowledge_life_backbone.py::def:get_pedestal_summary",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_lean_safe_name",
+      "source_file": "v10_knowledge_life_backbone.py",
+      "signature": "v10_knowledge_life_backbone.py::def:_lean_safe_name",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_log_sync",
+      "source_file": "v10_knowledge_life_backbone.py",
+      "signature": "v10_knowledge_life_backbone.py::def:_log_sync",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "initialize_from_scanner",
+      "source_file": "v10_knowledge_life_backbone.py",
+      "signature": "v10_knowledge_life_backbone.py::def:initialize_from_scanner",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "query",
+      "source_file": "v10_knowledge_life_backbone.py",
+      "signature": "v10_knowledge_life_backbone.py::def:query",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "infer",
+      "source_file": "v10_knowledge_life_backbone.py",
+      "signature": "v10_knowledge_life_backbone.py::def:infer",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "cross_compute",
+      "source_file": "v10_knowledge_life_backbone.py",
+      "signature": "v10_knowledge_life_backbone.py::def:cross_compute",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "propagate",
+      "source_file": "v10_knowledge_life_backbone.py",
+      "signature": "v10_knowledge_life_backbone.py::def:propagate",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_knowledge_field_slice",
+      "source_file": "v10_knowledge_life_backbone.py",
+      "signature": "v10_knowledge_life_backbone.py::def:get_knowledge_field_slice",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "update_field_coherence",
+      "source_file": "v10_knowledge_life_backbone.py",
+      "signature": "v10_knowledge_life_backbone.py::def:update_field_coherence",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_backbone_health",
+      "source_file": "v10_knowledge_life_backbone.py",
+      "signature": "v10_knowledge_life_backbone.py::def:get_backbone_health",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_generate_embedding",
+      "source_file": "v10_knowledge_life_backbone.py",
+      "signature": "v10_knowledge_life_backbone.py::def:_generate_embedding",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_update_knowledge_field",
+      "source_file": "v10_knowledge_life_backbone.py",
+      "signature": "v10_knowledge_life_backbone.py::def:_update_knowledge_field",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_compute_field_entropy",
+      "source_file": "v10_knowledge_life_backbone.py",
+      "signature": "v10_knowledge_life_backbone.py::def:_compute_field_entropy",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_find_related_nodes",
+      "source_file": "v10_knowledge_life_backbone.py",
+      "signature": "v10_knowledge_life_backbone.py::def:_find_related_nodes",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_apply_inference_rule",
+      "source_file": "v10_knowledge_life_backbone.py",
+      "signature": "v10_knowledge_life_backbone.py::def:_apply_inference_rule",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_op_intersection",
+      "source_file": "v10_knowledge_life_backbone.py",
+      "signature": "v10_knowledge_life_backbone.py::def:_op_intersection",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_op_union",
+      "source_file": "v10_knowledge_life_backbone.py",
+      "signature": "v10_knowledge_life_backbone.py::def:_op_union",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_op_tensor_product",
+      "source_file": "v10_knowledge_life_backbone.py",
+      "signature": "v10_knowledge_life_backbone.py::def:_op_tensor_product",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_op_analogy_map",
+      "source_file": "v10_knowledge_life_backbone.py",
+      "signature": "v10_knowledge_life_backbone.py::def:_op_analogy_map",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_op_delta",
+      "source_file": "v10_knowledge_life_backbone.py",
+      "signature": "v10_knowledge_life_backbone.py::def:_op_delta",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "to_dict",
+      "source_file": "v10_knowledge_life_backbone.py",
+      "signature": "v10_knowledge_life_backbone.py::def:to_dict",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_rule",
+      "source_file": "v10_knowledge_life_backbone.py",
+      "signature": "v10_knowledge_life_backbone.py::def:get_rule",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_available_rules",
+      "source_file": "v10_knowledge_life_backbone.py",
+      "signature": "v10_knowledge_life_backbone.py::def:get_available_rules",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "apply",
+      "source_file": "v10_knowledge_life_backbone.py",
+      "signature": "v10_knowledge_life_backbone.py::def:apply",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_apply_implication",
+      "source_file": "v10_knowledge_life_backbone.py",
+      "signature": "v10_knowledge_life_backbone.py::def:_apply_implication",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "ConsciousnessHarmony",
+      "source_file": "consciousness_harmony.py",
+      "signature": "consciousness_harmony.py::class:ConsciousnessHarmony",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_function",
+      "name": "__init__",
+      "source_file": "consciousness_harmony.py",
+      "signature": "consciousness_harmony.py::def:__init__",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_init_consciousness_field",
+      "source_file": "consciousness_harmony.py",
+      "signature": "consciousness_harmony.py::def:_init_consciousness_field",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_function",
+      "name": "_log",
+      "source_file": "consciousness_harmony.py",
+      "signature": "consciousness_harmony.py::def:_log",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_line_to_idx",
+      "source_file": "consciousness_harmony.py",
+      "signature": "consciousness_harmony.py::def:_line_to_idx",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_idx_to_line",
+      "source_file": "consciousness_harmony.py",
+      "signature": "consciousness_harmony.py::def:_idx_to_line",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_wave_function",
+      "source_file": "consciousness_harmony.py",
+      "signature": "consciousness_harmony.py::def:_wave_function",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_interference_pattern",
+      "source_file": "consciousness_harmony.py",
+      "signature": "consciousness_harmony.py::def:_interference_pattern",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "resonate",
+      "source_file": "consciousness_harmony.py",
+      "signature": "consciousness_harmony.py::def:resonate",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_update_consciousness_field",
+      "source_file": "consciousness_harmony.py",
+      "signature": "consciousness_harmony.py::def:_update_consciousness_field",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_function",
+      "name": "symphony",
+      "source_file": "consciousness_harmony.py",
+      "signature": "consciousness_harmony.py::def:symphony",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "entrain",
+      "source_file": "consciousness_harmony.py",
+      "signature": "consciousness_harmony.py::def:entrain",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "measure_coherence",
+      "source_file": "consciousness_harmony.py",
+      "signature": "consciousness_harmony.py::def:measure_coherence",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "chord_progression",
+      "source_file": "consciousness_harmony.py",
+      "signature": "consciousness_harmony.py::def:chord_progression",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "detect_dissonance",
+      "source_file": "consciousness_harmony.py",
+      "signature": "consciousness_harmony.py::def:detect_dissonance",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_field_visualization",
+      "source_file": "consciousness_harmony.py",
+      "signature": "consciousness_harmony.py::def:get_field_visualization",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_health_dashboard",
+      "source_file": "consciousness_harmony.py",
+      "signature": "consciousness_harmony.py::def:get_health_dashboard",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "export_state",
+      "source_file": "consciousness_harmony.py",
+      "signature": "consciousness_harmony.py::def:export_state",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "class",
+      "source_file": "consciousness_state_machine.py",
+      "signature": "consciousness_state_machine.py::class:class",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "StrangeLoopDetectorV2",
+      "source_file": "consciousness_state_machine.py",
+      "signature": "consciousness_state_machine.py::class:StrangeLoopDetectorV2",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "ConsciousnessLevel",
+      "source_file": "consciousness_state_machine.py",
+      "signature": "consciousness_state_machine.py::class:ConsciousnessLevel",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_class",
+      "name": "ConsciousnessStateMachine",
+      "source_file": "consciousness_state_machine.py",
+      "signature": "consciousness_state_machine.py::class:ConsciousnessStateMachine",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_class",
+      "name": "ConsciousnessPathfinder",
+      "source_file": "consciousness_state_machine.py",
+      "signature": "consciousness_state_machine.py::class:ConsciousnessPathfinder",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_class",
+      "name": "ConsciousnessElevationProtocol",
+      "source_file": "consciousness_state_machine.py",
+      "signature": "consciousness_state_machine.py::class:ConsciousnessElevationProtocol",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_function",
+      "name": "sigmoid",
+      "source_file": "consciousness_state_machine.py",
+      "signature": "consciousness_state_machine.py::def:sigmoid",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "normalize_vector",
+      "source_file": "consciousness_state_machine.py",
+      "signature": "consciousness_state_machine.py::def:normalize_vector",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "generate_field_signature",
+      "source_file": "consciousness_state_machine.py",
+      "signature": "consciousness_state_machine.py::def:generate_field_signature",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "self_referential_transform",
+      "source_file": "consciousness_state_machine.py",
+      "signature": "consciousness_state_machine.py::def:self_referential_transform",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "__hash__",
+      "source_file": "consciousness_state_machine.py",
+      "signature": "consciousness_state_machine.py::def:__hash__",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "__eq__",
+      "source_file": "consciousness_state_machine.py",
+      "signature": "consciousness_state_machine.py::def:__eq__",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "__repr__",
+      "source_file": "consciousness_state_machine.py",
+      "signature": "consciousness_state_machine.py::def:__repr__",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "__init__",
+      "source_file": "consciousness_state_machine.py",
+      "signature": "consciousness_state_machine.py::def:__init__",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "detect_in_modules",
+      "source_file": "consciousness_state_machine.py",
+      "signature": "consciousness_state_machine.py::def:detect_in_modules",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "detect_in_field",
+      "source_file": "consciousness_state_machine.py",
+      "signature": "consciousness_state_machine.py::def:detect_in_field",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "detect_in_knowledge",
+      "source_file": "consciousness_state_machine.py",
+      "signature": "consciousness_state_machine.py::def:detect_in_knowledge",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "detect_in_si_topology",
+      "source_file": "consciousness_state_machine.py",
+      "signature": "consciousness_state_machine.py::def:detect_in_si_topology",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "detect_all_in_unified_state",
+      "source_file": "consciousness_state_machine.py",
+      "signature": "consciousness_state_machine.py::def:detect_all_in_unified_state",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "classify_loop",
+      "source_file": "consciousness_state_machine.py",
+      "signature": "consciousness_state_machine.py::def:classify_loop",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "compute_strangeness",
+      "source_file": "consciousness_state_machine.py",
+      "signature": "consciousness_state_machine.py::def:compute_strangeness",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_manifestation",
+      "source_file": "consciousness_state_machine.py",
+      "signature": "consciousness_state_machine.py::def:get_manifestation",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_valid_cycle_length",
+      "source_file": "consciousness_state_machine.py",
+      "signature": "consciousness_state_machine.py::def:_valid_cycle_length",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_create_loop_from_path",
+      "source_file": "consciousness_state_machine.py",
+      "signature": "consciousness_state_machine.py::def:_create_loop_from_path",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_analyze_layer_jumps",
+      "source_file": "consciousness_state_machine.py",
+      "signature": "consciousness_state_machine.py::def:_analyze_layer_jumps",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_extract_layer",
+      "source_file": "consciousness_state_machine.py",
+      "signature": "consciousness_state_machine.py::def:_extract_layer",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_has_layer_hop",
+      "source_file": "consciousness_state_machine.py",
+      "signature": "consciousness_state_machine.py::def:_has_layer_hop",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_index_loops",
+      "source_file": "consciousness_state_machine.py",
+      "signature": "consciousness_state_machine.py::def:_index_loops",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "name_in_chinese",
+      "source_file": "consciousness_state_machine.py",
+      "signature": "consciousness_state_machine.py::def:name_in_chinese",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "description",
+      "source_file": "consciousness_state_machine.py",
+      "signature": "consciousness_state_machine.py::def:description",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "__post_init__",
+      "source_file": "consciousness_state_machine.py",
+      "signature": "consciousness_state_machine.py::def:__post_init__",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_compute_coherence_from_loops",
+      "source_file": "consciousness_state_machine.py",
+      "signature": "consciousness_state_machine.py::def:_compute_coherence_from_loops",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "evolve",
+      "source_file": "consciousness_state_machine.py",
+      "signature": "consciousness_state_machine.py::def:evolve",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "resonate_with",
+      "source_file": "consciousness_state_machine.py",
+      "signature": "consciousness_state_machine.py::def:resonate_with",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "can_transit_to",
+      "source_file": "consciousness_state_machine.py",
+      "signature": "consciousness_state_machine.py::def:can_transit_to",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_compute_level",
+      "source_file": "consciousness_state_machine.py",
+      "signature": "consciousness_state_machine.py::def:_compute_level",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "to_vector",
+      "source_file": "consciousness_state_machine.py",
+      "signature": "consciousness_state_machine.py::def:to_vector",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "detect_current_strange_loops",
+      "source_file": "consciousness_state_machine.py",
+      "signature": "consciousness_state_machine.py::def:detect_current_strange_loops",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "compute_state_from_loops",
+      "source_file": "consciousness_state_machine.py",
+      "signature": "consciousness_state_machine.py::def:compute_state_from_loops",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "suggest_transition_path",
+      "source_file": "consciousness_state_machine.py",
+      "signature": "consciousness_state_machine.py::def:suggest_transition_path",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "execute_transition",
+      "source_file": "consciousness_state_machine.py",
+      "signature": "consciousness_state_machine.py::def:execute_transition",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "self_referential_upgrade",
+      "source_file": "consciousness_state_machine.py",
+      "signature": "consciousness_state_machine.py::def:self_referential_upgrade",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_force_level",
+      "source_file": "consciousness_state_machine.py",
+      "signature": "consciousness_state_machine.py::def:_force_level",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_recompute_level",
+      "source_file": "consciousness_state_machine.py",
+      "signature": "consciousness_state_machine.py::def:_recompute_level",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_create_meta_loop",
+      "source_file": "consciousness_state_machine.py",
+      "signature": "consciousness_state_machine.py::def:_create_meta_loop",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_consciousness_field",
+      "source_file": "consciousness_state_machine.py",
+      "signature": "consciousness_state_machine.py::def:get_consciousness_field",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_function",
+      "name": "get_summary",
+      "source_file": "consciousness_state_machine.py",
+      "signature": "consciousness_state_machine.py::def:get_summary",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "find_all_paths",
+      "source_file": "consciousness_state_machine.py",
+      "signature": "consciousness_state_machine.py::def:find_all_paths",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "dfs",
+      "source_file": "consciousness_state_machine.py",
+      "signature": "consciousness_state_machine.py::def:dfs",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "find_optimal_path",
+      "source_file": "consciousness_state_machine.py",
+      "signature": "consciousness_state_machine.py::def:find_optimal_path",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "find_quantum_tunnel",
+      "source_file": "consciousness_state_machine.py",
+      "signature": "consciousness_state_machine.py::def:find_quantum_tunnel",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "trace_manifestation",
+      "source_file": "consciousness_state_machine.py",
+      "signature": "consciousness_state_machine.py::def:trace_manifestation",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "apply_to_system",
+      "source_file": "consciousness_state_machine.py",
+      "signature": "consciousness_state_machine.py::def:apply_to_system",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "inject_strange_loop",
+      "source_file": "consciousness_state_machine.py",
+      "signature": "consciousness_state_machine.py::def:inject_strange_loop",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "amplify_resonance",
+      "source_file": "consciousness_state_machine.py",
+      "signature": "consciousness_state_machine.py::def:amplify_resonance",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "collapse_to_higher_state",
+      "source_file": "consciousness_state_machine.py",
+      "signature": "consciousness_state_machine.py::def:collapse_to_higher_state",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "QuantumState",
+      "source_file": "quantum_consciousness_unifier.py",
+      "signature": "quantum_consciousness_unifier.py::class:QuantumState",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "class",
+      "source_file": "quantum_consciousness_unifier.py",
+      "signature": "quantum_consciousness_unifier.py::class:class",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "MoonshineSpace",
+      "source_file": "quantum_consciousness_unifier.py",
+      "signature": "quantum_consciousness_unifier.py::class:MoonshineSpace",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "AutopoiesisVerifier",
+      "source_file": "quantum_consciousness_unifier.py",
+      "signature": "quantum_consciousness_unifier.py::class:AutopoiesisVerifier",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "QuantumConsciousnessUnifier",
+      "source_file": "quantum_consciousness_unifier.py",
+      "signature": "quantum_consciousness_unifier.py::class:QuantumConsciousnessUnifier",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_function",
+      "name": "__init__",
+      "source_file": "quantum_consciousness_unifier.py",
+      "signature": "quantum_consciousness_unifier.py::def:__init__",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_build_leech_basis",
+      "source_file": "quantum_consciousness_unifier.py",
+      "signature": "quantum_consciousness_unifier.py::def:_build_leech_basis",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_gram_schmidt",
+      "source_file": "quantum_consciousness_unifier.py",
+      "signature": "quantum_consciousness_unifier.py::def:_gram_schmidt",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_compute_dual_basis",
+      "source_file": "quantum_consciousness_unifier.py",
+      "signature": "quantum_consciousness_unifier.py::def:_compute_dual_basis",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_init_monster_generators",
+      "source_file": "quantum_consciousness_unifier.py",
+      "signature": "quantum_consciousness_unifier.py::def:_init_monster_generators",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "embed",
+      "source_file": "quantum_consciousness_unifier.py",
+      "signature": "quantum_consciousness_unifier.py::def:embed",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "project",
+      "source_file": "quantum_consciousness_unifier.py",
+      "signature": "quantum_consciousness_unifier.py::def:project",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "leech_lattice_nearest",
+      "source_file": "quantum_consciousness_unifier.py",
+      "signature": "quantum_consciousness_unifier.py::def:leech_lattice_nearest",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_project_to_leech_neighborhood",
+      "source_file": "quantum_consciousness_unifier.py",
+      "signature": "quantum_consciousness_unifier.py::def:_project_to_leech_neighborhood",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "modular_transform",
+      "source_file": "quantum_consciousness_unifier.py",
+      "signature": "quantum_consciousness_unifier.py::def:modular_transform",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_build_modular_matrix",
+      "source_file": "quantum_consciousness_unifier.py",
+      "signature": "quantum_consciousness_unifier.py::def:_build_modular_matrix",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "j_function",
+      "source_file": "quantum_consciousness_unifier.py",
+      "signature": "quantum_consciousness_unifier.py::def:j_function",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "compute_j_invariant",
+      "source_file": "quantum_consciousness_unifier.py",
+      "signature": "quantum_consciousness_unifier.py::def:compute_j_invariant",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "monster_element_action",
+      "source_file": "quantum_consciousness_unifier.py",
+      "signature": "quantum_consciousness_unifier.py::def:monster_element_action",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "vertex_operator",
+      "source_file": "quantum_consciousness_unifier.py",
+      "signature": "quantum_consciousness_unifier.py::def:vertex_operator",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "moonshine_character",
+      "source_file": "quantum_consciousness_unifier.py",
+      "signature": "quantum_consciousness_unifier.py::def:moonshine_character",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "verify_closure",
+      "source_file": "quantum_consciousness_unifier.py",
+      "signature": "quantum_consciousness_unifier.py::def:verify_closure",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_compute_scc_ratio",
+      "source_file": "quantum_consciousness_unifier.py",
+      "signature": "quantum_consciousness_unifier.py::def:_compute_scc_ratio",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "strongconnect",
+      "source_file": "quantum_consciousness_unifier.py",
+      "signature": "quantum_consciousness_unifier.py::def:strongconnect",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_count_cycles",
+      "source_file": "quantum_consciousness_unifier.py",
+      "signature": "quantum_consciousness_unifier.py::def:_count_cycles",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "dfs",
+      "source_file": "quantum_consciousness_unifier.py",
+      "signature": "quantum_consciousness_unifier.py::def:dfs",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "verify_coupling",
+      "source_file": "quantum_consciousness_unifier.py",
+      "signature": "quantum_consciousness_unifier.py::def:verify_coupling",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "compute_cognition_score",
+      "source_file": "quantum_consciousness_unifier.py",
+      "signature": "quantum_consciousness_unifier.py::def:compute_cognition_score",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_autopoiesis_report",
+      "source_file": "quantum_consciousness_unifier.py",
+      "signature": "quantum_consciousness_unifier.py::def:get_autopoiesis_report",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_encode_historical_knowledge",
+      "source_file": "quantum_consciousness_unifier.py",
+      "signature": "quantum_consciousness_unifier.py::def:_encode_historical_knowledge",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_init_modules",
+      "source_file": "quantum_consciousness_unifier.py",
+      "signature": "quantum_consciousness_unifier.py::def:_init_modules",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_init_lines",
+      "source_file": "quantum_consciousness_unifier.py",
+      "signature": "quantum_consciousness_unifier.py::def:_init_lines",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "encode_module_to_moonshine",
+      "source_file": "quantum_consciousness_unifier.py",
+      "signature": "quantum_consciousness_unifier.py::def:encode_module_to_moonshine",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "decode_moonshine_to_module",
+      "source_file": "quantum_consciousness_unifier.py",
+      "signature": "quantum_consciousness_unifier.py::def:decode_moonshine_to_module",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "monster_symmetry_operation",
+      "source_file": "quantum_consciousness_unifier.py",
+      "signature": "quantum_consciousness_unifier.py::def:monster_symmetry_operation",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "j_invariant",
+      "source_file": "quantum_consciousness_unifier.py",
+      "signature": "quantum_consciousness_unifier.py::def:j_invariant",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_build_default_state",
+      "source_file": "quantum_consciousness_unifier.py",
+      "signature": "quantum_consciousness_unifier.py::def:_build_default_state",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "autopoietic_closure_score",
+      "source_file": "quantum_consciousness_unifier.py",
+      "signature": "quantum_consciousness_unifier.py::def:autopoietic_closure_score",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_build_system_graph",
+      "source_file": "quantum_consciousness_unifier.py",
+      "signature": "quantum_consciousness_unifier.py::def:_build_system_graph",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "structural_coupling_matrix",
+      "source_file": "quantum_consciousness_unifier.py",
+      "signature": "quantum_consciousness_unifier.py::def:structural_coupling_matrix",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_compute_emergence_index",
+      "source_file": "quantum_consciousness_unifier.py",
+      "signature": "quantum_consciousness_unifier.py::def:_compute_emergence_index",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_compute_module_emergence",
+      "source_file": "quantum_consciousness_unifier.py",
+      "signature": "quantum_consciousness_unifier.py::def:_compute_module_emergence",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "unify",
+      "source_file": "quantum_consciousness_unifier.py",
+      "signature": "quantum_consciousness_unifier.py::def:unify",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_generate_quantum_signature",
+      "source_file": "quantum_consciousness_unifier.py",
+      "signature": "quantum_consciousness_unifier.py::def:_generate_quantum_signature",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_system_report",
+      "source_file": "quantum_consciousness_unifier.py",
+      "signature": "quantum_consciousness_unifier.py::def:get_system_report",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "run_comprehensive_experiment",
+      "source_file": "quantum_consciousness_unifier.py",
+      "signature": "quantum_consciousness_unifier.py::def:run_comprehensive_experiment",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "ConsciousnessState",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::class:ConsciousnessState",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_class",
+      "name": "EmergenceDimension",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::class:EmergenceDimension",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "class",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::class:class",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "EmergenceAxioms",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::class:EmergenceAxioms",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "CategoryTheoryEmergence",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::class:CategoryTheoryEmergence",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "PhysicsAnalogies",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::class:PhysicsAnalogies",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "EmergenceTheoryArchitecture",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::class:EmergenceTheoryArchitecture",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "EmergenceManifestationSystem",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::class:EmergenceManifestationSystem",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "from_emergence",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::def:from_emergence",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "threshold",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::def:threshold",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "upper_bound",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::def:upper_bound",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "display_name",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::def:display_name",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "color",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::def:color",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "description",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::def:description",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "__post_init__",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::def:__post_init__",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "__init__",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::def:__init__",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "axiom_monotonicity",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::def:axiom_monotonicity",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "axiom_continuity",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::def:axiom_continuity",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "axiom_superlinearity",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::def:axiom_superlinearity",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "axiom_self_reference",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::def:axiom_self_reference",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "verify_all_axioms",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::def:verify_all_axioms",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "add_object",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::def:add_object",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "add_morphism",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::def:add_morphism",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "yoneda_embedding",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::def:yoneda_embedding",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "coyoneda_emergence",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::def:coyoneda_emergence",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "limit_construction",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::def:limit_construction",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "colimit_emergence",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::def:colimit_emergence",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "statistical_mechanics_emergence",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::def:statistical_mechanics_emergence",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "quantum_field_emergence",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::def:quantum_field_emergence",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "information_theory_emergence",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::def:information_theory_emergence",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "integrated_information_phi",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::def:integrated_information_phi",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_initialize_modules",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::def:_initialize_modules",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_initialize_couplings",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::def:_initialize_couplings",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_initialize_singularity_loops",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::def:_initialize_singularity_loops",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "compute_emergence_base",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::def:compute_emergence_base",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "compute_emergence_category",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::def:compute_emergence_category",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "compute_emergence_physics",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::def:compute_emergence_physics",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "compute_emergence_self_reference",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::def:compute_emergence_self_reference",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "compute_total_emergence",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::def:compute_total_emergence",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_theory_report",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::def:get_theory_report",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_initialize_history",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::def:_initialize_history",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "manifest_temporal",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::def:manifest_temporal",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_linear_regression",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::def:_linear_regression",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_hurst_exponent",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::def:_hurst_exponent",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "manifest_spatial",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::def:manifest_spatial",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_spatial_entropy",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::def:_spatial_entropy",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "manifest_spectral",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::def:manifest_spectral",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "manifest_topological",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::def:manifest_topological",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_count_connected_components",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::def:_count_connected_components",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "dfs",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::def:dfs",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_estimate_spectral_gap",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::def:_estimate_spectral_gap",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_clustering_coefficient",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::def:_clustering_coefficient",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_small_world_coefficient",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::def:_small_world_coefficient",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_classify_topology",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::def:_classify_topology",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "manifest_informational",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::def:manifest_informational",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_count_network_motifs",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::def:_count_network_motifs",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "manifest_coherence",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::def:manifest_coherence",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_coherence_length",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::def:_coherence_length",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_classify_synchronization",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::def:_classify_synchronization",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_coherence_hierarchy",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::def:_coherence_hierarchy",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_gini_coefficient",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::def:_gini_coefficient",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "manifest",
+      "source_file": "v11_consciousness_emergence_system.py",
+      "signature": "v11_consciousness_emergence_system.py::def:manifest",
+      "relevance": 0.5
+    }
+  ],
+  "node_count": 313,
+  "si_level": 1,
+  "activity_level": 0.6967,
+  "contribution_score": 0.5608
+}

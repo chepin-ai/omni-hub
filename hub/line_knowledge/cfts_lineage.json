@@ -1,0 +1,1698 @@
+{
+  "line_id": "cfts",
+  "line_name": "跨功能任务同步",
+  "timestamp": 1789662470.4215386,
+  "version": "12.0.0",
+  "lineage_tree": {
+    "root": {
+      "name": "cfts",
+      "type": "line_root",
+      "children": [
+        "python_class",
+        "python_function",
+        "md_heading"
+      ],
+      "weight": 1.0
+    },
+    "branches": {
+      "python_class": {
+        "type": "python_class",
+        "node_count": 19,
+        "avg_relevance": 0.5421052631578948,
+        "nodes": [
+          {
+            "name": "PhiPiEAlphaConstants",
+            "signature": "cfts_phi_pi_e_alpha_integration.py::class:PhiPiEAlphaConstants",
+            "relevance": 0.6,
+            "source": "cfts_phi_pi_e_alpha_integration.py"
+          },
+          {
+            "name": "class",
+            "signature": "cfts_phi_pi_e_alpha_integration.py::class:class",
+            "relevance": 0.5,
+            "source": "cfts_phi_pi_e_alpha_integration.py"
+          },
+          {
+            "name": "CFTSEnergyFlow",
+            "signature": "cfts_phi_pi_e_alpha_integration.py::class:CFTSEnergyFlow",
+            "relevance": 0.5,
+            "source": "cfts_phi_pi_e_alpha_integration.py"
+          },
+          {
+            "name": "CFTSFieldValidator",
+            "signature": "cfts_phi_pi_e_alpha_integration.py::class:CFTSFieldValidator",
+            "relevance": 0.5,
+            "source": "cfts_phi_pi_e_alpha_integration.py"
+          },
+          {
+            "name": "CFTSUnifiedFieldPhiMapper",
+            "signature": "cfts_phi_pi_e_alpha_integration.py::class:CFTSUnifiedFieldPhiMapper",
+            "relevance": 0.6,
+            "source": "cfts_phi_pi_e_alpha_integration.py"
+          },
+          {
+            "name": "CFTSDimensionMarker",
+            "signature": "cfts_phi_pi_e_alpha_integration.py::class:CFTSDimensionMarker",
+            "relevance": 0.5,
+            "source": "cfts_phi_pi_e_alpha_integration.py"
+          },
+          {
+            "name": "CFTSPhiPiEAlphaValidator",
+            "signature": "cfts_phi_pi_e_alpha_integration.py::class:CFTSPhiPiEAlphaValidator",
+            "relevance": 0.6,
+            "source": "cfts_phi_pi_e_alpha_integration.py"
+          },
+          {
+            "name": "CFTSPhiPiEAlphaIntegration",
+            "signature": "cfts_phi_pi_e_alpha_integration.py::class:CFTSPhiPiEAlphaIntegration",
+            "relevance": 0.6,
+            "source": "cfts_phi_pi_e_alpha_integration.py"
+          },
+          {
+            "name": "class",
+            "signature": "otp_sync.py::class:class",
+            "relevance": 0.5,
+            "source": "otp_sync.py"
+          },
+          {
+            "name": "OTPSync",
+            "signature": "otp_sync.py::class:OTPSync",
+            "relevance": 0.6,
+            "source": "otp_sync.py"
+          },
+          {
+            "name": "FileStatus",
+            "signature": "v11_sync_engine.py::class:FileStatus",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "SyncPriority",
+            "signature": "v11_sync_engine.py::class:SyncPriority",
+            "relevance": 0.6,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "ConflictResolution",
+            "signature": "v11_sync_engine.py::class:ConflictResolution",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "class",
+            "signature": "v11_sync_engine.py::class:class",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "SyncState",
+            "signature": "v11_sync_engine.py::class:SyncState",
+            "relevance": 0.6,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "PushQueue",
+            "signature": "v11_sync_engine.py::class:PushQueue",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "ConflictResolver",
+            "signature": "v11_sync_engine.py::class:ConflictResolver",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "SnapshotManager",
+            "signature": "v11_sync_engine.py::class:SnapshotManager",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "SyncEngine",
+            "signature": "v11_sync_engine.py::class:SyncEngine",
+            "relevance": 0.6,
+            "source": "v11_sync_engine.py"
+          }
+        ]
+      },
+      "python_function": {
+        "type": "python_function",
+        "node_count": 98,
+        "avg_relevance": 0.5040816326530612,
+        "nodes": [
+          {
+            "name": "validate_identities",
+            "signature": "cfts_phi_pi_e_alpha_integration.py::def:validate_identities",
+            "relevance": 0.5,
+            "source": "cfts_phi_pi_e_alpha_integration.py"
+          },
+          {
+            "name": "to_dict",
+            "signature": "cfts_phi_pi_e_alpha_integration.py::def:to_dict",
+            "relevance": 0.5,
+            "source": "cfts_phi_pi_e_alpha_integration.py"
+          },
+          {
+            "name": "__init__",
+            "signature": "cfts_phi_pi_e_alpha_integration.py::def:__init__",
+            "relevance": 0.5,
+            "source": "cfts_phi_pi_e_alpha_integration.py"
+          },
+          {
+            "name": "_build_layers",
+            "signature": "cfts_phi_pi_e_alpha_integration.py::def:_build_layers",
+            "relevance": 0.5,
+            "source": "cfts_phi_pi_e_alpha_integration.py"
+          },
+          {
+            "name": "get_layer",
+            "signature": "cfts_phi_pi_e_alpha_integration.py::def:get_layer",
+            "relevance": 0.5,
+            "source": "cfts_phi_pi_e_alpha_integration.py"
+          },
+          {
+            "name": "compute_total_energy",
+            "signature": "cfts_phi_pi_e_alpha_integration.py::def:compute_total_energy",
+            "relevance": 0.5,
+            "source": "cfts_phi_pi_e_alpha_integration.py"
+          },
+          {
+            "name": "compute_phi_harmonic",
+            "signature": "cfts_phi_pi_e_alpha_integration.py::def:compute_phi_harmonic",
+            "relevance": 0.6,
+            "source": "cfts_phi_pi_e_alpha_integration.py"
+          },
+          {
+            "name": "get_energy_state_vector",
+            "signature": "cfts_phi_pi_e_alpha_integration.py::def:get_energy_state_vector",
+            "relevance": 0.5,
+            "source": "cfts_phi_pi_e_alpha_integration.py"
+          },
+          {
+            "name": "inject_into_unified_field",
+            "signature": "cfts_phi_pi_e_alpha_integration.py::def:inject_into_unified_field",
+            "relevance": 0.5,
+            "source": "cfts_phi_pi_e_alpha_integration.py"
+          },
+          {
+            "name": "validate_alpha_inv_empirical",
+            "signature": "cfts_phi_pi_e_alpha_integration.py::def:validate_alpha_inv_empirical",
+            "relevance": 0.5,
+            "source": "cfts_phi_pi_e_alpha_integration.py"
+          },
+          {
+            "name": "validate_golden_angle_alpha_inv",
+            "signature": "cfts_phi_pi_e_alpha_integration.py::def:validate_golden_angle_alpha_inv",
+            "relevance": 0.5,
+            "source": "cfts_phi_pi_e_alpha_integration.py"
+          },
+          {
+            "name": "validate_phi_identity",
+            "signature": "cfts_phi_pi_e_alpha_integration.py::def:validate_phi_identity",
+            "relevance": 0.6,
+            "source": "cfts_phi_pi_e_alpha_integration.py"
+          },
+          {
+            "name": "validate_energy_flow_constraint",
+            "signature": "cfts_phi_pi_e_alpha_integration.py::def:validate_energy_flow_constraint",
+            "relevance": 0.5,
+            "source": "cfts_phi_pi_e_alpha_integration.py"
+          },
+          {
+            "name": "run_all_validations",
+            "signature": "cfts_phi_pi_e_alpha_integration.py::def:run_all_validations",
+            "relevance": 0.5,
+            "source": "cfts_phi_pi_e_alpha_integration.py"
+          },
+          {
+            "name": "compute_unification_node",
+            "signature": "cfts_phi_pi_e_alpha_integration.py::def:compute_unification_node",
+            "relevance": 0.5,
+            "source": "cfts_phi_pi_e_alpha_integration.py"
+          },
+          {
+            "name": "compute_line_resonance_matrix",
+            "signature": "cfts_phi_pi_e_alpha_integration.py::def:compute_line_resonance_matrix",
+            "relevance": 0.5,
+            "source": "cfts_phi_pi_e_alpha_integration.py"
+          },
+          {
+            "name": "inject_into_field",
+            "signature": "cfts_phi_pi_e_alpha_integration.py::def:inject_into_field",
+            "relevance": 0.5,
+            "source": "cfts_phi_pi_e_alpha_integration.py"
+          },
+          {
+            "name": "get_mapping_history",
+            "signature": "cfts_phi_pi_e_alpha_integration.py::def:get_mapping_history",
+            "relevance": 0.5,
+            "source": "cfts_phi_pi_e_alpha_integration.py"
+          },
+          {
+            "name": "get_marked_dimensions",
+            "signature": "cfts_phi_pi_e_alpha_integration.py::def:get_marked_dimensions",
+            "relevance": 0.5,
+            "source": "cfts_phi_pi_e_alpha_integration.py"
+          },
+          {
+            "name": "apply_markings",
+            "signature": "cfts_phi_pi_e_alpha_integration.py::def:apply_markings",
+            "relevance": 0.5,
+            "source": "cfts_phi_pi_e_alpha_integration.py"
+          },
+          {
+            "name": "verify_markings",
+            "signature": "cfts_phi_pi_e_alpha_integration.py::def:verify_markings",
+            "relevance": 0.5,
+            "source": "cfts_phi_pi_e_alpha_integration.py"
+          },
+          {
+            "name": "run_full_validation",
+            "signature": "cfts_phi_pi_e_alpha_integration.py::def:run_full_validation",
+            "relevance": 0.5,
+            "source": "cfts_phi_pi_e_alpha_integration.py"
+          },
+          {
+            "name": "export_results",
+            "signature": "cfts_phi_pi_e_alpha_integration.py::def:export_results",
+            "relevance": 0.5,
+            "source": "cfts_phi_pi_e_alpha_integration.py"
+          },
+          {
+            "name": "process_unified_field",
+            "signature": "cfts_phi_pi_e_alpha_integration.py::def:process_unified_field",
+            "relevance": 0.5,
+            "source": "cfts_phi_pi_e_alpha_integration.py"
+          },
+          {
+            "name": "get_cfts_resonance_state",
+            "signature": "cfts_phi_pi_e_alpha_integration.py::def:get_cfts_resonance_state",
+            "relevance": 0.5,
+            "source": "cfts_phi_pi_e_alpha_integration.py"
+          },
+          {
+            "name": "get_status_report",
+            "signature": "cfts_phi_pi_e_alpha_integration.py::def:get_status_report",
+            "relevance": 0.5,
+            "source": "cfts_phi_pi_e_alpha_integration.py"
+          },
+          {
+            "name": "__post_init__",
+            "signature": "otp_sync.py::def:__post_init__",
+            "relevance": 0.5,
+            "source": "otp_sync.py"
+          },
+          {
+            "name": "to_dict",
+            "signature": "otp_sync.py::def:to_dict",
+            "relevance": 0.5,
+            "source": "otp_sync.py"
+          },
+          {
+            "name": "from_dict",
+            "signature": "otp_sync.py::def:from_dict",
+            "relevance": 0.5,
+            "source": "otp_sync.py"
+          },
+          {
+            "name": "__init__",
+            "signature": "otp_sync.py::def:__init__",
+            "relevance": 0.5,
+            "source": "otp_sync.py"
+          },
+          {
+            "name": "_ensure_state_dir",
+            "signature": "otp_sync.py::def:_ensure_state_dir",
+            "relevance": 0.5,
+            "source": "otp_sync.py"
+          },
+          {
+            "name": "_init_default_sessions",
+            "signature": "otp_sync.py::def:_init_default_sessions",
+            "relevance": 0.5,
+            "source": "otp_sync.py"
+          },
+          {
+            "name": "_load_state",
+            "signature": "otp_sync.py::def:_load_state",
+            "relevance": 0.5,
+            "source": "otp_sync.py"
+          },
+          {
+            "name": "_save_state",
+            "signature": "otp_sync.py::def:_save_state",
+            "relevance": 0.5,
+            "source": "otp_sync.py"
+          },
+          {
+            "name": "_log",
+            "signature": "otp_sync.py::def:_log",
+            "relevance": 0.5,
+            "source": "otp_sync.py"
+          },
+          {
+            "name": "_hash_state",
+            "signature": "otp_sync.py::def:_hash_state",
+            "relevance": 0.5,
+            "source": "otp_sync.py"
+          },
+          {
+            "name": "update_os_session",
+            "signature": "otp_sync.py::def:update_os_session",
+            "relevance": 0.5,
+            "source": "otp_sync.py"
+          },
+          {
+            "name": "sync_all_lines",
+            "signature": "otp_sync.py::def:sync_all_lines",
+            "relevance": 0.6,
+            "source": "otp_sync.py"
+          },
+          {
+            "name": "_detect_conflict_fields",
+            "signature": "otp_sync.py::def:_detect_conflict_fields",
+            "relevance": 0.5,
+            "source": "otp_sync.py"
+          },
+          {
+            "name": "resolve_conflict",
+            "signature": "otp_sync.py::def:resolve_conflict",
+            "relevance": 0.5,
+            "source": "otp_sync.py"
+          },
+          {
+            "name": "get_session_diff",
+            "signature": "otp_sync.py::def:get_session_diff",
+            "relevance": 0.5,
+            "source": "otp_sync.py"
+          },
+          {
+            "name": "checkpoint",
+            "signature": "otp_sync.py::def:checkpoint",
+            "relevance": 0.5,
+            "source": "otp_sync.py"
+          },
+          {
+            "name": "to_dict",
+            "signature": "v11_sync_engine.py::def:to_dict",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "from_dict",
+            "signature": "v11_sync_engine.py::def:from_dict",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "compute_sha256",
+            "signature": "v11_sync_engine.py::def:compute_sha256",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "get_file_info",
+            "signature": "v11_sync_engine.py::def:get_file_info",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "matches_ignore_patterns",
+            "signature": "v11_sync_engine.py::def:matches_ignore_patterns",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "ensure_dir",
+            "signature": "v11_sync_engine.py::def:ensure_dir",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "timestamp_now",
+            "signature": "v11_sync_engine.py::def:timestamp_now",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "format_duration_ms",
+            "signature": "v11_sync_engine.py::def:format_duration_ms",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "__init__",
+            "signature": "v11_sync_engine.py::def:__init__",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "_load",
+            "signature": "v11_sync_engine.py::def:_load",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "save",
+            "signature": "v11_sync_engine.py::def:save",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "scan",
+            "signature": "v11_sync_engine.py::def:scan",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "_infer_priority",
+            "signature": "v11_sync_engine.py::def:_infer_priority",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "mark_synced",
+            "signature": "v11_sync_engine.py::def:mark_synced",
+            "relevance": 0.6,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "mark_frozen",
+            "signature": "v11_sync_engine.py::def:mark_frozen",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "get_status",
+            "signature": "v11_sync_engine.py::def:get_status",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "get_dirty_files",
+            "signature": "v11_sync_engine.py::def:get_dirty_files",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "get_stats",
+            "signature": "v11_sync_engine.py::def:get_stats",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "enqueue",
+            "signature": "v11_sync_engine.py::def:enqueue",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "enqueue_many",
+            "signature": "v11_sync_engine.py::def:enqueue_many",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "dequeue",
+            "signature": "v11_sync_engine.py::def:dequeue",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "dequeue_batch",
+            "signature": "v11_sync_engine.py::def:dequeue_batch",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "is_empty",
+            "signature": "v11_sync_engine.py::def:is_empty",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "size",
+            "signature": "v11_sync_engine.py::def:size",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "clear",
+            "signature": "v11_sync_engine.py::def:clear",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "get_history",
+            "signature": "v11_sync_engine.py::def:get_history",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "record_push",
+            "signature": "v11_sync_engine.py::def:record_push",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "detect_conflict",
+            "signature": "v11_sync_engine.py::def:detect_conflict",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "resolve",
+            "signature": "v11_sync_engine.py::def:resolve",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "_generate_conflict_report",
+            "signature": "v11_sync_engine.py::def:_generate_conflict_report",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "get_unresolved",
+            "signature": "v11_sync_engine.py::def:get_unresolved",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "_snapshot_path",
+            "signature": "v11_sync_engine.py::def:_snapshot_path",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "create",
+            "signature": "v11_sync_engine.py::def:create",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "_cleanup",
+            "signature": "v11_sync_engine.py::def:_cleanup",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "restore",
+            "signature": "v11_sync_engine.py::def:restore",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "list_snapshots",
+            "signature": "v11_sync_engine.py::def:list_snapshots",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "create_session_snapshot",
+            "signature": "v11_sync_engine.py::def:create_session_snapshot",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "create_pre_push_snapshot",
+            "signature": "v11_sync_engine.py::def:create_pre_push_snapshot",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "create_daily_snapshot",
+            "signature": "v11_sync_engine.py::def:create_daily_snapshot",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "init",
+            "signature": "v11_sync_engine.py::def:init",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "_count_by_priority",
+            "signature": "v11_sync_engine.py::def:_count_by_priority",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "push",
+            "signature": "v11_sync_engine.py::def:push",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "_push_single",
+            "signature": "v11_sync_engine.py::def:_push_single",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "_generate_commit_hash",
+            "signature": "v11_sync_engine.py::def:_generate_commit_hash",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "rollback",
+            "signature": "v11_sync_engine.py::def:rollback",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "status",
+            "signature": "v11_sync_engine.py::def:status",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "report",
+            "signature": "v11_sync_engine.py::def:report",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "_log_event",
+            "signature": "v11_sync_engine.py::def:_log_event",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "get_events",
+            "signature": "v11_sync_engine.py::def:get_events",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "start_daemon",
+            "signature": "v11_sync_engine.py::def:start_daemon",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "daemon_loop",
+            "signature": "v11_sync_engine.py::def:daemon_loop",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "stop_daemon",
+            "signature": "v11_sync_engine.py::def:stop_daemon",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "cleanup",
+            "signature": "v11_sync_engine.py::def:cleanup",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "run_cli",
+            "signature": "v11_sync_engine.py::def:run_cli",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "run_tests",
+            "signature": "v11_sync_engine.py::def:run_tests",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          },
+          {
+            "name": "foo",
+            "signature": "v11_sync_engine.py::def:foo",
+            "relevance": 0.5,
+            "source": "v11_sync_engine.py"
+          }
+        ]
+      },
+      "md_heading": {
+        "type": "md_heading",
+        "node_count": 10,
+        "avg_relevance": 0.75,
+        "nodes": [
+          {
+            "name": "cfts线 SI4 升级自证报告（ucif2介入产出）",
+            "signature": "cfts-SI4-self-cert-report.md::heading:cfts线 SI4 升级自证报告（ucif2介入产出）",
+            "relevance": 0.75,
+            "source": "cfts-SI4-self-cert-report.md"
+          },
+          {
+            "name": "线基本信息",
+            "signature": "cfts-SI4-self-cert-report.md::heading:线基本信息",
+            "relevance": 0.75,
+            "source": "cfts-SI4-self-cert-report.md"
+          },
+          {
+            "name": "1. ucif2介入说明",
+            "signature": "cfts-SI4-self-cert-report.md::heading:1. ucif2介入说明",
+            "relevance": 0.75,
+            "source": "cfts-SI4-self-cert-report.md"
+          },
+          {
+            "name": "2. 升级资格评估",
+            "signature": "cfts-SI4-self-cert-report.md::heading:2. 升级资格评估",
+            "relevance": 0.75,
+            "source": "cfts-SI4-self-cert-report.md"
+          },
+          {
+            "name": "2.1 数据充分性: 0.88",
+            "signature": "cfts-SI4-self-cert-report.md::heading:2.1 数据充分性: 0.88",
+            "relevance": 0.75,
+            "source": "cfts-SI4-self-cert-report.md"
+          },
+          {
+            "name": "2.2 验证充分性: 0.87",
+            "signature": "cfts-SI4-self-cert-report.md::heading:2.2 验证充分性: 0.87",
+            "relevance": 0.75,
+            "source": "cfts-SI4-self-cert-report.md"
+          },
+          {
+            "name": "2.3 形式化程度: 0.82",
+            "signature": "cfts-SI4-self-cert-report.md::heading:2.3 形式化程度: 0.82",
+            "relevance": 0.75,
+            "source": "cfts-SI4-self-cert-report.md"
+          },
+          {
+            "name": "2.4 边界测试（ucif2代执行）",
+            "signature": "cfts-SI4-self-cert-report.md::heading:2.4 边界测试（ucif2代执行）",
+            "relevance": 0.75,
+            "source": "cfts-SI4-self-cert-report.md"
+          },
+          {
+            "name": "2.5 交叉验证: 0.91",
+            "signature": "cfts-SI4-self-cert-report.md::heading:2.5 交叉验证: 0.91",
+            "relevance": 0.75,
+            "source": "cfts-SI4-self-cert-report.md"
+          },
+          {
+            "name": "3. 评估结论",
+            "signature": "cfts-SI4-self-cert-report.md::heading:3. 评估结论",
+            "relevance": 0.75,
+            "source": "cfts-SI4-self-cert-report.md"
+          }
+        ]
+      }
+    }
+  },
+  "knowledge_nodes": [
+    {
+      "type": "python_class",
+      "name": "PhiPiEAlphaConstants",
+      "source_file": "cfts_phi_pi_e_alpha_integration.py",
+      "signature": "cfts_phi_pi_e_alpha_integration.py::class:PhiPiEAlphaConstants",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_class",
+      "name": "class",
+      "source_file": "cfts_phi_pi_e_alpha_integration.py",
+      "signature": "cfts_phi_pi_e_alpha_integration.py::class:class",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "CFTSEnergyFlow",
+      "source_file": "cfts_phi_pi_e_alpha_integration.py",
+      "signature": "cfts_phi_pi_e_alpha_integration.py::class:CFTSEnergyFlow",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "CFTSFieldValidator",
+      "source_file": "cfts_phi_pi_e_alpha_integration.py",
+      "signature": "cfts_phi_pi_e_alpha_integration.py::class:CFTSFieldValidator",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "CFTSUnifiedFieldPhiMapper",
+      "source_file": "cfts_phi_pi_e_alpha_integration.py",
+      "signature": "cfts_phi_pi_e_alpha_integration.py::class:CFTSUnifiedFieldPhiMapper",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_class",
+      "name": "CFTSDimensionMarker",
+      "source_file": "cfts_phi_pi_e_alpha_integration.py",
+      "signature": "cfts_phi_pi_e_alpha_integration.py::class:CFTSDimensionMarker",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "CFTSPhiPiEAlphaValidator",
+      "source_file": "cfts_phi_pi_e_alpha_integration.py",
+      "signature": "cfts_phi_pi_e_alpha_integration.py::class:CFTSPhiPiEAlphaValidator",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_class",
+      "name": "CFTSPhiPiEAlphaIntegration",
+      "source_file": "cfts_phi_pi_e_alpha_integration.py",
+      "signature": "cfts_phi_pi_e_alpha_integration.py::class:CFTSPhiPiEAlphaIntegration",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_function",
+      "name": "validate_identities",
+      "source_file": "cfts_phi_pi_e_alpha_integration.py",
+      "signature": "cfts_phi_pi_e_alpha_integration.py::def:validate_identities",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "to_dict",
+      "source_file": "cfts_phi_pi_e_alpha_integration.py",
+      "signature": "cfts_phi_pi_e_alpha_integration.py::def:to_dict",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "__init__",
+      "source_file": "cfts_phi_pi_e_alpha_integration.py",
+      "signature": "cfts_phi_pi_e_alpha_integration.py::def:__init__",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_build_layers",
+      "source_file": "cfts_phi_pi_e_alpha_integration.py",
+      "signature": "cfts_phi_pi_e_alpha_integration.py::def:_build_layers",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_layer",
+      "source_file": "cfts_phi_pi_e_alpha_integration.py",
+      "signature": "cfts_phi_pi_e_alpha_integration.py::def:get_layer",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "compute_total_energy",
+      "source_file": "cfts_phi_pi_e_alpha_integration.py",
+      "signature": "cfts_phi_pi_e_alpha_integration.py::def:compute_total_energy",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "compute_phi_harmonic",
+      "source_file": "cfts_phi_pi_e_alpha_integration.py",
+      "signature": "cfts_phi_pi_e_alpha_integration.py::def:compute_phi_harmonic",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_function",
+      "name": "get_energy_state_vector",
+      "source_file": "cfts_phi_pi_e_alpha_integration.py",
+      "signature": "cfts_phi_pi_e_alpha_integration.py::def:get_energy_state_vector",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "inject_into_unified_field",
+      "source_file": "cfts_phi_pi_e_alpha_integration.py",
+      "signature": "cfts_phi_pi_e_alpha_integration.py::def:inject_into_unified_field",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "validate_alpha_inv_empirical",
+      "source_file": "cfts_phi_pi_e_alpha_integration.py",
+      "signature": "cfts_phi_pi_e_alpha_integration.py::def:validate_alpha_inv_empirical",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "validate_golden_angle_alpha_inv",
+      "source_file": "cfts_phi_pi_e_alpha_integration.py",
+      "signature": "cfts_phi_pi_e_alpha_integration.py::def:validate_golden_angle_alpha_inv",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "validate_phi_identity",
+      "source_file": "cfts_phi_pi_e_alpha_integration.py",
+      "signature": "cfts_phi_pi_e_alpha_integration.py::def:validate_phi_identity",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_function",
+      "name": "validate_energy_flow_constraint",
+      "source_file": "cfts_phi_pi_e_alpha_integration.py",
+      "signature": "cfts_phi_pi_e_alpha_integration.py::def:validate_energy_flow_constraint",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "run_all_validations",
+      "source_file": "cfts_phi_pi_e_alpha_integration.py",
+      "signature": "cfts_phi_pi_e_alpha_integration.py::def:run_all_validations",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "compute_unification_node",
+      "source_file": "cfts_phi_pi_e_alpha_integration.py",
+      "signature": "cfts_phi_pi_e_alpha_integration.py::def:compute_unification_node",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "compute_line_resonance_matrix",
+      "source_file": "cfts_phi_pi_e_alpha_integration.py",
+      "signature": "cfts_phi_pi_e_alpha_integration.py::def:compute_line_resonance_matrix",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "inject_into_field",
+      "source_file": "cfts_phi_pi_e_alpha_integration.py",
+      "signature": "cfts_phi_pi_e_alpha_integration.py::def:inject_into_field",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_mapping_history",
+      "source_file": "cfts_phi_pi_e_alpha_integration.py",
+      "signature": "cfts_phi_pi_e_alpha_integration.py::def:get_mapping_history",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_marked_dimensions",
+      "source_file": "cfts_phi_pi_e_alpha_integration.py",
+      "signature": "cfts_phi_pi_e_alpha_integration.py::def:get_marked_dimensions",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "apply_markings",
+      "source_file": "cfts_phi_pi_e_alpha_integration.py",
+      "signature": "cfts_phi_pi_e_alpha_integration.py::def:apply_markings",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "verify_markings",
+      "source_file": "cfts_phi_pi_e_alpha_integration.py",
+      "signature": "cfts_phi_pi_e_alpha_integration.py::def:verify_markings",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "run_full_validation",
+      "source_file": "cfts_phi_pi_e_alpha_integration.py",
+      "signature": "cfts_phi_pi_e_alpha_integration.py::def:run_full_validation",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "export_results",
+      "source_file": "cfts_phi_pi_e_alpha_integration.py",
+      "signature": "cfts_phi_pi_e_alpha_integration.py::def:export_results",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "process_unified_field",
+      "source_file": "cfts_phi_pi_e_alpha_integration.py",
+      "signature": "cfts_phi_pi_e_alpha_integration.py::def:process_unified_field",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_cfts_resonance_state",
+      "source_file": "cfts_phi_pi_e_alpha_integration.py",
+      "signature": "cfts_phi_pi_e_alpha_integration.py::def:get_cfts_resonance_state",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_status_report",
+      "source_file": "cfts_phi_pi_e_alpha_integration.py",
+      "signature": "cfts_phi_pi_e_alpha_integration.py::def:get_status_report",
+      "relevance": 0.5
+    },
+    {
+      "type": "md_heading",
+      "name": "cfts线 SI4 升级自证报告（ucif2介入产出）",
+      "source_file": "cfts-SI4-self-cert-report.md",
+      "signature": "cfts-SI4-self-cert-report.md::heading:cfts线 SI4 升级自证报告（ucif2介入产出）",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "线基本信息",
+      "source_file": "cfts-SI4-self-cert-report.md",
+      "signature": "cfts-SI4-self-cert-report.md::heading:线基本信息",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "1. ucif2介入说明",
+      "source_file": "cfts-SI4-self-cert-report.md",
+      "signature": "cfts-SI4-self-cert-report.md::heading:1. ucif2介入说明",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "2. 升级资格评估",
+      "source_file": "cfts-SI4-self-cert-report.md",
+      "signature": "cfts-SI4-self-cert-report.md::heading:2. 升级资格评估",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "2.1 数据充分性: 0.88",
+      "source_file": "cfts-SI4-self-cert-report.md",
+      "signature": "cfts-SI4-self-cert-report.md::heading:2.1 数据充分性: 0.88",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "2.2 验证充分性: 0.87",
+      "source_file": "cfts-SI4-self-cert-report.md",
+      "signature": "cfts-SI4-self-cert-report.md::heading:2.2 验证充分性: 0.87",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "2.3 形式化程度: 0.82",
+      "source_file": "cfts-SI4-self-cert-report.md",
+      "signature": "cfts-SI4-self-cert-report.md::heading:2.3 形式化程度: 0.82",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "2.4 边界测试（ucif2代执行）",
+      "source_file": "cfts-SI4-self-cert-report.md",
+      "signature": "cfts-SI4-self-cert-report.md::heading:2.4 边界测试（ucif2代执行）",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "2.5 交叉验证: 0.91",
+      "source_file": "cfts-SI4-self-cert-report.md",
+      "signature": "cfts-SI4-self-cert-report.md::heading:2.5 交叉验证: 0.91",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "3. 评估结论",
+      "source_file": "cfts-SI4-self-cert-report.md",
+      "signature": "cfts-SI4-self-cert-report.md::heading:3. 评估结论",
+      "relevance": 0.75
+    },
+    {
+      "type": "python_class",
+      "name": "class",
+      "source_file": "otp_sync.py",
+      "signature": "otp_sync.py::class:class",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "OTPSync",
+      "source_file": "otp_sync.py",
+      "signature": "otp_sync.py::class:OTPSync",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_function",
+      "name": "__post_init__",
+      "source_file": "otp_sync.py",
+      "signature": "otp_sync.py::def:__post_init__",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "to_dict",
+      "source_file": "otp_sync.py",
+      "signature": "otp_sync.py::def:to_dict",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "from_dict",
+      "source_file": "otp_sync.py",
+      "signature": "otp_sync.py::def:from_dict",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "__init__",
+      "source_file": "otp_sync.py",
+      "signature": "otp_sync.py::def:__init__",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_ensure_state_dir",
+      "source_file": "otp_sync.py",
+      "signature": "otp_sync.py::def:_ensure_state_dir",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_init_default_sessions",
+      "source_file": "otp_sync.py",
+      "signature": "otp_sync.py::def:_init_default_sessions",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_load_state",
+      "source_file": "otp_sync.py",
+      "signature": "otp_sync.py::def:_load_state",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_save_state",
+      "source_file": "otp_sync.py",
+      "signature": "otp_sync.py::def:_save_state",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_log",
+      "source_file": "otp_sync.py",
+      "signature": "otp_sync.py::def:_log",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_hash_state",
+      "source_file": "otp_sync.py",
+      "signature": "otp_sync.py::def:_hash_state",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "update_os_session",
+      "source_file": "otp_sync.py",
+      "signature": "otp_sync.py::def:update_os_session",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "sync_all_lines",
+      "source_file": "otp_sync.py",
+      "signature": "otp_sync.py::def:sync_all_lines",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_function",
+      "name": "_detect_conflict_fields",
+      "source_file": "otp_sync.py",
+      "signature": "otp_sync.py::def:_detect_conflict_fields",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "resolve_conflict",
+      "source_file": "otp_sync.py",
+      "signature": "otp_sync.py::def:resolve_conflict",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_session_diff",
+      "source_file": "otp_sync.py",
+      "signature": "otp_sync.py::def:get_session_diff",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "checkpoint",
+      "source_file": "otp_sync.py",
+      "signature": "otp_sync.py::def:checkpoint",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "FileStatus",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::class:FileStatus",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "SyncPriority",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::class:SyncPriority",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_class",
+      "name": "ConflictResolution",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::class:ConflictResolution",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "class",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::class:class",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "SyncState",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::class:SyncState",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_class",
+      "name": "PushQueue",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::class:PushQueue",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "ConflictResolver",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::class:ConflictResolver",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "SnapshotManager",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::class:SnapshotManager",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "SyncEngine",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::class:SyncEngine",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_function",
+      "name": "to_dict",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::def:to_dict",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "from_dict",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::def:from_dict",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "compute_sha256",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::def:compute_sha256",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_file_info",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::def:get_file_info",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "matches_ignore_patterns",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::def:matches_ignore_patterns",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "ensure_dir",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::def:ensure_dir",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "timestamp_now",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::def:timestamp_now",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "format_duration_ms",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::def:format_duration_ms",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "__init__",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::def:__init__",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_load",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::def:_load",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "save",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::def:save",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "scan",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::def:scan",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_infer_priority",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::def:_infer_priority",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "mark_synced",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::def:mark_synced",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_function",
+      "name": "mark_frozen",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::def:mark_frozen",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_status",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::def:get_status",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_dirty_files",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::def:get_dirty_files",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_stats",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::def:get_stats",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "enqueue",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::def:enqueue",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "enqueue_many",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::def:enqueue_many",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "dequeue",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::def:dequeue",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "dequeue_batch",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::def:dequeue_batch",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "is_empty",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::def:is_empty",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "size",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::def:size",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "clear",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::def:clear",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_history",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::def:get_history",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "record_push",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::def:record_push",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "detect_conflict",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::def:detect_conflict",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "resolve",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::def:resolve",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_generate_conflict_report",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::def:_generate_conflict_report",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_unresolved",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::def:get_unresolved",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_snapshot_path",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::def:_snapshot_path",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "create",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::def:create",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_cleanup",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::def:_cleanup",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "restore",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::def:restore",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "list_snapshots",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::def:list_snapshots",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "create_session_snapshot",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::def:create_session_snapshot",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "create_pre_push_snapshot",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::def:create_pre_push_snapshot",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "create_daily_snapshot",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::def:create_daily_snapshot",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "init",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::def:init",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_count_by_priority",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::def:_count_by_priority",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "push",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::def:push",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_push_single",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::def:_push_single",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_generate_commit_hash",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::def:_generate_commit_hash",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "rollback",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::def:rollback",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "status",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::def:status",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "report",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::def:report",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_log_event",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::def:_log_event",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_events",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::def:get_events",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "start_daemon",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::def:start_daemon",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "daemon_loop",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::def:daemon_loop",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "stop_daemon",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::def:stop_daemon",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "cleanup",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::def:cleanup",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "run_cli",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::def:run_cli",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "run_tests",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::def:run_tests",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "foo",
+      "source_file": "v11_sync_engine.py",
+      "signature": "v11_sync_engine.py::def:foo",
+      "relevance": 0.5
+    }
+  ],
+  "node_count": 127,
+  "si_level": 1,
+  "activity_level": 0.5494,
+  "contribution_score": 0.5051
+}

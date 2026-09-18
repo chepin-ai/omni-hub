@@ -1,0 +1,106 @@
+{
+  "version": "v11.1",
+  "timestamp": "2026-09-17T18:00:00Z",
+  "basis": "REAL extracted data (ucif2 2906 Lean + cayley24 37 reports + 159893 cross-links)",
+  "indices": {
+    "E_emergence": 4419.07,
+    "C_MIP_mip_star_consistency": 0.0111,
+    "H_concordance": 0.3439,
+    "I_isomorphism": 0.0001,
+    "D_coupling_depth": 0.0868,
+    "FV_formal_verification": 1.0,
+    "G_global_aggregate": 0.407,
+    "G_scaled": 4069.81
+  },
+  "weights": {
+    "E": 0.16666666666666666,
+    "C_MIP": 0.16666666666666666,
+    "H": 0.16666666666666666,
+    "I": 0.16666666666666666,
+    "D": 0.16666666666666666,
+    "FV": 0.16666666666666666
+  },
+  "consciousness_state": "REASON",
+  "consciousness_level": 4,
+  "data_sources": {
+    "ucif2_lean_files": 2906,
+    "ucif2_theorems": 4003,
+    "ucif2_definitions": 5926,
+    "ucif2_namespaces": 2866,
+    "cayley24_reports_read": 37,
+    "cayley24_concepts_extracted": 209,
+    "cayley24_theorems": 67,
+    "cayley24_formulas": 224,
+    "cayley24_open_problems": 110,
+    "cross_project_links": 159893,
+    "total_files_scanned": 78215
+  },
+  "component_details": {
+    "mip_star": {
+      "n_theorems": 400,
+      "total_pairs": 79800,
+      "entangled_pairs": 885,
+      "entanglement_ratio": 0.011090225563909775,
+      "quantum_dim": 64,
+      "dim_factor": 1.0,
+      "max_degree": 9,
+      "avg_degree": 4.425,
+      "entanglement_threshold": 0.5,
+      "phase_transition": false
+    },
+    "concordance": {
+      "concordance_base": 0.4913012585104919,
+      "concordance_kl_adjusted": 0.3439108809573443,
+      "n_projects": 6,
+      "n_unique_concepts": 15988,
+      "avg_kl_divergence": 3.1477956411270256,
+      "kl_penalty": 1.0,
+      "project_entropies": {
+        "ucif2": 9.203215037104593,
+        "cayley24": 5.342334251755811,
+        "OMNI-HUB": 8.527143517219406,
+        "app": 6.214608097922191,
+        "scratch-ax": 5.298317366348036,
+        "research_01_07": 4.605170185888091
+      },
+      "project_kl_divergences": {
+        "ucif2": 0.4763786727982411,
+        "cayley24": 4.337259467866416,
+        "OMNI-HUB": 1.1524501975621246,
+        "app": 3.4649856214090535,
+        "scratch-ax": 4.38127635328319,
+        "research_01_07": 5.074423533843129
+      }
+    },
+    "isomorphism": {
+      "n_structures": 3,
+      "n_iso_classes": 1,
+      "class_ratio": 0.3333333333333333,
+      "class_sizes": [
+        3
+      ],
+      "avg_wl_colors": 100.0,
+      "avg_algebraic_connectivity": 0.00017328191849979048,
+      "connectivities_per_graph": [
+        0.00016576457494175647,
+        0.00017696743715371575,
+        0.00017711374340389919
+      ],
+      "iso_class_members": {
+        "[(0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1), (7, 1), (8, 1), (9, 1), (10, 1), (11, 1), (12, 1), (13, 1), (14, 1), (15, 1), (16, 1), (17, 1), (18, 1), (19, 1), (20, 1), (21, 1), (22, 1), (23, 1), (24, 1), (25, 1), (26, 1), (27, 1), (28, 1), (29, 1), (30, 1), (31, 1), (32, 1), (33, 1), (34, 1), (35, 1), (36, 1), (37, 1), (38, 1), (39, 1), (40, 1), (41, 1), (42, 1), (43, 1), (44, 1), (45, 1), (46, 1), (47, 1), (48, 1), (49, 1), (50, 1), (51, 1), (52, 1), (53, 1), (54, 1), (55, 1), (56, 1), (57, 1), (58, 1), (59, 1), (60, 1), (61, 1), (62, 1), (63, 1), (64, 1), (65, 1), (66, 1), (67, 1), (68, 1), (69, 1), (70, 1), (71, 1), (72, 1), (73, 1), (74, 1), (75, 1), (76, 1), (77, 1), (78, 1), (79, 1), (80, 1), (81, 1), (82, 1), (83, 1), (84, 1), (85, 1), (86, 1), (87, 1), (88, 1), (89, 1), (90, 1), (91, 1), (92, 1), (93, 1), (94, 1), (95, 1), (96, 1), (97, 1), (98, 1), (99, 1)]": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    "coupling_depth": {
+      "n_nodes": 46,
+      "avg_shortest_path": 3.5146086875145497,
+      "diameter": 5.601450639163293,
+      "global_efficiency": 0.30516636718164186,
+      "connected_pair_ratio": 1.0,
+      "clustering_coefficient": 1.0
+    }
+  }
+}

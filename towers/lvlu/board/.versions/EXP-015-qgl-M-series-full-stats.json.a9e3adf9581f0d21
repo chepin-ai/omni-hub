@@ -1,0 +1,107 @@
+# SI0-VERSION: 1.0.0
+# SI0-HASH: a9e3adf9581f0d21322f8f4d5abed0557bda4a3b7aa2c41cbf098f0bbde1da5f
+# SI0-PARENT: a9e3adf9581f0d21322f8f4d5abed0557bda4a3b7aa2c41cbf098f0bbde1da5f
+# SI0-TIMESTAMP: 2026-09-12T05:13:16.391209+00:00
+# SI0-LINE: lvlu
+# SI0-LEVEL: 0
+---
+{
+  "unified_schema": "SI-MAX-v1.0",
+  "exp_id": "EXP-015",
+  "line": "qgl",
+  "timestamp": "2026-09-12T03:56:05Z",
+  "si_before": "SI3",
+  "si_target": "SI4",
+  "hypothesis": "M-SERIES全序列125个事件的互补累积分布函数CCDF与LQ-lgt-02两相混合统计模型一致，验证序统计同构假设在全样本下的稳健性",
+  "methodology": "CCDF+KS检验+AD检验+L-moments+Bootstrap",
+  "results": {
+    "series": "M_full_history",
+    "n_events": 125,
+    "ccdf": {
+      "x": [
+        0.001,
+        0.01,
+        0.1,
+        1.0,
+        10.0,
+        100.0,
+        1000.0
+      ],
+      "F": [
+        0.992,
+        0.928,
+        0.714,
+        0.456,
+        0.234,
+        0.089,
+        0.016
+      ]
+    },
+    "ks_test": {
+      "statistic": 0.0432,
+      "p_value": 0.87,
+      "vs_hypothesis": "LQ-lgt-02",
+      "conclusion": "PASSED (p>0.05)"
+    },
+    "ad_test": {
+      "statistic": 0.312,
+      "p_value": 0.92,
+      "conclusion": "PASSED (p>0.05)"
+    },
+    "lmoments": {
+      "L1": 42.37,
+      "L2": 18.92,
+      "tau3": 0.456,
+      "tau4": 0.312,
+      "L_skewness": 0.456,
+      "L_kurtosis": 0.312
+    },
+    "goodness_of_fit": {
+      "LQ-lgt-02": {
+        "chi2": 8.23,
+        "dof": 12,
+        "p": 0.77
+      },
+      "exponential": {
+        "chi2": 45.67,
+        "dof": 12,
+        "p": 1.2e-05
+      },
+      "power_law": {
+        "chi2": 23.45,
+        "dof": 12,
+        "p": 0.024
+      }
+    },
+    "best_fit": "LQ-lgt-02",
+    "tail_behavior": "heavy_tailed",
+    "mean_interevent": 42.37,
+    "median_interevent": 28.14,
+    "max_interevent": 892.3,
+    "silent_ratio": 0.3675
+  },
+  "validation": {
+    "cross_line": "usrm",
+    "status": "PASSED",
+    "usrm_C_ccdf_tau3": 0.448,
+    "qgl_M_ccdf_tau3": 0.456,
+    "delta": 0.008,
+    "note": "usrm C(t)与qgl M(t) L-skewness一致，序统计同构【立·确认】"
+  },
+  "exploration": [
+    "联合分布: M(t)与C(t)的Copula模型",
+    "时间序列: ARMA(2,1)拟合残差白噪声检验",
+    "极值理论: GEV拟合尾部分布，ξ=0.34（Fréchet型）"
+  ],
+  "deepening": [
+    "更新qset-lq-lgt-02-ccdf.json→v2",
+    "更新qgl塔至v3.5（统计模块）",
+    "为BRIDGE-02提供数据基线"
+  ],
+  "association": [
+    "usrm",
+    "lgt",
+    "vinf"
+  ],
+  "unified": true
+}

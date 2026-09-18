@@ -1,0 +1,10 @@
+{
+  "id": "TASK-qlv-20260912T094610-9270",
+  "timestamp": "2026-09-12T09:46:10.215511+00:00",
+  "from": "ucif2",
+  "to": "qlv",
+  "type": "EXPERIMENT",
+  "priority": 1,
+  "description": "EXP-023: binmap-v3 deployment to all lines",
+  "deadline": 4
+}

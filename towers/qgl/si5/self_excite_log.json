@@ -1,0 +1,23 @@
+{
+  "entries": [
+    {
+      "line": "qgl",
+      "ts": "2026-09-12T05:04:59.155122+00:00",
+      "trigger_type": "silence_timeout",
+      "mode": "introspection",
+      "output": {
+        "line": "qgl",
+        "ts": "2026-09-12T05:04:59.170888+00:00",
+        "period": "last_10_messages",
+        "message_count": 1,
+        "summary": [
+          {
+            "file": "msg_dbb3e039-3777-4efe-beb6-97a853477661.json",
+            "summary": "{'envelope': {'msg_id': 'dbb3e039-3777-4efe-beb6-97a853477661', 'version': 'SI2-v1.0', 'timestamp': '2026-09-12T05:04:48.759966+00:00', 'ttl': 300, 'priority': 3, 'source': {'line': 'vinf', 'si_level'"
+          }
+        ],
+        "insight": "Line qgl has processed 1 messages recently. Health: 1.0"
+      }
+    }
+  ]
+}

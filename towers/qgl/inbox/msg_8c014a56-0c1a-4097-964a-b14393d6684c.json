@@ -1,0 +1,32 @@
+{
+  "envelope": {
+    "msg_id": "8c014a56-0c1a-4097-964a-b14393d6684c",
+    "version": "SI2-v1.0",
+    "timestamp": "2026-09-12T05:13:09.862501+00:00",
+    "ttl": 300,
+    "priority": 3,
+    "source": {
+      "line": "vinf",
+      "si_level": 2
+    },
+    "target": {
+      "line": "qgl",
+      "si_level": 2,
+      "broadcast": false
+    }
+  },
+  "payload": {
+    "type": "TASK",
+    "task_id": "608da66c-2cff-478f-b693-7cd6195abbde",
+    "content": {
+      "type": "cross_loop",
+      "description": "Cross-loop from vinf to qgl"
+    },
+    "dependencies": [],
+    "deadline": ""
+  },
+  "signature": {
+    "hash": "4c648ee9949f55aaaea3b4bef6e031aced7e21666e1a78b5d64e4c390bf00b1d",
+    "chain_hash": ""
+  }
+}

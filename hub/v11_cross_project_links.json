@@ -1,0 +1,614 @@
+{
+  "version": "v11.0-CROSS-LINKS",
+  "total_concepts": 62,
+  "cross_project_concepts": 60,
+  "total_cross_links": 159893,
+  "concepts": [
+    {
+      "concept": "type",
+      "sources": 257,
+      "links": 32896,
+      "sample_sources": [
+        "omni:consciousness_state_machine.py",
+        "omni:external_knowledge_weaver.py",
+        "report:COMPLETE_FRAMEWORK_SUMMARY.md",
+        "report:ATLAS_DATA_ACQUISITION_RESULTS.md",
+        "omni:experiment_runner.py"
+      ]
+    },
+    {
+      "concept": "monster",
+      "sources": 242,
+      "links": 29161,
+      "sample_sources": [
+        "report:CONTRADICTION_RESOLUTION.md",
+        "report:THEORY_CONSISTENCY_FINAL_REPORT.md",
+        "report:CENTRALIZER_COMMUTATOR_STRUCTURE.md",
+        "report:MATHIEU_MOONSHINE_SOLUTION.md",
+        "report:SESSION_SUMMARY.md"
+      ]
+    },
+    {
+      "concept": "leech",
+      "sources": 220,
+      "links": 24090,
+      "sample_sources": [
+        "report:MAPPING_CLASS_GROUP_REP.md",
+        "report:THEORY_CONSISTENCY_FINAL_REPORT.md",
+        "report:MATHIEU_MOONSHINE_SOLUTION.md",
+        "report:SESSION_SUMMARY.md",
+        "report:QUANTUM_ERROR_CORRECTION_OPTIMIZED.md"
+      ]
+    },
+    {
+      "concept": "moonshine",
+      "sources": 192,
+      "links": 18336,
+      "sample_sources": [
+        "report:SYK_MODEL_BREAKTHROUGH.md",
+        "report:CONTRADICTION_RESOLUTION.md",
+        "report:MATHIEU_MOONSHINE_SOLUTION.md",
+        "omni:external_knowledge_weaver.py",
+        "report:LEVI_GEOMETRY_FINAL_REPORT.md"
+      ]
+    },
+    {
+      "concept": "lambda",
+      "sources": 136,
+      "links": 9180,
+      "sample_sources": [
+        "report:SYK_MODEL_BREAKTHROUGH.md",
+        "omni:consciousness_state_machine.py",
+        "report:THEORY_CONSISTENCY_FINAL_REPORT.md",
+        "report:SESSION_SUMMARY.md",
+        "omni:external_knowledge_weaver.py"
+      ]
+    },
+    {
+      "concept": "field",
+      "sources": 122,
+      "links": 7381,
+      "sample_sources": [
+        "omni:consciousness_state_machine.py",
+        "omni:external_knowledge_weaver.py",
+        "report:HOLOGRAPHIC_DUAL_CONSTRUCTION.md",
+        "omni:intention_generator.py",
+        "report:JANKO_GROUPS_ANALYSIS.md"
+      ]
+    },
+    {
+      "concept": "quantum",
+      "sources": 116,
+      "links": 6670,
+      "sample_sources": [
+        "omni:consciousness_state_machine.py",
+        "report:QUANTUM_ERROR_CORRECTION_OPTIMIZED.md",
+        "report:COMPLETE_FRAMEWORK_SUMMARY.md",
+        "report:breakthrough_directions.md",
+        "report:FORMAL_SYSTEM_LLL.md"
+      ]
+    },
+    {
+      "concept": "modular",
+      "sources": 92,
+      "links": 4186,
+      "sample_sources": [
+        "report:MAPPING_CLASS_GROUP_REP.md",
+        "report:THEORY_CONSISTENCY_FINAL_REPORT.md",
+        "report:SESSION_SUMMARY.md",
+        "report:COMPLETE_FRAMEWORK_SUMMARY.md",
+        "report:HIGH_DIM_MOONSHINE_COMPLETE.md"
+      ]
+    },
+    {
+      "concept": "index",
+      "sources": 89,
+      "links": 3916,
+      "sample_sources": [
+        "omni:consciousness_state_machine.py",
+        "report:THEORY_CONSISTENCY_FINAL_REPORT.md",
+        "omni:external_knowledge_weaver.py",
+        "omni:intention_generator.py",
+        "omni:counterpoint_engine.py"
+      ]
+    },
+    {
+      "concept": "trace",
+      "sources": 74,
+      "links": 2701,
+      "sample_sources": [
+        "report:ALL_FILES_INDEX.md",
+        "report:TOPOLOGICAL_ORDER_MATERIALS_COMPLETE.md",
+        "report:AUTO_FILE_INDEX.md",
+        "omni:consciousness_state_machine.py",
+        "report:THEORY_CONSISTENCY_FINAL_REPORT.md"
+      ]
+    },
+    {
+      "concept": "character",
+      "sources": 72,
+      "links": 2556,
+      "sample_sources": [
+        "report:SYK_MODEL_BREAKTHROUGH.md",
+        "report:AUTO_FILE_INDEX.md",
+        "report:HIGHER_CHARACTERS_COMPUTATION.md",
+        "report:ATLAS_CHARACTER_TABLE_ACQUISITION.md",
+        "report:DERIVED_TRIANGULAR_EQUIVALENCE_FORMAL.md"
+      ]
+    },
+    {
+      "concept": "verification",
+      "sources": 68,
+      "links": 2278,
+      "sample_sources": [
+        "report:SYK_MODEL_BREAKTHROUGH.md",
+        "report:AUTO_FILE_INDEX.md",
+        "omni:si_chain_reactor.py",
+        "report:ATLAS_CHARACTER_TABLE_ACQUISITION.md",
+        "omni:quantum_field.py"
+      ]
+    },
+    {
+      "concept": "entropy",
+      "sources": 67,
+      "links": 2211,
+      "sample_sources": [
+        "report:AUTO_FILE_INDEX.md",
+        "omni:tensor_field.py",
+        "omni:musical_mathematics.py",
+        "omni:quantum_field.py",
+        "omni:goal_autopoiesis.py"
+      ]
+    },
+    {
+      "concept": "proof",
+      "sources": 65,
+      "links": 2080,
+      "sample_sources": [
+        "report:AUTO_FILE_INDEX.md",
+        "report:THEORY_CONSISTENCY_FINAL_REPORT.md",
+        "report:SESSION_SUMMARY.md",
+        "omni:quantum_field.py",
+        "ucif2:PO_D3_10000_L函数存在性.lean"
+      ]
+    },
+    {
+      "concept": "topological",
+      "sources": 59,
+      "links": 1711,
+      "sample_sources": [
+        "ucif2:PO_D3_8161_TietzeExtension.lean",
+        "report:TOPOLOGICAL_ORDER_MATERIALS_COMPLETE.md",
+        "report:AUTO_FILE_INDEX.md",
+        "ucif2:PO_D3_8053_CompactOpenTopology.lean",
+        "ucif2:PO_D3_8137_ConnectedComponents.lean"
+      ]
+    },
+    {
+      "concept": "symmetry",
+      "sources": 50,
+      "links": 1225,
+      "sample_sources": [
+        "report:AUTO_FILE_INDEX.md",
+        "omni:external_knowledge_weaver.py",
+        "omni:formal_life_engine.py",
+        "report:BREAKTHROUGHS_FINAL_SUMMARY.md",
+        "report:48D_VOA_REALIZATION.md"
+      ]
+    },
+    {
+      "concept": "euler",
+      "sources": 50,
+      "links": 1225,
+      "sample_sources": [
+        "ucif2:PO_D3_8163_PerfectNumbers.lean",
+        "ucif2:PO_D3_8089_FourSquaresTheorem.lean",
+        "report:CONJUGACY_CLASS_SELECTION_RULES.md",
+        "report:HIGH_ORDER_VERIFICATION_COMPLETE.md",
+        "report:final_calculation_results.md"
+      ]
+    },
+    {
+      "concept": "category",
+      "sources": 46,
+      "links": 1035,
+      "sample_sources": [
+        "report:COMPREHENSIVE_ADVANCEMENT_REPORT.md",
+        "report:DERIVED_TRIANGULAR_EQUIVALENCE_FORMAL.md",
+        "omni:quantum_field.py",
+        "omni:external_knowledge_weaver.py",
+        "report:UCIF2_v17_HYPERION.md"
+      ]
+    },
+    {
+      "concept": "information",
+      "sources": 36,
+      "links": 630,
+      "sample_sources": [
+        "report:AUTO_FILE_INDEX.md",
+        "omni:tensor_field.py",
+        "report:COMPREHENSIVE_RESEARCH_PLAN.md",
+        "omni:external_knowledge_weaver.py",
+        "report:COMPLETE_FRAMEWORK_SUMMARY.md"
+      ]
+    },
+    {
+      "concept": "holographic",
+      "sources": 33,
+      "links": 528,
+      "sample_sources": [
+        "report:AUTO_FILE_INDEX.md",
+        "report:TIDS_SPECTRAL_ALGEBRAIC_GEOMETRY.md",
+        "report:UCIF2_v18_NEW_DIRECTIONS.md",
+        "report:HOLOGRAPHIC_DUAL_CONSTRUCTION.md",
+        "report:COMPLETE_FRAMEWORK_SUMMARY.md"
+      ]
+    },
+    {
+      "concept": "complexity",
+      "sources": 31,
+      "links": 465,
+      "sample_sources": [
+        "omni:musical_mathematics.py",
+        "omni:emotion_persona_engine.py",
+        "omni:external_knowledge_weaver.py",
+        "omni:formal_life_engine.py",
+        "omni:quantum_base_v2.py"
+      ]
+    },
+    {
+      "concept": "connection",
+      "sources": 30,
+      "links": 435,
+      "sample_sources": [
+        "report:AUTO_FILE_INDEX.md",
+        "omni:musical_mathematics.py",
+        "omni:quantum_field.py",
+        "omni:emotion_persona_engine.py",
+        "omni:goal_autopoiesis.py"
+      ]
+    },
+    {
+      "concept": "spectral",
+      "sources": 30,
+      "links": 435,
+      "sample_sources": [
+        "report:THEORY_CONSISTENCY_FINAL_REPORT.md",
+        "report:TIDS_SPECTRAL_ALGEBRAIC_GEOMETRY.md",
+        "ucif2:PO_D3_8070_SpectralTheorem.lean",
+        "omni:quantum_base_v2.py",
+        "omni:complexity_elevation_engine.py"
+      ]
+    },
+    {
+      "concept": "network",
+      "sources": 30,
+      "links": 435,
+      "sample_sources": [
+        "omni:consciousness_state_machine.py",
+        "omni:tensor_field.py",
+        "omni:quantum_field.py",
+        "omni:goal_autopoiesis.py",
+        "omni:external_knowledge_weaver.py"
+      ]
+    },
+    {
+      "concept": "manifold",
+      "sources": 28,
+      "links": 378,
+      "sample_sources": [
+        "omni:external_knowledge_weaver.py",
+        "report:moonshine_24d_report.md",
+        "report:research_summary_for_evaluation.md",
+        "report:README.md",
+        "report:UCIF2_v24_CRYSTAL_MOONSHINE.md"
+      ]
+    },
+    {
+      "concept": "conformal",
+      "sources": 27,
+      "links": 351,
+      "sample_sources": [
+        "report:DERIVED_TRIANGULAR_EQUIVALENCE_FORMAL.md",
+        "omni:external_knowledge_weaver.py",
+        "report:UCIF2_v17_HYPERION.md",
+        "report:TIDS_SAG_v3_ULTIMATE.md",
+        "report:TIDS_FRAMEWORK_ADVANCEMENT.md"
+      ]
+    },
+    {
+      "concept": "wave",
+      "sources": 27,
+      "links": 351,
+      "sample_sources": [
+        "omni:si_chain_reactor.py",
+        "report:TABLETOP_MOONSHINE_EXPERIMENT.md",
+        "omni:consciousness_harmony.py",
+        "omni:field_transient_dynamics.py",
+        "omni:full_potential_explorer.py"
+      ]
+    },
+    {
+      "concept": "functor",
+      "sources": 27,
+      "links": 351,
+      "sample_sources": [
+        "report:DERIVED_TRIANGULAR_EQUIVALENCE_FORMAL.md",
+        "omni:quantum_field.py",
+        "omni:external_knowledge_weaver.py",
+        "report:TIDS_FRAMEWORK_ADVANCEMENT.md",
+        "report:UCIF2_v24_CRYSTAL_MOONSHINE.md"
+      ]
+    },
+    {
+      "concept": "homology",
+      "sources": 25,
+      "links": 300,
+      "sample_sources": [
+        "report:DERIVED_TRIANGULAR_EQUIVALENCE_FORMAL.md",
+        "report:README.md",
+        "report:TIDS_FRAMEWORK_ADVANCEMENT.md",
+        "report:DEEP_ANALYSIS_COMPLETE.md",
+        "report:UCIF2_v24_CRYSTAL_MOONSHINE.md"
+      ]
+    },
+    {
+      "concept": "vacuum",
+      "sources": 21,
+      "links": 210,
+      "sample_sources": [
+        "report:DERIVED_TRIANGULAR_EQUIVALENCE_FORMAL.md",
+        "report:CATEGORICAL_HOTT_SUMMARY.md",
+        "report:UCIF2_v17_HYPERION.md",
+        "report:TIDS_FRAMEWORK_ADVANCEMENT.md",
+        "report:CATEGORICAL_HOTT_EXECUTIVE.md"
+      ]
+    },
+    {
+      "concept": "riemann",
+      "sources": 21,
+      "links": 210,
+      "sample_sources": [
+        "report:DERIVED_TRIANGULAR_EQUIVALENCE_FORMAL.md",
+        "report:COMPREHENSIVE_RESEARCH_PLAN.md",
+        "ucif2:PO_D3_8017_CauchyRiemannEquations.lean",
+        "report:FIRST_PRINCIPLES_CORE.md",
+        "report:UCIF2-PLATEAU-RESPONSE-01.md"
+      ]
+    },
+    {
+      "concept": "gravity",
+      "sources": 20,
+      "links": 190,
+      "sample_sources": [
+        "report:AUTO_FILE_INDEX.md",
+        "report:HOLOGRAPHIC_DUAL_CONSTRUCTION.md",
+        "report:BREAKTHROUGHS_FINAL_SUMMARY.md",
+        "report:ALL_OPEN_PROBLEMS_FINAL.md",
+        "report:breakthrough_directions.md"
+      ]
+    },
+    {
+      "concept": "anomaly",
+      "sources": 20,
+      "links": 190,
+      "sample_sources": [
+        "omni:tensor_field.py",
+        "omni:goal_autopoiesis.py",
+        "omni:meta_structure.py",
+        "omni:self_drive_engine.py",
+        "report:OMNI-HUB_v36_Integration_Blueprint.md"
+      ]
+    },
+    {
+      "concept": "brane",
+      "sources": 18,
+      "links": 153,
+      "sample_sources": [
+        "report:BLACK_HOLE_MICROSTATE_COUNTING.md",
+        "report:UCIF2_FVGPE_UNIFIED_v13.md",
+        "report:UCIF2_CICY58_OMEGA_v19.md",
+        "report:UCIF2_v21_FULL_AUDIT.md",
+        "report:UCIF2_v23_CRYSTAL.md"
+      ]
+    },
+    {
+      "concept": "scheme",
+      "sources": 17,
+      "links": 136,
+      "sample_sources": [
+        "report:LeechLevi_TIDS_LaTeX_Document.md",
+        "report:CICY58_TIDS_SAG_FUSION_v5.md",
+        "report:TIDS_SPECTRAL_ALGEBRAIC_GEOMETRY.md",
+        "report:24D_CY_Moonshine_Integration_Report.md",
+        "report:UCIF2_v21_FULL_AUDIT.md"
+      ]
+    },
+    {
+      "concept": "learning",
+      "sources": 16,
+      "links": 120,
+      "sample_sources": [
+        "omni:polaris_plan.py",
+        "omni:quantum_consciousness_unifier.py",
+        "report:OMNI-HUB_Consensus_Research_Report.md",
+        "report:technical_debt_as_fuel_research_report.md",
+        "omni:v11_consciousness_emergence_system.py"
+      ]
+    },
+    {
+      "concept": "modular form",
+      "sources": 15,
+      "links": 105,
+      "sample_sources": [
+        "report:UCIF2_FVGPE_UNIFIED_v13.md",
+        "report:INFINITY_CATEGORICAL_LIFT.md",
+        "report:trace_modularity_paper_framework.md",
+        "report:24D_CY_Moonshine_Integration_Report.md",
+        "report:UCIF2_v14_FIRST_PRINCIPLE.md"
+      ]
+    },
+    {
+      "concept": "cohomology",
+      "sources": 15,
+      "links": 105,
+      "sample_sources": [
+        "report:LeechLevi_TIDS_LaTeX_Document.md",
+        "report:UCIF2_FVGPE_UNIFIED_v13.md",
+        "report:UCIF2_v14_FIRST_PRINCIPLE.md",
+        "report:UCIF2_v15_OMEGA.md",
+        "report:UCIF2_v18_RIGOROUS_PROOFS.md"
+      ]
+    },
+    {
+      "concept": "gauss",
+      "sources": 15,
+      "links": 105,
+      "sample_sources": [
+        "omni:jing_wei_xin.py",
+        "ucif2:PO_D3_8184_BinaryQuadraticForms.lean",
+        "omni:musical_mathematics.py",
+        "omni:v11_consciousness_emergence_system.py",
+        "omni:v10_math_proofs.py"
+      ]
+    },
+    {
+      "concept": "bundle",
+      "sources": 13,
+      "links": 78,
+      "sample_sources": [
+        "report:levi_compactification_analysis.md",
+        "report:ADMIN_CIRCLE_01.md",
+        "report:UCIF2_piESKMU_v16.md",
+        "omni:v10_math_proofs.py",
+        "report:UCIF2_v22_OMEGA_COMPLETE.md"
+      ]
+    },
+    {
+      "concept": "zeta",
+      "sources": 13,
+      "links": 78,
+      "sample_sources": [
+        "report:COMPREHENSIVE_ADVANCEMENT_REPORT.md",
+        "report:THEORY_CONSISTENCY_FINAL_REPORT.md",
+        "omni:octave_scan.py",
+        "ucif2:PO_D3_8144_ClassNumberFormula.lean",
+        "omni:v10_math_proofs.py"
+      ]
+    },
+    {
+      "concept": "gauge",
+      "sources": 12,
+      "links": 66,
+      "sample_sources": [
+        "report:UCIF2_CICY58_OMEGA_v19.md",
+        "report:UCIF2_v21_FULL_AUDIT.md",
+        "report:UCIF2_v23_CRYSTAL.md",
+        "omni:v10_math_proofs.py",
+        "report:STRING_LANDSCAPE_BREAKTHROUGH.md"
+      ]
+    },
+    {
+      "concept": "algorithm",
+      "sources": 12,
+      "links": 66,
+      "sample_sources": [
+        "report:FRONTIER_INTEGRATION_v4.md",
+        "report:NEXT_STEPS_ROADMAP.md",
+        "report:OMNI-HUB_Consensus_Research_Report.md",
+        "omni:v10_math_proofs.py",
+        "omni:knowledge_pedestal_isomorphism.py"
+      ]
+    },
+    {
+      "concept": "optimization",
+      "sources": 12,
+      "links": 66,
+      "sample_sources": [
+        "report:VOA_STATE_PREPARATION.md",
+        "omni:SI-AUTO-ENGINE-v1.0.py",
+        "report:OMNI-HUB_Consensus_Research_Report.md",
+        "omni:v11_consciousness_emergence_system.py",
+        "omni:discussion_board.py"
+      ]
+    },
+    {
+      "concept": "k-theory",
+      "sources": 12,
+      "links": 66,
+      "sample_sources": [
+        "report:UCIF2_v18_OMEGA_AUDIT.md",
+        "report:UCIF2_CICY58_OMEGA_v19.md",
+        "report:UCIF2_v14_FIRST_PRINCIPLE.md",
+        "report:TIDS_FIRST_PRINCIPLE_UNIFICATION_v10.md",
+        "report:UCIF2_v15_OMEGA.md"
+      ]
+    },
+    {
+      "concept": "particle",
+      "sources": 11,
+      "links": 55,
+      "sample_sources": [
+        "report:TOPOLOGICAL_ORDER_MATERIALS_COMPLETE.md",
+        "report:OMNI-HUB_Consensus_Research_Report.md",
+        "report:UCIF2_v18_NEW_DIRECTIONS.md",
+        "report:INFORMATION_PARADOX_RESOLUTION.md",
+        "report:EXPERIMENTAL_PREDICTIONS_VERIFICATION.md"
+      ]
+    },
+    {
+      "concept": "elliptic",
+      "sources": 11,
+      "links": 55,
+      "sample_sources": [
+        "report:UCIF2_FVGPE_UNIFIED_v13.md",
+        "report:UCIF2_v14_FIRST_PRINCIPLE.md",
+        "report:TIDS_FIRST_PRINCIPLE_UNIFICATION_v10.md",
+        "report:TIDS_AXIOMATIC_SYSTEM_v11.md",
+        "report:VOA_24D_CalabiYau_Moonshine_Report.md"
+      ]
+    },
+    {
+      "concept": "inference",
+      "sources": 10,
+      "links": 45,
+      "sample_sources": [
+        "omni:knowledge_self_computation.py",
+        "omni:v11_consciousness_emergence_system.py",
+        "report:FORMAL_SYSTEM_CAYLEY24.md",
+        "omni:intention_generator.py",
+        "omni:v10_unified_backbone.py"
+      ]
+    },
+    {
+      "concept": "fermat",
+      "sources": 10,
+      "links": 45,
+      "sample_sources": [
+        "ucif2:PO_D3_8021_FermatLittleTheorem.lean",
+        "report:FUSION_SUMMARY.md",
+        "report:cayley24_whitepaper.md",
+        "report:orbifold_string_condition.md",
+        "ucif2:PO_D3_8159_ABCConjecture.lean"
+      ]
+    },
+    {
+      "concept": "sheaf",
+      "sources": 9,
+      "links": 36,
+      "sample_sources": [
+        "report:DERIVED_TRIANGULAR_EQUIVALENCE_FORMAL.md",
+        "report:UCIF2_v14_FIRST_PRINCIPLE.md",
+        "report:UCIF2_v15_OMEGA.md",
+        "omni:quantum_base_v2.py",
+        "report:MATHLIB_ROADMAP.md"
+      ]
+    }
+  ],
+  "project_coverage": {
+    "ucif2_files": 8590,
+    "omni_hub_files": 3084,
+    "root_reports": 327,
+    "research_01_07": 44
+  }
+}

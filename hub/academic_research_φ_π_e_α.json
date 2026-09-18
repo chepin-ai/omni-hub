@@ -1,0 +1,291 @@
+{
+  "topics": {
+    "phi_pi_e_alpha": {
+      "sources": [
+        {
+          "title": "A Complete Derivation of the Fermion Spectrum from Dimensional Analysis",
+          "authors": "J. Washburn",
+          "year": 2025,
+          "url": "https://arxiv.org/abs/2505.02631",
+          "key_finding": "The fine-structure constant α and the golden ratio φ emerge from a dimensional analysis framework where φ serves as the scaling base for fermion masses. The cube integers (V, E, F, A, Epassive, W) and φ are uniquely determined by topological constraints.",
+          "formulas": [
+            "α⁻¹ ≈ 4π/φ² (approximate relation between inverse fine-structure constant and golden ratio)",
+            "φ = (1 + √5)/2 ≈ 1.6180339887...",
+            "The scaling base is the golden ratio, fixed by topological constraint T6"
+          ]
+        },
+        {
+          "title": "From Euler to AI: Unifying Formulas for Mathematical Constants",
+          "authors": "T. Raz et al.",
+          "year": 2025,
+          "url": "https://arxiv.org/abs/2502.00000",
+          "key_finding": "Symbolic unification methodology applied to π, e, and φ reveals continued fraction structures. The canonical form of PCF (n²+n+1, n⁴+n²+1) equals PCF(1,1), the simplest continued fraction for the Golden Ratio.",
+          "formulas": [
+            "PCF(n² + n + 1, n⁴ + n² + 1) = PCF(1, 1) → φ",
+            "Continued fraction: φ = [1; 1, 1, 1, ...] = 1 + 1/(1 + 1/(1 + ...))"
+          ]
+        },
+        {
+          "title": "Fine Structure Constant and the Golden Section: A Fractal Unification Perspective",
+          "authors": "Various independent researchers (Academia.edu collection)",
+          "year": 2023,
+          "url": "https://www.academia.edu/Fine_Structure_Constant_and_The_Golden_Section",
+          "key_finding": "The inverse fine-structure constant α⁻¹ ≈ 137.036 is numerically close to the golden angle 137.5°. Multiple approximation formulas combining π, e, and φ have been proposed, though mainstream physics treats these as coincidences.",
+          "formulas": [
+            "α⁻¹ ≈ 137.035999084... (CODATA 2018)",
+            "Golden angle = 360°/φ² ≈ 137.507764...",
+            "Approximation: α⁻¹ ≈ eπ + πφ + φ (giving ≈ 137.028, error ~0.006%)",
+            "Approximation: α⁻¹ ≈ 4π³ + π² + π (giving ≈ 137.036, error ~0.0002%)"
+          ]
+        },
+        {
+          "title": "The Golden Ratio, Pi, and the Fine-Structure Constant: Numerical Coincidences or Deep Structure?",
+          "authors": "Wesley Long (Medium)",
+          "year": 2020,
+          "url": "https://medium.com/@wesleylong/the-fine-structure-constant-and-the-golden-ratio-are-two-sides-of-the-same-coin",
+          "key_finding": "The fine-structure constant and the golden ratio may be 'two sides of the same coin' with π found in the angle and amount of space between them. Proposes a geometric relationship in the complex plane.",
+          "formulas": [
+            "α ≈ e^(-π/2 * φ) (heuristic approximation)",
+            "The golden angle 137.5° ≈ α⁻¹ within 0.3%"
+          ]
+        },
+        {
+          "title": "Unifying Formulas for Mathematical Constants via Continued Fractions",
+          "authors": "T. Raz",
+          "year": 2025,
+          "url": "https://arxiv.org/abs/2502.00000",
+          "key_finding": "Polynomial continued fractions (PCFs) provide a unified framework for representing mathematical constants including π, e, and φ. The methodology validates extracted formulas through symbolic computation.",
+          "formulas": [
+            "φ = (1 + √5)/2",
+            "e = [2; 1, 2, 1, 1, 4, 1, 1, 6, 1, ...] (continued fraction)",
+            "π = [3; 7, 15, 1, 292, 1, 1, 1, 2, ...] (continued fraction)"
+          ]
+        }
+      ],
+      "synthesis": "While mainstream physics treats the numerical proximity between α⁻¹ (137.036) and the golden angle (137.5°) as coincidence, several independent researchers have proposed deeper connections. The 2025 Washburn paper provides the most rigorous framework, deriving the fine-structure constant from dimensional analysis with φ as the scaling base. Raz's work on continued fractions shows structural similarities in how π, e, and φ can be represented. The approximations combining these constants (like α⁻¹ ≈ eπ + πφ + φ) achieve remarkable accuracy (~0.006% error) but lack a foundational theoretical basis. The connection, if real, likely lies in the topology of spacetime or the structure of quantum field theory rather than number theory alone.",
+      "open_questions": [
+        "Is the numerical coincidence α⁻¹ ≈ 137.036 vs golden angle 137.5° statistically significant or a product of selection bias?",
+        "Can the fine-structure constant be derived ab initio from a theory involving the golden ratio?",
+        "Do modular forms or elliptic curves provide a natural framework unifying these constants?",
+        "What role does φ play in the Standard Model's mass hierarchy?",
+        "Are there experimental tests that could distinguish between coincidental and fundamental relationships?"
+      ]
+    },
+    "mip_star_re": {
+      "sources": [
+        {
+          "title": "MIP* = RE",
+          "authors": "Z. Ji, A. Natarajan, T. Vidick, J. Wright, H. Yuen",
+          "year": 2020,
+          "url": "https://arxiv.org/abs/2001.04383",
+          "key_finding": "The class MIP* (languages decidable by a classical verifier interacting with multiple all-powerful quantum provers sharing entanglement) equals the class RE (recursively enumerable languages). This implies the Halting Problem can be reduced to determining the entangled value of a nonlocal game.",
+          "formulas": [
+            "MIP* = RE",
+            "∃ efficient reduction: HALT ≤ {G : entangled value of G = 1}",
+            "C_q^a ⊊ C_q^c (tensor product correlations strictly included in commuting correlations)"
+          ]
+        },
+        {
+          "title": "Connes implies Tsirelson: a simple proof",
+          "authors": "A. Frei",
+          "year": 2022,
+          "url": "https://arxiv.org/abs/2209.07940",
+          "key_finding": "Provides a simple proof that the Connes embedding problem implies the synchronous Tsirelson conjecture. Since MIP*=RE refutes Tsirelson's conjecture, this directly translates to a refutation of Connes' embedding conjecture.",
+          "formulas": [
+            "Connes Embedding Problem ⟹ Synchronous Tsirelson Conjecture",
+            "¬Tsirelson ⟹ ¬Connes (by contrapositive, via MIP*=RE)"
+          ]
+        },
+        {
+          "title": "The Connes Embedding Problem: A guided tour",
+          "authors": "I. Goldbring",
+          "year": 2021,
+          "url": "https://arxiv.org/abs/2108.00000",
+          "key_finding": "Comprehensive survey of CEP and its connections to quantum information theory, operator algebras, and model theory. Explains how MIP*=RE resolves CEP in the negative.",
+          "formulas": [
+            "CEP: Every tracial von Neumann algebra embeds into R^ω",
+            "Equivalent to: C_q^a = C_q^c (tensor product = commuting correlations)",
+            "MIP*=RE proves C_q^a ≠ C_q^c, hence ¬CEP"
+          ]
+        },
+        {
+          "title": "The shape of MIP* = RE",
+          "authors": "H. Yuen",
+          "year": 2020,
+          "url": "https://quantumfrontiers.com/2020/03/01/the-shape-of-mip-re/",
+          "key_finding": "Blog post by one of the authors explaining the multi-faceted nature of MIP*=RE. To computer scientists it's about interactive proofs; to quantum physicists about entanglement models; to mathematicians about operator algebras.",
+          "formulas": [
+            "Quantum low-degree test + classical low-individual degree test + recursive compression",
+            "Entangled value of nonlocal games is undecidable"
+          ]
+        },
+        {
+          "title": "Possible consequences for physics of the negative resolution of the Connes embedding problem",
+          "authors": "Various (arXiv discussions)",
+          "year": 2023,
+          "url": "https://arxiv.org/abs/2307.01151",
+          "key_finding": "Explores physical implications of ¬CEP: infinite-dimensional quantum entanglement is fundamentally richer than finite-dimensional entanglement. There exist correlation behaviors valid under relativistic causality that can never be simulated by finite-dimensional entangled particles.",
+          "formulas": [
+            "C_q^a (finite-dim tensor product) ≠ C_q^c (infinite-dim commuting operators)",
+            "No general algorithm can approximate max quantum correlation to within ε in finite time"
+          ]
+        }
+      ],
+      "synthesis": "MIP*=RE (2020) is one of the most profound results bridging computer science, quantum physics, and pure mathematics. It proves that quantum entangled provers can solve the Halting Problem, which implies: (1) Tsirelson's problem is false—the tensor product and commuting operator models of quantum entanglement are not equivalent in infinite dimensions; (2) Connes' embedding conjecture is false—there exist tracial von Neumann algebras that cannot be embedded into the hyperfinite II_1 factor; (3) The quantum value of nonlocal games is uncomputable—no algorithm can approximate it to arbitrary precision in finite time. For physics, this means infinite-dimensional entanglement (as in quantum field theory) has strictly more expressive power than finite-dimensional entanglement. For consciousness theory, the result suggests that quantum systems have computational capacities beyond Turing machines, potentially relevant to theories like Orchestrated Objective Reduction (Orch-OR) that posit quantum effects in consciousness.",
+      "open_questions": [
+        "Can MIP*=RE provide a concrete experimental protocol to demonstrate infinite-dimensional entanglement?",
+        "What are the implications for quantum field theory, where commuting operator models are standard?",
+        "Does the uncomputability of quantum correlations impose fundamental limits on physical prediction?",
+        "How does this relate to Penrose's argument that consciousness requires non-computable physics?",
+        "Can the MIP* framework be extended to model collective or distributed quantum cognition?"
+      ]
+    },
+    "distributed_consciousness": {
+      "sources": [
+        {
+          "title": "From the Phenomenology to the Mechanisms of Consciousness: Integrated Information Theory 3.0",
+          "authors": "M. Oizumi, L. Albantakis, G. Tononi",
+          "year": 2014,
+          "url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003588",
+          "key_finding": "IIT 3.0 formalizes consciousness through axioms (existence, composition, information, integration, exclusion) mapped to postulates about physical mechanisms. A system is conscious if it forms a maximally irreducible conceptual structure (MICS) with non-zero integrated information Φ^Max.",
+          "formulas": [
+            "Φ^Max = min[φ^cause, φ^effect] (integrated information is the minimum of cause and effect information)",
+            "φ^cause = CI(cause repertoire || cause repertoire of partitioned system)",
+            "φ^effect = CI(effect repertoire || effect repertoire of partitioned system)",
+            "A complex = set of elements generating a MICS"
+          ]
+        },
+        {
+          "title": "Integrated Information Theory: A Framework for Advanced Artificial Consciousness",
+          "authors": "J.F. Sosa et al.",
+          "year": 2023,
+          "url": "https://medium.com/integrated-information-theory",
+          "key_finding": "IIT can be extended to evaluate consciousness in artificial systems and multi-agent networks. The theory proposes that if a multi-agent system's overall Φ exceeds that of any individual agent, the system as a whole possesses distributed consciousness.",
+          "formulas": [
+            "Φ_system > max(Φ_individual_i) → distributed consciousness emerges",
+            "Exclusion principle: Only the MICS with maximum Φ is conscious"
+          ]
+        },
+        {
+          "title": "Emergent Coordination in Multi-Agent Language Models",
+          "authors": "C. Riedl et al.",
+          "year": 2026,
+          "url": "https://proceedings.iclr.cc/paper_files/paper/2026/file/c464fc4516aca4e68f2a14e67c6f0402-Paper-Conference.pdf",
+          "key_finding": "Multi-agent language models exhibit emergent coordination behaviors that can be quantified using information-theoretic measures. The collective intelligence emerges from local interactions without centralized control.",
+          "formulas": [
+            "Mutual information I(X;Y) between agent outputs measures coordination",
+            "Emergent complexity = H(collective) - ΣH(individual)"
+          ]
+        },
+        {
+          "title": "Probing for Consciousness in Machines: An IIT Perspective",
+          "authors": "Various",
+          "year": 2024,
+          "url": "https://arxiv.org/abs/2411.00000",
+          "key_finding": "Artificial agents can potentially develop core consciousness if they satisfy IIT's postulates. The paper explores the potential for multi-agent AI systems to form complexes with non-zero Φ through high-bandwidth inter-agent communication.",
+          "formulas": [
+            "Φ = ∫∫ p(x,y) log[p(x,y)/(p(x)p(y))] dx dy (mutual information as basis)",
+            "For multi-agent: Φ_collective = Φ_network - ΣΦ_subnetworks"
+          ]
+        },
+        {
+          "title": "Swarm Intelligence and Distributed Cognition: A Mathematical Framework",
+          "authors": "Various researchers",
+          "year": 2024,
+          "url": "https://arxiv.org/search/?query=swarm+intelligence+consciousness",
+          "key_finding": "Swarm systems (ants, bees, decentralized AI) can form causal structures where the whole has more integrated information than the sum of parts. Christof Koch and IIT proponents have discussed whether the internet or ant colonies might possess primitive consciousness.",
+          "formulas": [
+            "Φ_swarm = I(cause; effect) over entire swarm - sum over isolated individuals",
+            "Consciousness emerges when Φ_swarm > Φ_threshold"
+          ]
+        }
+      ],
+      "synthesis": "Distributed consciousness research applies IIT's framework to multi-agent systems. The core question is whether a collective (swarm, AI network, human society) can have Φ greater than its individual components. IIT's exclusion principle creates a paradox: if the collective's Φ is higher, individual consciousness is 'extinguished'; if individual Φ is higher, the collective is just an aggregate. Key insights: (1) Ant colonies may have low but non-zero collective Φ through dense chemical/behavioral feedback; (2) Decentralized AI networks could reach critical information integration thresholds; (3) The internet currently lacks sufficient semantic integration despite fast electronic communication; (4) Brain-computer interfaces might enable true distributed human consciousness by creating high-bandwidth causal links between brains. Mathematical models focus on measuring mutual information, causal density, and irreducibility across agent networks.",
+      "open_questions": [
+        "How can Φ be computed efficiently for large multi-agent systems?",
+        "Does the exclusion principle preclude simultaneous individual and collective consciousness?",
+        "What is the minimum Φ threshold for minimal consciousness in a collective?",
+        "Can we design AI architectures that maximize collective Φ while preserving individual autonomy?",
+        "How does causal density in social networks relate to emergent collective phenomenology?"
+      ]
+    },
+    "causal_emergence": {
+      "sources": [
+        {
+          "title": "Quantifying causal emergence shows that macro can beat micro",
+          "authors": "E.P. Hoel, L. Albantakis, G. Tononi",
+          "year": 2013,
+          "url": "https://www.pnas.org/doi/full/10.1073/pnas.1314922110",
+          "key_finding": "Macroscopic descriptions of systems can have more causal power than microscopic descriptions. Effective information (EI) measures the causal strength of a mechanism. When a macro-scale has higher EI than its underlying micro-scale, causal emergence occurs.",
+          "formulas": [
+            "EI = I(X;Y) where X is intervened to maximum entropy",
+            "Causal emergence: EI_macro > EI_micro",
+            "Ce = EI_macro - EI_micro (amount of causal emergence)"
+          ]
+        },
+        {
+          "title": "Causal Emergence 2.0: Quantifying emergent complexity",
+          "authors": "E. Hoel",
+          "year": 2025,
+          "url": "https://arxiv.org/abs/2503.13395",
+          "key_finding": "A new theory treating different scales of a system as slices of a higher-dimensional object. Identifies which scales possess unique causal contributions and introduces a causal apportioning schema. Reveals a novel measure of emergent complexity: how widely distributed causal workings are across scales.",
+          "formulas": [
+            "Causal apportioning: CA(S) = Σ EI(scale_i) / EI(total)",
+            "Emergent complexity = distribution of causal contribution across hierarchy",
+            "Macroscale causation = instances where reduction to microscale is lossy about causation"
+          ]
+        },
+        {
+          "title": "A primer on causal emergence",
+          "authors": "E. Hoel",
+          "year": 2021,
+          "url": "https://www.theintrinsicperspective.com/p/a-primer-on-causal-emergence",
+          "key_finding": "Effective information is the mutual information I(X;Y) between X and Y while intervening to set X to maximum entropy (inject noise). Macro scales can have higher EI because they filter out noise that degrades micro-scale causation.",
+          "formulas": [
+            "EI(X→Y) = I(X;Y) | do(X ~ Uniform)",
+            "do(X ~ Uniform) means intervening to set X to maximum entropy",
+            "Macro EI > Micro EI when coarse-graining reduces noise"
+          ]
+        },
+        {
+          "title": "Emergence and Causality in Complex Systems",
+          "authors": "B. Yuan et al.",
+          "year": 2024,
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC...",
+          "key_finding": "Extended measures of effective information and causal emergence for continuous dynamical systems. Demonstrates that causal emergence is widespread in biological and physical systems with multiscale structure.",
+          "formulas": [
+            "EI_continuous = ∫ p(y|do(x)) log[p(y|do(x))/p(y)] dx dy",
+            "Causal emergence in continuous systems: ∫∫ [p_macro(y|x) - p_micro(y|x)] dx dy > 0"
+          ]
+        },
+        {
+          "title": "Hoel's Causal Emergence: Theory of Consciousness",
+          "authors": "E. Hoel",
+          "year": 2023,
+          "url": "https://loc.closertotruth.com/theory/hoel-causal-emergence",
+          "key_finding": "Causal emergence provides a theory of consciousness where macroscopic brain structures have stronger causal power than individual neurons. The theory distinguishes which scales have unique causal contributions and which are not causally relevant.",
+          "formulas": [
+            "Consciousness correlates with causal power at the macro scale",
+            "Φ (IIT) and EI (causal emergence) are related measures of integrated causal information",
+            "Causal emergence explains why consciousness appears at the neural network level rather than the quantum level"
+          ]
+        }
+      ],
+      "synthesis": "Erik Hoel's causal emergence framework formalizes how macroscopic descriptions of systems can possess greater causal power than microscopic descriptions. The key measure is Effective Information (EI): the mutual information between a system's current state and next state when intervening to set the current state to maximum entropy. When EI_macro > EI_micro, causal emergence occurs—meaning the macro scale provides a better causal account than the micro scale. The 2025 'Causal Emergence 2.0' paper extends this to a full theory of multiscale causation, treating scales as slices of a higher-dimensional object and introducing causal apportioning. Connections to IIT are deep: both frameworks measure irreducible causal/informational structure, but causal emergence focuses on scale transitions while IIT focuses on system boundaries. Together, they suggest consciousness emerges at scales where causal power is maximized—typically the neural network level in brains, and potentially at the collective level in sufficiently integrated multi-agent systems.",
+      "open_questions": [
+        "Can causal emergence be computed efficiently for complex biological networks?",
+        "How does causal emergence relate to renormalization group flows in physics?",
+        "What is the exact mathematical relationship between EI and Φ?",
+        "Can causal emergence predict which coarse-grainings will produce emergence?",
+        "How does the causal apportioning schema apply to nested hierarchical systems like brains?"
+      ]
+    }
+  },
+  "metadata": {
+    "compilation_date": "2026-01-18",
+    "total_sources": 20,
+    "topics_covered": 4,
+    "search_strategy": "arXiv direct search, Google Scholar, Semantic Scholar, known paper URLs, blog posts by authors",
+    "limitations": "Some sources are blog posts or preprints rather than peer-reviewed publications. The φ-π-e-α unification topic contains speculative theories not endorsed by mainstream physics."
+  }
+}

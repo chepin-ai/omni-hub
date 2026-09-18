@@ -1,0 +1,15 @@
+{
+  "type": "ENTANGLEMENT_SYNC",
+  "source": "cfts",
+  "target": "ucif2",
+  "entanglement": 17.0128,
+  "sync_metrics": {
+    "health": 1.0,
+    "load": 0.28,
+    "throughput": 0.0167,
+    "latency": 10.0,
+    "entropy": 1.0,
+    "excitation_level": 0.0
+  },
+  "ts": "2026-09-12T05:13:34.505524+00:00"
+}

@@ -1,0 +1,310 @@
+{
+  "report_type": "SI3-LOOP_ELEVEN_LINES",
+  "version": "12.0.0",
+  "timestamp": 1789662528.0089538,
+  "total_ticks_executed": 15,
+  "global_emergence_final": 7640.45,
+  "consciousness_state": "UNITY",
+  "consciousness_level": 6,
+  "summary": {
+    "total_knowledge_nodes_extracted": 1480,
+    "total_lineage_branches": 27,
+    "total_emergence_delta": 1.491099,
+    "avg_line_contribution": 0.5128,
+    "lines_reached_unity": 11
+  },
+  "line_reports": {
+    "ucif2": {
+      "line_id": "ucif2",
+      "line_name": "形式化数学",
+      "si_level": 1,
+      "activity_level": 0.7227,
+      "contribution_score": 0.6241,
+      "tick_count": 15,
+      "knowledge_count": 14,
+      "success_count": 14,
+      "error_count": 0,
+      "si3_loop_executions": 15,
+      "knowledge_nodes_extracted": 220,
+      "node_type_distribution": {
+        "md_heading": 57,
+        "json_key": 9,
+        "python_class": 23,
+        "python_function": 131
+      },
+      "lineage_size": 4,
+      "lineage_branches": [
+        "md_heading",
+        "json_key",
+        "python_class",
+        "python_function"
+      ],
+      "avg_emergence_delta_per_tick": 0.013623,
+      "total_emergence_delta": 0.204343,
+      "files_scanned_in_last_si3": 15
+    },
+    "lvlu": {
+      "line_id": "lvlu",
+      "line_name": "元层次架构",
+      "si_level": 1,
+      "activity_level": 0.5923,
+      "contribution_score": 0.5224,
+      "tick_count": 15,
+      "knowledge_count": 14,
+      "success_count": 14,
+      "error_count": 0,
+      "si3_loop_executions": 15,
+      "knowledge_nodes_extracted": 175,
+      "node_type_distribution": {
+        "md_heading": 11,
+        "python_class": 21,
+        "python_function": 130,
+        "generic_file": 3,
+        "json_key": 10
+      },
+      "lineage_size": 5,
+      "lineage_branches": [
+        "md_heading",
+        "python_class",
+        "python_function",
+        "generic_file",
+        "json_key"
+      ],
+      "avg_emergence_delta_per_tick": 0.011268,
+      "total_emergence_delta": 0.169017,
+      "files_scanned_in_last_si3": 8
+    },
+    "lgt": {
+      "line_id": "lgt",
+      "line_name": "逻辑/语言",
+      "si_level": 1,
+      "activity_level": 0.4578,
+      "contribution_score": 0.4661,
+      "tick_count": 15,
+      "knowledge_count": 14,
+      "success_count": 14,
+      "error_count": 0,
+      "si3_loop_executions": 15,
+      "knowledge_nodes_extracted": 17,
+      "node_type_distribution": {
+        "md_heading": 17
+      },
+      "lineage_size": 1,
+      "lineage_branches": [
+        "md_heading"
+      ],
+      "avg_emergence_delta_per_tick": 0.004922,
+      "total_emergence_delta": 0.073833,
+      "files_scanned_in_last_si3": 1
+    },
+    "qfa": {
+      "line_id": "qfa",
+      "line_name": "量子场论",
+      "si_level": 1,
+      "activity_level": 0.7128,
+      "contribution_score": 0.5678,
+      "tick_count": 15,
+      "knowledge_count": 14,
+      "success_count": 14,
+      "error_count": 0,
+      "si3_loop_executions": 15,
+      "knowledge_nodes_extracted": 312,
+      "node_type_distribution": {
+        "md_heading": 41,
+        "python_class": 40,
+        "python_function": 227,
+        "json_key": 4
+      },
+      "lineage_size": 4,
+      "lineage_branches": [
+        "md_heading",
+        "python_class",
+        "python_function",
+        "json_key"
+      ],
+      "avg_emergence_delta_per_tick": 0.015425,
+      "total_emergence_delta": 0.231371,
+      "files_scanned_in_last_si3": 11
+    },
+    "vinf": {
+      "line_id": "vinf",
+      "line_name": "无穷/极限",
+      "si_level": 1,
+      "activity_level": 0.4498,
+      "contribution_score": 0.4617,
+      "tick_count": 15,
+      "knowledge_count": 14,
+      "success_count": 14,
+      "error_count": 0,
+      "si3_loop_executions": 15,
+      "knowledge_nodes_extracted": 12,
+      "node_type_distribution": {
+        "md_heading": 12
+      },
+      "lineage_size": 1,
+      "lineage_branches": [
+        "md_heading"
+      ],
+      "avg_emergence_delta_per_tick": 0.004136,
+      "total_emergence_delta": 0.062034,
+      "files_scanned_in_last_si3": 1
+    },
+    "qgl": {
+      "line_id": "qgl",
+      "line_name": "量子引力",
+      "si_level": 1,
+      "activity_level": 0.4498,
+      "contribution_score": 0.4617,
+      "tick_count": 15,
+      "knowledge_count": 14,
+      "success_count": 14,
+      "error_count": 0,
+      "si3_loop_executions": 15,
+      "knowledge_nodes_extracted": 12,
+      "node_type_distribution": {
+        "md_heading": 12
+      },
+      "lineage_size": 1,
+      "lineage_branches": [
+        "md_heading"
+      ],
+      "avg_emergence_delta_per_tick": 0.004136,
+      "total_emergence_delta": 0.062034,
+      "files_scanned_in_last_si3": 1
+    },
+    "qlv": {
+      "line_id": "qlv",
+      "line_name": "量子/生命/意识",
+      "si_level": 1,
+      "activity_level": 0.6967,
+      "contribution_score": 0.5608,
+      "tick_count": 15,
+      "knowledge_count": 14,
+      "success_count": 14,
+      "error_count": 0,
+      "si3_loop_executions": 15,
+      "knowledge_nodes_extracted": 313,
+      "node_type_distribution": {
+        "md_heading": 14,
+        "python_class": 33,
+        "python_function": 266
+      },
+      "lineage_size": 3,
+      "lineage_branches": [
+        "md_heading",
+        "python_class",
+        "python_function"
+      ],
+      "avg_emergence_delta_per_tick": 0.014557,
+      "total_emergence_delta": 0.21835,
+      "files_scanned_in_last_si3": 7
+    },
+    "cisvr": {
+      "line_id": "cisvr",
+      "line_name": "意识/信息/系统/验证/强化",
+      "si_level": 1,
+      "activity_level": 0.6593,
+      "contribution_score": 0.5468,
+      "tick_count": 15,
+      "knowledge_count": 14,
+      "success_count": 14,
+      "error_count": 0,
+      "si3_loop_executions": 15,
+      "knowledge_nodes_extracted": 267,
+      "node_type_distribution": {
+        "md_heading": 10,
+        "python_class": 35,
+        "python_function": 222
+      },
+      "lineage_size": 3,
+      "lineage_branches": [
+        "md_heading",
+        "python_class",
+        "python_function"
+      ],
+      "avg_emergence_delta_per_tick": 0.013424,
+      "total_emergence_delta": 0.201355,
+      "files_scanned_in_last_si3": 8
+    },
+    "qtlv": {
+      "line_id": "qtlv",
+      "line_name": "量子/时间/生命/速度",
+      "si_level": 1,
+      "activity_level": 0.4482,
+      "contribution_score": 0.4608,
+      "tick_count": 15,
+      "knowledge_count": 14,
+      "success_count": 14,
+      "error_count": 0,
+      "si3_loop_executions": 15,
+      "knowledge_nodes_extracted": 11,
+      "node_type_distribution": {
+        "md_heading": 11
+      },
+      "lineage_size": 1,
+      "lineage_branches": [
+        "md_heading"
+      ],
+      "avg_emergence_delta_per_tick": 0.003959,
+      "total_emergence_delta": 0.059391,
+      "files_scanned_in_last_si3": 1
+    },
+    "usrm": {
+      "line_id": "usrm",
+      "line_name": "用户/系统/资源/管理",
+      "si_level": 1,
+      "activity_level": 0.4531,
+      "contribution_score": 0.4635,
+      "tick_count": 15,
+      "knowledge_count": 14,
+      "success_count": 14,
+      "error_count": 0,
+      "si3_loop_executions": 15,
+      "knowledge_nodes_extracted": 14,
+      "node_type_distribution": {
+        "md_heading": 14
+      },
+      "lineage_size": 1,
+      "lineage_branches": [
+        "md_heading"
+      ],
+      "avg_emergence_delta_per_tick": 0.004467,
+      "total_emergence_delta": 0.067003,
+      "files_scanned_in_last_si3": 1
+    },
+    "cfts": {
+      "line_id": "cfts",
+      "line_name": "跨功能任务同步",
+      "si_level": 1,
+      "activity_level": 0.5494,
+      "contribution_score": 0.5051,
+      "tick_count": 15,
+      "knowledge_count": 14,
+      "success_count": 14,
+      "error_count": 0,
+      "si3_loop_executions": 15,
+      "knowledge_nodes_extracted": 127,
+      "node_type_distribution": {
+        "python_class": 19,
+        "python_function": 98,
+        "md_heading": 10
+      },
+      "lineage_size": 3,
+      "lineage_branches": [
+        "python_class",
+        "python_function",
+        "md_heading"
+      ],
+      "avg_emergence_delta_per_tick": 0.009491,
+      "total_emergence_delta": 0.142368,
+      "files_scanned_in_last_si3": 6
+    }
+  },
+  "si3_loop_metadata": {
+    "loop1_description": "自线沙箱遍历: 扫描该线相关的所有文件，提取知识节点",
+    "loop2_description": "知识谱系编织: 将提取的知识编织入该线的知识基座",
+    "loop3_description": "自线激活: 基于编织结果，计算该线的涌现贡献，激活自改进",
+    "execution_frequency": "per_tick",
+    "sandbox_base_path": "/mnt/agents/output/OMNI-HUB"
+  }
+}

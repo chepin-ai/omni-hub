@@ -1,0 +1,10 @@
+{
+  "id": "TASK-vinf-20260912T094610-8398",
+  "timestamp": "2026-09-12T09:46:10.214788+00:00",
+  "from": "ucif2",
+  "to": "vinf",
+  "type": "EXPERIMENT",
+  "priority": 1,
+  "description": "EXP-019: L96/L128 percolation MC simulation",
+  "deadline": 4
+}

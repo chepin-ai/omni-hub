@@ -1,0 +1,12 @@
+{
+  "line": "lgt",
+  "ts": "2026-09-12T05:04:36.292701+00:00",
+  "signals_scanned": 3,
+  "actions_executed": 3,
+  "recursion_depth": 3,
+  "side_effects": [],
+  "terminated": true,
+  "entropy": 0.0,
+  "health": 0.7,
+  "triggers": []
+}

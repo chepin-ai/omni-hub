@@ -1,0 +1,47 @@
+======================================================================
+OMNI-HUB v4.0 - Counterpoint Validation Report
+======================================================================
+
+[1] Parallel Motion Validation
+    Parallel Fifths: 0 PASS
+    Parallel Octaves: 0 PASS
+
+[2] Voice Leading Validation
+    Contrary Ratio: 0.169
+    Oblique Ratio: 0.388
+    Similar Ratio: 0.464
+    Overall: 0.422 FAIL
+
+[3] Consonance Validation
+    Mean Harmony: 0.649
+    Richness: 0.960
+    Status: PASS
+
+[4] QGL Silence Validation
+    Active Ratio: 0.240
+    Silence Effect: -0.002
+    Status: PASS
+
+[5] Independence Validation
+    Independence Score: 0.733
+    High Correlation Pairs: 2
+    Status: FAIL
+
+======================================================================
+
+================================================================================
+DETAILED EVALUATION METRICS
+================================================================================
+contrary_ratio: 0.168861
+oblique_ratio: 0.388246
+similar_ratio: 0.463728
+parallel_violations: 0.000000
+overall: 0.421860
+richness: 0.959804
+independence: 0.732522
+harmony: 0.649286
+qgl_silence_effect: -0.001812
+unison_violations: 0.000000
+mean_tension: 0.350714
+max_tension: 0.442857
+tension_variance: 0.001726

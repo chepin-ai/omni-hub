@@ -1,0 +1,280 @@
+{
+  "os_sessions": {
+    "L01": {
+      "line": "L01",
+      "status": "idle",
+      "health": 1.0,
+      "si_level": 1,
+      "timestamp": "2026-09-13T17:47:58.672930Z",
+      "metadata": {
+        "init": true
+      },
+      "history": [
+        {
+          "action": "sync",
+          "field": "health",
+          "old_value": 0.95,
+          "new_value": 1.0,
+          "reason": "test",
+          "timestamp": "2026-09-13T17:47:58.672930Z"
+        }
+      ]
+    },
+    "L02": {
+      "line": "L02",
+      "status": "idle",
+      "health": 1.0,
+      "si_level": 1,
+      "timestamp": "2026-09-13T17:47:58.672710Z",
+      "metadata": {
+        "init": true
+      },
+      "history": []
+    },
+    "L03": {
+      "line": "L03",
+      "status": "idle",
+      "health": 1.0,
+      "si_level": 1,
+      "timestamp": "2026-09-13T17:47:58.672720Z",
+      "metadata": {
+        "init": true
+      },
+      "history": []
+    },
+    "L04": {
+      "line": "L04",
+      "status": "idle",
+      "health": 1.0,
+      "si_level": 1,
+      "timestamp": "2026-09-13T17:47:58.672730Z",
+      "metadata": {
+        "init": true
+      },
+      "history": []
+    },
+    "L05": {
+      "line": "L05",
+      "status": "idle",
+      "health": 1.0,
+      "si_level": 1,
+      "timestamp": "2026-09-13T17:47:58.672739Z",
+      "metadata": {
+        "init": true
+      },
+      "history": []
+    },
+    "L06": {
+      "line": "L06",
+      "status": "idle",
+      "health": 1.0,
+      "si_level": 1,
+      "timestamp": "2026-09-13T17:47:58.672748Z",
+      "metadata": {
+        "init": true
+      },
+      "history": []
+    },
+    "L07": {
+      "line": "L07",
+      "status": "idle",
+      "health": 1.0,
+      "si_level": 1,
+      "timestamp": "2026-09-13T17:47:58.672764Z",
+      "metadata": {
+        "init": true
+      },
+      "history": []
+    },
+    "L08": {
+      "line": "L08",
+      "status": "idle",
+      "health": 1.0,
+      "si_level": 1,
+      "timestamp": "2026-09-13T17:47:58.672781Z",
+      "metadata": {
+        "init": true
+      },
+      "history": []
+    },
+    "L09": {
+      "line": "L09",
+      "status": "idle",
+      "health": 1.0,
+      "si_level": 1,
+      "timestamp": "2026-09-13T17:47:58.672791Z",
+      "metadata": {
+        "init": true
+      },
+      "history": []
+    },
+    "L10": {
+      "line": "L10",
+      "status": "idle",
+      "health": 1.0,
+      "si_level": 1,
+      "timestamp": "2026-09-13T17:47:58.672800Z",
+      "metadata": {
+        "init": true
+      },
+      "history": []
+    },
+    "L11": {
+      "line": "L11",
+      "status": "idle",
+      "health": 1.0,
+      "si_level": 1,
+      "timestamp": "2026-09-13T17:47:58.672810Z",
+      "metadata": {
+        "init": true
+      },
+      "history": []
+    }
+  },
+  "si1_sessions": {
+    "L01": {
+      "line": "L01",
+      "status": "idle",
+      "health": 1.0,
+      "si_level": 1,
+      "timestamp": "2026-09-13T17:47:58.672930Z",
+      "metadata": {
+        "init": true
+      },
+      "history": [
+        {
+          "action": "sync",
+          "field": "health",
+          "old_value": 0.95,
+          "new_value": 1.0,
+          "reason": "test",
+          "timestamp": "2026-09-13T17:47:58.672930Z"
+        }
+      ]
+    },
+    "L02": {
+      "line": "L02",
+      "status": "idle",
+      "health": 1.0,
+      "si_level": 1,
+      "timestamp": "2026-09-13T17:47:58.672715Z",
+      "metadata": {
+        "init": true
+      },
+      "history": []
+    },
+    "L03": {
+      "line": "L03",
+      "status": "idle",
+      "health": 1.0,
+      "si_level": 1,
+      "timestamp": "2026-09-13T17:47:58.672725Z",
+      "metadata": {
+        "init": true
+      },
+      "history": []
+    },
+    "L04": {
+      "line": "L04",
+      "status": "idle",
+      "health": 1.0,
+      "si_level": 1,
+      "timestamp": "2026-09-13T17:47:58.672734Z",
+      "metadata": {
+        "init": true
+      },
+      "history": []
+    },
+    "L05": {
+      "line": "L05",
+      "status": "idle",
+      "health": 1.0,
+      "si_level": 1,
+      "timestamp": "2026-09-13T17:47:58.672744Z",
+      "metadata": {
+        "init": true
+      },
+      "history": []
+    },
+    "L06": {
+      "line": "L06",
+      "status": "idle",
+      "health": 1.0,
+      "si_level": 1,
+      "timestamp": "2026-09-13T17:47:58.672755Z",
+      "metadata": {
+        "init": true
+      },
+      "history": []
+    },
+    "L07": {
+      "line": "L07",
+      "status": "idle",
+      "health": 1.0,
+      "si_level": 1,
+      "timestamp": "2026-09-13T17:47:58.672772Z",
+      "metadata": {
+        "init": true
+      },
+      "history": []
+    },
+    "L08": {
+      "line": "L08",
+      "status": "idle",
+      "health": 1.0,
+      "si_level": 1,
+      "timestamp": "2026-09-13T17:47:58.672786Z",
+      "metadata": {
+        "init": true
+      },
+      "history": []
+    },
+    "L09": {
+      "line": "L09",
+      "status": "idle",
+      "health": 1.0,
+      "si_level": 1,
+      "timestamp": "2026-09-13T17:47:58.672796Z",
+      "metadata": {
+        "init": true
+      },
+      "history": []
+    },
+    "L10": {
+      "line": "L10",
+      "status": "idle",
+      "health": 1.0,
+      "si_level": 1,
+      "timestamp": "2026-09-13T17:47:58.672805Z",
+      "metadata": {
+        "init": true
+      },
+      "history": []
+    },
+    "L11": {
+      "line": "L11",
+      "status": "idle",
+      "health": 1.0,
+      "si_level": 1,
+      "timestamp": "2026-09-13T17:47:58.672815Z",
+      "metadata": {
+        "init": true
+      },
+      "history": []
+    }
+  },
+  "sync_counter": 1,
+  "session_log": [
+    {
+      "action": "update_os_session",
+      "timestamp": "2026-09-13T17:47:58.672949Z",
+      "detail": {
+        "line": "L01",
+        "field": "health",
+        "new_value": 1.0,
+        "reason": "test"
+      }
+    }
+  ],
+  "saved_at": "2026-09-13T17:47:58.673195Z"
+}

@@ -1,0 +1,32 @@
+{
+  "envelope": {
+    "msg_id": "7f678c9d-9133-4032-98cc-ee83117f19ed",
+    "version": "SI2-v1.0",
+    "timestamp": "2026-09-12T05:04:57.258141+00:00",
+    "ttl": 300,
+    "priority": 3,
+    "source": {
+      "line": "cfts",
+      "si_level": 2
+    },
+    "target": {
+      "line": "ucif2",
+      "si_level": 2,
+      "broadcast": false
+    }
+  },
+  "payload": {
+    "type": "TASK",
+    "task_id": "84b1d994-ec56-48f3-8944-8dc6da70ee31",
+    "content": {
+      "type": "cross_loop",
+      "description": "Cross-loop from cfts to ucif2"
+    },
+    "dependencies": [],
+    "deadline": ""
+  },
+  "signature": {
+    "hash": "a1bf91c675193f0f08efdd90011fadd1719913229ea9ac8773ec98cf65b013d7",
+    "chain_hash": ""
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "line": "cisvr",
+  "current_level": "si2",
+  "previous_superposition": {
+    "si0": 0.31250000000000006,
+    "si1": 0.20000000000000004,
+    "si2": 0.31250000000000006,
+    "si3": 0.1125,
+    "si4": 0.05000000000000001,
+    "si5": 0.012500000000000002
+  },
+  "observer": "ucif2-hub",
+  "trigger": "health_check",
+  "timestamp": "2026-09-12T10:35:42.691312+00:00",
+  "collapsed": true
+}

@@ -1,0 +1,32 @@
+{
+  "envelope": {
+    "msg_id": "bfdaa0da-8b72-4ab9-827b-35ce3b4949ba",
+    "version": "SI2-v1.0",
+    "timestamp": "2026-09-12T05:13:00.351586+00:00",
+    "ttl": 300,
+    "priority": 3,
+    "source": {
+      "line": "qfa",
+      "si_level": 2
+    },
+    "target": {
+      "line": "usrm",
+      "si_level": 2,
+      "broadcast": false
+    }
+  },
+  "payload": {
+    "type": "TASK",
+    "task_id": "dd2953c8-843f-4dec-902a-a7c88fe501ad",
+    "content": {
+      "type": "cross_loop",
+      "description": "Cross-loop from qfa to usrm"
+    },
+    "dependencies": [],
+    "deadline": ""
+  },
+  "signature": {
+    "hash": "426662bad841b9550d056925e4fe112d329be04145492066cc0289c9ca813ac3",
+    "chain_hash": ""
+  }
+}

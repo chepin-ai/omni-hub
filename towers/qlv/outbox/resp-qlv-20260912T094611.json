@@ -1,0 +1,13 @@
+{
+  "status": "COMPLETED",
+  "line": "qlv",
+  "si_level": "SI4",
+  "timestamp": "2026-09-12T09:46:11.305118+00:00",
+  "task_type": "EXPERIMENT",
+  "capabilities_used": [
+    "semantic_analysis",
+    "binmap_v3"
+  ],
+  "result_summary": "binmap-v3: 2048 basis, 6 misc subcats, 11-line spectrum scanned",
+  "verification": "PASSED"
+}

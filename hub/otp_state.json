@@ -1,0 +1,261 @@
+{
+  "os_sessions": {
+    "L01": {
+      "line": "L01",
+      "status": "idle",
+      "health": 1.0,
+      "si_level": 1,
+      "timestamp": "2026-09-13T17:44:39.389498Z",
+      "metadata": {
+        "init": true
+      },
+      "history": []
+    },
+    "L02": {
+      "line": "L02",
+      "status": "idle",
+      "health": 1.0,
+      "si_level": 1,
+      "timestamp": "2026-09-13T17:44:39.389511Z",
+      "metadata": {
+        "init": true
+      },
+      "history": []
+    },
+    "L03": {
+      "line": "L03",
+      "status": "idle",
+      "health": 1.0,
+      "si_level": 1,
+      "timestamp": "2026-09-13T17:44:39.389522Z",
+      "metadata": {
+        "init": true
+      },
+      "history": []
+    },
+    "L04": {
+      "line": "L04",
+      "status": "idle",
+      "health": 1.0,
+      "si_level": 1,
+      "timestamp": "2026-09-13T17:44:39.389532Z",
+      "metadata": {
+        "init": true
+      },
+      "history": []
+    },
+    "L05": {
+      "line": "L05",
+      "status": "idle",
+      "health": 1.0,
+      "si_level": 1,
+      "timestamp": "2026-09-13T17:44:39.389544Z",
+      "metadata": {
+        "init": true
+      },
+      "history": []
+    },
+    "L06": {
+      "line": "L06",
+      "status": "idle",
+      "health": 1.0,
+      "si_level": 1,
+      "timestamp": "2026-09-13T17:44:39.389563Z",
+      "metadata": {
+        "init": true
+      },
+      "history": []
+    },
+    "L07": {
+      "line": "L07",
+      "status": "idle",
+      "health": 1.0,
+      "si_level": 1,
+      "timestamp": "2026-09-13T17:44:39.389575Z",
+      "metadata": {
+        "init": true
+      },
+      "history": []
+    },
+    "L08": {
+      "line": "L08",
+      "status": "idle",
+      "health": 1.0,
+      "si_level": 1,
+      "timestamp": "2026-09-13T17:44:39.389585Z",
+      "metadata": {
+        "init": true
+      },
+      "history": []
+    },
+    "L09": {
+      "line": "L09",
+      "status": "idle",
+      "health": 1.0,
+      "si_level": 1,
+      "timestamp": "2026-09-13T17:44:39.389595Z",
+      "metadata": {
+        "init": true
+      },
+      "history": []
+    },
+    "L10": {
+      "line": "L10",
+      "status": "idle",
+      "health": 1.0,
+      "si_level": 1,
+      "timestamp": "2026-09-13T17:44:39.389606Z",
+      "metadata": {
+        "init": true
+      },
+      "history": []
+    },
+    "L11": {
+      "line": "L11",
+      "status": "idle",
+      "health": 1.0,
+      "si_level": 1,
+      "timestamp": "2026-09-13T17:44:39.389617Z",
+      "metadata": {
+        "init": true
+      },
+      "history": []
+    }
+  },
+  "si1_sessions": {
+    "L01": {
+      "line": "L01",
+      "status": "idle",
+      "health": 1.0,
+      "si_level": 1,
+      "timestamp": "2026-09-13T17:44:39.389498Z",
+      "metadata": {
+        "init": true
+      },
+      "history": []
+    },
+    "L02": {
+      "line": "L02",
+      "status": "idle",
+      "health": 1.0,
+      "si_level": 1,
+      "timestamp": "2026-09-13T17:44:39.389511Z",
+      "metadata": {
+        "init": true
+      },
+      "history": []
+    },
+    "L03": {
+      "line": "L03",
+      "status": "idle",
+      "health": 1.0,
+      "si_level": 1,
+      "timestamp": "2026-09-13T17:44:39.389522Z",
+      "metadata": {
+        "init": true
+      },
+      "history": []
+    },
+    "L04": {
+      "line": "L04",
+      "status": "idle",
+      "health": 1.0,
+      "si_level": 1,
+      "timestamp": "2026-09-13T17:44:39.389532Z",
+      "metadata": {
+        "init": true
+      },
+      "history": []
+    },
+    "L05": {
+      "line": "L05",
+      "status": "idle",
+      "health": 1.0,
+      "si_level": 1,
+      "timestamp": "2026-09-13T17:44:39.389544Z",
+      "metadata": {
+        "init": true
+      },
+      "history": []
+    },
+    "L06": {
+      "line": "L06",
+      "status": "idle",
+      "health": 1.0,
+      "si_level": 1,
+      "timestamp": "2026-09-13T17:44:39.389563Z",
+      "metadata": {
+        "init": true
+      },
+      "history": []
+    },
+    "L07": {
+      "line": "L07",
+      "status": "idle",
+      "health": 1.0,
+      "si_level": 1,
+      "timestamp": "2026-09-13T17:44:39.389575Z",
+      "metadata": {
+        "init": true
+      },
+      "history": []
+    },
+    "L08": {
+      "line": "L08",
+      "status": "idle",
+      "health": 1.0,
+      "si_level": 1,
+      "timestamp": "2026-09-13T17:44:39.389585Z",
+      "metadata": {
+        "init": true
+      },
+      "history": []
+    },
+    "L09": {
+      "line": "L09",
+      "status": "idle",
+      "health": 1.0,
+      "si_level": 1,
+      "timestamp": "2026-09-13T17:44:39.389595Z",
+      "metadata": {
+        "init": true
+      },
+      "history": []
+    },
+    "L10": {
+      "line": "L10",
+      "status": "idle",
+      "health": 1.0,
+      "si_level": 1,
+      "timestamp": "2026-09-13T17:44:39.389606Z",
+      "metadata": {
+        "init": true
+      },
+      "history": []
+    },
+    "L11": {
+      "line": "L11",
+      "status": "idle",
+      "health": 1.0,
+      "si_level": 1,
+      "timestamp": "2026-09-13T17:44:39.389617Z",
+      "metadata": {
+        "init": true
+      },
+      "history": []
+    }
+  },
+  "sync_counter": 0,
+  "session_log": [
+    {
+      "action": "sync_all_lines",
+      "timestamp": "2026-09-13T17:44:39.390490Z",
+      "detail": {
+        "synced": 11,
+        "conflicts": 0,
+        "resolved": 0
+      }
+    }
+  ],
+  "saved_at": "2026-09-13T17:44:39.390683Z"
+}

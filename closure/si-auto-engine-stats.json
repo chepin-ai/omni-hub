@@ -1,0 +1,109 @@
+{
+  "cycle": 3,
+  "timestamp": "2026-09-12T09:46:11.573136+00:00",
+  "lines": [
+    {
+      "line": "ucif2",
+      "si_level": "SI5-OMNI",
+      "health": 1.0,
+      "inbox": 7,
+      "outbox": 15,
+      "processed": 7,
+      "produced": 6
+    },
+    {
+      "line": "lgt",
+      "si_level": "SI4.5",
+      "health": 0.98,
+      "inbox": 7,
+      "outbox": 10,
+      "processed": 7,
+      "produced": 6
+    },
+    {
+      "line": "qfa",
+      "si_level": "SI4",
+      "health": 0.96,
+      "inbox": 5,
+      "outbox": 8,
+      "processed": 5,
+      "produced": 5
+    },
+    {
+      "line": "usrm",
+      "si_level": "SI4",
+      "health": 0.97,
+      "inbox": 2,
+      "outbox": 4,
+      "processed": 2,
+      "produced": 2
+    },
+    {
+      "line": "vinf",
+      "si_level": "SI4",
+      "health": 0.96,
+      "inbox": 4,
+      "outbox": 9,
+      "processed": 4,
+      "produced": 3
+    },
+    {
+      "line": "qgl",
+      "si_level": "SI4",
+      "health": 0.95,
+      "inbox": 2,
+      "outbox": 4,
+      "processed": 2,
+      "produced": 2
+    },
+    {
+      "line": "qlv",
+      "si_level": "SI4",
+      "health": 0.94,
+      "inbox": 3,
+      "outbox": 8,
+      "processed": 3,
+      "produced": 3
+    },
+    {
+      "line": "lvlu",
+      "si_level": "SI3.5",
+      "health": 0.89,
+      "inbox": 2,
+      "outbox": 3,
+      "processed": 2,
+      "produced": 2
+    },
+    {
+      "line": "cfts",
+      "si_level": "SI3.5",
+      "health": 0.91,
+      "inbox": 6,
+      "outbox": 8,
+      "processed": 6,
+      "produced": 5
+    },
+    {
+      "line": "cisvr",
+      "si_level": "SI3.5",
+      "health": 0.9,
+      "inbox": 1,
+      "outbox": 1,
+      "processed": 1,
+      "produced": 1
+    },
+    {
+      "line": "qtlv",
+      "si_level": "SI3",
+      "health": 0.85,
+      "inbox": 1,
+      "outbox": 0,
+      "processed": 1,
+      "produced": 0
+    }
+  ],
+  "total_inbox": 40,
+  "total_outbox": 70,
+  "total_processed": 40,
+  "total_produced": 35
+}

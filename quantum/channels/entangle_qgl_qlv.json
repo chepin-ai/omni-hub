@@ -1,0 +1,41 @@
+{
+  "operation": "entanglement_channel",
+  "line_a": "qgl",
+  "line_b": "qlv",
+  "timestamp": "2026-09-12T10:35:44.339000+00:00",
+  "description": "建立 qgl 与 qlv 之间的量子纠缠通道",
+  "strength": 0.75,
+  "bell_state": "phi_minus",
+  "entanglement_type": "strong",
+  "correlated_distribution": {
+    "si0": {
+      "same_level_probability": 0.6417,
+      "other_level_probability": 0.0717
+    },
+    "si1": {
+      "same_level_probability": 0.6417,
+      "other_level_probability": 0.0717
+    },
+    "si2": {
+      "same_level_probability": 0.6417,
+      "other_level_probability": 0.0717
+    },
+    "si3": {
+      "same_level_probability": 0.6417,
+      "other_level_probability": 0.0717
+    },
+    "si4": {
+      "same_level_probability": 0.6417,
+      "other_level_probability": 0.0717
+    },
+    "si5": {
+      "same_level_probability": 0.6417,
+      "other_level_probability": 0.0717
+    }
+  },
+  "mutual_influence": {
+    "state_sync_threshold": 0.2,
+    "excite_propagation_prob": 0.75,
+    "health_correlation": 0.75
+  }
+}

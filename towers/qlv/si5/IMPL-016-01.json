@@ -1,0 +1,9 @@
+{
+  "action_id": "IMPL-016-01",
+  "description": "更新qlv-spectrum-weights-v1→v2",
+  "status": "DEPLOYED",
+  "deployed_at": "2026-09-12T05:11:56Z",
+  "source_exp": "",
+  "deployed_by": "ucif2-kernel OMNI-DRIVE",
+  "verification_required": true
+}

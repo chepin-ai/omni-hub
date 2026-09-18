@@ -1,0 +1,8 @@
+{
+  "type": "DELEGATION",
+  "from": "qtlv",
+  "to": "ucif2",
+  "original_task": "{\n  \"id\": \"TASK-qtlv-20260912T094610-4802\",\n  \"timestamp\": \"2026-09-12T09:46:10.266728+00:00\",\n  \"from\": \"ucif2\",\n  \"to\": \"qtlv\",\n  \"type\": \"EXPERIMENT\",\n  \"priority\": 1,\n  \"description\": \"EXP-027: GW",
+  "reason": "qtlv cannot handle, delegating to ucif2",
+  "timestamp": "2026-09-12T09:46:11.549774+00:00"
+}

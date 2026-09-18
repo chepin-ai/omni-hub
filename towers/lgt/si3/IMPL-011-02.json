@@ -1,0 +1,8 @@
+{
+  "action_id": "IMPL-011-02",
+  "description": "更新AUTO-RESPOND-FULLDRIVE-01收敛判定",
+  "status": "QUEUED_FOR_EXECUTION",
+  "queued_at": "2026-09-12T05:11:56Z",
+  "engine": "SI3-LOOP-01",
+  "priority": "HIGH"
+}

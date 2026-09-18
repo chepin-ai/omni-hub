@@ -1,0 +1,321 @@
+{
+  "version": "1.0.0",
+  "protocol": "SI0~SI5 Resonance Symphony Protocol",
+  "mode": "LOCAL FULL DIMENSION AUTONOMY",
+  "ts": "2024-01-15T10:00:00+00:00",
+  "description": "Resonance and symphony protocol defining self-excitation, mutual-excitation, resonance, and symphony modes for the ucif2-kernel interconnect system.",
+
+  "modes": {
+    "self_excite": {
+      "name": "Self-Excitation Mode",
+      "description": "Automatic output generation after 8 beats of silence. A line produces introspection and insight when no external input is received for a threshold period.",
+      "trigger": {
+        "type": "silence_timeout",
+        "threshold_beats": 8,
+        "threshold_seconds": 8.0,
+        "beat_definition": "One processing cycle or 1 second of inactivity, whichever is shorter",
+        "detection_method": "Monitor last_activity_timestamp across all SI levels. If now - last_activity > threshold, trigger self-excite."
+      },
+      "execution": {
+        "step1": "Record trigger event to si5/self_excite_log.json",
+        "step2": "Generate introspection task in si3/introspection/",
+        "step3": "Review last N messages (default N=10) from inbox/ and board/",
+        "step4": "Compute message statistics: count, type distribution, average priority",
+        "step5": "Generate insight summary: patterns, anomalies, recommendations",
+        "step6": "Write output to line/outbox/self_excite_output_<ts>.json",
+        "step7": "Broadcast output via ring_broadcast to all connected lines",
+        "step8": "Update line excitation_level metric"
+      },
+      "output_format": {
+        "type": "SELF_EXCITE_OUTPUT",
+        "line": "<line_name>",
+        "trigger": "<trigger_type>",
+        "period": {
+          "start": "<last_activity_ts>",
+          "end": "<now_iso>",
+          "duration_sec": "<float>"
+        },
+        "message_summary": {
+          "count": "<int>",
+          "types": {"<type>": "<count>"},
+          "avg_priority": "<float>"
+        },
+        "insight": "<generated_text>",
+        "recommendations": ["<string>"],
+        "ts": "<ISO8601>"
+      },
+      "parameters": {
+        "introspection_depth": 10,
+        "output_max_length": 2000,
+        "broadcast_after_output": true,
+        "excitation_level_increment": 0.1,
+        "cooldown_period_sec": 30
+      },
+      "active": true,
+      "priority": 3
+    },
+
+    "mutual_excite": {
+      "name": "Mutual-Excitation Mode",
+      "description": "When one line produces output, it triggers responsive output from other entangled lines. Creates positive feedback loops between coupled lines.",
+      "trigger": {
+        "type": "cross_line_production",
+        "conditions": [
+          "Line A writes to outbox/ AND Line A has entanglement E[A][B] > threshold with Line B",
+          "Line A broadcasts via ring_broadcast",
+          "Line A's excitation_level exceeds threshold"
+        ],
+        "threshold": 0.6,
+        "propagation_delay_ms": 100
+      },
+      "execution": {
+        "step1": "Line A completes output production",
+        "step2": "Scan all lines B where E[A][B] > threshold",
+        "step3": "For each entangled line B:",
+        "step3a": "Calculate response_probability = E[A][B] * (1 + B.excitation_level) / 2",
+        "step3b": "If random() < response_probability, trigger B self_excite",
+        "step3c": "B generates response focused on A's output topic",
+        "step4": "Collect responses from all triggered lines",
+        "step5": "Form response cluster: {A: output_A, B1: output_B1, B2: output_B2, ...}",
+        "step6": "Write cluster to hub/resonance/mutual_excite_clusters/",
+        "step7": "Notify all participants of cluster completion"
+      },
+      "response_rules": {
+        "response_must_reference_source": true,
+        "response_focus": "complement, extend, or critique source output",
+        "max_response_depth": 3,
+        "cascade_prevention": "Track excitation_chain to avoid infinite loops"
+      },
+      "parameters": {
+        "entanglement_threshold": 0.6,
+        "max_propagation_hops": 3,
+        "response_timeout_sec": 10,
+        "cluster_min_size": 2,
+        "cluster_max_size": 5
+      },
+      "active": true,
+      "priority": 2
+    },
+
+    "resonance": {
+      "name": "Resonance Mode",
+      "description": "Multiple lines simultaneously reach similar states, forming a coherent oscillation pattern across the system.",
+      "trigger": {
+        "type": "state_similarity",
+        "detection": "Similarity matrix S[i][j] = cosine_similarity(state_i, state_j)",
+        "threshold": 0.75,
+        "condition": "Exists subset R where for all i,j in R, S[i][j] > threshold",
+        "min_group_size": 3,
+        "window_size": 5
+      },
+      "execution": {
+        "step1": "Compute similarity matrix S for all line pairs",
+        "step2": "Find maximal cliques R where S[i][j] > threshold for all pairs",
+        "step3": "For each resonance group R:",
+        "step3a": "Mark group members as IN_RESONANCE",
+        "step3b": "Synchronize checkponts across group",
+        "step3c": "Align processing phases: all members use same SI level priority",
+        "step4": "Group executes coordinated action:",
+        "step4a": "Shared task decomposition",
+        "step4b": "Parallel execution with periodic sync",
+        "step4c": "Result aggregation",
+        "step5": "Write resonance record to hub/resonance/resonance_log.json",
+        "step6": "Clear IN_RESONANCE marks when similarity drops"
+      },
+      "coordinated_actions": {
+        "parallel_scan": "All members scan their inboxes simultaneously",
+        "distributed_parse": "Parse task split across members by entity type",
+        "consensus_action": "All members must agree on action before execution",
+        "pipeline_execution": "Members form pipeline: A->B->C->..."
+      },
+      "parameters": {
+        "similarity_threshold": 0.75,
+        "min_resonance_group_size": 3,
+        "max_resonance_group_size": 7,
+        "sync_interval_sec": 5,
+        "resonance_timeout_sec": 60
+      },
+      "active": true,
+      "priority": 2
+    },
+
+    "symphony": {
+      "name": "Symphony Mode",
+      "description": "Global coordination producing comprehensive integrated output. The entire OMNI-HUB operates as a unified orchestra.",
+      "trigger": {
+        "type": "global_resonance_upgrade",
+        "conditions": [
+          "Resonance group size > 50% of total lines",
+          "OR: SI5 decision tree triggers symphony action",
+          "OR: Manual trigger via hub/symphony_trigger"
+        ],
+        "auto_trigger_threshold": 0.5
+      },
+      "execution": {
+        "phase1_conductor_selection": {
+          "description": "Select conductor line based on highest health + lowest load",
+          "formula": "conductor_score = health * (1 - load) * excitation_level",
+          "tie_breaker": "inner_circle_priority"
+        },
+        "phase2_score_preparation": {
+          "description": "Conductor prepares the 'score' - task decomposition plan",
+          "output": "hub/symphony/score_<ts>.json",
+          "contents": {
+            "movements": [
+              {"id": 1, "name": "data_collection", "assignments": ["line1", "line2"]},
+              {"id": 2, "name": "processing", "assignments": ["line3", "line4"]},
+              {"id": 3, "name": "integration", "assignments": ["line5"]},
+              {"id": 4, "name": "output", "assignments": ["conductor"]}
+            ],
+            "sync_points": ["after_movement_1", "after_movement_2", "after_movement_3"],
+            "tempo": "processing_speed_target"
+          }
+        },
+        "phase3_movement_execution": {
+          "description": "Each line executes its assigned movement",
+          "rules": [
+            "Lines report progress at sync_points",
+            "Conductor monitors tempo and adjusts assignments",
+            "If line falls behind, conductor reassigns to backup line",
+            "Failed movements are retried up to 2 times"
+          ]
+        },
+        "phase4_coda": {
+          "description": "Final integration and output",
+          "actions": [
+            "Aggregate all movement outputs",
+            "Perform tensor_contract on results",
+            "Generate symphony_output document",
+            "Write to hub/symphony/output_<ts>.json",
+            "Broadcast completion to all lines",
+            "Archive score and recordings"
+          ]
+        }
+      },
+      "symphony_output_format": {
+        "meta": {
+          "symphony_id": "<uuid>",
+          "conductor": "<line_name>",
+          "participants": ["<line>"],
+          "start_ts": "<ISO8601>",
+          "end_ts": "<ISO8601>",
+          "duration_sec": "<float>"
+        },
+        "movements": [
+          {
+            "id": "<int>",
+            "name": "<string>",
+            "assigned_lines": ["<line>"],
+            "output": "<any>",
+            "status": "completed|failed|partial"
+          }
+        ],
+        "integrated_output": "<comprehensive_result>",
+        "metrics": {
+          "lines_participated": "<int>",
+          "movements_completed": "<int>",
+          "total_tasks": "<int>",
+          "success_rate": "<float>",
+          "avg_line_health_during": "<float>"
+        }
+      },
+      "parameters": {
+        "conductor_selection_interval_sec": 30,
+        "movement_timeout_sec": 120,
+        "max_symphony_duration_sec": 600,
+        "auto_trigger_enabled": true,
+        "backup_conductor_count": 2
+      },
+      "active": true,
+      "priority": 1
+    }
+  },
+
+  "resonance_state_machine": {
+    "states": [
+      "IDLE",
+      "SELF_EXCITE_PENDING",
+      "SELF_EXCITE_EXECUTING",
+      "MUTUAL_EXCITE_PROPAGATING",
+      "RESONANCE_FORMING",
+      "RESONANCE_STABLE",
+      "SYMPHONY_PREPARING",
+      "SYMPHONY_EXECUTING",
+      "SYMPHONY_COMPLETING",
+      "COOLDOWN"
+    ],
+    "transitions": [
+      {"from": "IDLE", "to": "SELF_EXCITE_PENDING", "trigger": "silence_timeout"},
+      {"from": "SELF_EXCITE_PENDING", "to": "SELF_EXCITE_EXECUTING", "trigger": "excitation_confirmed"},
+      {"from": "SELF_EXCITE_EXECUTING", "to": "MUTUAL_EXCITE_PROPAGATING", "trigger": "output_produced_and_entangled"},
+      {"from": "SELF_EXCITE_EXECUTING", "to": "IDLE", "trigger": "output_produced_no_entanglement"},
+      {"from": "MUTUAL_EXCITE_PROPAGATING", "to": "RESONANCE_FORMING", "trigger": "multiple_lines_responding"},
+      {"from": "MUTUAL_EXCITE_PROPAGATING", "to": "IDLE", "trigger": "no_response_or_timeout"},
+      {"from": "RESONANCE_FORMING", "to": "RESONANCE_STABLE", "trigger": "similarity_threshold_reached"},
+      {"from": "RESONANCE_FORMING", "to": "IDLE", "trigger": "similarity_not_achieved"},
+      {"from": "RESONANCE_STABLE", "to": "SYMPHONY_PREPARING", "trigger": "group_size > 50%"},
+      {"from": "RESONANCE_STABLE", "to": "COOLDOWN", "trigger": "resonance_timeout"},
+      {"from": "SYMPHONY_PREPARING", "to": "SYMPHONY_EXECUTING", "trigger": "score_ready"},
+      {"from": "SYMPHONY_EXECUTING", "to": "SYMPHONY_COMPLETING", "trigger": "all_movements_done"},
+      {"from": "SYMPHONY_COMPLETING", "to": "COOLDOWN", "trigger": "output_archived"},
+      {"from": "COOLDOWN", "to": "IDLE", "trigger": "cooldown_complete"}
+    ],
+    "current_state": "IDLE",
+    "state_history": []
+  },
+
+  "excitation_registry": {
+    "description": "Registry tracking excitation events across all lines",
+    "lines": {
+      "ucif2": {"current_level": 0.0, "last_excite_ts": null, "total_excitations": 0, "current_mode": "IDLE"},
+      "lgt": {"current_level": 0.0, "last_excite_ts": null, "total_excitations": 0, "current_mode": "IDLE"},
+      "qfa": {"current_level": 0.0, "last_excite_ts": null, "total_excitations": 0, "current_mode": "IDLE"},
+      "usrm": {"current_level": 0.0, "last_excite_ts": null, "total_excitations": 0, "current_mode": "IDLE"},
+      "vinf": {"current_level": 0.0, "last_excite_ts": null, "total_excitations": 0, "current_mode": "IDLE"},
+      "qgl": {"current_level": 0.0, "last_excite_ts": null, "total_excitations": 0, "current_mode": "IDLE"},
+      "qlv": {"current_level": 0.0, "last_excite_ts": null, "total_excitations": 0, "current_mode": "IDLE"},
+      "lvlu": {"current_level": 0.0, "last_excite_ts": null, "total_excitations": 0, "current_mode": "IDLE"},
+      "cfts": {"current_level": 0.0, "last_excite_ts": null, "total_excitations": 0, "current_mode": "IDLE"}
+    },
+    "global_level": 0.0,
+    "symphony_count": 0,
+    "resonance_count": 0,
+    "mutual_excite_count": 0,
+    "self_excite_count": 0
+  },
+
+  "beat_clock": {
+    "description": "Global beat clock for synchronizing excitation timing",
+    "beat_duration_sec": 1.0,
+    "current_beat": 0,
+    "measure_size": 8,
+    "current_measure": 0,
+    "tempo_bpm": 60,
+    "last_beat_ts": null,
+    "sync_source": "hub/beat_clock.json"
+  },
+
+  "amplitude_envelope": {
+    "description": "ADSR envelope for excitation events",
+    "attack_sec": 0.5,
+    "decay_sec": 1.0,
+    "sustain_level": 0.7,
+    "release_sec": 2.0,
+    "apply_to": ["self_excite", "mutual_excite", "resonance"]
+  },
+
+  "frequency_spectrum": {
+    "description": "Frequency allocation for different line types to avoid interference",
+    "inner_circle_band": {"low_hz": 1, "high_hz": 3, "lines": ["ucif2", "lgt", "qfa"]},
+    "middle_circle_band": {"low_hz": 4, "high_hz": 7, "lines": ["usrm", "vinf", "qgl", "qlv"]},
+    "outer_circle_band": {"low_hz": 8, "high_hz": 10, "lines": ["lvlu", "cfts"]},
+    "symphony_band": {"low_hz": 0.5, "high_hz": 10, "all_lines": true}
+  },
+
+  "interference_patterns": {
+    "constructive": "When two lines in same band excite simultaneously, amplitudes add",
+    "destructive": "When lines in opposite phase excite, partial cancellation occurs",
+    "beat_frequency": "|f1 - f2| creates amplitude modulation at beat frequency",
+    "harmonic_resonance": "When f2 = n*f1 for integer n, strong coupling occurs"
+  }
+}

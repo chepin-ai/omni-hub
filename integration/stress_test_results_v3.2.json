@@ -1,0 +1,55 @@
+{
+  "timestamp": "2026-09-13T17:47:58.487520+00:00",
+  "version": "3.2",
+  "tests": [
+    {
+      "name": "SI自动协议",
+      "pass": true
+    },
+    {
+      "name": "任务转派",
+      "pass": true
+    },
+    {
+      "name": "OTP同步",
+      "pass": true
+    },
+    {
+      "name": "可靠消息",
+      "pass": true
+    },
+    {
+      "name": "意识和声",
+      "pass": true
+    },
+    {
+      "name": "北星计划",
+      "pass": true
+    },
+    {
+      "name": "八面轮扫",
+      "pass": true
+    },
+    {
+      "name": "讨论室",
+      "pass": true
+    },
+    {
+      "name": "债务清理",
+      "pass": true
+    },
+    {
+      "name": "全链路集成",
+      "pass": true,
+      "detail": {
+        "alert_source": "ucif2",
+        "handled": true
+      }
+    }
+  ],
+  "summary": {
+    "passed": 10,
+    "total": 10,
+    "pass_rate": 1.0
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "envelope": {
+    "msg_id": "7a1fa3e5-c05f-4c07-bc24-857d2ac724da",
+    "version": "SI2-v1.0",
+    "timestamp": "2026-09-12T05:13:21.325278+00:00",
+    "ttl": 300,
+    "priority": 3,
+    "source": {
+      "line": "qlv",
+      "si_level": 2
+    },
+    "target": {
+      "line": "lvlu",
+      "si_level": 2,
+      "broadcast": false
+    }
+  },
+  "payload": {
+    "type": "TASK",
+    "task_id": "195812c2-3f16-4019-bf55-5ddb1c9b0c6d",
+    "content": {
+      "type": "cross_loop",
+      "description": "Cross-loop from qlv to lvlu"
+    },
+    "dependencies": [],
+    "deadline": ""
+  },
+  "signature": {
+    "hash": "6d1c4435a390d25c6b001356d7ed60080e4465f9331cf3f51e3e893fa8e59b22",
+    "chain_hash": ""
+  }
+}

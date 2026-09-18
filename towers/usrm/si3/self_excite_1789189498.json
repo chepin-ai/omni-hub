@@ -1,0 +1,19 @@
+{
+  "line": "usrm",
+  "ts": "2026-09-12T05:04:58.843866+00:00",
+  "trigger_type": "silence_timeout",
+  "mode": "introspection",
+  "output": {
+    "line": "usrm",
+    "ts": "2026-09-12T05:04:58.858947+00:00",
+    "period": "last_10_messages",
+    "message_count": 1,
+    "summary": [
+      {
+        "file": "msg_faaed072-0da6-4168-841b-54802ea5078b.json",
+        "summary": "{'envelope': {'msg_id': 'faaed072-0da6-4168-841b-54802ea5078b', 'version': 'SI2-v1.0', 'timestamp': '2026-09-12T05:04:44.595072+00:00', 'ttl': 300, 'priority': 3, 'source': {'line': 'qfa', 'si_level':"
+      }
+    ],
+    "insight": "Line usrm has processed 1 messages recently. Health: 1.0"
+  }
+}

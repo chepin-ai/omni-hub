@@ -1,0 +1,22 @@
+# SI0-VERSION: 1.0.0
+# SI0-HASH: 385620cf5e3f79f8074096e2320802a5cba6d9eda1b08eb9178ae5840c6a1819
+# SI0-PARENT: 385620cf5e3f79f8074096e2320802a5cba6d9eda1b08eb9178ae5840c6a1819
+# SI0-TIMESTAMP: 2026-09-12T05:13:11.015721+00:00
+# SI0-LINE: qlv
+# SI0-LEVEL: 0
+---
+{
+  "type": "ENTANGLEMENT_SYNC",
+  "source": "cfts",
+  "target": "ucif2",
+  "entanglement": 16.8433,
+  "sync_metrics": {
+    "health": 1.0,
+    "load": 0.11,
+    "throughput": 0.0417,
+    "latency": 10.0,
+    "entropy": 0.5235,
+    "excitation_level": 0.05
+  },
+  "ts": "2026-09-12T05:04:57.491833+00:00"
+}

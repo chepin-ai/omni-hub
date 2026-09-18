@@ -1,0 +1,50 @@
+{
+  "timestamp": "2026-09-13T05:12:01",
+  "tests": {
+    "RippleModel": {
+      "status": "PASS",
+      "details": {
+        "changed": true,
+        "injected": "True",
+        "lap": true
+      }
+    },
+    "EchoModel": {
+      "status": "PASS",
+      "details": {
+        "emitted": true,
+        "hist": true,
+        "kern": "True"
+      }
+    },
+    "SurgeModel": {
+      "status": "PASS",
+      "details": {
+        "normal": true,
+        "l3": true,
+        "l4": true,
+        "recov": true
+      }
+    },
+    "CascadeSimulator": {
+      "status": "PASS",
+      "details": {
+        "hist": true,
+        "ripple": true,
+        "echo": true,
+        "health_drop": true,
+        "surge": true,
+        "feedback": true
+      }
+    }
+  },
+  "overall": "PASS",
+  "key_data": {
+    "steps": 30,
+    "max_echo": 0.4508012684642249,
+    "min_health": 0.7795036032502215,
+    "surge_events": 11,
+    "final_level": "L2_BRIDGE",
+    "final_health": 0.7795036032502215
+  }
+}

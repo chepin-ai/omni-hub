@@ -1,0 +1,361 @@
+{
+  "total": 8,
+  "passed": 8,
+  "failed": 0,
+  "pass_rate": 1.0,
+  "details": [
+    {
+      "name": "self_observe_completeness",
+      "passed": true,
+      "checks": [
+        [
+          "type_check",
+          true
+        ],
+        [
+          "modules_present",
+          true
+        ],
+        [
+          "dependency_graph",
+          true
+        ],
+        [
+          "health_matrix",
+          true
+        ],
+        [
+          "entropy_profile",
+          true
+        ],
+        [
+          "timestamp_valid",
+          true
+        ],
+        [
+          "version_correct",
+          true
+        ],
+        [
+          "deep_observation",
+          true
+        ],
+        [
+          "coupling_matrix",
+          true
+        ]
+      ],
+      "modules_count": 27,
+      "entropy": {
+        "health_entropy": 4.7549,
+        "dependency_entropy": 4.261,
+        "export_entropy": 4.2985,
+        "total_entropy": 13.3144,
+        "system_disorder": 0.0
+      }
+    },
+    {
+      "name": "self_modify_safety",
+      "passed": true,
+      "checks": [
+        [
+          "extend_success",
+          true
+        ],
+        [
+          "snapshot_created",
+          true
+        ],
+        [
+          "impact_analyzed",
+          true
+        ],
+        [
+          "bad_mod_rejected",
+          true
+        ],
+        [
+          "nonexistent_rejected",
+          true
+        ]
+      ],
+      "extend_verification": {
+        "valid": true,
+        "syntax_ok": true,
+        "interface_preserved": true,
+        "behavior_compatible": true,
+        "errors": [],
+        "warnings": []
+      }
+    },
+    {
+      "name": "self_create_quality",
+      "passed": true,
+      "checks": [
+        [
+          "creation_success",
+          true
+        ],
+        [
+          "code_generated",
+          true
+        ],
+        [
+          "class_defined",
+          true
+        ],
+        [
+          "function_defined",
+          true
+        ],
+        [
+          "docstring_present",
+          true
+        ],
+        [
+          "module_registered",
+          true
+        ],
+        [
+          "validation_passed",
+          true
+        ]
+      ],
+      "code_preview": "#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n\"\"\"\nAuto-generated test module\n\n模块: test_auto_module\nSI级别: 3.5\n自动生成: True\n\"\"\"\n\nimport time\nfrom typing import Dict, List, Any, Optional\n\nclass DataProcessor:\n    \"\"\"DataProcessor类\"\"\"\n\n    def __init__(self):\n        self.config = None\n        self.state = None\n\n    def process(self):\n        \"\"\"process方法\"\"\"\n        pass\n\n    def reset(self):\n        \"\"\"reset方法\"\"\"\n        pass\n\ndef process_data(data, config) -> Dict[str, Any]:\n    \"\"\"Process input da"
+    },
+    {
+      "name": "meta_decision_rationality",
+      "passed": true,
+      "checks": [
+        [
+          "decision_record",
+          true
+        ],
+        [
+          "valid_decision_type",
+          true
+        ],
+        [
+          "confidence_range",
+          true
+        ],
+        [
+          "rationale_present",
+          true
+        ],
+        [
+          "actions_present",
+          true
+        ],
+        [
+          "history_recorded",
+          true
+        ]
+      ],
+      "decision_type": "reconfigure",
+      "confidence": 0.8,
+      "rationale": "降低系统熵，优化模块结构",
+      "actions": [
+        {
+          "type": "analyze_dependencies",
+          "target": "system"
+        },
+        {
+          "type": "suggest_refactoring",
+          "target": "system"
+        }
+      ]
+    },
+    {
+      "name": "recursion_guard_protection",
+      "passed": true,
+      "checks": [
+        [
+          "normal_recursion",
+          true
+        ],
+        [
+          "deep_recursion_triggered",
+          true
+        ],
+        [
+          "stats_present",
+          true
+        ],
+        [
+          "call_counted",
+          true
+        ],
+        [
+          "breach_counted",
+          true
+        ]
+      ],
+      "guard_stats": {
+        "name": "test_guard",
+        "max_depth": 3,
+        "call_count": 7,
+        "breach_count": 1,
+        "current_depth": 0
+      }
+    },
+    {
+      "name": "self_language_capability",
+      "passed": true,
+      "checks": [
+        [
+          "basic_description",
+          true
+        ],
+        [
+          "system_identity",
+          true
+        ],
+        [
+          "modules_listed",
+          true
+        ],
+        [
+          "capabilities_listed",
+          true
+        ],
+        [
+          "meta_description",
+          true
+        ],
+        [
+          "meta_present",
+          true
+        ],
+        [
+          "reflection_result",
+          true
+        ],
+        [
+          "reflection_effects",
+          true
+        ],
+        [
+          "reflection_lessons",
+          true
+        ],
+        [
+          "consistency_score",
+          true
+        ],
+        [
+          "doc_generated",
+          true
+        ],
+        [
+          "doc_title",
+          true
+        ]
+      ],
+      "description_levels": [
+        0,
+        1
+      ],
+      "reflection_score": 0.7
+    },
+    {
+      "name": "snapshot_rollback_mechanism",
+      "passed": true,
+      "checks": [
+        [
+          "snapshot_created",
+          true
+        ],
+        [
+          "snapshot_readable",
+          true
+        ],
+        [
+          "snapshot_content",
+          true
+        ],
+        [
+          "rollback_code",
+          true
+        ],
+        [
+          "rollback_latest",
+          true
+        ],
+        [
+          "chain_valid",
+          true
+        ],
+        [
+          "snapshots_listed",
+          true
+        ]
+      ],
+      "snapshot_count": 2
+    },
+    {
+      "name": "impact_analysis_accuracy",
+      "passed": true,
+      "checks": [
+        [
+          "d_affects_c",
+          true
+        ],
+        [
+          "d_propagation",
+          true
+        ],
+        [
+          "c_affects_a",
+          true
+        ],
+        [
+          "c_affects_b",
+          true
+        ],
+        [
+          "c_propagation_depth",
+          true
+        ],
+        [
+          "b_affects_a",
+          true
+        ],
+        [
+          "b_affects_e",
+          true
+        ],
+        [
+          "b_risk_elevated",
+          true
+        ],
+        [
+          "chain_exists",
+          true
+        ],
+        [
+          "chain_contains_d",
+          true
+        ],
+        [
+          "impact_score_valid",
+          true
+        ]
+      ],
+      "impact_samples": {
+        "D": {
+          "affected": 4,
+          "risk": "medium"
+        },
+        "C": {
+          "affected": 3,
+          "risk": "medium"
+        },
+        "B": {
+          "affected": 2,
+          "risk": "high"
+        }
+      }
+    }
+  ]
+}

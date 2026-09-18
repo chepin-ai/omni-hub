@@ -1,0 +1,736 @@
+{
+  "summary": {
+    "total_rings": 18,
+    "total_energy": 24.082473090712398,
+    "avg_coherence": 0.921885342621484,
+    "type_distribution": {
+      "pair": 3,
+      "cycle": 2,
+      "self": 11,
+      "meta": 1,
+      "causal": 1
+    },
+    "closure_distribution": {
+      "latitude": 2,
+      "grid": 3,
+      "meridian": 13
+    },
+    "status_distribution": {
+      "closed": 17,
+      "resonating": 1
+    }
+  },
+  "overlaps": [
+    {
+      "ring_a": "lgt_vinf_pair",
+      "ring_b": "cfts_lgt_qgl_cycle",
+      "shared": [
+        "lgt"
+      ],
+      "shared_count": 1
+    },
+    {
+      "ring_a": "lgt_vinf_pair",
+      "ring_b": "grand_cycle",
+      "shared": [
+        "vinf",
+        "lgt"
+      ],
+      "shared_count": 2
+    },
+    {
+      "ring_a": "lgt_vinf_pair",
+      "ring_b": "self_lgt",
+      "shared": [
+        "lgt"
+      ],
+      "shared_count": 1
+    },
+    {
+      "ring_a": "lgt_vinf_pair",
+      "ring_b": "self_vinf",
+      "shared": [
+        "vinf"
+      ],
+      "shared_count": 1
+    },
+    {
+      "ring_a": "lgt_vinf_pair",
+      "ring_b": "meta_excitation",
+      "shared": [
+        "vinf",
+        "lgt"
+      ],
+      "shared_count": 2
+    },
+    {
+      "ring_a": "lgt_vinf_pair",
+      "ring_b": "causal_lgt_chain",
+      "shared": [
+        "vinf",
+        "lgt"
+      ],
+      "shared_count": 2
+    },
+    {
+      "ring_a": "cfts_lgt_qgl_cycle",
+      "ring_b": "qgl_usrm_pair",
+      "shared": [
+        "qgl"
+      ],
+      "shared_count": 1
+    },
+    {
+      "ring_a": "cfts_lgt_qgl_cycle",
+      "ring_b": "grand_cycle",
+      "shared": [
+        "cfts",
+        "lgt",
+        "qgl"
+      ],
+      "shared_count": 3
+    },
+    {
+      "ring_a": "cfts_lgt_qgl_cycle",
+      "ring_b": "self_lgt",
+      "shared": [
+        "lgt"
+      ],
+      "shared_count": 1
+    },
+    {
+      "ring_a": "cfts_lgt_qgl_cycle",
+      "ring_b": "self_qgl",
+      "shared": [
+        "qgl"
+      ],
+      "shared_count": 1
+    },
+    {
+      "ring_a": "cfts_lgt_qgl_cycle",
+      "ring_b": "self_cfts",
+      "shared": [
+        "cfts"
+      ],
+      "shared_count": 1
+    },
+    {
+      "ring_a": "cfts_lgt_qgl_cycle",
+      "ring_b": "meta_excitation",
+      "shared": [
+        "lgt",
+        "qgl"
+      ],
+      "shared_count": 2
+    },
+    {
+      "ring_a": "cfts_lgt_qgl_cycle",
+      "ring_b": "causal_lgt_chain",
+      "shared": [
+        "lgt"
+      ],
+      "shared_count": 1
+    },
+    {
+      "ring_a": "qgl_usrm_pair",
+      "ring_b": "grand_cycle",
+      "shared": [
+        "usrm",
+        "qgl"
+      ],
+      "shared_count": 2
+    },
+    {
+      "ring_a": "qgl_usrm_pair",
+      "ring_b": "self_qgl",
+      "shared": [
+        "qgl"
+      ],
+      "shared_count": 1
+    },
+    {
+      "ring_a": "qgl_usrm_pair",
+      "ring_b": "self_usrm",
+      "shared": [
+        "usrm"
+      ],
+      "shared_count": 1
+    },
+    {
+      "ring_a": "qgl_usrm_pair",
+      "ring_b": "meta_excitation",
+      "shared": [
+        "qgl"
+      ],
+      "shared_count": 1
+    },
+    {
+      "ring_a": "qlv_qfa_si5",
+      "ring_b": "grand_cycle",
+      "shared": [
+        "qfa",
+        "qlv"
+      ],
+      "shared_count": 2
+    },
+    {
+      "ring_a": "qlv_qfa_si5",
+      "ring_b": "self_qfa",
+      "shared": [
+        "qfa"
+      ],
+      "shared_count": 1
+    },
+    {
+      "ring_a": "qlv_qfa_si5",
+      "ring_b": "self_qlv",
+      "shared": [
+        "qlv"
+      ],
+      "shared_count": 1
+    },
+    {
+      "ring_a": "qlv_qfa_si5",
+      "ring_b": "causal_lgt_chain",
+      "shared": [
+        "qfa"
+      ],
+      "shared_count": 1
+    },
+    {
+      "ring_a": "grand_cycle",
+      "ring_b": "self_ucif2",
+      "shared": [
+        "ucif2"
+      ],
+      "shared_count": 1
+    },
+    {
+      "ring_a": "grand_cycle",
+      "ring_b": "self_lvlu",
+      "shared": [
+        "lvlu"
+      ],
+      "shared_count": 1
+    },
+    {
+      "ring_a": "grand_cycle",
+      "ring_b": "self_lgt",
+      "shared": [
+        "lgt"
+      ],
+      "shared_count": 1
+    },
+    {
+      "ring_a": "grand_cycle",
+      "ring_b": "self_qfa",
+      "shared": [
+        "qfa"
+      ],
+      "shared_count": 1
+    },
+    {
+      "ring_a": "grand_cycle",
+      "ring_b": "self_vinf",
+      "shared": [
+        "vinf"
+      ],
+      "shared_count": 1
+    },
+    {
+      "ring_a": "grand_cycle",
+      "ring_b": "self_qgl",
+      "shared": [
+        "qgl"
+      ],
+      "shared_count": 1
+    },
+    {
+      "ring_a": "grand_cycle",
+      "ring_b": "self_qlv",
+      "shared": [
+        "qlv"
+      ],
+      "shared_count": 1
+    },
+    {
+      "ring_a": "grand_cycle",
+      "ring_b": "self_cisvr",
+      "shared": [
+        "cisvr"
+      ],
+      "shared_count": 1
+    },
+    {
+      "ring_a": "grand_cycle",
+      "ring_b": "self_qtlv",
+      "shared": [
+        "qtlv"
+      ],
+      "shared_count": 1
+    },
+    {
+      "ring_a": "grand_cycle",
+      "ring_b": "self_usrm",
+      "shared": [
+        "usrm"
+      ],
+      "shared_count": 1
+    },
+    {
+      "ring_a": "grand_cycle",
+      "ring_b": "self_cfts",
+      "shared": [
+        "cfts"
+      ],
+      "shared_count": 1
+    },
+    {
+      "ring_a": "grand_cycle",
+      "ring_b": "meta_excitation",
+      "shared": [
+        "vinf",
+        "lgt",
+        "qgl"
+      ],
+      "shared_count": 3
+    },
+    {
+      "ring_a": "grand_cycle",
+      "ring_b": "causal_lgt_chain",
+      "shared": [
+        "qfa",
+        "vinf",
+        "lgt"
+      ],
+      "shared_count": 3
+    },
+    {
+      "ring_a": "self_lgt",
+      "ring_b": "meta_excitation",
+      "shared": [
+        "lgt"
+      ],
+      "shared_count": 1
+    },
+    {
+      "ring_a": "self_lgt",
+      "ring_b": "causal_lgt_chain",
+      "shared": [
+        "lgt"
+      ],
+      "shared_count": 1
+    },
+    {
+      "ring_a": "self_qfa",
+      "ring_b": "causal_lgt_chain",
+      "shared": [
+        "qfa"
+      ],
+      "shared_count": 1
+    },
+    {
+      "ring_a": "self_vinf",
+      "ring_b": "meta_excitation",
+      "shared": [
+        "vinf"
+      ],
+      "shared_count": 1
+    },
+    {
+      "ring_a": "self_vinf",
+      "ring_b": "causal_lgt_chain",
+      "shared": [
+        "vinf"
+      ],
+      "shared_count": 1
+    },
+    {
+      "ring_a": "self_qgl",
+      "ring_b": "meta_excitation",
+      "shared": [
+        "qgl"
+      ],
+      "shared_count": 1
+    },
+    {
+      "ring_a": "meta_excitation",
+      "ring_b": "causal_lgt_chain",
+      "shared": [
+        "vinf",
+        "lgt"
+      ],
+      "shared_count": 2
+    }
+  ],
+  "rings": [
+    {
+      "ring_id": "7ae45663",
+      "name": "lgt_vinf_pair",
+      "members": [
+        "lgt",
+        "vinf"
+      ],
+      "ring_type": "pair",
+      "closure_type": "latitude",
+      "energy": 0.9149714459049755,
+      "coherence": 0.8458175503790503,
+      "status": "closed",
+      "phase": 0.0,
+      "frequency": 1.0,
+      "creation_time": 180124.0,
+      "metadata": {
+        "description": "lgt-vinf 对闭环",
+        "version": "7.0"
+      }
+    },
+    {
+      "ring_id": "f45b0452",
+      "name": "cfts_lgt_qgl_cycle",
+      "members": [
+        "cfts",
+        "lgt",
+        "qgl"
+      ],
+      "ring_type": "cycle",
+      "closure_type": "grid",
+      "energy": 1.4928089867200334,
+      "coherence": 0.883363877238602,
+      "status": "closed",
+      "phase": 0.0,
+      "frequency": 1.2,
+      "creation_time": 25588.0,
+      "metadata": {
+        "description": "cfts-lgt-qgl 三角环",
+        "version": "7.0"
+      }
+    },
+    {
+      "ring_id": "968681c1",
+      "name": "qgl_usrm_pair",
+      "members": [
+        "qgl",
+        "usrm"
+      ],
+      "ring_type": "pair",
+      "closure_type": "latitude",
+      "energy": 1.8516551152947518,
+      "coherence": 0.9092724296033381,
+      "status": "closed",
+      "phase": 3.141592653589793,
+      "frequency": 0.9,
+      "creation_time": 49930.0,
+      "metadata": {
+        "description": "qgl-usrm 对闭环",
+        "version": "7.0"
+      }
+    },
+    {
+      "ring_id": "44961ad5",
+      "name": "qlv_qfa_si5",
+      "members": [
+        "qlv",
+        "qfa"
+      ],
+      "ring_type": "pair",
+      "closure_type": "meridian",
+      "energy": 1.260742335678294,
+      "coherence": 0.9262693526141957,
+      "status": "closed",
+      "phase": 0.0,
+      "frequency": 1.1,
+      "creation_time": 705605.0,
+      "metadata": {
+        "description": "qlv-qfa SI5-RING首环",
+        "version": "7.0"
+      }
+    },
+    {
+      "ring_id": "c832f9d9",
+      "name": "grand_cycle",
+      "members": [
+        "ucif2",
+        "lvlu",
+        "lgt",
+        "qfa",
+        "vinf",
+        "qgl",
+        "qlv",
+        "cisvr",
+        "qtlv",
+        "usrm",
+        "cfts"
+      ],
+      "ring_type": "cycle",
+      "closure_type": "grid",
+      "energy": 3.74760226000091,
+      "coherence": 0.939280549792817,
+      "status": "resonating",
+      "phase": 0.05,
+      "frequency": 0.5,
+      "creation_time": 522194.0,
+      "metadata": {
+        "description": "11线大环",
+        "version": "7.0"
+      }
+    },
+    {
+      "ring_id": "f6824a41",
+      "name": "self_ucif2",
+      "members": [
+        "ucif2"
+      ],
+      "ring_type": "self",
+      "closure_type": "meridian",
+      "energy": 0.6707786811106613,
+      "coherence": 0.9414401076003105,
+      "status": "closed",
+      "phase": 0.0,
+      "frequency": 1.0,
+      "creation_time": 162777.0,
+      "metadata": {
+        "description": "ucif2 因果自环",
+        "version": "7.0"
+      }
+    },
+    {
+      "ring_id": "c87a10ec",
+      "name": "self_lvlu",
+      "members": [
+        "lvlu"
+      ],
+      "ring_type": "self",
+      "closure_type": "meridian",
+      "energy": 0.6671850658402037,
+      "coherence": 0.9428113180678395,
+      "status": "closed",
+      "phase": 0.0,
+      "frequency": 1.0,
+      "creation_time": 779080.0,
+      "metadata": {
+        "description": "lvlu 因果自环",
+        "version": "7.0"
+      }
+    },
+    {
+      "ring_id": "35a1bb51",
+      "name": "self_lgt",
+      "members": [
+        "lgt"
+      ],
+      "ring_type": "self",
+      "closure_type": "meridian",
+      "energy": 1.5510275933148423,
+      "coherence": 0.9416585297313436,
+      "status": "closed",
+      "phase": 0.0,
+      "frequency": 1.0,
+      "creation_time": 392108.0,
+      "metadata": {
+        "description": "lgt 因果自环",
+        "version": "7.0"
+      }
+    },
+    {
+      "ring_id": "c78becf2",
+      "name": "self_qfa",
+      "members": [
+        "qfa"
+      ],
+      "ring_type": "self",
+      "closure_type": "meridian",
+      "energy": 1.3427169897338274,
+      "coherence": 0.9389176347100139,
+      "status": "closed",
+      "phase": 0.0,
+      "frequency": 1.0,
+      "creation_time": 323873.0,
+      "metadata": {
+        "description": "qfa 因果自环",
+        "version": "7.0"
+      }
+    },
+    {
+      "ring_id": "57640ffd",
+      "name": "self_vinf",
+      "members": [
+        "vinf"
+      ],
+      "ring_type": "self",
+      "closure_type": "meridian",
+      "energy": 1.452555880692417,
+      "coherence": 0.9353401816228565,
+      "status": "closed",
+      "phase": 0.0,
+      "frequency": 1.0,
+      "creation_time": 746754.0,
+      "metadata": {
+        "description": "vinf 因果自环",
+        "version": "7.0"
+      }
+    },
+    {
+      "ring_id": "f61de164",
+      "name": "self_qgl",
+      "members": [
+        "qgl"
+      ],
+      "ring_type": "self",
+      "closure_type": "meridian",
+      "energy": 1.4174186290667201,
+      "coherence": 0.9315167716018585,
+      "status": "closed",
+      "phase": 0.0,
+      "frequency": 1.0,
+      "creation_time": 765985.0,
+      "metadata": {
+        "description": "qgl 因果自环",
+        "version": "7.0"
+      }
+    },
+    {
+      "ring_id": "f00549f3",
+      "name": "self_qlv",
+      "members": [
+        "qlv"
+      ],
+      "ring_type": "self",
+      "closure_type": "meridian",
+      "energy": 0.9863303201201505,
+      "coherence": 0.9278960650653885,
+      "status": "closed",
+      "phase": 0.0,
+      "frequency": 1.0,
+      "creation_time": 353075.0,
+      "metadata": {
+        "description": "qlv 因果自环",
+        "version": "7.0"
+      }
+    },
+    {
+      "ring_id": "cbd842a5",
+      "name": "self_cisvr",
+      "members": [
+        "cisvr"
+      ],
+      "ring_type": "self",
+      "closure_type": "meridian",
+      "energy": 0.6440811137929021,
+      "coherence": 0.9248018210392388,
+      "status": "closed",
+      "phase": 0.0,
+      "frequency": 1.0,
+      "creation_time": 551328.0,
+      "metadata": {
+        "description": "cisvr 因果自环",
+        "version": "7.0"
+      }
+    },
+    {
+      "ring_id": "032de6c8",
+      "name": "self_qtlv",
+      "members": [
+        "qtlv"
+      ],
+      "ring_type": "self",
+      "closure_type": "meridian",
+      "energy": 0.635194957845841,
+      "coherence": 0.9224492923053634,
+      "status": "closed",
+      "phase": 0.0,
+      "frequency": 1.0,
+      "creation_time": 343070.0,
+      "metadata": {
+        "description": "qtlv 因果自环",
+        "version": "7.0"
+      }
+    },
+    {
+      "ring_id": "ccf2ad8d",
+      "name": "self_usrm",
+      "members": [
+        "usrm"
+      ],
+      "ring_type": "self",
+      "closure_type": "meridian",
+      "energy": 1.0371826093902685,
+      "coherence": 0.9209614880635915,
+      "status": "closed",
+      "phase": 0.0,
+      "frequency": 1.0,
+      "creation_time": 239072.0,
+      "metadata": {
+        "description": "usrm 因果自环",
+        "version": "7.0"
+      }
+    },
+    {
+      "ring_id": "3c77b8f0",
+      "name": "self_cfts",
+      "members": [
+        "cfts"
+      ],
+      "ring_type": "self",
+      "closure_type": "meridian",
+      "energy": 0.9195089889936573,
+      "coherence": 0.9203852865484171,
+      "status": "closed",
+      "phase": 0.0,
+      "frequency": 1.0,
+      "creation_time": 577247.0,
+      "metadata": {
+        "description": "cfts 因果自环",
+        "version": "7.0"
+      }
+    },
+    {
+      "ring_id": "20895d81",
+      "name": "meta_excitation",
+      "members": [
+        "lgt",
+        "qgl",
+        "vinf"
+      ],
+      "ring_type": "meta",
+      "closure_type": "grid",
+      "energy": 1.7339444695680017,
+      "coherence": 0.920554886579608,
+      "status": "closed",
+      "phase": 0.0,
+      "frequency": 1.15,
+      "creation_time": 239101.0,
+      "metadata": {
+        "description": "互激闭环",
+        "version": "7.0"
+      }
+    },
+    {
+      "ring_id": "8a84f95b",
+      "name": "causal_lgt_chain",
+      "members": [
+        "lgt",
+        "qfa",
+        "vinf"
+      ],
+      "ring_type": "causal",
+      "closure_type": "meridian",
+      "energy": 1.7567676476439396,
+      "coherence": 0.9211990246228797,
+      "status": "closed",
+      "phase": 0.0,
+      "frequency": 1.05,
+      "creation_time": 42311.0,
+      "metadata": {
+        "description": "lgt-qfa-vinf 因果链",
+        "version": "7.0"
+      }
+    }
+  ],
+  "resonance_matrix_shape": [
+    18,
+    18
+  ],
+  "resonance_matrix_mean": 0.11534757912158966,
+  "resonance_matrix_max": 1.0,
+  "timestamp": 5
+}

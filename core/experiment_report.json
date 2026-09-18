@@ -1,0 +1,276 @@
+{
+  "experiment_info": {
+    "name": "OMNI-HUB v6.0 QuantumConsciousnessUnifier",
+    "seed": 42,
+    "timestamp": "2025-01",
+    "version": "6.0.0"
+  },
+  "moonshine_space": {
+    "dimension": 24,
+    "lee_lattice_dim": 24,
+    "basis_orthogonality": 3.1883393144543703e-14,
+    "monster_generators": 4,
+    "lee_nearest_test": 4.813988219785179
+  },
+  "module_encoding": {
+    "n_modules_encoded": 35,
+    "sample_encodings": {
+      "ConsciousnessKernel": {
+        "norm": 1.3435028842544403,
+        "first_5_dims": [
+          0.9131214523743214,
+          0.10628288345279698,
+          0.10953747716595785,
+          0.1246724808628974,
+          0.08844697587183176
+        ]
+      },
+      "QuantumObserver": {
+        "norm": 1.34350288425444,
+        "first_5_dims": [
+          0.37625186701990737,
+          0.6961024397917307,
+          0.11952301754502578,
+          0.13603774254341686,
+          0.09650988613620198
+        ]
+      },
+      "MetaCognitiveEngine": {
+        "norm": 1.3435028842544403,
+        "first_5_dims": [
+          0.34529489635911353,
+          0.13337015592627988,
+          0.6851139064158204,
+          0.15644652903856832,
+          0.11098858612048396
+        ]
+      }
+    }
+  },
+  "monster_operations": {
+    "identity": 3449.314905436215,
+    "2A": 1923.2536925223276,
+    "2B": 1955.6314933944434,
+    "3A": 1928.5553549978636,
+    "random": 3339.550081088168
+  },
+  "j_invariant_variance": 511942.106778034,
+  "vertex_operator_tests": [
+    {
+      "pair": [
+        "ConsciousnessKernel",
+        "QuantumObserver"
+      ],
+      "result_norm": 1.9882965309027274
+    },
+    {
+      "pair": [
+        "CoherenceManager",
+        "MemoryConsolidator"
+      ],
+      "result_norm": 1.7455751042537373
+    },
+    {
+      "pair": [
+        "InnovationCatalyst",
+        "ProgressTracker"
+      ],
+      "result_norm": 2.3500181112950043
+    }
+  ],
+  "autopoiesis": {
+    "closure_score": 0.9742857142856095,
+    "internal_ratio": 0.9999999999997007,
+    "scc_ratio": 0.9142857142857143,
+    "self_loop_ratio": 1.0,
+    "cycle_count": 30476,
+    "cycle_density": 24.878367346936745
+  },
+  "structural_coupling": {
+    "matrix_shape": [
+      35,
+      35
+    ],
+    "mean_coupling": 0.02857142857022554,
+    "max_coupling": 0.33020251969606146,
+    "coupling_entropy": 112.13844071530575
+  },
+  "unified_state": {
+    "j_invariant": 3042.78578997309,
+    "closure_score": 0.9742857142856095,
+    "coupling_score": 0.02857142857022554,
+    "cognition_score": 0.7382820446946559,
+    "emergence_index": 0.0067130947612638854,
+    "quantum_signature": "QC-8F18263DA30CFB12",
+    "meta_structure": {
+      "jing": 0.9742857142856095,
+      "wei": 0.02857142857022554,
+      "xin": 0.7382820446946559
+    },
+    "meta_balance": 0.3075104471074481,
+    "unity_score": 0.4354930639773565
+  },
+  "quantum_base": {
+    "layers": [
+      "Hub",
+      "Wheel",
+      "Spine",
+      "Cauldron",
+      "Tower",
+      "Ring"
+    ],
+    "n_layers": 6,
+    "superposition_states": 11,
+    "entanglement_channels": 7,
+    "observation_threshold": 0.5,
+    "tunneling_barrier": 0.3
+  },
+  "line_states": [
+    {
+      "line_id": 0,
+      "state": 0.8123281345571701,
+      "coherence": 0.46250130460720784,
+      "superposition_depth": 5,
+      "entanglement_partners": [
+        "1",
+        "4"
+      ]
+    },
+    {
+      "line_id": 1,
+      "state": 0.5739427499313253,
+      "coherence": 0.4954566866035227,
+      "superposition_depth": 2,
+      "entanglement_partners": [
+        "5",
+        "0"
+      ]
+    },
+    {
+      "line_id": 2,
+      "state": 0.813197921763209,
+      "coherence": 0.3603938854363723,
+      "superposition_depth": 7,
+      "entanglement_partners": [
+        "10",
+        "3",
+        "9"
+      ]
+    },
+    {
+      "line_id": 3,
+      "state": 0.3802888437890819,
+      "coherence": 0.8771380609731378,
+      "superposition_depth": 2,
+      "entanglement_partners": [
+        "4",
+        "1",
+        "6"
+      ]
+    },
+    {
+      "line_id": 4,
+      "state": 0.3921922929201072,
+      "coherence": 0.6033855053626519,
+      "superposition_depth": 4,
+      "entanglement_partners": [
+        "2"
+      ]
+    },
+    {
+      "line_id": 5,
+      "state": 0.8844004557663784,
+      "coherence": 0.5856361864106224,
+      "superposition_depth": 5,
+      "entanglement_partners": [
+        "3",
+        "2"
+      ]
+    },
+    {
+      "line_id": 6,
+      "state": 0.2991928698429019,
+      "coherence": 0.36015498409976665,
+      "superposition_depth": 3,
+      "entanglement_partners": [
+        "1",
+        "9",
+        "2"
+      ]
+    },
+    {
+      "line_id": 7,
+      "state": 0.6363374399038729,
+      "coherence": 0.8777692310387071,
+      "superposition_depth": 4,
+      "entanglement_partners": [
+        "1"
+      ]
+    },
+    {
+      "line_id": 8,
+      "state": 0.6994088962897699,
+      "coherence": 0.4578622214653027,
+      "superposition_depth": 7,
+      "entanglement_partners": [
+        "5",
+        "6"
+      ]
+    },
+    {
+      "line_id": 9,
+      "state": 0.7175347601854479,
+      "coherence": 0.8394994842116356,
+      "superposition_depth": 6,
+      "entanglement_partners": [
+        "0"
+      ]
+    },
+    {
+      "line_id": 10,
+      "state": 0.4892705667194031,
+      "coherence": 0.4108061741402434,
+      "superposition_depth": 3,
+      "entanglement_partners": [
+        "8"
+      ]
+    }
+  ],
+  "full_vector_summary": {
+    "mean": 0.22236805814828564,
+    "std": 0.23589047801859983,
+    "min": -0.27178313352823424,
+    "max": 0.9742857142856095,
+    "dimensions_1_11": [
+      -0.023504679911292736,
+      -0.27178313352823424,
+      0.09269435353244766,
+      0.1819318002466105,
+      0.12083550258250372,
+      0.045503806995221024,
+      0.20626850682444678,
+      0.47384767920264026,
+      0.1543639506432359,
+      0.26632878681352534,
+      0.16506674357081363
+    ],
+    "dimensions_12_22": [
+      -0.042094662169853594,
+      0.2096726149612565,
+      0.36743227140150925,
+      0.1558483677553034,
+      0.26204463176812404,
+      0.3516524023301857,
+      0.10797419100843954,
+      0.18280553511190054,
+      0.33884237705993236,
+      0.23287503223108516,
+      0.24740371171176778
+    ],
+    "dimension_23_global_awareness": 0.3802989906738352,
+    "dimension_24_emergence": 0.05648960163781756,
+    "dimension_25_jing": 0.9742857142856095,
+    "dimension_26_wei": 0.02857142857022554,
+    "dimension_27_xin": 0.7382820446946559
+  }
+}

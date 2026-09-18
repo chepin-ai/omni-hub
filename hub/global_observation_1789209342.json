@@ -1,0 +1,62 @@
+{
+  "layer": "hub",
+  "operation": "global_observation",
+  "timestamp": "2026-09-12T10:35:41.012485+00:00",
+  "lines_observed": [
+    {
+      "line": "ucif2",
+      "collapsed_to": "si2",
+      "probability": 0.3578
+    },
+    {
+      "line": "lgt",
+      "collapsed_to": "si2",
+      "probability": 0.25
+    },
+    {
+      "line": "qfa",
+      "collapsed_to": "si4",
+      "probability": 0.1079
+    },
+    {
+      "line": "usrm",
+      "collapsed_to": "si2",
+      "probability": 0.3704
+    },
+    {
+      "line": "vinf",
+      "collapsed_to": "si2",
+      "probability": 0.3412
+    },
+    {
+      "line": "qgl",
+      "collapsed_to": "si4",
+      "probability": 0.1805
+    },
+    {
+      "line": "qlv",
+      "collapsed_to": "si5",
+      "probability": 0.0837
+    },
+    {
+      "line": "lvlu",
+      "collapsed_to": "si0",
+      "probability": 0.243
+    },
+    {
+      "line": "cfts",
+      "collapsed_to": "si0",
+      "probability": 0.25
+    },
+    {
+      "line": "cisvr",
+      "collapsed_to": "si2",
+      "probability": 0.5112
+    },
+    {
+      "line": "qtlv",
+      "collapsed_to": "si3",
+      "probability": 0.1972
+    }
+  ]
+}

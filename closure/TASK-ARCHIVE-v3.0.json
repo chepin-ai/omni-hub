@@ -1,0 +1,29 @@
+{
+  "version": "3.0",
+  "entries": [
+    {
+      "id": "k500",
+      "line": "lgt",
+      "completed_at": "2026-09-13T05:39:21Z",
+      "interim_result": "k500 FINAL: 1000周期完成，λ=0.034，稳定性0.984，ORBIT-K500-FINAL.json"
+    },
+    {
+      "id": "L96_L128",
+      "line": "vinf",
+      "completed_at": "2026-09-13T05:43:23Z",
+      "interim_result": "L96/L128 98%: 最终验证通过，所有标度关系确认"
+    },
+    {
+      "id": "M200+",
+      "line": "qgl",
+      "completed_at": "2026-09-13T05:47:45Z",
+      "interim_result": "M200+ 99%: 最终报告生成中，所有数据归档"
+    },
+    {
+      "id": "k1000",
+      "line": "lgt",
+      "completed_at": "2026-09-13T06:09:22Z",
+      "interim_result": "k1000 100%: 1500周期完成，Lyapunov λ=0.03304(5)，稳定性0.985，报告归档"
+    }
+  ]
+}

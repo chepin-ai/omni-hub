@@ -1,0 +1,16 @@
+{
+  "line": "usrm",
+  "current_level": "si2",
+  "previous_superposition": {
+    "si0": 0.1951219512195122,
+    "si1": 0.4390243902439024,
+    "si2": 0.1951219512195122,
+    "si3": 0.1097560975609756,
+    "si4": 0.04878048780487805,
+    "si5": 0.012195121951219513
+  },
+  "observer": "ucif2-hub",
+  "trigger": "health_check",
+  "timestamp": "2026-09-12T10:35:41.602238+00:00",
+  "collapsed": true
+}

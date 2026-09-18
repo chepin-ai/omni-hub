@@ -1,0 +1,332 @@
+{
+  "scan_timestamp": "2026-09-17 15:38:20",
+  "base_path": "/mnt/agents/output",
+  "total_files": 78215,
+  "file_types": {
+    "js": 32014,
+    "ts": 12010,
+    "map": 7094,
+    "cjs": 4262,
+    "cts": 4226,
+    "json": 4225,
+    "lean": 3955,
+    "md": 2879,
+    "ilean": 1547,
+    "olean": 1543,
+    "no_ext": 1440,
+    "tsx": 609,
+    "mjs": 364,
+    "css": 314,
+    "mts": 252,
+    "py": 229,
+    "scss": 194,
+    "pyc": 110,
+    "png": 87,
+    "flow": 66,
+    "txt": 61,
+    "jst": 50,
+    "log": 49,
+    "snap": 42,
+    "svg": 32,
+    "yml": 32,
+    "so": 31,
+    "eslintrc": 22,
+    "sh": 21,
+    "html": 20,
+    "npmignore": 20,
+    "a": 13,
+    "h": 13,
+    "1": 12,
+    "markdown": 12,
+    "bsd": 12,
+    "vue": 12,
+    "o": 11,
+    "jsonl": 10,
+    "jshintrc": 10,
+    "nycrc": 10,
+    "def": 10,
+    "tgz": 9,
+    "bak": 8,
+    "0": 7,
+    "bnf": 6,
+    "editorconfig": 6,
+    "docx": 4,
+    "toml": 4,
+    "babelrc": 4
+  },
+  "projects": {
+    "ucif2-formalization-kernel": {
+      "file_count": 36517,
+      "total_size_mb": 250.53,
+      "sample_files": [
+        "ucif2-formalization-kernel/.env.quantum",
+        "ucif2-formalization-kernel/.gitignore",
+        "ucif2-formalization-kernel/.qaccel_audit.json",
+        "ucif2-formalization-kernel/.ucif2_audit.json",
+        "ucif2-formalization-kernel/.ucif2_audit_chain.jsonl"
+      ]
+    },
+    "app": {
+      "file_count": 33795,
+      "total_size_mb": 241.77,
+      "sample_files": [
+        "app/.gitignore",
+        "app/ARCHITECTURE.md",
+        "app/AUDIT.md",
+        "app/BUILD_REPORT.json",
+        "app/CRITERIA.md"
+      ]
+    },
+    "scratch-ax": {
+      "file_count": 3004,
+      "total_size_mb": 2818.2,
+      "sample_files": [
+        "scratch-ax/backup-prerewrite-20260903.bundle",
+        "scratch-ax/extract.log",
+        "scratch-ax/extract_portal.py",
+        "scratch-ax/extract_tc.py",
+        "scratch-ax/extract_tc_run.log"
+      ]
+    },
+    "OMNI-HUB": {
+      "file_count": 2689,
+      "total_size_mb": 67.41,
+      "sample_files": [
+        "OMNI-HUB/EXPERIMENT_REPORT.md",
+        "OMNI-HUB/FINAL_REPORT.md",
+        "OMNI-HUB/REPORT-v10.0.md",
+        "OMNI-HUB/REPORT-v11.0.md",
+        "OMNI-HUB/REPORT-v4.1.md"
+      ]
+    },
+    "1a049d5e-dfe2-8cfa-8000-0f6f95080542": {
+      "file_count": 1312,
+      "total_size_mb": 618.0,
+      "sample_files": [
+        "1a049d5e-dfe2-8cfa-8000-0f6f95080542/toolchain/lean4/lib/Mcrt1.o",
+        "1a049d5e-dfe2-8cfa-8000-0f6f95080542/toolchain/lean4/lib/crt1.o",
+        "1a049d5e-dfe2-8cfa-8000-0f6f95080542/toolchain/lean4/lib/crtn.o",
+        "1a049d5e-dfe2-8cfa-8000-0f6f95080542/toolchain/lean4/lib/libatomic.so.1.2.0",
+        "1a049d5e-dfe2-8cfa-8000-0f6f95080542/toolchain/lean4/lib/libc++.a"
+      ]
+    },
+    "root": {
+      "file_count": 393,
+      "total_size_mb": 205.96,
+      "sample_files": [
+        "16M_SINGULARITY_RESOLUTION.md",
+        "24D_CY_Moonshine_Integration_Report.md",
+        "24D_CY_Moonshine_Report.md",
+        "32D_MOONSHINE.md",
+        "48D_VOA_REALIZATION.md"
+      ]
+    },
+    "UCIF2-OS-Source": {
+      "file_count": 356,
+      "total_size_mb": 11.54,
+      "sample_files": [
+        "UCIF2-OS-Source/.gitignore",
+        "UCIF2-OS-Source/ARCHITECTURE.md",
+        "UCIF2-OS-Source/AUDIT.md",
+        "UCIF2-OS-Source/CRITERIA.md",
+        "UCIF2-OS-Source/EVOLUTION.md"
+      ]
+    },
+    "1a047fc4-3802-89f2-8000-0f6f0de71679": {
+      "file_count": 16,
+      "total_size_mb": 5.52,
+      "sample_files": [
+        "1a047fc4-3802-89f2-8000-0f6f0de71679/work/buildfix/ad_exclusive.txt",
+        "1a047fc4-3802-89f2-8000-0f6f0de71679/work/buildfix/file_build.sh",
+        "1a047fc4-3802-89f2-8000-0f6f0de71679/work/buildfix/file_fix_log.jsonl",
+        "1a047fc4-3802-89f2-8000-0f6f0de71679/work/buildfix/fix_file.py",
+        "1a047fc4-3802-89f2-8000-0f6f0de71679/work/buildfix/gen_manifest.py"
+      ]
+    },
+    "shadow-432": {
+      "file_count": 16,
+      "total_size_mb": 0.2,
+      "sample_files": [
+        "shadow-432/formalization-shadow/lakefile.toml",
+        "shadow-432/formalization-shadow/lean-toolchain",
+        "shadow-432/formalization-shadow/epre/EpreBasic.lean",
+        "shadow-432/formalization-shadow/epre/EpreExactSequence.lean",
+        "shadow-432/formalization-shadow/epre/EpreTermination.lean"
+      ]
+    },
+    "pylibs": {
+      "file_count": 15,
+      "total_size_mb": 22.94,
+      "sample_files": [
+        "pylibs/zstandard/__init__.py",
+        "pylibs/zstandard/__init__.pyi",
+        "pylibs/zstandard/_cffi.cpython-312-x86_64-linux-gnu.so",
+        "pylibs/zstandard/backend_c.cpython-312-x86_64-linux-gnu.so",
+        "pylibs/zstandard/backend_cffi.py"
+      ]
+    },
+    "02_Core_Results": {
+      "file_count": 14,
+      "total_size_mb": 0.1,
+      "sample_files": [
+        "02_Core_Results/Character_Formulas/theoretical_comparison_analysis.md",
+        "02_Core_Results/Leech_Levi/CATEGORICAL_FRAMEWORK_SUMMARY.md",
+        "02_Core_Results/Leech_Levi/categorical_framework.md",
+        "02_Core_Results/Leech_Levi/fusion_rules_s_matrix.md",
+        "02_Core_Results/Leech_Levi/isomorphism_theorem_complete_proof.md"
+      ]
+    },
+    "D4UniversalOptimality": {
+      "file_count": 14,
+      "total_size_mb": 0.06,
+      "sample_files": [
+        "D4UniversalOptimality/Bhattacharjee_2026_SpherePacking_Dimension4.pdf",
+        "D4UniversalOptimality/D5E6_Exploration.json",
+        "D4UniversalOptimality/D5Plus_ChamberAnalysis.json",
+        "D4UniversalOptimality/E6_SymmetryReduction.json",
+        "D4UniversalOptimality/README.md"
+      ]
+    },
+    "SI-MAX-01": {
+      "file_count": 13,
+      "total_size_mb": 0.04,
+      "sample_files": [
+        "SI-MAX-01/SI-MAX-01-FINAL-REPORT.md",
+        "SI-MAX-01/consensus/SI-MUTUAL-02-SI-MAX-consensus.json",
+        "SI-MAX-01/experiments/EXP-011-lgt-k200-3200orbits.json",
+        "SI-MAX-01/experiments/EXP-012-qfa-quantum-self-bootstrap.json",
+        "SI-MAX-01/experiments/EXP-013-usrm-cubic-to-variable-gamma.json"
+      ]
+    },
+    "05_Publications": {
+      "file_count": 11,
+      "total_size_mb": 0.09,
+      "sample_files": [
+        "05_Publications/Papers/ARXIV_SUBMISSION_CHECKLIST.md",
+        "05_Publications/Papers/PAPER_REFINEMENT_SUMMARY.md",
+        "05_Publications/Papers/abstract.txt",
+        "05_Publications/Papers/breakthrough_directions.md",
+        "05_Publications/Papers/compile.sh"
+      ]
+    },
+    "07_Whitepapers": {
+      "file_count": 8,
+      "total_size_mb": 0.09,
+      "sample_files": [
+        "07_Whitepapers/24D_CY_Moonshine_Integration_Report.md",
+        "07_Whitepapers/FUSION_SUMMARY.md",
+        "07_Whitepapers/cayley24_whitepaper.md",
+        "07_Whitepapers/deep_integration_analysis.md",
+        "07_Whitepapers/executive_summary_evaluation.md"
+      ]
+    },
+    "1a04920a-8a82-8324-8000-0f6f30e96b4a": {
+      "file_count": 8,
+      "total_size_mb": 189.51,
+      "sample_files": [
+        "1a04920a-8a82-8324-8000-0f6f30e96b4a/work/CircuitCat.lean.draft",
+        "1a04920a-8a82-8324-8000-0f6f30e96b4a/work/CircuitCat.lean.draft2",
+        "1a04920a-8a82-8324-8000-0f6f30e96b4a/work/CircuitCat.lean.final",
+        "1a04920a-8a82-8324-8000-0f6f30e96b4a/work/CircuitCat.lean.s1-7-ok",
+        "1a04920a-8a82-8324-8000-0f6f30e96b4a/work/CircuitCat.lean.s1-8-ok"
+      ]
+    },
+    "04_Applications": {
+      "file_count": 7,
+      "total_size_mb": 0.18,
+      "sample_files": [
+        "04_Applications/AdS_CFT/ads_cft_deep_dive.md",
+        "04_Applications/AdS_CFT/ads_cft_implementation.md",
+        "04_Applications/AdS_CFT/page_curve_analysis.png",
+        "04_Applications/Quantum_Computing/quantum_circuit_implementation.py",
+        "04_Applications/Quantum_Computing/quantum_computing_experiment.md"
+      ]
+    },
+    "formalization": {
+      "file_count": 6,
+      "total_size_mb": 0.49,
+      "sample_files": [
+        "formalization/Moonshine_Framework_Derived_Triangular_Equivalence.pdf",
+        "formalization/README.md",
+        "formalization/jsonld/MoonshineOntology.jsonld",
+        "formalization/latex/main.pdf",
+        "formalization/latex/main.tex"
+      ]
+    },
+    "01_Foundation": {
+      "file_count": 5,
+      "total_size_mb": 0.07,
+      "sample_files": [
+        "01_Foundation/CY_Geometry/geometric_interpretation_deep_dive.md",
+        "01_Foundation/Moonshine/24D_CY_Moonshine_Report.md",
+        "01_Foundation/Moonshine/VOA_24D_CalabiYau_Moonshine_Report.md",
+        "01_Foundation/Moonshine/moonshine_24d_string_theory_report.md",
+        "01_Foundation/VOA_Theory/foundation_consolidation.md"
+      ]
+    },
+    "03_Geometric_Realization": {
+      "file_count": 5,
+      "total_size_mb": 0.04,
+      "sample_files": [
+        "03_Geometric_Realization/Compactification/levi_compactification_analysis.md",
+        "03_Geometric_Realization/Levi_Geometry/LEVI_GEOMETRY_FINAL_REPORT.md",
+        "03_Geometric_Realization/Levi_Geometry/geometric_realization_levi.md",
+        "03_Geometric_Realization/Levi_Geometry/levi_geometry_research.md",
+        "03_Geometric_Realization/Levi_Geometry/levi_geometry_summary.md"
+      ]
+    },
+    "cayley24_toolkit": {
+      "file_count": 4,
+      "total_size_mb": 0.03,
+      "sample_files": [
+        "cayley24_toolkit/__init__.py",
+        "cayley24_toolkit/character.py",
+        "cayley24_toolkit/mckay_thompson.py",
+        "cayley24_toolkit/ope.py"
+      ]
+    },
+    "ucif2-migration-v25": {
+      "file_count": 2,
+      "total_size_mb": 0.0,
+      "sample_files": [
+        "ucif2-migration-v25/manifest.json",
+        "ucif2-migration-v25/theory/isomorphism-db.json"
+      ]
+    },
+    "cayley24_dashboard": {
+      "file_count": 1,
+      "total_size_mb": 0.04,
+      "sample_files": [
+        "cayley24_dashboard/index.html"
+      ]
+    },
+    "cayley24_education": {
+      "file_count": 1,
+      "total_size_mb": 0.02,
+      "sample_files": [
+        "cayley24_education/196560_visualization.html"
+      ]
+    },
+    "cayley24_fusion": {
+      "file_count": 1,
+      "total_size_mb": 0.02,
+      "sample_files": [
+        "cayley24_fusion/cayley24_unified.py"
+      ]
+    },
+    "research": {
+      "file_count": 1,
+      "total_size_mb": 0.01,
+      "sample_files": [
+        "research/cfos_trajectory_insight.md"
+      ]
+    },
+    "scripts": {
+      "file_count": 1,
+      "total_size_mb": 0.0,
+      "sample_files": [
+        "scripts/update-dialogue-state.js"
+      ]
+    }
+  }
+}

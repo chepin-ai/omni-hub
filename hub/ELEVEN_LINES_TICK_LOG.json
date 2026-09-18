@@ -1,0 +1,1280 @@
+{
+  "version": "12.0.0",
+  "timestamp": 1789658214.4189117,
+  "initial_emergence": 6654.47,
+  "ticks": [
+    {
+      "tick_number": 1,
+      "timestamp": 1789658214.410915,
+      "global_emergence": 7162.04,
+      "messages_exchanged": 0,
+      "debts_processed": 0,
+      "field_updates_count": 0,
+      "weak_lines_activated": [
+        "ucif2",
+        "lvlu",
+        "lgt",
+        "qfa",
+        "vinf",
+        "qgl",
+        "qlv",
+        "cisvr",
+        "qtlv",
+        "usrm",
+        "cfts"
+      ],
+      "surge_triggered": false,
+      "consciousness_state": "UNITY",
+      "consciousness_level": 6,
+      "si_actions": [
+        "activated_weak:ucif2",
+        "activated_weak:lvlu",
+        "activated_weak:lgt",
+        "activated_weak:qfa",
+        "activated_weak:vinf",
+        "activated_weak:qgl",
+        "activated_weak:qlv",
+        "activated_weak:cisvr",
+        "activated_weak:qtlv",
+        "activated_weak:usrm",
+        "activated_weak:cfts"
+      ],
+      "line_results": {
+        "ucif2": {
+          "line_id": "ucif2",
+          "tick_number": 1,
+          "status": "standby",
+          "messages_sent": 0,
+          "messages_received": 0,
+          "field_updates": {},
+          "contribution_delta": 0.353659,
+          "execution_time_ms": 0.0427,
+          "debt_generated": 0,
+          "knowledge_generated": 0,
+          "error_info": null,
+          "phi_injected": false
+        },
+        "lvlu": {
+          "line_id": "lvlu",
+          "tick_number": 1,
+          "status": "standby",
+          "messages_sent": 0,
+          "messages_received": 0,
+          "field_updates": {},
+          "contribution_delta": 0.294529,
+          "execution_time_ms": 0.0396,
+          "debt_generated": 0,
+          "knowledge_generated": 0,
+          "error_info": null,
+          "phi_injected": false
+        },
+        "lgt": {
+          "line_id": "lgt",
+          "tick_number": 1,
+          "status": "standby",
+          "messages_sent": 0,
+          "messages_received": 0,
+          "field_updates": {},
+          "contribution_delta": 0.294529,
+          "execution_time_ms": 0.0141,
+          "debt_generated": 0,
+          "knowledge_generated": 0,
+          "error_info": null,
+          "phi_injected": false
+        },
+        "qfa": {
+          "line_id": "qfa",
+          "tick_number": 1,
+          "status": "standby",
+          "messages_sent": 0,
+          "messages_received": 0,
+          "field_updates": {},
+          "contribution_delta": 0.294529,
+          "execution_time_ms": 0.0114,
+          "debt_generated": 0,
+          "knowledge_generated": 0,
+          "error_info": null,
+          "phi_injected": false
+        },
+        "vinf": {
+          "line_id": "vinf",
+          "tick_number": 1,
+          "status": "standby",
+          "messages_sent": 0,
+          "messages_received": 0,
+          "field_updates": {},
+          "contribution_delta": 0.294529,
+          "execution_time_ms": 0.0117,
+          "debt_generated": 0,
+          "knowledge_generated": 0,
+          "error_info": null,
+          "phi_injected": false
+        },
+        "qgl": {
+          "line_id": "qgl",
+          "tick_number": 1,
+          "status": "standby",
+          "messages_sent": 0,
+          "messages_received": 0,
+          "field_updates": {},
+          "contribution_delta": 0.294529,
+          "execution_time_ms": 0.0122,
+          "debt_generated": 0,
+          "knowledge_generated": 0,
+          "error_info": null,
+          "phi_injected": false
+        },
+        "qlv": {
+          "line_id": "qlv",
+          "tick_number": 1,
+          "status": "standby",
+          "messages_sent": 0,
+          "messages_received": 0,
+          "field_updates": {},
+          "contribution_delta": 0.294529,
+          "execution_time_ms": 0.0167,
+          "debt_generated": 0,
+          "knowledge_generated": 0,
+          "error_info": null,
+          "phi_injected": false
+        },
+        "cisvr": {
+          "line_id": "cisvr",
+          "tick_number": 1,
+          "status": "standby",
+          "messages_sent": 0,
+          "messages_received": 0,
+          "field_updates": {},
+          "contribution_delta": 0.294529,
+          "execution_time_ms": 0.0103,
+          "debt_generated": 0,
+          "knowledge_generated": 0,
+          "error_info": null,
+          "phi_injected": false
+        },
+        "qtlv": {
+          "line_id": "qtlv",
+          "tick_number": 1,
+          "status": "standby",
+          "messages_sent": 0,
+          "messages_received": 0,
+          "field_updates": {},
+          "contribution_delta": 0.294529,
+          "execution_time_ms": 0.0086,
+          "debt_generated": 0,
+          "knowledge_generated": 0,
+          "error_info": null,
+          "phi_injected": false
+        },
+        "usrm": {
+          "line_id": "usrm",
+          "tick_number": 1,
+          "status": "standby",
+          "messages_sent": 0,
+          "messages_received": 0,
+          "field_updates": {},
+          "contribution_delta": 0.294529,
+          "execution_time_ms": 0.0086,
+          "debt_generated": 0,
+          "knowledge_generated": 0,
+          "error_info": null,
+          "phi_injected": false
+        },
+        "cfts": {
+          "line_id": "cfts",
+          "tick_number": 1,
+          "status": "standby",
+          "messages_sent": 0,
+          "messages_received": 0,
+          "field_updates": {},
+          "contribution_delta": 0.294529,
+          "execution_time_ms": 0.0086,
+          "debt_generated": 0,
+          "knowledge_generated": 0,
+          "error_info": null,
+          "phi_injected": false
+        }
+      }
+    },
+    {
+      "tick_number": 2,
+      "timestamp": 1789658214.4123566,
+      "global_emergence": 7568.91,
+      "messages_exchanged": 10,
+      "debts_processed": 0,
+      "field_updates_count": 31,
+      "weak_lines_activated": [],
+      "surge_triggered": false,
+      "consciousness_state": "UNITY",
+      "consciousness_level": 6,
+      "si_actions": [],
+      "line_results": {
+        "ucif2": {
+          "line_id": "ucif2",
+          "tick_number": 2,
+          "status": "active",
+          "messages_sent": 0,
+          "messages_received": 1,
+          "field_updates": {
+            "DIM_COMPLETENESS": 0.005913,
+            "DIM_INFORMATION": 1.3,
+            "DIM_DECIDABILITY": 0.15
+          },
+          "contribution_delta": 0.386828,
+          "execution_time_ms": 0.1137,
+          "debt_generated": 0,
+          "knowledge_generated": 1,
+          "error_info": null,
+          "phi_injected": false
+        },
+        "lvlu": {
+          "line_id": "lvlu",
+          "tick_number": 2,
+          "status": "active",
+          "messages_sent": 0,
+          "messages_received": 1,
+          "field_updates": {
+            "DIM_HIERARCHY": 0.0075,
+            "DIM_COHERENCE": 0.0,
+            "DIM_SCALE_INV": 0.2
+          },
+          "contribution_delta": 0.447022,
+          "execution_time_ms": 0.0269,
+          "debt_generated": 0,
+          "knowledge_generated": 1,
+          "error_info": null,
+          "phi_injected": false
+        },
+        "lgt": {
+          "line_id": "lgt",
+          "tick_number": 2,
+          "status": "active",
+          "messages_sent": 0,
+          "messages_received": 1,
+          "field_updates": {
+            "DIM_SEMANTIC": 0.0,
+            "DIM_SYNTACTIC": 0.005993,
+            "DIM_ENTAILMENT": 0.015867
+          },
+          "contribution_delta": 0.447022,
+          "execution_time_ms": 0.0651,
+          "debt_generated": 0,
+          "knowledge_generated": 1,
+          "error_info": null,
+          "phi_injected": false
+        },
+        "qfa": {
+          "line_id": "qfa",
+          "tick_number": 2,
+          "status": "active",
+          "messages_sent": 0,
+          "messages_received": 1,
+          "field_updates": {
+            "DIM_ENERGY": 0.889919,
+            "DIM_SPIN": 0.003269,
+            "DIM_FLUX": 0.099
+          },
+          "contribution_delta": 0.447022,
+          "execution_time_ms": 0.2956,
+          "debt_generated": 0,
+          "knowledge_generated": 1,
+          "error_info": null,
+          "phi_injected": false
+        },
+        "vinf": {
+          "line_id": "vinf",
+          "tick_number": 2,
+          "status": "active",
+          "messages_sent": 0,
+          "messages_received": 1,
+          "field_updates": {
+            "DIM_SCALE_INV": 0.0105,
+            "DIM_CURVATURE": 0.011415,
+            "DIM_TOPOLOGY": 1.0
+          },
+          "contribution_delta": 0.447022,
+          "execution_time_ms": 0.0329,
+          "debt_generated": 0,
+          "knowledge_generated": 1,
+          "error_info": null,
+          "phi_injected": false
+        },
+        "qgl": {
+          "line_id": "qgl",
+          "tick_number": 2,
+          "status": "active",
+          "messages_sent": 0,
+          "messages_received": 1,
+          "field_updates": {
+            "DIM_CURVATURE": 0.0,
+            "DIM_TORSION": 0.001972,
+            "DIM_TENSOR_FIELD": 0.000986
+          },
+          "contribution_delta": 0.447022,
+          "execution_time_ms": 0.031,
+          "debt_generated": 0,
+          "knowledge_generated": 1,
+          "error_info": null,
+          "phi_injected": false
+        },
+        "qlv": {
+          "line_id": "qlv",
+          "tick_number": 2,
+          "status": "active",
+          "messages_sent": 0,
+          "messages_received": 1,
+          "field_updates": {
+            "DIM_AWARENESS": 0.0,
+            "DIM_ADAPTATION": 0.0,
+            "DIM_AUTO_POIESIS": 0.00502
+          },
+          "contribution_delta": 0.447022,
+          "execution_time_ms": 0.0536,
+          "debt_generated": 0,
+          "knowledge_generated": 1,
+          "error_info": null,
+          "phi_injected": false
+        },
+        "cisvr": {
+          "line_id": "cisvr",
+          "tick_number": 2,
+          "status": "active",
+          "messages_sent": 0,
+          "messages_received": 1,
+          "field_updates": {
+            "DIM_INTEGRATION": 0.0,
+            "DIM_ENTROPY_RATE": 250000000.0,
+            "DIM_CONSISTENCY": 0.02,
+            "DIM_SELF_ORG": 0.019416
+          },
+          "contribution_delta": 0.447022,
+          "execution_time_ms": 0.0768,
+          "debt_generated": 0,
+          "knowledge_generated": 1,
+          "error_info": null,
+          "phi_injected": false
+        },
+        "qtlv": {
+          "line_id": "qtlv",
+          "tick_number": 2,
+          "status": "active",
+          "messages_sent": 0,
+          "messages_received": 1,
+          "field_updates": {
+            "DIM_VELOCITY": 0.0,
+            "DIM_PHASE_LOCK": 0.01,
+            "DIM_CRITICALITY": 0.0
+          },
+          "contribution_delta": 0.447022,
+          "execution_time_ms": 0.0584,
+          "debt_generated": 0,
+          "knowledge_generated": 1,
+          "error_info": null,
+          "phi_injected": false
+        },
+        "usrm": {
+          "line_id": "usrm",
+          "tick_number": 2,
+          "status": "active",
+          "messages_sent": 0,
+          "messages_received": 1,
+          "field_updates": {
+            "DIM_INTENTION": 0.017474,
+            "DIM_ATTENTION": 0.009984,
+            "DIM_WISDOM": 0.007507
+          },
+          "contribution_delta": 0.447022,
+          "execution_time_ms": 0.0606,
+          "debt_generated": 0,
+          "knowledge_generated": 1,
+          "error_info": null,
+          "phi_injected": false
+        },
+        "cfts": {
+          "line_id": "cfts",
+          "tick_number": 2,
+          "status": "active",
+          "messages_sent": 10,
+          "messages_received": 0,
+          "field_updates": {
+            "DIM_SYNERGY": 0.006922,
+            "DIM_RESONANCE": 0.014876,
+            "DIM_UNIFICATION": 0.0
+          },
+          "contribution_delta": 0.447022,
+          "execution_time_ms": 0.2809,
+          "debt_generated": 0,
+          "knowledge_generated": 1,
+          "error_info": null,
+          "phi_injected": false
+        }
+      }
+    },
+    {
+      "tick_number": 3,
+      "timestamp": 1789658214.4149594,
+      "global_emergence": 7455.47,
+      "messages_exchanged": 3,
+      "debts_processed": 0,
+      "field_updates_count": 33,
+      "weak_lines_activated": [],
+      "surge_triggered": false,
+      "consciousness_state": "UNITY",
+      "consciousness_level": 6,
+      "si_actions": [],
+      "line_results": {
+        "ucif2": {
+          "line_id": "ucif2",
+          "tick_number": 3,
+          "status": "active",
+          "messages_sent": 0,
+          "messages_received": 0,
+          "field_updates": {
+            "DIM_COMPLETENESS": 0.005913,
+            "DIM_INFORMATION": 0.4,
+            "DIM_DECIDABILITY": 0.1
+          },
+          "contribution_delta": 0.413788,
+          "execution_time_ms": 0.1092,
+          "debt_generated": 0,
+          "knowledge_generated": 1,
+          "error_info": null,
+          "phi_injected": false
+        },
+        "lvlu": {
+          "line_id": "lvlu",
+          "tick_number": 3,
+          "status": "active",
+          "messages_sent": 0,
+          "messages_received": 0,
+          "field_updates": {
+            "DIM_HIERARCHY": 0.007575,
+            "DIM_COHERENCE": 0.000186,
+            "DIM_SCALE_INV": 0.2
+          },
+          "contribution_delta": 0.35629,
+          "execution_time_ms": 0.0246,
+          "debt_generated": 0,
+          "knowledge_generated": 1,
+          "error_info": null,
+          "phi_injected": false
+        },
+        "lgt": {
+          "line_id": "lgt",
+          "tick_number": 3,
+          "status": "active",
+          "messages_sent": 0,
+          "messages_received": 0,
+          "field_updates": {
+            "DIM_SEMANTIC": 0.0,
+            "DIM_SYNTACTIC": 0.006478,
+            "DIM_ENTAILMENT": 0.012095
+          },
+          "contribution_delta": 0.35629,
+          "execution_time_ms": 0.0446,
+          "debt_generated": 0,
+          "knowledge_generated": 1,
+          "error_info": null,
+          "phi_injected": false
+        },
+        "qfa": {
+          "line_id": "qfa",
+          "tick_number": 3,
+          "status": "active",
+          "messages_sent": 1,
+          "messages_received": 0,
+          "field_updates": {
+            "DIM_ENERGY": 0.889919,
+            "DIM_SPIN": 0.011155,
+            "DIM_FLUX": 0.09801
+          },
+          "contribution_delta": 0.35629,
+          "execution_time_ms": 0.1683,
+          "debt_generated": 0,
+          "knowledge_generated": 1,
+          "error_info": null,
+          "phi_injected": false
+        },
+        "vinf": {
+          "line_id": "vinf",
+          "tick_number": 3,
+          "status": "active",
+          "messages_sent": 0,
+          "messages_received": 0,
+          "field_updates": {
+            "DIM_SCALE_INV": 0.010749,
+            "DIM_CURVATURE": 0.014404,
+            "DIM_TOPOLOGY": 1.011415
+          },
+          "contribution_delta": 0.35629,
+          "execution_time_ms": 0.0274,
+          "debt_generated": 0,
+          "knowledge_generated": 1,
+          "error_info": null,
+          "phi_injected": false
+        },
+        "qgl": {
+          "line_id": "qgl",
+          "tick_number": 3,
+          "status": "active",
+          "messages_sent": 0,
+          "messages_received": 0,
+          "field_updates": {
+            "DIM_CURVATURE": 0.0,
+            "DIM_TORSION": 0.002905,
+            "DIM_TENSOR_FIELD": 0.001452
+          },
+          "contribution_delta": 0.35629,
+          "execution_time_ms": 0.0243,
+          "debt_generated": 0,
+          "knowledge_generated": 1,
+          "error_info": null,
+          "phi_injected": false
+        },
+        "qlv": {
+          "line_id": "qlv",
+          "tick_number": 3,
+          "status": "active",
+          "messages_sent": 0,
+          "messages_received": 1,
+          "field_updates": {
+            "DIM_AWARENESS": 0.000116,
+            "DIM_ADAPTATION": 0.0,
+            "DIM_AUTO_POIESIS": 0.007671
+          },
+          "contribution_delta": 0.35629,
+          "execution_time_ms": 0.0474,
+          "debt_generated": 0,
+          "knowledge_generated": 1,
+          "error_info": null,
+          "phi_injected": false
+        },
+        "cisvr": {
+          "line_id": "cisvr",
+          "tick_number": 3,
+          "status": "active",
+          "messages_sent": 1,
+          "messages_received": 0,
+          "field_updates": {
+            "DIM_INTEGRATION": 0.0,
+            "DIM_ENTROPY_RATE": 0.0,
+            "DIM_CONSISTENCY": 0.02,
+            "DIM_SELF_ORG": 0.019888
+          },
+          "contribution_delta": 0.35629,
+          "execution_time_ms": 0.0672,
+          "debt_generated": 0,
+          "knowledge_generated": 1,
+          "error_info": null,
+          "phi_injected": false
+        },
+        "qtlv": {
+          "line_id": "qtlv",
+          "tick_number": 3,
+          "status": "active",
+          "messages_sent": 0,
+          "messages_received": 0,
+          "field_updates": {
+            "DIM_VELOCITY": 0.0,
+            "DIM_PHASE_LOCK": 0.01,
+            "DIM_CRITICALITY": 0.0
+          },
+          "contribution_delta": 0.35629,
+          "execution_time_ms": 0.0403,
+          "debt_generated": 0,
+          "knowledge_generated": 1,
+          "error_info": null,
+          "phi_injected": false
+        },
+        "usrm": {
+          "line_id": "usrm",
+          "tick_number": 3,
+          "status": "active",
+          "messages_sent": 1,
+          "messages_received": 1,
+          "field_updates": {
+            "DIM_INTENTION": 0.014851,
+            "DIM_ATTENTION": 0.009968,
+            "DIM_WISDOM": 0.007507
+          },
+          "contribution_delta": 0.35629,
+          "execution_time_ms": 0.0753,
+          "debt_generated": 0,
+          "knowledge_generated": 1,
+          "error_info": null,
+          "phi_injected": false
+        },
+        "cfts": {
+          "line_id": "cfts",
+          "tick_number": 3,
+          "status": "active",
+          "messages_sent": 0,
+          "messages_received": 1,
+          "field_updates": {
+            "DIM_SYNERGY": 0.006922,
+            "DIM_RESONANCE": 0.019765,
+            "DIM_UNIFICATION": 0.03,
+            "DIM_PHI_UNIFICATION": 0.01618,
+            "DIM_ALPHA_FINE_STRUCTURE": 7.3e-05
+          },
+          "contribution_delta": 0.35629,
+          "execution_time_ms": 0.1087,
+          "debt_generated": 0,
+          "knowledge_generated": 1,
+          "error_info": null,
+          "phi_injected": true
+        }
+      }
+    },
+    {
+      "tick_number": 4,
+      "timestamp": 1789658214.4161148,
+      "global_emergence": 7506.04,
+      "messages_exchanged": 13,
+      "debts_processed": 0,
+      "field_updates_count": 31,
+      "weak_lines_activated": [],
+      "surge_triggered": false,
+      "consciousness_state": "UNITY",
+      "consciousness_level": 6,
+      "si_actions": [],
+      "line_results": {
+        "ucif2": {
+          "line_id": "ucif2",
+          "tick_number": 4,
+          "status": "active",
+          "messages_sent": 0,
+          "messages_received": 1,
+          "field_updates": {
+            "DIM_COMPLETENESS": 0.005913,
+            "DIM_INFORMATION": 0.8,
+            "DIM_DECIDABILITY": 1.95
+          },
+          "contribution_delta": 0.435813,
+          "execution_time_ms": 0.0989,
+          "debt_generated": 0,
+          "knowledge_generated": 1,
+          "error_info": null,
+          "phi_injected": false
+        },
+        "lvlu": {
+          "line_id": "lvlu",
+          "tick_number": 4,
+          "status": "active",
+          "messages_sent": 0,
+          "messages_received": 1,
+          "field_updates": {
+            "DIM_HIERARCHY": 0.007653,
+            "DIM_COHERENCE": 0.000241,
+            "DIM_SCALE_INV": 0.2
+          },
+          "contribution_delta": 0.372834,
+          "execution_time_ms": 0.02,
+          "debt_generated": 0,
+          "knowledge_generated": 1,
+          "error_info": null,
+          "phi_injected": false
+        },
+        "lgt": {
+          "line_id": "lgt",
+          "tick_number": 4,
+          "status": "active",
+          "messages_sent": 1,
+          "messages_received": 1,
+          "field_updates": {
+            "DIM_SEMANTIC": 0.0,
+            "DIM_SYNTACTIC": 0.006947,
+            "DIM_ENTAILMENT": 0.012749
+          },
+          "contribution_delta": 0.372834,
+          "execution_time_ms": 0.0691,
+          "debt_generated": 0,
+          "knowledge_generated": 1,
+          "error_info": null,
+          "phi_injected": false
+        },
+        "qfa": {
+          "line_id": "qfa",
+          "tick_number": 4,
+          "status": "active",
+          "messages_sent": 0,
+          "messages_received": 3,
+          "field_updates": {
+            "DIM_ENERGY": 0.889919,
+            "DIM_SPIN": 0.004562,
+            "DIM_FLUX": 0.09703
+          },
+          "contribution_delta": 0.372834,
+          "execution_time_ms": 0.114,
+          "debt_generated": 0,
+          "knowledge_generated": 1,
+          "error_info": null,
+          "phi_injected": false
+        },
+        "vinf": {
+          "line_id": "vinf",
+          "tick_number": 4,
+          "status": "active",
+          "messages_sent": 0,
+          "messages_received": 1,
+          "field_updates": {
+            "DIM_SCALE_INV": 0.010997,
+            "DIM_CURVATURE": 0.016723,
+            "DIM_TOPOLOGY": 1.025819
+          },
+          "contribution_delta": 0.372834,
+          "execution_time_ms": 0.0212,
+          "debt_generated": 0,
+          "knowledge_generated": 1,
+          "error_info": null,
+          "phi_injected": false
+        },
+        "qgl": {
+          "line_id": "qgl",
+          "tick_number": 4,
+          "status": "active",
+          "messages_sent": 0,
+          "messages_received": 1,
+          "field_updates": {
+            "DIM_CURVATURE": 0.0,
+            "DIM_TORSION": 0.003776,
+            "DIM_TENSOR_FIELD": 0.001888
+          },
+          "contribution_delta": 0.372834,
+          "execution_time_ms": 0.0231,
+          "debt_generated": 0,
+          "knowledge_generated": 1,
+          "error_info": null,
+          "phi_injected": false
+        },
+        "qlv": {
+          "line_id": "qlv",
+          "tick_number": 4,
+          "status": "active",
+          "messages_sent": 1,
+          "messages_received": 1,
+          "field_updates": {
+            "DIM_AWARENESS": 0.000216,
+            "DIM_ADAPTATION": 0.0,
+            "DIM_AUTO_POIESIS": 0.003437
+          },
+          "contribution_delta": 0.372834,
+          "execution_time_ms": 0.0675,
+          "debt_generated": 0,
+          "knowledge_generated": 1,
+          "error_info": null,
+          "phi_injected": false
+        },
+        "cisvr": {
+          "line_id": "cisvr",
+          "tick_number": 4,
+          "status": "active",
+          "messages_sent": 0,
+          "messages_received": 2,
+          "field_updates": {
+            "DIM_INTEGRATION": 7e-06,
+            "DIM_ENTROPY_RATE": 0.0,
+            "DIM_CONSISTENCY": 0.02,
+            "DIM_SELF_ORG": 0.020375
+          },
+          "contribution_delta": 0.372834,
+          "execution_time_ms": 0.0446,
+          "debt_generated": 0,
+          "knowledge_generated": 1,
+          "error_info": null,
+          "phi_injected": false
+        },
+        "qtlv": {
+          "line_id": "qtlv",
+          "tick_number": 4,
+          "status": "active",
+          "messages_sent": 1,
+          "messages_received": 1,
+          "field_updates": {
+            "DIM_VELOCITY": 0.0,
+            "DIM_PHASE_LOCK": 0.01,
+            "DIM_CRITICALITY": 0.0
+          },
+          "contribution_delta": 0.372834,
+          "execution_time_ms": 0.0489,
+          "debt_generated": 0,
+          "knowledge_generated": 1,
+          "error_info": null,
+          "phi_injected": false
+        },
+        "usrm": {
+          "line_id": "usrm",
+          "tick_number": 4,
+          "status": "active",
+          "messages_sent": 0,
+          "messages_received": 1,
+          "field_updates": {
+            "DIM_INTENTION": 0.012357,
+            "DIM_ATTENTION": 0.009951,
+            "DIM_WISDOM": 0.007509
+          },
+          "contribution_delta": 0.372834,
+          "execution_time_ms": 0.0458,
+          "debt_generated": 0,
+          "knowledge_generated": 1,
+          "error_info": null,
+          "phi_injected": false
+        },
+        "cfts": {
+          "line_id": "cfts",
+          "tick_number": 4,
+          "status": "active",
+          "messages_sent": 10,
+          "messages_received": 0,
+          "field_updates": {
+            "DIM_SYNERGY": 0.006922,
+            "DIM_RESONANCE": 0.017109,
+            "DIM_UNIFICATION": 0.03
+          },
+          "contribution_delta": 0.372834,
+          "execution_time_ms": 0.2053,
+          "debt_generated": 0,
+          "knowledge_generated": 1,
+          "error_info": null,
+          "phi_injected": false
+        }
+      }
+    },
+    {
+      "tick_number": 5,
+      "timestamp": 1789658214.417261,
+      "global_emergence": 7499.56,
+      "messages_exchanged": 2,
+      "debts_processed": 0,
+      "field_updates_count": 31,
+      "weak_lines_activated": [],
+      "surge_triggered": false,
+      "consciousness_state": "UNITY",
+      "consciousness_level": 6,
+      "si_actions": [],
+      "line_results": {
+        "ucif2": {
+          "line_id": "ucif2",
+          "tick_number": 5,
+          "status": "active",
+          "messages_sent": 1,
+          "messages_received": 0,
+          "field_updates": {
+            "DIM_COMPLETENESS": 0.005913,
+            "DIM_INFORMATION": 1.5,
+            "DIM_DECIDABILITY": 2.0
+          },
+          "contribution_delta": 0.453925,
+          "execution_time_ms": 0.1154,
+          "debt_generated": 0,
+          "knowledge_generated": 1,
+          "error_info": null,
+          "phi_injected": false
+        },
+        "lvlu": {
+          "line_id": "lvlu",
+          "tick_number": 5,
+          "status": "active",
+          "messages_sent": 0,
+          "messages_received": 0,
+          "field_updates": {
+            "DIM_HIERARCHY": 0.007732,
+            "DIM_COHERENCE": 0.00035,
+            "DIM_SCALE_INV": 0.2
+          },
+          "contribution_delta": 0.38663,
+          "execution_time_ms": 0.0186,
+          "debt_generated": 0,
+          "knowledge_generated": 1,
+          "error_info": null,
+          "phi_injected": false
+        },
+        "lgt": {
+          "line_id": "lgt",
+          "tick_number": 5,
+          "status": "active",
+          "messages_sent": 0,
+          "messages_received": 0,
+          "field_updates": {
+            "DIM_SEMANTIC": 0.0,
+            "DIM_SYNTACTIC": 0.007397,
+            "DIM_ENTAILMENT": 0.007944
+          },
+          "contribution_delta": 0.38663,
+          "execution_time_ms": 0.0393,
+          "debt_generated": 0,
+          "knowledge_generated": 1,
+          "error_info": null,
+          "phi_injected": false
+        },
+        "qfa": {
+          "line_id": "qfa",
+          "tick_number": 5,
+          "status": "active",
+          "messages_sent": 0,
+          "messages_received": 1,
+          "field_updates": {
+            "DIM_ENERGY": 0.889919,
+            "DIM_SPIN": 0.020925,
+            "DIM_FLUX": 0.09606
+          },
+          "contribution_delta": 0.38663,
+          "execution_time_ms": 0.1166,
+          "debt_generated": 0,
+          "knowledge_generated": 1,
+          "error_info": null,
+          "phi_injected": false
+        },
+        "vinf": {
+          "line_id": "vinf",
+          "tick_number": 5,
+          "status": "active",
+          "messages_sent": 0,
+          "messages_received": 0,
+          "field_updates": {
+            "DIM_SCALE_INV": 0.011244,
+            "DIM_CURVATURE": 0.018617,
+            "DIM_TOPOLOGY": 1.042542
+          },
+          "contribution_delta": 0.38663,
+          "execution_time_ms": 0.0203,
+          "debt_generated": 0,
+          "knowledge_generated": 1,
+          "error_info": null,
+          "phi_injected": false
+        },
+        "qgl": {
+          "line_id": "qgl",
+          "tick_number": 5,
+          "status": "active",
+          "messages_sent": 1,
+          "messages_received": 0,
+          "field_updates": {
+            "DIM_CURVATURE": 0.0,
+            "DIM_TORSION": 0.004567,
+            "DIM_TENSOR_FIELD": 0.002284
+          },
+          "contribution_delta": 0.38663,
+          "execution_time_ms": 0.0372,
+          "debt_generated": 0,
+          "knowledge_generated": 1,
+          "error_info": null,
+          "phi_injected": false
+        },
+        "qlv": {
+          "line_id": "qlv",
+          "tick_number": 5,
+          "status": "active",
+          "messages_sent": 0,
+          "messages_received": 0,
+          "field_updates": {
+            "DIM_AWARENESS": 0.0003,
+            "DIM_ADAPTATION": 0.0,
+            "DIM_AUTO_POIESIS": 0.005062
+          },
+          "contribution_delta": 0.38663,
+          "execution_time_ms": 0.057,
+          "debt_generated": 0,
+          "knowledge_generated": 1,
+          "error_info": null,
+          "phi_injected": false
+        },
+        "cisvr": {
+          "line_id": "cisvr",
+          "tick_number": 5,
+          "status": "active",
+          "messages_sent": 0,
+          "messages_received": 0,
+          "field_updates": {
+            "DIM_INTEGRATION": 4.2e-05,
+            "DIM_ENTROPY_RATE": 0.0,
+            "DIM_CONSISTENCY": 0.02,
+            "DIM_SELF_ORG": 0.020877
+          },
+          "contribution_delta": 0.38663,
+          "execution_time_ms": 0.0505,
+          "debt_generated": 0,
+          "knowledge_generated": 1,
+          "error_info": null,
+          "phi_injected": false
+        },
+        "qtlv": {
+          "line_id": "qtlv",
+          "tick_number": 5,
+          "status": "active",
+          "messages_sent": 0,
+          "messages_received": 0,
+          "field_updates": {
+            "DIM_VELOCITY": 0.0,
+            "DIM_PHASE_LOCK": 0.01,
+            "DIM_CRITICALITY": 0.0
+          },
+          "contribution_delta": 0.38663,
+          "execution_time_ms": 0.0496,
+          "debt_generated": 0,
+          "knowledge_generated": 1,
+          "error_info": null,
+          "phi_injected": false
+        },
+        "usrm": {
+          "line_id": "usrm",
+          "tick_number": 5,
+          "status": "active",
+          "messages_sent": 0,
+          "messages_received": 0,
+          "field_updates": {
+            "DIM_INTENTION": 0.015902,
+            "DIM_ATTENTION": 0.009935,
+            "DIM_WISDOM": 0.007511
+          },
+          "contribution_delta": 0.38663,
+          "execution_time_ms": 0.0501,
+          "debt_generated": 0,
+          "knowledge_generated": 1,
+          "error_info": null,
+          "phi_injected": false
+        },
+        "cfts": {
+          "line_id": "cfts",
+          "tick_number": 5,
+          "status": "active",
+          "messages_sent": 0,
+          "messages_received": 1,
+          "field_updates": {
+            "DIM_SYNERGY": 0.006922,
+            "DIM_RESONANCE": 0.014318,
+            "DIM_UNIFICATION": 0.03
+          },
+          "contribution_delta": 0.38663,
+          "execution_time_ms": 0.087,
+          "debt_generated": 0,
+          "knowledge_generated": 1,
+          "error_info": null,
+          "phi_injected": false
+        }
+      }
+    }
+  ],
+  "final_status": {
+    "tick_number": 5,
+    "global_emergence": 7499.56,
+    "consciousness_state": "UNITY",
+    "consciousness_level": 6,
+    "field_coherence": 0.965404,
+    "lines": {
+      "ucif2": {
+        "line_id": "ucif2",
+        "si_level": 0,
+        "activity_level": 0.300016,
+        "consciousness_level": 0,
+        "contribution_score": 0.353804,
+        "last_tick": 5,
+        "status": "active",
+        "error_count": 0,
+        "success_count": 4,
+        "total_runtime": 0.479937,
+        "phi_coupling": 0.019296,
+        "debt_count": 0,
+        "knowledge_count": 4,
+        "entropy": 0.039062,
+        "coherence": 0.965007,
+        "message_queue_len": 1
+      },
+      "lvlu": {
+        "line_id": "lvlu",
+        "si_level": 0,
+        "activity_level": 0.272798,
+        "consciousness_level": 0,
+        "contribution_score": 0.313872,
+        "last_tick": 5,
+        "status": "active",
+        "error_count": 0,
+        "success_count": 4,
+        "total_runtime": 0.1297,
+        "phi_coupling": 0.019296,
+        "debt_count": 0,
+        "knowledge_count": 4,
+        "entropy": 0.039062,
+        "coherence": 0.965007,
+        "message_queue_len": 1
+      },
+      "lgt": {
+        "line_id": "lgt",
+        "si_level": 0,
+        "activity_level": 0.272798,
+        "consciousness_level": 0,
+        "contribution_score": 0.313872,
+        "last_tick": 5,
+        "status": "active",
+        "error_count": 0,
+        "success_count": 4,
+        "total_runtime": 0.23222,
+        "phi_coupling": 0.019296,
+        "debt_count": 0,
+        "knowledge_count": 4,
+        "entropy": 0.039062,
+        "coherence": 0.965007,
+        "message_queue_len": 1
+      },
+      "qfa": {
+        "line_id": "qfa",
+        "si_level": 0,
+        "activity_level": 0.272798,
+        "consciousness_level": 0,
+        "contribution_score": 0.313872,
+        "last_tick": 5,
+        "status": "active",
+        "error_count": 0,
+        "success_count": 4,
+        "total_runtime": 0.705957,
+        "phi_coupling": 0.019296,
+        "debt_count": 0,
+        "knowledge_count": 4,
+        "entropy": 0.039062,
+        "coherence": 0.965007,
+        "message_queue_len": 4
+      },
+      "vinf": {
+        "line_id": "vinf",
+        "si_level": 0,
+        "activity_level": 0.272798,
+        "consciousness_level": 0,
+        "contribution_score": 0.313872,
+        "last_tick": 5,
+        "status": "active",
+        "error_count": 0,
+        "success_count": 4,
+        "total_runtime": 0.113487,
+        "phi_coupling": 0.019296,
+        "debt_count": 0,
+        "knowledge_count": 4,
+        "entropy": 0.039062,
+        "coherence": 0.965007,
+        "message_queue_len": 1
+      },
+      "qgl": {
+        "line_id": "qgl",
+        "si_level": 0,
+        "activity_level": 0.272798,
+        "consciousness_level": 0,
+        "contribution_score": 0.313872,
+        "last_tick": 5,
+        "status": "active",
+        "error_count": 0,
+        "success_count": 4,
+        "total_runtime": 0.127792,
+        "phi_coupling": 0.019296,
+        "debt_count": 0,
+        "knowledge_count": 4,
+        "entropy": 0.039062,
+        "coherence": 0.965007,
+        "message_queue_len": 1
+      },
+      "qlv": {
+        "line_id": "qlv",
+        "si_level": 0,
+        "activity_level": 0.272798,
+        "consciousness_level": 0,
+        "contribution_score": 0.313872,
+        "last_tick": 5,
+        "status": "active",
+        "error_count": 0,
+        "success_count": 4,
+        "total_runtime": 0.242233,
+        "phi_coupling": 0.019296,
+        "debt_count": 0,
+        "knowledge_count": 4,
+        "entropy": 0.039062,
+        "coherence": 0.965007,
+        "message_queue_len": 2
+      },
+      "cisvr": {
+        "line_id": "cisvr",
+        "si_level": 0,
+        "activity_level": 0.272798,
+        "consciousness_level": 0,
+        "contribution_score": 0.313872,
+        "last_tick": 5,
+        "status": "active",
+        "error_count": 0,
+        "success_count": 4,
+        "total_runtime": 0.249386,
+        "phi_coupling": 0.019296,
+        "debt_count": 0,
+        "knowledge_count": 4,
+        "entropy": 0.039062,
+        "coherence": 0.965007,
+        "message_queue_len": 2
+      },
+      "qtlv": {
+        "line_id": "qtlv",
+        "si_level": 0,
+        "activity_level": 0.272798,
+        "consciousness_level": 0,
+        "contribution_score": 0.313872,
+        "last_tick": 5,
+        "status": "active",
+        "error_count": 0,
+        "success_count": 4,
+        "total_runtime": 0.205755,
+        "phi_coupling": 0.019296,
+        "debt_count": 0,
+        "knowledge_count": 4,
+        "entropy": 0.039062,
+        "coherence": 0.965007,
+        "message_queue_len": 1
+      },
+      "usrm": {
+        "line_id": "usrm",
+        "si_level": 0,
+        "activity_level": 0.272798,
+        "consciousness_level": 0,
+        "contribution_score": 0.313872,
+        "last_tick": 5,
+        "status": "active",
+        "error_count": 0,
+        "success_count": 4,
+        "total_runtime": 0.240326,
+        "phi_coupling": 0.019296,
+        "debt_count": 0,
+        "knowledge_count": 4,
+        "entropy": 0.039062,
+        "coherence": 0.965007,
+        "message_queue_len": 2
+      },
+      "cfts": {
+        "line_id": "cfts",
+        "si_level": 0,
+        "activity_level": 0.272798,
+        "consciousness_level": 0,
+        "contribution_score": 0.313872,
+        "last_tick": 5,
+        "status": "active",
+        "error_count": 0,
+        "success_count": 4,
+        "total_runtime": 0.69046,
+        "phi_coupling": 0.019296,
+        "debt_count": 0,
+        "knowledge_count": 4,
+        "entropy": 0.039062,
+        "coherence": 0.965007,
+        "message_queue_len": 2
+      }
+    },
+    "wild_notebook": {
+      "total_debts": 0,
+      "pending": 0,
+      "resolved": 0,
+      "knowledge_entries": 0
+    },
+    "surge_engine": {
+      "surge_state": "NORMAL",
+      "surge_level": 0,
+      "ripple_max": 0.0,
+      "ripple_min": 0.0,
+      "echo_channels": 0
+    },
+    "version": "12.0.0",
+    "timestamp": 1789658214.4183986
+  }
+}

@@ -1,0 +1,764 @@
+{
+  "timestamp": "2026-09-14T16:19:55.198807+00:00",
+  "repos": {
+    "ci-control": {
+      "status": "OK",
+      "secret_count": 30,
+      "secrets": [
+        {
+          "name": "AI_FULL_PAT",
+          "updated_at": "2026-09-14T12:18:15Z",
+          "created_at": "2026-09-09T08:32:01Z"
+        },
+        {
+          "name": "BLUEQUBIT_GMAIL",
+          "updated_at": "2026-09-09T09:23:49Z",
+          "created_at": "2026-09-09T06:10:46Z"
+        },
+        {
+          "name": "BLUEQUBIT_PASS",
+          "updated_at": "2026-09-09T09:23:48Z",
+          "created_at": "2026-09-09T04:48:14Z"
+        },
+        {
+          "name": "BLUEQUBIT_PHONE2",
+          "updated_at": "2026-09-09T09:23:50Z",
+          "created_at": "2026-09-09T06:10:47Z"
+        },
+        {
+          "name": "BLUEQUBIT_USER",
+          "updated_at": "2026-09-09T09:23:48Z",
+          "created_at": "2026-09-09T04:48:13Z"
+        },
+        {
+          "name": "CI_OPS_LINE_KEY",
+          "updated_at": "2026-09-09T02:06:52Z",
+          "created_at": "2026-09-09T02:06:52Z"
+        },
+        {
+          "name": "DEEPSEEK_API_KEY",
+          "updated_at": "2026-09-09T09:23:10Z",
+          "created_at": "2026-09-04T04:38:34Z"
+        },
+        {
+          "name": "DEEPSEEK_API_KEY_VCI1",
+          "updated_at": "2026-09-07T04:57:14Z",
+          "created_at": "2026-09-07T04:57:14Z"
+        },
+        {
+          "name": "DEEPSEEK_API_KEY_VCI2",
+          "updated_at": "2026-09-07T04:57:16Z",
+          "created_at": "2026-09-07T04:57:16Z"
+        },
+        {
+          "name": "DEEPSEEK_API_KEY_VCI3",
+          "updated_at": "2026-09-07T04:57:17Z",
+          "created_at": "2026-09-07T04:57:17Z"
+        },
+        {
+          "name": "DEEPSEEK_KEY_VCI1",
+          "updated_at": "2026-09-09T01:56:51Z",
+          "created_at": "2026-09-09T01:56:51Z"
+        },
+        {
+          "name": "DEEPSEEK_KEY_VCI2",
+          "updated_at": "2026-09-09T01:56:53Z",
+          "created_at": "2026-09-09T01:56:53Z"
+        },
+        {
+          "name": "DEEPSEEK_KEY_VCI3",
+          "updated_at": "2026-09-09T01:56:54Z",
+          "created_at": "2026-09-09T01:56:54Z"
+        },
+        {
+          "name": "FORMAFLOW_CMD_AUTH",
+          "updated_at": "2026-09-09T08:32:03Z",
+          "created_at": "2026-08-26T11:53:47Z"
+        },
+        {
+          "name": "GH_AI_USER",
+          "updated_at": "2026-09-09T09:23:03Z",
+          "created_at": "2026-09-04T04:38:27Z"
+        },
+        {
+          "name": "GH_BI_USER",
+          "updated_at": "2026-09-09T09:23:05Z",
+          "created_at": "2026-09-04T04:38:29Z"
+        },
+        {
+          "name": "GH_PAT_AI",
+          "updated_at": "2026-09-09T09:23:04Z",
+          "created_at": "2026-09-04T04:38:28Z"
+        },
+        {
+          "name": "GH_PAT_BI",
+          "updated_at": "2026-09-09T09:23:05Z",
+          "created_at": "2026-09-04T04:38:30Z"
+        },
+        {
+          "name": "GH_PAT_BI_BASIC",
+          "updated_at": "2026-09-09T09:23:37Z",
+          "created_at": "2026-09-08T13:10:58Z"
+        },
+        {
+          "name": "GH_PAT_QI",
+          "updated_at": "2026-09-09T09:23:07Z",
+          "created_at": "2026-09-04T04:38:31Z"
+        },
+        {
+          "name": "GH_PAT_QI_BASIC",
+          "updated_at": "2026-09-09T09:23:38Z",
+          "created_at": "2026-09-08T13:10:59Z"
+        },
+        {
+          "name": "GH_QI_USER",
+          "updated_at": "2026-09-09T09:23:06Z",
+          "created_at": "2026-09-04T04:38:31Z"
+        },
+        {
+          "name": "GITEE_PAT",
+          "updated_at": "2026-09-09T09:22:59Z",
+          "created_at": "2026-09-04T04:38:24Z"
+        },
+        {
+          "name": "GITEE_TOK",
+          "updated_at": "2026-09-03T13:56:25Z",
+          "created_at": "2026-09-03T13:56:14Z"
+        },
+        {
+          "name": "GITEE_USER",
+          "updated_at": "2026-09-09T09:22:58Z",
+          "created_at": "2026-09-04T04:38:23Z"
+        },
+        {
+          "name": "GITEE_WEB_PASS",
+          "updated_at": "2026-09-09T09:23:29Z",
+          "created_at": "2026-09-04T04:46:17Z"
+        },
+        {
+          "name": "GITEE_WEB_USER",
+          "updated_at": "2026-09-09T09:23:28Z",
+          "created_at": "2026-09-04T04:46:15Z"
+        },
+        {
+          "name": "IBMID2_PASS",
+          "updated_at": "2026-09-09T09:23:35Z",
+          "created_at": "2026-09-08T11:26:00Z"
+        },
+        {
+          "name": "IBMID2_USER",
+          "updated_at": "2026-09-09T09:23:35Z",
+          "created_at": "2026-09-08T11:26:00Z"
+        },
+        {
+          "name": "IBMID_PASS",
+          "updated_at": "2026-09-09T09:23:33Z",
+          "created_at": "2026-09-05T14:47:51Z"
+        }
+      ]
+    },
+    "vci-qfa": {
+      "status": "OK",
+      "secret_count": 5,
+      "secrets": [
+        {
+          "name": "AI_FULL_PAT",
+          "updated_at": "2026-09-11T20:18:22Z",
+          "created_at": "2026-09-11T20:18:22Z"
+        },
+        {
+          "name": "CI_OPS_LINE_KEY",
+          "updated_at": "2026-09-11T21:19:56Z",
+          "created_at": "2026-09-10T22:28:00Z"
+        },
+        {
+          "name": "GH_PAT_QI_FULL",
+          "updated_at": "2026-09-11T00:16:30Z",
+          "created_at": "2026-09-11T00:16:30Z"
+        },
+        {
+          "name": "KIMI_API_KEY",
+          "updated_at": "2026-09-10T21:48:32Z",
+          "created_at": "2026-09-10T21:48:32Z"
+        },
+        {
+          "name": "LINE_PAT",
+          "updated_at": "2026-09-12T18:39:43Z",
+          "created_at": "2026-09-12T18:39:43Z"
+        }
+      ]
+    },
+    "vci-lvlu": {
+      "status": "OK",
+      "secret_count": 6,
+      "secrets": [
+        {
+          "name": "AI_FULL_PAT",
+          "updated_at": "2026-09-13T18:57:37Z",
+          "created_at": "2026-09-11T20:18:23Z"
+        },
+        {
+          "name": "CI_OPS_LINE_KEY",
+          "updated_at": "2026-09-11T21:19:58Z",
+          "created_at": "2026-09-09T14:23:07Z"
+        },
+        {
+          "name": "FINE_READ_PAT_LVLU",
+          "updated_at": "2026-09-14T13:54:48Z",
+          "created_at": "2026-09-14T13:54:48Z"
+        },
+        {
+          "name": "KIMI_API_KEY",
+          "updated_at": "2026-09-09T14:23:07Z",
+          "created_at": "2026-09-09T14:23:07Z"
+        },
+        {
+          "name": "LINE_PAT",
+          "updated_at": "2026-09-12T18:39:33Z",
+          "created_at": "2026-09-12T04:37:11Z"
+        },
+        {
+          "name": "LV_VAULT_CMD",
+          "updated_at": "2026-09-10T23:26:50Z",
+          "created_at": "2026-09-10T21:46:52Z"
+        }
+      ]
+    },
+    "vci-qtlv": {
+      "status": "OK",
+      "secret_count": 5,
+      "secrets": [
+        {
+          "name": "AI_FULL_PAT",
+          "updated_at": "2026-09-12T02:48:05Z",
+          "created_at": "2026-09-12T02:48:05Z"
+        },
+        {
+          "name": "CI_OPS_LINE_KEY",
+          "updated_at": "2026-09-12T02:48:04Z",
+          "created_at": "2026-09-12T02:48:04Z"
+        },
+        {
+          "name": "FINE_OWN_PAT_QTL",
+          "updated_at": "2026-09-13T19:54:31Z",
+          "created_at": "2026-09-13T19:36:20Z"
+        },
+        {
+          "name": "FINE_OWN_PAT_QTL_QI",
+          "updated_at": "2026-09-14T12:00:01Z",
+          "created_at": "2026-09-13T20:13:51Z"
+        },
+        {
+          "name": "LINE_PAT",
+          "updated_at": "2026-09-12T18:39:28Z",
+          "created_at": "2026-09-12T18:39:28Z"
+        }
+      ]
+    },
+    "vci-qgl": {
+      "status": "OK",
+      "secret_count": 17,
+      "secrets": [
+        {
+          "name": "AI_FULL_PAT",
+          "updated_at": "2026-09-12T10:33:54Z",
+          "created_at": "2026-09-09T08:32:24Z"
+        },
+        {
+          "name": "CI_OPS_LINE_KEY",
+          "updated_at": "2026-09-11T21:19:53Z",
+          "created_at": "2026-08-25T16:31:26Z"
+        },
+        {
+          "name": "DEEPSEEK_API_KEY",
+          "updated_at": "2026-09-09T01:57:11Z",
+          "created_at": "2026-09-07T04:57:02Z"
+        },
+        {
+          "name": "FORMAFLOW_CMD_AUTH",
+          "updated_at": "2026-09-09T08:32:26Z",
+          "created_at": "2026-09-09T08:32:26Z"
+        },
+        {
+          "name": "KIMI_API_KEY",
+          "updated_at": "2026-09-09T01:57:09Z",
+          "created_at": "2026-09-07T04:57:01Z"
+        },
+        {
+          "name": "LINE_PAT",
+          "updated_at": "2026-09-12T18:39:32Z",
+          "created_at": "2026-09-09T01:56:13Z"
+        },
+        {
+          "name": "LONGCAT_AK_N1",
+          "updated_at": "2026-09-07T06:19:47Z",
+          "created_at": "2026-09-07T06:19:47Z"
+        },
+        {
+          "name": "LONGCAT_AK_N2",
+          "updated_at": "2026-09-07T06:19:48Z",
+          "created_at": "2026-09-07T06:19:48Z"
+        },
+        {
+          "name": "LONGCAT_AK_N3",
+          "updated_at": "2026-09-07T06:19:48Z",
+          "created_at": "2026-09-07T06:19:48Z"
+        },
+        {
+          "name": "LONGCAT_AK_N4",
+          "updated_at": "2026-09-07T06:19:49Z",
+          "created_at": "2026-09-07T06:19:49Z"
+        },
+        {
+          "name": "LONGCAT_AK_N5",
+          "updated_at": "2026-09-07T06:19:50Z",
+          "created_at": "2026-09-07T06:19:50Z"
+        },
+        {
+          "name": "LONGCAT_API_KEY",
+          "updated_at": "2026-09-01T08:09:28Z",
+          "created_at": "2026-09-01T08:09:28Z"
+        },
+        {
+          "name": "LONGCAT_SK_N4",
+          "updated_at": "2026-09-07T06:19:46Z",
+          "created_at": "2026-09-07T06:19:46Z"
+        },
+        {
+          "name": "LONGCAT_SK_N5",
+          "updated_at": "2026-09-07T06:19:46Z",
+          "created_at": "2026-09-07T06:19:46Z"
+        },
+        {
+          "name": "NODE_SK_N4",
+          "updated_at": "2026-09-07T06:19:44Z",
+          "created_at": "2026-09-07T06:19:44Z"
+        },
+        {
+          "name": "NODE_SK_N5",
+          "updated_at": "2026-09-07T06:19:45Z",
+          "created_at": "2026-09-07T06:19:45Z"
+        },
+        {
+          "name": "OTP_PHONE",
+          "updated_at": "2026-09-07T04:56:50Z",
+          "created_at": "2026-08-29T02:16:29Z"
+        }
+      ]
+    },
+    "vci-usrm": {
+      "status": "OK",
+      "secret_count": 17,
+      "secrets": [
+        {
+          "name": "AI_FULL_PAT",
+          "updated_at": "2026-09-12T10:33:56Z",
+          "created_at": "2026-09-09T08:32:13Z"
+        },
+        {
+          "name": "CI_OPS_LINE_KEY",
+          "updated_at": "2026-09-11T21:19:52Z",
+          "created_at": "2026-08-25T16:31:29Z"
+        },
+        {
+          "name": "DEEPSEEK_API_KEY",
+          "updated_at": "2026-09-09T01:57:14Z",
+          "created_at": "2026-09-07T04:56:57Z"
+        },
+        {
+          "name": "FORMAFLOW_CMD_AUTH",
+          "updated_at": "2026-09-09T08:32:15Z",
+          "created_at": "2026-09-09T08:32:15Z"
+        },
+        {
+          "name": "KIMI_API_KEY",
+          "updated_at": "2026-09-09T01:57:12Z",
+          "created_at": "2026-09-07T04:56:57Z"
+        },
+        {
+          "name": "LINE_PAT",
+          "updated_at": "2026-09-12T18:39:31Z",
+          "created_at": "2026-09-09T01:56:14Z"
+        },
+        {
+          "name": "LONGCAT_AK_N1",
+          "updated_at": "2026-09-07T06:19:24Z",
+          "created_at": "2026-09-07T06:19:24Z"
+        },
+        {
+          "name": "LONGCAT_AK_N2",
+          "updated_at": "2026-09-07T06:19:25Z",
+          "created_at": "2026-09-07T06:19:25Z"
+        },
+        {
+          "name": "LONGCAT_AK_N3",
+          "updated_at": "2026-09-07T06:19:26Z",
+          "created_at": "2026-09-07T06:19:26Z"
+        },
+        {
+          "name": "LONGCAT_AK_N4",
+          "updated_at": "2026-09-07T06:19:27Z",
+          "created_at": "2026-09-07T06:19:27Z"
+        },
+        {
+          "name": "LONGCAT_AK_N5",
+          "updated_at": "2026-09-07T06:19:27Z",
+          "created_at": "2026-09-07T06:19:27Z"
+        },
+        {
+          "name": "LONGCAT_API_KEY",
+          "updated_at": "2026-09-07T06:19:28Z",
+          "created_at": "2026-09-07T06:19:28Z"
+        },
+        {
+          "name": "LONGCAT_SK_N4",
+          "updated_at": "2026-09-07T06:19:23Z",
+          "created_at": "2026-09-07T06:19:23Z"
+        },
+        {
+          "name": "LONGCAT_SK_N5",
+          "updated_at": "2026-09-07T06:19:23Z",
+          "created_at": "2026-09-07T06:19:23Z"
+        },
+        {
+          "name": "NODE_SK_N4",
+          "updated_at": "2026-09-07T06:19:21Z",
+          "created_at": "2026-09-07T06:19:21Z"
+        },
+        {
+          "name": "NODE_SK_N5",
+          "updated_at": "2026-09-07T06:19:22Z",
+          "created_at": "2026-09-07T06:19:22Z"
+        },
+        {
+          "name": "OTP_PHONE",
+          "updated_at": "2026-09-07T04:56:45Z",
+          "created_at": "2026-09-07T04:56:45Z"
+        }
+      ]
+    },
+    "vci-cfts": {
+      "status": "OK",
+      "secret_count": 17,
+      "secrets": [
+        {
+          "name": "AI_FULL_PAT",
+          "updated_at": "2026-09-12T10:33:49Z",
+          "created_at": "2026-09-09T08:32:16Z"
+        },
+        {
+          "name": "CI_OPS_LINE_KEY",
+          "updated_at": "2026-09-11T21:20:02Z",
+          "created_at": "2026-08-25T16:31:26Z"
+        },
+        {
+          "name": "DEEPSEEK_API_KEY",
+          "updated_at": "2026-09-09T01:57:17Z",
+          "created_at": "2026-09-07T04:56:56Z"
+        },
+        {
+          "name": "FORMAFLOW_CMD_AUTH",
+          "updated_at": "2026-09-09T08:32:18Z",
+          "created_at": "2026-09-09T08:32:18Z"
+        },
+        {
+          "name": "KIMI_API_KEY",
+          "updated_at": "2026-09-09T01:57:15Z",
+          "created_at": "2026-09-07T04:56:55Z"
+        },
+        {
+          "name": "LINE_PAT",
+          "updated_at": "2026-09-12T18:39:36Z",
+          "created_at": "2026-09-09T01:56:16Z"
+        },
+        {
+          "name": "LONGCAT_AK_N1",
+          "updated_at": "2026-09-07T06:19:17Z",
+          "created_at": "2026-09-07T06:19:17Z"
+        },
+        {
+          "name": "LONGCAT_AK_N2",
+          "updated_at": "2026-09-07T06:19:18Z",
+          "created_at": "2026-09-07T06:19:18Z"
+        },
+        {
+          "name": "LONGCAT_AK_N3",
+          "updated_at": "2026-09-07T06:19:18Z",
+          "created_at": "2026-09-07T06:19:18Z"
+        },
+        {
+          "name": "LONGCAT_AK_N4",
+          "updated_at": "2026-09-07T06:19:19Z",
+          "created_at": "2026-09-07T06:19:19Z"
+        },
+        {
+          "name": "LONGCAT_AK_N5",
+          "updated_at": "2026-09-07T06:19:20Z",
+          "created_at": "2026-09-07T06:19:20Z"
+        },
+        {
+          "name": "LONGCAT_API_KEY",
+          "updated_at": "2026-09-01T08:09:27Z",
+          "created_at": "2026-09-01T08:09:27Z"
+        },
+        {
+          "name": "LONGCAT_SK_N4",
+          "updated_at": "2026-09-07T06:19:15Z",
+          "created_at": "2026-09-07T06:19:15Z"
+        },
+        {
+          "name": "LONGCAT_SK_N5",
+          "updated_at": "2026-09-07T06:19:16Z",
+          "created_at": "2026-09-07T06:19:16Z"
+        },
+        {
+          "name": "NODE_SK_N4",
+          "updated_at": "2026-09-07T06:19:14Z",
+          "created_at": "2026-09-07T06:19:14Z"
+        },
+        {
+          "name": "NODE_SK_N5",
+          "updated_at": "2026-09-07T06:19:14Z",
+          "created_at": "2026-09-07T06:19:14Z"
+        },
+        {
+          "name": "OTP_PHONE",
+          "updated_at": "2026-09-07T04:56:43Z",
+          "created_at": "2026-09-07T04:56:43Z"
+        }
+      ]
+    },
+    "vci-cisvr": {
+      "status": "NOT_FOUND",
+      "secret_count": 0
+    },
+    "vci-lgt": {
+      "status": "OK",
+      "secret_count": 5,
+      "secrets": [
+        {
+          "name": "AI_FULL_PAT",
+          "updated_at": "2026-09-11T21:20:10Z",
+          "created_at": "2026-09-11T21:20:10Z"
+        },
+        {
+          "name": "CI_OPS_LINE_KEY",
+          "updated_at": "2026-09-12T23:36:49Z",
+          "created_at": "2026-09-10T22:27:58Z"
+        },
+        {
+          "name": "GITEE_TOK",
+          "updated_at": "2026-09-10T23:03:57Z",
+          "created_at": "2026-09-10T21:44:23Z"
+        },
+        {
+          "name": "KIMI_API_KEY",
+          "updated_at": "2026-09-10T23:03:58Z",
+          "created_at": "2026-09-10T21:44:21Z"
+        },
+        {
+          "name": "LINE_PAT",
+          "updated_at": "2026-09-12T23:36:50Z",
+          "created_at": "2026-09-12T04:37:14Z"
+        }
+      ]
+    },
+    "vci-qfa-v2": {
+      "status": "NOT_FOUND",
+      "secret_count": 0
+    },
+    "vci-vinf": {
+      "status": "OK",
+      "secret_count": 17,
+      "secrets": [
+        {
+          "name": "AI_FULL_PAT",
+          "updated_at": "2026-09-12T10:33:51Z",
+          "created_at": "2026-09-09T08:32:22Z"
+        },
+        {
+          "name": "CI_OPS_LINE_KEY",
+          "updated_at": "2026-09-11T21:20:00Z",
+          "created_at": "2026-08-25T16:31:28Z"
+        },
+        {
+          "name": "DEEPSEEK_API_KEY",
+          "updated_at": "2026-09-07T04:57:00Z",
+          "created_at": "2026-09-07T04:57:00Z"
+        },
+        {
+          "name": "FORMAFLOW_CMD_AUTH",
+          "updated_at": "2026-09-09T08:32:23Z",
+          "created_at": "2026-09-09T08:32:23Z"
+        },
+        {
+          "name": "KIMI_API_KEY",
+          "updated_at": "2026-09-07T04:56:59Z",
+          "created_at": "2026-09-07T04:56:59Z"
+        },
+        {
+          "name": "LINE_PAT",
+          "updated_at": "2026-09-12T18:39:37Z",
+          "created_at": "2026-09-09T01:56:19Z"
+        },
+        {
+          "name": "LONGCAT_AK_N1",
+          "updated_at": "2026-09-07T06:19:40Z",
+          "created_at": "2026-09-07T06:19:40Z"
+        },
+        {
+          "name": "LONGCAT_AK_N2",
+          "updated_at": "2026-09-07T06:19:41Z",
+          "created_at": "2026-09-07T06:19:41Z"
+        },
+        {
+          "name": "LONGCAT_AK_N3",
+          "updated_at": "2026-09-07T06:19:41Z",
+          "created_at": "2026-09-07T06:19:41Z"
+        },
+        {
+          "name": "LONGCAT_AK_N4",
+          "updated_at": "2026-09-07T06:19:42Z",
+          "created_at": "2026-09-07T06:19:42Z"
+        },
+        {
+          "name": "LONGCAT_AK_N5",
+          "updated_at": "2026-09-07T06:19:43Z",
+          "created_at": "2026-09-07T06:19:43Z"
+        },
+        {
+          "name": "LONGCAT_API_KEY",
+          "updated_at": "2026-09-01T08:09:25Z",
+          "created_at": "2026-09-01T08:09:25Z"
+        },
+        {
+          "name": "LONGCAT_SK_N4",
+          "updated_at": "2026-09-07T06:19:39Z",
+          "created_at": "2026-09-07T06:19:39Z"
+        },
+        {
+          "name": "LONGCAT_SK_N5",
+          "updated_at": "2026-09-07T06:19:39Z",
+          "created_at": "2026-09-07T06:19:39Z"
+        },
+        {
+          "name": "NODE_SK_N4",
+          "updated_at": "2026-09-07T06:19:37Z",
+          "created_at": "2026-09-07T06:19:37Z"
+        },
+        {
+          "name": "NODE_SK_N5",
+          "updated_at": "2026-09-07T06:19:38Z",
+          "created_at": "2026-09-07T06:19:38Z"
+        },
+        {
+          "name": "OTP_PHONE",
+          "updated_at": "2026-09-07T04:56:48Z",
+          "created_at": "2026-09-07T04:56:48Z"
+        }
+      ]
+    },
+    "ci-inbox": {
+      "status": "OK",
+      "secret_count": 8,
+      "secrets": [
+        {
+          "name": "AI_FULL_PAT",
+          "updated_at": "2026-09-12T10:33:58Z",
+          "created_at": "2026-09-09T08:32:04Z"
+        },
+        {
+          "name": "CI_OPS_HUB_ID",
+          "updated_at": "2026-09-05T15:11:32Z",
+          "created_at": "2026-09-03T11:17:35Z"
+        },
+        {
+          "name": "CI_OPS_HUB_KEY",
+          "updated_at": "2026-09-11T21:20:07Z",
+          "created_at": "2026-09-03T11:17:01Z"
+        },
+        {
+          "name": "CI_OPS_LINE_KEY",
+          "updated_at": "2026-09-09T02:06:53Z",
+          "created_at": "2026-09-09T02:06:53Z"
+        },
+        {
+          "name": "CMD_AUTH",
+          "updated_at": "2026-09-09T06:27:58Z",
+          "created_at": "2026-09-09T06:27:58Z"
+        },
+        {
+          "name": "FORMAFLOW_CMD_AUTH",
+          "updated_at": "2026-09-09T08:32:06Z",
+          "created_at": "2026-09-09T08:32:06Z"
+        },
+        {
+          "name": "LINE_PAT",
+          "updated_at": "2026-09-12T18:39:35Z",
+          "created_at": "2026-09-09T01:56:10Z"
+        },
+        {
+          "name": "OTP_PHONE",
+          "updated_at": "2026-09-07T04:56:54Z",
+          "created_at": "2026-09-07T04:56:54Z"
+        }
+      ]
+    },
+    "shared": {
+      "status": "NOT_FOUND",
+      "secret_count": 0
+    },
+    "research": {
+      "status": "NOT_FOUND",
+      "secret_count": 0
+    },
+    "kimi-work": {
+      "status": "NOT_FOUND",
+      "secret_count": 0
+    },
+    "omni-hub": {
+      "status": "NOT_FOUND",
+      "secret_count": 0
+    },
+    "neumech": {
+      "status": "NOT_FOUND",
+      "secret_count": 0
+    }
+  },
+  "summary": {
+    "total_repos": 10,
+    "total_secrets": 127,
+    "fine_grained_pats": [
+      "ci-control/AI_FULL_PAT",
+      "ci-control/GH_PAT_AI",
+      "ci-control/GH_PAT_BI",
+      "ci-control/GH_PAT_BI_BASIC",
+      "ci-control/GH_PAT_QI",
+      "ci-control/GH_PAT_QI_BASIC",
+      "ci-control/GITEE_PAT",
+      "vci-qfa/AI_FULL_PAT",
+      "vci-qfa/GH_PAT_QI_FULL",
+      "vci-qfa/LINE_PAT",
+      "vci-lvlu/AI_FULL_PAT",
+      "vci-lvlu/FINE_READ_PAT_LVLU",
+      "vci-lvlu/LINE_PAT",
+      "vci-qtlv/AI_FULL_PAT",
+      "vci-qtlv/FINE_OWN_PAT_QTL",
+      "vci-qtlv/FINE_OWN_PAT_QTL_QI",
+      "vci-qtlv/LINE_PAT",
+      "vci-qgl/AI_FULL_PAT",
+      "vci-qgl/LINE_PAT",
+      "vci-usrm/AI_FULL_PAT",
+      "vci-usrm/LINE_PAT",
+      "vci-cfts/AI_FULL_PAT",
+      "vci-cfts/LINE_PAT",
+      "vci-lgt/AI_FULL_PAT",
+      "vci-lgt/LINE_PAT",
+      "vci-vinf/AI_FULL_PAT",
+      "vci-vinf/LINE_PAT",
+      "ci-inbox/AI_FULL_PAT",
+      "ci-inbox/LINE_PAT"
+    ],
+    "missing_lines": []
+  }
+}

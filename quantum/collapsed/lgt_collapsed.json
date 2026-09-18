@@ -1,0 +1,16 @@
+{
+  "line": "lgt",
+  "current_level": "si2",
+  "previous_superposition": {
+    "si0": 0.1666666666666667,
+    "si1": 0.1666666666666667,
+    "si2": 0.1666666666666667,
+    "si3": 0.1666666666666667,
+    "si4": 0.1666666666666667,
+    "si5": 0.1666666666666667
+  },
+  "observer": "ucif2-hub",
+  "trigger": "health_check",
+  "timestamp": "2026-09-12T10:35:41.282920+00:00",
+  "collapsed": true
+}

@@ -1,0 +1,32 @@
+{
+  "envelope": {
+    "msg_id": "8e2069ac-8f35-48f3-ba08-c44540b719e4",
+    "version": "SI2-v1.0",
+    "timestamp": "2026-09-12T05:12:56.241072+00:00",
+    "ttl": 300,
+    "priority": 3,
+    "source": {
+      "line": "lgt",
+      "si_level": 2
+    },
+    "target": {
+      "line": "qfa",
+      "si_level": 2,
+      "broadcast": false
+    }
+  },
+  "payload": {
+    "type": "TASK",
+    "task_id": "7321d897-7af6-406a-ad3d-25ec7ae2fb66",
+    "content": {
+      "type": "cross_loop",
+      "description": "Cross-loop from lgt to qfa"
+    },
+    "dependencies": [],
+    "deadline": ""
+  },
+  "signature": {
+    "hash": "b23ceb47e018ed5e2cb136e46f7bf4540f65ae5d66a35e4613c07f9a65211573",
+    "chain_hash": ""
+  }
+}

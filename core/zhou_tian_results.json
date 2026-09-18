@@ -1,0 +1,138 @@
+{
+  "small_zt": {
+    "cycle_quality": 0.5458402643803019,
+    "convergence": 0.10029015848260668,
+    "quality_std": 0.10780163132160604,
+    "convergence_std": 0.2622548451514037,
+    "line_results": [
+      {
+        "line_id": 0,
+        "line_name": "NorthStar",
+        "final_quality": 0.6164098716690778,
+        "final_convergence": 0.10359600879297215,
+        "final_energy": 5.252397421741122
+      },
+      {
+        "line_id": 1,
+        "line_name": "CoreLogic",
+        "final_quality": 0.5696303767289321,
+        "final_convergence": 0.042022133112129545,
+        "final_energy": 1.663165027944519
+      },
+      {
+        "line_id": 2,
+        "line_name": "EmotionFlow",
+        "final_quality": 0.5939893905588488,
+        "final_convergence": 0.0987985500460864,
+        "final_energy": 7.144070014260346
+      },
+      {
+        "line_id": 3,
+        "line_name": "MemoryWeave",
+        "final_quality": 0.4931471079478792,
+        "final_convergence": 0.823518148511021,
+        "final_energy": 0.17610256287474682
+      },
+      {
+        "line_id": 4,
+        "line_name": "IntentionBeam",
+        "final_quality": 0.6334117423877832,
+        "final_convergence": -0.04403171509150816,
+        "final_energy": 7.1862090446399876
+      },
+      {
+        "line_id": 5,
+        "line_name": "PerceptionNet",
+        "final_quality": 0.608895039845365,
+        "final_convergence": 0.0028372156360312317,
+        "final_energy": 1.7233571801369254
+      },
+      {
+        "line_id": 6,
+        "line_name": "ActionStream",
+        "final_quality": 0.48303935780070556,
+        "final_convergence": 0.33939001537310887,
+        "final_energy": 1.18141267006394
+      },
+      {
+        "line_id": 7,
+        "line_name": "FeedbackLoop",
+        "final_quality": 0.658286245656161,
+        "final_convergence": -0.046178377760219824,
+        "final_energy": 8.682232370376214
+      },
+      {
+        "line_id": 8,
+        "line_name": "ResonanceField",
+        "final_quality": 0.36674089200641985,
+        "final_convergence": -0.00463903677261901,
+        "final_energy": 4.4104708983676515
+      },
+      {
+        "line_id": 9,
+        "line_name": "EmergenceSpark",
+        "final_quality": 0.3310923555812536,
+        "final_convergence": -0.21779139308669704,
+        "final_energy": 3.507786882871268
+      },
+      {
+        "line_id": 10,
+        "line_name": "BaseFoundation",
+        "final_quality": 0.6496005280008957,
+        "final_convergence": 0.005670194548368368,
+        "final_energy": 8.584258487884409
+      }
+    ]
+  },
+  "big_zt": {
+    "global_coordination": 0.7579354712216445,
+    "optimization_gain": 0.14455398484134463,
+    "avg_coordination": 0.5126831352273037
+  },
+  "forward_zt": {
+    "thrust": 1.1566103490082562,
+    "acceleration": -2.3921873538187644,
+    "structural_integrity": 0.6138363737337242,
+    "avg_thrust": 1.3952808002076933
+  },
+  "reverse_zt": {
+    "correction": 2.0127657203569203,
+    "convergence": -0.0,
+    "feedback_quality": 1.0,
+    "final_error": 0.3773387092513467
+  },
+  "coupled": {
+    "cycles": 100,
+    "improvements": {
+      "small_quality_delta": 0.027810508846124793,
+      "big_coordination_delta": -0.1200615776988313,
+      "forward_thrust_delta": -0.4737669068405074,
+      "reverse_convergence_delta": 0.0
+    },
+    "avg_coupling": 0.56904257415264
+  },
+  "resonance": {
+    "resonance_detected": false,
+    "frequencies": [
+      0.98,
+      0.365,
+      0.885,
+      0.575
+    ],
+    "normalized_ratios": [
+      1.0,
+      0.37244897959183676,
+      0.903061224489796,
+      0.586734693877551
+    ],
+    "match_error": 0.7844387755102041,
+    "resonance_strength": 0.0
+  },
+  "stats": {
+    "overall_efficiency": 0.7541191319165523,
+    "small_zt_avg_quality": 0.5940461981368926,
+    "big_zt_coordination": 0.8181990842555347,
+    "forward_zt_integrity": 0.6042312452737824,
+    "reverse_zt_quality": 1.0
+  }
+}

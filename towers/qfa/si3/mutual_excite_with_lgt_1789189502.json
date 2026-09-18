@@ -1,0 +1,13 @@
+{
+  "type": "MUTUAL_EXCITE",
+  "partner": "lgt",
+  "my_state": {
+    "health": 1.0,
+    "load": 0.1,
+    "throughput": 0.0667,
+    "latency": 9.6667,
+    "entropy": 0.0,
+    "excitation_level": 0.0
+  },
+  "ts": "2026-09-12T05:05:02.041012+00:00"
+}

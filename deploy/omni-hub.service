@@ -1,0 +1,50 @@
+[Unit]
+Description=OMNI-HUB v12.0 — Unified Intelligence System
+Documentation=https://github.com/omni-hub/omni-hub
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+User=omni-hub
+Group=omni-hub
+WorkingDirectory=/opt/omni-hub
+Environment=PYTHONPATH=/opt/omni-hub/core
+EnvironmentFile=-/opt/omni-hub/deploy/.env
+
+# 启动命令
+ExecStartPre=/bin/mkdir -p /var/log/omni-hub /var/lib/omni-hub
+ExecStart=/opt/omni-hub/venv/bin/python /opt/omni-hub/run_omni_hub.py
+
+# 重启策略
+Restart=always
+RestartSec=5
+StartLimitInterval=60s
+StartLimitBurst=3
+
+# 资源限制
+LimitNOFILE=65536
+LimitNPROC=4096
+MemoryMax=8G
+CPUQuota=400%
+
+# 标准输出/错误
+StandardOutput=append:/var/log/omni-hub/omni-hub.log
+StandardError=append:/var/log/omni-hub/omni-hub-error.log
+SyslogIdentifier=omni-hub
+
+# 安全加固
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/log/omni-hub /var/lib/omni-hub /opt/omni-hub/hub
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictRealtime=true
+RestrictSUIDSGID=true
+LockPersonality=true
+MemoryDenyWriteExecute=false
+
+[Install]
+WantedBy=multi-user.target

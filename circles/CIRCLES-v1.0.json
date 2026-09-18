@@ -1,0 +1,45 @@
+{
+  "version": "1.0.0",
+  "ts": "2026-09-12T04:54:30.469777+00:00",
+  "levels": {
+    "inner": {
+      "lines": [
+        "ucif2",
+        "lgt",
+        "qfa"
+      ],
+      "permissions": [
+        "all"
+      ]
+    },
+    "middle": {
+      "lines": [
+        "usrm",
+        "vinf",
+        "qgl",
+        "qlv"
+      ],
+      "permissions": [
+        "read",
+        "write",
+        "execute"
+      ]
+    },
+    "outer": {
+      "lines": [
+        "lvlu",
+        "cfts"
+      ],
+      "permissions": [
+        "read",
+        "limited_write"
+      ]
+    }
+  },
+  "routing_rules": {
+    "inner_to_middle": "strip_sensitive_fields",
+    "middle_to_outer": "summarize_only",
+    "outer_to_inner": "hub_mediation_required",
+    "cross_circle": "always_via_hub"
+  }
+}

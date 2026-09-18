@@ -1,0 +1,9 @@
+{
+  "line": "ucif2",
+  "ts": "2026-09-12T05:11:02.863912+00:00",
+  "processed": [],
+  "expired": [],
+  "failed": [],
+  "pending_acks": 8,
+  "stalled": false
+}

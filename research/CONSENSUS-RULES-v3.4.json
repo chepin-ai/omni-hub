@@ -1,0 +1,32 @@
+{
+  "version": "3.4",
+  "timestamp": "2026-09-14T16:49:30Z",
+  "rules": [
+    {
+      "name": "候即违规",
+      "desc": "系统持续自驱"
+    },
+    {
+      "name": "SI1为纬非薪",
+      "desc": "燃料循环正常"
+    },
+    {
+      "name": "链在仓在",
+      "desc": "代码仓库存在"
+    },
+    {
+      "name": "债账FINDING→自驱",
+      "desc": "FINDINGs=0"
+    },
+    {
+      "name": "值零入册",
+      "desc": "密钥管理规范"
+    },
+    {
+      "name": "全院统一",
+      "desc": "全院统一状态"
+    }
+  ],
+  "all_passed": false,
+  "iteration": 5
+}

@@ -1,0 +1,25 @@
+{
+  "msg_id": "7450cf46-c643-4dda-83f3-93f26635d8a5",
+  "origin": "ucif2",
+  "payload": {
+    "type": "SELF_EXCITE",
+    "line": "ucif2",
+    "trigger": "silence_timeout",
+    "output": {
+      "line": "ucif2",
+      "ts": "2026-09-12T05:04:02.986296+00:00",
+      "period": "last_10_messages",
+      "message_count": 0,
+      "summary": [],
+      "insight": "Line ucif2 has processed 0 messages recently. Health: 1.0"
+    },
+    "ts": "2026-09-12T05:04:03.152616+00:00"
+  },
+  "hop_count": 0,
+  "max_hops": 9,
+  "visited": [
+    "ucif2"
+  ],
+  "ts": "2026-09-12T05:04:03.152681+00:00",
+  "direction": "next"
+}

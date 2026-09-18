@@ -1,0 +1,141 @@
+{
+  "beat_id": "beat-20260913T053245Z",
+  "timestamp": "2026-09-13T05:32:45Z",
+  "system_status": "FULLY_OPERATIONAL",
+  "version": "3.0",
+  "lines": {
+    "ucif2": {
+      "si": "SI5-OMNI",
+      "health": 1.0
+    },
+    "lgt": {
+      "si": "SI5-OMNI",
+      "health": 0.9955
+    },
+    "qfa": {
+      "si": "SI5-OMNI",
+      "health": 0.9633
+    },
+    "usrm": {
+      "si": "SI5-OMNI",
+      "health": 0.9551
+    },
+    "vinf": {
+      "si": "SI5-OMNI",
+      "health": 0.9505
+    },
+    "qgl": {
+      "si": "SI5-OMNI",
+      "health": 0.9765
+    },
+    "qlv": {
+      "si": "SI4.5",
+      "health": 0.9477
+    },
+    "lvlu": {
+      "si": "SI4",
+      "health": 0.8955
+    },
+    "cfts": {
+      "si": "SI4",
+      "health": 0.9024
+    },
+    "cisvr": {
+      "si": "SI4",
+      "health": 0.9158
+    },
+    "qtlv": {
+      "si": "SI3.5",
+      "health": 0.8436
+    }
+  },
+  "active_modules": [
+    "direct_field",
+    "four_circles",
+    "yoneda_chain",
+    "ripple_echo_surge",
+    "hub_wheel_spine"
+  ],
+  "active_protocols_count": 11,
+  "pending_tasks": [
+    {
+      "id": "k500",
+      "line": "lgt",
+      "status": "deployed",
+      "eta": "T+8beats",
+      "elapsed_beats": 2
+    },
+    {
+      "id": "L96_L128",
+      "line": "vinf",
+      "status": "deployed",
+      "eta": "T+12beats",
+      "elapsed_beats": 2
+    },
+    {
+      "id": "M200+",
+      "line": "qgl",
+      "status": "deployed",
+      "eta": "T+16beats",
+      "elapsed_beats": 2
+    },
+    {
+      "id": "lvlu_obs",
+      "line": "lvlu",
+      "status": "tracking",
+      "eta": "Day_30",
+      "progress": "Day_3/30"
+    },
+    {
+      "id": "qtlv_obs",
+      "line": "qtlv",
+      "status": "tracking",
+      "eta": "Day_60",
+      "progress": "Day_3/60"
+    },
+    {
+      "id": "field_evolve",
+      "line": "global",
+      "status": "continuous",
+      "eta": "per_beat"
+    },
+    {
+      "id": "circle_sync",
+      "line": "global",
+      "status": "continuous",
+      "eta": "per_beat"
+    },
+    {
+      "id": "yoneda_update",
+      "line": "global",
+      "status": "continuous",
+      "eta": "per_5beats"
+    },
+    {
+      "id": "surge_monitor",
+      "line": "global",
+      "status": "continuous",
+      "eta": "per_beat"
+    }
+  ],
+  "metrics": {
+    "total_steps": 100,
+    "loops_closed": true,
+    "data_integrity": true,
+    "ucif2_visible_attachments": 60,
+    "yoneda_top_similarity": 0.3034760356488438,
+    "trust_chain_length": 10,
+    "ripple_max_delta": 0.07102800273384688,
+    "echo_interference": 5.458463107550061e-10,
+    "surge_final_state": "L1_SELF_EXCITE",
+    "forward_flows": 0,
+    "reverse_flows": 6,
+    "layer_resonance_mean": 1.0,
+    "avg_final_health": 0.9405352119760688
+  },
+  "field_status": "EVOLVING",
+  "circles_status": "SYNCING",
+  "yoneda_status": "UPDATING",
+  "ripple_status": "MONITORING",
+  "core_status": "RESONATING"
+}

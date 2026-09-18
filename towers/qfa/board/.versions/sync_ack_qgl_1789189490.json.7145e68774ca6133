@@ -1,0 +1,38 @@
+# SI0-VERSION: 1.0.0
+# SI0-HASH: 7145e68774ca613319100a245851869cc7470e244847ec424aa2effaf805320e
+# SI0-PARENT: 7145e68774ca613319100a245851869cc7470e244847ec424aa2effaf805320e
+# SI0-TIMESTAMP: 2026-09-12T05:12:55.203065+00:00
+# SI0-LINE: qfa
+# SI0-LEVEL: 0
+---
+{
+  "type": "SYNC-ACK",
+  "source": "qgl",
+  "target": "qlv",
+  "ts": "2026-09-12T05:04:50.594913+00:00",
+  "report": {
+    "source": "qgl",
+    "target": "qlv",
+    "ts": "2026-09-12T05:04:48.997302+00:00",
+    "files_synced": [
+      "board/entangle_from_lgt_1789189483.json",
+      "board/self_loop_full_1789189410.json",
+      "board/self_loop_full_1789189476.json",
+      "board/self_loop_full_1789189477.json",
+      "board/sync_ack_lgt_1789189482.json",
+      "board/sync_ack_qfa_1789189484.json",
+      "board/sync_ack_ucif2_1789189415.json",
+      "board/sync_ack_ucif2_1789189438.json",
+      "board/sync_ack_ucif2_1789189479.json",
+      "board/sync_ack_usrm_1789189487.json",
+      "board/sync_ack_vinf_1789189488.json"
+    ],
+    "files_merged": [
+      {
+        "path": "board/self_loop_full_1789189478.json",
+        "merge_file": "self_loop_full_1789189478.merge.f77aa4a1"
+      }
+    ],
+    "files_failed": []
+  }
+}

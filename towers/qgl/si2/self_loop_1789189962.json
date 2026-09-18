@@ -1,0 +1,14 @@
+{
+  "line": "qgl",
+  "ts": "2026-09-12T05:12:42.678723+00:00",
+  "processed": [],
+  "expired": [
+    {
+      "msg_id": "dbb3e039-3777-4efe-beb6-97a853477661",
+      "age_sec": 473.945641
+    }
+  ],
+  "failed": [],
+  "pending_acks": 1,
+  "stalled": false
+}

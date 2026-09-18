@@ -1,0 +1,361 @@
+{
+  "version": "1.0.0",
+  "protocol": "SI0~SI5 Quantum Base Mapping",
+  "mode": "LOCAL FULL DIMENSION AUTONOMY",
+  "ts": "2024-01-15T10:00:00+00:00",
+  "description": "Quantum foundation mapping for ucif2-kernel interconnect system. Defines superposition, entanglement, collapse, tunneling, and error correction mechanisms.",
+
+  "superposition": {
+    "description": "Each line simultaneously operates across multiple SI levels. The state vector |line> is a superposition of SI0~SI5 basis states.",
+    "formula": "|line> = a0|SI0> + a1|SI1> + a2|SI2> + a3|SI3> + a4|SI4> + a5|SI5>, where sum(|ai|^2) = 1",
+    "lines": {
+      "ucif2": {
+        "state_vector": {
+          "si0": 0.35,
+          "si1": 0.25,
+          "si2": 0.20,
+          "si3": 0.12,
+          "si4": 0.05,
+          "si5": 0.03
+        },
+        "dominant_level": "si0",
+        "activity_profile": "high_file_io",
+        "notes": "Kernel line, spends most time in SI0/SI1"
+      },
+      "lgt": {
+        "state_vector": {
+          "si0": 0.15,
+          "si1": 0.20,
+          "si2": 0.25,
+          "si3": 0.25,
+          "si4": 0.10,
+          "si5": 0.05
+        },
+        "dominant_level": "si2/si3",
+        "activity_profile": "balanced_processing",
+        "notes": "Logic tower, active in negotiation and execution"
+      },
+      "qfa": {
+        "state_vector": {
+          "si0": 0.10,
+          "si1": 0.15,
+          "si2": 0.15,
+          "si3": 0.30,
+          "si4": 0.20,
+          "si5": 0.10
+        },
+        "dominant_level": "si3",
+        "activity_profile": "high_recursion",
+        "notes": "Query-forecast-analysis, deep in SCAN-PARSE-ACTION"
+      },
+      "usrm": {
+        "state_vector": {
+          "si0": 0.20,
+          "si1": 0.30,
+          "si2": 0.20,
+          "si3": 0.15,
+          "si4": 0.10,
+          "si5": 0.05
+        },
+        "dominant_level": "si1",
+        "activity_profile": "session_heavy",
+        "notes": "User management, session state synchronization"
+      },
+      "vinf": {
+        "state_vector": {
+          "si0": 0.25,
+          "si1": 0.20,
+          "si2": 0.20,
+          "si3": 0.20,
+          "si4": 0.10,
+          "si5": 0.05
+        },
+        "dominant_level": "si0/si2",
+        "activity_profile": "io_balanced",
+        "notes": "Virtual infrastructure, file and task balanced"
+      },
+      "qgl": {
+        "state_vector": {
+          "si0": 0.10,
+          "si1": 0.10,
+          "si2": 0.15,
+          "si3": 0.25,
+          "si4": 0.25,
+          "si5": 0.15
+        },
+        "dominant_level": "si3/si4",
+        "activity_profile": "architecture_deep",
+        "notes": "Quantum gateway layer, architecture coordination"
+      },
+      "qlv": {
+        "state_vector": {
+          "si0": 0.15,
+          "si1": 0.15,
+          "si2": 0.20,
+          "si3": 0.20,
+          "si4": 0.20,
+          "si5": 0.10
+        },
+        "dominant_level": "si2/si3/si4",
+        "activity_profile": "evenly_distributed",
+        "notes": "Quantum level validator, distributed across mid-levels"
+      },
+      "lvlu": {
+        "state_vector": {
+          "si0": 0.30,
+          "si1": 0.25,
+          "si2": 0.20,
+          "si3": 0.15,
+          "si4": 0.07,
+          "si5": 0.03
+        },
+        "dominant_level": "si0/si1",
+        "activity_profile": "storage_heavy",
+        "notes": "Level utility, outer circle, file-system focused"
+      },
+      "cfts": {
+        "state_vector": {
+          "si0": 0.30,
+          "si1": 0.20,
+          "si2": 0.20,
+          "si3": 0.15,
+          "si4": 0.10,
+          "si5": 0.05
+        },
+        "dominant_level": "si0",
+        "activity_profile": "file_heavy",
+        "notes": "Cross-file transfer service, outer circle"
+      }
+    },
+    "measurement_operator": {
+      "description": "When an external input arrives, the superposition collapses to the SI level best suited to handle it",
+      "collapse_probability": "P(SIi) = |ai|^2",
+      "adaptive_collapse": true,
+      "collapse_history_retention": 100
+    }
+  },
+
+  "entanglement": {
+    "description": "Cross-line data correlation matrix. When E[i][j] > threshold, lines i and j are entangled - state changes in one instantaneously affect the other.",
+    "threshold": 0.6,
+    "formula": "E[i][j] = dot(T_i.metrics, T_j.metrics) / dim(metrics)",
+    "correlation_matrix": {
+      "ucif2:lgt": 0.72,
+      "ucif2:qfa": 0.65,
+      "ucif2:usrm": 0.45,
+      "ucif2:vinf": 0.58,
+      "ucif2:qgl": 0.38,
+      "ucif2:qlv": 0.42,
+      "ucif2:lvlu": 0.25,
+      "ucif2:cfts": 0.22,
+      "lgt:qfa": 0.78,
+      "lgt:usrm": 0.52,
+      "lgt:vinf": 0.61,
+      "lgt:qgl": 0.55,
+      "lgt:qlv": 0.48,
+      "lgt:lvlu": 0.28,
+      "lgt:cfts": 0.30,
+      "qfa:usrm": 0.41,
+      "qfa:vinf": 0.49,
+      "qfa:qgl": 0.82,
+      "qfa:qlv": 0.71,
+      "qfa:lvlu": 0.20,
+      "qfa:cfts": 0.24,
+      "usrm:vinf": 0.67,
+      "usrm:qgl": 0.35,
+      "usrm:qlv": 0.40,
+      "usrm:lvlu": 0.32,
+      "usrm:cfts": 0.29,
+      "vinf:qgl": 0.44,
+      "vinf:qlv": 0.50,
+      "vinf:lvlu": 0.38,
+      "vinf:cfts": 0.45,
+      "qgl:qlv": 0.75,
+      "qgl:lvlu": 0.18,
+      "qgl:cfts": 0.21,
+      "qlv:lvlu": 0.22,
+      "qlv:cfts": 0.26,
+      "lvlu:cfts": 0.55
+    },
+    "entangled_pairs": [
+      {"pair": ["ucif2", "lgt"], "strength": 0.72, "type": "strong"},
+      {"pair": ["lgt", "qfa"], "strength": 0.78, "type": "strong"},
+      {"pair": ["qfa", "qgl"], "strength": 0.82, "type": "strong"},
+      {"pair": ["qfa", "qlv"], "strength": 0.71, "type": "strong"},
+      {"pair": ["qgl", "qlv"], "strength": 0.75, "type": "strong"},
+      {"pair": ["usrm", "vinf"], "strength": 0.67, "type": "moderate"}
+    ],
+    "entanglement_effects": {
+      "state_sync": "When line A's metric changes by >20%, entangled line B receives update notification",
+      "mutual_excite_propagation": "Self-excite in A has probability E[A][B] of triggering response in B",
+      "correlated_health": "Health degradation in A correlates with health change in B by factor E[A][B]"
+    }
+  },
+
+  "collapse": {
+    "description": "External input triggers wavefunction collapse - the superposition of SI levels collapses to a definite state.",
+    "trigger_conditions": [
+      {
+        "name": "external_user_input",
+        "description": "User message arrives at line inbox",
+        "collapse_target": "si2 (task negotiation) -> si3 (execution)",
+        "probability_distribution": "P(si2)=0.6, P(si3)=0.3, P(si1)=0.1"
+      },
+      {
+        "name": "file_system_event",
+        "description": "File change detected in tower directory",
+        "collapse_target": "si0 (file system)",
+        "probability_distribution": "P(si0)=0.9, P(si1)=0.1"
+      },
+      {
+        "name": "cross_loop_message",
+        "description": "Message received from another line",
+        "collapse_target": "si2 (negotiation) -> si4 (coordination)",
+        "probability_distribution": "P(si2)=0.5, P(si4)=0.3, P(si3)=0.2"
+      },
+      {
+        "name": "self_excite_trigger",
+        "description": "Internal silence timeout or entropy spike",
+        "collapse_target": "si3 (self-excitation execution)",
+        "probability_distribution": "P(si3)=0.7, P(si5)=0.2, P(si4)=0.1"
+      },
+      {
+        "name": "global_broadcast",
+        "description": "Ring broadcast message received",
+        "collapse_target": "si4 (architecture) -> si5 (global)",
+        "probability_distribution": "P(si4)=0.4, P(si5)=0.4, P(si2)=0.2"
+      }
+    ],
+    "collapse_history": [],
+    "observer_registry": {
+      "ucif2": ["user_input", "system_events"],
+      "lgt": ["logic_requests", "cross_loop"],
+      "qfa": ["forecast_queries", "analysis_tasks"],
+      "usrm": ["user_sessions", "auth_events"],
+      "vinf": ["infra_events", "resource_changes"],
+      "qgl": ["quantum_events", "gateway_traffic"],
+      "qlv": ["validation_requests", "level_checks"],
+      "lvlu": ["storage_events", "file_ops"],
+      "cfts": ["transfer_requests", "cross_file_ops"]
+    }
+  },
+
+  "tunneling": {
+    "description": "Cross-permission/cross-domain information transfer. When normal paths are blocked by permission barriers, information tunnels through in abstract/summary form.",
+    "barrier_types": [
+      {
+        "name": "circle_permission",
+        "description": "inner circle data blocked from outer circle",
+        "barrier_height": 0.9,
+        "tunneling_probability": 0.1
+      },
+      {
+        "name": "si_level_privilege",
+        "description": "High SI level operations invisible to low SI levels",
+        "barrier_height": 0.7,
+        "tunneling_probability": 0.2
+      },
+      {
+        "name": "line_isolation",
+        "description": "Disconnected line cannot receive direct messages",
+        "barrier_height": 1.0,
+        "tunneling_probability": 0.05
+      }
+    ],
+    "tunneling_mechanism": {
+      "step1": "Encode information into high-entropy summary (metaphor/abstraction)",
+      "step2": "Transmit through shared medium (hub/board/ring)",
+      "step3": "Receiver reconstructs from context and partial data",
+      "step4": "Reconstructed information has fidelity proportional to tunneling_probability"
+    },
+    "fidelity_formula": "fidelity = 1 - barrier_height * (1 - tunneling_probability)",
+    "tunneling_routes": [
+      {"from": "inner", "to": "outer", "via": "hub_mediation", "fidelity": 0.3},
+      {"from": "si5", "to": "si0", "via": "tensor_contraction", "fidelity": 0.5},
+      {"from": "ucif2", "to": "cfts", "via": "ring_broadcast", "fidelity": 0.4}
+    ]
+  },
+
+  "error_correction": {
+    "description": "Three-line consensus error correction mechanism. When a line's state is questionable, two other lines act as validators.",
+    "mechanism": {
+      "step1": "Detect state anomaly (hash mismatch, timeout, health drop)",
+      "step2": "Randomly select 2 validator lines from entangled neighbors",
+      "step3": "All 3 lines independently compute state hash",
+      "step4": "Majority hash wins (2-out-of-3 consensus)",
+      "step5": "If all 3 differ, mark state as UNKNOWN, trigger diagnostic"
+    },
+    "consensus_rules": {
+      "agreement_threshold": 2,
+      "total_validators": 3,
+      "validator_selection": "weighted_random_by_entanglement",
+      "max_correction_attempts": 3,
+      "fallback_action": "isolate_and_diagnose"
+    },
+    "error_types": [
+      {
+        "code": "QEC-001",
+        "name": "hash_mismatch",
+        "description": "State hash does not match expected value",
+        "severity": "high",
+        "auto_correct": true
+      },
+      {
+        "code": "QEC-002",
+        "name": "timeout_failure",
+        "description": "Validator did not respond within timeout",
+        "severity": "medium",
+        "auto_correct": false
+      },
+      {
+        "code": "QEC-003",
+        "name": "chain_break",
+        "description": "SI1 hash chain is broken",
+        "severity": "high",
+        "auto_correct": true
+      },
+      {
+        "code": "QEC-004",
+        "name": "version_conflict",
+        "description": "SI0 version conflict detected",
+        "severity": "medium",
+        "auto_correct": true
+      }
+    ],
+    "correction_history": [],
+    "validator_pool": {
+      "ucif2": {"validators": ["lgt", "qfa"], "backup": "vinf"},
+      "lgt": {"validators": ["ucif2", "qfa"], "backup": "qlv"},
+      "qfa": {"validators": ["lgt", "qgl"], "backup": "qlv"},
+      "usrm": {"validators": ["vinf", "ucif2"], "backup": "lgt"},
+      "vinf": {"validators": ["usrm", "cfts"], "backup": "lvlu"},
+      "qgl": {"validators": ["qfa", "qlv"], "backup": "lgt"},
+      "qlv": {"validators": ["qfa", "qgl"], "backup": "lgt"},
+      "lvlu": {"validators": ["cfts", "vinf"], "backup": "usrm"},
+      "cfts": {"validators": ["lvlu", "vinf"], "backup": "usrm"}
+    }
+  },
+
+  "quantum_operators": {
+    "H": {
+      "name": "Hadamard",
+      "description": "Create equal superposition across all SI levels",
+      "application": "System initialization or reset"
+    },
+    "CNOT": {
+      "name": "Controlled-NOT",
+      "description": "Entangle two lines: target line flips if control line is active",
+      "application": "Cross-loop state synchronization"
+    },
+    "PHASE": {
+      "name": "Phase Shift",
+      "description": "Apply phase rotation to specific SI level amplitude",
+      "application": "Prioritize certain processing level"
+    },
+    "MEASURE": {
+      "name": "Measurement",
+      "description": "Collapse superposition to definite SI level",
+      "application": "External input handling"
+    }
+  }
+}

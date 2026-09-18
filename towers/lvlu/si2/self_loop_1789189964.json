@@ -1,0 +1,14 @@
+{
+  "line": "lvlu",
+  "ts": "2026-09-12T05:12:44.409767+00:00",
+  "processed": [],
+  "expired": [
+    {
+      "msg_id": "d550d259-7183-4c46-a8c5-832957ea02f6",
+      "age_sec": 471.886507
+    }
+  ],
+  "failed": [],
+  "pending_acks": 1,
+  "stalled": false
+}

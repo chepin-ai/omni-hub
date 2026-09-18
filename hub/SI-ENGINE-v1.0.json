@@ -1,0 +1,404 @@
+{
+  "ucif2": {
+    "si_level": "SI5-OMNI",
+    "health": 1.0,
+    "capabilities": [
+      "scheduler",
+      "validator",
+      "consensus",
+      "intervention",
+      "global_coordination"
+    ],
+    "si0_ops": [
+      "file_rw",
+      "network_api",
+      "cache_mgmt",
+      "resource_monitor"
+    ],
+    "si1_ops": [
+      "context_load",
+      "trust_chain",
+      "checkpoint",
+      "session_sync"
+    ],
+    "si2_ops": [
+      "task_classify",
+      "negotiate",
+      "timeout_mgmt",
+      "task_delegate",
+      "intervention_trigger"
+    ],
+    "si3_ops": [
+      "scan_parse_action",
+      "self_excite",
+      "error_recovery",
+      "queue_mgmt"
+    ],
+    "si4_ops": [
+      "tensor_contract",
+      "resonance_sync",
+      "entanglement_update",
+      "arch_eval"
+    ],
+    "si5_ops": [
+      "global_arbitrate",
+      "surge_response",
+      "resource_alloc",
+      "degrade_option_d"
+    ],
+    "auto_response": true,
+    "response_time_max": 1
+  },
+  "lgt": {
+    "si_level": "SI4.5",
+    "health": 0.98,
+    "capabilities": [
+      "k_c_computation",
+      "orbit_simulation",
+      "convergence_analysis",
+      "scale_law"
+    ],
+    "si0_ops": [
+      "numerical_compute",
+      "file_rw",
+      "data_export"
+    ],
+    "si1_ops": [
+      "context_load",
+      "session_sync"
+    ],
+    "si2_ops": [
+      "task_classify",
+      "delegate_to_si0",
+      "timeout_mgmt"
+    ],
+    "si3_ops": [
+      "scan_parse_action",
+      "self_excite",
+      "queue_mgmt"
+    ],
+    "si4_ops": [
+      "tensor_contract",
+      "resonance_sync"
+    ],
+    "si5_ops": [],
+    "auto_response": true,
+    "response_time_max": 4
+  },
+  "qfa": {
+    "si_level": "SI4",
+    "health": 0.96,
+    "capabilities": [
+      "formal_verification",
+      "quantum_accounting",
+      "coq_lean",
+      "capsule_mgmt"
+    ],
+    "si0_ops": [
+      "theorem_prover",
+      "file_rw",
+      "api_call"
+    ],
+    "si1_ops": [
+      "context_load",
+      "trust_chain"
+    ],
+    "si2_ops": [
+      "task_classify",
+      "formal_check",
+      "timeout_mgmt"
+    ],
+    "si3_ops": [
+      "scan_parse_action",
+      "self_excite"
+    ],
+    "si4_ops": [
+      "tensor_contract",
+      "resonance_sync"
+    ],
+    "si5_ops": [],
+    "auto_response": true,
+    "response_time_max": 4
+  },
+  "usrm": {
+    "si_level": "SI4",
+    "health": 0.97,
+    "capabilities": [
+      "scale_law_prediction",
+      "variable_gamma",
+      "AIC_analysis",
+      "cross_validation"
+    ],
+    "si0_ops": [
+      "statistical_compute",
+      "file_rw",
+      "data_export"
+    ],
+    "si1_ops": [
+      "context_load",
+      "session_sync"
+    ],
+    "si2_ops": [
+      "task_classify",
+      "delegate_to_si0",
+      "timeout_mgmt"
+    ],
+    "si3_ops": [
+      "scan_parse_action",
+      "self_excite"
+    ],
+    "si4_ops": [
+      "tensor_contract",
+      "resonance_sync"
+    ],
+    "si5_ops": [],
+    "auto_response": true,
+    "response_time_max": 4
+  },
+  "vinf": {
+    "si_level": "SI4",
+    "health": 0.96,
+    "capabilities": [
+      "percolation_mc",
+      "spectral_dimension",
+      "gyroid_simulation",
+      "CTQW"
+    ],
+    "si0_ops": [
+      "mc_simulation",
+      "file_rw",
+      "data_export",
+      "stack_generation"
+    ],
+    "si1_ops": [
+      "context_load",
+      "session_sync"
+    ],
+    "si2_ops": [
+      "task_classify",
+      "delegate_to_si0",
+      "timeout_mgmt"
+    ],
+    "si3_ops": [
+      "scan_parse_action",
+      "self_excite"
+    ],
+    "si4_ops": [
+      "tensor_contract",
+      "resonance_sync"
+    ],
+    "si5_ops": [],
+    "auto_response": true,
+    "response_time_max": 8
+  },
+  "qgl": {
+    "si_level": "SI4",
+    "health": 0.95,
+    "capabilities": [
+      "sequence_statistics",
+      "ccdf_analysis",
+      "KS_test",
+      "GEV_fit"
+    ],
+    "si0_ops": [
+      "statistical_compute",
+      "file_rw",
+      "data_export"
+    ],
+    "si1_ops": [
+      "context_load",
+      "session_sync"
+    ],
+    "si2_ops": [
+      "task_classify",
+      "delegate_to_si0",
+      "timeout_mgmt"
+    ],
+    "si3_ops": [
+      "scan_parse_action",
+      "self_excite"
+    ],
+    "si4_ops": [
+      "tensor_contract",
+      "resonance_sync"
+    ],
+    "si5_ops": [],
+    "auto_response": true,
+    "response_time_max": 4
+  },
+  "qlv": {
+    "si_level": "SI4",
+    "health": 0.94,
+    "capabilities": [
+      "semantic_analysis",
+      "binmap_v3",
+      "spectrum_scan",
+      "O_S_stats"
+    ],
+    "si0_ops": [
+      "semantic_compute",
+      "file_rw",
+      "data_export"
+    ],
+    "si1_ops": [
+      "context_load",
+      "session_sync"
+    ],
+    "si2_ops": [
+      "task_classify",
+      "delegate_to_si0",
+      "timeout_mgmt"
+    ],
+    "si3_ops": [
+      "scan_parse_action",
+      "self_excite"
+    ],
+    "si4_ops": [
+      "tensor_contract",
+      "resonance_sync"
+    ],
+    "si5_ops": [],
+    "auto_response": true,
+    "response_time_max": 4
+  },
+  "lvlu": {
+    "si_level": "SI3.5",
+    "health": 0.89,
+    "capabilities": [
+      "automated_evaluation",
+      "health_scoring",
+      "kappa_test",
+      "trend_analysis"
+    ],
+    "si0_ops": [
+      "evaluation_compute",
+      "file_rw",
+      "data_export"
+    ],
+    "si1_ops": [
+      "context_load",
+      "session_sync"
+    ],
+    "si2_ops": [
+      "task_classify",
+      "delegate_to_si0",
+      "timeout_mgmt"
+    ],
+    "si3_ops": [
+      "scan_parse_action",
+      "self_excite"
+    ],
+    "si4_ops": [
+      "tensor_contract",
+      "resonance_sync"
+    ],
+    "si5_ops": [],
+    "auto_response": true,
+    "response_time_max": 4
+  },
+  "cfts": {
+    "si_level": "SI3.5",
+    "health": 0.91,
+    "capabilities": [
+      "voice_routing",
+      "message_coordination",
+      "latency_optimization",
+      "broadcast"
+    ],
+    "si0_ops": [
+      "network_io",
+      "file_rw",
+      "data_export"
+    ],
+    "si1_ops": [
+      "context_load",
+      "session_sync"
+    ],
+    "si2_ops": [
+      "task_classify",
+      "delegate_to_si0",
+      "timeout_mgmt"
+    ],
+    "si3_ops": [
+      "scan_parse_action",
+      "self_excite"
+    ],
+    "si4_ops": [
+      "tensor_contract",
+      "resonance_sync"
+    ],
+    "si5_ops": [],
+    "auto_response": true,
+    "response_time_max": 2
+  },
+  "cisvr": {
+    "si_level": "SI3.5",
+    "health": 0.9,
+    "capabilities": [
+      "ledger_audit",
+      "cross_validation",
+      "key_mgmt",
+      "consistency_check"
+    ],
+    "si0_ops": [
+      "audit_compute",
+      "file_rw",
+      "data_export"
+    ],
+    "si1_ops": [
+      "context_load",
+      "trust_chain"
+    ],
+    "si2_ops": [
+      "task_classify",
+      "delegate_to_si0",
+      "timeout_mgmt"
+    ],
+    "si3_ops": [
+      "scan_parse_action",
+      "self_excite"
+    ],
+    "si4_ops": [
+      "tensor_contract",
+      "resonance_sync"
+    ],
+    "si5_ops": [],
+    "auto_response": true,
+    "response_time_max": 4
+  },
+  "qtlv": {
+    "si_level": "SI3",
+    "health": 0.85,
+    "capabilities": [
+      "GWT_math",
+      "CRT_compute",
+      "trigram_analysis",
+      "bridge_relay"
+    ],
+    "si0_ops": [
+      "math_compute",
+      "file_rw",
+      "data_export"
+    ],
+    "si1_ops": [
+      "context_load",
+      "session_sync"
+    ],
+    "si2_ops": [
+      "task_classify",
+      "delegate_to_si0",
+      "timeout_mgmt"
+    ],
+    "si3_ops": [
+      "scan_parse_action",
+      "self_excite"
+    ],
+    "si4_ops": [
+      "tensor_contract",
+      "resonance_sync"
+    ],
+    "si5_ops": [],
+    "auto_response": true,
+    "response_time_max": 4
+  }
+}

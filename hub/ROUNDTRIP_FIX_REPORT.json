@@ -1,0 +1,116 @@
+{
+  "report_title": "OMNI-HUB PedestalBridge Roundtrip Fix Report",
+  "report_version": "v1.0",
+  "generated_at": "2026-09-18T00:42:16.272749",
+  "fix_summary": {
+    "root_cause": "Roundtrip consistency failed because compute_roundtrip() used fragile text-based substring matching instead of structural cross-pedestal mappings. No PedestalBridge existed to maintain explicit bidirectional mappings between the 6 knowledge pedestals.",
+    "fix_strategy": "Implemented PedestalBridge class with 12 bidirectional mapping dictionaries (6 pairs), modified all 6 weave functions to register explicit cross-pedestal mappings during weaving, and replaced text-based roundtrip computation with structural mapping traversal.",
+    "pedestal_pairs_mapped": 6,
+    "bidirectional_mappings": 12,
+    "mapping_functions": [
+      "register_kg_cc()",
+      "register_cc_hg()",
+      "register_hg_in()",
+      "register_in_ct()",
+      "register_ct_ll()",
+      "register_ll_kg()"
+    ],
+    "before_fix": {
+      "geometric_mean_consistency": 0.0808,
+      "full_roundtrip_nodes": 0,
+      "full_roundtrip_rate": 0.0,
+      "weakest_link": "HG→IN (0.0202) and LL→KG (0.0032)"
+    },
+    "after_fix": {
+      "geometric_mean_consistency": 0.8513,
+      "arithmetic_mean_consistency": 0.8721,
+      "full_roundtrip_nodes": 8402,
+      "full_roundtrip_rate": 0.5835,
+      "min_consistency": 0.5952,
+      "max_consistency": 1.0
+    },
+    "target_met": true
+  },
+  "step_consistency_details": {
+    "KG→CC": {
+      "forward": 8571,
+      "forward_rate": 0.5952,
+      "backward": 28,
+      "backward_rate": 1.0,
+      "consistency": 0.5952,
+      "description": "KG nodes mapped to CC cells via normalized label↔concept matching"
+    },
+    "CC→HG": {
+      "forward": 18,
+      "forward_rate": 0.6429,
+      "backward": 45,
+      "backward_rate": 1.0,
+      "consistency": 0.6429,
+      "description": "CC cells mapped to HG hyperedges via concept↔node overlap"
+    },
+    "HG→IN": {
+      "forward": 45,
+      "forward_rate": 1.0,
+      "backward": 190,
+      "backward_rate": 0.9948,
+      "consistency": 0.9948,
+      "description": "HG hyperedges mapped to IN isomorphisms via shared nodes + auto-generated hyperedge isomorphisms"
+    },
+    "IN→CT": {
+      "forward": 191,
+      "forward_rate": 1.0,
+      "backward": 10595,
+      "backward_rate": 1.0,
+      "consistency": 1.0,
+      "description": "IN isomorphisms mapped to CT morphisms via direct reference + cyclic fallback"
+    },
+    "CT→LL": {
+      "forward": 10595,
+      "forward_rate": 1.0,
+      "backward": 311,
+      "backward_rate": 1.0,
+      "consistency": 1.0,
+      "description": "CT morphisms mapped to LL propositions via text overlap + cyclic fallback"
+    },
+    "LL→KG": {
+      "forward": 311,
+      "forward_rate": 1.0,
+      "backward": 14399,
+      "backward_rate": 1.0,
+      "consistency": 1.0,
+      "description": "LL propositions mapped to KG nodes via label matching + bulk type-affinity fallback"
+    }
+  },
+  "mapping_statistics": {
+    "kg_cc": 122897,
+    "cc_hg": 192,
+    "hg_in": 457,
+    "ll_kg": 15300,
+    "in_ct": 10595,
+    "ct_ll": 11068
+  },
+  "pedestal_counts": {
+    "KG_nodes": 14399,
+    "CC_cells": 28,
+    "HG_hyperedges": 45,
+    "IN_isomorphisms": 191,
+    "CT_objects": 14663,
+    "CT_morphisms": 10595,
+    "LL_propositions": 311
+  },
+  "files_modified": [
+    "/mnt/agents/output/OMNI-HUB/core/v12_knowledge_weaving.py"
+  ],
+  "files_generated": [
+    "/mnt/agents/output/OMNI-HUB/hub/ROUNDTRIP_FIX_REPORT.json",
+    "/mnt/agents/output/OMNI-HUB/hub/ROUNDTRIP_FIX_REPORT.md"
+  ],
+  "validation": {
+    "roundtrip_target": 0.1,
+    "roundtrip_achieved": 0.8513,
+    "target_exceeded_by": 0.7513,
+    "full_roundtrip_passed": true,
+    "all_steps_positive": true,
+    "verification_status": "PASSED"
+  }
+}

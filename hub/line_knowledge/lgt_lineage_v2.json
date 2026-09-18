@@ -1,0 +1,3204 @@
+{
+  "line_id": "lgt",
+  "version": "v2.0",
+  "total_nodes": 300,
+  "extraction_date": "2026-09-17",
+  "nodes": [
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "全局归零制度 ZVP（Zero-Value Policy）v65",
+      "content": "> **硬性规定**：所有Context/Hook/Store的default/fallback/initial值必须为零（0/空串/空数组/空对象）。 > **禁止**：任何非零字面量作为default值，除非显式标注数据来源且通过ZVP验证。 > **违反后果**：违反ZVP的代码不得通过Code Review，不得合入主干。",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/ZVP.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lgt_node_0000"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "问题根因分析（5Why）",
+      "content": "**现象**：DataContext中存在`total: 73`、`gain: 156`、`redundantFormulas: 58`等硬编码默认值。  **Why 1**：为什么这些硬编码存在？",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/ZVP.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lgt_node_0001"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "归零规则（5条）",
+      "content": "### ZVP-1 零值默认规则（硬性）  所有Context的createContext(defaultValue)、所有Hook的initialState、所有Store的initialState：",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/ZVP.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "lgt_node_0002"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ZVP-1 零值默认规则（硬性）",
+      "content": "所有Context的createContext(defaultValue)、所有Hook的initialState、所有Store的initialState：  ```typescript",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/ZVP.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "lgt_node_0003"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ZVP-2 非零标注规则",
+      "content": "如果确实有理由使用非零默认值（极罕见），必须满足：  ```typescript",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/ZVP.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "lgt_node_0004"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ZVP-3 运行时验证规则",
+      "content": "DataContext的Provider必须在mount时验证：  ```typescript",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/ZVP.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lgt_node_0005"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ZVP-4 自动检测规则",
+      "content": "构建前运行HardcodedLiteralDetector：  ```bash",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/ZVP.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lgt_node_0006"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "检测src/context/和src/hooks/中的非零数字字面量",
+      "content": "npx tsx scripts/detectHardcoded.ts --dirs src/context,src/hooks,src/stores  # 输出示例 # VIOLATION: src/context/DataContext.tsx:131",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/ZVP.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "lgt_node_0007"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "输出示例",
+      "content": "# VIOLATION: src/context/DataContext.tsx:131 #   uniqueFiles: 62  ← 非零数字字面量 #   totalInstances: 4500  ← 非零数字字面量 ```",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/ZVP.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lgt_node_0008"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "VIOLATION: src/context/DataContext.tsx:131",
+      "content": "#   uniqueFiles: 62  ← 非零数字字面量 #   totalInstances: 4500  ← 非零数字字面量 ```",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/ZVP.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "lgt_node_0009"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "uniqueFiles: 62  ← 非零数字字面量",
+      "content": "#   totalInstances: 4500  ← 非零数字字面量 ```  ### ZVP-5 审计Checklist规则",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/ZVP.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lgt_node_0010"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "totalInstances: 4500  ← 非零数字字面量",
+      "content": "```  ### ZVP-5 审计Checklist规则",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/ZVP.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "lgt_node_0011"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ZVP-5 审计Checklist规则",
+      "content": "每轮审计必须包含\"Default Audit\"项：  ```markdown",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/ZVP.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lgt_node_0012"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "Default Audit（ZVP-5）",
+      "content": "- [ ] 运行 `npx tsx scripts/detectHardcoded.ts` - [ ] 检查所有Context的defaultValue - [ ] 检查所有Hook的initialState - [ ] 检查所有Store的initialState",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/ZVP.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0013"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "检测工具（detectHardcoded.ts）",
+      "content": "见 `scripts/detectHardcoded.ts` — 自动扫描指定目录中的非零数字字面量。  ---",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/ZVP.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lgt_node_0014"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "豁免登记（ZVP_EMP.md）",
+      "content": "| 编号 | 文件 | 字段 | 值 | 理由 | 验证命令 | 日期 | 批准 | |------|------|------|-----|------|---------|------|------| | ZVP-E-001 | 示例 | daemonCycle | 3993 | hydration优化 | coreEngine.stats.daemonCycle | — | — |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/ZVP.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lgt_node_0015"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "UCIF²-OS v48 用户手册",
+      "content": "## 一、系统概述  **UCIF²-OS** 是全球首个基于**同伦类型论(HoTT)**的可运行数学操作系统。",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_OS_USER_MANUAL.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "lgt_node_0016"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "一、系统概述",
+      "content": "**UCIF²-OS** 是全球首个基于**同伦类型论(HoTT)**的可运行数学操作系统。  | 属性 | 值 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_OS_USER_MANUAL.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "lgt_node_0017"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "二、快速开始",
+      "content": "### 2.1 启动系统  访问 Web Dashboard，点击顶部导航栏的 **\"UCIF²-OS\"** 标签进入操作系统界面。",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_OS_USER_MANUAL.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "lgt_node_0018"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "2.1 启动系统",
+      "content": "访问 Web Dashboard，点击顶部导航栏的 **\"UCIF²-OS\"** 标签进入操作系统界面。  系统启动时会显示HoTT内核初始化序列：",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_OS_USER_MANUAL.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "lgt_node_0019"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "2.2 OS Shell 命令",
+      "content": "| 命令 | 参数 | 描述 | 示例 | |------|------|------|------| | `help` | 无 | 显示所有命令 | `help` |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_OS_USER_MANUAL.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "lgt_node_0020"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "2.3 HoTT类型检查器",
+      "content": "选择10个HoTT核心类型之一，点击\"运行类型检查\"： - 𝟙 (Unit) - H-Level 0 (收缩) - S¹ (Circle) - H-Level 3 (群胚), HIT",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_OS_USER_MANUAL.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "lgt_node_0021"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "2.4 Univalence计算器",
+      "content": "4步交互式演示： 1. 输入: 等价 A ≃ B 2. Univalence公理: ua(f)",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_OS_USER_MANUAL.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lgt_node_0022"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "2.5 HIT构造器",
+      "content": "交互式构建： - **S¹**: 圆，π₁(S¹) ≅ ℤ - **S²**: 球面，π₂(S²) ≅ ℤ",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_OS_USER_MANUAL.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lgt_node_0023"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "2.6 同构网络浏览器",
+      "content": "SVG力导向图展示240个同构的15个核心节点： - 悬停节点查看详情 - 显示/隐藏标签",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_OS_USER_MANUAL.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0024"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "2.7 谱图分析器",
+      "content": "显示6大社区的统计数据： - 模量 Q = 0.72 - 小世界: L≈2.8, C≈0.65",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_OS_USER_MANUAL.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lgt_node_0025"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "2.8 自推演引擎",
+      "content": "输入数学命题，引擎自动推演： ``` 输入: \"alpha rigidity\"",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_OS_USER_MANUAL.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "lgt_node_0026"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "2.9 上同调计算器",
+      "content": "三种计算模式： - **α计算**: 1/(4π³+π²+π) = 0.007297308... - **CY3体积**: 4π³·ℓₛ⁶",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_OS_USER_MANUAL.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "lgt_node_0027"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "三、API参考",
+      "content": "### 3.1 HoTT内核API  ```typescript",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_OS_USER_MANUAL.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "lgt_node_0028"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "3.1 HoTT内核API",
+      "content": "```typescript // 类型检查 hottCheck(type: HoTTType): CheckResult",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_OS_USER_MANUAL.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "lgt_node_0029"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "3.2 自推演引擎API",
+      "content": "```typescript // 类比推理 analogyDeduce(query: string): Candidate[]",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_OS_USER_MANUAL.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lgt_node_0030"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "3.3 上同调计算器API",
+      "content": "```typescript // α计算 calcAlpha(pi: number): AlphaResult",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_OS_USER_MANUAL.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lgt_node_0031"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "四、数据库架构",
+      "content": "### 4.1 同构数据库 (ISO_DB)  ```typescript",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_OS_USER_MANUAL.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lgt_node_0032"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "4.1 同构数据库 (ISO_DB)",
+      "content": "```typescript interface IsoEntry {   id: string;         // \"iso-001\" ~ \"iso-240\"",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_OS_USER_MANUAL.md",
+      "dependencies": [
+        "iso-001",
+        "iso-240"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0033"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "4.2 公理数据库 (AXIOM_DB)",
+      "content": "```typescript interface AxiomEntry {   id: string;         // \"U0\" ~ \"U48\"",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_OS_USER_MANUAL.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lgt_node_0034"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "4.3 定理数据库 (THEOREM_DB)",
+      "content": "```typescript interface TheoremEntry {   id: string;         // \"T-001\" ~ \"T-1350+\"",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_OS_USER_MANUAL.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "lgt_node_0035"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "4.4 证明路径数据库 (PATH_DB)",
+      "content": "```typescript interface PathEntry {   id: string;         // \"path-001\" ~ \"path-260\"",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_OS_USER_MANUAL.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lgt_node_0036"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "五、开发者指南",
+      "content": "### 5.1 添加新同构  ```typescript",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_OS_USER_MANUAL.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lgt_node_0037"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "5.1 添加新同构",
+      "content": "```typescript // 在isomorphismDB.ts中添加 {",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_OS_USER_MANUAL.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0038"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "5.2 扩展自推演引擎",
+      "content": "```typescript // 在engine/deduction.ts中添加新启发式 function newHeuristic(query: string): Candidate {",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_OS_USER_MANUAL.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lgt_node_0039"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "5.3 添加新HoTT类型",
+      "content": "```typescript // 在hott_types.ts中添加 {",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_OS_USER_MANUAL.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "lgt_node_0040"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "六、故障排除",
+      "content": "| 问题 | 解决方案 | |------|---------| | 启动失败 | 刷新页面重试；检查浏览器兼容性 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_OS_USER_MANUAL.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lgt_node_0041"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "七、参考资源",
+      "content": "- **HoTT Book**: https://homotopytypetheory.org/book/ - **Lean 4 Documentation**: https://lean-lang.org/lean4/doc/ - **Cubical Type Theory**: https://github.com/mortberg/cubicaltt",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_OS_USER_MANUAL.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "lgt_node_0042"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "八、版本历史",
+      "content": "| 版本 | 日期 | 更新内容 | |------|------|---------| | v48.0 | 2026-05-14 | HoTT完整重构，240同构，OS自推演 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_OS_USER_MANUAL.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "lgt_node_0043"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "axiom",
+      "name": "公理: ua(f)\n3. 路径计算: coe(ua(f), a)\n4. 完成: (A≃B)≃(A=B",
+      "content": "公理: ua(f)\n3. 路径计算: coe(ua(f), a)\n4. 完成: (A≃B)≃(A=B)",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_OS_USER_MANUAL.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "lgt_node_0044"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "axiom",
+      "name": "axiom: (A≃B)≃(A=B) ✓ active\n[0.008s] HIT engine: S",
+      "content": "axiom: (A≃B)≃(A=B) ✓ active\n[0.008s] HIT engine: S¹, S², Pushout, Truncation ✓ loaded\n[0.012s] Loading 240 isomorphisms into knowledge graph...\n[0.050s] UCIF²-OS v48.0 boot complete. Welcome.\n```",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_OS_USER_MANUAL.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "lgt_node_0045"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 iso-240",
+      "content": "构\n\n### 4.1 同构数据库 (ISO_DB)\n\n```typescript\ninterface IsoEntry {\n  id: string;         // \"iso-001\" ~ \"iso-240\"\n  name: string;       // 同构名称\n  type: IsoType;      // equivalence/duality/bridge/implication/generalization\n  from: string;       // 源对象\n  to: string;         // 目标对象\n  formula: string;    /",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_OS_USER_MANUAL.md",
+      "dependencies": [
+        "iso-001",
+        "iso-240"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0046"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 iso-207",
+      "content": "小世界: L≈2.8, C≈0.65\n- Laplacian特征值谱\n\n### 2.8 自推演引擎\n\n输入数学命题，引擎自动推演：\n```\n输入: \"alpha rigidity\"\n输出: 匹配同构 iso-207 (α刚性定理)\n路径: J₃(𝕆) → iso-191 → α⁻¹ → iso-207 → 刚性定理\n置信度: 94.7%\n```\n\n### 2.9 上同调计算器\n\n三种计算模式：\n- **α计算**: 1/(4π³+π²+π) = 0.007297308...\n- **CY3体积**: 4π³·ℓₛ⁶\n- **周期映射**: per(J₃(𝕆))\n\n## 三、API参考\n\n###",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_OS_USER_MANUAL.md",
+      "dependencies": [
+        "iso-207",
+        "iso-191"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0047"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 iso-241",
+      "content": "ng;   // HoTT路径表达式\n}\n```\n\n## 五、开发者指南\n\n### 5.1 添加新同构\n\n```typescript\n// 在isomorphismDB.ts中添加\n{\n  id: 'iso-241',\n  name: 'New Isomorphism',\n  type: 'equivalence',\n  from: 'ObjectA',\n  to: 'ObjectB',\n  formula: 'A ≃ B',\n  proof: 'HoTT proof path',\n  hottProof: 'ua(e) : A = B',\n  hLevel: 2,\n  sources: ['",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_OS_USER_MANUAL.md",
+      "dependencies": [
+        "iso-241"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0048"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 iso-215",
+      "content": "| `univalence` |\n| `community` | 无 | 显示6大社区 | `community` |\n| `prove <id>` | 同构编号 | 尝试证明同构 | `prove iso-215` |\n| `reduce <expr>` | 表达式 | 自规约表达式 | `reduce alpha_inv` |\n| `status` | 无 | 系统状态 | `status` |\n| `clear` | 无 | 清屏 | `clear` |\n| `about` | 无 | 关于 | `about` |\n\n### 2.3 HoTT类型检查器\n\n选择10个HoTT核心类型之一，",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_OS_USER_MANUAL.md",
+      "dependencies": [
+        "iso-215"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0049"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 iso-191",
+      "content": "an特征值谱\n\n### 2.8 自推演引擎\n\n输入数学命题，引擎自动推演：\n```\n输入: \"alpha rigidity\"\n输出: 匹配同构 iso-207 (α刚性定理)\n路径: J₃(𝕆) → iso-191 → α⁻¹ → iso-207 → 刚性定理\n置信度: 94.7%\n```\n\n### 2.9 上同调计算器\n\n三种计算模式：\n- **α计算**: 1/(4π³+π²+π) = 0.007297308...\n- **CY3体积**: 4π³·ℓₛ⁶\n- **周期映射**: per(J₃(𝕆))\n\n## 三、API参考\n\n### 3.1 HoTT内核API\n\n```typescrip",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_OS_USER_MANUAL.md",
+      "dependencies": [
+        "iso-207",
+        "iso-191"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0050"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 iso-001",
+      "content": "|------|------|------|------|\n| `help` | 无 | 显示所有命令 | `help` |\n| `iso <id>` | iso编号 | 显示同构详情 | `iso iso-001` |\n| `alpha` | 无 | 计算精细结构常数 | `alpha` |\n| `hott` | 无 | 显示HoTT类型信息 | `hott` |\n| `univalence` | 无 | 运行Univalence计算 | `univalence` |\n| `community` | 无 | 显示6大社区 | `community` |\n| `prove <id>` | 同构",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_OS_USER_MANUAL.md",
+      "dependencies": [
+        "iso-001"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0051"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "VUF v30：同构范式严格证明大全",
+      "content": "## 总论：Ω^∞框架下的同构分类体系  本文档对UCIF²/v30体系中的**全部65+深层同构**给出严格证明。",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0052"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "总论：Ω^∞框架下的同构分类体系",
+      "content": "本文档对UCIF²/v30体系中的**全部65+深层同构**给出严格证明。  ---",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0053"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "第一部分：UCIF²核心同构（v0-v25）",
+      "content": "### ISO-001: CY↔Moonshine等价 **类型**: equivalence | **状态**: proven **公式**: χ(X) = -24 ⟺ c(V^♮) = 24",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0054"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-001: CY↔Moonshine等价",
+      "content": "**类型**: equivalence | **状态**: proven **公式**: χ(X) = -24 ⟺ c(V^♮) = 24 **证明**: (1) CICY58经计算χ=2(h^{1,1}-h^{2,1})=2(4-19)=-30...修正：χ=-24严格确认 (2) FLM定理c(V^♮)=24 (3) χ=-c(V^♮)数值对应揭示深层结构 **来源**: FLM 1988",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lgt_node_0055"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-002: V^orb ≅ V^♮",
+      "content": "**类型**: equivalence | **状态**: proven **公式**: φ=φ₁⊕φ₂: V^orb→V^♮ **证明**: (1) FLM唯一性四条件 (2) V^orb满足四条件：c(Ω^ch(ℂ²⁴/G))=24 (3) 显式同构φ保持VOA结构 **来源**: FLM 1988, v20审计",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lgt_node_0056"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-003: McKay↔Fukaya",
+      "content": "**类型**: equivalence | **状态**: proven **公式**: D^b_G(Coh ℂ²⁴) ≃ D^b(Coh Y) ≃ Fuk(T^*Y) **证明**: (1) BKR: D^b_G(Coh ℂⁿ)≃D^b(Coh Y)对G⊂SL(n) (2) HMS: D^b(Coh Y)≃Fuk(T^*Y) (3) 合成 **来源**: BKR 1999, Kontsevich 1994",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lgt_node_0057"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-004: π-p对偶",
+      "content": "**类型**: duality | **状态**: proven **公式**: χ(X_{CY})=-24=-c(V^♮) **证明**: 数值桥接+范畴论提升+物理实现三维对应 **来源**: v19-v24",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "lgt_node_0058"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "第二部分：六重统一（v24，7个）",
+      "content": "### ISO-005: 棱镜上同调↔晶体上同调 **类型**: equivalence | **状态**: proven **公式**: H^*_{prism}(X)=H^*(X/G_{Ω⁺})",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lgt_node_0059"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-005: 棱镜上同调↔晶体上同调",
+      "content": "**类型**: equivalence | **状态**: proven **公式**: H^*_{prism}(X)=H^*(X/G_{Ω⁺}) **证明**: Bhatt-Scholze prism-crystal↔crystal等价定理3.1 **来源**: Bhatt-Scholze 2019",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "lgt_node_0060"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-006: 椭圆上同调↔tmf",
+      "content": "**类型**: equivalence | **状态**: proven **公式**: Ell^*(pt)=J(τ)=MF_*(Γ_1)≅π_*(tmf) **证明**: Hopkins-Mahowald π_*(tmf)≅MF_* + Witten genus + J-同态 **来源**: Hopkins-Mahowald 1994",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "lgt_node_0061"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-007: 辛几何伴随",
+      "content": "**类型**: duality | **状态**: proven **公式**: Fuk(T^*Ω⁺) ≃ D^b(Coh) **证明**: HMS + Ω⁺的CY结构 **来源**: Kontsevich 1994, Seidel",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lgt_node_0062"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "第三部分：晶体提取（v23，5个）",
+      "content": "### ISO-008: Z¹⁵晶格↔晶体上同调 **类型**: equivalence | **状态**: proven **公式**: Z[ζ₁₅] ↔ H^*_{cryst}(Spec(Z[ζ₁₅])/W)",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lgt_node_0063"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-008: Z¹⁵晶格↔晶体上同调",
+      "content": "**类型**: equivalence | **状态**: proven **公式**: Z[ζ₁₅] ↔ H^*_{cryst}(Spec(Z[ζ₁₅])/W) **证明**: (1) ζ₁₅的极小多项式Φ₁₅=... (2) 晶体上同调计算 (3) 精确匹配 **来源**: v23审计",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lgt_node_0064"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "第四部分：VUF五大深层同构（v26，5个）",
+      "content": "### ISO-009: GMT↔算法信息论 **类型**: bridge | **状态**: proven **公式**: 熵变分原理 S=-∫ρlnρ + β(⟨E⟩-F) + γC(ρ) ⟺ 非互模拟/Σ₁^G-完备性",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0065"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-009: GMT↔算法信息论",
+      "content": "**类型**: bridge | **状态**: proven **公式**: 熵变分原理 S=-∫ρlnρ + β(⟨E⟩-F) + γC(ρ) ⟺ 非互模拟/Σ₁^G-完备性 **证明**: (1) GMT熵泛函的变分极值对应驯服结构 (2) 算法信息论中Kolmogorov复杂度K(x)度量随机性 (3) 对应：变分极小值 ⟺ 低Kolmogorov复杂度（驯服）/ 变分退化 ⟺ 高Kolmogorov复杂度（任意）(4) 非互模拟结果保证Σ₁^G-完备性 **来源**: v26",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lgt_node_0066"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-010: 面积最小化流↔神经网络",
+      "content": "**类型**: bridge | **状态**: proven **公式**: ∂A/∂t=-δA/δX ⟺ ∂W/∂t=-∂L/∂W **证明**: (1) 面积泛函A(X)=∫_Σ dA 的L²梯度流 = 平均曲率流 (2) 神经网络损失L(W)的梯度下降 = -∇_W L (3) 两者都是能量泛函的梯度流 (4) 不动点定理：两者都收敛到能量极小值 **来源**: v26",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lgt_node_0067"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-011: 蛋白质折叠↔几何反问题",
+      "content": "**类型**: bridge | **状态**: proven **公式**: min接触能量+max溶剂接触 ⟺ min Willmore能量+max对称性 **证明**: (1) 蛋白质接触图G=(V,E)的图论性质 (2) Gromov-Hausdorff距离比较蛋白质构象 (3) Willmore能量∫H²dA度量曲面光滑性 (4) 等谱不等谱流形结果保证重构的唯一性 **来源**: v26",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lgt_node_0068"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-012: 全息纠缠熵↔分形面积律",
+      "content": "**类型**: equivalence | **状态**: proven **公式**: S_A=min_γ Area(γ)/(4G_N) ⟺ A(R)∝R^d **证明**: (1) Ryu-Takayanagi公式：S_A=Area(γ_A)/4G_N (2) 分形面积律：A(R)=R^{d_f} (3) 比较得d_f = Area(γ_A)/4G_N lnR (4) Jordan曲线定理保证γ_A的存在性 (5) Renyi熵面积定律S_n(A)∝R^{d-2}验证 **来源**: v26",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lgt_node_0069"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-013: 最优传输↔度量编程",
+      "content": "**类型**: bridge | **状态**: proven **公式**: d_W^p(μ,ν)=(inf_{π∈Π}∫|x-y|^p dπ)^{1/p} ⟺ 从度量数据编程重构流形 **证明**: (1) Kantorovich对偶：d_W^p = sup_{φ,ψ} ∫φdμ+∫ψdν (2) Gromov-Wasserstein距离比较度量空间 (3) Earth Mover距离=度量编程的MetricScale步骤 (4) 测地线重构=Calibration步骤的comass条件 **来源**: v26",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lgt_node_0070"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "第五部分：刘臻化体系同构（v27，6个）",
+      "content": "### ISO-014: MCP↔Bohr互补性 **类型**: bridge | **状态**: proven **公式**: Hard∩Soft=∅ ⟺ Δx·Δp≥ℏ/2",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0071"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-014: MCP↔Bohr互补性",
+      "content": "**类型**: bridge | **状态**: proven **公式**: Hard∩Soft=∅ ⟺ Δx·Δp≥ℏ/2 **证明**: (1) MCP方法论对偶定理：Hard方法（blow-up提取局部信息）与Soft方法（gluing构造全局结构）不相交 (2) 信息论证明：局部信息提取与全局结构构造的信息不可同时精确获得 (3) 类似Bohr互补性：波粒二象性的信息论解释 (4) 因此ΔI_local·ΔI_global≥常数 **来源**: 刘臻化 2021/2025",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lgt_node_0072"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-015: SSO↔计算复杂性",
+      "content": "**类型**: bridge | **状态**: proven **公式**: C^∞↔RE / C^ω↔P **证明**: (1) C^∞层级：任意结构，奇异性判定不可计算（类似停机问题）→ 对应RE（递归可枚举）(2) C^ω层级：驯服结构，奇异性判定可计算（亚纯函数零点）→ 对应P（多项式时间）(3) Condensed mathematics框架提供严格证明路径 **来源**: 刘臻化 2021/2025, Clausen-Scholze",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lgt_node_0073"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-016: PCT↔o-minimal理论",
+      "content": "**类型**: bridge | **状态**: proven **公式**: F(P)=K∩o-minimal(𝒮) ⟺ o-minimal有限分歧性 **证明**: (1) Miller对应定理：o-minimal结构𝒮(ℝ_an)的有限分歧性 (2) PCT保护性条件保证驯服拓扑 (3) 对应：保护性条件P ⟺ o-minimal结构𝒮的有限分歧性 (4) 因此驯服拓扑=o-minimal拓扑 **来源**: 刘臻化 2021/2025, Miller",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lgt_node_0074"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-017: GIEP↔可计算性理论",
+      "content": "**类型**: bridge | **状态**: proven **公式**: dim(K)≤m-2 ⟺ GMT-TM可计算（停机） **证明**: (1) CritDim定理：dim(K)≤m-2保证Nash-Moser隐函数定理适用 (2) Nash-Moser迭代正则性保证停机 (3) GMT-TM五状态：正则→奇异→分支→修复→停机 (4) 停机性=刘臻化定理的构造性保证 **来源**: 刘臻化 2021/2025",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0075"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-018: 软度σ(𝒰)↔SSO光滑性",
+      "content": "**类型**: equivalence | **状态**: proven **公式**: σ(𝒰)=(1+|dℐ/∂𝒢|²)⁻¹ ⟺ Φ(C^∞)=K_all, Φ(Alg)=K_alg **证明**: (1) 精确对应：σ=0⟺C^∞（任意结构/最软）(2) σ=0.5⟺C^ω/G^s（中间）(3) σ=1⟺Alg（驯服/最硬）(4) 连续过渡：motivic权重建立Φ(G^s)精确描述 **来源**: v27, 刘臻化 2021/2025",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lgt_node_0076"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-019: VEP↔VGE",
+      "content": "**类型**: equivalence | **状态**: proven **公式**: IGV-MTT(𝒰)=I×G×V×M ⟺ VGE=IGV+MTT+3算法 **证明**: (1) VEP的4范畴框架（SSO/PCT/MCP/GIEP）(2) VGE的5公理+8定理+3算法 (3) 体系等价性：4范畴 ↔ 5公理系统 (4) MTT模板提供统一操作手册 **来源**: v27",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "lgt_node_0077"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "第六部分：多线程同构（v28，11个）",
+      "content": "### ISO-020: Motivic Homotopy↔GMT变分原理 **类型**: bridge | **状态**: proven **公式**: H^{mot}(X)≅H^{mot}(Y) ∀A^1-weak等价 ⟺ W(λM)=λ^{-24}W(M)",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0078"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-020: Motivic Homotopy↔GMT变分原理",
+      "content": "**类型**: bridge | **状态**: proven **公式**: H^{mot}(X)≅H^{mot}(Y) ∀A^1-weak等价 ⟺ W(λM)=λ^{-24}W(M) **证明**: (1) Voevodsky-Morel：A^1同伦不变性H^{mot}在同伦等价下不变 (2) GMT变分原理：W(M)=∫_M (|∇u|²/2 + V(u))dvol 的尺度变换W(λM)=λ^{-24}W(M) (3) 两者都满足尺度不变性 (4) motivic提升保持变分结构 **来源**: v28, Voevodsky 1998",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lgt_node_0079"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-021: Condensed Math↔o-minimal驯服",
+      "content": "**类型**: bridge | **状态**: proven **公式**: Cond_Tame(𝒮)={X∈Cond(Set)|X(𝒮)有限分歧} ⟺ o-minimal有限性 **证明**: (1) Clausen-Scholze凝聚数学：Cond(Set)中的驯服凝聚空间 (2) o-minimal结构的有限分歧性 (3) 凝聚化函子保持驯服性 (4) 因此Cond_Tame = o-minimal的凝聚化 **来源**: v28, Clausen-Scholze 2019",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lgt_node_0080"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-022: Derived Alg Geo↔SSO-Cat",
+      "content": "**类型**: bridge | **状态**: proven **公式**: D^b_{coh}(X)光滑 ⟺ C^ω层级 **证明**: (1) Toën-Vezzosi导出代数几何：D^b_{coh}(X)的导出光滑性 (2) 刘臻化SSO光滑性谱系：C^∞/C^ω/Alg (3) 导出光滑性精确对应C^ω层级（驯服但非代数）(4) motivic权重建立精确描述 **来源**: v28, Toën-Vezzosi",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lgt_node_0081"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-023: Perfectoid↔p-adic Moonshine",
+      "content": "**类型**: bridge | **状态**: proven **公式**: Monster_{ℤ_p}=lim←Monster_{ℤ/p^n} ⟺ Perfectoid对称性 **证明**: (1) Scholze完美空间理论：Perfectoid_{ℚ_p}的对称性 (2) Carnahan p-adic月光猜想：Monster_{ℤ_p}的完美提升 (3) 完美提升存在性=Monster的p-adic实现 (4) 因此Perfectoid对称性 ⟺ p-adic Moonshine **来源**: v28, Scholze 2012, Carnahan",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lgt_node_0082"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-024: Factorization Alg↔全息EE",
+      "content": "**类型**: bridge | **状态**: proven **公式**: Obs(U)=因子化代数on U ⟺ S_A=Area(γ_A)/4G_N **证明**: (1) Costello-Gwilliam：因子化代数的表示论 (2) Ryu-Takayanagi：S_A=Area(γ_A)/4G_N (3) 因子化代数在子区域U上的限制 ⟺ RT公式的区域分解 (4) 因此纠缠熵=因子化代数的表示论不变量 **来源**: v28, Costello-Gwilliam 2017",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0083"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-025: SYK↔认识论相变",
+      "content": "**类型**: bridge | **状态**: proven **公式**: T_c=J/(4π) ⟺ σ_c=0.5 **证明**: (1) SYK模型：N个Majorana费米子随机耦合 (2) 纠缠熵S_A(T)在T_c处相变 (3) VUF软度指数σ(𝒰)=(1+|dℐ/∂𝒢|²)⁻¹ (4) 在σ_c=0.5处从任意结构到驯服结构的跃迁 (5) 精确对应：T_c=J/(4π) ⟺ σ_c=0.5 **来源**: v28, Kitaev 2015",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lgt_node_0084"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-026: dS/CFT↔软度指数",
+      "content": "**类型**: bridge | **状态**: proven **公式**: S_{dS}=A/4G_N+S_{bulk} ⟺ σ(𝒰) **证明**: (1) dS/CFT熵公式 (2) VUF软度指数 (3) S_{dS}/S_{max}=σ(𝒰)数值对应 (4) 物理常数精确对应完成 **来源**: v28",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lgt_node_0085"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-027: DeepSeek-Prover↔MethodologySelector",
+      "content": "**类型**: bridge | **状态**: proven **公式**: AI自动定理证明 ⟺ Hard/Soft自动选择 **证明**: (1) DeepSeek-Prover-V2：AI自动定理证明 (2) MTT元理论模板：MethodologySelector算法 (3) AI可自动判定Hard/Soft (4) 自动选择证明策略 **来源**: v28",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lgt_node_0086"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-028: 量子图灵机↔GMT-TM",
+      "content": "**类型**: bridge | **状态**: proven **公式**: QTM(state,|ψ⟩) ⟺ GMT-TM五状态 **证明**: (1) QTM量子并行性 (2) GMT-TM五状态：正则/奇异/分支/修复/停机 (3) 量子并行 ⟹ Nash-Moser迭代指数加速 (4) 停机性保持 **来源**: v28",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lgt_node_0087"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-029: Kuhn范式↔认识论相变",
+      "content": "**类型**: bridge | **状态**: proven **公式**: 科学革命 ⟺ σ(𝒰)=0.5非连续跃迁 **证明**: (1) Kuhn《科学革命的结构》：范式转换=不可通约性 (2) VUF认识论相变：σ=0.5处从任意到驯服的跃迁 (3) 范式转换=认识论相变的科学哲学实例 **来源**: v28, Kuhn 1962",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lgt_node_0088"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-030: QEC增强↔VUF保护性",
+      "content": "**类型**: bridge | **状态**: proven **公式**: [[194,8,≥43]] ⟺ VUF保护性条件 **证明**: (1) VUF预测3：保护性条件 ⟹ 量子码增强 (2) [[194,8,≥43]]显式构造 (3) 验证完成 **来源**: v28",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lgt_node_0089"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "第七部分：全面理论升级（v29，15个）",
+      "content": "### ISO-031: IUT↔GMT变分原理 **类型**: bridge | **状态**: proven **公式**: Frobenius提升(λS,λC,λψ) ⟺ Nash-Moser迭代(U_n,ρ_n)",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lgt_node_0090"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-031: IUT↔GMT变分原理",
+      "content": "**类型**: bridge | **状态**: proven **公式**: Frobenius提升(λS,λC,λψ) ⟺ Nash-Moser迭代(U_n,ρ_n) **证明**: (1) Mochizuki IUT：Teichmüller变形保持算术结构 (2) Frobenius提升：(λS,λC,λψ)_{λ∈ℝ⁺} (3) GMT变分原理：W(λM)=λ^{-24}W(M) (4) Nash-Moser迭代正则性 (5) 两者都满足尺度不变性+正则性保持 **来源**: v29, Mochizuki 2012-2021",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lgt_node_0091"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-032: Anabelian Geo↔SSO-Cat",
+      "content": "**类型**: bridge | **状态**: proven **公式**: π₁完全忠实 ⟺ Φ(C^ω)=K_subanalytic **证明**: (1) Mochizuki：π₁对p-adic双曲曲线完全忠实 (2) 刘臻化SSO反变函子Φ(C^ω)=K_subanalytic (3) Anabelian重建=光滑性分类 (4) 因此Anabelian Geo ↔ SSO-Cat **来源**: v29, Mochizuki 1995-2021",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "lgt_node_0092"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-033: Higher Topos↔MCP-Cat",
+      "content": "**类型**: bridge | **状态**: proven **公式**: ∞-余极限colimᵢ Xᵢ ⟺ Hard⊔Soft=Q **证明**: (1) Lurie HTT：∞-余极限=局部信息 glued 全局结构 (2) MCP-Cat：Hard(局部)⊔Soft(全局)=Q (3) ∞-topos = MCP的∞-提升 **来源**: v29, Lurie 2009",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lgt_node_0093"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-034: TC/THH↔椭圆上同调",
+      "content": "**类型**: bridge | **状态**: proven **公式**: TC(X;p)=THH(X)^{hS¹} ⟺ Ell^*(pt)=J(τ) **证明**: (1) Dundas-Goodwillie-McCarthy：TC↔代数K理论 (2) tmf的χ=-24 (3) TC/THH = 椭圆上同调的特征p实现 **来源**: v29, DGM 2013",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lgt_node_0094"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-035: Derived Geo↔VUF保护性",
+      "content": "**类型**: bridge | **状态**: proven **公式**: D^b_{coh}(X)光滑 ⟺ Ext^i(𝒪_X,𝒪_X)=0 ∀i>dim X **证明**: (1) Toën-Vezzosi导出光滑性 (2) VUF保护性条件 (3) 导出保护性=同调稳定性 **来源**: v29",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lgt_node_0095"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-036: ∞-Cat↔GIEP-Cat",
+      "content": "**类型**: bridge | **状态**: proven **公式**: h_X可表示 ⟺ ∀K ∃(M,g,T) **证明**: (1) Lurie可表示性定理 (2) 刘臻化完全可设计性 (3) ∞-范畴可表示性=GIEP的∞-提升 **来源**: v29, Lurie 2009",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "lgt_node_0096"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-037: Causal Set↔VUF边界因果",
+      "content": "**类型**: bridge | **状态**: proven **公式**: x≺y ⟺ ∂𝒰因果关系 **证明**: (1) Dowker-Sorkin：Causal Set ⟹ 连续时空涌现 (2) VUF A6：边界因果公理 (3) 离散因果=边界条件 **来源**: v29, Dowker-Sorkin 2024",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "lgt_node_0097"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-038: abc↔算术曲率",
+      "content": "**类型**: bridge | **状态**: proven **公式**: c<C(ε)·rad(abc)^{1+ε} ⟺ κ_{arith}=log(c)/log(rad(abc)) **证明**: (1) Mochizuki IUT证明abc (2) Joshi规范形式化 (3) 算术曲率κ_{arith}有上界 ⟹ abc成立 **来源**: v29, Mochizuki 2012, Joshi 2025",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lgt_node_0098"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-039: Perfectoid↔dS/CFT",
+      "content": "**类型**: bridge | **状态**: proven **公式**: Perfectoid_{ℚ_p} ⟹ Monster_{ℤ_p} ⟹ S_{dS}=A/4G_N **证明**: (1) Scholze Perfectoid (2) Carnahan p-adic Moonshine (3) dS/CFT的p-adic实现 **来源**: v29",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lgt_node_0099"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-040: String Theory↔VUF弦紧化",
+      "content": "**类型**: bridge | **状态**: proven **公式**: 24维CY紧化 ⟺ VUF变分原理 **证明**: (1) 弦论24维CY紧化 (2) VUF χ=-24 (3) 弦紧化=VUF变分原理的物理实现 **来源**: v29",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lgt_node_0100"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-041: LQG↔认识论相变",
+      "content": "**类型**: bridge | **状态**: proven **公式**: T_c=T_{Planck} ⟺ σ_c=0.5 **证明**: (1) LQG面积谱A=8πγ√(j(j+1))ℓ_P² (2) VUF σ(𝒰) (3) Planck尺度相变=认识论相变 **来源**: v29",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0101"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-042: Lean4↔MTT形式化",
+      "content": "**类型**: bridge | **状态**: proven **公式**: 735定理/60公理/0sorry ⟺ MTT完全形式化 **证明**: (1) Lean4形式化：735定理 (2) MTT元理论模板 (3) MTT可完全形式化 **来源**: v29",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0102"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-043: 量子计算↔GMT-TM",
+      "content": "**类型**: bridge | **状态**: proven **公式**: QTM并行 ⟺ GMT-TM五状态 **证明**: (1) QTM量子并行性 (2) GMT-TM (3) 量子并行 ⟹ Nash-Moser加速 **来源**: v29",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "lgt_node_0103"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-044: IUT↔范式转换",
+      "content": "**类型**: bridge | **状态**: proven **公式**: 跨宇宙Teichmüller变形 ⟺ Kuhn不可通约性 **证明**: (1) IUT跨宇宙变形 (2) 不同\"宇宙\"间算术结构不同 (3) = Kuhn不可通约性的数学实现 **来源**: v29, Kuhn 1962",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lgt_node_0104"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-045: Causal Set↔因果决定论",
+      "content": "**类型**: bridge | **状态**: proven **公式**: x≺y ⟺ 物理世界根本因果性 **证明**: (1) Causal Set (2) VUF边界因果 (3) 因果决定论的数学基础 **来源**: v29",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lgt_node_0105"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "第八部分：v30新拓展同构（20个）",
+      "content": "### ISO-046: GW↔Donaldson-Thomas（MNOP猜想） **类型**: equivalence | **状态**: proven **公式**: Z_{GW}(X;q,Q) = M(q)^{χ(X)} · Z_{DT}(X;q,Q)",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0106"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-046: GW↔Donaldson-Thomas（MNOP猜想）",
+      "content": "**类型**: equivalence | **状态**: proven **公式**: Z_{GW}(X;q,Q) = M(q)^{χ(X)} · Z_{DT}(X;q,Q) **证明**: (1) Maulik-Nekrasov-Okounkov-Pandharipande对toric CY 3-fold证明MNOP猜想 (2) Behrend加权欧拉示性数e_B(M) = ∫_M ν_M de (3) 壁交叉公式保证GW/DT在稳定条件变化下的不变性 (4) 因此Z_{GW}=Z_{DT}对合适稳定条件 **来源**: MNOP 2004, Behrend 2009",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lgt_node_0107"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-047: 镜像对称↔Remodeling Conjecture（BKMP）",
+      "content": "**类型**: equivalence | **状态**: proven **公式**: F_g^{GW}(X) = ∫_{ℬ_g} ω^{3g-3}_{Eynard-Orantin} **证明**: (1) Bouchard-Klemm-Marino-Pasquetti证明toric CY的BKMP猜想 (2) Eynard-Orantin拓扑递推计算F_g (3) Givental量子化公式匹配两边 (4) 因此镜像对称=Remodeling Conjecture的特例 **来源**: BKMP 2008, Eynard-Orantin 2007",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lgt_node_0108"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-048: 全息张量网络（HaPPY Code）↔AdS/CFT",
+      "content": "**类型**: equivalence | **状态**: proven **公式**: [[k,1,ℓ]]完美张量码 ⟺ RT公式S_A=Area(γ_A)/4G_N **证明**: (1) Pastawski-Yoshida-Harlow-Preskill：HaPPY code从完美张量构造 (2) 张量网络的几何 ⟺ AdS空间的离散化 (3) 极小割=RT曲面 (4) 因此量子纠错码 ⟺ 全息对偶 **来源**: HaPPY 2015",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lgt_node_0109"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-049: Cobordism Hypothesis（Lurie）↔TQFT分类",
+      "content": "**类型**: equivalence | **状态**: proven **公式**: Bord_n^{fr} ≃ (Cat_∞)^{id} 的∞-群对象 **证明**: (1) Lurie证明Cobordism Hypothesis：n维framed TQFT ≅ Bord_n^{fr}→Cat_∞的完全扩展 (2) 对称单子∞-范畴的群完备 (3) 因此n维TQFT = ∞-范畴的群对象 (4) 分类所有TQFT **来源**: Lurie 2009",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "lgt_node_0110"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-050: Factorization Homology（Ayala-Francis）↔因子化代数",
+      "content": "**类型**: equivalence | **状态**: proven **公式**: ∫_M A ≃ Γ(M,Fact(A)) 对n维流形M **证明**: (1) Ayala-Francis：factorization homology ∫_M A 定义 (2) 与因子化代数Fact(A)的全局截面等价 (3) 对n维流形M，∫_M A ≃ Γ(M,Fact(A)) (4) 因此factorization homology = 因子化代数的全局不变量 **来源**: Ayala-Francis 2015",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lgt_node_0111"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-051: KPZ普适性↔随机矩阵（Tracy-Widom）",
+      "content": "**类型**: equivalence | **状态**: proven **公式**: h(x,t) ~ (γt)^{1/3} F_{TW2}(γ^{-2/3}(x-νt)/(γt)^{1/3}) **证明**: (1) Kardar-Parisi-Zhang方程 ∂_t h = ν∂_x²h + (λ/2)(∂_x h)² + √D η (2) Tracy-Widom分布F_{TW2} = GOE的极大特征值分布 (3) Amir-Corwin-Quastel证明KPZ的波动=Tracy-Widom (4) 因此KPZ普适类 ⟺ Tracy-Widom分布 **来源**: Amir-Cor",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lgt_node_0112"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-052: 代数K理论↔拓扑循环同调（DGM）",
+      "content": "**类型**: equivalence | **状态**: proven **公式**: K(A) ≃ TC(A) 对connective环谱A（p-adic意义下） **证明**: (1) Dundas-Goodwillie-McCarthy定理：K(A)^∧_p ≃ TC(A)^∧_p (2) Goodwillie微积分：K理论是THH的导数 (3) TC = THH^{hS¹}的圆群不变量 (4) 因此K(A) ≃ TC(A) p-adic等价 **来源**: DGM 2013",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0113"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-053: LDPC码↔Shannon极限",
+      "content": "**类型**: equivalence | **状态**: proven **公式**: C = 1-H(p) 可达（信道容量） **证明**: (1) Gallager LDPC码 (2) Richardson-Urbanke密度进化 (3) BP解码可达Shannon极限 (4) 因此LDPC码 ⟺ 信道容量 **来源**: Gallager 1963, Richardson-Urbanke 2001",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lgt_node_0114"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-054: 极化码↔互信息",
+      "content": "**类型**: equivalence | **状态**: proven **公式**: I(W_N^{(i)}) → 0或1（当N→∞时） **证明**: (1) Arikan信道极化 (2) Bhattacharyya参数Z(W_N^{(i)})→0或1 (3) 成功信道数→N·I(W) (4) 因此极化码 ⟺ 互信息完全极化 **来源**: Arikan 2009",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lgt_node_0115"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-055: Ricci流奇点↔GMT奇点结构",
+      "content": "**类型**: bridge | **状态**: proven **公式**: Ricci流奇点模型 ⟺ GMT面积泛函的奇异性 **证明**: (1) Perelman Ricci流：奇点有canonical neighborhood定理 (2) GMT面积泛函A(X)=∫_Σ dA的奇异性 (3) Hamilton的singularity models对应GMT的singular varifolds (4) 因此Ricci流奇点 ⟺ GMT奇点结构 **来源**: Perelman 2002-2003",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0116"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-056: 神经正切核（NTK）↔核方法",
+      "content": "**类型**: equivalence | **状态**: proven **公式**: Θ(x,x') = E_{θ~init}[⟨∇_θ f(x;θ), ∇_θ f(x';θ)⟩] **证明**: (1) Jacot-Gabriel-Hongler：无限宽神经网络在训练中的NTK不变 (2) NTK⟺高斯过程的核函数 (3) 梯度下降=核梯度流 (4) 因此无限宽NN ⟺ 核方法 **来源**: Jacot-Gabriel-Hongler 2018",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lgt_node_0117"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-057: Transformer↔注意力图（范畴论视角）",
+      "content": "**类型**: bridge | **状态**: proven **公式**: Attention(Q,K,V) = softmax(QK^T/√d_k)V ⟺ 幂等自函子的分配律 **证明**: (1) 注意力机制 = query-key-value的三元组映射 (2) softmax = 概率分布的Gibbs测度 (3) 在范畴论中，注意力 = 幂等自函子（投影算子）的分配律 (4) 因此Transformer ⟺ 幂等自函子的范畴论实现 **来源**: v30, 原创",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "lgt_node_0118"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-058: It from Qubit（Van Raamsdonk）↔全息对偶",
+      "content": "**类型**: bridge | **状态**: proven **公式**: ER=EPR ⟺ S_A=Area(γ_A)/4G_N **证明**: (1) Van Raamsdonk：时空几何从量子纠缠涌现 (2) ER=EPR：虫桥=纠缠 (3) RT公式：S_A=Area(γ_A)/4G_N (4) 因此时空几何 ⟺ 量子纠缠 ⟺ 全息对偶 **来源**: Van Raamsdonk 2010, Maldacena-Susskind 2013",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lgt_node_0119"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-059: 几何Langlands（Arinkin-Gaitsgory）↔∞-范畴等价",
+      "content": "**类型**: equivalence | **状态**: proven **公式**: D-mod(Bun_G(X)) ≃ QCoh(Loc_{G^∨}(X)) **证明**: (1) Arinkin-Gaitsgory证明de Rham几何Langlands猜想的best hope版本 (2) D-mod(Bun_G)的∞-范畴 (3) QCoh(Loc_{G^∨})的∞-范畴 (4) ∞-范畴等价 ⟺ 几何Langlands纲领 **来源**: Arinkin-Gaitsgory 2015",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "lgt_node_0120"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-060: Witten Genus↔椭圆亏格↔tmf",
+      "content": "**类型**: equivalence | **状态**: proven **公式**: W(M) = ⟨∏_i x_i/θ(x_i,τ), [M]⟩ ∈ π_*(tmf) **证明**: (1) Witten亏格：弦流形的指标定理 (2) Ochanine椭圆亏格：spin流形的细化 (3) Hopkins：椭圆亏格的提升到tmf (4) 因此Witten Genus ⟺ 椭圆亏格 ⟺ tmf **来源**: Witten 1987, Hopkins 2002",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lgt_node_0121"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-061: Arithmetic Geometry（Mordell-Weil）↔Anabelian纲领",
+      "content": "**类型**: bridge | **状态**: proven **公式**: E(ℚ) ≅ ℤ^r ⊕ E(ℚ)_{tors} ⟺ π₁(X)的arithmetic信息 **证明**: (1) Mordell-Weil定理：椭圆曲线E/ℚ的有理点群有限生成 (2) Anabelian纲领：从π₁(X)重建X的算术信息 (3) 因此Mordell-Weil群 ⟺ π₁的算术信息 **来源**: Mordell 1922, Weil 1929, Grothendieck 1983",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lgt_node_0122"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-062: Homological Mirror Symmetry↔SYZ猜想",
+      "content": "**类型**: equivalence | **状态**: proven **公式**: D^b(Coh X) ≃ Fuk(Y) ⟺ X和Y对偶Lagrange环面纤维化 **证明**: (1) Kontsevich HMS猜想 (2) Strominger-Yau-Zaslow：镜像对偶=对偶Lagrange环面纤维化 (3) 对toric CY，SYZ fibrations存在 (4) 因此HMS ⟺ SYZ对偶环面纤维化 **来源**: Kontsevich 1994, SYZ 1996",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0123"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-063: Conformal Field Theory↔Vertex Operator Algebra",
+      "content": "**类型**: equivalence | **状态**: proven **公式**: CFT的chiral代数 ⟺ VOA的vertex operator **证明**: (1) CFT的operator product expansion (2) VOA的vertex operator Y(u,z)v (3) OPE ↔ vertex operator的对应 (4) 因此CFT ⟺ VOA **来源**: Frenkel-Lepowsky-Meurman 1988",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lgt_node_0124"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-064: Topological K-Theory↔Clifford代数",
+      "content": "**类型**: equivalence | **状态**: proven **公式**: KO^{-n}(pt) ≅ Cliff_n的Grothendieck群 **证明**: (1) Atiyah-Bott-Shapiro周期性 (2) KO^{-n}(pt) = π_n(O) (3) Cliff_n的模的Grothendieck群 (4) 因此拓扑K理论 ⟺ Clifford代数 **来源**: Atiyah-Bott-Shapiro 1964",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lgt_node_0125"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "ISO-065: Quantum Groups↔Knot Invariants",
+      "content": "**类型**: equivalence | **状态**: proven **公式**: U_q(sl_2)的表示 ⟺ Jones多项式 **证明**: (1) Drinfeld-Jimbo量子群U_q(sl_2) (2) Reshetikhin-Turaev：U_q(g)的表示范畴 ⟺ 3维TQFT ⟺ 纽结不变量 (3) Jones多项式 = U_q(sl_2)的Reshetikhin-Turaev不变量 (4) 因此量子群 ⟺ 纽结不变量 **来源**: Reshetikhin-Turaev 1991",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "lgt_node_0126"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "附录：同构统计",
+      "content": "| 类型 | 数量 | 证明方法 | |------|------|---------| | equivalence (≃) | 25 | 范畴等价/精确对应 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0127"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "theorem",
+      "name": "定理：两者都收敛到能量极小值\n**来源**: v26",
+      "content": "定理：两者都收敛到能量极小值\n**来源**: v26",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "LL",
+      "node_id": "lgt_node_0128"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "theorem",
+      "name": "定理：Hard方法（blow-up提取局部信息）与Soft方法（gluing构造全局结构）不相交 (",
+      "content": "定理：Hard方法（blow-up提取局部信息）与Soft方法（gluing构造全局结构）不相交 (2) 信息论证明：局部信息提取与全局结构构造的信息不可同时精确获得 (3) 类似Bohr互补性：波粒二象性的信息论解释 (4) 因此ΔI_local·ΔI_global≥常数\n**来源**: 刘臻化 2021/2025",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "LL",
+      "node_id": "lgt_node_0129"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "theorem",
+      "name": "定理：o-minimal结构𝒮(ℝ_an)的有限分歧性 (2) PCT保护性条件保证驯服拓扑 (3)",
+      "content": "定理：o-minimal结构𝒮(ℝ_an)的有限分歧性 (2) PCT保护性条件保证驯服拓扑 (3) 对应：保护性条件P ⟺ o-minimal结构𝒮的有限分歧性 (4) 因此驯服拓扑=o-minimal拓扑\n**来源**: 刘臻化 2021/2025, Miller",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0130"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "theorem",
+      "name": "定理：dim(K)≤m-2保证Nash-Moser隐函数定理适用 (2) Nash-Moser迭代正",
+      "content": "定理：dim(K)≤m-2保证Nash-Moser隐函数定理适用 (2) Nash-Moser迭代正则性保证停机 (3) GMT-TM五状态：正则→奇异→分支→修复→停机 (4) 停机性=刘臻化定理的构造性保证\n**来源**: 刘臻化 2021/2025",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "lgt_node_0131"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "theorem",
+      "name": "定理：K(A)^∧_p ≃ TC(A)^∧_p (2) Goodwillie微积分：K理论是THH的",
+      "content": "定理：K(A)^∧_p ≃ TC(A)^∧_p (2) Goodwillie微积分：K理论是THH的导数 (3) TC = THH^{hS¹}的圆群不变量 (4) 因此K(A) ≃ TC(A) p-adic等价\n**来源**: DGM 2013",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0132"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "theorem",
+      "name": "定理：椭圆曲线E/ℚ的有理点群有限生成 (2) Anabelian纲领：从π₁(X)重建X的算术信息",
+      "content": "定理：椭圆曲线E/ℚ的有理点群有限生成 (2) Anabelian纲领：从π₁(X)重建X的算术信息 (3) 因此Mordell-Weil群 ⟺ π₁的算术信息\n**来源**: Mordell 1922, Weil 1929, Grothendieck 1983",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "lgt_node_0133"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-023",
+      "content": "臻化SSO光滑性谱系：C^∞/C^ω/Alg (3) 导出光滑性精确对应C^ω层级（驯服但非代数）(4) motivic权重建立精确描述\n**来源**: v28, Toën-Vezzosi\n\n### ISO-023: Perfectoid↔p-adic Moonshine\n**类型**: bridge | **状态**: proven\n**公式**: Monster_{ℤ_p}=lim←Monster_{ℤ/p^n} ⟺ Perfectoid对称性\n**证明**: (1) Scholze完美空间理论：Perfectoid_{ℚ_p}的对称性 (2) Carnahan p-adic月光猜想：Mo",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0134"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-032",
+      "content": "原理：W(λM)=λ^{-24}W(M) (4) Nash-Moser迭代正则性 (5) 两者都满足尺度不变性+正则性保持\n**来源**: v29, Mochizuki 2012-2021\n\n### ISO-032: Anabelian Geo↔SSO-Cat\n**类型**: bridge | **状态**: proven\n**公式**: π₁完全忠实 ⟺ Φ(C^ω)=K_subanalytic\n**证明**: (1) Mochizuki：π₁对p-adic双曲曲线完全忠实 (2) 刘臻化SSO反变函子Φ(C^ω)=K_subanalytic (3) Anabelian重建=光滑性分类 (4",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0135"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-008",
+      "content": "⁺) ≃ D^b(Coh)\n**证明**: HMS + Ω⁺的CY结构\n**来源**: Kontsevich 1994, Seidel\n\n---\n\n## 第三部分：晶体提取（v23，5个）\n\n### ISO-008: Z¹⁵晶格↔晶体上同调\n**类型**: equivalence | **状态**: proven\n**公式**: Z[ζ₁₅] ↔ H^*_{cryst}(Spec(Z[ζ₁₅])/W)\n**证明**: (1) ζ₁₅的极小多项式Φ₁₅=... (2) 晶体上同调计算 (3) 精确匹配\n**来源**: v23审计\n\n---\n\n## 第四部分：VUF五大深层同构（v26，5个）\n\n",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0136"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-012",
+      "content": "论性质 (2) Gromov-Hausdorff距离比较蛋白质构象 (3) Willmore能量∫H²dA度量曲面光滑性 (4) 等谱不等谱流形结果保证重构的唯一性\n**来源**: v26\n\n### ISO-012: 全息纠缠熵↔分形面积律\n**类型**: equivalence | **状态**: proven\n**公式**: S_A=min_γ Area(γ)/(4G_N) ⟺ A(R)∝R^d\n**证明**: (1) Ryu-Takayanagi公式：S_A=Area(γ_A)/4G_N (2) 分形面积律：A(R)=R^{d_f} (3) 比较得d_f = Area(γ_A)/4G_N",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0137"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-002",
+      "content": "^{2,1})=2(4-19)=-30...修正：χ=-24严格确认 (2) FLM定理c(V^♮)=24 (3) χ=-c(V^♮)数值对应揭示深层结构\n**来源**: FLM 1988\n\n### ISO-002: V^orb ≅ V^♮\n**类型**: equivalence | **状态**: proven\n**公式**: φ=φ₁⊕φ₂: V^orb→V^♮\n**证明**: (1) FLM唯一性四条件 (2) V^orb满足四条件：c(Ω^ch(ℂ²⁴/G))=24 (3) 显式同构φ保持VOA结构\n**来源**: FLM 1988, v20审计\n\n### ISO-003: McKay",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0138"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-016",
+      "content": "（亚纯函数零点）→ 对应P（多项式时间）(3) Condensed mathematics框架提供严格证明路径\n**来源**: 刘臻化 2021/2025, Clausen-Scholze\n\n### ISO-016: PCT↔o-minimal理论\n**类型**: bridge | **状态**: proven\n**公式**: F(P)=K∩o-minimal(𝒮) ⟺ o-minimal有限分歧性\n**证明**: (1) Miller对应定理：o-minimal结构𝒮(ℝ_an)的有限分歧性 (2) PCT保护性条件保证驯服拓扑 (3) 对应：保护性条件P ⟺ o-minimal结构𝒮的有限",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0139"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-031",
+      "content": " VUF预测3：保护性条件 ⟹ 量子码增强 (2) [[194,8,≥43]]显式构造 (3) 验证完成\n**来源**: v28\n\n---\n\n## 第七部分：全面理论升级（v29，15个）\n\n### ISO-031: IUT↔GMT变分原理\n**类型**: bridge | **状态**: proven\n**公式**: Frobenius提升(λS,λC,λψ) ⟺ Nash-Moser迭代(U_n,ρ_n)\n**证明**: (1) Mochizuki IUT：Teichmüller变形保持算术结构 (2) Frobenius提升：(λS,λC,λψ)_{λ∈ℝ⁺} (3) GMT变分原理：W",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0140"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-028",
+      "content": "r-V2：AI自动定理证明 (2) MTT元理论模板：MethodologySelector算法 (3) AI可自动判定Hard/Soft (4) 自动选择证明策略\n**来源**: v28\n\n### ISO-028: 量子图灵机↔GMT-TM\n**类型**: bridge | **状态**: proven\n**公式**: QTM(state,|ψ⟩) ⟺ GMT-TM五状态\n**证明**: (1) QTM量子并行性 (2) GMT-TM五状态：正则/奇异/分支/修复/停机 (3) 量子并行 ⟹ Nash-Moser迭代指数加速 (4) 停机性保持\n**来源**: v28\n\n### ISO-02",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0141"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-040",
+      "content": "N\n**证明**: (1) Scholze Perfectoid (2) Carnahan p-adic Moonshine (3) dS/CFT的p-adic实现\n**来源**: v29\n\n### ISO-040: String Theory↔VUF弦紧化\n**类型**: bridge | **状态**: proven\n**公式**: 24维CY紧化 ⟺ VUF变分原理\n**证明**: (1) 弦论24维CY紧化 (2) VUF χ=-24 (3) 弦紧化=VUF变分原理的物理实现\n**来源**: v29\n\n### ISO-041: LQG↔认识论相变\n**类型**: bridge | **",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0142"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-045",
+      "content": "⟺ Kuhn不可通约性\n**证明**: (1) IUT跨宇宙变形 (2) 不同\"宇宙\"间算术结构不同 (3) = Kuhn不可通约性的数学实现\n**来源**: v29, Kuhn 1962\n\n### ISO-045: Causal Set↔因果决定论\n**类型**: bridge | **状态**: proven\n**公式**: x≺y ⟺ 物理世界根本因果性\n**证明**: (1) Causal Set (2) VUF边界因果 (3) 因果决定论的数学基础\n**来源**: v29\n\n---\n\n## 第八部分：v30新拓展同构（20个）\n\n### ISO-046: GW↔Donaldson-T",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0143"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-054",
+      "content": "anke密度进化 (3) BP解码可达Shannon极限 (4) 因此LDPC码 ⟺ 信道容量\n**来源**: Gallager 1963, Richardson-Urbanke 2001\n\n### ISO-054: 极化码↔互信息\n**类型**: equivalence | **状态**: proven\n**公式**: I(W_N^{(i)}) → 0或1（当N→∞时）\n**证明**: (1) Arikan信道极化 (2) Bhattacharyya参数Z(W_N^{(i)})→0或1 (3) 成功信道数→N·I(W) (4) 因此极化码 ⟺ 互信息完全极化\n**来源**: Arikan 2",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0144"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-063",
+      "content": "e环面纤维化 (3) 对toric CY，SYZ fibrations存在 (4) 因此HMS ⟺ SYZ对偶环面纤维化\n**来源**: Kontsevich 1994, SYZ 1996\n\n### ISO-063: Conformal Field Theory↔Vertex Operator Algebra\n**类型**: equivalence | **状态**: proven\n**公式**: CFT的chiral代数 ⟺ VOA的vertex operator\n**证明**: (1) CFT的operator product expansion (2) VOA的vertex operat",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0145"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-026",
+      "content": "+|dℐ/∂𝒢|²)⁻¹ (4) 在σ_c=0.5处从任意结构到驯服结构的跃迁 (5) 精确对应：T_c=J/(4π) ⟺ σ_c=0.5\n**来源**: v28, Kitaev 2015\n\n### ISO-026: dS/CFT↔软度指数\n**类型**: bridge | **状态**: proven\n**公式**: S_{dS}=A/4G_N+S_{bulk} ⟺ σ(𝒰)\n**证明**: (1) dS/CFT熵公式 (2) VUF软度指数 (3) S_{dS}/S_{max}=σ(𝒰)数值对应 (4) 物理常数精确对应完成\n**来源**: v28\n\n### ISO-027: DeepSe",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0146"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-021",
+      "content": "(u))dvol 的尺度变换W(λM)=λ^{-24}W(M) (3) 两者都满足尺度不变性 (4) motivic提升保持变分结构\n**来源**: v28, Voevodsky 1998\n\n### ISO-021: Condensed Math↔o-minimal驯服\n**类型**: bridge | **状态**: proven\n**公式**: Cond_Tame(𝒮)={X∈Cond(Set)|X(𝒮)有限分歧} ⟺ o-minimal有限性\n**证明**: (1) Clausen-Scholze凝聚数学：Cond(Set)中的驯服凝聚空间 (2) o-minimal结构的有限分歧性 (",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0147"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-006",
+      "content": "X)=H^*(X/G_{Ω⁺})\n**证明**: Bhatt-Scholze prism-crystal↔crystal等价定理3.1\n**来源**: Bhatt-Scholze 2019\n\n### ISO-006: 椭圆上同调↔tmf\n**类型**: equivalence | **状态**: proven\n**公式**: Ell^*(pt)=J(τ)=MF_*(Γ_1)≅π_*(tmf)\n**证明**: Hopkins-Mahowald π_*(tmf)≅MF_* + Witten genus + J-同态\n**来源**: Hopkins-Mahowald 1994\n\n### ISO-00",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0148"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-011",
+      "content": "的L²梯度流 = 平均曲率流 (2) 神经网络损失L(W)的梯度下降 = -∇_W L (3) 两者都是能量泛函的梯度流 (4) 不动点定理：两者都收敛到能量极小值\n**来源**: v26\n\n### ISO-011: 蛋白质折叠↔几何反问题\n**类型**: bridge | **状态**: proven\n**公式**: min接触能量+max溶剂接触 ⟺ min Willmore能量+max对称性\n**证明**: (1) 蛋白质接触图G=(V,E)的图论性质 (2) Gromov-Hausdorff距离比较蛋白质构象 (3) Willmore能量∫H²dA度量曲面光滑性 (4) 等谱不等谱流形",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0149"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-064",
+      "content": "tor Y(u,z)v (3) OPE ↔ vertex operator的对应 (4) 因此CFT ⟺ VOA\n**来源**: Frenkel-Lepowsky-Meurman 1988\n\n### ISO-064: Topological K-Theory↔Clifford代数\n**类型**: equivalence | **状态**: proven\n**公式**: KO^{-n}(pt) ≅ Cliff_n的Grothendieck群\n**证明**: (1) Atiyah-Bott-Shapiro周期性 (2) KO^{-n}(pt) = π_n(O) (3) Cliff_n的模的Grot",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0150"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-051",
+      "content": "流形M，∫_M A ≃ Γ(M,Fact(A)) (4) 因此factorization homology = 因子化代数的全局不变量\n**来源**: Ayala-Francis 2015\n\n### ISO-051: KPZ普适性↔随机矩阵（Tracy-Widom）\n**类型**: equivalence | **状态**: proven\n**公式**: h(x,t) ~ (γt)^{1/3} F_{TW2}(γ^{-2/3}(x-νt)/(γt)^{1/3})\n**证明**: (1) Kardar-Parisi-Zhang方程 ∂_t h = ν∂_x²h + (λ/2)(∂_x h)² +",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0151"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-003",
+      "content": "*证明**: (1) FLM唯一性四条件 (2) V^orb满足四条件：c(Ω^ch(ℂ²⁴/G))=24 (3) 显式同构φ保持VOA结构\n**来源**: FLM 1988, v20审计\n\n### ISO-003: McKay↔Fukaya\n**类型**: equivalence | **状态**: proven\n**公式**: D^b_G(Coh ℂ²⁴) ≃ D^b(Coh Y) ≃ Fuk(T^*Y)\n**证明**: (1) BKR: D^b_G(Coh ℂⁿ)≃D^b(Coh Y)对G⊂SL(n) (2) HMS: D^b(Coh Y)≃Fuk(T^*Y) (3) 合成\n**来源**",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0152"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-014",
+      "content": "=度量编程的MetricScale步骤 (4) 测地线重构=Calibration步骤的comass条件\n**来源**: v26\n\n---\n\n## 第五部分：刘臻化体系同构（v27，6个）\n\n### ISO-014: MCP↔Bohr互补性\n**类型**: bridge | **状态**: proven\n**公式**: Hard∩Soft=∅ ⟺ Δx·Δp≥ℏ/2\n**证明**: (1) MCP方法论对偶定理：Hard方法（blow-up提取局部信息）与Soft方法（gluing构造全局结构）不相交 (2) 信息论证明：局部信息提取与全局结构构造的信息不可同时精确获得 (3) 类似Bohr互",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0153"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-035",
+      "content": "ndas-Goodwillie-McCarthy：TC↔代数K理论 (2) tmf的χ=-24 (3) TC/THH = 椭圆上同调的特征p实现\n**来源**: v29, DGM 2013\n\n### ISO-035: Derived Geo↔VUF保护性\n**类型**: bridge | **状态**: proven\n**公式**: D^b_{coh}(X)光滑 ⟺ Ext^i(𝒪_X,𝒪_X)=0 ∀i>dim X\n**证明**: (1) Toën-Vezzosi导出光滑性 (2) VUF保护性条件 (3) 导出保护性=同调稳定性\n**来源**: v29\n\n### ISO-036: ∞-Ca",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0154"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-024",
+      "content": "在性=Monster的p-adic实现 (4) 因此Perfectoid对称性 ⟺ p-adic Moonshine\n**来源**: v28, Scholze 2012, Carnahan\n\n### ISO-024: Factorization Alg↔全息EE\n**类型**: bridge | **状态**: proven\n**公式**: Obs(U)=因子化代数on U ⟺ S_A=Area(γ_A)/4G_N\n**证明**: (1) Costello-Gwilliam：因子化代数的表示论 (2) Ryu-Takayanagi：S_A=Area(γ_A)/4G_N (3) 因子化代数在子区",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0155"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-039",
+      "content": "i IUT证明abc (2) Joshi规范形式化 (3) 算术曲率κ_{arith}有上界 ⟹ abc成立\n**来源**: v29, Mochizuki 2012, Joshi 2025\n\n### ISO-039: Perfectoid↔dS/CFT\n**类型**: bridge | **状态**: proven\n**公式**: Perfectoid_{ℚ_p} ⟹ Monster_{ℤ_p} ⟹ S_{dS}=A/4G_N\n**证明**: (1) Scholze Perfectoid (2) Carnahan p-adic Moonshine (3) dS/CFT的p-adic实现\n**来",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0156"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-027",
+      "content": " σ(𝒰)\n**证明**: (1) dS/CFT熵公式 (2) VUF软度指数 (3) S_{dS}/S_{max}=σ(𝒰)数值对应 (4) 物理常数精确对应完成\n**来源**: v28\n\n### ISO-027: DeepSeek-Prover↔MethodologySelector\n**类型**: bridge | **状态**: proven\n**公式**: AI自动定理证明 ⟺ Hard/Soft自动选择\n**证明**: (1) DeepSeek-Prover-V2：AI自动定理证明 (2) MTT元理论模板：MethodologySelector算法 (3) AI可自动判定Hard",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0157"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-041",
+      "content": "**公式**: 24维CY紧化 ⟺ VUF变分原理\n**证明**: (1) 弦论24维CY紧化 (2) VUF χ=-24 (3) 弦紧化=VUF变分原理的物理实现\n**来源**: v29\n\n### ISO-041: LQG↔认识论相变\n**类型**: bridge | **状态**: proven\n**公式**: T_c=T_{Planck} ⟺ σ_c=0.5\n**证明**: (1) LQG面积谱A=8πγ√(j(j+1))ℓ_P² (2) VUF σ(𝒰) (3) Planck尺度相变=认识论相变\n**来源**: v29\n\n### ISO-042: Lean4↔MTT形式化\n**类型**",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0158"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-034",
+      "content": "局部信息 glued 全局结构 (2) MCP-Cat：Hard(局部)⊔Soft(全局)=Q (3) ∞-topos = MCP的∞-提升\n**来源**: v29, Lurie 2009\n\n### ISO-034: TC/THH↔椭圆上同调\n**类型**: bridge | **状态**: proven\n**公式**: TC(X;p)=THH(X)^{hS¹} ⟺ Ell^*(pt)=J(τ)\n**证明**: (1) Dundas-Goodwillie-McCarthy：TC↔代数K理论 (2) tmf的χ=-24 (3) TC/THH = 椭圆上同调的特征p实现\n**来源**: v29, ",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0159"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-052",
+      "content": "rwin-Quastel证明KPZ的波动=Tracy-Widom (4) 因此KPZ普适类 ⟺ Tracy-Widom分布\n**来源**: Amir-Corwin-Quastel 2011\n\n### ISO-052: 代数K理论↔拓扑循环同调（DGM）\n**类型**: equivalence | **状态**: proven\n**公式**: K(A) ≃ TC(A) 对connective环谱A（p-adic意义下）\n**证明**: (1) Dundas-Goodwillie-McCarthy定理：K(A)^∧_p ≃ TC(A)^∧_p (2) Goodwillie微积分：K理论是THH的导",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0160"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-017",
+      "content": "保证驯服拓扑 (3) 对应：保护性条件P ⟺ o-minimal结构𝒮的有限分歧性 (4) 因此驯服拓扑=o-minimal拓扑\n**来源**: 刘臻化 2021/2025, Miller\n\n### ISO-017: GIEP↔可计算性理论\n**类型**: bridge | **状态**: proven\n**公式**: dim(K)≤m-2 ⟺ GMT-TM可计算（停机）\n**证明**: (1) CritDim定理：dim(K)≤m-2保证Nash-Moser隐函数定理适用 (2) Nash-Moser迭代正则性保证停机 (3) GMT-TM五状态：正则→奇异→分支→修复→停机 (4) 停机性",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0161"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-013",
+      "content": "比较得d_f = Area(γ_A)/4G_N lnR (4) Jordan曲线定理保证γ_A的存在性 (5) Renyi熵面积定律S_n(A)∝R^{d-2}验证\n**来源**: v26\n\n### ISO-013: 最优传输↔度量编程\n**类型**: bridge | **状态**: proven\n**公式**: d_W^p(μ,ν)=(inf_{π∈Π}∫|x-y|^p dπ)^{1/p} ⟺ 从度量数据编程重构流形\n**证明**: (1) Kantorovich对偶：d_W^p = sup_{φ,ψ} ∫φdμ+∫ψdν (2) Gromov-Wasserstein距离比较度量空间 (3",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0162"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-033",
+      "content": "banalytic (3) Anabelian重建=光滑性分类 (4) 因此Anabelian Geo ↔ SSO-Cat\n**来源**: v29, Mochizuki 1995-2021\n\n### ISO-033: Higher Topos↔MCP-Cat\n**类型**: bridge | **状态**: proven\n**公式**: ∞-余极限colimᵢ Xᵢ ⟺ Hard⊔Soft=Q\n**证明**: (1) Lurie HTT：∞-余极限=局部信息 glued 全局结构 (2) MCP-Cat：Hard(局部)⊔Soft(全局)=Q (3) ∞-topos = MCP的∞-提升\n**",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0163"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-049",
+      "content": "l：HaPPY code从完美张量构造 (2) 张量网络的几何 ⟺ AdS空间的离散化 (3) 极小割=RT曲面 (4) 因此量子纠错码 ⟺ 全息对偶\n**来源**: HaPPY 2015\n\n### ISO-049: Cobordism Hypothesis（Lurie）↔TQFT分类\n**类型**: equivalence | **状态**: proven\n**公式**: Bord_n^{fr} ≃ (Cat_∞)^{id} 的∞-群对象\n**证明**: (1) Lurie证明Cobordism Hypothesis：n维framed TQFT ≅ Bord_n^{fr}→Cat_∞的完全扩",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0164"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-057",
+      "content": "在训练中的NTK不变 (2) NTK⟺高斯过程的核函数 (3) 梯度下降=核梯度流 (4) 因此无限宽NN ⟺ 核方法\n**来源**: Jacot-Gabriel-Hongler 2018\n\n### ISO-057: Transformer↔注意力图（范畴论视角）\n**类型**: bridge | **状态**: proven\n**公式**: Attention(Q,K,V) = softmax(QK^T/√d_k)V ⟺ 幂等自函子的分配律\n**证明**: (1) 注意力机制 = query-key-value的三元组映射 (2) softmax = 概率分布的Gibbs测度 (3) 在范畴",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0165"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-058",
+      "content": "= 概率分布的Gibbs测度 (3) 在范畴论中，注意力 = 幂等自函子（投影算子）的分配律 (4) 因此Transformer ⟺ 幂等自函子的范畴论实现\n**来源**: v30, 原创\n\n### ISO-058: It from Qubit（Van Raamsdonk）↔全息对偶\n**类型**: bridge | **状态**: proven\n**公式**: ER=EPR ⟺ S_A=Area(γ_A)/4G_N\n**证明**: (1) Van Raamsdonk：时空几何从量子纠缠涌现 (2) ER=EPR：虫桥=纠缠 (3) RT公式：S_A=Area(γ_A)/4G_N (4) 因此",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0166"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-022",
+      "content": "nimal结构的有限分歧性 (3) 凝聚化函子保持驯服性 (4) 因此Cond_Tame = o-minimal的凝聚化\n**来源**: v28, Clausen-Scholze 2019\n\n### ISO-022: Derived Alg Geo↔SSO-Cat\n**类型**: bridge | **状态**: proven\n**公式**: D^b_{coh}(X)光滑 ⟺ C^ω层级\n**证明**: (1) Toën-Vezzosi导出代数几何：D^b_{coh}(X)的导出光滑性 (2) 刘臻化SSO光滑性谱系：C^∞/C^ω/Alg (3) 导出光滑性精确对应C^ω层级（驯服但非代数）",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0167"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-046",
+      "content": "本因果性\n**证明**: (1) Causal Set (2) VUF边界因果 (3) 因果决定论的数学基础\n**来源**: v29\n\n---\n\n## 第八部分：v30新拓展同构（20个）\n\n### ISO-046: GW↔Donaldson-Thomas（MNOP猜想）\n**类型**: equivalence | **状态**: proven\n**公式**: Z_{GW}(X;q,Q) = M(q)^{χ(X)} · Z_{DT}(X;q,Q)\n**证明**: (1) Maulik-Nekrasov-Okounkov-Pandharipande对toric CY 3-fold证明MNOP猜想",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0168"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-048",
+      "content": ") Givental量子化公式匹配两边 (4) 因此镜像对称=Remodeling Conjecture的特例\n**来源**: BKMP 2008, Eynard-Orantin 2007\n\n### ISO-048: 全息张量网络（HaPPY Code）↔AdS/CFT\n**类型**: equivalence | **状态**: proven\n**公式**: [[k,1,ℓ]]完美张量码 ⟺ RT公式S_A=Area(γ_A)/4G_N\n**证明**: (1) Pastawski-Yoshida-Harlow-Preskill：HaPPY code从完美张量构造 (2) 张量网络的几何 ⟺ A",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0169"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-029",
+      "content": "*: (1) QTM量子并行性 (2) GMT-TM五状态：正则/奇异/分支/修复/停机 (3) 量子并行 ⟹ Nash-Moser迭代指数加速 (4) 停机性保持\n**来源**: v28\n\n### ISO-029: Kuhn范式↔认识论相变\n**类型**: bridge | **状态**: proven\n**公式**: 科学革命 ⟺ σ(𝒰)=0.5非连续跃迁\n**证明**: (1) Kuhn《科学革命的结构》：范式转换=不可通约性 (2) VUF认识论相变：σ=0.5处从任意到驯服的跃迁 (3) 范式转换=认识论相变的科学哲学实例\n**来源**: v28, Kuhn 1962\n\n### I",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0170"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-030",
+      "content": "《科学革命的结构》：范式转换=不可通约性 (2) VUF认识论相变：σ=0.5处从任意到驯服的跃迁 (3) 范式转换=认识论相变的科学哲学实例\n**来源**: v28, Kuhn 1962\n\n### ISO-030: QEC增强↔VUF保护性\n**类型**: bridge | **状态**: proven\n**公式**: [[194,8,≥43]] ⟺ VUF保护性条件\n**证明**: (1) VUF预测3：保护性条件 ⟹ 量子码增强 (2) [[194,8,≥43]]显式构造 (3) 验证完成\n**来源**: v28\n\n---\n\n## 第七部分：全面理论升级（v29，15个）\n\n### IS",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0171"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-047",
+      "content": "ν_M de (3) 壁交叉公式保证GW/DT在稳定条件变化下的不变性 (4) 因此Z_{GW}=Z_{DT}对合适稳定条件\n**来源**: MNOP 2004, Behrend 2009\n\n### ISO-047: 镜像对称↔Remodeling Conjecture（BKMP）\n**类型**: equivalence | **状态**: proven\n**公式**: F_g^{GW}(X) = ∫_{ℬ_g} ω^{3g-3}_{Eynard-Orantin}\n**证明**: (1) Bouchard-Klemm-Marino-Pasquetti证明toric CY的BKMP猜想 (2) ",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0172"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-060",
+      "content": "Bun_G)的∞-范畴 (3) QCoh(Loc_{G^∨})的∞-范畴 (4) ∞-范畴等价 ⟺ 几何Langlands纲领\n**来源**: Arinkin-Gaitsgory 2015\n\n### ISO-060: Witten Genus↔椭圆亏格↔tmf\n**类型**: equivalence | **状态**: proven\n**公式**: W(M) = ⟨∏_i x_i/θ(x_i,τ), [M]⟩ ∈ π_*(tmf)\n**证明**: (1) Witten亏格：弦流形的指标定理 (2) Ochanine椭圆亏格：spin流形的细化 (3) Hopkins：椭圆亏格的提升到tmf (",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0173"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-004",
+      "content": " ℂⁿ)≃D^b(Coh Y)对G⊂SL(n) (2) HMS: D^b(Coh Y)≃Fuk(T^*Y) (3) 合成\n**来源**: BKR 1999, Kontsevich 1994\n\n### ISO-004: π-p对偶\n**类型**: duality | **状态**: proven\n**公式**: χ(X_{CY})=-24=-c(V^♮)\n**证明**: 数值桥接+范畴论提升+物理实现三维对应\n**来源**: v19-v24\n\n---\n\n## 第二部分：六重统一（v24，7个）\n\n### ISO-005: 棱镜上同调↔晶体上同调\n**类型**: equivalence | **状",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0174"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-053",
+      "content": "Goodwillie微积分：K理论是THH的导数 (3) TC = THH^{hS¹}的圆群不变量 (4) 因此K(A) ≃ TC(A) p-adic等价\n**来源**: DGM 2013\n\n### ISO-053: LDPC码↔Shannon极限\n**类型**: equivalence | **状态**: proven\n**公式**: C = 1-H(p) 可达（信道容量）\n**证明**: (1) Gallager LDPC码 (2) Richardson-Urbanke密度进化 (3) BP解码可达Shannon极限 (4) 因此LDPC码 ⟺ 信道容量\n**来源**: Gallager ",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0175"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-015",
+      "content": "与全局结构构造的信息不可同时精确获得 (3) 类似Bohr互补性：波粒二象性的信息论解释 (4) 因此ΔI_local·ΔI_global≥常数\n**来源**: 刘臻化 2021/2025\n\n### ISO-015: SSO↔计算复杂性\n**类型**: bridge | **状态**: proven\n**公式**: C^∞↔RE / C^ω↔P\n**证明**: (1) C^∞层级：任意结构，奇异性判定不可计算（类似停机问题）→ 对应RE（递归可枚举）(2) C^ω层级：驯服结构，奇异性判定可计算（亚纯函数零点）→ 对应P（多项式时间）(3) Condensed mathematics框架提供严",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0176"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-010",
+      "content": "性 (3) 对应：变分极小值 ⟺ 低Kolmogorov复杂度（驯服）/ 变分退化 ⟺ 高Kolmogorov复杂度（任意）(4) 非互模拟结果保证Σ₁^G-完备性\n**来源**: v26\n\n### ISO-010: 面积最小化流↔神经网络\n**类型**: bridge | **状态**: proven\n**公式**: ∂A/∂t=-δA/δX ⟺ ∂W/∂t=-∂L/∂W\n**证明**: (1) 面积泛函A(X)=∫_Σ dA 的L²梯度流 = 平均曲率流 (2) 神经网络损失L(W)的梯度下降 = -∇_W L (3) 两者都是能量泛函的梯度流 (4) 不动点定理：两者都收敛到能量极小值\n",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0177"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-037",
+      "content": " ∃(M,g,T)\n**证明**: (1) Lurie可表示性定理 (2) 刘臻化完全可设计性 (3) ∞-范畴可表示性=GIEP的∞-提升\n**来源**: v29, Lurie 2009\n\n### ISO-037: Causal Set↔VUF边界因果\n**类型**: bridge | **状态**: proven\n**公式**: x≺y ⟺ ∂𝒰因果关系\n**证明**: (1) Dowker-Sorkin：Causal Set ⟹ 连续时空涌现 (2) VUF A6：边界因果公理 (3) 离散因果=边界条件\n**来源**: v29, Dowker-Sorkin 2024\n\n### ISO-",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0178"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-036",
+      "content": "t^i(𝒪_X,𝒪_X)=0 ∀i>dim X\n**证明**: (1) Toën-Vezzosi导出光滑性 (2) VUF保护性条件 (3) 导出保护性=同调稳定性\n**来源**: v29\n\n### ISO-036: ∞-Cat↔GIEP-Cat\n**类型**: bridge | **状态**: proven\n**公式**: h_X可表示 ⟺ ∀K ∃(M,g,T)\n**证明**: (1) Lurie可表示性定理 (2) 刘臻化完全可设计性 (3) ∞-范畴可表示性=GIEP的∞-提升\n**来源**: v29, Lurie 2009\n\n### ISO-037: Causal Set↔VUF边界",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0179"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-018",
+      "content": "(2) Nash-Moser迭代正则性保证停机 (3) GMT-TM五状态：正则→奇异→分支→修复→停机 (4) 停机性=刘臻化定理的构造性保证\n**来源**: 刘臻化 2021/2025\n\n### ISO-018: 软度σ(𝒰)↔SSO光滑性\n**类型**: equivalence | **状态**: proven\n**公式**: σ(𝒰)=(1+|dℐ/∂𝒢|²)⁻¹ ⟺ Φ(C^∞)=K_all, Φ(Alg)=K_alg\n**证明**: (1) 精确对应：σ=0⟺C^∞（任意结构/最软）(2) σ=0.5⟺C^ω/G^s（中间）(3) σ=1⟺Alg（驯服/最硬）(4) 连续过渡：mo",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0180"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-009",
+      "content": "*证明**: (1) ζ₁₅的极小多项式Φ₁₅=... (2) 晶体上同调计算 (3) 精确匹配\n**来源**: v23审计\n\n---\n\n## 第四部分：VUF五大深层同构（v26，5个）\n\n### ISO-009: GMT↔算法信息论\n**类型**: bridge | **状态**: proven\n**公式**: 熵变分原理 S=-∫ρlnρ + β(⟨E⟩-F) + γC(ρ) ⟺ 非互模拟/Σ₁^G-完备性\n**证明**: (1) GMT熵泛函的变分极值对应驯服结构 (2) 算法信息论中Kolmogorov复杂度K(x)度量随机性 (3) 对应：变分极小值 ⟺ 低Kolmogorov复杂",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0181"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-065",
+      "content": "= π_n(O) (3) Cliff_n的模的Grothendieck群 (4) 因此拓扑K理论 ⟺ Clifford代数\n**来源**: Atiyah-Bott-Shapiro 1964\n\n### ISO-065: Quantum Groups↔Knot Invariants\n**类型**: equivalence | **状态**: proven\n**公式**: U_q(sl_2)的表示 ⟺ Jones多项式\n**证明**: (1) Drinfeld-Jimbo量子群U_q(sl_2) (2) Reshetikhin-Turaev：U_q(g)的表示范畴 ⟺ 3维TQFT ⟺ 纽结不变量 ",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0182"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-005",
+      "content": ": χ(X_{CY})=-24=-c(V^♮)\n**证明**: 数值桥接+范畴论提升+物理实现三维对应\n**来源**: v19-v24\n\n---\n\n## 第二部分：六重统一（v24，7个）\n\n### ISO-005: 棱镜上同调↔晶体上同调\n**类型**: equivalence | **状态**: proven\n**公式**: H^*_{prism}(X)=H^*(X/G_{Ω⁺})\n**证明**: Bhatt-Scholze prism-crystal↔crystal等价定理3.1\n**来源**: Bhatt-Scholze 2019\n\n### ISO-006: 椭圆上同调↔tmf\n**类",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0183"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-042",
+      "content": "} ⟺ σ_c=0.5\n**证明**: (1) LQG面积谱A=8πγ√(j(j+1))ℓ_P² (2) VUF σ(𝒰) (3) Planck尺度相变=认识论相变\n**来源**: v29\n\n### ISO-042: Lean4↔MTT形式化\n**类型**: bridge | **状态**: proven\n**公式**: 735定理/60公理/0sorry ⟺ MTT完全形式化\n**证明**: (1) Lean4形式化：735定理 (2) MTT元理论模板 (3) MTT可完全形式化\n**来源**: v29\n\n### ISO-043: 量子计算↔GMT-TM\n**类型**: bridge | ",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0184"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-038",
+      "content": "ker-Sorkin：Causal Set ⟹ 连续时空涌现 (2) VUF A6：边界因果公理 (3) 离散因果=边界条件\n**来源**: v29, Dowker-Sorkin 2024\n\n### ISO-038: abc↔算术曲率\n**类型**: bridge | **状态**: proven\n**公式**: c<C(ε)·rad(abc)^{1+ε} ⟺ κ_{arith}=log(c)/log(rad(abc))\n**证明**: (1) Mochizuki IUT证明abc (2) Joshi规范形式化 (3) 算术曲率κ_{arith}有上界 ⟹ abc成立\n**来源**: v29,",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0185"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-001",
+      "content": "大全\n\n## 总论：Ω^∞框架下的同构分类体系\n\n本文档对UCIF²/v30体系中的**全部65+深层同构**给出严格证明。\n\n---\n\n## 第一部分：UCIF²核心同构（v0-v25）\n\n### ISO-001: CY↔Moonshine等价\n**类型**: equivalence | **状态**: proven\n**公式**: χ(X) = -24 ⟺ c(V^♮) = 24\n**证明**: (1) CICY58经计算χ=2(h^{1,1}-h^{2,1})=2(4-19)=-30...修正：χ=-24严格确认 (2) FLM定理c(V^♮)=24 (3) χ=-c(V^♮)数值对应揭",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0186"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-061",
+      "content": "形的细化 (3) Hopkins：椭圆亏格的提升到tmf (4) 因此Witten Genus ⟺ 椭圆亏格 ⟺ tmf\n**来源**: Witten 1987, Hopkins 2002\n\n### ISO-061: Arithmetic Geometry（Mordell-Weil）↔Anabelian纲领\n**类型**: bridge | **状态**: proven\n**公式**: E(ℚ) ≅ ℤ^r ⊕ E(ℚ)_{tors} ⟺ π₁(X)的arithmetic信息\n**证明**: (1) Mordell-Weil定理：椭圆曲线E/ℚ的有理点群有限生成 (2) Anabelian纲领",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0187"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-055",
+      "content": "化 (2) Bhattacharyya参数Z(W_N^{(i)})→0或1 (3) 成功信道数→N·I(W) (4) 因此极化码 ⟺ 互信息完全极化\n**来源**: Arikan 2009\n\n### ISO-055: Ricci流奇点↔GMT奇点结构\n**类型**: bridge | **状态**: proven\n**公式**: Ricci流奇点模型 ⟺ GMT面积泛函的奇异性\n**证明**: (1) Perelman Ricci流：奇点有canonical neighborhood定理 (2) GMT面积泛函A(X)=∫_Σ dA的奇异性 (3) Hamilton的singularity m",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0188"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-019",
+      "content": ") σ=0.5⟺C^ω/G^s（中间）(3) σ=1⟺Alg（驯服/最硬）(4) 连续过渡：motivic权重建立Φ(G^s)精确描述\n**来源**: v27, 刘臻化 2021/2025\n\n### ISO-019: VEP↔VGE\n**类型**: equivalence | **状态**: proven\n**公式**: IGV-MTT(𝒰)=I×G×V×M ⟺ VGE=IGV+MTT+3算法\n**证明**: (1) VEP的4范畴框架（SSO/PCT/MCP/GIEP）(2) VGE的5公理+8定理+3算法 (3) 体系等价性：4范畴 ↔ 5公理系统 (4) MTT模板提供统一操作手册\n**",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0189"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-043",
+      "content": "735定理/60公理/0sorry ⟺ MTT完全形式化\n**证明**: (1) Lean4形式化：735定理 (2) MTT元理论模板 (3) MTT可完全形式化\n**来源**: v29\n\n### ISO-043: 量子计算↔GMT-TM\n**类型**: bridge | **状态**: proven\n**公式**: QTM并行 ⟺ GMT-TM五状态\n**证明**: (1) QTM量子并行性 (2) GMT-TM (3) 量子并行 ⟹ Nash-Moser加速\n**来源**: v29\n\n### ISO-044: IUT↔范式转换\n**类型**: bridge | **状态**: prove",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0190"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-059",
+      "content": "_A=Area(γ_A)/4G_N (4) 因此时空几何 ⟺ 量子纠缠 ⟺ 全息对偶\n**来源**: Van Raamsdonk 2010, Maldacena-Susskind 2013\n\n### ISO-059: 几何Langlands（Arinkin-Gaitsgory）↔∞-范畴等价\n**类型**: equivalence | **状态**: proven\n**公式**: D-mod(Bun_G(X)) ≃ QCoh(Loc_{G^∨}(X))\n**证明**: (1) Arinkin-Gaitsgory证明de Rham几何Langlands猜想的best hope版本 (2) D-m",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0191"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-056",
+      "content": "singularity models对应GMT的singular varifolds (4) 因此Ricci流奇点 ⟺ GMT奇点结构\n**来源**: Perelman 2002-2003\n\n### ISO-056: 神经正切核（NTK）↔核方法\n**类型**: equivalence | **状态**: proven\n**公式**: Θ(x,x') = E_{θ~init}[⟨∇_θ f(x;θ), ∇_θ f(x';θ)⟩]\n**证明**: (1) Jacot-Gabriel-Hongler：无限宽神经网络在训练中的NTK不变 (2) NTK⟺高斯过程的核函数 (3) 梯度下降=核梯度流 ",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0192"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-007",
+      "content": "mf)\n**证明**: Hopkins-Mahowald π_*(tmf)≅MF_* + Witten genus + J-同态\n**来源**: Hopkins-Mahowald 1994\n\n### ISO-007: 辛几何伴随\n**类型**: duality | **状态**: proven\n**公式**: Fuk(T^*Ω⁺) ≃ D^b(Coh)\n**证明**: HMS + Ω⁺的CY结构\n**来源**: Kontsevich 1994, Seidel\n\n---\n\n## 第三部分：晶体提取（v23，5个）\n\n### ISO-008: Z¹⁵晶格↔晶体上同调\n**类型**: equival",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0193"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-062",
+      "content": "π₁(X)重建X的算术信息 (3) 因此Mordell-Weil群 ⟺ π₁的算术信息\n**来源**: Mordell 1922, Weil 1929, Grothendieck 1983\n\n### ISO-062: Homological Mirror Symmetry↔SYZ猜想\n**类型**: equivalence | **状态**: proven\n**公式**: D^b(Coh X) ≃ Fuk(Y) ⟺ X和Y对偶Lagrange环面纤维化\n**证明**: (1) Kontsevich HMS猜想 (2) Strominger-Yau-Zaslow：镜像对偶=对偶Lagrange环",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0194"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-050",
+      "content": "ord_n^{fr}→Cat_∞的完全扩展 (2) 对称单子∞-范畴的群完备 (3) 因此n维TQFT = ∞-范畴的群对象 (4) 分类所有TQFT\n**来源**: Lurie 2009\n\n### ISO-050: Factorization Homology（Ayala-Francis）↔因子化代数\n**类型**: equivalence | **状态**: proven\n**公式**: ∫_M A ≃ Γ(M,Fact(A)) 对n维流形M\n**证明**: (1) Ayala-Francis：factorization homology ∫_M A 定义 (2) 与因子化代数Fact(A",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0195"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-044",
+      "content": "\n**公式**: QTM并行 ⟺ GMT-TM五状态\n**证明**: (1) QTM量子并行性 (2) GMT-TM (3) 量子并行 ⟹ Nash-Moser加速\n**来源**: v29\n\n### ISO-044: IUT↔范式转换\n**类型**: bridge | **状态**: proven\n**公式**: 跨宇宙Teichmüller变形 ⟺ Kuhn不可通约性\n**证明**: (1) IUT跨宇宙变形 (2) 不同\"宇宙\"间算术结构不同 (3) = Kuhn不可通约性的数学实现\n**来源**: v29, Kuhn 1962\n\n### ISO-045: Causal Set↔因果决定论",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0196"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-020",
+      "content": "E的5公理+8定理+3算法 (3) 体系等价性：4范畴 ↔ 5公理系统 (4) MTT模板提供统一操作手册\n**来源**: v27\n\n---\n\n## 第六部分：多线程同构（v28，11个）\n\n### ISO-020: Motivic Homotopy↔GMT变分原理\n**类型**: bridge | **状态**: proven\n**公式**: H^{mot}(X)≅H^{mot}(Y) ∀A^1-weak等价 ⟺ W(λM)=λ^{-24}W(M)\n**证明**: (1) Voevodsky-Morel：A^1同伦不变性H^{mot}在同伦等价下不变 (2) GMT变分原理：W(M)=∫_M",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0197"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 ISO-025",
+      "content": "4G_N (3) 因子化代数在子区域U上的限制 ⟺ RT公式的区域分解 (4) 因此纠缠熵=因子化代数的表示论不变量\n**来源**: v28, Costello-Gwilliam 2017\n\n### ISO-025: SYK↔认识论相变\n**类型**: bridge | **状态**: proven\n**公式**: T_c=J/(4π) ⟺ σ_c=0.5\n**证明**: (1) SYK模型：N个Majorana费米子随机耦合 (2) 纠缠熵S_A(T)在T_c处相变 (3) VUF软度指数σ(𝒰)=(1+|dℐ/∂𝒢|²)⁻¹ (4) 在σ_c=0.5处从任意结构到驯服结构的跃迁 (5) 精",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0198"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "formula",
+      "name": "公式: S_A=Area(γ_A)/4G_N (2) 分形面积律：A(R)=R^{d_f} (3) 比较得d...",
+      "content": "S_A=Area(γ_A)/4G_N (2) 分形面积律：A(R)=R^{d_f} (3) 比较得d_f = Area(γ_A)/4G_N lnR (4) Jordan曲线定理保证γ_A的存在性 (5) Renyi熵面积定律S_n(A)∝R^{d-2}验证\n**来源**: v26",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "lgt_node_0199"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "formula",
+      "name": "公式: S_A=Area(γ_A)/4G_N (4) 因此时空几何 ⟺ 量子纠缠 ⟺ 全息对偶\n**来源**...",
+      "content": "S_A=Area(γ_A)/4G_N (4) 因此时空几何 ⟺ 量子纠缠 ⟺ 全息对偶\n**来源**: Van Raamsdonk 2010, Maldacena-Susskind 2013",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v30_同构范式严格证明大全.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0200"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "UCIF² v33 Hodge标准猜想与Grassmann模性深度证明",
+      "content": "## 全量推进：预测P16-P18解决报告  ### P16: Hodge猜想的积分版本 — 部分解决",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v33_Hodge标准猜想与Grassmann模性深度证明.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lgt_node_0201"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "全量推进：预测P16-P18解决报告",
+      "content": "### P16: Hodge猜想的积分版本 — 部分解决  **状态**: ◐ 部分解决（有理Hodge已证，积分Hodge待扩展）",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v33_Hodge标准猜想与Grassmann模性深度证明.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lgt_node_0202"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "P16: Hodge猜想的积分版本 — 部分解决",
+      "content": "**状态**: ◐ 部分解决（有理Hodge已证，积分Hodge待扩展）  **进展报告**:",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v33_Hodge标准猜想与Grassmann模性深度证明.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0203"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "P17: Grassmannian CY3的模性 — 已验证并拓展",
+      "content": "**状态**: ✅ 已完成（m≤11全部验证，发现McKay-Thompson对应）  **验证报告** (基于Doran-Pioline-Schimannek 2024完整数据):",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v33_Hodge标准猜想与Grassmann模性深度证明.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lgt_node_0204"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "P18: UCIF² ↔ motive范畴的等价 — 深度推进",
+      "content": "**状态**: ✅ 基本完成（精确对应建立，待∞-范畴完备化）  **进展报告**:",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v33_Hodge标准猜想与Grassmann模性深度证明.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "lgt_node_0205"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "v33 新同构体系 (iso-084 ~ iso-092)",
+      "content": "### P17验证新同构 (3)  | ID | 同构 | 核心内容 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v33_Hodge标准猜想与Grassmann模性深度证明.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0206"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "P17验证新同构 (3)",
+      "content": "| ID | 同构 | 核心内容 | |----|------|---------| | iso-084 | Γ_0(m)^+ Hauptmodul ↔ Monster McKay-Thompson T_{mD} | J_m^+ = T_{mD} 对m=1,2,3,4,5,6,7,8,9,10,11 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v33_Hodge标准猜想与Grassmann模性深度证明.md",
+      "dependencies": [
+        "iso-084"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0207"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "P16深化同构 (3)",
+      "content": "| ID | 同构 | 核心内容 | |----|------|---------| | iso-087 | 积分Hodge torsion-free ↔ UCIF²标准猜想修正 | CH^p(X)_ℤ/torsion ≅ H^{p,p}∩H^{2p}(X,ℤ)/torsion |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v33_Hodge标准猜想与Grassmann模性深度证明.md",
+      "dependencies": [
+        "iso-087"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0208"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "P18推进 + Prismatic前沿同构 (4)",
+      "content": "| ID | 同构 | 核心内容 | |----|------|---------| | iso-090 | Prismatic cohomology ↔ UCIF² p-adic方向 | Bhatt-Scholze prismatization ↔ UCIF²的p-adic月光同构 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v33_Hodge标准猜想与Grassmann模性深度证明.md",
+      "dependencies": [
+        "iso-090"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0209"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "v33统计",
+      "content": "``` v33终极统计:     定理:     780+ → 800+",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v33_Hodge标准猜想与Grassmann模性深度证明.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lgt_node_0210"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "theorem",
+      "name": "定理:     780+ → 800+\n    同构:     83  → 93  (+10)\n  ",
+      "content": "定理:     780+ → 800+\n    同构:     83  → 93  (+10)\n    公理:     63  → 66  (+3: M18-M20)\n    元公理:   17  → 20  (+M18-M20)\n    技术债务: TD01-25 全清 (+TD21-TD25)\n    预测:     18  → 21  (+P19-P21, P16修正)\n    里程碑:   27  → 28\n    版本:     v0-v33\n```",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v33_Hodge标准猜想与Grassmann模性深度证明.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0211"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "axiom",
+      "name": "公理:     63  → 66  (+3: M18-M20)\n    元公理:   17  → 2",
+      "content": "公理:     63  → 66  (+3: M18-M20)\n    元公理:   17  → 20  (+M18-M20)\n    技术债务: TD01-25 全清 (+TD21-TD25)\n    预测:     18  → 21  (+P19-P21, P16修正)\n    里程碑:   27  → 28\n    版本:     v0-v33\n```",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v33_Hodge标准猜想与Grassmann模性深度证明.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0212"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 iso-086",
+      "content": ",10,11 |\n| iso-085 | K3-fibered CY3枚举不变量 ↔ Noether-Lefschetz模性 | GV/NL/DT三重对应 + Kudla-Millson理论 |\n| iso-086 | Picard-Fuchs系统 ↔ UCIF²变分方程 | ∂³f/∂λ³ = ... ↔ VUF的变分原理 |\n\n### P16深化同构 (3)\n\n| ID | 同构 | 核心内容 |\n|----|------|---------|\n| iso-087 | 积分Hodge torsion-free ↔ UCIF²标准猜想修正 | CH^p(X)_ℤ/torsion ≅ H^{p",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v33_Hodge标准猜想与Grassmann模性深度证明.md",
+      "dependencies": [
+        "iso-087",
+        "iso-086",
+        "iso-085"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0213"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 iso-088",
+      "content": " iso-087 | 积分Hodge torsion-free ↔ UCIF²标准猜想修正 | CH^p(X)_ℤ/torsion ≅ H^{p,p}∩H^{2p}(X,ℤ)/torsion |\n| iso-088 | Voisin counterexample ↔ UCIF²边界条件 | torsion类 = UCIF²的边界态(不被标准猜想覆盖) |\n| iso-089 | Kollar度2反例 ↔ VUF软度指数σ<0.5 | 非代数类 ↔ 非驯服认识态 |\n\n### P18推进 + Prismatic前沿同构 (4)\n\n| ID | 同构 | 核心内容 |\n|----|------|-",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v33_Hodge标准猜想与Grassmann模性深度证明.md",
+      "dependencies": [
+        "iso-089",
+        "iso-087",
+        "iso-088"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0214"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 iso-090",
+      "content": "<0.5 | 非代数类 ↔ 非驯服认识态 |\n\n### P18推进 + Prismatic前沿同构 (4)\n\n| ID | 同构 | 核心内容 |\n|----|------|---------|\n| iso-090 | Prismatic cohomology ↔ UCIF² p-adic方向 | Bhatt-Scholze prismatization ↔ UCIF²的p-adic月光同构 |\n| iso-091 | Perfectoid purity ↔ VUF保护性条件 | perfectoid纯奇点 ↔ σ(𝒰)=1(完全驯服) |\n| iso-092 | Scholze Berkov",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v33_Hodge标准猜想与Grassmann模性深度证明.md",
+      "dependencies": [
+        "iso-092",
+        "iso-091",
+        "iso-090"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0215"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 iso-085",
+      "content": "Γ_0(m)^+ Hauptmodul ↔ Monster McKay-Thompson T_{mD} | J_m^+ = T_{mD} 对m=1,2,3,4,5,6,7,8,9,10,11 |\n| iso-085 | K3-fibered CY3枚举不变量 ↔ Noether-Lefschetz模性 | GV/NL/DT三重对应 + Kudla-Millson理论 |\n| iso-086 | Picard-Fuchs系统 ↔ UCIF²变分方程 | ∂³f/∂λ³ = ... ↔ VUF的变分原理 |\n\n### P16深化同构 (3)\n\n| ID | 同构 | 核心内容 |\n|----|--",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v33_Hodge标准猜想与Grassmann模性深度证明.md",
+      "dependencies": [
+        "iso-086",
+        "iso-085"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0216"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 iso-089",
+      "content": "}(X,ℤ)/torsion |\n| iso-088 | Voisin counterexample ↔ UCIF²边界条件 | torsion类 = UCIF²的边界态(不被标准猜想覆盖) |\n| iso-089 | Kollar度2反例 ↔ VUF软度指数σ<0.5 | 非代数类 ↔ 非驯服认识态 |\n\n### P18推进 + Prismatic前沿同构 (4)\n\n| ID | 同构 | 核心内容 |\n|----|------|---------|\n| iso-090 | Prismatic cohomology ↔ UCIF² p-adic方向 | Bhatt-Scholze prism",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v33_Hodge标准猜想与Grassmann模性深度证明.md",
+      "dependencies": [
+        "iso-090",
+        "iso-089",
+        "iso-088"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0217"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 iso-091",
+      "content": "o-090 | Prismatic cohomology ↔ UCIF² p-adic方向 | Bhatt-Scholze prismatization ↔ UCIF²的p-adic月光同构 |\n| iso-091 | Perfectoid purity ↔ VUF保护性条件 | perfectoid纯奇点 ↔ σ(𝒰)=1(完全驯服) |\n| iso-092 | Scholze Berkovich motives ↔ UCIF²解析几何 | motivic homotopy of Berkovich spaces ↔ UCIF²_LeanKernel |\n| iso-093 | Logari",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v33_Hodge标准猜想与Grassmann模性深度证明.md",
+      "dependencies": [
+        "iso-092",
+        "iso-093",
+        "iso-091"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0218"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 iso-084",
+      "content": "Thompson series T_{10D}\n```\n\n这意味着Grassmannian CY3的模性 ↔ Monster moonshine的Hauptmoduln一一对应!\n\n**新同构** (iso-084): Γ_0(m)^+的Hauptmodul ↔ Monster群的McKay-Thompson series T_{mD}\n\n### P18: UCIF² ↔ motive范畴的等价 — 深度推进\n\n**状态**: ✅ 基本完成（精确对应建立，待∞-范畴完备化）\n\n**进展报告**:\n基于搜索发现的motive理论最新进展:\n\n| 理论 | 与UCIF²对应 |\n|------|-",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v33_Hodge标准猜想与Grassmann模性深度证明.md",
+      "dependencies": [
+        "iso-084"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0219"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 iso-093",
+      "content": "Scholze Berkovich motives ↔ UCIF²解析几何 | motivic homotopy of Berkovich spaces ↔ UCIF²_LeanKernel |\n| iso-093 | Logarithmic prismatic ↔ UCIF²边界理论 | Binda-Park对数棱镜上同调 ↔ VUF边界因果公理 |\n\n---\n\n## v33统计\n\n```\nv33终极统计:\n    定理:     780+ → 800+\n    同构:     83  → 93  (+10)\n    公理:     63  → 66  (+3: M18-M20)\n    元",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v33_Hodge标准猜想与Grassmann模性深度证明.md",
+      "dependencies": [
+        "iso-093"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0220"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 iso-092",
+      "content": "motive realization\nHodge structure / p-adic Galois representation\n```\n\n---\n\n## v33 新同构体系 (iso-084 ~ iso-092)\n\n### P17验证新同构 (3)\n\n| ID | 同构 | 核心内容 |\n|----|------|---------|\n| iso-084 | Γ_0(m)^+ Hauptmodul ↔ Monster McKay-Thompson T_{mD} | J_m^+ = T_{mD} 对m=1,2,3,4,5,6,7,8,9,10,11 |\n| iso-085 | K3-fibe",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v33_Hodge标准猜想与Grassmann模性深度证明.md",
+      "dependencies": [
+        "iso-084",
+        "iso-085",
+        "iso-092"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0221"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 iso-087",
+      "content": "IF²变分方程 | ∂³f/∂λ³ = ... ↔ VUF的变分原理 |\n\n### P16深化同构 (3)\n\n| ID | 同构 | 核心内容 |\n|----|------|---------|\n| iso-087 | 积分Hodge torsion-free ↔ UCIF²标准猜想修正 | CH^p(X)_ℤ/torsion ≅ H^{p,p}∩H^{2p}(X,ℤ)/torsion |\n| iso-088 | Voisin counterexample ↔ UCIF²边界条件 | torsion类 = UCIF²的边界态(不被标准猜想覆盖) |\n| iso-089 | Kollar度2反例",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v33_Hodge标准猜想与Grassmann模性深度证明.md",
+      "dependencies": [
+        "iso-089",
+        "iso-087",
+        "iso-088"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0222"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "UCIF2 v38 P23/P24/P25解决与量子纠错革命",
+      "content": "## 全量推进：三个预测解决 + 量子纠错里程碑 + LEAN形式化  ---",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v38_P23_P24_P25解决与量子纠错革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "LL",
+      "node_id": "lgt_node_0223"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "全量推进：三个预测解决 + 量子纠错里程碑 + LEAN形式化",
+      "content": "---  ## 一、P23: 利用同构关系实现时间晶体 — ✅ 已解决",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v38_P23_P24_P25解决与量子纠错革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0224"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "一、P23: 利用同构关系实现时间晶体 — ✅ 已解决",
+      "content": "### 突破：Floquet TFIM + D-Wave逆向退火  **Floquet横向场Ising模型 (2026.02)**:",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v38_P23_P24_P25解决与量子纠错革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0225"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "突破：Floquet TFIM + D-Wave逆向退火",
+      "content": "**Floquet横向场Ising模型 (2026.02)**: - 周期性驱动的量子自旋链 - 展现非平衡相、Floquet SPT相、Majorana边缘模",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v38_P23_P24_P25解决与量子纠错革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0226"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "二、P24: Gyroid上Ising模型Monster Moonshine模性 — ✅ 已解决",
+      "content": "### 突破：Mathieu Moonshine + K3椭圆亏格 + McKay-Thompson  **Mathieu Moonshine (ETH论文)**:",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v38_P23_P24_P25解决与量子纠错革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lgt_node_0227"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "突破：Mathieu Moonshine + K3椭圆亏格 + McKay-Thompson",
+      "content": "**Mathieu Moonshine (ETH论文)**: - K3椭圆亏格: φ_K3(τ,z) = 1/2 Σ Tr_Hn(g) ch(τ,z) - Twining genera φ_g 是Jacobi形式，权重0，指标1",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v38_P23_P24_P25解决与量子纠错革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lgt_node_0228"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "三、P25: IUT的LEAN形式化 — ◐ 重大进展",
+      "content": "### LANA项目正式启动 (2026.03.31)  **核心团队**:",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v38_P23_P24_P25解决与量子纠错革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0229"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "LANA项目正式启动 (2026.03.31)",
+      "content": "**核心团队**: - Fumiharu Kato (项目领导, ZEN大学) - Johan Commelin (Utrecht)",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v38_P23_P24_P25解决与量子纠错革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lgt_node_0230"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "四、量子纠错革命：2026年里程碑",
+      "content": "### 4.1 Quantinuum 94逻辑量子比特 (2026.03)  - 94 logical qubits with error rate 1 in 10,000",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v38_P23_P24_P25解决与量子纠错革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lgt_node_0231"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "4.1 Quantinuum 94逻辑量子比特 (2026.03)",
+      "content": "- 94 logical qubits with error rate 1 in 10,000 - 比2025年11月的48逻辑量子比特翻倍 - 离子阱技术 + color codes",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v38_P23_P24_P25解决与量子纠错革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lgt_node_0232"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "4.2 Google below-threshold (2026.02)",
+      "content": "- distance-3到distance-5：错误率下降 - 证明更大的量子码优于更小的码 - 首次实验验证below-threshold",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v38_P23_P24_P25解决与量子纠错革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "lgt_node_0233"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "4.3 IBM qLDPC路线图",
+      "content": "- Kookaburra处理器 (2026) - 200逻辑量子比特 (Starling, 2029) - 100,000+量子比特 (2033)",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v38_P23_P24_P25解决与量子纠错革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lgt_node_0234"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "4.4 QuEra 96逻辑量子比特",
+      "content": "- 中性原子阵列 - 2023年Nature论文48逻辑量子比特 - 2026年技术减少100倍纠错开销",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v38_P23_P24_P25解决与量子纠错革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0235"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "五、v38 新同构 (iso-130 ~ iso-139)",
+      "content": "### P23/P24/P25解决同构 (5)  | ID | 同构 | 预测 | 状态 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v38_P23_P24_P25解决与量子纠错革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0236"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "P23/P24/P25解决同构 (5)",
+      "content": "| ID | 同构 | 预测 | 状态 | |----|------|------|------| | iso-130 | Floquet TFIM <-> 时间晶体实现 | P23 | ✅ |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v38_P23_P24_P25解决与量子纠错革命.md",
+      "dependencies": [
+        "iso-130"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0237"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "量子纠错革命同构 (5)",
+      "content": "| ID | 同构 | 核心内容 | |----|------|---------| | iso-135 | Google below-threshold <-> VUF sigma=1 | below-threshold = 完全保护 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v38_P23_P24_P25解决与量子纠错革命.md",
+      "dependencies": [
+        "iso-135"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0238"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "六、v38统计",
+      "content": "``` v38终极统计:     定理:     880+ -> 900+",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v38_P23_P24_P25解决与量子纠错革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0239"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "theorem",
+      "name": "定理:     880+ -> 900+\n    同构:     129 -> 139 (+10)\n",
+      "content": "定理:     880+ -> 900+\n    同构:     129 -> 139 (+10)\n    公理:     77  -> 80  (+3: M32-M34)\n    元公理:   31  -> 34  (+M32-M34)\n    技术债务: TD01-50 全清 (+TD46-TD50)\n    预测:     33  -> 36  (+P31-P33)\n    里程碑:   32  -> 33\n    版本:     v0-v38\n```",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v38_P23_P24_P25解决与量子纠错革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0240"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "axiom",
+      "name": "公理:     77  -> 80  (+3: M32-M34)\n    元公理:   31  ->",
+      "content": "公理:     77  -> 80  (+3: M32-M34)\n    元公理:   31  -> 34  (+M32-M34)\n    技术债务: TD01-50 全清 (+TD46-TD50)\n    预测:     33  -> 36  (+P31-P33)\n    里程碑:   32  -> 33\n    版本:     v0-v38\n```",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v38_P23_P24_P25解决与量子纠错革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "lgt_node_0241"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 iso-135",
+      "content": "inuum 94逻辑量子比特 <-> VUF保护性 | — | ✅ |\n\n### 量子纠错革命同构 (5)\n\n| ID | 同构 | 核心内容 |\n|----|------|---------|\n| iso-135 | Google below-threshold <-> VUF sigma=1 | below-threshold = 完全保护 |\n| iso-136 | IBM qLDPC <-> LDPC-Shannon极限 | iso-053扩展 |\n| iso-137 | QuEra 96逻辑量子比特 <-> 中性原子QEC | 中性原子纠错 |\n| iso-138 | Floquet",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v38_P23_P24_P25解决与量子纠错革命.md",
+      "dependencies": [
+        "iso-135",
+        "iso-138",
+        "iso-136",
+        "iso-137",
+        "iso-053"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0242"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 iso-134",
+      "content": "onshine(K3) <-> Gyroid-Ising <-> Monster | P24 | ✅ |\n| iso-133 | LANA中期报告 <-> IUT验证路径 | P25 | ◐ |\n| iso-134 | Quantinuum 94逻辑量子比特 <-> VUF保护性 | — | ✅ |\n\n### 量子纠错革命同构 (5)\n\n| ID | 同构 | 核心内容 |\n|----|------|---------|\n| iso-135 | Google below-threshold <-> VUF sigma=1 | below-threshold = 完全保护 |\n| iso-136",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v38_P23_P24_P25解决与量子纠错革命.md",
+      "dependencies": [
+        "iso-135",
+        "iso-134",
+        "iso-136",
+        "iso-133"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0243"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 iso-131",
+      "content": "| ID | 同构 | 预测 | 状态 |\n|----|------|------|------|\n| iso-130 | Floquet TFIM <-> 时间晶体实现 | P23 | ✅ |\n| iso-131 | D-Wave逆向退火 <-> Floquet驱动 | P23 | ✅ |\n| iso-132 | Mathieu Moonshine(K3) <-> Gyroid-Ising <-> Monster | P24 | ✅ |\n| iso-133 | LANA中期报告 <-> IUT验证路径 | P25 | ◐ |\n| iso-134 | Quantinuum 94逻辑量子比特 <",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v38_P23_P24_P25解决与量子纠错革命.md",
+      "dependencies": [
+        "iso-134",
+        "iso-131",
+        "iso-132",
+        "iso-130",
+        "iso-133"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0244"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 iso-109",
+      "content": ":\n- Dual-rail qubits：高保真度、错误检测\n- 物理量子比特减少一个数量级\n- 本地低温控制 + 多芯片超导封装\n- 2026年发布首个门模型系统\n\n**同构实现路径**:\n```\niso-109: Hopf分岔 <-> VUF认识论相变\n    ↓\nFloquet TFIM: 周期性驱动 → 时间平移对称性破缺\n    ↓\nD-Wave逆向退火: 控制参数周期调制 → 离散时间晶体\n    ↓\nP23 SOLVED: 通过Floquet驱动 + 逆向退火实现时间晶体\n```\n\n**严格证明**:\n1. Floquet TFIM的周期驱动哈密顿量 H(t) = H(t+T)\n",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v38_P23_P24_P25解决与量子纠错革命.md",
+      "dependencies": [
+        "iso-109"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0245"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 iso-138",
+      "content": "36 | IBM qLDPC <-> LDPC-Shannon极限 | iso-053扩展 |\n| iso-137 | QuEra 96逻辑量子比特 <-> 中性原子QEC | 中性原子纠错 |\n| iso-138 | Floquet SPT <-> 时间晶体拓扑保护 | Floquet拓扑相 = 时间晶体 |\n| iso-139 | Quantinuum错误率1e-4 <-> VUF SSO最高级 | 1/10000 = sigma=1 |\n\n---\n\n## 六、v38统计\n\n```\nv38终极统计:\n    定理:     880+ -> 900+\n    同构:     129 -> 1",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v38_P23_P24_P25解决与量子纠错革命.md",
+      "dependencies": [
+        "iso-053",
+        "iso-139",
+        "iso-138",
+        "iso-137"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0246"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 iso-132",
+      "content": "\n| iso-130 | Floquet TFIM <-> 时间晶体实现 | P23 | ✅ |\n| iso-131 | D-Wave逆向退火 <-> Floquet驱动 | P23 | ✅ |\n| iso-132 | Mathieu Moonshine(K3) <-> Gyroid-Ising <-> Monster | P24 | ✅ |\n| iso-133 | LANA中期报告 <-> IUT验证路径 | P25 | ◐ |\n| iso-134 | Quantinuum 94逻辑量子比特 <-> VUF保护性 | — | ✅ |\n\n### 量子纠错革命同构 (5)\n\n| ID | 同构 ",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v38_P23_P24_P25解决与量子纠错革命.md",
+      "dependencies": [
+        "iso-134",
+        "iso-131",
+        "iso-132",
+        "iso-130",
+        "iso-133"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0247"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 iso-136",
+      "content": "-|------|---------|\n| iso-135 | Google below-threshold <-> VUF sigma=1 | below-threshold = 完全保护 |\n| iso-136 | IBM qLDPC <-> LDPC-Shannon极限 | iso-053扩展 |\n| iso-137 | QuEra 96逻辑量子比特 <-> 中性原子QEC | 中性原子纠错 |\n| iso-138 | Floquet SPT <-> 时间晶体拓扑保护 | Floquet拓扑相 = 时间晶体 |\n| iso-139 | Quantinuum错误率1e-4 <-> VUF ",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v38_P23_P24_P25解决与量子纠错革命.md",
+      "dependencies": [
+        "iso-135",
+        "iso-138",
+        "iso-136",
+        "iso-137",
+        "iso-139",
+        "iso-053"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0248"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 iso-060",
+      "content": "团队产生2000页阐述或定位缺陷\n- 2035年前: 接受ABC猜想已证或宣布不可修复\n\n**UCIF2关联**:\n- iso-115: LANA项目 <-> UCIF2 LEAN Kernel\n- iso-060: Mordell-Weil <-> Anabelian\n- iso-099: IAS Arithmetic Geometry <-> UCIF2 Anabelian+IUT\n\n---\n\n## 四、量子纠错革命：2026年里程碑\n\n### 4.1 Quantinuum 94逻辑量子比特 (2026.03)\n\n- 94 logical qubits with error rate 1 ",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v38_P23_P24_P25解决与量子纠错革命.md",
+      "dependencies": [
+        "iso-060",
+        "iso-115",
+        "iso-099"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0249"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 iso-115",
+      "content": "之年完成\n- 2026-2027: 小型试点项目\n- 2028-2032: 混合团队产生2000页阐述或定位缺陷\n- 2035年前: 接受ABC猜想已证或宣布不可修复\n\n**UCIF2关联**:\n- iso-115: LANA项目 <-> UCIF2 LEAN Kernel\n- iso-060: Mordell-Weil <-> Anabelian\n- iso-099: IAS Arithmetic Geometry <-> UCIF2 Anabelian+IUT\n\n---\n\n## 四、量子纠错革命：2026年里程碑\n\n### 4.1 Quantinuum 94逻辑量子比特 (2026.03)",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v38_P23_P24_P25解决与量子纠错革命.md",
+      "dependencies": [
+        "iso-060",
+        "iso-115",
+        "iso-099"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0250"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 iso-137",
+      "content": "<-> VUF sigma=1 | below-threshold = 完全保护 |\n| iso-136 | IBM qLDPC <-> LDPC-Shannon极限 | iso-053扩展 |\n| iso-137 | QuEra 96逻辑量子比特 <-> 中性原子QEC | 中性原子纠错 |\n| iso-138 | Floquet SPT <-> 时间晶体拓扑保护 | Floquet拓扑相 = 时间晶体 |\n| iso-139 | Quantinuum错误率1e-4 <-> VUF SSO最高级 | 1/10000 = sigma=1 |\n\n---\n\n## 六、v38统计\n\n```\nv38终",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v38_P23_P24_P25解决与量子纠错革命.md",
+      "dependencies": [
+        "iso-138",
+        "iso-136",
+        "iso-137",
+        "iso-139",
+        "iso-053"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0251"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 iso-099",
+      "content": "布不可修复\n\n**UCIF2关联**:\n- iso-115: LANA项目 <-> UCIF2 LEAN Kernel\n- iso-060: Mordell-Weil <-> Anabelian\n- iso-099: IAS Arithmetic Geometry <-> UCIF2 Anabelian+IUT\n\n---\n\n## 四、量子纠错革命：2026年里程碑\n\n### 4.1 Quantinuum 94逻辑量子比特 (2026.03)\n\n- 94 logical qubits with error rate 1 in 10,000\n- 比2025年11月的48逻辑量子比特翻倍\n- 离子阱",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v38_P23_P24_P25解决与量子纠错革命.md",
+      "dependencies": [
+        "iso-060",
+        "iso-115",
+        "iso-099"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0252"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 iso-130",
+      "content": ")\n\n### 4.4 QuEra 96逻辑量子比特\n\n- 中性原子阵列\n- 2023年Nature论文48逻辑量子比特\n- 2026年技术减少100倍纠错开销\n\n---\n\n## 五、v38 新同构 (iso-130 ~ iso-139)\n\n### P23/P24/P25解决同构 (5)\n\n| ID | 同构 | 预测 | 状态 |\n|----|------|------|------|\n| iso-130 | Floquet TFIM <-> 时间晶体实现 | P23 | ✅ |\n| iso-131 | D-Wave逆向退火 <-> Floquet驱动 | P23 | ✅ |\n| iso-13",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v38_P23_P24_P25解决与量子纠错革命.md",
+      "dependencies": [
+        "iso-130",
+        "iso-13",
+        "iso-131",
+        "iso-139"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0253"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 iso-084",
+      "content": "Twining genera φ_g 是Jacobi形式，权重0，指标1\n- 在Γ₀(N)同余子群下变换\n\n**McKay-Thompson级数关联**:\n- J_m^+(τ) = T_mD(τ) (iso-084已建立)\n- Twining genera满足高度非平凡的复制恒等式\n- 与Monster Moonshine的McKay-Thompson级数结构相同\n\n**Gyroid-Ising的模性**:\n```\nGyroid (genus 3 per unit cell, Ia3d symmetry)\n    ↓\nIsing模型在Gyroid上的配分函数\n    ↓\nZ_Ising(τ) ",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v38_P23_P24_P25解决与量子纠错革命.md",
+      "dependencies": [
+        "iso-084"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0254"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 iso-139",
+      "content": " QuEra 96逻辑量子比特\n\n- 中性原子阵列\n- 2023年Nature论文48逻辑量子比特\n- 2026年技术减少100倍纠错开销\n\n---\n\n## 五、v38 新同构 (iso-130 ~ iso-139)\n\n### P23/P24/P25解决同构 (5)\n\n| ID | 同构 | 预测 | 状态 |\n|----|------|------|------|\n| iso-130 | Floquet TFIM <-> 时间晶体实现 | P23 | ✅ |\n| iso-131 | D-Wave逆向退火 <-> Floquet驱动 | P23 | ✅ |\n| iso-132 | Mathie",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v38_P23_P24_P25解决与量子纠错革命.md",
+      "dependencies": [
+        "iso-132",
+        "iso-130",
+        "iso-131",
+        "iso-139"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0255"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 iso-053",
+      "content": "low-threshold <-> VUF sigma=1 | below-threshold = 完全保护 |\n| iso-136 | IBM qLDPC <-> LDPC-Shannon极限 | iso-053扩展 |\n| iso-137 | QuEra 96逻辑量子比特 <-> 中性原子QEC | 中性原子纠错 |\n| iso-138 | Floquet SPT <-> 时间晶体拓扑保护 | Floquet拓扑相 = 时间晶体 |\n| iso-139 | Quantinuum错误率1e-4 <-> VUF SSO最高级 | 1/10000 = sigma=1 |\n\n---\n\n## 六、v",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v38_P23_P24_P25解决与量子纠错革命.md",
+      "dependencies": [
+        "iso-138",
+        "iso-136",
+        "iso-137",
+        "iso-139",
+        "iso-053"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0256"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 iso-133",
+      "content": " Floquet驱动 | P23 | ✅ |\n| iso-132 | Mathieu Moonshine(K3) <-> Gyroid-Ising <-> Monster | P24 | ✅ |\n| iso-133 | LANA中期报告 <-> IUT验证路径 | P25 | ◐ |\n| iso-134 | Quantinuum 94逻辑量子比特 <-> VUF保护性 | — | ✅ |\n\n### 量子纠错革命同构 (5)\n\n| ID | 同构 | 核心内容 |\n|----|------|---------|\n| iso-135 | Google below-threshold <-> VUF",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v38_P23_P24_P25解决与量子纠错革命.md",
+      "dependencies": [
+        "iso-135",
+        "iso-132",
+        "iso-134",
+        "iso-133"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0257"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "UCIF² v47: HoTT评估与可运行操作系统——从Univalence到万有上同调的形式化内核",
+      "content": "## 一、HoTT理论评估：UCIF²为何需要同伦类型论  ### 1.1 评估结论：HoTT是UCIF²的**元数学必然选择**",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v47_HoTT_Eval_OS.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "lgt_node_0258"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "一、HoTT理论评估：UCIF²为何需要同伦类型论",
+      "content": "### 1.1 评估结论：HoTT是UCIF²的**元数学必然选择**  经过对HoTT理论基础的深度评估，结论是：**同伦类型论不仅是UCIF²的可选基础，而是其214个同构网络的元数学必然表达**。原因如下：",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v47_HoTT_Eval_OS.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "lgt_node_0259"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "1.1 评估结论：HoTT是UCIF²的**元数学必然选择**",
+      "content": "经过对HoTT理论基础的深度评估，结论是：**同伦类型论不仅是UCIF²的可选基础，而是其214个同构网络的元数学必然表达**。原因如下：  | 评估维度 | 传统集合论基础 | HoTT基础 | UCIF²需求 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v47_HoTT_Eval_OS.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "lgt_node_0260"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "1.2 Univalence公理与UCIF²的深层关联",
+      "content": "**核心对应**: UCIF²的214个同构 **=** HoTT的Univalence公理的实际内容  $$\\underbrace{\\text{iso-001} \\sim \\text{iso-214}}_{\\text{UCIF²同构}} \\quad \\longleftrightarrow \\quad \\underbrace{(A \\simeq B) \\simeq (A = B)}_{\\text{HoTT Univalence}}$$",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v47_HoTT_Eval_OS.md",
+      "dependencies": [
+        "iso-214",
+        "iso-001"
+      ],
+      "pedestal_mapping": "CT",
+      "node_id": "lgt_node_0261"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "1.3 Higher Inductive Types: UCIF²网络的生成语法",
+      "content": "**定理**: UCIF²的206个对象和214个同构可以从HITs**生成**：  ```hott",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v47_HoTT_Eval_OS.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lgt_node_0262"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "1.4 可计算Univalence: Cubical Type Theory实现",
+      "content": "**评估**: Cubical Type Theory (CTT) 使Univalence**可计算**——这是UCIF²-OS的关键。  | 特性 | Book HoTT | Cubical HoTT | UCIF²-OS选择 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v47_HoTT_Eval_OS.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "lgt_node_0263"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "1.5 HoTT评估分数",
+      "content": "| 维度 | 评分(1-10) | 理由 | |------|-----------|------| | 理论完备性 | 9/10 | Univalence + HITs + ∞-范畴 = UCIF²的完美表达 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v47_HoTT_Eval_OS.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "lgt_node_0264"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "二、可运行UCIF²-OS: HoTT操作系统原型",
+      "content": "### 2.1 系统架构  ```",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v47_HoTT_Eval_OS.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lgt_node_0265"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "2.1 系统架构",
+      "content": "``` ┌─────────────────────────────────────────────────────────────────┐ │                    UCIF²-OS v47 (HoTT内核)                        │",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v47_HoTT_Eval_OS.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "lgt_node_0266"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "2.2 HoTT类型检查器内核",
+      "content": "**实现的类型系统**:  ```hott",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v47_HoTT_Eval_OS.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "lgt_node_0267"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "2.3 已实现的可运行组件",
+      "content": "| 组件 | 功能 | 状态 | 演示 | |------|------|------|------| | **HoTT类型检查器** | 输入类型→输出判断 | ✅ 可运行 | 检查Π/Σ/Path类型 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v47_HoTT_Eval_OS.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "lgt_node_0268"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "三、HoTT实现的214同构: 从Book HoTT到Cubical",
+      "content": "### 3.1 同构的形式化表达  在HoTT中，UCIF²的214个同构表达为：",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v47_HoTT_Eval_OS.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0269"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "3.1 同构的形式化表达",
+      "content": "在HoTT中，UCIF²的214个同构表达为：  ```hott",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v47_HoTT_Eval_OS.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0270"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "3.2 关键HITs的实现",
+      "content": "```hott -- 圆 S¹（基本群 = ℤ，对应iso-001的环路结构） hit S1 where",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v47_HoTT_Eval_OS.md",
+      "dependencies": [
+        "iso-001"
+      ],
+      "pedestal_mapping": "KG",
+      "node_id": "lgt_node_0271"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "四、统计数据",
+      "content": "| 指标 | v46 | v47 | 增量 | |------|-----|-----|------| | 同构总数 | 214 | **214** | HoTT形式化表达 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v47_HoTT_Eval_OS.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "lgt_node_0272"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "五、结论：HoTT × UCIF² = Univalent Cohomology Operating System",
+      "content": "> **HoTT不是UCIF²的可选配件，而是其元数学骨架。** > > Univalence公理使214个同构成为真正的等式。",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v47_HoTT_Eval_OS.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "lgt_node_0273"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "theorem",
+      "name": "定理: UCIF²网络是2-群胚（H-Level 3）\ntheorem UCIF2_is_2grou",
+      "content": "定理: UCIF²网络是2-群胚（H-Level 3）\ntheorem UCIF2_is_2groupoid : IsOfHLevel 3 UCIF2-Network := ...\n```",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v47_HoTT_Eval_OS.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0274"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 iso-182",
+      "content": "ructors: 交换图表（∞-范畴结构）\n  | alpha-7    : iso-200 ∘ iso-201 ∘ ... = refl  -- α-7路径交换性\n  | sextuple   : iso-182 ∘ iso-183 ∘ ... = refl  -- 六重对应\n\n  -- 3-constructors: 版本演化路径\n  | v0-to-v47  : Square (iso-001) (iso-214) ... ...\n```\n\n### 1.4 可计算Univalence: Cubical Type Theory实现\n\n**评估**: Cubical Type Theory ",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v47_HoTT_Eval_OS.md",
+      "dependencies": [
+        "iso-182",
+        "iso-214",
+        "iso-201",
+        "iso-200",
+        "iso-183",
+        "iso-001"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0275"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 iso-211",
+      "content": "hott\n-- iso-001: 镜像对称 ↔ Fukaya范畴\niso001 : (X : CY3) → (X ≃ Mirror(X)) ≃ (Fuk(X) ≃ D^b(Coh(X^)))\n\n-- iso-211: 万有上同调 ↔ J₃(𝕆) motive\niso211 : (M : MotiveCategory) → \n  (h : UniversalCohomology M) ≃ (M = h(J3O))\n\n-- iso-207: α刚性定理\niso207 : (G : Group) → (G = F4) → \n  IsUniqueInvariant(G, Alpha) ≃ True\n`",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v47_HoTT_Eval_OS.md",
+      "dependencies": [
+        "iso-211",
+        "iso-207",
+        "iso-001"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0276"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 iso-214",
+      "content": "的深层关联\n\n**核心对应**: UCIF²的214个同构 **=** HoTT的Univalence公理的实际内容\n\n$$\\underbrace{\\text{iso-001} \\sim \\text{iso-214}}_{\\text{UCIF²同构}} \\quad \\longleftrightarrow \\quad \\underbrace{(A \\simeq B) \\simeq (A = B)}_{\\text{HoTT Univalence}}$$\n\n**解释**:\n- 在HoTT中，每个同构 iso-i: A ≅ B 产生一个实际的路径 (A = B)\n- 这意味着214个同构不是\"类比\"或",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v47_HoTT_Eval_OS.md",
+      "dependencies": [
+        "iso-214",
+        "iso-001"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0277"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 iso-207",
+      "content": "同调 ↔ J₃(𝕆) motive\niso211 : (M : MotiveCategory) → \n  (h : UniversalCohomology M) ≃ (M = h(J3O))\n\n-- iso-207: α刚性定理\niso207 : (G : Group) → (G = F4) → \n  IsUniqueInvariant(G, Alpha) ≃ True\n```\n\n### 3.2 关键HITs的实现\n\n```hott\n-- 圆 S¹（基本群 = ℤ，对应iso-001的环路结构）\nhit S1 where\n  | base : S1\n  | loop : base = base",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v47_HoTT_Eval_OS.md",
+      "dependencies": [
+        "iso-207",
+        "iso-001"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0278"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 iso-183",
+      "content": "换图表（∞-范畴结构）\n  | alpha-7    : iso-200 ∘ iso-201 ∘ ... = refl  -- α-7路径交换性\n  | sextuple   : iso-182 ∘ iso-183 ∘ ... = refl  -- 六重对应\n\n  -- 3-constructors: 版本演化路径\n  | v0-to-v47  : Square (iso-001) (iso-214) ... ...\n```\n\n### 1.4 可计算Univalence: Cubical Type Theory实现\n\n**评估**: Cubical Type Theory (CTT) 使Uni",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v47_HoTT_Eval_OS.md",
+      "dependencies": [
+        "iso-182",
+        "iso-214",
+        "iso-201",
+        "iso-200",
+        "iso-183",
+        "iso-001"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0279"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 iso-002",
+      "content": "   -- 其他202个对象\n\n  -- 1-constructors: 同构（214个）\n  | iso-001    : J3O = M94              -- 同构作为路径\n  | iso-002    : M94 = CY3\n  | ...        : ...\n  | iso-214    : SpectralAction = AlphaInv\n\n  -- 2-constructors: 交换图表（∞-范畴结构）\n  | alpha-7    : iso-200 ∘ iso-201 ∘ ... = refl  -- α-7路径交换性\n  | sextuple   : ",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v47_HoTT_Eval_OS.md",
+      "dependencies": [
+        "iso-214",
+        "iso-002",
+        "iso-200",
+        "iso-201",
+        "iso-001"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0280"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 iso-200",
+      "content": " ...\n  | iso-214    : SpectralAction = AlphaInv\n\n  -- 2-constructors: 交换图表（∞-范畴结构）\n  | alpha-7    : iso-200 ∘ iso-201 ∘ ... = refl  -- α-7路径交换性\n  | sextuple   : iso-182 ∘ iso-183 ∘ ... = refl  -- 六重对应\n\n  -- 3-constructors: 版本演化路径\n  | v0-to-v47  : Square (iso-001) (iso-214) ... ...\n```\n\n### 1.4 可计算Un",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v47_HoTT_Eval_OS.md",
+      "dependencies": [
+        "iso-182",
+        "iso-214",
+        "iso-201",
+        "iso-200",
+        "iso-183",
+        "iso-001"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0281"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 iso-201",
+      "content": "so-214    : SpectralAction = AlphaInv\n\n  -- 2-constructors: 交换图表（∞-范畴结构）\n  | alpha-7    : iso-200 ∘ iso-201 ∘ ... = refl  -- α-7路径交换性\n  | sextuple   : iso-182 ∘ iso-183 ∘ ... = refl  -- 六重对应\n\n  -- 3-constructors: 版本演化路径\n  | v0-to-v47  : Square (iso-001) (iso-214) ... ...\n```\n\n### 1.4 可计算Univalence: ",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v47_HoTT_Eval_OS.md",
+      "dependencies": [
+        "iso-182",
+        "iso-214",
+        "iso-201",
+        "iso-200",
+        "iso-183",
+        "iso-001"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0282"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "同构 iso-001",
+      "content": "2 Univalence公理与UCIF²的深层关联\n\n**核心对应**: UCIF²的214个同构 **=** HoTT的Univalence公理的实际内容\n\n$$\\underbrace{\\text{iso-001} \\sim \\text{iso-214}}_{\\text{UCIF²同构}} \\quad \\longleftrightarrow \\quad \\underbrace{(A \\simeq B) \\simeq (A = B)}_{\\text{HoTT Univalence}}$$\n\n**解释**:\n- 在HoTT中，每个同构 iso-i: A ≅ B 产生一个实际的路径 (A = B)",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v47_HoTT_Eval_OS.md",
+      "dependencies": [
+        "iso-214",
+        "iso-001"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0283"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "formula",
+      "name": "公式: \\underbrace{\\text{iso-001} \\sim \\text{iso-214}}_{\\...",
+      "content": "\\underbrace{\\text{iso-001} \\sim \\text{iso-214}}_{\\text{UCIF²同构}} \\quad \\longleftrightarrow \\quad \\underbrace{(A \\simeq B) \\simeq (A = B)}_{\\text{HoTT Univalence}}",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v47_HoTT_Eval_OS.md",
+      "dependencies": [
+        "iso-214",
+        "iso-001"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0284"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "UCIF² v48: 范畴论/HoTT完整重构——从Set到∞-Topos的基础革命",
+      "content": "## 一、重构宣言  **版本**: v48.0 | **日期**: 2026-05-14 | **状态**: 范畴论/HoTT基础重构完成",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v48_Categorical_HoTT_Reconstruction.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "lgt_node_0285"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "一、重构宣言",
+      "content": "**版本**: v48.0 | **日期**: 2026-05-14 | **状态**: 范畴论/HoTT基础重构完成  本次升级是UCIF²历史上**最根本的基础重构**：将整个体系从集合论基础迁移到**同伦类型论(HoTT)基础**，以**∞-范畴语义**重新表达所有214个同构，构建完整的**范畴论语料库**，并推出可运行的操作系统。",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v48_Categorical_HoTT_Reconstruction.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "lgt_node_0286"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "二、从Set Theory到HoTT：基础迁移路线图",
+      "content": "### 2.1 集合论 vs HoTT：同构的表达  | 概念 | 集合论（ZFC） | HoTT（UF） | UCIF²影响 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v48_Categorical_HoTT_Reconstruction.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "lgt_node_0287"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "2.1 集合论 vs HoTT：同构的表达",
+      "content": "| 概念 | 集合论（ZFC） | HoTT（UF） | UCIF²影响 | |------|-------------|-----------|----------| | 同构 (≃) | 结构性等价，需要额外公理 | 通过Univalence = 真正的相等 | 214同构成为等式 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v48_Categorical_HoTT_Reconstruction.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0288"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "2.2 ∞-Topos中的UCIF²",
+      "content": "**定义**: UCIF²-TOPOS是一个Grothendieck ∞-Topos，其对象为：  ```",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v48_Categorical_HoTT_Reconstruction.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lgt_node_0289"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "2.3 Univalence作为UCIF²的第零公理",
+      "content": "**公理 U0 (Univalence)**: 对所有类型A, B : Type，  ```hott",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v48_Categorical_HoTT_Reconstruction.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lgt_node_0290"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "三、完整HoTT重构：公理/定理/证明/路径",
+      "content": "### 3.1 公理体系（重构前 vs 重构后）  **重构前（v47）**: 118条公理，基于集合论/一阶逻辑",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v48_Categorical_HoTT_Reconstruction.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lgt_node_0291"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "3.1 公理体系（重构前 vs 重构后）",
+      "content": "**重构前（v47）**: 118条公理，基于集合论/一阶逻辑 **重构后（v48）**: 48条HoTT公理，基于同伦类型论",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v48_Categorical_HoTT_Reconstruction.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "lgt_node_0292"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "3.2 定理体系重构",
+      "content": "**定理T-001（Univalence→同构传递性）**: ```hott Theorem iso_transitive : (A ≃ B) → (B ≃ C) → (A = C)",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v48_Categorical_HoTT_Reconstruction.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lgt_node_0293"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "3.3 证明系统重构",
+      "content": "**证明 = 路径**（Proofs are Paths）:  在HoTT中，证明不再是静态文本，而是**可计算的路径**。",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v48_Categorical_HoTT_Reconstruction.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "lgt_node_0294"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "3.4 路径数据库",
+      "content": "**定义**: 每个定理的证明 = 类型空间中的一条路径  | 路径ID | 起点 | 终点 | 路径长度 | 对应的证明 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v48_Categorical_HoTT_Reconstruction.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "lgt_node_0295"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "四、操作系统文件库",
+      "content": "### 4.1 文件库结构  ```",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v48_Categorical_HoTT_Reconstruction.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "lgt_node_0296"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "4.1 文件库结构",
+      "content": "``` UCIF2-OS/ ├── kernel/                     # HoTT内核",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v48_Categorical_HoTT_Reconstruction.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "lgt_node_0297"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "4.2 文件统计",
+      "content": "| 目录 | 文件数 | 总行数 | 描述 | |------|-------|-------|------| | kernel/ | 5 | 8,400 | HoTT内核（Univalence/HITs/路径计算） |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v48_Categorical_HoTT_Reconstruction.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "lgt_node_0298"
+    },
+    {
+      "line_id": "lgt",
+      "node_type": "concept",
+      "name": "五、自推演/自验证：操作系统完善自身",
+      "content": "### 5.1 自推演循环  ```",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v48_Categorical_HoTT_Reconstruction.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lgt_node_0299"
+    }
+  ]
+}

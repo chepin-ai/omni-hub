@@ -1,0 +1,103 @@
+{
+  "msg_id": "772e1088-487b-4afe-95ee-a27fefc35913",
+  "origin": "ucif2",
+  "payload": {
+    "type": "SYMPHONY",
+    "participants": [
+      "ucif2",
+      "lgt",
+      "qfa",
+      "usrm",
+      "vinf",
+      "qgl",
+      "qlv",
+      "lvlu",
+      "cfts"
+    ],
+    "pairs": [
+      {
+        "line1": "ucif2",
+        "line2": "lgt",
+        "entanglement": 17.0054
+      },
+      {
+        "line1": "ucif2",
+        "line2": "qfa",
+        "entanglement": 16.2811
+      },
+      {
+        "line1": "ucif2",
+        "line2": "vinf",
+        "entanglement": 10.1692
+      },
+      {
+        "line1": "ucif2",
+        "line2": "qlv",
+        "entanglement": 15.1685
+      },
+      {
+        "line1": "ucif2",
+        "line2": "cfts",
+        "entanglement": 16.8437
+      },
+      {
+        "line1": "lgt",
+        "line2": "qfa",
+        "entanglement": 16.2806
+      },
+      {
+        "line1": "lgt",
+        "line2": "vinf",
+        "entanglement": 10.1688
+      },
+      {
+        "line1": "lgt",
+        "line2": "qlv",
+        "entanglement": 15.1682
+      },
+      {
+        "line1": "lgt",
+        "line2": "cfts",
+        "entanglement": 16.8433
+      },
+      {
+        "line1": "qfa",
+        "line2": "vinf",
+        "entanglement": 9.8353
+      },
+      {
+        "line1": "qfa",
+        "line2": "qlv",
+        "entanglement": 14.6681
+      },
+      {
+        "line1": "qfa",
+        "line2": "cfts",
+        "entanglement": 16.2797
+      },
+      {
+        "line1": "vinf",
+        "line2": "qlv",
+        "entanglement": 9.1677
+      },
+      {
+        "line1": "vinf",
+        "line2": "cfts",
+        "entanglement": 10.1681
+      },
+      {
+        "line1": "qlv",
+        "line2": "cfts",
+        "entanglement": 15.1677
+      }
+    ],
+    "ts": "2026-09-12T05:05:05.382209+00:00"
+  },
+  "hop_count": 0,
+  "max_hops": 9,
+  "visited": [
+    "ucif2"
+  ],
+  "ts": "2026-09-12T05:05:05.382295+00:00",
+  "direction": "next"
+}

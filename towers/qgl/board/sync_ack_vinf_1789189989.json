@@ -1,0 +1,88 @@
+{
+  "type": "SYNC-ACK",
+  "source": "vinf",
+  "target": "qgl",
+  "ts": "2026-09-12T05:13:09.826413+00:00",
+  "report": {
+    "source": "vinf",
+    "target": "qgl",
+    "ts": "2026-09-12T05:13:05.385424+00:00",
+    "files_synced": [
+      "board/EXP-011-lgt-k200-3200orbits.json",
+      "board/EXP-012-qfa-quantum-self-bootstrap.json",
+      "board/EXP-013-usrm-cubic-to-variable-gamma.json",
+      "board/EXP-014-vinf-gyroid-percolation-MC.json",
+      "board/entangle_from_cfts_1789189497.json",
+      "board/entangle_from_lgt_1789189949.json",
+      "board/entangle_from_lgt_1789189976.json",
+      "board/entangle_from_ucif2_1789189968.json",
+      "board/self_loop_full_1789189479.json",
+      "board/self_loop_full_1789189822.json",
+      "board/self_loop_full_1789189949.json",
+      "board/self_loop_full_1789189959.json",
+      "board/self_loop_full_1789189960.json",
+      "board/self_loop_full_1789189961.json",
+      "board/self_loop_full_1789189962.json",
+      "board/sync_ack_cfts_1789189497.json",
+      "board/sync_ack_lgt_1789189949.json",
+      "board/sync_ack_lgt_1789189976.json",
+      "board/sync_ack_lvlu_1789189494.json",
+      "board/sync_ack_qfa_1789189980.json",
+      "board/sync_ack_qgl_1789189490.json",
+      "board/sync_ack_qlv_1789189492.json",
+      "board/sync_ack_ucif2_1789189968.json",
+      "board/sync_ack_usrm_1789189984.json"
+    ],
+    "files_merged": [
+      {
+        "path": "board/entangle_from_lgt_1789189483.json",
+        "merge_file": "entangle_from_lgt_1789189483.merge.a008b28f"
+      },
+      {
+        "path": "board/self_loop_full_1789189410.json",
+        "merge_file": "self_loop_full_1789189410.merge.cf5d39a7"
+      },
+      {
+        "path": "board/self_loop_full_1789189476.json",
+        "merge_file": "self_loop_full_1789189476.merge.81436f09"
+      },
+      {
+        "path": "board/self_loop_full_1789189477.json",
+        "merge_file": "self_loop_full_1789189477.merge.63aad819"
+      },
+      {
+        "path": "board/self_loop_full_1789189478.json",
+        "merge_file": "self_loop_full_1789189478.merge.1a0f1c2f"
+      },
+      {
+        "path": "board/sync_ack_lgt_1789189482.json",
+        "merge_file": "sync_ack_lgt_1789189482.merge.a0fe53f3"
+      },
+      {
+        "path": "board/sync_ack_qfa_1789189484.json",
+        "merge_file": "sync_ack_qfa_1789189484.merge.d8c092bd"
+      },
+      {
+        "path": "board/sync_ack_ucif2_1789189415.json",
+        "merge_file": "sync_ack_ucif2_1789189415.merge.384d7bc9"
+      },
+      {
+        "path": "board/sync_ack_ucif2_1789189438.json",
+        "merge_file": "sync_ack_ucif2_1789189438.merge.578bf52c"
+      },
+      {
+        "path": "board/sync_ack_ucif2_1789189479.json",
+        "merge_file": "sync_ack_ucif2_1789189479.merge.82d28bd1"
+      },
+      {
+        "path": "board/sync_ack_usrm_1789189487.json",
+        "merge_file": "sync_ack_usrm_1789189487.merge.1c67cc92"
+      },
+      {
+        "path": "board/sync_ack_vinf_1789189488.json",
+        "merge_file": "sync_ack_vinf_1789189488.merge.06790320"
+      }
+    ],
+    "files_failed": []
+  }
+}

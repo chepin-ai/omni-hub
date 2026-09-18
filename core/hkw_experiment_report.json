@@ -1,0 +1,42 @@
+{
+  "timestamp": "2026-09-15T21:26:52.254836",
+  "system": "OMNI-HUB v6.0 HistoricalKnowledgeWeaver",
+  "statistics": {
+    "total_nodes": 327,
+    "total_edges": 299,
+    "domains": {
+      "moonshine": 105,
+      "zhoutian": 58,
+      "ucif2": 67,
+      "autopoiesis": 50,
+      "quantum": 25,
+      "sdrive": 22
+    },
+    "avg_activation": 0.01387269116085627,
+    "total_participations": 23
+  },
+  "modules": {
+    "quantum_base_v2": {
+      "injected": 132,
+      "state": "knowledge_enriched"
+    },
+    "goal_autopoiesis": {
+      "injected": 165,
+      "state": "knowledge_enriched"
+    },
+    "jing_wei_xin": {
+      "injected": 158,
+      "state": "knowledge_enriched"
+    },
+    "self_referential_engine": {
+      "injected": 338,
+      "state": "knowledge_enriched"
+    },
+    "circulation_verifier": {
+      "injected": 209,
+      "state": "knowledge_enriched"
+    }
+  },
+  "activation_history_count": 23,
+  "weave_log_count": 1002
+}

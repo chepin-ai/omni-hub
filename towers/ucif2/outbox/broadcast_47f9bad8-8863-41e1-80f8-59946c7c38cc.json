@@ -1,0 +1,15 @@
+{
+  "origin": "ucif2",
+  "ts": "2026-09-12T05:05:07.011054+00:00",
+  "direction": "both",
+  "hops": [
+    {
+      "to": "lgt",
+      "direction": "next"
+    },
+    {
+      "to": "cfts",
+      "direction": "prev"
+    }
+  ]
+}

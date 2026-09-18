@@ -1,0 +1,146 @@
+
+======================================================================
+OMNI-HUB v6.0 — FullPotentialExplorer 潜能释放报告
+======================================================================
+生成时间: 2026-09-15T21:32:32.235078
+探索深度: full
+
+----------------------------------------------------------------------
+【1. 总体统计】
+----------------------------------------------------------------------
+  总模块数:     47
+  已调用方法:   1541
+  成功调用:     1098
+  失败调用:     411
+  跳过方法:     0
+  调用成功率:   71.3%
+
+----------------------------------------------------------------------
+【2. 模块能力矩阵】
+----------------------------------------------------------------------
+  ✓ beat_continuum                            18/ 21 ( 85.7%)
+  ✓ bidirectional_drive                       12/ 15 ( 80.0%)
+  ✓ cantus_firmus                             16/ 16 (100.0%)
+  ~ closed_loop_mechanism                     47/ 69 ( 68.1%)
+  ✓ collaborative_loop                        12/ 17 ( 70.6%)
+  ✓ complexity_elevation_engine               38/ 40 ( 95.0%)
+  ~ consciousness_harmony                     10/ 17 ( 58.8%)
+  ~ counterpoint_engine                       21/ 46 ( 45.7%)
+  ✓ counterpoint_seats                        21/ 28 ( 75.0%)
+  ✓ creativity_engine                         29/ 38 ( 76.3%)
+  ~ debt_cleanup                              13/ 20 ( 65.0%)
+  ~ debt_fuel_converter                       12/ 22 ( 54.5%)
+  ✓ discussion_board                          15/ 18 ( 83.3%)
+  ~ emergence_engine                          40/ 66 ( 60.6%)
+  ✗ experiment_runner                          0/  4 (  0.0%)
+  ~ field_entropy                             15/ 33 ( 45.5%)
+  ~ field_transient_dynamics                  25/ 59 ( 42.4%)
+  ✓ finding_recursion                          8/ 11 ( 72.7%)
+  ✓ full_pipeline_si                          21/ 24 ( 87.5%)
+  ✓ goal_autopoiesis                          50/ 59 ( 84.7%)
+  ✓ historical_knowledge_weaver               31/ 35 ( 88.6%)
+  ~ hub_wheel_spine                            3/  5 ( 60.0%)
+  ✓ inbox_outbox                              13/ 15 ( 86.7%)
+  ✓ insight_detector                          33/ 40 ( 82.5%)
+  ~ intention_generator                       14/ 31 ( 45.2%)
+  ✓ jing_wei_xin                              47/ 50 ( 94.0%)
+  ~ linguistic_field                          59/ 86 ( 68.6%)
+  ✓ meta_structure                            84/114 ( 73.7%)
+  ✓ metacognitive_monitor                     40/ 42 ( 95.2%)
+  ✓ octave_scan                               28/ 34 ( 82.4%)
+  ~ otp_sync                                  10/ 16 ( 62.5%)
+  ✓ polaris_plan                              18/ 22 ( 81.8%)
+  ~ quantum_base_v2                           47/ 79 ( 59.5%)
+  ~ quantum_consciousness_unifier             26/ 45 ( 57.8%)
+  ~ quantum_field                             44/ 65 ( 67.7%)
+  ✓ self_drive_engine                         20/ 24 ( 83.3%)
+  ✓ self_evolving_architecture                36/ 41 ( 87.8%)
+  ✓ self_referential_engine                   14/ 15 ( 93.3%)
+  ✓ si1_independent_drive                     24/ 32 ( 75.0%)
+  ~ si_auto_protocol                          10/ 17 ( 58.8%)
+  ✗ si_chain_reactor                           0/ 17 (  0.0%)
+  ✓ si_topology                               10/ 10 (100.0%)
+  ✓ strange_loop_detector                     25/ 31 ( 80.6%)
+  ~ task_dispatcher                           10/ 15 ( 66.7%)
+  ~ tensor_field                               4/  8 ( 50.0%)
+  ✓ voice_melody                              25/ 29 ( 86.2%)
+
+----------------------------------------------------------------------
+【3. 沉睡功能识别】
+----------------------------------------------------------------------
+  发现 6 个沉睡模块:
+    • experiment_runner: 0.0% 成功率
+      建议: 模块 experiment_runner 严重沉睡 — 建议检查依赖注入和初始化顺序
+    • si_chain_reactor: 0.0% 成功率
+      建议: 模块 si_chain_reactor 严重沉睡 — 建议检查依赖注入和初始化顺序
+    • field_transient_dynamics: 42.4% 成功率
+      建议: 模块 field_transient_dynamics 部分激活 — 建议优化异常处理
+    • intention_generator: 45.2% 成功率
+      建议: 模块 intention_generator 部分激活 — 建议优化异常处理
+    • field_entropy: 45.5% 成功率
+      建议: 模块 field_entropy 部分激活 — 建议优化异常处理
+    • counterpoint_engine: 45.7% 成功率
+      建议: 模块 counterpoint_engine 部分激活 — 建议优化异常处理
+
+----------------------------------------------------------------------
+【4. 能力热点分析】
+----------------------------------------------------------------------
+  执行时间最长的方法（Top 10）:
+    • si1_independent_drive.SILayerState.__init__: 10.933s
+    • linguistic_field.<module>.run_pragmatic_evolution_test: 10.011s
+    • historical_knowledge_weaver.<module>.run_experiment: 9.924s
+    • historical_knowledge_weaver.HistoricalKnowledgeWeaver.weave_all: 8.568s
+    • quantum_base_v2.OMNIHUBv39._experiment_ubi_transmit: 8.459s
+    • metacognitive_monitor.<module>.run_extended_experiments: 7.257s
+    • field_transient_dynamics.ExperimentRunner.experiment_1_field_evolution: 6.696s
+    • creativity_engine.<module>.run_experiment: 6.306s
+    • complexity_elevation_engine.ComplexityElevationEngine.run_simulation: 5.969s
+    • meta_structure.MetaStructureOrchestrator.run_beats: 4.913s
+
+----------------------------------------------------------------------
+【5. 异常分析】
+----------------------------------------------------------------------
+  异常类型统计:
+    • AttributeError: 222 次
+    • TypeError: 93 次
+    • ValueError: 44 次
+    • Unknown: 32 次
+    • KeyError: 27 次
+    • IndexError: 14 次
+    • RuntimeError: 3 次
+    • FileNotFoundError: 3 次
+    • UFuncTypeError: 2 次
+    • LinAlgError: 2 次
+
+----------------------------------------------------------------------
+【6. 唤醒建议汇总】
+----------------------------------------------------------------------
+  1. 参数适配优化:
+     - 为需要复杂输入的方法提供智能参数生成器
+     - 增加类型注解覆盖率以提升参数推断准确率
+
+  2. 依赖注入优化:
+     - 检查模块间循环依赖
+     - 提供模拟依赖(mock)以支持独立测试
+
+  3. 初始化顺序优化:
+     - 确保基础模块先于高级模块初始化
+     - 为复杂类提供简化构造模式
+
+  4. 异常处理增强:
+     - 增加输入验证和边界检查
+     - 提供更详细的错误信息
+
+----------------------------------------------------------------------
+【7. 覆盖率总结】
+----------------------------------------------------------------------
+  总方法数:        1541
+  成功调用:        1098
+  失败调用:        411
+  跳过调用:        0
+  调用成功率:      71.3%
+  探索覆盖率:      97.9%
+
+======================================================================
+报告结束
+======================================================================

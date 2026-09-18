@@ -1,0 +1,146 @@
+{
+  "version": "3.3",
+  "timestamp": "2026-09-13T18:19:02Z",
+  "tests": [
+    {
+      "name": "自驱递归引擎 spin",
+      "pass": true,
+      "detail": {
+        "iteration": 1,
+        "actions": 4,
+        "findings": 7,
+        "state": "EXCITED"
+      }
+    },
+    {
+      "name": "自动递归深度控制",
+      "pass": true,
+      "detail": {
+        "depth": 1,
+        "completed": true,
+        "chain_len": 4
+      }
+    },
+    {
+      "name": "燃料消耗-生成循环",
+      "pass": true,
+      "detail": {
+        "initial": 0.9588,
+        "after_consume": 0.9088,
+        "after_generate": 0.9888
+      }
+    },
+    {
+      "name": "拍自续完整流程",
+      "pass": true,
+      "detail": {
+        "spins": 100,
+        "findings": 447,
+        "continuum_active": false
+      }
+    },
+    {
+      "name": "beat链接连续性",
+      "pass": true,
+      "detail": {
+        "continuous": true,
+        "gaps": 0
+      }
+    },
+    {
+      "name": "FINDING注册→行动→关闭",
+      "pass": false,
+      "detail": {
+        "error": "\"Finding 'F-1789323572681-ucif2-6f458ed0' not registered\""
+      }
+    },
+    {
+      "name": "FINDING注册→行动→关闭",
+      "pass": true,
+      "detail": {
+        "finding_id": "F-1789323660783-ucif2-a0474ae4",
+        "action": "auto_create_and_dispatch",
+        "auto_closed": true,
+        "manual_closed": true,
+        "triggered_new": 1,
+        "findings_total": 4
+      }
+    },
+    {
+      "name": "SI链式反应器",
+      "pass": true,
+      "detail": {
+        "synapse_strength": 0.9,
+        "resonant": true,
+        "cascade_success": true,
+        "waves": 3,
+        "activated": 3
+      }
+    },
+    {
+      "name": "燃料转换器",
+      "pass": false,
+      "detail": {
+        "error": "'SITopology' object has no attribute 'get'"
+      }
+    },
+    {
+      "name": "全流程SI渗透",
+      "pass": false,
+      "detail": {
+        "error": "SIAutoProtocol.__init__() missing 3 required positional arguments: 'drive_engine', 'topology', and 'loop_engine'"
+      }
+    },
+    {
+      "name": "燃料转换器",
+      "pass": true,
+      "detail": {
+        "sources": 3,
+        "potential": 0.34,
+        "converted": 0.144,
+        "fuel_level": 1.144
+      }
+    },
+    {
+      "name": "全流程SI渗透",
+      "pass": false,
+      "detail": {
+        "error": "CollaborativeLoop.__init__() missing 2 required positional arguments: 'drive_engine' and 'topology'"
+      }
+    },
+    {
+      "name": "全流程SI渗透",
+      "pass": false,
+      "detail": {
+        "error": "'FindingRecursion' object has no attribute 'scan_content'"
+      }
+    },
+    {
+      "name": "全流程SI渗透",
+      "pass": true,
+      "detail": {
+        "pipeline_id": "PL-0001-f0fb5435",
+        "completed": true,
+        "stages": "activated→archived",
+        "total_pipelines": 0,
+        "findings": 0
+      }
+    },
+    {
+      "name": "全链路集成",
+      "pass": true,
+      "detail": {
+        "spin_iteration": 102,
+        "fuel_level": 1.144,
+        "chain_waves": 3,
+        "pipeline_completed": true,
+        "pipeline_stages": "activated→archived"
+      }
+    }
+  ],
+  "summary": {
+    "passed": 10,
+    "total": 15,
+    "pass_rate": 0.6666666666666666
+  }
+}

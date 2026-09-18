@@ -1,0 +1,38 @@
+{
+  "line": "qfa",
+  "metrics": {
+    "health": 1.0,
+    "load": 0.02,
+    "throughput": 0.0167,
+    "latency": 0.0,
+    "entropy": 0.0,
+    "excitation_level": 0.0
+  },
+  "tensor": {
+    "si0": {
+      "file_count": 1,
+      "last_activity": 1789189476.0
+    },
+    "si1": {
+      "file_count": 0,
+      "last_activity": 0
+    },
+    "si2": {
+      "file_count": 1,
+      "last_activity": 1789189476.0
+    },
+    "si3": {
+      "file_count": 1,
+      "last_activity": 1789189476.0
+    },
+    "si4": {
+      "file_count": 0,
+      "last_activity": 0
+    },
+    "si5": {
+      "file_count": 0,
+      "last_activity": 0
+    }
+  },
+  "ts": "2026-09-12T05:04:36.972093+00:00"
+}

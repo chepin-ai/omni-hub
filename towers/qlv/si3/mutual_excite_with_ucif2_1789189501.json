@@ -1,0 +1,13 @@
+{
+  "type": "MUTUAL_EXCITE",
+  "partner": "ucif2",
+  "my_state": {
+    "health": 1.0,
+    "load": 0.06,
+    "throughput": 0.0333,
+    "latency": 9.0,
+    "entropy": 0.0,
+    "excitation_level": 0.0
+  },
+  "ts": "2026-09-12T05:05:01.530062+00:00"
+}

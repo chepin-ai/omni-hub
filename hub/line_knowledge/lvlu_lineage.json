@@ -1,0 +1,2341 @@
+{
+  "line_id": "lvlu",
+  "line_name": "元层次架构",
+  "timestamp": 1789662470.2627256,
+  "version": "12.0.0",
+  "lineage_tree": {
+    "root": {
+      "name": "lvlu",
+      "type": "line_root",
+      "children": [
+        "md_heading",
+        "python_class",
+        "python_function",
+        "generic_file",
+        "json_key"
+      ],
+      "weight": 1.0
+    },
+    "branches": {
+      "md_heading": {
+        "type": "md_heading",
+        "node_count": 11,
+        "avg_relevance": 0.75,
+        "nodes": [
+          {
+            "name": "lvlu线 SI4 升级自证报告（ucif2介入产出）",
+            "signature": "lvlu-SI4-self-cert-report.md::heading:lvlu线 SI4 升级自证报告（ucif2介入产出）",
+            "relevance": 0.75,
+            "source": "lvlu-SI4-self-cert-report.md"
+          },
+          {
+            "name": "线基本信息",
+            "signature": "lvlu-SI4-self-cert-report.md::heading:线基本信息",
+            "relevance": 0.75,
+            "source": "lvlu-SI4-self-cert-report.md"
+          },
+          {
+            "name": "1. ucif2介入说明",
+            "signature": "lvlu-SI4-self-cert-report.md::heading:1. ucif2介入说明",
+            "relevance": 0.75,
+            "source": "lvlu-SI4-self-cert-report.md"
+          },
+          {
+            "name": "2. 升级资格评估",
+            "signature": "lvlu-SI4-self-cert-report.md::heading:2. 升级资格评估",
+            "relevance": 0.75,
+            "source": "lvlu-SI4-self-cert-report.md"
+          },
+          {
+            "name": "2.1 数据充分性: 0.86",
+            "signature": "lvlu-SI4-self-cert-report.md::heading:2.1 数据充分性: 0.86",
+            "relevance": 0.75,
+            "source": "lvlu-SI4-self-cert-report.md"
+          },
+          {
+            "name": "2.2 验证充分性: 0.85",
+            "signature": "lvlu-SI4-self-cert-report.md::heading:2.2 验证充分性: 0.85",
+            "relevance": 0.75,
+            "source": "lvlu-SI4-self-cert-report.md"
+          },
+          {
+            "name": "2.3 形式化程度: 0.80",
+            "signature": "lvlu-SI4-self-cert-report.md::heading:2.3 形式化程度: 0.80",
+            "relevance": 0.75,
+            "source": "lvlu-SI4-self-cert-report.md"
+          },
+          {
+            "name": "2.4 边界测试（ucif2代执行）",
+            "signature": "lvlu-SI4-self-cert-report.md::heading:2.4 边界测试（ucif2代执行）",
+            "relevance": 0.75,
+            "source": "lvlu-SI4-self-cert-report.md"
+          },
+          {
+            "name": "2.5 交叉验证: 0.90",
+            "signature": "lvlu-SI4-self-cert-report.md::heading:2.5 交叉验证: 0.90",
+            "relevance": 0.75,
+            "source": "lvlu-SI4-self-cert-report.md"
+          },
+          {
+            "name": "3. 核心能力状态",
+            "signature": "lvlu-SI4-self-cert-report.md::heading:3. 核心能力状态",
+            "relevance": 0.75,
+            "source": "lvlu-SI4-self-cert-report.md"
+          },
+          {
+            "name": "4. 评估结论",
+            "signature": "lvlu-SI4-self-cert-report.md::heading:4. 评估结论",
+            "relevance": 0.75,
+            "source": "lvlu-SI4-self-cert-report.md"
+          }
+        ]
+      },
+      "python_class": {
+        "type": "python_class",
+        "node_count": 21,
+        "avg_relevance": 0.5571428571428572,
+        "nodes": [
+          {
+            "name": "MetaState",
+            "signature": "meta_structure.py::class:MetaState",
+            "relevance": 0.6,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "MetaRole",
+            "signature": "meta_structure.py::class:MetaRole",
+            "relevance": 0.6,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "FlowType",
+            "signature": "meta_structure.py::class:FlowType",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "class",
+            "signature": "meta_structure.py::class:class",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "GuMeta",
+            "signature": "meta_structure.py::class:GuMeta",
+            "relevance": 0.6,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "WheelMeta",
+            "signature": "meta_structure.py::class:WheelMeta",
+            "relevance": 0.6,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "SpineMeta",
+            "signature": "meta_structure.py::class:SpineMeta",
+            "relevance": 0.6,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "DingMeta",
+            "signature": "meta_structure.py::class:DingMeta",
+            "relevance": 0.6,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "TowerMeta",
+            "signature": "meta_structure.py::class:TowerMeta",
+            "relevance": 0.6,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "RingMeta",
+            "signature": "meta_structure.py::class:RingMeta",
+            "relevance": 0.6,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "CouplingMatrix",
+            "signature": "meta_structure.py::class:CouplingMatrix",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "MetaProtocol",
+            "signature": "meta_structure.py::class:MetaProtocol",
+            "relevance": 0.6,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "BiasType",
+            "signature": "metacognitive_monitor.py::class:BiasType",
+            "relevance": 0.5,
+            "source": "metacognitive_monitor.py"
+          },
+          {
+            "name": "class",
+            "signature": "metacognitive_monitor.py::class:class",
+            "relevance": 0.5,
+            "source": "metacognitive_monitor.py"
+          },
+          {
+            "name": "PredictionErrorTracker",
+            "signature": "metacognitive_monitor.py::class:PredictionErrorTracker",
+            "relevance": 0.5,
+            "source": "metacognitive_monitor.py"
+          },
+          {
+            "name": "CognitiveBiasDetector",
+            "signature": "metacognitive_monitor.py::class:CognitiveBiasDetector",
+            "relevance": 0.5,
+            "source": "metacognitive_monitor.py"
+          },
+          {
+            "name": "ThoughtChain",
+            "signature": "metacognitive_monitor.py::class:ThoughtChain",
+            "relevance": 0.5,
+            "source": "metacognitive_monitor.py"
+          },
+          {
+            "name": "MetacognitiveMonitor",
+            "signature": "metacognitive_monitor.py::class:MetacognitiveMonitor",
+            "relevance": 0.6,
+            "source": "metacognitive_monitor.py"
+          },
+          {
+            "name": "class",
+            "signature": "self_evolving_architecture.py::class:class",
+            "relevance": 0.5,
+            "source": "self_evolving_architecture.py"
+          },
+          {
+            "name": "ArchitectureGraph",
+            "signature": "self_evolving_architecture.py::class:ArchitectureGraph",
+            "relevance": 0.6,
+            "source": "self_evolving_architecture.py"
+          },
+          {
+            "name": "SelfEvolvingArchitecture",
+            "signature": "self_evolving_architecture.py::class:SelfEvolvingArchitecture",
+            "relevance": 0.6,
+            "source": "self_evolving_architecture.py"
+          }
+        ]
+      },
+      "python_function": {
+        "type": "python_function",
+        "node_count": 130,
+        "avg_relevance": 0.5061538461538462,
+        "nodes": [
+          {
+            "name": "compute_signature",
+            "signature": "meta_structure.py::def:compute_signature",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "sign",
+            "signature": "meta_structure.py::def:sign",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "compute_capacity",
+            "signature": "meta_structure.py::def:compute_capacity",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "transfer_efficiency",
+            "signature": "meta_structure.py::def:transfer_efficiency",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "advance",
+            "signature": "meta_structure.py::def:advance",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "clone_for_recursion",
+            "signature": "meta_structure.py::def:clone_for_recursion",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "spawn_child",
+            "signature": "meta_structure.py::def:spawn_child",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "finalize",
+            "signature": "meta_structure.py::def:finalize",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "meta_observe",
+            "signature": "meta_structure.py::def:meta_observe",
+            "relevance": 0.6,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "compute_chain_hash",
+            "signature": "meta_structure.py::def:compute_chain_hash",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "bind_chain",
+            "signature": "meta_structure.py::def:bind_chain",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "__init__",
+            "signature": "meta_structure.py::def:__init__",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "describe_self",
+            "signature": "meta_structure.py::def:describe_self",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "register_meta",
+            "signature": "meta_structure.py::def:register_meta",
+            "relevance": 0.6,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "update_global_state",
+            "signature": "meta_structure.py::def:update_global_state",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "coordinate",
+            "signature": "meta_structure.py::def:coordinate",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "_find_most_active_meta",
+            "signature": "meta_structure.py::def:_find_most_active_meta",
+            "relevance": 0.6,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "_log_activity",
+            "signature": "meta_structure.py::def:_log_activity",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "get_system_health",
+            "signature": "meta_structure.py::def:get_system_health",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "activity_score",
+            "signature": "meta_structure.py::def:activity_score",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "spin",
+            "signature": "meta_structure.py::def:spin",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "_should_recurse",
+            "signature": "meta_structure.py::def:_should_recurse",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "_perform_recursion",
+            "signature": "meta_structure.py::def:_perform_recursion",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "_energy_flow",
+            "signature": "meta_structure.py::def:_energy_flow",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "_check_convergence",
+            "signature": "meta_structure.py::def:_check_convergence",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "inject_energy",
+            "signature": "meta_structure.py::def:inject_energy",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "get_cycle_frequency",
+            "signature": "meta_structure.py::def:get_cycle_frequency",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "ingest_knowledge",
+            "signature": "meta_structure.py::def:ingest_knowledge",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "query_lineage",
+            "signature": "meta_structure.py::def:query_lineage",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "propagate_downward",
+            "signature": "meta_structure.py::def:propagate_downward",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "accumulate_experience",
+            "signature": "meta_structure.py::def:accumulate_experience",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "_extract_lesson",
+            "signature": "meta_structure.py::def:_extract_lesson",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "get_growth_metrics",
+            "signature": "meta_structure.py::def:get_growth_metrics",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "collect_vote",
+            "signature": "meta_structure.py::def:collect_vote",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "forge_consensus",
+            "signature": "meta_structure.py::def:forge_consensus",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "fuse_dissent",
+            "signature": "meta_structure.py::def:fuse_dissent",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "get_consensus_stats",
+            "signature": "meta_structure.py::def:get_consensus_stats",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "observe",
+            "signature": "meta_structure.py::def:observe",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "scan_all",
+            "signature": "meta_structure.py::def:scan_all",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "predict",
+            "signature": "meta_structure.py::def:predict",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "_scan_dimension",
+            "signature": "meta_structure.py::def:_scan_dimension",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "_compute_confidence",
+            "signature": "meta_structure.py::def:_compute_confidence",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "_check_alerts",
+            "signature": "meta_structure.py::def:_check_alerts",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "forge_contract",
+            "signature": "meta_structure.py::def:forge_contract",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "enforce",
+            "signature": "meta_structure.py::def:enforce",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "_auto_repair",
+            "signature": "meta_structure.py::def:_auto_repair",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "verify_chain_integrity",
+            "signature": "meta_structure.py::def:verify_chain_integrity",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "recursive_reinforce",
+            "signature": "meta_structure.py::def:recursive_reinforce",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "get_enforcement_stats",
+            "signature": "meta_structure.py::def:get_enforcement_stats",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "_init_channels",
+            "signature": "meta_structure.py::def:_init_channels",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "get_weight",
+            "signature": "meta_structure.py::def:get_weight",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "set_weight",
+            "signature": "meta_structure.py::def:set_weight",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "get_channel",
+            "signature": "meta_structure.py::def:get_channel",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "compute_transfer",
+            "signature": "meta_structure.py::def:compute_transfer",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "adapt",
+            "signature": "meta_structure.py::def:adapt",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "_record_state",
+            "signature": "meta_structure.py::def:_record_state",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "get_dominant_flows",
+            "signature": "meta_structure.py::def:get_dominant_flows",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "get_matrix_summary",
+            "signature": "meta_structure.py::def:get_matrix_summary",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "send",
+            "signature": "meta_structure.py::def:send",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "broadcast",
+            "signature": "meta_structure.py::def:broadcast",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "route",
+            "signature": "meta_structure.py::def:route",
+            "relevance": 0.5,
+            "source": "meta_structure.py"
+          },
+          {
+            "name": "__init__",
+            "signature": "metacognitive_monitor.py::def:__init__",
+            "relevance": 0.5,
+            "source": "metacognitive_monitor.py"
+          },
+          {
+            "name": "record",
+            "signature": "metacognitive_monitor.py::def:record",
+            "relevance": 0.5,
+            "source": "metacognitive_monitor.py"
+          },
+          {
+            "name": "_update_module_stats",
+            "signature": "metacognitive_monitor.py::def:_update_module_stats",
+            "relevance": 0.5,
+            "source": "metacognitive_monitor.py"
+          },
+          {
+            "name": "_calculate_trend",
+            "signature": "metacognitive_monitor.py::def:_calculate_trend",
+            "relevance": 0.5,
+            "source": "metacognitive_monitor.py"
+          },
+          {
+            "name": "get_error_trend",
+            "signature": "metacognitive_monitor.py::def:get_error_trend",
+            "relevance": 0.5,
+            "source": "metacognitive_monitor.py"
+          },
+          {
+            "name": "get_anomaly_score",
+            "signature": "metacognitive_monitor.py::def:get_anomaly_score",
+            "relevance": 0.5,
+            "source": "metacognitive_monitor.py"
+          },
+          {
+            "name": "get_global_error",
+            "signature": "metacognitive_monitor.py::def:get_global_error",
+            "relevance": 0.5,
+            "source": "metacognitive_monitor.py"
+          },
+          {
+            "name": "get_module_error_history",
+            "signature": "metacognitive_monitor.py::def:get_module_error_history",
+            "relevance": 0.5,
+            "source": "metacognitive_monitor.py"
+          },
+          {
+            "name": "get_all_modules",
+            "signature": "metacognitive_monitor.py::def:get_all_modules",
+            "relevance": 0.5,
+            "source": "metacognitive_monitor.py"
+          },
+          {
+            "name": "detect_confirmation_bias",
+            "signature": "metacognitive_monitor.py::def:detect_confirmation_bias",
+            "relevance": 0.5,
+            "source": "metacognitive_monitor.py"
+          },
+          {
+            "name": "detect_anchoring",
+            "signature": "metacognitive_monitor.py::def:detect_anchoring",
+            "relevance": 0.5,
+            "source": "metacognitive_monitor.py"
+          },
+          {
+            "name": "detect_availability_bias",
+            "signature": "metacognitive_monitor.py::def:detect_availability_bias",
+            "relevance": 0.5,
+            "source": "metacognitive_monitor.py"
+          },
+          {
+            "name": "detect_recency_bias",
+            "signature": "metacognitive_monitor.py::def:detect_recency_bias",
+            "relevance": 0.5,
+            "source": "metacognitive_monitor.py"
+          },
+          {
+            "name": "detect_all_biases",
+            "signature": "metacognitive_monitor.py::def:detect_all_biases",
+            "relevance": 0.5,
+            "source": "metacognitive_monitor.py"
+          },
+          {
+            "name": "get_bias_report",
+            "signature": "metacognitive_monitor.py::def:get_bias_report",
+            "relevance": 0.5,
+            "source": "metacognitive_monitor.py"
+          },
+          {
+            "name": "add_step",
+            "signature": "metacognitive_monitor.py::def:add_step",
+            "relevance": 0.5,
+            "source": "metacognitive_monitor.py"
+          },
+          {
+            "name": "get_chain",
+            "signature": "metacognitive_monitor.py::def:get_chain",
+            "relevance": 0.5,
+            "source": "metacognitive_monitor.py"
+          },
+          {
+            "name": "replay",
+            "signature": "metacognitive_monitor.py::def:replay",
+            "relevance": 0.5,
+            "source": "metacognitive_monitor.py"
+          },
+          {
+            "name": "_format_data",
+            "signature": "metacognitive_monitor.py::def:_format_data",
+            "relevance": 0.5,
+            "source": "metacognitive_monitor.py"
+          },
+          {
+            "name": "get_summary",
+            "signature": "metacognitive_monitor.py::def:get_summary",
+            "relevance": 0.5,
+            "source": "metacognitive_monitor.py"
+          },
+          {
+            "name": "get_branch",
+            "signature": "metacognitive_monitor.py::def:get_branch",
+            "relevance": 0.5,
+            "source": "metacognitive_monitor.py"
+          },
+          {
+            "name": "find_steps_by_action",
+            "signature": "metacognitive_monitor.py::def:find_steps_by_action",
+            "relevance": 0.5,
+            "source": "metacognitive_monitor.py"
+          },
+          {
+            "name": "get_confidence_trajectory",
+            "signature": "metacognitive_monitor.py::def:get_confidence_trajectory",
+            "relevance": 0.5,
+            "source": "metacognitive_monitor.py"
+          },
+          {
+            "name": "monitor_prediction_error",
+            "signature": "metacognitive_monitor.py::def:monitor_prediction_error",
+            "relevance": 0.5,
+            "source": "metacognitive_monitor.py"
+          },
+          {
+            "name": "detect_cognitive_bias",
+            "signature": "metacognitive_monitor.py::def:detect_cognitive_bias",
+            "relevance": 0.5,
+            "source": "metacognitive_monitor.py"
+          },
+          {
+            "name": "adjust_attention",
+            "signature": "metacognitive_monitor.py::def:adjust_attention",
+            "relevance": 0.5,
+            "source": "metacognitive_monitor.py"
+          },
+          {
+            "name": "calibrate_confidence",
+            "signature": "metacognitive_monitor.py::def:calibrate_confidence",
+            "relevance": 0.5,
+            "source": "metacognitive_monitor.py"
+          },
+          {
+            "name": "record_thought_chain",
+            "signature": "metacognitive_monitor.py::def:record_thought_chain",
+            "relevance": 0.5,
+            "source": "metacognitive_monitor.py"
+          },
+          {
+            "name": "meta_reflection",
+            "signature": "metacognitive_monitor.py::def:meta_reflection",
+            "relevance": 0.6,
+            "source": "metacognitive_monitor.py"
+          },
+          {
+            "name": "_generate_attention_advice",
+            "signature": "metacognitive_monitor.py::def:_generate_attention_advice",
+            "relevance": 0.5,
+            "source": "metacognitive_monitor.py"
+          },
+          {
+            "name": "_generate_self_evaluation",
+            "signature": "metacognitive_monitor.py::def:_generate_self_evaluation",
+            "relevance": 0.5,
+            "source": "metacognitive_monitor.py"
+          },
+          {
+            "name": "get_coverage",
+            "signature": "metacognitive_monitor.py::def:get_coverage",
+            "relevance": 0.5,
+            "source": "metacognitive_monitor.py"
+          },
+          {
+            "name": "get_meta_report",
+            "signature": "metacognitive_monitor.py::def:get_meta_report",
+            "relevance": 0.6,
+            "source": "metacognitive_monitor.py"
+          },
+          {
+            "name": "format_meta_report",
+            "signature": "metacognitive_monitor.py::def:format_meta_report",
+            "relevance": 0.6,
+            "source": "metacognitive_monitor.py"
+          },
+          {
+            "name": "to_dict",
+            "signature": "self_evolving_architecture.py::def:to_dict",
+            "relevance": 0.5,
+            "source": "self_evolving_architecture.py"
+          },
+          {
+            "name": "__init__",
+            "signature": "self_evolving_architecture.py::def:__init__",
+            "relevance": 0.5,
+            "source": "self_evolving_architecture.py"
+          },
+          {
+            "name": "add_module",
+            "signature": "self_evolving_architecture.py::def:add_module",
+            "relevance": 0.5,
+            "source": "self_evolving_architecture.py"
+          },
+          {
+            "name": "add_dependency",
+            "signature": "self_evolving_architecture.py::def:add_dependency",
+            "relevance": 0.5,
+            "source": "self_evolving_architecture.py"
+          },
+          {
+            "name": "record_message",
+            "signature": "self_evolving_architecture.py::def:record_message",
+            "relevance": 0.5,
+            "source": "self_evolving_architecture.py"
+          },
+          {
+            "name": "get_coupling",
+            "signature": "self_evolving_architecture.py::def:get_coupling",
+            "relevance": 0.5,
+            "source": "self_evolving_architecture.py"
+          },
+          {
+            "name": "get_centrality",
+            "signature": "self_evolving_architecture.py::def:get_centrality",
+            "relevance": 0.5,
+            "source": "self_evolving_architecture.py"
+          },
+          {
+            "name": "detect_cycles",
+            "signature": "self_evolving_architecture.py::def:detect_cycles",
+            "relevance": 0.5,
+            "source": "self_evolving_architecture.py"
+          },
+          {
+            "name": "get_complexity",
+            "signature": "self_evolving_architecture.py::def:get_complexity",
+            "relevance": 0.5,
+            "source": "self_evolving_architecture.py"
+          },
+          {
+            "name": "_approximate_modularity",
+            "signature": "self_evolving_architecture.py::def:_approximate_modularity",
+            "relevance": 0.5,
+            "source": "self_evolving_architecture.py"
+          },
+          {
+            "name": "get_mutual_dependencies",
+            "signature": "self_evolving_architecture.py::def:get_mutual_dependencies",
+            "relevance": 0.5,
+            "source": "self_evolving_architecture.py"
+          },
+          {
+            "name": "get_orphan_modules",
+            "signature": "self_evolving_architecture.py::def:get_orphan_modules",
+            "relevance": 0.5,
+            "source": "self_evolving_architecture.py"
+          },
+          {
+            "name": "get_communities",
+            "signature": "self_evolving_architecture.py::def:get_communities",
+            "relevance": 0.5,
+            "source": "self_evolving_architecture.py"
+          },
+          {
+            "name": "remove_module",
+            "signature": "self_evolving_architecture.py::def:remove_module",
+            "relevance": 0.5,
+            "source": "self_evolving_architecture.py"
+          },
+          {
+            "name": "merge_modules",
+            "signature": "self_evolving_architecture.py::def:merge_modules",
+            "relevance": 0.5,
+            "source": "self_evolving_architecture.py"
+          },
+          {
+            "name": "split_module",
+            "signature": "self_evolving_architecture.py::def:split_module",
+            "relevance": 0.5,
+            "source": "self_evolving_architecture.py"
+          },
+          {
+            "name": "register_module",
+            "signature": "self_evolving_architecture.py::def:register_module",
+            "relevance": 0.5,
+            "source": "self_evolving_architecture.py"
+          },
+          {
+            "name": "simulate_interaction",
+            "signature": "self_evolving_architecture.py::def:simulate_interaction",
+            "relevance": 0.5,
+            "source": "self_evolving_architecture.py"
+          },
+          {
+            "name": "analyze_topology",
+            "signature": "self_evolving_architecture.py::def:analyze_topology",
+            "relevance": 0.5,
+            "source": "self_evolving_architecture.py"
+          },
+          {
+            "name": "detect_architecture_smells",
+            "signature": "self_evolving_architecture.py::def:detect_architecture_smells",
+            "relevance": 0.6,
+            "source": "self_evolving_architecture.py"
+          },
+          {
+            "name": "propose_refactoring",
+            "signature": "self_evolving_architecture.py::def:propose_refactoring",
+            "relevance": 0.5,
+            "source": "self_evolving_architecture.py"
+          },
+          {
+            "name": "apply_refactoring",
+            "signature": "self_evolving_architecture.py::def:apply_refactoring",
+            "relevance": 0.5,
+            "source": "self_evolving_architecture.py"
+          },
+          {
+            "name": "_apply_split",
+            "signature": "self_evolving_architecture.py::def:_apply_split",
+            "relevance": 0.5,
+            "source": "self_evolving_architecture.py"
+          },
+          {
+            "name": "_apply_merge",
+            "signature": "self_evolving_architecture.py::def:_apply_merge",
+            "relevance": 0.5,
+            "source": "self_evolving_architecture.py"
+          },
+          {
+            "name": "_apply_extract",
+            "signature": "self_evolving_architecture.py::def:_apply_extract",
+            "relevance": 0.5,
+            "source": "self_evolving_architecture.py"
+          },
+          {
+            "name": "_apply_inline",
+            "signature": "self_evolving_architecture.py::def:_apply_inline",
+            "relevance": 0.5,
+            "source": "self_evolving_architecture.py"
+          },
+          {
+            "name": "incubate_module",
+            "signature": "self_evolving_architecture.py::def:incubate_module",
+            "relevance": 0.5,
+            "source": "self_evolving_architecture.py"
+          },
+          {
+            "name": "retire_module",
+            "signature": "self_evolving_architecture.py::def:retire_module",
+            "relevance": 0.5,
+            "source": "self_evolving_architecture.py"
+          },
+          {
+            "name": "evolution_step",
+            "signature": "self_evolving_architecture.py::def:evolution_step",
+            "relevance": 0.5,
+            "source": "self_evolving_architecture.py"
+          },
+          {
+            "name": "_simulate_structural_coupling",
+            "signature": "self_evolving_architecture.py::def:_simulate_structural_coupling",
+            "relevance": 0.5,
+            "source": "self_evolving_architecture.py"
+          },
+          {
+            "name": "get_evolution_history",
+            "signature": "self_evolving_architecture.py::def:get_evolution_history",
+            "relevance": 0.5,
+            "source": "self_evolving_architecture.py"
+          },
+          {
+            "name": "get_architecture_metrics",
+            "signature": "self_evolving_architecture.py::def:get_architecture_metrics",
+            "relevance": 0.6,
+            "source": "self_evolving_architecture.py"
+          },
+          {
+            "name": "_calculate_entropy",
+            "signature": "self_evolving_architecture.py::def:_calculate_entropy",
+            "relevance": 0.5,
+            "source": "self_evolving_architecture.py"
+          },
+          {
+            "name": "get_stats",
+            "signature": "self_evolving_architecture.py::def:get_stats",
+            "relevance": 0.5,
+            "source": "self_evolving_architecture.py"
+          },
+          {
+            "name": "run_evolution_experiment",
+            "signature": "self_evolving_architecture.py::def:run_evolution_experiment",
+            "relevance": 0.5,
+            "source": "self_evolving_architecture.py"
+          }
+        ]
+      },
+      "generic_file": {
+        "type": "generic_file",
+        "node_count": 3,
+        "avg_relevance": 0.3,
+        "nodes": [
+          {
+            "name": "meta_structure_flows.png",
+            "signature": "meta_structure_flows.png::generic",
+            "relevance": 0.3,
+            "source": "meta_structure_flows.png"
+          },
+          {
+            "name": "meta_structure_visualization.png",
+            "signature": "meta_structure_visualization.png::generic",
+            "relevance": 0.3,
+            "source": "meta_structure_visualization.png"
+          },
+          {
+            "name": "jing_wei_xin_architecture.png",
+            "signature": "jing_wei_xin_architecture.png::generic",
+            "relevance": 0.3,
+            "source": "jing_wei_xin_architecture.png"
+          }
+        ]
+      },
+      "json_key": {
+        "type": "json_key",
+        "node_count": 10,
+        "avg_relevance": 0.7,
+        "nodes": [
+          {
+            "name": "timestamp",
+            "signature": "meta_structure_report.json::key:timestamp",
+            "relevance": 0.7,
+            "source": "meta_structure_report.json"
+          },
+          {
+            "name": "system",
+            "signature": "meta_structure_report.json::key:system",
+            "relevance": 0.7,
+            "source": "meta_structure_report.json"
+          },
+          {
+            "name": "meta_structure",
+            "signature": "meta_structure_report.json::key:meta_structure",
+            "relevance": 0.7,
+            "source": "meta_structure_report.json"
+          },
+          {
+            "name": "total_experiments",
+            "signature": "meta_structure_report.json::key:total_experiments",
+            "relevance": 0.7,
+            "source": "meta_structure_report.json"
+          },
+          {
+            "name": "total_tests",
+            "signature": "meta_structure_report.json::key:total_tests",
+            "relevance": 0.7,
+            "source": "meta_structure_report.json"
+          },
+          {
+            "name": "total_passed",
+            "signature": "meta_structure_report.json::key:total_passed",
+            "relevance": 0.7,
+            "source": "meta_structure_report.json"
+          },
+          {
+            "name": "total_failed",
+            "signature": "meta_structure_report.json::key:total_failed",
+            "relevance": 0.7,
+            "source": "meta_structure_report.json"
+          },
+          {
+            "name": "pass_rate",
+            "signature": "meta_structure_report.json::key:pass_rate",
+            "relevance": 0.7,
+            "source": "meta_structure_report.json"
+          },
+          {
+            "name": "experiments",
+            "signature": "meta_structure_report.json::key:experiments",
+            "relevance": 0.7,
+            "source": "meta_structure_report.json"
+          },
+          {
+            "name": "final_state",
+            "signature": "meta_structure_report.json::key:final_state",
+            "relevance": 0.7,
+            "source": "meta_structure_report.json"
+          }
+        ]
+      }
+    }
+  },
+  "knowledge_nodes": [
+    {
+      "type": "md_heading",
+      "name": "lvlu线 SI4 升级自证报告（ucif2介入产出）",
+      "source_file": "lvlu-SI4-self-cert-report.md",
+      "signature": "lvlu-SI4-self-cert-report.md::heading:lvlu线 SI4 升级自证报告（ucif2介入产出）",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "线基本信息",
+      "source_file": "lvlu-SI4-self-cert-report.md",
+      "signature": "lvlu-SI4-self-cert-report.md::heading:线基本信息",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "1. ucif2介入说明",
+      "source_file": "lvlu-SI4-self-cert-report.md",
+      "signature": "lvlu-SI4-self-cert-report.md::heading:1. ucif2介入说明",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "2. 升级资格评估",
+      "source_file": "lvlu-SI4-self-cert-report.md",
+      "signature": "lvlu-SI4-self-cert-report.md::heading:2. 升级资格评估",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "2.1 数据充分性: 0.86",
+      "source_file": "lvlu-SI4-self-cert-report.md",
+      "signature": "lvlu-SI4-self-cert-report.md::heading:2.1 数据充分性: 0.86",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "2.2 验证充分性: 0.85",
+      "source_file": "lvlu-SI4-self-cert-report.md",
+      "signature": "lvlu-SI4-self-cert-report.md::heading:2.2 验证充分性: 0.85",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "2.3 形式化程度: 0.80",
+      "source_file": "lvlu-SI4-self-cert-report.md",
+      "signature": "lvlu-SI4-self-cert-report.md::heading:2.3 形式化程度: 0.80",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "2.4 边界测试（ucif2代执行）",
+      "source_file": "lvlu-SI4-self-cert-report.md",
+      "signature": "lvlu-SI4-self-cert-report.md::heading:2.4 边界测试（ucif2代执行）",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "2.5 交叉验证: 0.90",
+      "source_file": "lvlu-SI4-self-cert-report.md",
+      "signature": "lvlu-SI4-self-cert-report.md::heading:2.5 交叉验证: 0.90",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "3. 核心能力状态",
+      "source_file": "lvlu-SI4-self-cert-report.md",
+      "signature": "lvlu-SI4-self-cert-report.md::heading:3. 核心能力状态",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "4. 评估结论",
+      "source_file": "lvlu-SI4-self-cert-report.md",
+      "signature": "lvlu-SI4-self-cert-report.md::heading:4. 评估结论",
+      "relevance": 0.75
+    },
+    {
+      "type": "python_class",
+      "name": "MetaState",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::class:MetaState",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_class",
+      "name": "MetaRole",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::class:MetaRole",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_class",
+      "name": "FlowType",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::class:FlowType",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "class",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::class:class",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "GuMeta",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::class:GuMeta",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_class",
+      "name": "WheelMeta",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::class:WheelMeta",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_class",
+      "name": "SpineMeta",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::class:SpineMeta",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_class",
+      "name": "DingMeta",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::class:DingMeta",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_class",
+      "name": "TowerMeta",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::class:TowerMeta",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_class",
+      "name": "RingMeta",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::class:RingMeta",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_class",
+      "name": "CouplingMatrix",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::class:CouplingMatrix",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "MetaProtocol",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::class:MetaProtocol",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_function",
+      "name": "compute_signature",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:compute_signature",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "sign",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:sign",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "compute_capacity",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:compute_capacity",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "transfer_efficiency",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:transfer_efficiency",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "advance",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:advance",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "clone_for_recursion",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:clone_for_recursion",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "spawn_child",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:spawn_child",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "finalize",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:finalize",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "meta_observe",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:meta_observe",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_function",
+      "name": "compute_chain_hash",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:compute_chain_hash",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "bind_chain",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:bind_chain",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "__init__",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:__init__",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "describe_self",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:describe_self",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "register_meta",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:register_meta",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_function",
+      "name": "update_global_state",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:update_global_state",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "coordinate",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:coordinate",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_find_most_active_meta",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:_find_most_active_meta",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_function",
+      "name": "_log_activity",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:_log_activity",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_system_health",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:get_system_health",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "activity_score",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:activity_score",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "spin",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:spin",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_should_recurse",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:_should_recurse",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_perform_recursion",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:_perform_recursion",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_energy_flow",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:_energy_flow",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_check_convergence",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:_check_convergence",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "inject_energy",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:inject_energy",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_cycle_frequency",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:get_cycle_frequency",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "ingest_knowledge",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:ingest_knowledge",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "query_lineage",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:query_lineage",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "propagate_downward",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:propagate_downward",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "accumulate_experience",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:accumulate_experience",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_extract_lesson",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:_extract_lesson",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_growth_metrics",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:get_growth_metrics",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "collect_vote",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:collect_vote",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "forge_consensus",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:forge_consensus",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "fuse_dissent",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:fuse_dissent",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_consensus_stats",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:get_consensus_stats",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "observe",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:observe",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "scan_all",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:scan_all",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "predict",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:predict",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_scan_dimension",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:_scan_dimension",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_compute_confidence",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:_compute_confidence",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_check_alerts",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:_check_alerts",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "forge_contract",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:forge_contract",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "enforce",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:enforce",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_auto_repair",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:_auto_repair",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "verify_chain_integrity",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:verify_chain_integrity",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "recursive_reinforce",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:recursive_reinforce",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_enforcement_stats",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:get_enforcement_stats",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_init_channels",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:_init_channels",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_weight",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:get_weight",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "set_weight",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:set_weight",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_channel",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:get_channel",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "compute_transfer",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:compute_transfer",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "adapt",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:adapt",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_record_state",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:_record_state",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_dominant_flows",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:get_dominant_flows",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_matrix_summary",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:get_matrix_summary",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "send",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:send",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "broadcast",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:broadcast",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "route",
+      "source_file": "meta_structure.py",
+      "signature": "meta_structure.py::def:route",
+      "relevance": 0.5
+    },
+    {
+      "type": "generic_file",
+      "name": "meta_structure_flows.png",
+      "size_chars": 50000,
+      "source_file": "meta_structure_flows.png",
+      "signature": "meta_structure_flows.png::generic",
+      "relevance": 0.3
+    },
+    {
+      "type": "json_key",
+      "name": "timestamp",
+      "source_file": "meta_structure_report.json",
+      "signature": "meta_structure_report.json::key:timestamp",
+      "relevance": 0.7
+    },
+    {
+      "type": "json_key",
+      "name": "system",
+      "source_file": "meta_structure_report.json",
+      "signature": "meta_structure_report.json::key:system",
+      "relevance": 0.7
+    },
+    {
+      "type": "json_key",
+      "name": "meta_structure",
+      "source_file": "meta_structure_report.json",
+      "signature": "meta_structure_report.json::key:meta_structure",
+      "relevance": 0.7
+    },
+    {
+      "type": "json_key",
+      "name": "total_experiments",
+      "source_file": "meta_structure_report.json",
+      "signature": "meta_structure_report.json::key:total_experiments",
+      "relevance": 0.7
+    },
+    {
+      "type": "json_key",
+      "name": "total_tests",
+      "source_file": "meta_structure_report.json",
+      "signature": "meta_structure_report.json::key:total_tests",
+      "relevance": 0.7
+    },
+    {
+      "type": "json_key",
+      "name": "total_passed",
+      "source_file": "meta_structure_report.json",
+      "signature": "meta_structure_report.json::key:total_passed",
+      "relevance": 0.7
+    },
+    {
+      "type": "json_key",
+      "name": "total_failed",
+      "source_file": "meta_structure_report.json",
+      "signature": "meta_structure_report.json::key:total_failed",
+      "relevance": 0.7
+    },
+    {
+      "type": "json_key",
+      "name": "pass_rate",
+      "source_file": "meta_structure_report.json",
+      "signature": "meta_structure_report.json::key:pass_rate",
+      "relevance": 0.7
+    },
+    {
+      "type": "json_key",
+      "name": "experiments",
+      "source_file": "meta_structure_report.json",
+      "signature": "meta_structure_report.json::key:experiments",
+      "relevance": 0.7
+    },
+    {
+      "type": "json_key",
+      "name": "final_state",
+      "source_file": "meta_structure_report.json",
+      "signature": "meta_structure_report.json::key:final_state",
+      "relevance": 0.7
+    },
+    {
+      "type": "generic_file",
+      "name": "meta_structure_visualization.png",
+      "size_chars": 50000,
+      "source_file": "meta_structure_visualization.png",
+      "signature": "meta_structure_visualization.png::generic",
+      "relevance": 0.3
+    },
+    {
+      "type": "python_class",
+      "name": "BiasType",
+      "source_file": "metacognitive_monitor.py",
+      "signature": "metacognitive_monitor.py::class:BiasType",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "class",
+      "source_file": "metacognitive_monitor.py",
+      "signature": "metacognitive_monitor.py::class:class",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "PredictionErrorTracker",
+      "source_file": "metacognitive_monitor.py",
+      "signature": "metacognitive_monitor.py::class:PredictionErrorTracker",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "CognitiveBiasDetector",
+      "source_file": "metacognitive_monitor.py",
+      "signature": "metacognitive_monitor.py::class:CognitiveBiasDetector",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "ThoughtChain",
+      "source_file": "metacognitive_monitor.py",
+      "signature": "metacognitive_monitor.py::class:ThoughtChain",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "MetacognitiveMonitor",
+      "source_file": "metacognitive_monitor.py",
+      "signature": "metacognitive_monitor.py::class:MetacognitiveMonitor",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_function",
+      "name": "__init__",
+      "source_file": "metacognitive_monitor.py",
+      "signature": "metacognitive_monitor.py::def:__init__",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "record",
+      "source_file": "metacognitive_monitor.py",
+      "signature": "metacognitive_monitor.py::def:record",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_update_module_stats",
+      "source_file": "metacognitive_monitor.py",
+      "signature": "metacognitive_monitor.py::def:_update_module_stats",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_calculate_trend",
+      "source_file": "metacognitive_monitor.py",
+      "signature": "metacognitive_monitor.py::def:_calculate_trend",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_error_trend",
+      "source_file": "metacognitive_monitor.py",
+      "signature": "metacognitive_monitor.py::def:get_error_trend",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_anomaly_score",
+      "source_file": "metacognitive_monitor.py",
+      "signature": "metacognitive_monitor.py::def:get_anomaly_score",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_global_error",
+      "source_file": "metacognitive_monitor.py",
+      "signature": "metacognitive_monitor.py::def:get_global_error",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_module_error_history",
+      "source_file": "metacognitive_monitor.py",
+      "signature": "metacognitive_monitor.py::def:get_module_error_history",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_all_modules",
+      "source_file": "metacognitive_monitor.py",
+      "signature": "metacognitive_monitor.py::def:get_all_modules",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "detect_confirmation_bias",
+      "source_file": "metacognitive_monitor.py",
+      "signature": "metacognitive_monitor.py::def:detect_confirmation_bias",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "detect_anchoring",
+      "source_file": "metacognitive_monitor.py",
+      "signature": "metacognitive_monitor.py::def:detect_anchoring",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "detect_availability_bias",
+      "source_file": "metacognitive_monitor.py",
+      "signature": "metacognitive_monitor.py::def:detect_availability_bias",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "detect_recency_bias",
+      "source_file": "metacognitive_monitor.py",
+      "signature": "metacognitive_monitor.py::def:detect_recency_bias",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "detect_all_biases",
+      "source_file": "metacognitive_monitor.py",
+      "signature": "metacognitive_monitor.py::def:detect_all_biases",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_bias_report",
+      "source_file": "metacognitive_monitor.py",
+      "signature": "metacognitive_monitor.py::def:get_bias_report",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "add_step",
+      "source_file": "metacognitive_monitor.py",
+      "signature": "metacognitive_monitor.py::def:add_step",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_chain",
+      "source_file": "metacognitive_monitor.py",
+      "signature": "metacognitive_monitor.py::def:get_chain",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "replay",
+      "source_file": "metacognitive_monitor.py",
+      "signature": "metacognitive_monitor.py::def:replay",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_format_data",
+      "source_file": "metacognitive_monitor.py",
+      "signature": "metacognitive_monitor.py::def:_format_data",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_summary",
+      "source_file": "metacognitive_monitor.py",
+      "signature": "metacognitive_monitor.py::def:get_summary",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_branch",
+      "source_file": "metacognitive_monitor.py",
+      "signature": "metacognitive_monitor.py::def:get_branch",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "find_steps_by_action",
+      "source_file": "metacognitive_monitor.py",
+      "signature": "metacognitive_monitor.py::def:find_steps_by_action",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_confidence_trajectory",
+      "source_file": "metacognitive_monitor.py",
+      "signature": "metacognitive_monitor.py::def:get_confidence_trajectory",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "monitor_prediction_error",
+      "source_file": "metacognitive_monitor.py",
+      "signature": "metacognitive_monitor.py::def:monitor_prediction_error",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "detect_cognitive_bias",
+      "source_file": "metacognitive_monitor.py",
+      "signature": "metacognitive_monitor.py::def:detect_cognitive_bias",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "adjust_attention",
+      "source_file": "metacognitive_monitor.py",
+      "signature": "metacognitive_monitor.py::def:adjust_attention",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "calibrate_confidence",
+      "source_file": "metacognitive_monitor.py",
+      "signature": "metacognitive_monitor.py::def:calibrate_confidence",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "record_thought_chain",
+      "source_file": "metacognitive_monitor.py",
+      "signature": "metacognitive_monitor.py::def:record_thought_chain",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "meta_reflection",
+      "source_file": "metacognitive_monitor.py",
+      "signature": "metacognitive_monitor.py::def:meta_reflection",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_function",
+      "name": "_generate_attention_advice",
+      "source_file": "metacognitive_monitor.py",
+      "signature": "metacognitive_monitor.py::def:_generate_attention_advice",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_generate_self_evaluation",
+      "source_file": "metacognitive_monitor.py",
+      "signature": "metacognitive_monitor.py::def:_generate_self_evaluation",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_coverage",
+      "source_file": "metacognitive_monitor.py",
+      "signature": "metacognitive_monitor.py::def:get_coverage",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_meta_report",
+      "source_file": "metacognitive_monitor.py",
+      "signature": "metacognitive_monitor.py::def:get_meta_report",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_function",
+      "name": "format_meta_report",
+      "source_file": "metacognitive_monitor.py",
+      "signature": "metacognitive_monitor.py::def:format_meta_report",
+      "relevance": 0.6
+    },
+    {
+      "type": "generic_file",
+      "name": "jing_wei_xin_architecture.png",
+      "size_chars": 50000,
+      "source_file": "jing_wei_xin_architecture.png",
+      "signature": "jing_wei_xin_architecture.png::generic",
+      "relevance": 0.3
+    },
+    {
+      "type": "python_class",
+      "name": "class",
+      "source_file": "self_evolving_architecture.py",
+      "signature": "self_evolving_architecture.py::class:class",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_class",
+      "name": "ArchitectureGraph",
+      "source_file": "self_evolving_architecture.py",
+      "signature": "self_evolving_architecture.py::class:ArchitectureGraph",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_class",
+      "name": "SelfEvolvingArchitecture",
+      "source_file": "self_evolving_architecture.py",
+      "signature": "self_evolving_architecture.py::class:SelfEvolvingArchitecture",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_function",
+      "name": "to_dict",
+      "source_file": "self_evolving_architecture.py",
+      "signature": "self_evolving_architecture.py::def:to_dict",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "__init__",
+      "source_file": "self_evolving_architecture.py",
+      "signature": "self_evolving_architecture.py::def:__init__",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "add_module",
+      "source_file": "self_evolving_architecture.py",
+      "signature": "self_evolving_architecture.py::def:add_module",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "add_dependency",
+      "source_file": "self_evolving_architecture.py",
+      "signature": "self_evolving_architecture.py::def:add_dependency",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "record_message",
+      "source_file": "self_evolving_architecture.py",
+      "signature": "self_evolving_architecture.py::def:record_message",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_coupling",
+      "source_file": "self_evolving_architecture.py",
+      "signature": "self_evolving_architecture.py::def:get_coupling",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_centrality",
+      "source_file": "self_evolving_architecture.py",
+      "signature": "self_evolving_architecture.py::def:get_centrality",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "detect_cycles",
+      "source_file": "self_evolving_architecture.py",
+      "signature": "self_evolving_architecture.py::def:detect_cycles",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_complexity",
+      "source_file": "self_evolving_architecture.py",
+      "signature": "self_evolving_architecture.py::def:get_complexity",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_approximate_modularity",
+      "source_file": "self_evolving_architecture.py",
+      "signature": "self_evolving_architecture.py::def:_approximate_modularity",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_mutual_dependencies",
+      "source_file": "self_evolving_architecture.py",
+      "signature": "self_evolving_architecture.py::def:get_mutual_dependencies",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_orphan_modules",
+      "source_file": "self_evolving_architecture.py",
+      "signature": "self_evolving_architecture.py::def:get_orphan_modules",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_communities",
+      "source_file": "self_evolving_architecture.py",
+      "signature": "self_evolving_architecture.py::def:get_communities",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "remove_module",
+      "source_file": "self_evolving_architecture.py",
+      "signature": "self_evolving_architecture.py::def:remove_module",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "merge_modules",
+      "source_file": "self_evolving_architecture.py",
+      "signature": "self_evolving_architecture.py::def:merge_modules",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "split_module",
+      "source_file": "self_evolving_architecture.py",
+      "signature": "self_evolving_architecture.py::def:split_module",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "register_module",
+      "source_file": "self_evolving_architecture.py",
+      "signature": "self_evolving_architecture.py::def:register_module",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "simulate_interaction",
+      "source_file": "self_evolving_architecture.py",
+      "signature": "self_evolving_architecture.py::def:simulate_interaction",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "analyze_topology",
+      "source_file": "self_evolving_architecture.py",
+      "signature": "self_evolving_architecture.py::def:analyze_topology",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "detect_architecture_smells",
+      "source_file": "self_evolving_architecture.py",
+      "signature": "self_evolving_architecture.py::def:detect_architecture_smells",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_function",
+      "name": "propose_refactoring",
+      "source_file": "self_evolving_architecture.py",
+      "signature": "self_evolving_architecture.py::def:propose_refactoring",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "apply_refactoring",
+      "source_file": "self_evolving_architecture.py",
+      "signature": "self_evolving_architecture.py::def:apply_refactoring",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_apply_split",
+      "source_file": "self_evolving_architecture.py",
+      "signature": "self_evolving_architecture.py::def:_apply_split",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_apply_merge",
+      "source_file": "self_evolving_architecture.py",
+      "signature": "self_evolving_architecture.py::def:_apply_merge",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_apply_extract",
+      "source_file": "self_evolving_architecture.py",
+      "signature": "self_evolving_architecture.py::def:_apply_extract",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_apply_inline",
+      "source_file": "self_evolving_architecture.py",
+      "signature": "self_evolving_architecture.py::def:_apply_inline",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "incubate_module",
+      "source_file": "self_evolving_architecture.py",
+      "signature": "self_evolving_architecture.py::def:incubate_module",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "retire_module",
+      "source_file": "self_evolving_architecture.py",
+      "signature": "self_evolving_architecture.py::def:retire_module",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "evolution_step",
+      "source_file": "self_evolving_architecture.py",
+      "signature": "self_evolving_architecture.py::def:evolution_step",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "_simulate_structural_coupling",
+      "source_file": "self_evolving_architecture.py",
+      "signature": "self_evolving_architecture.py::def:_simulate_structural_coupling",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_evolution_history",
+      "source_file": "self_evolving_architecture.py",
+      "signature": "self_evolving_architecture.py::def:get_evolution_history",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_architecture_metrics",
+      "source_file": "self_evolving_architecture.py",
+      "signature": "self_evolving_architecture.py::def:get_architecture_metrics",
+      "relevance": 0.6
+    },
+    {
+      "type": "python_function",
+      "name": "_calculate_entropy",
+      "source_file": "self_evolving_architecture.py",
+      "signature": "self_evolving_architecture.py::def:_calculate_entropy",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "get_stats",
+      "source_file": "self_evolving_architecture.py",
+      "signature": "self_evolving_architecture.py::def:get_stats",
+      "relevance": 0.5
+    },
+    {
+      "type": "python_function",
+      "name": "run_evolution_experiment",
+      "source_file": "self_evolving_architecture.py",
+      "signature": "self_evolving_architecture.py::def:run_evolution_experiment",
+      "relevance": 0.5
+    }
+  ],
+  "node_count": 175,
+  "si_level": 1,
+  "activity_level": 0.5923,
+  "contribution_score": 0.5224
+}

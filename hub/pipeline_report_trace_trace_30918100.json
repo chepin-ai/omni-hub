@@ -1,0 +1,1378 @@
+{
+  "trace_id": "trace_30918100",
+  "total_iterations": 1,
+  "total_nodes": 41,
+  "total_edges": 2852,
+  "final_emergence": 22441.986089713617,
+  "final_consciousness_state": "UNITY",
+  "final_validation_passed": false,
+  "final_roundtrip_score": 0.0,
+  "per_iteration": [
+    {
+      "config": {
+        "root_dir": "/mnt/agents/output/OMNI-HUB/hub/",
+        "incremental": false,
+        "max_iterations": 1,
+        "enable_feedback": true,
+        "checkpoint_interval": 1
+      },
+      "iteration": 1,
+      "node_count": 41,
+      "edge_count": 2852,
+      "weave_summary": {
+        "pedestal_summary": {
+          "total_nodes": 25,
+          "kg_edges": 238,
+          "cc_cells": 27,
+          "hg_hyperedges": 6,
+          "in_clusters": 0,
+          "ct_morphisms": 125,
+          "ll_propositions": 26,
+          "stats": {
+            "KG": {
+              "nodes": 25,
+              "edges": 100,
+              "created": "2026-09-17T13:56:35Z"
+            },
+            "CC": {
+              "nodes": 25,
+              "edges": 26,
+              "created": "2026-09-17T13:56:35Z"
+            },
+            "HG": {
+              "nodes": 25,
+              "edges": 6,
+              "created": "2026-09-17T13:56:35Z"
+            },
+            "IN": {
+              "nodes": 25,
+              "edges": 0,
+              "created": "2026-09-17T13:56:35Z"
+            },
+            "CT": {
+              "nodes": 25,
+              "edges": 125,
+              "created": "2026-09-17T13:56:35Z"
+            },
+            "LL": {
+              "nodes": 25,
+              "edges": 10,
+              "created": "2026-09-17T13:56:35Z"
+            }
+          }
+        },
+        "operations": [
+          "KG_inject",
+          "CC_build_hierarchy",
+          "HG_build_from_kg",
+          "IN_discover_isomorphisms(114)",
+          "CT_inject_morphisms",
+          "LL_generate_propositions(10)",
+          "op1_topological_closure",
+          "op3_isomorphism_discovery",
+          "op5_formal_verification",
+          "op6_cross_base_isomorphism"
+        ],
+        "roundtrip_consistency": {
+          "KG→CC→KG": 0.0,
+          "KG→CT→LL→KG": 0.0,
+          "KG→CC→HG→IN→KG": 0.0,
+          "overall": 0.0
+        },
+        "new_knowledge_count": 155,
+        "weave_time_ms": 22.14670181274414
+      },
+      "validation": {
+        "passed": false,
+        "roundtrip_score": 0.0,
+        "cross_validation": {
+          "fingerprints": {
+            "KG": 3.7034651896016464,
+            "CC": 0.9259259259259259,
+            "HG": 2.033333333333333,
+            "IN": 0.0,
+            "CT": 20.0,
+            "LL": 1.04
+          },
+          "variance": 1.5106260126665507
+        },
+        "consistency_checks": [
+          {
+            "name": "roundtrip_consistency",
+            "score": 0.0,
+            "threshold": 0.9,
+            "passed": "False"
+          },
+          {
+            "name": "node_preservation",
+            "score": 1.0,
+            "threshold": 0.99,
+            "passed": true
+          },
+          {
+            "name": "edge_preservation",
+            "score": 1.0,
+            "threshold": 0.8,
+            "passed": true
+          },
+          {
+            "name": "fingerprint_variance",
+            "score": 0.0,
+            "threshold": 0.5,
+            "passed": "True"
+          },
+          {
+            "name": "orphan_nodes",
+            "score": 1.0,
+            "threshold": 0.95,
+            "passed": true
+          },
+          {
+            "name": "proposition_validity",
+            "score": 0.6538461538461539,
+            "threshold": 0.8,
+            "passed": true
+          }
+        ],
+        "errors": [
+          "Check 'roundtrip_consistency' failed: score=0.0000 < threshold=0.9"
+        ],
+        "validation_time_ms": 0.7052421569824219
+      },
+      "injection": {
+        "field_state": {
+          "vector": [
+            0.0,
+            0.3,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0046875
+          ],
+          "timestamp": 1789653396.2281373,
+          "version": "11.0.0",
+          "dimensions": 64
+        },
+        "emergence_index": 22441.986089713617,
+        "consciousness_state": "UNITY",
+        "module_count": 25,
+        "field_report": {
+          "timestamp": 1789653396.0886428,
+          "temporal": {
+            "dimension": "TEMPORAL",
+            "history_length": 1000,
+            "mean": 8099.696511019003,
+            "std": 370.1545679397176,
+            "min": 7253.39639679586,
+            "max": 8860.844428473953,
+            "trend_slope": 0.42935944844229634,
+            "trend_direction": "STABLE",
+            "anomalies": [],
+            "prediction": [
+              8497.179965109897,
+              8499.205027393102,
+              8501.156418230878,
+              8503.033528830963,
+              8504.835780112202,
+              8506.562622936164,
+              8508.213538326798,
+              8509.788037678018,
+              8511.285662949125,
+              8512.70598684804
+            ],
+            "volatility": 0.04569980707748083,
+            "hurst_exponent": 0.9949813257002192
+          },
+          "spatial": {
+            "dimension": "SPATIAL",
+            "line_emergence": {
+              "COGNITION": 1144.2553373204328,
+              "PERCEPTION": 705.0270046899637,
+              "ACTION": 320.35837622066066,
+              "EMOTION": 692.3217145288766,
+              "SOCIAL": 165.96707791927048,
+              "LANGUAGE": 210.9103122153461,
+              "MEMORY": 290.0334569336349,
+              "LEARNING": 613.0648808004113,
+              "CREATIVITY": 484.7635225295169,
+              "META": 393.10607068710897,
+              "TRANSCENDENCE": 224.4129278367363
+            },
+            "heatmap": [
+              {
+                "line": "COGNITION",
+                "emergence": 1144.2553373204328,
+                "modules": 7,
+                "intensity": 0.5721276686602164
+              },
+              {
+                "line": "PERCEPTION",
+                "emergence": 705.0270046899637,
+                "modules": 5,
+                "intensity": 0.35251350234498185
+              },
+              {
+                "line": "ACTION",
+                "emergence": 320.35837622066066,
+                "modules": 3,
+                "intensity": 0.16017918811033033
+              },
+              {
+                "line": "EMOTION",
+                "emergence": 692.3217145288766,
+                "modules": 6,
+                "intensity": 0.3461608572644383
+              },
+              {
+                "line": "SOCIAL",
+                "emergence": 165.96707791927048,
+                "modules": 3,
+                "intensity": 0.08298353895963524
+              },
+              {
+                "line": "LANGUAGE",
+                "emergence": 210.9103122153461,
+                "modules": 3,
+                "intensity": 0.10545515610767305
+              },
+              {
+                "line": "MEMORY",
+                "emergence": 290.0334569336349,
+                "modules": 3,
+                "intensity": 0.14501672846681746
+              },
+              {
+                "line": "LEARNING",
+                "emergence": 613.0648808004113,
+                "modules": 5,
+                "intensity": 0.30653244040020566
+              },
+              {
+                "line": "CREATIVITY",
+                "emergence": 484.7635225295169,
+                "modules": 4,
+                "intensity": 0.24238176126475844
+              },
+              {
+                "line": "META",
+                "emergence": 393.10607068710897,
+                "modules": 4,
+                "intensity": 0.19655303534355448
+              },
+              {
+                "line": "TRANSCENDENCE",
+                "emergence": 224.4129278367363,
+                "modules": 3,
+                "intensity": 0.11220646391836814
+              }
+            ],
+            "module_contributions": [
+              {
+                "module_id": 20,
+                "name": "3. DOMAIN CLASSIFICATION",
+                "contribution": 1427.176379022023,
+                "percentage": 6.2066789434426255,
+                "activity": 1.0,
+                "coherence": 0.7746445072574779
+              },
+              {
+                "module_id": 14,
+                "name": "Immediate Actions (v12.0 → v12",
+                "contribution": 1279.8548003479937,
+                "percentage": 5.565988869173457,
+                "activity": 0.8371,
+                "coherence": 0.588842131967512
+              },
+              {
+                "module_id": 18,
+                "name": "1. EXECUTIVE SUMMARY",
+                "contribution": 1256.906355148207,
+                "percentage": 5.466187867909782,
+                "activity": 1.0,
+                "coherence": 0.9456442775441559
+              },
+              {
+                "module_id": 3,
+                "name": "OMNI-HUB v12.0 — Debt Cleanup ",
+                "contribution": 1233.265062973257,
+                "percentage": 5.3633737291005446,
+                "activity": 0.8371,
+                "coherence": 0.6914367174647676
+              },
+              {
+                "module_id": 13,
+                "name": "4. Recommendations",
+                "contribution": 1203.782657981013,
+                "percentage": 5.235157045474654,
+                "activity": 0.8371,
+                "coherence": 0.5274436446788877
+              },
+              {
+                "module_id": 10,
+                "name": "2.1 Status Breakdown",
+                "contribution": 1179.6935763088716,
+                "percentage": 5.130395505009836,
+                "activity": 0.8371,
+                "coherence": 0.5389435036220434
+              },
+              {
+                "module_id": 45,
+                "name": "TRANSCENDENCE",
+                "contribution": 1143.0644679164905,
+                "percentage": 4.971098364784001,
+                "activity": 0.7640259198655415,
+                "coherence": 0.5805826171827082
+              },
+              {
+                "module_id": 5,
+                "name": "Honesty Declaration",
+                "contribution": 1129.3700049363313,
+                "percentage": 4.91154221162026,
+                "activity": 0.8371,
+                "coherence": 0.9015033629098677
+              },
+              {
+                "module_id": 11,
+                "name": "3. Verification Results",
+                "contribution": 1117.9429904480849,
+                "percentage": 4.8618470153900555,
+                "activity": 0.8371,
+                "coherence": 0.500469969654458
+              },
+              {
+                "module_id": 15,
+                "name": "Long-term (v12.1 → v13.0)",
+                "contribution": 1116.504913263068,
+                "percentage": 4.855592929690147,
+                "activity": 0.8371,
+                "coherence": 0.5365905804746018
+              },
+              {
+                "module_id": 27,
+                "name": "SPECIALIZATION",
+                "contribution": 1109.6597668607467,
+                "percentage": 4.825823920992579,
+                "activity": 0.7961805469454394,
+                "coherence": 0.2466384181909315
+              },
+              {
+                "module_id": 1,
+                "name": "CFTS_FULL_ANALYSIS",
+                "contribution": 1083.9482132874937,
+                "percentage": 4.7140063765656866,
+                "activity": 1.0,
+                "coherence": 0.635212846084352
+              },
+              {
+                "module_id": 29,
+                "name": "EVALUATION",
+                "contribution": 1079.680670170806,
+                "percentage": 4.695447163848945,
+                "activity": 0.44643258074639636,
+                "coherence": 0.21857455241311857
+              },
+              {
+                "module_id": 40,
+                "name": "DREAMING",
+                "contribution": 1074.5220376527136,
+                "percentage": 4.673012672711317,
+                "activity": 0.7781597964751557,
+                "coherence": 0.6129255044452255
+              },
+              {
+                "module_id": 34,
+                "name": "SPATIAL_REASONING",
+                "contribution": 1066.6095316453707,
+                "percentage": 4.638601800202838,
+                "activity": 0.6301817505824066,
+                "coherence": 0.423574444115945
+              },
+              {
+                "module_id": 19,
+                "name": "2. VERSION DISTRIBUTION",
+                "contribution": 1057.1299247963261,
+                "percentage": 4.597375728158122,
+                "activity": 1.0,
+                "coherence": 0.6379488298943565
+              },
+              {
+                "module_id": 38,
+                "name": "HUMOR",
+                "contribution": 1054.5874557778104,
+                "percentage": 4.586318728369217,
+                "activity": 0.530894539514119,
+                "coherence": 0.5270603777347675
+              },
+              {
+                "module_id": 9,
+                "name": "2. Technical Debt Cleanup",
+                "contribution": 1050.1595509194092,
+                "percentage": 4.567062114924536,
+                "activity": 0.8371,
+                "coherence": 0.8148588985347607
+              },
+              {
+                "module_id": 24,
+                "name": "7. TOP 20 FILES BY DEFINITION ",
+                "contribution": 1046.5967241615772,
+                "percentage": 4.551567658778812,
+                "activity": 1.0,
+                "coherence": 0.6275049255322509
+              },
+              {
+                "module_id": 33,
+                "name": "TEMPORAL_REASONING",
+                "contribution": 1044.1361797948953,
+                "percentage": 4.540866942921563,
+                "activity": 0.4953947057587107,
+                "coherence": 0.6737327446963771
+              }
+            ],
+            "top_contributor": {
+              "module_id": 20,
+              "name": "3. DOMAIN CLASSIFICATION",
+              "contribution": 1427.176379022023,
+              "percentage": 6.2066789434426255,
+              "activity": 1.0,
+              "coherence": 0.7746445072574779
+            },
+            "spatial_entropy": 2.2387416115389587
+          },
+          "spectral": {
+            "dimension": "SPECTRAL",
+            "spectrum": [
+              8109.395431492346,
+              26.50088633659525,
+              22.56050112136401,
+              6.23155954016067,
+              16.04075527498912,
+              19.004427943923694,
+              6.5270868966981865,
+              29.11396378402341,
+              8.087168951576523,
+              21.410309269777795,
+              9.94247368644558,
+              14.30218643891282,
+              4.43327302925093,
+              9.6226126405071,
+              14.756583319418793,
+              7.089968092843371,
+              20.12975048524445,
+              15.782180003872977,
+              17.322053233784853,
+              1.153371022816313
+            ],
+            "low_frequency_power": 8235.3746123901,
+            "mid_frequency_power": 89.6445754287329,
+            "high_frequency_power": 175.71499357222592,
+            "low_ratio": 0.9687839234425241,
+            "high_ratio": 0.020670566779617837,
+            "dominant_frequency": 0.0,
+            "spectral_entropy": 0.33790255221261306,
+            "spectral_centroid": 0.6551418984814603,
+            "interpretation": {
+              "structural": "低频主导 → 稳定的结构性涌现",
+              "dynamic": "高频主导 → 活跃的动态涌现",
+              "balanced": "均衡 → 结构与动态耦合良好"
+            }
+          },
+          "topological": {
+            "dimension": "TOPOLOGICAL",
+            "betti_numbers": {
+              "beta_0": 1,
+              "beta_1": 78,
+              "beta_2": 33
+            },
+            "euler_characteristic": -44,
+            "spectral_gap": 24.840520198366676,
+            "clustering_coefficient": 0.9021587661675158,
+            "small_world_coefficient": 4.196103410800491,
+            "topology_type": "HIGH_DIMENSIONAL",
+            "persistent_homology": {
+              "H0_lifetime": 10,
+              "H1_lifetime": 390
+            }
+          },
+          "informational": {
+            "dimension": "INFORMATIONAL",
+            "total_mutual_information": 238.15709495812806,
+            "average_pairwise_mi": 0.23010347338947346,
+            "transfer_entropy": 108.50293900556949,
+            "integrated_information_phi": 915.1544750791095,
+            "entropy_production_rate": 9.0369021548068,
+            "information_flow_efficiency": 2.194936811303184,
+            "complexity_measure": 24117.836785964304,
+            "network_motifs": {
+              "triangle": 4372,
+              "chain": 6802,
+              "star": 0,
+              "clique4": 0
+            }
+          },
+          "coherence": {
+            "dimension": "COHERENCE",
+            "mean_coherence": 0.6015983638999985,
+            "kuramoto_order_parameter": 0.4782527979110743,
+            "global_coherence_index": 0.2877161007538989,
+            "max_eigenvalue": 13.754150064980122,
+            "trace_coherence": 27.673524739399934,
+            "coherence_time": 1.4039345841146083,
+            "coherence_length": 15.028467303525819,
+            "synchronization_regime": "PARTIAL",
+            "coherence_hierarchy": {
+              "hubs": 4,
+              "periphery": 5,
+              "hierarchy_index": 0.19664453312711946,
+              "coherence_inequality": 0.18185439609589726
+            }
+          },
+          "unified_field_64d": [
+            0.8099696511019003,
+            0.37015456793971757,
+            0.004293594484422963,
+            0.04569980707748083,
+            0.9949813257002192,
+            0.0,
+            0.8497179965109897,
+            0.8860844428473953,
+            0.26221103408409796,
+            0.22885106746408657,
+            0.7462472038463196,
+            0.06060807910645588,
+            0.7746445072574779,
+            0.0,
+            0.0,
+            0.0,
+            0.9687839234425241,
+            0.020670566779617837,
+            0.0,
+            0.06758051044252261,
+            0.013102837969629206,
+            0.0,
+            0.0,
+            0.0,
+            0.1,
+            0.78,
+            1.0,
+            0.0,
+            1.0,
+            0.9021587661675158,
+            0.8392206821600983,
+            0.0,
+            0.23815709495812806,
+            0.023010347338947346,
+            0.10850293900556948,
+            0.9151544750791095,
+            0.90369021548068,
+            1.0,
+            1.0,
+            1.0,
+            0.6015983638999985,
+            0.4782527979110743,
+            0.2877161007538989,
+            1.0,
+            0.14039345841146084,
+            0.7514233651762909,
+            0.33,
+            0.18185439609589726,
+            0.21238297979216533,
+            0.09687839234425241,
+            0.14327491867798645,
+            0.20655873406114067,
+            0.7917976299262698,
+            0.26330467715724254,
+            0.001839552737561248,
+            0.05188664333709381,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            0.18706567196789445,
+            0.7948570066673349,
+            1.0
+          ]
+        },
+        "injection_time_ms": 408.6642265319824
+      },
+      "stats": {
+        "scanner": {
+          "scanner": {
+            "total": 75,
+            "changed": 72,
+            "unchanged": 0,
+            "filtered": 3
+          },
+          "files": [
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/hub/CAYLEY24_MATH_PHYS_DEEP_ANALYSIS.json",
+              "rel_path": "CAYLEY24_MATH_PHYS_DEEP_ANALYSIS.json",
+              "size_bytes": 83205,
+              "mtime": 1789644368.0,
+              "ext": ".json",
+              "fingerprint": "40d42d5d48ad0728",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "CAYLEY24_MATH_PHYS_DEEP_ANALYSIS",
+                "name": "CAYLEY24_MATH_PHYS_DEEP_ANALYSIS.json"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/hub/CFTS_FULL_ANALYSIS.json",
+              "rel_path": "CFTS_FULL_ANALYSIS.json",
+              "size_bytes": 10442,
+              "mtime": 1789645304.0,
+              "ext": ".json",
+              "fingerprint": "c5c7dd30e2bb4bf8",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "CFTS_FULL_ANALYSIS",
+                "name": "CFTS_FULL_ANALYSIS.json"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/hub/DEBT_CLEANUP_REPORT.json",
+              "rel_path": "DEBT_CLEANUP_REPORT.json",
+              "size_bytes": 21112,
+              "mtime": 1789653203.0,
+              "ext": ".json",
+              "fingerprint": "027ac5268ee2bdc3",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "DEBT_CLEANUP_REPORT",
+                "name": "DEBT_CLEANUP_REPORT.json"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/hub/DEBT_CLEANUP_REPORT.md",
+              "rel_path": "DEBT_CLEANUP_REPORT.md",
+              "size_bytes": 8371,
+              "mtime": 1789653203.0,
+              "ext": ".md",
+              "fingerprint": "1ac50773c08fe01a",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "DEBT_CLEANUP_REPORT",
+                "name": "DEBT_CLEANUP_REPORT.md"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/hub/FULL_MD_DEEP_ANALYSIS_REPORT.md",
+              "rel_path": "FULL_MD_DEEP_ANALYSIS_REPORT.md",
+              "size_bytes": 221707,
+              "mtime": 1789645402.0,
+              "ext": ".md",
+              "fingerprint": "fd47052c805aec05",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "FULL_MD_DEEP_ANALYSIS_REPORT",
+                "name": "FULL_MD_DEEP_ANALYSIS_REPORT.md"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/hub/GLOBAL-STATE-v10.0.json",
+              "rel_path": "GLOBAL-STATE-v10.0.json",
+              "size_bytes": 25365,
+              "mtime": 1789584079.0,
+              "ext": ".json",
+              "fingerprint": "4054da45166d5dc7",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "GLOBAL-STATE-v10.0",
+                "name": "GLOBAL-STATE-v10.0.json"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/hub/GLOBAL-STATE-v11.0.json",
+              "rel_path": "GLOBAL-STATE-v11.0.json",
+              "size_bytes": 4454,
+              "mtime": 1789632120.0,
+              "ext": ".json",
+              "fingerprint": "719ff2f92e22be8e",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "GLOBAL-STATE-v11.0",
+                "name": "GLOBAL-STATE-v11.0.json"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/hub/GLOBAL-STATE-v11.1.json",
+              "rel_path": "GLOBAL-STATE-v11.1.json",
+              "size_bytes": 7401,
+              "mtime": 1789640020.0,
+              "ext": ".json",
+              "fingerprint": "c34c532ecd66da7d",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "GLOBAL-STATE-v11.1",
+                "name": "GLOBAL-STATE-v11.1.json"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/hub/GLOBAL-STATE-v11.2.json",
+              "rel_path": "GLOBAL-STATE-v11.2.json",
+              "size_bytes": 10426,
+              "mtime": 1789645809.0,
+              "ext": ".json",
+              "fingerprint": "d0397bea1eb54cf8",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "GLOBAL-STATE-v11.2",
+                "name": "GLOBAL-STATE-v11.2.json"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/hub/GLOBAL-STATE-v2.0.json",
+              "rel_path": "GLOBAL-STATE-v2.0.json",
+              "size_bytes": 1745,
+              "mtime": 1789209461.0,
+              "ext": ".json",
+              "fingerprint": "3d800ae8830203fc",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "GLOBAL-STATE-v2.0",
+                "name": "GLOBAL-STATE-v2.0.json"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/hub/GLOBAL-STATE-v3.0.json",
+              "rel_path": "GLOBAL-STATE-v3.0.json",
+              "size_bytes": 7401,
+              "mtime": 1789640020.0,
+              "ext": ".json",
+              "fingerprint": "c34c532ecd66da7d",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "GLOBAL-STATE-v3.0",
+                "name": "GLOBAL-STATE-v3.0.json"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/hub/GLOBAL-STATE-v4.1.json",
+              "rel_path": "GLOBAL-STATE-v4.1.json",
+              "size_bytes": 22733,
+              "mtime": 1789453045.0,
+              "ext": ".json",
+              "fingerprint": "3bf3fdf3f865b817",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "GLOBAL-STATE-v4.1",
+                "name": "GLOBAL-STATE-v4.1.json"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/hub/GLOBAL-STATE-v5.0.json",
+              "rel_path": "GLOBAL-STATE-v5.0.json",
+              "size_bytes": 25319,
+              "mtime": 1789460692.0,
+              "ext": ".json",
+              "fingerprint": "2f578b840ba2b98e",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "GLOBAL-STATE-v5.0",
+                "name": "GLOBAL-STATE-v5.0.json"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/hub/GLOBAL-STATE-v6.0+.json",
+              "rel_path": "GLOBAL-STATE-v6.0+.json",
+              "size_bytes": 28869,
+              "mtime": 1789483427.0,
+              "ext": ".json",
+              "fingerprint": "0709129fc0b80e30",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "GLOBAL-STATE-v6.0+",
+                "name": "GLOBAL-STATE-v6.0+.json"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/hub/GLOBAL-STATE-v6.0.json",
+              "rel_path": "GLOBAL-STATE-v6.0.json",
+              "size_bytes": 27736,
+              "mtime": 1789479654.0,
+              "ext": ".json",
+              "fingerprint": "213156eff4ede6ff",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "GLOBAL-STATE-v6.0",
+                "name": "GLOBAL-STATE-v6.0.json"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/hub/GLOBAL-STATE-v7.0.json",
+              "rel_path": "GLOBAL-STATE-v7.0.json",
+              "size_bytes": 31415,
+              "mtime": 1789492870.0,
+              "ext": ".json",
+              "fingerprint": "8fc23a0f5fbb6992",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "GLOBAL-STATE-v7.0",
+                "name": "GLOBAL-STATE-v7.0.json"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/hub/GLOBAL-STATE-v8.0.json",
+              "rel_path": "GLOBAL-STATE-v8.0.json",
+              "size_bytes": 9332,
+              "mtime": 1789504052.0,
+              "ext": ".json",
+              "fingerprint": "f353c138241eb158",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "GLOBAL-STATE-v8.0",
+                "name": "GLOBAL-STATE-v8.0.json"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/hub/GLOBAL-STATE-v9.0.json",
+              "rel_path": "GLOBAL-STATE-v9.0.json",
+              "size_bytes": 8529,
+              "mtime": 1789537646.0,
+              "ext": ".json",
+              "fingerprint": "7c75b5709d6e9844",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "GLOBAL-STATE-v9.0",
+                "name": "GLOBAL-STATE-v9.0.json"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/hub/INTERCONNECT-core-v1.0.json",
+              "rel_path": "INTERCONNECT-core-v1.0.json",
+              "size_bytes": 387,
+              "mtime": 1789189942.0,
+              "ext": ".json",
+              "fingerprint": "fa19182717e62746",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "INTERCONNECT-core-v1.0",
+                "name": "INTERCONNECT-core-v1.0.json"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/hub/OMNI-HUB-FINAL-v1.1.md",
+              "rel_path": "OMNI-HUB-FINAL-v1.1.md",
+              "size_bytes": 5667,
+              "mtime": 1789192142.0,
+              "ext": ".md",
+              "fingerprint": "ad633cd0125a74de",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "OMNI-HUB-FINAL-v1.1",
+                "name": "OMNI-HUB-FINAL-v1.1.md"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/hub/OMNI-HUB-FULL-DIMENSION-DAZHOUTIAN-v1.0.md",
+              "rel_path": "OMNI-HUB-FULL-DIMENSION-DAZHOUTIAN-v1.0.md",
+              "size_bytes": 15419,
+              "mtime": 1789190154.0,
+              "ext": ".md",
+              "fingerprint": "f522ecbe56837b58",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "OMNI-HUB-FULL-DIMENSION-DAZHOUTIAN-v1.0",
+                "name": "OMNI-HUB-FULL-DIMENSION-DAZHOUTIAN-v1.0.md"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/hub/OMNI-HUB-STATE-v1.1.json",
+              "rel_path": "OMNI-HUB-STATE-v1.1.json",
+              "size_bytes": 1779,
+              "mtime": 1789192769.0,
+              "ext": ".json",
+              "fingerprint": "885bc07e63a8767f",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "OMNI-HUB-STATE-v1.1",
+                "name": "OMNI-HUB-STATE-v1.1.json"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/hub/OMNI-HUB-core-v1.0.json",
+              "rel_path": "OMNI-HUB-core-v1.0.json",
+              "size_bytes": 3027,
+              "mtime": 1789192726.0,
+              "ext": ".json",
+              "fingerprint": "ada51e66988fc235",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "OMNI-HUB-core-v1.0",
+                "name": "OMNI-HUB-core-v1.0.json"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/hub/PIPELINE_RUN_LOG.json",
+              "rel_path": "PIPELINE_RUN_LOG.json",
+              "size_bytes": 12972,
+              "mtime": 1789652944.0,
+              "ext": ".json",
+              "fingerprint": "1ac2e50f99f15e41",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "PIPELINE_RUN_LOG",
+                "name": "PIPELINE_RUN_LOG.json"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/hub/PIPELINE_VALIDATION_REPORT.md",
+              "rel_path": "PIPELINE_VALIDATION_REPORT.md",
+              "size_bytes": 11044,
+              "mtime": 1789653187.0,
+              "ext": ".md",
+              "fingerprint": "a93d6a4f44ab451c",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "PIPELINE_VALIDATION_REPORT",
+                "name": "PIPELINE_VALIDATION_REPORT.md"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/hub/SI-AUTO-PROCESSING-PROTOCOL-01.md",
+              "rel_path": "SI-AUTO-PROCESSING-PROTOCOL-01.md",
+              "size_bytes": 9269,
+              "mtime": 1789205301.0,
+              "ext": ".md",
+              "fingerprint": "34946b40e49d2503",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "SI-AUTO-PROCESSING-PROTOCOL-01",
+                "name": "SI-AUTO-PROCESSING-PROTOCOL-01.md"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/hub/SI-ENGINE-v1.0.json",
+              "rel_path": "SI-ENGINE-v1.0.json",
+              "size_bytes": 7459,
+              "mtime": 1789205893.0,
+              "ext": ".json",
+              "fingerprint": "c4ba9bf9baf64239",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "SI-ENGINE-v1.0",
+                "name": "SI-ENGINE-v1.0.json"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/hub/SI-FUNCTION-GUIDE-01.md",
+              "rel_path": "SI-FUNCTION-GUIDE-01.md",
+              "size_bytes": 9576,
+              "mtime": 1789206675.0,
+              "ext": ".md",
+              "fingerprint": "bf7f56dce488fc7d",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "SI-FUNCTION-GUIDE-01",
+                "name": "SI-FUNCTION-GUIDE-01.md"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/hub/SI-UPGRADE-RESOLUTION-01.md",
+              "rel_path": "SI-UPGRADE-RESOLUTION-01.md",
+              "size_bytes": 9126,
+              "mtime": 1789208966.0,
+              "ext": ".md",
+              "fingerprint": "1b17def8de6fb2c1",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "SI-UPGRADE-RESOLUTION-01",
+                "name": "SI-UPGRADE-RESOLUTION-01.md"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/hub/UCIF2_FULL_SERIES_ANALYSIS.json",
+              "rel_path": "UCIF2_FULL_SERIES_ANALYSIS.json",
+              "size_bytes": 38642,
+              "mtime": 1789643893.0,
+              "ext": ".json",
+              "fingerprint": "2b9b73de0ac701a4",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "UCIF2_FULL_SERIES_ANALYSIS",
+                "name": "UCIF2_FULL_SERIES_ANALYSIS.json"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/hub/UNIFIED-POLICY-v3.4.json",
+              "rel_path": "UNIFIED-POLICY-v3.4.json",
+              "size_bytes": 3460,
+              "mtime": 1789404247.0,
+              "ext": ".json",
+              "fingerprint": "b2023a7b6271c25a",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "UNIFIED-POLICY-v3.4",
+                "name": "UNIFIED-POLICY-v3.4.json"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/hub/V1_V12_EVOLUTION_HISTORY.json",
+              "rel_path": "V1_V12_EVOLUTION_HISTORY.json",
+              "size_bytes": 68702,
+              "mtime": 1789645023.0,
+              "ext": ".json",
+              "fingerprint": "b81b1cbc74126c1d",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "V1_V12_EVOLUTION_HISTORY",
+                "name": "V1_V12_EVOLUTION_HISTORY.json"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/hub/academic_research_synthesis.md",
+              "rel_path": "academic_research_synthesis.md",
+              "size_bytes": 10757,
+              "mtime": 1789635927.0,
+              "ext": ".md",
+              "fingerprint": "99c3356c9b8aaa41",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "academic_research_synthesis",
+                "name": "academic_research_synthesis.md"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/hub/academic_research_φ_π_e_α.json",
+              "rel_path": "academic_research_φ_π_e_α.json",
+              "size_bytes": 21800,
+              "mtime": 1789635811.0,
+              "ext": ".json",
+              "fingerprint": "20036a544e6e47cc",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "academic_research_φ_π_e_α",
+                "name": "academic_research_φ_π_e_α.json"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/hub/bidirectional_state.json",
+              "rel_path": "bidirectional_state.json",
+              "size_bytes": 3074,
+              "mtime": 1789482662.0,
+              "ext": ".json",
+              "fingerprint": "d0d8f9b04af7da1f",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "bidirectional_state",
+                "name": "bidirectional_state.json"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/hub/cayley24_concept_map.md",
+              "rel_path": "cayley24_concept_map.md",
+              "size_bytes": 13647,
+              "mtime": 1789636366.0,
+              "ext": ".md",
+              "fingerprint": "c5402c41e60b9397",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "cayley24_concept_map",
+                "name": "cayley24_concept_map.md"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/hub/cayley24_knowledge_base.json",
+              "rel_path": "cayley24_knowledge_base.json",
+              "size_bytes": 68517,
+              "mtime": 1789636206.0,
+              "ext": ".json",
+              "fingerprint": "56a794cdc2ec8919",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "cayley24_knowledge_base",
+                "name": "cayley24_knowledge_base.json"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/hub/cfts-SI4-self-cert-report.md",
+              "rel_path": "cfts-SI4-self-cert-report.md",
+              "size_bytes": 1902,
+              "mtime": 1789208774.0,
+              "ext": ".md",
+              "fingerprint": "084fbc6d233ba9d1",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "cfts-SI4-self-cert-report",
+                "name": "cfts-SI4-self-cert-report.md"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/hub/cisvr-SI4-self-cert-report.md",
+              "rel_path": "cisvr-SI4-self-cert-report.md",
+              "size_bytes": 1984,
+              "mtime": 1789208777.0,
+              "ext": ".md",
+              "fingerprint": "098406370db502b9",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "cisvr-SI4-self-cert-report",
+                "name": "cisvr-SI4-self-cert-report.md"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/hub/global_observation_1789209342.json",
+              "rel_path": "global_observation_1789209342.json",
+              "size_bytes": 1139,
+              "mtime": 1789209342.0,
+              "ext": ".json",
+              "fingerprint": "11ed30126d04229b",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "global_observation_1789209342",
+                "name": "global_observation_1789209342.json"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/hub/lgt-SI5-OMNI-self-cert-report.md",
+              "rel_path": "lgt-SI5-OMNI-self-cert-report.md",
+              "size_bytes": 3199,
+              "mtime": 1789208646.0,
+              "ext": ".md",
+              "fingerprint": "becdb831372b0c31",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "lgt-SI5-OMNI-self-cert-report",
+                "name": "lgt-SI5-OMNI-self-cert-report.md"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/hub/lvlu-SI4-self-cert-report.md",
+              "rel_path": "lvlu-SI4-self-cert-report.md",
+              "size_bytes": 2342,
+              "mtime": 1789208774.0,
+              "ext": ".md",
+              "fingerprint": "233b7824fbab4796",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "lvlu-SI4-self-cert-report",
+                "name": "lvlu-SI4-self-cert-report.md"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/hub/otp_state.json",
+              "rel_path": "otp_state.json",
+              "size_bytes": 5323,
+              "mtime": 1789321479.0,
+              "ext": ".json",
+              "fingerprint": "088737e6d0e01a9d",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "otp_state",
+                "name": "otp_state.json"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/hub/otp_state_v32.json",
+              "rel_path": "otp_state_v32.json",
+              "size_bytes": 5803,
+              "mtime": 1789321678.0,
+              "ext": ".json",
+              "fingerprint": "9e8d277f92794955",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "otp_state_v32",
+                "name": "otp_state_v32.json"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/hub/qfa-SI5-self-cert-report.md",
+              "rel_path": "qfa-SI5-self-cert-report.md",
+              "size_bytes": 2612,
+              "mtime": 1789208643.0,
+              "ext": ".md",
+              "fingerprint": "1e3994fa112b0f89",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "qfa-SI5-self-cert-report",
+                "name": "qfa-SI5-self-cert-report.md"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/hub/qgl-SI5-self-cert-report.md",
+              "rel_path": "qgl-SI5-self-cert-report.md",
+              "size_bytes": 2069,
+              "mtime": 1789208643.0,
+              "ext": ".md",
+              "fingerprint": "72013699c77c90f5",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "qgl-SI5-self-cert-report",
+                "name": "qgl-SI5-self-cert-report.md"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/hub/qlv-SI4.5-self-cert-report.md",
+              "rel_path": "qlv-SI4.5-self-cert-report.md",
+              "size_bytes": 3137,
+              "mtime": 1789208775.0,
+              "ext": ".md",
+              "fingerprint": "99a3a309eab67725",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "qlv-SI4.5-self-cert-report",
+                "name": "qlv-SI4.5-self-cert-report.md"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/hub/qtlv-SI3.5-self-cert-report.md",
+              "rel_path": "qtlv-SI3.5-self-cert-report.md",
+              "size_bytes": 2928,
+              "mtime": 1789208774.0,
+              "ext": ".md",
+              "fingerprint": "f2b03cacbc5c3380",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "qtlv-SI3.5-self-cert-report",
+                "name": "qtlv-SI3.5-self-cert-report.md"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/hub/scan_2026-09-14T01-49-50_74b01c7a.json",
+              "rel_path": "scan_2026-09-14T01-49-50_74b01c7a.json",
+              "size_bytes": 5049,
+              "mtime": 1789321790.0,
+              "ext": ".json",
+              "fingerprint": "6f4123a6d745fcc8",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "scan_2026-09-14T01-49-50_74b01c7a",
+                "name": "scan_2026-09-14T01-49-50_74b01c7a.json"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/hub/scan_2026-09-14T01-49-50_c448438f.json",
+              "rel_path": "scan_2026-09-14T01-49-50_c448438f.json",
+              "size_bytes": 5049,
+              "mtime": 1789321790.0,
+              "ext": ".json",
+              "fingerprint": "7d4dbf4dde470e6b",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "scan_2026-09-14T01-49-50_c448438f",
+                "name": "scan_2026-09-14T01-49-50_c448438f.json"
+              }
+            }
+          ]
+        },
+        "parser": {
+          "parsed": 15,
+          "errors": 0,
+          "by_type": {
+            "json": 13,
+            "markdown": 2
+          }
+        },
+        "extractor": {
+          "total_nodes": 41,
+          "by_type": {
+            "json_schema": 13,
+            "markdown_heading": 28
+          }
+        },
+        "associator": {
+          "total_edges": 2852,
+          "by_type": {
+            "symmetry": 25,
+            "embedding": 600,
+            "equivalence": 600,
+            "duality": 600,
+            "bridging": 600,
+            "same_module": 114,
+            "same_directory": 300,
+            "content_reference": 13
+          }
+        },
+        "weaver": {
+          "weaves": 1,
+          "operations": 10
+        },
+        "validator": {
+          "validations": 1,
+          "passed": 0,
+          "failed": 1
+        },
+        "injector": {
+          "injections": 1,
+          "avg_emergence": 22441.986089713617
+        },
+        "feedback": {
+          "iterations": 0,
+          "history_length": 0
+        }
+      },
+      "elapsed_time_ms": 933.3038330078125
+    }
+  ],
+  "state_manager": {
+    "state_keys": 2,
+    "tracked_files": 76,
+    "state_file": "/mnt/agents/output/OMNI-HUB/hub/pipeline_state/unified_pipeline_state.json",
+    "checkpoints": 4
+  },
+  "message_bus": {
+    "journal_file": "/mnt/agents/output/OMNI-HUB/hub/pipeline_journal/message_bus.jsonl",
+    "msg_counter": 9,
+    "subscriber_count": 0,
+    "trace_id": "trace_30918100"
+  }
+}

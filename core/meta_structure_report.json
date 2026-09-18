@@ -1,0 +1,449 @@
+{
+  "timestamp": "2026-09-15T13:28:36.553923+00:00",
+  "system": "OMNI-HUB v3.8",
+  "meta_structure": "Gu-Wheel-Spine-Ding-Tower-Ring",
+  "total_experiments": 6,
+  "total_tests": 52,
+  "total_passed": 52,
+  "total_failed": 0,
+  "pass_rate": 1.0,
+  "experiments": {
+    "experiment_1": {
+      "test_name": "六元初始化",
+      "passed": 15,
+      "failed": 0,
+      "details": [
+        {
+          "test": "Gu 实例化",
+          "passed": true,
+          "detail": "Gu: 毂"
+        },
+        {
+          "test": "Wheel 实例化",
+          "passed": true,
+          "detail": "Wheel: 轮"
+        },
+        {
+          "test": "Spine 实例化",
+          "passed": true,
+          "detail": "Spine: 脊"
+        },
+        {
+          "test": "Ding 实例化",
+          "passed": true,
+          "detail": "Ding: 鼎"
+        },
+        {
+          "test": "Tower 实例化",
+          "passed": true,
+          "detail": "Tower: 塔"
+        },
+        {
+          "test": "Ring 实例化",
+          "passed": true,
+          "detail": "Ring: 环"
+        },
+        {
+          "test": "Gu 状态ACTIVE",
+          "passed": true,
+          "detail": "状态: ACTIVE"
+        },
+        {
+          "test": "Wheel 状态ACTIVE",
+          "passed": true,
+          "detail": "状态: ACTIVE"
+        },
+        {
+          "test": "Spine 状态ACTIVE",
+          "passed": true,
+          "detail": "状态: ACTIVE"
+        },
+        {
+          "test": "Ding 状态ACTIVE",
+          "passed": true,
+          "detail": "状态: ACTIVE"
+        },
+        {
+          "test": "Tower 状态ACTIVE",
+          "passed": true,
+          "detail": "状态: ACTIVE"
+        },
+        {
+          "test": "Ring 状态ACTIVE",
+          "passed": true,
+          "detail": "状态: ACTIVE"
+        },
+        {
+          "test": "Gu注册表完整性",
+          "passed": true,
+          "detail": "注册数: 6/6"
+        },
+        {
+          "test": "Gu自描述",
+          "passed": true,
+          "detail": "自引用深度: Gu_at_depth_2"
+        },
+        {
+          "test": "耦合矩阵维度",
+          "passed": true,
+          "detail": "形状: (6, 6)"
+        }
+      ]
+    },
+    "experiment_2": {
+      "test_name": "六元交互",
+      "passed": 5,
+      "failed": 0,
+      "details": [
+        {
+          "test": "数据包签名",
+          "passed": true,
+          "detail": "签名: 237afcd1f62ac540..."
+        },
+        {
+          "test": "多流类型发送",
+          "passed": true,
+          "detail": "已发送: 6, 已交付: 4"
+        },
+        {
+          "test": "广播功能",
+          "passed": true,
+          "detail": "广播包数: 4 (预期4)"
+        },
+        {
+          "test": "队列处理",
+          "passed": true,
+          "detail": "处理包数: 34, 队列剩余: 0"
+        },
+        {
+          "test": "协议统计",
+          "passed": true,
+          "detail": "交付率: 130.00%"
+        }
+      ]
+    },
+    "experiment_3": {
+      "test_name": "耦合矩阵动态调整",
+      "passed": 5,
+      "failed": 0,
+      "details": [
+        {
+          "test": "基础耦合权重",
+          "passed": true,
+          "detail": "Gu→Ding权重: 0.9000"
+        },
+        {
+          "test": "通道容量计算",
+          "passed": true,
+          "detail": "Wheel→Ring容量: 0.9406"
+        },
+        {
+          "test": "动态调整响应",
+          "passed": true,
+          "detail": "权重变化: 0.5827"
+        },
+        {
+          "test": "主导流识别",
+          "passed": true,
+          "detail": "Top3: [('Gu', 'Ding', 0.877716), ('Gu', 'Wheel', 0.814096), ('Gu', 'Ring', 0.7860820000000001)]"
+        },
+        {
+          "test": "矩阵摘要",
+          "passed": true,
+          "detail": "平均权重: 0.6289"
+        }
+      ]
+    },
+    "experiment_4": {
+      "test_name": "自我强化",
+      "passed": 5,
+      "failed": 0,
+      "details": [
+        {
+          "test": "强化周期执行",
+          "passed": true,
+          "detail": "周期数: 1, 调整量: 0.3125"
+        },
+        {
+          "test": "权重调整生效",
+          "passed": true,
+          "detail": "调整数: 6"
+        },
+        {
+          "test": "共振矩阵计算",
+          "passed": true,
+          "detail": "矩阵形状: (6, 6), 平均共振: 0.3808"
+        },
+        {
+          "test": "过载检测",
+          "passed": "True",
+          "detail": "过载单元数: 10"
+        },
+        {
+          "test": "强化统计",
+          "passed": true,
+          "detail": "总周期: 1"
+        }
+      ]
+    },
+    "experiment_5": {
+      "test_name": "系统集成",
+      "passed": 15,
+      "failed": 0,
+      "details": [
+        {
+          "test": "layer → Gu 映射",
+          "passed": true,
+          "detail": "映射到: Gu(毂)"
+        },
+        {
+          "test": "circle → Ding 映射",
+          "passed": true,
+          "detail": "映射到: Ding(鼎)"
+        },
+        {
+          "test": "ring → Ring 映射",
+          "passed": true,
+          "detail": "映射到: Ring(环)"
+        },
+        {
+          "test": "net → Wheel 映射",
+          "passed": true,
+          "detail": "映射到: Wheel(轮)"
+        },
+        {
+          "test": "cloud → Tower 映射",
+          "passed": true,
+          "detail": "映射到: Tower(塔)"
+        },
+        {
+          "test": "Gu → layer 反向映射",
+          "passed": true,
+          "detail": "映射到: layer"
+        },
+        {
+          "test": "Wheel → net 反向映射",
+          "passed": true,
+          "detail": "映射到: net"
+        },
+        {
+          "test": "Spine → layer 反向映射",
+          "passed": true,
+          "detail": "映射到: layer"
+        },
+        {
+          "test": "Ding → circle 反向映射",
+          "passed": true,
+          "detail": "映射到: circle"
+        },
+        {
+          "test": "Tower → cloud 反向映射",
+          "passed": true,
+          "detail": "映射到: cloud"
+        },
+        {
+          "test": "Ring → ring 反向映射",
+          "passed": true,
+          "detail": "映射到: ring"
+        },
+        {
+          "test": "经-纬-薪解析",
+          "passed": true,
+          "detail": "经→Spine, 纬→Wheel, 薪→Ding"
+        },
+        {
+          "test": "张量场流转 Wheel→Ring→Tower",
+          "passed": true,
+          "detail": "流转步骤: ['Wheel', 'Ring', 'Tower']"
+        },
+        {
+          "test": "链式哈希流转 Ring→Spine→Gu",
+          "passed": true,
+          "detail": "流转步骤: ['Ring', 'Spine', 'Gu']"
+        },
+        {
+          "test": "收缩操作流转 Tower→Ding→Wheel",
+          "passed": true,
+          "detail": "流转步骤: ['Tower', 'Ding', 'Wheel']"
+        }
+      ]
+    },
+    "experiment_6": {
+      "test_name": "全流水线节拍",
+      "passed": 7,
+      "failed": 0,
+      "details": [
+        {
+          "test": "节拍计数",
+          "passed": true,
+          "detail": "节拍数: 100"
+        },
+        {
+          "test": "Wheel spin历史",
+          "passed": true,
+          "detail": "历史数: 100, 收敛: False"
+        },
+        {
+          "test": "Spine知识累积",
+          "passed": true,
+          "detail": "经验数: 100, 知识节点: 3"
+        },
+        {
+          "test": "Tower扫描历史",
+          "passed": true,
+          "detail": "扫描数: 100"
+        },
+        {
+          "test": "Ring契约链",
+          "passed": true,
+          "detail": "契约数: 1, 完整性: 1.0000"
+        },
+        {
+          "test": "系统健康度",
+          "passed": true,
+          "detail": "健康度: 0.9883"
+        },
+        {
+          "test": "全状态获取",
+          "passed": true,
+          "detail": "状态键: ['metas', 'coupling', 'protocol', 'reinforcement', 'beat_count', 'system_health']"
+        }
+      ]
+    }
+  },
+  "final_state": {
+    "metas": {
+      "Gu": {
+        "name": "Gu",
+        "symbol": "毂",
+        "role": "CONTROLLER",
+        "state": "ACTIVE",
+        "activity_score": 1.0
+      },
+      "Wheel": {
+        "name": "Wheel",
+        "symbol": "轮",
+        "role": "ITERATOR",
+        "state": "ACTIVE",
+        "activity_score": 0.0
+      },
+      "Spine": {
+        "name": "Spine",
+        "symbol": "脊",
+        "role": "ARCHIVIST",
+        "state": "ACTIVE",
+        "activity_score": 1.03
+      },
+      "Ding": {
+        "name": "Ding",
+        "symbol": "鼎",
+        "role": "ARBITER",
+        "state": "ACTIVE",
+        "activity_score": 1.8
+      },
+      "Tower": {
+        "name": "Tower",
+        "symbol": "塔",
+        "role": "OBSERVER",
+        "state": "ACTIVE",
+        "activity_score": 1.0
+      },
+      "Ring": {
+        "name": "Ring",
+        "symbol": "环",
+        "role": "ENFORCER",
+        "state": "ACTIVE",
+        "activity_score": 1.1
+      }
+    },
+    "coupling": {
+      "matrix": [
+        [
+          0.0,
+          0.277701394969259,
+          0.8372262778687509,
+          0.9174836178951026,
+          0.5924125366902935,
+          0.865715408034753
+        ],
+        [
+          0.31052186371747514,
+          0.0,
+          0.25879326987654944,
+          0.30075368638597966,
+          0.11880465474358033,
+          0.3573552889202666
+        ],
+        [
+          0.47984340119398916,
+          0.22159153229412287,
+          0.0,
+          0.6032724349302342,
+          0.3883954372022196,
+          0.4139666709675447
+        ],
+        [
+          0.8668147015905182,
+          0.2281113982587717,
+          0.660660244143003,
+          0.0,
+          0.44600266711176073,
+          0.7425564444794581
+        ],
+        [
+          0.5590834340103739,
+          0.10618583398809144,
+          0.505873236179073,
+          0.5454628832341883,
+          0.0,
+          0.59952323193595
+        ],
+        [
+          0.8219663687358685,
+          0.28354876175189137,
+          0.4782709803831837,
+          0.7197255479354908,
+          0.4806979858652498,
+          0.0
+        ]
+      ],
+      "avg_weight": 0.49961070650976647,
+      "max_weight": 0.9174836178951026,
+      "min_weight": 0.10618583398809144,
+      "std_weight": 0.22758551604197624,
+      "dominant_flows": [
+        {
+          "source": "Gu",
+          "target": "Ding",
+          "weight": 0.9174836178951026
+        },
+        {
+          "source": "Ding",
+          "target": "Gu",
+          "weight": 0.8668147015905182
+        },
+        {
+          "source": "Gu",
+          "target": "Ring",
+          "weight": 0.865715408034753
+        }
+      ]
+    },
+    "protocol": {
+      "sent": 175,
+      "delivered": 76,
+      "dropped": 3,
+      "retried": 126,
+      "queue_length": 267,
+      "delivery_rate": 0.4342857142857143,
+      "drop_rate": 0.017142857142857144
+    },
+    "reinforcement": {
+      "cycles": 6,
+      "avg_adjustment": 1.3360631841288162,
+      "last_cycle": 6
+    },
+    "beat_count": 100,
+    "system_health": 0.9883333333333333
+  }
+}

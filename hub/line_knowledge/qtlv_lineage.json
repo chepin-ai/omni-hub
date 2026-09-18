@@ -1,0 +1,174 @@
+{
+  "line_id": "qtlv",
+  "line_name": "量子/时间/生命/速度",
+  "timestamp": 1789662470.4196367,
+  "version": "12.0.0",
+  "lineage_tree": {
+    "root": {
+      "name": "qtlv",
+      "type": "line_root",
+      "children": [
+        "md_heading"
+      ],
+      "weight": 1.0
+    },
+    "branches": {
+      "md_heading": {
+        "type": "md_heading",
+        "node_count": 11,
+        "avg_relevance": 0.75,
+        "nodes": [
+          {
+            "name": "qtlv线 SI3.5 升级自证报告（ucif2介入产出）",
+            "signature": "qtlv-SI3.5-self-cert-report.md::heading:qtlv线 SI3.5 升级自证报告（ucif2介入产出）",
+            "relevance": 0.75,
+            "source": "qtlv-SI3.5-self-cert-report.md"
+          },
+          {
+            "name": "线基本信息",
+            "signature": "qtlv-SI3.5-self-cert-report.md::heading:线基本信息",
+            "relevance": 0.75,
+            "source": "qtlv-SI3.5-self-cert-report.md"
+          },
+          {
+            "name": "1. ucif2介入说明",
+            "signature": "qtlv-SI3.5-self-cert-report.md::heading:1. ucif2介入说明",
+            "relevance": 0.75,
+            "source": "qtlv-SI3.5-self-cert-report.md"
+          },
+          {
+            "name": "2. 升级资格评估",
+            "signature": "qtlv-SI3.5-self-cert-report.md::heading:2. 升级资格评估",
+            "relevance": 0.75,
+            "source": "qtlv-SI3.5-self-cert-report.md"
+          },
+          {
+            "name": "2.1 数据充分性: 0.84",
+            "signature": "qtlv-SI3.5-self-cert-report.md::heading:2.1 数据充分性: 0.84",
+            "relevance": 0.75,
+            "source": "qtlv-SI3.5-self-cert-report.md"
+          },
+          {
+            "name": "2.2 验证充分性: 0.84",
+            "signature": "qtlv-SI3.5-self-cert-report.md::heading:2.2 验证充分性: 0.84",
+            "relevance": 0.75,
+            "source": "qtlv-SI3.5-self-cert-report.md"
+          },
+          {
+            "name": "2.3 形式化程度: 0.79",
+            "signature": "qtlv-SI3.5-self-cert-report.md::heading:2.3 形式化程度: 0.79",
+            "relevance": 0.75,
+            "source": "qtlv-SI3.5-self-cert-report.md"
+          },
+          {
+            "name": "2.4 边界测试（ucif2代执行）",
+            "signature": "qtlv-SI3.5-self-cert-report.md::heading:2.4 边界测试（ucif2代执行）",
+            "relevance": 0.75,
+            "source": "qtlv-SI3.5-self-cert-report.md"
+          },
+          {
+            "name": "2.5 交叉验证: 0.88",
+            "signature": "qtlv-SI3.5-self-cert-report.md::heading:2.5 交叉验证: 0.88",
+            "relevance": 0.75,
+            "source": "qtlv-SI3.5-self-cert-report.md"
+          },
+          {
+            "name": "3. 评估结论",
+            "signature": "qtlv-SI3.5-self-cert-report.md::heading:3. 评估结论",
+            "relevance": 0.75,
+            "source": "qtlv-SI3.5-self-cert-report.md"
+          },
+          {
+            "name": "4. 升级条件检查表",
+            "signature": "qtlv-SI3.5-self-cert-report.md::heading:4. 升级条件检查表",
+            "relevance": 0.75,
+            "source": "qtlv-SI3.5-self-cert-report.md"
+          }
+        ]
+      }
+    }
+  },
+  "knowledge_nodes": [
+    {
+      "type": "md_heading",
+      "name": "qtlv线 SI3.5 升级自证报告（ucif2介入产出）",
+      "source_file": "qtlv-SI3.5-self-cert-report.md",
+      "signature": "qtlv-SI3.5-self-cert-report.md::heading:qtlv线 SI3.5 升级自证报告（ucif2介入产出）",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "线基本信息",
+      "source_file": "qtlv-SI3.5-self-cert-report.md",
+      "signature": "qtlv-SI3.5-self-cert-report.md::heading:线基本信息",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "1. ucif2介入说明",
+      "source_file": "qtlv-SI3.5-self-cert-report.md",
+      "signature": "qtlv-SI3.5-self-cert-report.md::heading:1. ucif2介入说明",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "2. 升级资格评估",
+      "source_file": "qtlv-SI3.5-self-cert-report.md",
+      "signature": "qtlv-SI3.5-self-cert-report.md::heading:2. 升级资格评估",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "2.1 数据充分性: 0.84",
+      "source_file": "qtlv-SI3.5-self-cert-report.md",
+      "signature": "qtlv-SI3.5-self-cert-report.md::heading:2.1 数据充分性: 0.84",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "2.2 验证充分性: 0.84",
+      "source_file": "qtlv-SI3.5-self-cert-report.md",
+      "signature": "qtlv-SI3.5-self-cert-report.md::heading:2.2 验证充分性: 0.84",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "2.3 形式化程度: 0.79",
+      "source_file": "qtlv-SI3.5-self-cert-report.md",
+      "signature": "qtlv-SI3.5-self-cert-report.md::heading:2.3 形式化程度: 0.79",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "2.4 边界测试（ucif2代执行）",
+      "source_file": "qtlv-SI3.5-self-cert-report.md",
+      "signature": "qtlv-SI3.5-self-cert-report.md::heading:2.4 边界测试（ucif2代执行）",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "2.5 交叉验证: 0.88",
+      "source_file": "qtlv-SI3.5-self-cert-report.md",
+      "signature": "qtlv-SI3.5-self-cert-report.md::heading:2.5 交叉验证: 0.88",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "3. 评估结论",
+      "source_file": "qtlv-SI3.5-self-cert-report.md",
+      "signature": "qtlv-SI3.5-self-cert-report.md::heading:3. 评估结论",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "4. 升级条件检查表",
+      "source_file": "qtlv-SI3.5-self-cert-report.md",
+      "signature": "qtlv-SI3.5-self-cert-report.md::heading:4. 升级条件检查表",
+      "relevance": 0.75
+    }
+  ],
+  "node_count": 11,
+  "si_level": 1,
+  "activity_level": 0.4482,
+  "contribution_score": 0.4608
+}

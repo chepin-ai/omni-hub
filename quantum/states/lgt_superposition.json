@@ -1,0 +1,58 @@
+{
+  "operation": "superposition_state",
+  "line": "lgt",
+  "timestamp": "2026-09-12T10:35:43.146246+00:00",
+  "description": "创建/演化 lgt 的量子叠加态",
+  "state_vector": {
+    "line": "lgt",
+    "amplitudes": {
+      "si0": {
+        "re": 0.343440316625015,
+        "im": 0.22071568948123316
+      },
+      "si1": {
+        "re": 0.4082482904638631,
+        "im": 0.0
+      },
+      "si2": {
+        "re": 0.4082482904638631,
+        "im": 0.0
+      },
+      "si3": {
+        "re": 0.4082482904638631,
+        "im": 0.0
+      },
+      "si4": {
+        "re": 0.4082482904638631,
+        "im": 0.0
+      },
+      "si5": {
+        "re": 0.4082482904638631,
+        "im": 0.0
+      }
+    },
+    "probabilities": {
+      "si0": 0.1666666666666667,
+      "si1": 0.1666666666666667,
+      "si2": 0.1666666666666667,
+      "si3": 0.1666666666666667,
+      "si4": 0.1666666666666667,
+      "si5": 0.1666666666666667
+    },
+    "dominant_level": "si0",
+    "timestamp": "2026-09-12T10:35:43.146708+00:00"
+  },
+  "entropy": 1.791759,
+  "purity": 0.0,
+  "dominant_level": "si0",
+  "dominant_probability": 0.1667,
+  "is_uniform_superposition": true,
+  "layer_distribution": {
+    "tower": 0.1667,
+    "spine": 0.1667,
+    "wheel": 0.1667,
+    "cauldron": 0.1667,
+    "ring": 0.1667,
+    "hub": 0.1667
+  }
+}

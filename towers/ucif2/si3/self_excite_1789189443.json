@@ -1,0 +1,14 @@
+{
+  "line": "ucif2",
+  "ts": "2026-09-12T05:04:02.974736+00:00",
+  "trigger_type": "silence_timeout",
+  "mode": "introspection",
+  "output": {
+    "line": "ucif2",
+    "ts": "2026-09-12T05:04:02.986296+00:00",
+    "period": "last_10_messages",
+    "message_count": 0,
+    "summary": [],
+    "insight": "Line ucif2 has processed 0 messages recently. Health: 1.0"
+  }
+}

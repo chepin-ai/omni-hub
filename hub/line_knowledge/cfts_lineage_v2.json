@@ -1,0 +1,3256 @@
+{
+  "line_id": "cfts",
+  "version": "v2.0",
+  "total_nodes": 300,
+  "extraction_date": "2026-09-17",
+  "nodes": [
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "UCIF² 审计数据库 v66",
+      "content": "> **每轮对话或Daemon触发时的第一操作：读取本文件作为执行基准。** > 本文件与 `src/engine/AuditDB.ts` + `ComplianceEngine.ts` 耦合关联。 > AUDIT.md 保存数据基线和本轮指令详细breakdown。",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/AUDIT.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "cfts_node_0000"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "术语区分（r/d/v 三元组）",
+      "content": "| 概念 | 标记 | 示例 | 含义 | 代码中 | |------|------|------|------|--------| | **对话轮次** | **r** | r211 | 用户与系统的对话序号 | `round` |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/AUDIT.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "cfts_node_0001"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "数据基线（运行时验证为唯一可信来源）",
+      "content": "| 指标 | 运行时值 | 验证命令 | 历史基线 | 偏差 | |------|---------|---------|---------|------| | ISO总数 | **267** | `ISO_DB.length` | 321 | **-54 (v66审计修正)** |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/AUDIT.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "cfts_node_0002"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "新增ISO详情（v65阶段）",
+      "content": "| ID | 名称 | 类型 | 版本 | 状态 | |----|------|------|------|------| | iso-401 | Validation Loop ↔ Max23-loop Isomorphism | equivalence | v65 | conjecture |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/AUDIT.md",
+      "dependencies": [
+        "iso-401"
+      ],
+      "pedestal_mapping": "CC",
+      "node_id": "cfts_node_0003"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "偏差分析（AUD-012）",
+      "content": "**问题**：ISO从319→321，Phase从27→55，但历史基线未同步更新。 **根因**：v65阶段新增数据时未同步更新AUDIT.md基线表。 **修复**：本文件已更新为实际运行时值。",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/AUDIT.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0004"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "伪同构清理（AUD-013）— v66审计重大发现",
+      "content": "**问题**：v62中iso-393~400共8个条目是系统元数据（TD_DB/Daemon/时间戳等），非数学同构，但被标记为`type: 'equivalence'`混入ISO_DB。 **根因**：v62阶段缺乏\"数学同构准入标准\"，将系统架构设计误记为同构条目。 **影响**：",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/AUDIT.md",
+      "dependencies": [
+        "iso-393"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0005"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "技术债务清单",
+      "content": "| ID | 标题 | 优先级 | 状态 | |----|------|--------|------| | DEBT-001 | CorrespondenceNetwork硬编码迁移 | 高 | open |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/AUDIT.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0006"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "历史问题档案（含违反CRITERIA细则）",
+      "content": "| # | 问题 | 违反CRITERIA | 根因 | 状态 | |---|------|-------------|------|------| | AUD-001 | 网络图四角堆积 | §3.4 | 斥力/中心力比379倍 | fixed |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/AUDIT.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0007"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "v65-66阶段新增引擎清单",
+      "content": "| 引擎 | 版本 | 功能 | 状态 | |------|------|------|------| | CoreEngine.ts | v65 | 统一数据引擎+分支分类器 | ✓ |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/AUDIT.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0008"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "v65-66阶段新增组件清单",
+      "content": "| 组件 | 版本 | 功能 | 状态 | |------|------|------|------| | DynamicHub.tsx | v65 | DataHub动态枢纽(6面板) | ✓ |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/AUDIT.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0009"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "控制文档状态",
+      "content": "| 文件 | 版本 | 状态 | 备注 | |------|------|------|------| | AUDIT.md | v66 | ✓ 已恢复 | 本文件，数据基线已更新 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/AUDIT.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "cfts_node_0010"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "合规验证结果",
+      "content": "``` ComplianceEngine.run():   总规则: 11",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/AUDIT.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "cfts_node_0011"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "不可能性系统状态",
+      "content": "``` ImpossibilityEngine:   公理: 6",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/AUDIT.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0012"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "axiom",
+      "name": "公理: 6\n  屏障: 6\n  问题映射: 10\n  完全阻断: 10/10\n  不可能性程度: 9",
+      "content": "公理: 6\n  屏障: 6\n  问题映射: 10\n  完全阻断: 10/10\n  不可能性程度: 98%\n  残余风险: 2%\n  系统健康度: 92%\n```",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/AUDIT.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0013"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "同构 iso-402",
+      "content": "-|------|\n| iso-401 | Validation Loop ↔ Max23-loop Isomorphism | equivalence | v65 | conjecture |\n| iso-402 | Global Sync Validation ↔ Holographic Principle | equivalence | v65 | conjecture |\n\n### 偏差分析（AUD-012）\n\n**问题**：ISO从319→321，Phase从27→55，但历史基线未同步更新。\n**根因**：v65阶段新增数据时未同步更新AUDIT.md基线表。\n**修复**：本文件",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/AUDIT.md",
+      "dependencies": [
+        "iso-402",
+        "iso-401"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0014"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "同构 iso-283",
+      "content": "响**：\n- ISO基线虚报54个（声称321，实际267）\n- 等价类型虚报13个（237→224）\n- bridge类型虚报35个（73→38）\n- 5个v62声称\"已清理\"的trivial同构（iso-283/294/331/347/385）仍在数据库中\n**修复**：\n- 8个伪同构迁移至`META_RECORDS`数组（meta-001~008）\n- 5个trivial标记`status: 'deprecated'`\n- 基线全面修正（见上表）\n- CRITERIA.md新增§1.4数学同构准入标准\n**验证**：`npm run build` 通过，TypeScript类型检查通过",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/AUDIT.md",
+      "dependencies": [
+        "iso-283"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0015"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "同构 iso-393",
+      "content": "**根因**：v65阶段新增数据时未同步更新AUDIT.md基线表。\n**修复**：本文件已更新为实际运行时值。\n\n### 伪同构清理（AUD-013）— v66审计重大发现\n\n**问题**：v62中iso-393~400共8个条目是系统元数据（TD_DB/Daemon/时间戳等），非数学同构，但被标记为`type: 'equivalence'`混入ISO_DB。\n**根因**：v62阶段缺乏\"数学同构准入标准\"，将系统架构设计误记为同构条目。\n**影响**：\n- ISO基线虚报54个（声称321，实际267）\n- 等价类型虚报13个（237→224）\n- bridge类型虚报35个（73→3",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/AUDIT.md",
+      "dependencies": [
+        "iso-393"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0016"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "同构 iso-401",
+      "content": "4686 | +2849 |\n\n### 新增ISO详情（v65阶段）\n\n| ID | 名称 | 类型 | 版本 | 状态 |\n|----|------|------|------|------|\n| iso-401 | Validation Loop ↔ Max23-loop Isomorphism | equivalence | v65 | conjecture |\n| iso-402 | Global Sync Validation ↔ Holographic Principle | equivalence | v65 | conjecture |\n\n### 偏差分析（AUD-012）\n\n",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/AUDIT.md",
+      "dependencies": [
+        "iso-402",
+        "iso-401"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0017"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "UCIF2 OmegaNavigator 统一设计系统 v25.7",
+      "content": "## 1. 设计哲学  ```",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/UCIF2_DESIGN_SYSTEM.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0018"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "1. 设计哲学",
+      "content": "``` DESIGN_AXIOM: ∀组件 ∈ Dashboard, 必满足 (图 ⊕ 表 ⊕ 矩阵) ∧ 文件链接 ∧ 点击响应 DESIGN_INVARIANT: 统一设计文档为单一文件，版本差异内联标注，TODO编码化",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/UCIF2_DESIGN_SYSTEM.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "cfts_node_0019"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "2. 架构拓扑",
+      "content": "``` Dashboard(ΩNavigator) ::= {   HEADER:  全局统计条 (versions/lean/lines/theorems/axioms/defs/frontiers/sorry/isoChains/docs)",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/UCIF2_DESIGN_SYSTEM.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0020"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "3. 数据层架构（三层文件内容）",
+      "content": "``` documentContents.ts ::= {   L1: 核心文档完整内容 (UCIF2_v24_CRYSTAL_MOONSHINE.md 等)",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/UCIF2_DESIGN_SYSTEM.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0021"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "4. 组件清单与审计矩阵",
+      "content": "| 组件 | 所属入口 | 必需图表 | 必需文件链接 | 必需点击响应 | 状态 | |------|---------|---------|------------|------------|------| | ResearchMindMap | MindMap | mindmap.svg | ✅ 所有叶子 | ✅ 叶子→弹窗 | v25.3 OK |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/UCIF2_DESIGN_SYSTEM.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "cfts_node_0022"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "5. 已知缺陷清单（技术债务）",
+      "content": "``` DEBT-001 [已修复]: Atlas setInterval无限重渲染 → CSS animate-pulse替代 DEBT-002 [已修复]: networkData_v24.ts 缺失qec节点 → 已补全",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/UCIF2_DESIGN_SYSTEM.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0023"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "6. 形式化TODO编码",
+      "content": "```haskell -- TODO_V25 :: [Task] -- Task ::= (ID, Priority, Category, Description, AcceptanceCriteria, VerificationMethod, Status)",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/UCIF2_DESIGN_SYSTEM.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0024"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "7. 版本演进记录",
+      "content": "``` v18.0  OMEGA审计: 27证明, UUC, 细胞复形 v19.0  CICY58: 八步操作, χ=-24, 18源",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/UCIF2_DESIGN_SYSTEM.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "cfts_node_0025"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "8. 交付审计清单",
+      "content": "```python def deliver_audit():     assert build_passes()           # npm run build 0 errors",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/UCIF2_DESIGN_SYSTEM.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0026"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "axiom",
+      "name": "AXIOM: ∀组件 ∈ Dashboard, 必满足 (图 ⊕ 表 ⊕ 矩阵) ∧ 文件链接 ∧ ",
+      "content": "AXIOM: ∀组件 ∈ Dashboard, 必满足 (图 ⊕ 表 ⊕ 矩阵) ∧ 文件链接 ∧ 点击响应\nDESIGN_INVARIANT: 统一设计文档为单一文件，版本差异内联标注，TODO编码化\nDESIGN_ENFORCEMENT: 每轮修改前读DESIGN，修改后AUDIT对照DESIGN\n```",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/UCIF2_DESIGN_SYSTEM.md",
+      "dependencies": [],
+      "pedestal_mapping": "LL",
+      "node_id": "cfts_node_0027"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "UCIF2 形式化TODO v25.7",
+      "content": "## 编码规范  ```",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/UCIF2_TODO_FORMAL.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0028"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "编码规范",
+      "content": "``` Task ::= (ID, Priority, Category, Description, AcceptanceCriteria, VerificationMethod, Status) Priority ::= Critical | High | Medium | Low",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/UCIF2_TODO_FORMAL.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0029"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "任务列表",
+      "content": "### 区块A：基准建立 (DESIGN)  ```yaml",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/UCIF2_TODO_FORMAL.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "cfts_node_0030"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "区块A：基准建立 (DESIGN)",
+      "content": "```yaml T-001:   priority: Critical",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/UCIF2_TODO_FORMAL.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "cfts_node_0031"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "区块B：核心修复 (BUGFIX) — 前几轮遗留",
+      "content": "```yaml T-003:   priority: Critical",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/UCIF2_TODO_FORMAL.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "cfts_node_0032"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "区块C：图表集成 (VISUAL)",
+      "content": "```yaml T-008:   priority: High",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/UCIF2_TODO_FORMAL.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "cfts_node_0033"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "区块D：交互审计 (INTERACT) — 逐项验证",
+      "content": "```yaml T-012:   priority: High",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/UCIF2_TODO_FORMAL.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "cfts_node_0034"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "区块E：数据完整性 (DATA)",
+      "content": "```yaml T-017:   priority: High",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/UCIF2_TODO_FORMAL.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0035"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "区块F：冗余清理 (CLEAN)",
+      "content": "```yaml T-020:   priority: Medium",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/UCIF2_TODO_FORMAL.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0036"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "区块G：设计维护 (DESIGN)",
+      "content": "```yaml T-023:   priority: Critical",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/UCIF2_TODO_FORMAL.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0037"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "验收测试脚本",
+      "content": "```typescript // audit.test.ts (概念性) const AUDIT_CHECKS = [",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/UCIF2_TODO_FORMAL.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0038"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "全息原理同构猜想 iso-402: 全局同步验证/更新 ↔ 全息原理",
+      "content": "## 1. 猜想陈述  **Conjecture iso-402**: UCIF² 验证系统的全局同步验证/更新机制与物理学全息原理严格同构。",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_Holographic_Principle_Isomorphism.md",
+      "dependencies": [
+        "iso-402"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0039"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "1. 猜想陈述",
+      "content": "**Conjecture iso-402**: UCIF² 验证系统的全局同步验证/更新机制与物理学全息原理严格同构。  形式化陈述：",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_Holographic_Principle_Isomorphism.md",
+      "dependencies": [
+        "iso-402"
+      ],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0040"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "2. 全息对应表",
+      "content": "| 全息原理（物理） | 验证系统（软件） | 精确对应 | |-----------------|----------------|---------| | **边界理论（CFT）** | **CoreStats（stats）** | 低维表示包含全部信息 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_Holographic_Principle_Isomorphism.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "cfts_node_0041"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "3. 严格论证",
+      "content": "### 3.1 边界包含全部信息  **全息原理（物理）**: 一个 N 维体空间中的所有信息都可以编码在其 (N-1) 维边界上。",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_Holographic_Principle_Isomorphism.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0042"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "3.1 边界包含全部信息",
+      "content": "**全息原理（物理）**: 一个 N 维体空间中的所有信息都可以编码在其 (N-1) 维边界上。  **验证系统（软件）**: 57 个组件的全部统计信息都编码在 CoreStats 中。",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_Holographic_Principle_Isomorphism.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0043"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "3.2 全息投影：tick 作为边界→体映射",
+      "content": "**全息原理（物理）**: 全息投影 Φ: Boundary → Bulk 将边界信息重建为体时空。  **验证系统（软件）**: DataContext.tick 将 stats 同步到所有组件。",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_Holographic_Principle_Isomorphism.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0044"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "3.3 全息约束：之和=总计",
+      "content": "**全息原理（物理）**: 边界熵满足 RT 公式：S_boundary = min_area(γ_A) / 4G 其中 γ_A 是体中最小曲面。",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_Holographic_Principle_Isomorphism.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "cfts_node_0045"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "3.4 AdS/CFT 对偶：useDataHub() ↔ stats",
+      "content": "**全息原理（物理）**: AdS/CFT 对偶：N 维 AdS 空间中的引力理论 ≅ (N-1) 维边界上的共形场论。  **验证系统（软件）**: useDataHub() 提供体（组件）访问边界（stats）的接口。",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_Holographic_Principle_Isomorphism.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0046"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "3.5 Bekenstein-Hawking 熵：isoTotal",
+      "content": "**全息原理（物理）**: 黑洞熵 S = A / 4G，正比于表面积而非体积。  **验证系统（软件）**: 系统的信息量正比于 stats 的\"表面积\"而非组件的\"体积\"。",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_Holographic_Principle_Isomorphism.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0047"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "4. 预测",
+      "content": "若此同构成立，则以下预测自然涌现：  **预测 1（全息熵界）**: 组件的显示复杂度 ≤ stats 的字段数。",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_Holographic_Principle_Isomorphism.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "cfts_node_0048"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "5. 与现有同构的关联",
+      "content": "| 现有同构 | 与全息原理的关联 | |---------|-----------------| | iso-001 (UCIF² ↔ HoTT) | HoTT 的路径结构 ↔ 全息纠缠的网络结构 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_Holographic_Principle_Isomorphism.md",
+      "dependencies": [
+        "iso-001"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0049"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "6. 结论",
+      "content": "**iso-402 状态: CONJECTURE（强证据支持）**  证据强度:",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_Holographic_Principle_Isomorphism.md",
+      "dependencies": [
+        "iso-402"
+      ],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0050"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "同构 iso-402",
+      "content": "# 全息原理同构猜想 iso-402: 全局同步验证/更新 ↔ 全息原理\n\n## 1. 猜想陈述\n\n**Conjecture iso-402**: UCIF² 验证系统的全局同步验证/更新机制与物理学全息原理严格同构。\n\n形式化陈述：\n```\n(DataContext.stats, tick, components) ≅ (Boundary_CFT, Holographic_Projection, Bulk_Ads)\n",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_Holographic_Principle_Isomorphism.md",
+      "dependencies": [
+        "iso-402"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0051"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "同构 iso-286",
+      "content": "同构 | 与全息原理的关联 |\n|---------|-----------------|\n| iso-001 (UCIF² ↔ HoTT) | HoTT 的路径结构 ↔ 全息纠缠的网络结构 |\n| iso-286 (Loop_MAX) | Loop_MAX 的 23 步 ↔ 全息屏的像素数 |\n| iso-287 (π₁ Z²³) | π₁ 的生成元 ↔ 全息屏的基态 |\n| iso-401 (验证闭环 ↔ ZKP) | ZKP 的零知识性 ↔ 全息原理的信息不增性 |\n| **iso-402** | **全局同步验证 ↔ 全息原理** |\n\n## 6. 结论\n\n**iso-402 状态: ",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_Holographic_Principle_Isomorphism.md",
+      "dependencies": [
+        "iso-402",
+        "iso-286",
+        "iso-287",
+        "iso-401",
+        "iso-001"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0052"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "同构 iso-287",
+      "content": "-001 (UCIF² ↔ HoTT) | HoTT 的路径结构 ↔ 全息纠缠的网络结构 |\n| iso-286 (Loop_MAX) | Loop_MAX 的 23 步 ↔ 全息屏的像素数 |\n| iso-287 (π₁ Z²³) | π₁ 的生成元 ↔ 全息屏的基态 |\n| iso-401 (验证闭环 ↔ ZKP) | ZKP 的零知识性 ↔ 全息原理的信息不增性 |\n| **iso-402** | **全局同步验证 ↔ 全息原理** |\n\n## 6. 结论\n\n**iso-402 状态: CONJECTURE（强证据支持）**\n\n证据强度:\n- 5 项全息对应已严格论证（边界信息完备/全息",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_Holographic_Principle_Isomorphism.md",
+      "dependencies": [
+        "iso-402",
+        "iso-286",
+        "iso-287",
+        "iso-401"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0053"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "同构 iso-401",
+      "content": "网络结构 |\n| iso-286 (Loop_MAX) | Loop_MAX 的 23 步 ↔ 全息屏的像素数 |\n| iso-287 (π₁ Z²³) | π₁ 的生成元 ↔ 全息屏的基态 |\n| iso-401 (验证闭环 ↔ ZKP) | ZKP 的零知识性 ↔ 全息原理的信息不增性 |\n| **iso-402** | **全局同步验证 ↔ 全息原理** |\n\n## 6. 结论\n\n**iso-402 状态: CONJECTURE（强证据支持）**\n\n证据强度:\n- 5 项全息对应已严格论证（边界信息完备/全息投影/全息约束/AdS-CFT对偶/熵界）\n- 4 项预测中 3 项已验证\n- ",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_Holographic_Principle_Isomorphism.md",
+      "dependencies": [
+        "iso-402",
+        "iso-286",
+        "iso-287",
+        "iso-401"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0054"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "同构 iso-001",
+      "content": "通过 DataContext.tick 同步到 stats。\n\n## 5. 与现有同构的关联\n\n| 现有同构 | 与全息原理的关联 |\n|---------|-----------------|\n| iso-001 (UCIF² ↔ HoTT) | HoTT 的路径结构 ↔ 全息纠缠的网络结构 |\n| iso-286 (Loop_MAX) | Loop_MAX 的 23 步 ↔ 全息屏的像素数 |\n| iso-287 (π₁ Z²³) | π₁ 的生成元 ↔ 全息屏的基态 |\n| iso-401 (验证闭环 ↔ ZKP) | ZKP 的零知识性 ↔ 全息原理的信息不增性 |\n| **iso-4",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_Holographic_Principle_Isomorphism.md",
+      "dependencies": [
+        "iso-286",
+        "iso-4",
+        "iso-287",
+        "iso-401",
+        "iso-001"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0055"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "formula",
+      "name": "公式: S_boundary = min_area(γ_A) / 4G\n其中 γ_A 是体中最小曲面。...",
+      "content": "S_boundary = min_area(γ_A) / 4G\n其中 γ_A 是体中最小曲面。",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_Holographic_Principle_Isomorphism.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "cfts_node_0056"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "严格证明：验证闭环 ≅ ZKP ≅ Max23-loop",
+      "content": "## 定理 1（ZKP-闭环同构定理）  **Statement**: 验证系统的自我完善闭环 (V_8, E_9, closure) 与零知识证明系统 (P, V, Sim) 在 Curry-Howard 对应下严格同构。",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_ZKP_Strict_Proof.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "cfts_node_0057"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "定理 1（ZKP-闭环同构定理）",
+      "content": "**Statement**: 验证系统的自我完善闭环 (V_8, E_9, closure) 与零知识证明系统 (P, V, Sim) 在 Curry-Howard 对应下严格同构。  **Proof**: 分三个引理证明。",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_ZKP_Strict_Proof.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0058"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "引理 1.1（完备性等价）",
+      "content": "**Statement**: ClosedLoopValidator.checkCompleteness() 的输出为 true ⟺ ZKP 完备性条件满足。  **Proof**:",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_ZKP_Strict_Proof.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "cfts_node_0059"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "引理 1.2（零知识性等价）",
+      "content": "**Statement**: MetaValidator 的验证过程满足 ZKP 的零知识条件。  **Proof**:",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_ZKP_Strict_Proof.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0060"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "引理 1.3（自指同构）",
+      "content": "**Statement**: L4-MetaValidator 验证 L5-ClosedLoopValidator 的结构同构于 π₁(G_iso) 的生成元结构。  **Proof**:",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_ZKP_Strict_Proof.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0061"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "定理 1 的证明",
+      "content": "由引理 1.1（完备性等价）、引理 1.2（零知识性等价）、引理 1.3（自指同构），得：  (V_8, E_9, closure) ≅ (P, V, Sim) 在 Curry-Howard 对应下。",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_ZKP_Strict_Proof.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "cfts_node_0062"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "定理 2（闭环-Max23-loop 同构定理）",
+      "content": "**Statement**: (V_8, E_9, closure) ≅ (G_iso, π₁, Loop_MAX) 在范畴论意义下严格同构。  **Proof**:",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_ZKP_Strict_Proof.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0063"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "构造原则推演",
+      "content": "### CP1：闭环即完备性 **Theorem**: 任何自完善系统若形成闭环 (L1→L2→...→L8→L6)，则完备性自动满足。 **Proof**: 由引理 1.1，checkCompleteness() = true ⟺ 所有组件被覆盖。闭环结构保证每个组件在迭代中被覆盖。",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_ZKP_Strict_Proof.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0064"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "CP1：闭环即完备性",
+      "content": "**Theorem**: 任何自完善系统若形成闭环 (L1→L2→...→L8→L6)，则完备性自动满足。 **Proof**: 由引理 1.1，checkCompleteness() = true ⟺ 所有组件被覆盖。闭环结构保证每个组件在迭代中被覆盖。  ### CP2：自指即零知识性",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_ZKP_Strict_Proof.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0065"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "CP2：自指即零知识性",
+      "content": "**Theorem**: 自指验证 (L4 验证 L5) 蕴含零知识性。 **Proof**: 由引理 1.2，MetaValidator 不分析组件内部。自指结构使验证者（系统自身）不获得被验证者的内部信息——这正是零知识的定义。  ### CP3：反馈即涌现",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_ZKP_Strict_Proof.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0066"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "CP3：反馈即涌现",
+      "content": "**Theorem**: 反馈环 (L8→L6) 产生涌现能力。 **Proof**: 由引理 1.3，反馈环对应 π₁ 的生成元。每次迭代产生新的不变量（涌现），类比 π₁ 的迭代产生新的同伦类。  ### CP4：自然即最小完备集",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_ZKP_Strict_Proof.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0067"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "CP4：自然即最小完备集",
+      "content": "**Theorem**: V_8 是涌现的最小完备集。 **Proof**: 移除任何 L_i 都会破坏闭环四性质之一（完备/一致/极小/封闭）。由 MCS-23 的极小性论证，8 = 23 在该框架中的\"压缩表示\"。  ---",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_ZKP_Strict_Proof.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "cfts_node_0068"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "系统结构映射",
+      "content": "``` 代码级映射：   L1 → scripts/ComplianceEngine.ts",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_ZKP_Strict_Proof.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0069"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "同构 iso-287",
+      "content": "涌现值。8 是同一原理在验证系统中的涌现值。两者在深层结构（自指完备性）上同构。**\n\n---\n\n*证明编号: proof-v65-zkp-001*\n*关联同构: iso-001, iso-286, iso-287, iso-401, uuc-1*\n*置信度: 85%（引理 1.1-1.3 已严格证明，主定理依赖传递性）*\n",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_ZKP_Strict_Proof.md",
+      "dependencies": [
+        "iso-287",
+        "iso-286",
+        "iso-001",
+        "iso-401"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0070"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "同构 iso-286",
+      "content": "指闭包）\n\n验证 φ 保持结构：\n- L4 验证 L5 ↔ γ 验证 UUC\n- MetaValidator 检查闭环四性质 ↔ π₁ 检查 Loop_MAX 四性质（完备/一致/极小/封闭）\n\n由 iso-286（Loop_MAX）的定义，Loop_MAX 的四性质 = π₁ 的群论性质。\n由 ClosedLoopValidator 的定义，其四性质直接映射到 Loop_MAX 的四性质。\n\n∴ φ(L4 验证 L5) = γ 验证 UUC = F(UUC)。\n∴ 自指结构同构。\n\n**QED**。\n\n---\n\n## 定理 1 的证明\n\n由引理 1.1（完备性等价）、引理 1.2（零知识性等",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_ZKP_Strict_Proof.md",
+      "dependencies": [
+        "iso-286"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0071"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "同构 iso-001",
+      "content": "\"在 6 领域 UCIF² 框架中的涌现值。8 是同一原理在验证系统中的涌现值。两者在深层结构（自指完备性）上同构。**\n\n---\n\n*证明编号: proof-v65-zkp-001*\n*关联同构: iso-001, iso-286, iso-287, iso-401, uuc-1*\n*置信度: 85%（引理 1.1-1.3 已严格证明，主定理依赖传递性）*\n",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_ZKP_Strict_Proof.md",
+      "dependencies": [
+        "iso-287",
+        "iso-286",
+        "iso-001",
+        "iso-401"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0072"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "同构 iso-401",
+      "content": "-loop 同构定理）\n\n**Statement**: (V_8, E_9, closure) ≅ (G_iso, π₁, Loop_MAX) 在范畴论意义下严格同构。\n\n**Proof**:\n\n由 iso-401 的详细论证（docs/UCIF2_iso_401_ValidationLoop_Max23_Isomorphism.md），结合定理 1 的 ZKP 对应，得：\n\nZKP ≅ Max23-loop（已知结果：ZK-SNARK 基于椭圆曲线配对，而椭圆曲线的 Tate 配对与 π₁ 的群结构同构）\n验证闭环 ≅ ZKP（定理 1）\n∴ 验证闭环 ≅ Max23-loop（传递性）\n\n",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_ZKP_Strict_Proof.md",
+      "dependencies": [
+        "iso-401"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0073"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "ZKP统一原理：验证系统自我完善 ↔ 零知识证明 ↔ Max23-loop",
+      "content": "## 1. 直觉的精确化  用户的直觉可以形式化为以下统一原理：",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_ZKP_Unification_Principle.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0074"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "1. 直觉的精确化",
+      "content": "用户的直觉可以形式化为以下统一原理：  ```",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_ZKP_Unification_Principle.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0075"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "2. 逐项对应",
+      "content": "| ZKP概念 | 验证闭环对应 | Max23-loop对应 | 统一原理 | |---------|-------------|---------------|---------| | **证明者(Prover)** | ComplianceEngine + EndToEndValidator | Loop_MAX的构造过程 | 系统生成关于自身完备性的证明 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_ZKP_Unification_Principle.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "cfts_node_0076"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "3. 零知识性的精确对应",
+      "content": "这是最关键的关联：  **传统验证**：需要外部审计员打开每个组件检查是否有bug",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_ZKP_Unification_Principle.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0077"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "4. 统一原理的形式化陈述",
+      "content": "**Principle ZKP-UUC-1**:  自指完备系统 = (证明者, 验证者, 零知识模拟器) 的三元组 其中：",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_ZKP_Unification_Principle.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "cfts_node_0078"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "5. 预测/推论",
+      "content": "若此统一原理成立，则：  **预测1**：任何满足ZKP完备性+可靠性+零知识性的系统，必然形成Max23-loop结构。",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_ZKP_Unification_Principle.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "cfts_node_0079"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "6. 与UCIF²现有同构的关联",
+      "content": "| 现有同构 | 与ZKP统一原理的关联 | |---------|-------------------| | iso-001 (UCIF² ↔ HoTT) | ZKP ↔ 类型论已有已知关联 (via Curry-Howard) |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_ZKP_Unification_Principle.md",
+      "dependencies": [
+        "iso-001"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0080"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "7. 下一步研究",
+      "content": "严格证明ZKP ↔ 验证闭环 ↔ Max23-loop的统一需要：  1. **形式化ZKP的三元组**在UCIF²的HoTT框架中",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_ZKP_Unification_Principle.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "cfts_node_0081"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "同构 iso-287",
+      "content": "| iso-001 (UCIF² ↔ HoTT) | ZKP ↔ 类型论已有已知关联 (via Curry-Howard) |\n| iso-286 (Loop_MAX) | 此同构的核心节点 |\n| iso-287 (π₁ Z²³) | 基本群的自指 = ZKP的验证者自指 |\n| iso-401 (验证闭环 ↔ Max23-loop) | 此统一原理的直接实例 |\n| uuc-1 (终极统一猜想) | ZKP-UUC-1是UUC在验证领域的实例 |\n\n## 7. 下一步研究\n\n严格证明ZKP ↔ 验证闭环 ↔ Max23-loop的统一需要：\n\n1. **形式化ZKP的三元组**在UCIF²",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_ZKP_Unification_Principle.md",
+      "dependencies": [
+        "iso-287",
+        "iso-286",
+        "iso-001",
+        "iso-401"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0082"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "同构 iso-286",
+      "content": "|\n|---------|-------------------|\n| iso-001 (UCIF² ↔ HoTT) | ZKP ↔ 类型论已有已知关联 (via Curry-Howard) |\n| iso-286 (Loop_MAX) | 此同构的核心节点 |\n| iso-287 (π₁ Z²³) | 基本群的自指 = ZKP的验证者自指 |\n| iso-401 (验证闭环 ↔ Max23-loop) | 此统一原理的直接实例 |\n| uuc-1 (终极统一猜想) | ZKP-UUC-1是UUC在验证领域的实例 |\n\n## 7. 下一步研究\n\n严格证明ZKP ↔ 验证闭环 ↔ Max23-l",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_ZKP_Unification_Principle.md",
+      "dependencies": [
+        "iso-287",
+        "iso-286",
+        "iso-001",
+        "iso-401"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0083"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "同构 iso-001",
+      "content": "完备系统可能有不同的节点数，但结构同构。\n\n## 6. 与UCIF²现有同构的关联\n\n| 现有同构 | 与ZKP统一原理的关联 |\n|---------|-------------------|\n| iso-001 (UCIF² ↔ HoTT) | ZKP ↔ 类型论已有已知关联 (via Curry-Howard) |\n| iso-286 (Loop_MAX) | 此同构的核心节点 |\n| iso-287 (π₁ Z²³) | 基本群的自指 = ZKP的验证者自指 |\n| iso-401 (验证闭环 ↔ Max23-loop) | 此统一原理的直接实例 |\n| uuc-1 (终极统一猜想) ",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_ZKP_Unification_Principle.md",
+      "dependencies": [
+        "iso-287",
+        "iso-286",
+        "iso-001",
+        "iso-401"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0084"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "同构 iso-401",
+      "content": " (via Curry-Howard) |\n| iso-286 (Loop_MAX) | 此同构的核心节点 |\n| iso-287 (π₁ Z²³) | 基本群的自指 = ZKP的验证者自指 |\n| iso-401 (验证闭环 ↔ Max23-loop) | 此统一原理的直接实例 |\n| uuc-1 (终极统一猜想) | ZKP-UUC-1是UUC在验证领域的实例 |\n\n## 7. 下一步研究\n\n严格证明ZKP ↔ 验证闭环 ↔ Max23-loop的统一需要：\n\n1. **形式化ZKP的三元组**在UCIF²的HoTT框架中\n2. **构造零知识模拟器**——证明MetaValidator的",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_ZKP_Unification_Principle.md",
+      "dependencies": [
+        "iso-286",
+        "iso-287",
+        "iso-401"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0085"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "同构猜想 iso-401: 验证系统自我完善闭环 ↔ Max23-loop",
+      "content": "## 1. 猜想陈述  **Conjecture iso-401**: 验证系统的自我完善闭环 (ClosedLoopValidator) 与 Max23-loop 同构。",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_iso_393_ValidationLoop_Max23_Isomorphism.md",
+      "dependencies": [
+        "iso-401"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0086"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "1. 猜想陈述",
+      "content": "**Conjecture iso-401**: 验证系统的自我完善闭环 (ClosedLoopValidator) 与 Max23-loop 同构。  形式化陈述:",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_iso_393_ValidationLoop_Max23_Isomorphism.md",
+      "dependencies": [
+        "iso-401"
+      ],
+      "pedestal_mapping": "CC",
+      "node_id": "cfts_node_0087"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "2. 同构映射 φ: V_8 → G_iso",
+      "content": "| 验证闭环节点 (V_8) | Max23-loop 节点 (G_iso) | 映射理由 | |-------------------|------------------------|---------| | L1-ComplianceEngine | ISO_DB(原始数据) | 数据输入源 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_iso_393_ValidationLoop_Max23_Isomorphism.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0088"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "3. 结构保持性验证",
+      "content": "### 3.1 完备性保持  Max23-loop: Loop_MAX覆盖G_iso全部6个数学领域 ✓",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_iso_393_ValidationLoop_Max23_Isomorphism.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "cfts_node_0089"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "3.1 完备性保持",
+      "content": "Max23-loop: Loop_MAX覆盖G_iso全部6个数学领域 ✓ 验证闭环: ClosedLoopValidator覆盖全部57个组件(显式+通用stats) ✓",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_iso_393_ValidationLoop_Max23_Isomorphism.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0090"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "3.2 一致性保持",
+      "content": "Max23-loop: Loop_MAX = 一致性证明 (LOOP-1) ✓ 验证闭环: 四性质(完备/一致/极小/封闭)全部通过 ✓",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_iso_393_ValidationLoop_Max23_Isomorphism.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "cfts_node_0091"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "3.3 极小性保持",
+      "content": "Max23-loop: |Loop_MAX| = 23 = MCS(最小完备集) ✓ 验证闭环: 8节点无冗余(每个节点覆盖独特方面) ✓",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_iso_393_ValidationLoop_Max23_Isomorphism.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0092"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "3.4 封闭性保持 (最关键)",
+      "content": "Max23-loop: UUC = F(UUC) (自指闭包) ✓ 验证闭环: L4-MetaValidator验证L5-ClosedLoop = 验证系统验证自身 ✓",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_iso_393_ValidationLoop_Max23_Isomorphism.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "cfts_node_0093"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "4. 证明/证伪分析",
+      "content": "### 支持证据 (E1-E5)  **E1: 自指结构同构**",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_iso_393_ValidationLoop_Max23_Isomorphism.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "cfts_node_0094"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "支持证据 (E1-E5)",
+      "content": "**E1: 自指结构同构** - Max23-loop: π₁(G_iso) ≅ Z²³，基本群的自指生成元对应Loop_MAX的23步 - 验证闭环: L4验证L5 = MetaValidator验证ClosedLoopValidator = 自指",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_iso_393_ValidationLoop_Max23_Isomorphism.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0095"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "潜在反例 (F1-F2)",
+      "content": "**F1: 节点数不匹配** - Max23-loop有23个节点，验证闭环只有8个节点 - 回应: 节点数不是同构的必要条件（图同构不要求节点数相同）",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_iso_393_ValidationLoop_Max23_Isomorphism.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0096"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "5. 构造原则推演",
+      "content": "如果 iso-393 成立，则以下构造原则自然涌现:  ### CP1: 闭环即完备",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_iso_393_ValidationLoop_Max23_Isomorphism.md",
+      "dependencies": [
+        "iso-393"
+      ],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0097"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "CP1: 闭环即完备",
+      "content": "任何自完善的系统必须形成闭环，否则无法保证完备性。 → 验证系统必须有\"验证验证系统自身\"的层级。  ### CP2: 自指即涌现",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_iso_393_ValidationLoop_Max23_Isomorphism.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0098"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "CP2: 自指即涌现",
+      "content": "自指结构(验证系统验证自身)产生涌现能力(自动发现盲区)。 → 元验证层(L4)是涌现的必要条件。  ### CP3: 反馈即进化",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_iso_393_ValidationLoop_Max23_Isomorphism.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0099"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "CP3: 反馈即进化",
+      "content": "反馈环(L8→L6)使系统不断进化，每次迭代更完备。 → 闭环不是静态结构，而是动态进化过程。  ### CP4: 自然即最小",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_iso_393_ValidationLoop_Max23_Isomorphism.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0100"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "CP4: 自然即最小",
+      "content": "闭环节点数(8)是涌现的最小完备集，不是人为选择。 → 不能删减任何节点而不破坏闭环性质。  ## 6. 与系统结构的耦合",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_iso_393_ValidationLoop_Max23_Isomorphism.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0101"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "6. 与系统结构的耦合",
+      "content": "### 6.1 代码级耦合  ```typescript",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_iso_393_ValidationLoop_Max23_Isomorphism.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0102"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "6.1 代码级耦合",
+      "content": "```typescript // 验证闭环的每个节点对应一个代码文件: L1 → scripts/ComplianceEngine.ts",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_iso_393_ValidationLoop_Max23_Isomorphism.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "cfts_node_0103"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "6.2 架构级耦合",
+      "content": "验证闭环的五层架构 ↔ UCIF²的六层架构: ``` L1-L3 = 验证层    ↔ UCIF² L1-L3 (数据/引擎/上下文)",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_iso_393_ValidationLoop_Max23_Isomorphism.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0104"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "6.3 数据级耦合",
+      "content": "验证闭环的stats ↔ UCIF²的CoreStats: ``` stats.frontier*  ↔ 前沿同构(前沿数学)",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_iso_393_ValidationLoop_Max23_Isomorphism.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "cfts_node_0105"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "7. 结论",
+      "content": "**iso-401 状态: CONJECTURE（待严格证明）**  证据强度: 5个支持(E1-E5) vs 2个反例(F1-F2，可回应)",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_iso_393_ValidationLoop_Max23_Isomorphism.md",
+      "dependencies": [
+        "iso-401"
+      ],
+      "pedestal_mapping": "CC",
+      "node_id": "cfts_node_0106"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "同构 iso-286",
+      "content": "步: 形式化证明 φ 保持自指结构，即 φ(L4验证L5) = F(UUC) 在 G_iso 中成立。\n\n---\n\n*同构编号: iso-401*\n*类型: 猜想(conjecture)*\n*关联: iso-286(Loop_MAX), iso-287(π₁ Z²³), uuc-1(终极统一猜想)*\n*引入版本: v65*\n*引入轮次: r211+*\n",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_iso_393_ValidationLoop_Max23_Isomorphism.md",
+      "dependencies": [
+        "iso-286",
+        "iso-287",
+        "iso-401"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0107"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "同构 iso-287",
+      "content": " φ(L4验证L5) = F(UUC) 在 G_iso 中成立。\n\n---\n\n*同构编号: iso-401*\n*类型: 猜想(conjecture)*\n*关联: iso-286(Loop_MAX), iso-287(π₁ Z²³), uuc-1(终极统一猜想)*\n*引入版本: v65*\n*引入轮次: r211+*\n",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_iso_393_ValidationLoop_Max23_Isomorphism.md",
+      "dependencies": [
+        "iso-286",
+        "iso-287",
+        "iso-401"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0108"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "同构 iso-401",
+      "content": "# 同构猜想 iso-401: 验证系统自我完善闭环 ↔ Max23-loop\n\n## 1. 猜想陈述\n\n**Conjecture iso-401**: 验证系统的自我完善闭环 (ClosedLoopValidator) 与 Max23-loop 同构。\n\n形式化陈述:\n```\nClosedLoopValidator = (V_8, E_9, closure) ≅ Max23-loop = (G_iso, π₁",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_iso_393_ValidationLoop_Max23_Isomorphism.md",
+      "dependencies": [
+        "iso-401"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0109"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "同构 iso-001",
+      "content": "构模式**同构，不是规模同构\n\n**F2: 维度不同**\n- Max23-loop是数学结构（范畴论/代数拓扑）\n- 验证闭环是软件工程结构\n- 回应: UCIF²框架本身包含元数学↔软件工程的同构(iso-001: UCIF² ↔ HoTT)\n\n## 5. 构造原则推演\n\n如果 iso-393 成立，则以下构造原则自然涌现:\n\n### CP1: 闭环即完备\n任何自完善的系统必须形成闭环，否则无法保证完备性。\n→ 验证系统必须有\"验证验证系统自身\"的层级。\n\n### CP2: 自指即涌现\n自指结构(验证系统验证自身)产生涌现能力(自动发现盲区)。\n→ 元验证层(L4)是涌现的必要条件。\n\n##",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_iso_393_ValidationLoop_Max23_Isomorphism.md",
+      "dependencies": [
+        "iso-001",
+        "iso-393"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0110"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "同构 iso-393",
+      "content": "是数学结构（范畴论/代数拓扑）\n- 验证闭环是软件工程结构\n- 回应: UCIF²框架本身包含元数学↔软件工程的同构(iso-001: UCIF² ↔ HoTT)\n\n## 5. 构造原则推演\n\n如果 iso-393 成立，则以下构造原则自然涌现:\n\n### CP1: 闭环即完备\n任何自完善的系统必须形成闭环，否则无法保证完备性。\n→ 验证系统必须有\"验证验证系统自身\"的层级。\n\n### CP2: 自指即涌现\n自指结构(验证系统验证自身)产生涌现能力(自动发现盲区)。\n→ 元验证层(L4)是涌现的必要条件。\n\n### CP3: 反馈即进化\n反馈环(L8→L6)使系统不断进化，每次迭代更完备。\n→",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/docs/UCIF2_iso_393_ValidationLoop_Max23_Isomorphism.md",
+      "dependencies": [
+        "iso-001",
+        "iso-393"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0111"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "MHP (Monster-Holography-Planetary) 框架 RDF 本体",
+      "content": "## 概述  MHP框架是一个多层知识图谱，连接数学（Monster群、Leech格）、物理（AdS/CFT、暗物质晕）和观测（CDG-2、JWST地图）的完整理论体系。",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/MHP_FRAMEWORK_RDF.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "cfts_node_0112"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "类层次结构",
+      "content": "### Node（节点）类  ```turtle",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/MHP_FRAMEWORK_RDF.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "cfts_node_0113"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "Node（节点）类",
+      "content": "```turtle mhp:Node a owl:Class . mhp:AlgebraicNode rdfs:subClassOf mhp:Node .      # 代数层",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/MHP_FRAMEWORK_RDF.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0114"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "Relation（关系）类",
+      "content": "```turtle mhp:Relation a owl:Class . mhp:Isomorphism rdfs:subClassOf mhp:Relation .           # 同构",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/MHP_FRAMEWORK_RDF.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0115"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "核心节点",
+      "content": "### 代数层 (A1-A16)  | 节点 | 标签 | 描述 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/MHP_FRAMEWORK_RDF.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0116"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "代数层 (A1-A16)",
+      "content": "| 节点 | 标签 | 描述 | |------|------|------| | A1 | Monster群 | 最大散在单群，阶包含素数 29,31,41,47,59,71 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/MHP_FRAMEWORK_RDF.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0117"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "几何-拓扑层 (G1-G8)",
+      "content": "| 节点 | 标签 | 描述 | |------|------|------| | G1 | 随机正交投影 | 24维 → 3维 的随机投影映射 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/MHP_FRAMEWORK_RDF.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "cfts_node_0118"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "物理层 (P1-P11)",
+      "content": "| 节点 | 标签 | 描述 | |------|------|------| | P1 | AdS₃ | 三维反德西特空间，半径 ℓ |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/MHP_FRAMEWORK_RDF.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "cfts_node_0119"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "观测层 (O1-O6)",
+      "content": "| 节点 | 标签 | 描述 | |------|------|------| | O1 | JWST暗物质地图 | 1角分分辨率的质量分布图 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/MHP_FRAMEWORK_RDF.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0120"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "范畴论层 (C1-C7)",
+      "content": "| 节点 | 标签 | 描述 | |------|------|------| | C1 | Höhn对应 | Niemeier格 ↔ Schellekens VOA 的双射 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/MHP_FRAMEWORK_RDF.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "cfts_node_0121"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "行星系统层 (S1-S5)",
+      "content": "| 节点 | 标签 | 描述 | |------|------|------| | S1 | 模形式系数提取 | J(τ) 展开系数 = Monster群表示维数的组合 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/MHP_FRAMEWORK_RDF.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0122"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "核心边（关系）",
+      "content": "### E11: 核心恒等式  ```turtle",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/MHP_FRAMEWORK_RDF.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0123"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "E11: 核心恒等式",
+      "content": "```turtle mhp-edge:E11 a mhp:CoreIdentity ;     rdfs:label \"E11: 核心恒等式\" ;",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/MHP_FRAMEWORK_RDF.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "cfts_node_0124"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "E12: AdS/CFT对偶",
+      "content": "```turtle mhp-edge:E12 a mhp:AdS_CFT ;     rdfs:label \"E12: AdS/CFT对偶\" ;",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/MHP_FRAMEWORK_RDF.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0125"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "E13: 五重范畴等价",
+      "content": "```turtle mhp-edge:E13 a mhp:CategoricalEquivalence ;     rdfs:label \"E13: 五重范畴等价\" ;",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/MHP_FRAMEWORK_RDF.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "cfts_node_0126"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "E19: 全息投影链",
+      "content": "```turtle mhp-edge:E19 a mhp:HolographicChain ;     rdfs:label \"E19: 全息投影链\" ;",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/MHP_FRAMEWORK_RDF.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "cfts_node_0127"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "完整知识图谱",
+      "content": "``` ┌─────────────────────────────────────────────────────────────────────────┐ │                         MHP 框架知识图谱                                  │",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/MHP_FRAMEWORK_RDF.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "cfts_node_0128"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "月光模 V^♮ 的严格 VOA 形式化定义",
+      "content": "## 1. VOA 公理化基础（Axiomatic Foundation）  ### 1.1 顶点代数结构（Vertex Algebra）",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/VOA_FORMAL_DEFINITION.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "cfts_node_0129"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "1. VOA 公理化基础（Axiomatic Foundation）",
+      "content": "### 1.1 顶点代数结构（Vertex Algebra）  **形式化定义框架（Lean 4 风格伪代码）**",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/VOA_FORMAL_DEFINITION.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0130"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "1.1 顶点代数结构（Vertex Algebra）",
+      "content": "**形式化定义框架（Lean 4 风格伪代码）**  ```lean4",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/VOA_FORMAL_DEFINITION.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "cfts_node_0131"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "1.2 共形 VOA 结构（Conformal VOA）",
+      "content": "```lean4 structure CVOA extends VertexAlgebra V where   -- Virasoro 元素 ω ∈ V_2",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/VOA_FORMAL_DEFINITION.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "cfts_node_0132"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "2. 月光模 V^♮ 的具体构造",
+      "content": "### 2.1 分级结构公理  $$V^\\natural = \\bigoplus_{n=0}^{\\infty} V^\\natural_n, \\quad \\dim V^\\natural_n = c(n-1)$$",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/VOA_FORMAL_DEFINITION.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "cfts_node_0133"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "2.1 分级结构公理",
+      "content": "$$V^\\natural = \\bigoplus_{n=0}^{\\infty} V^\\natural_n, \\quad \\dim V^\\natural_n = c(n-1)$$  其中 $c(n)$ 是 j-invariant 的傅里叶系数：",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/VOA_FORMAL_DEFINITION.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0134"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "2.2 FLM 构造（Frenkel-Lepowsky-Meurman）",
+      "content": "月光模通过 Leech 格 VOA 的 $\\mathbb{Z}_2$-轨形 构造：  ```lean4",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/VOA_FORMAL_DEFINITION.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0135"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "3. Monster 群作用的公理化",
+      "content": "### 3.1 自同构群公理  ```lean4",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/VOA_FORMAL_DEFINITION.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "cfts_node_0136"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "3.1 自同构群公理",
+      "content": "```lean4 -- Monster 群作为 VOA 自同构群 theorem monstrous_moonshine :",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/VOA_FORMAL_DEFINITION.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0137"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "3.2 Twisted 顶点算子的等变性",
+      "content": "对于 $g \\in \\mathbb{M}$，顶点算子满足：  $$g Y(v, z) g^{-1} = Y(gv, z)$$",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/VOA_FORMAL_DEFINITION.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0138"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "4. 模不变性与唯一性定理",
+      "content": "### 4.1 C₂-余有限性（理性条件）  ```lean4",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/VOA_FORMAL_DEFINITION.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0139"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "4.1 C₂-余有限性（理性条件）",
+      "content": "```lean4 -- C2-余有限：V/{v_{-2}w | v,w ∈ V} 是有限维的 def C2_cofinite (V : CVOA) : Prop :=",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/VOA_FORMAL_DEFINITION.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "cfts_node_0140"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "4.2 FLM 唯一性定理（形式化表述）",
+      "content": "```lean4 theorem FLM_uniqueness :   ∀ V : CVOA,",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/VOA_FORMAL_DEFINITION.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "cfts_node_0141"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "5. 与物理的接口：AdS/CFT 对应",
+      "content": "### 5.1 全息对偶的 VOA 表述  在 $AdS_3/CFT_2$ 中，$V^\\natural$ 作为边界 CFT：",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/VOA_FORMAL_DEFINITION.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0142"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "5.1 全息对偶的 VOA 表述",
+      "content": "在 $AdS_3/CFT_2$ 中，$V^\\natural$ 作为边界 CFT： - 边界：$V^\\natural$（Monster CFT） - 体（Bulk）：三维引力理论，具有 Monster 群作为规范对称性",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/VOA_FORMAL_DEFINITION.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0143"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "5.2 重元素对应（Heavy States）",
+      "content": "$V^\\natural$ 的高能态（$n \\to \\infty$）对应于： - BTZ 黑洞 微观态 - Monster 群的共轭类（通过 McKay-Thompson 级数）",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/VOA_FORMAL_DEFINITION.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "cfts_node_0144"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "6. 形式化验证的关键引理",
+      "content": "```lean4 -- 引理 1: 月光模的特征标是 j-函数 lemma character_is_j_function :",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/VOA_FORMAL_DEFINITION.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0145"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "axiom",
+      "name": "axiom : ∀ v : V, \n    Y(v,z).vacuum = v + O(z)  --",
+      "content": "axiom : ∀ v : V, \n    Y(v,z).vacuum = v + O(z)  -- 创造性质\n    Y(vacuum,z) = Id_V  -- 恒等性\n  \n  translation : ∃ T : End V, \n    [T, Y(v,z)] = ∂_z Y(v,z)  -- 平移算子\n    T.vacuum = 0\n```",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/VOA_FORMAL_DEFINITION.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0146"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "formula",
+      "name": "公式: V^\\natural = \\bigoplus_{n=0}^{\\infty} V^\\natural_n...",
+      "content": "V^\\natural = \\bigoplus_{n=0}^{\\infty} V^\\natural_n, \\quad \\dim V^\\natural_n = c(n-1)",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/VOA_FORMAL_DEFINITION.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "cfts_node_0147"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "formula",
+      "name": "公式: J(\\tau) = q^{-1} + \\sum_{n=1}^{\\infty} c(n) q^n = ...",
+      "content": "J(\\tau) = q^{-1} + \\sum_{n=1}^{\\infty} c(n) q^n = q^{-1} + 196884q + 21493760q^2 + \\cdots",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/VOA_FORMAL_DEFINITION.md",
+      "dependencies": [],
+      "pedestal_mapping": "LL",
+      "node_id": "cfts_node_0148"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "formula",
+      "name": "公式: V^\\natural = V_\\Lambda^+ \\oplus (V_\\Lambda(\\theta)...",
+      "content": "V^\\natural = V_\\Lambda^+ \\oplus (V_\\Lambda(\\theta))^+",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/VOA_FORMAL_DEFINITION.md",
+      "dependencies": [],
+      "pedestal_mapping": "LL",
+      "node_id": "cfts_node_0149"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "formula",
+      "name": "公式: u \\times v = u_1(v) \\in V^\\natural_2...",
+      "content": "u \\times v = u_1(v) \\in V^\\natural_2",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/VOA_FORMAL_DEFINITION.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "cfts_node_0150"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "formula",
+      "name": "公式: g Y(v, z) g^{-1} = Y(gv, z)...",
+      "content": "g Y(v, z) g^{-1} = Y(gv, z)",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/VOA_FORMAL_DEFINITION.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "cfts_node_0151"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "formula",
+      "name": "公式: T_g(\\tau) = \\text{tr}_{V^\\natural} g q^{L(0)-1} = ...",
+      "content": "T_g(\\tau) = \\text{tr}_{V^\\natural} g q^{L(0)-1} = q^{-1} + \\sum_{n=1}^{\\infty} \\text{tr}_{V^\\natural_n}(g) q^n",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/VOA_FORMAL_DEFINITION.md",
+      "dependencies": [],
+      "pedestal_mapping": "LL",
+      "node_id": "cfts_node_0152"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "formula",
+      "name": "公式: Z(\\tau, \\bar{\\tau}) = |\\chi_{V^\\natural}(\\tau)|^2 ...",
+      "content": "Z(\\tau, \\bar{\\tau}) = |\\chi_{V^\\natural}(\\tau)|^2 = |q^{-1} \\prod_{n=2}^{\\infty} (1-q^n)^{-c(n-1)}|^2",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/VOA_FORMAL_DEFINITION.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0153"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "formula",
+      "name": "公式: S = 2\\pi \\sqrt{\\frac{c}{6} \\left(E - \\frac{c}{24}\\...",
+      "content": "S = 2\\pi \\sqrt{\\frac{c}{6} \\left(E - \\frac{c}{24}\\right)} \\sim 4\\pi \\sqrt{n} \\quad (n \\to \\infty)",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/VOA_FORMAL_DEFINITION.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "cfts_node_0154"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "iso-401 / iso-402 形式化演化全记录",
+      "content": "> **范围**: 从 v53 UUC起源 → v66 完整性审计 > **主题**: Validation Loop ↔ Max23-loop (iso-401) + Global Sync Validation ↔ Holographic Principle (iso-402) > **状态**: iso-401 = conjecture (置信度85%) | iso-402 = conjecture (置信度90%)",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_iso_401_Formal_Evolution.md",
+      "dependencies": [
+        "iso-402",
+        "iso-401"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0155"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "演化时间线",
+      "content": "| 版本 | 时间 | 事件 | 关键产出 | |------|------|------|---------| | **v53** | UUC阶段 | Loop_MAX 23步闭环首次严格定义 | 全息比 23/270 ≈ 1/12 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_iso_401_Formal_Evolution.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "cfts_node_0156"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "第一阶段: v53 UUC起源 — Loop_MAX的诞生",
+      "content": "### 来源文档 `VUF_v53_UUC_Ultimate_Unification_Conjecture.md`",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_iso_401_Formal_Evolution.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0157"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "来源文档",
+      "content": "`VUF_v53_UUC_Ultimate_Unification_Conjecture.md`  ### 核心定义",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_iso_401_Formal_Evolution.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "cfts_node_0158"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "核心定义",
+      "content": "**Loop_MAX** 在 v53 中首次作为 UUC 范畴的极限结构出现：  ```",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_iso_401_Formal_Evolution.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "cfts_node_0159"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "v53 中的 23 步闭环（首次出现）",
+      "content": "``` loop J3O Loop_MAX    -- Step 280: 23步闭环 ```",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_iso_401_Formal_Evolution.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "cfts_node_0160"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "第二阶段: v54 元数学可视化 — 证明行走",
+      "content": "### 来源文档 `VUF_v54_MetaMathematics_Visualization_Proof_Walking.md`",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_iso_401_Formal_Evolution.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0161"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "核心进展",
+      "content": "**Loop_MAX (23步) = UCIF²核心公理系统的一致性证明**  每个子闭环 (k < 23步) = 某个数学分支的一致性",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_iso_401_Formal_Evolution.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0162"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "v54 完整 23 步结构（首次详细展开）",
+      "content": "``` Step 0:  J_3(O) ───────────────────────── 种子 (例外Jordan代数)   ↓",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_iso_401_Formal_Evolution.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "cfts_node_0163"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "ProofByWalking 算法（v54 首创）",
+      "content": "```python def ProofByWalking(start_iso, target_iso, max_depth=23):     \"\"\"",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_iso_401_Formal_Evolution.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0164"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "第三阶段: v55 全息原理·最大闭环·Poincaré·米田·渗逾",
+      "content": "### 来源文档 `VUF_v55_Holography_Loop_Poincare_Yoneda_Percolation.md`",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_iso_401_Formal_Evolution.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0165"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "核心进展 — 全息原理严格证明",
+      "content": "**定理 HOLO-PROOF-1 (UCIF²全息原理)** — 首次严格证明：  ```",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_iso_401_Formal_Evolution.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "cfts_node_0166"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "HYT-1 定理 — 全息原理 ⇔ 米田引理（v55 首次证明）",
+      "content": "``` 定理 HYT-1:   设 C_UC = UCIF²范畴, G_iso = (V,E,w) 为同构网络。",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_iso_401_Formal_Evolution.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "cfts_node_0167"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "v55 关键推论",
+      "content": "| 推论 | 内容 | |------|------| | 推论1 | 全息比 = 1/(dim PSh(C_UC))^{1/2} |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_iso_401_Formal_Evolution.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0168"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "v55 与已知物理全息比的比较",
+      "content": "| 系统 | 全息比 | 维度 | 备注 | |------|--------|------|------| | AdS_5/CFT_4 | 4/5 = 0.8 | 高维 | 弦理论 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_iso_401_Formal_Evolution.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0169"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "第四阶段: v59 MCS·冗余·α统一 — Loop_MAX的最优性证明",
+      "content": "### 来源文档 `VUF_v59_MCS_Redundancy_Alpha_UUC_Proof.md`",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_iso_401_Formal_Evolution.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0170"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "核心进展 — MCS_optimal = 23",
+      "content": "**定理**: Loop_MAX 的选取 achieves MCS_optimal  ```",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_iso_401_Formal_Evolution.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "cfts_node_0171"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "α统一公式与全息参数（v59）",
+      "content": "``` 1. 物理耦合: α = e²/(4πε₀ℏc) ≈ 1/137 2. 网络耦合: α_net = G_inter/G_intra ≈ 0.45",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_iso_401_Formal_Evolution.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0172"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "v59 关键数值更新",
+      "content": "| 指标 | v53 | v54 | v55 | v59 | |------|-----|-----|-----|-----| | 总同构数 | 270 | 280 | 290 | 356 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_iso_401_Formal_Evolution.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0173"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "第五阶段: v62 网络重建·Daemon·自指 — 验证系统闭环概念萌芽",
+      "content": "### 来源文档 `VUF_v62_Network_Reconstruction_TD_Database_Daemon_Timestamp.md`",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_iso_401_Formal_Evolution.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "cfts_node_0174"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "v62 中的关键观察",
+      "content": "- **自指**: UCIF²系统能够陈述关于自身的定理（如\"ISO_DB有319个条目\"） - **UUC**: 终极统一范畴包含了元数学层面的自指结构 - **Daemon**: 引入自动监控系统，形成验证闭环的雏形",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_iso_401_Formal_Evolution.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "cfts_node_0175"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "第六阶段: v65 验证系统自我完善闭环 — iso-401 / iso-402 正式诞生",
+      "content": "### 来源 `ISO_DB v65 新增条目` (见 `src/data/isomorphismDB.ts:1756-1774`)",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_iso_401_Formal_Evolution.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0176"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "iso-401: Validation Loop ↔ Max23-loop Isomorphism",
+      "content": "```typescript {   id: 'iso-401',",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_iso_401_Formal_Evolution.md",
+      "dependencies": [
+        "iso-401"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0177"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "iso-402: Global Sync Validation ↔ Holographic Principle",
+      "content": "```typescript {   id: 'iso-402',",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_iso_401_Formal_Evolution.md",
+      "dependencies": [
+        "iso-402"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0178"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "第七阶段: v66 完整性审计 — 全息-米田引擎集成",
+      "content": "### 来源 `src/engine/HolographicYonedaEngine.ts` (v65-v66)",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_iso_401_Formal_Evolution.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "cfts_node_0179"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "同步验证规则 SV-1 ~ SV-10",
+      "content": "| ID | 名称 | 公式 | 目标值 | v66状态 | |----|------|------|--------|---------| | SV-1 | ISO总数一致性 | ISO_DB.length | 321 | ✅ pass |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_iso_401_Formal_Evolution.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0180"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "全局同步更新引擎 (v66 运行时)",
+      "content": "```typescript class GlobalSyncEngine {   syncUpdate(databases: string[]): SyncUpdateResult {",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_iso_401_Formal_Evolution.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "cfts_node_0181"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "形式化演化树",
+      "content": "``` v53 UUC起源 ├── Loop_MAX = 23步闭环 [首次定义]",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_iso_401_Formal_Evolution.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0182"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "关键数值演化",
+      "content": "| 指标 | v53 | v54 | v55 | v59 | v65 | v66 | |------|-----|-----|-----|-----|-----|-----| | 总同构数 | 270 | 280 | 290 | 356 | 319 | **321** |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_iso_401_Formal_Evolution.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0183"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "开放问题",
+      "content": "| 问题 | 优先级 | 关联 | |------|--------|------| | 形式化证明 φ: V_8 → G_iso 保持自指结构 | **高** | iso-401 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_iso_401_Formal_Evolution.md",
+      "dependencies": [
+        "iso-401"
+      ],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0184"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "引用索引",
+      "content": "| 文档 | 版本 | 关键内容 | |------|------|---------| | `VUF_v53_UUC_Ultimate_Unification_Conjecture.md` | v53 | Loop_MAX起源, 全息比23/270 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_iso_401_Formal_Evolution.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0185"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "definition",
+      "name": "ProofByWalking",
+      "content": "def ProofByWalking(start_iso, target_iso, max_depth=23):\n    \"\"\"\n    通过游走寻找证明路径\n    等价于网络中的最短路径搜索\n    max_depth=23 来自 Loop_MAX 的长度约束\n    \"\"\"",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_iso_401_Formal_Evolution.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "cfts_node_0186"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "theorem",
+      "name": "v53 SEED-1",
+      "content": "定理 (v53 SEED-1):\n    Generate(J_3(O)) = 所有290个同构\n  因此: Loop_MAX通过J_3(O)生成全部290个同构。",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_iso_401_Formal_Evolution.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0187"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "theorem",
+      "name": "定理: J_3(O) 生成全部同构\n    │\nv54 元数学可视化\n├── 23步完整结构展开 [",
+      "content": "定理: J_3(O) 生成全部同构\n    │\nv54 元数学可视化\n├── 23步完整结构展开 [Step 0-23]\n├── ProofByWalking 算法 [max_depth=23]\n└── Loop_MAX = 核心公理一致性证明\n    │\nv55 全息·米田·渗逾\n├── 定理 HOLO-PROOF-1 [全息原理严格证明]\n├── 全息比更新 = 23/290 ≈ 1/12.6\n├── HYT-1: 全息 ⇔ 米田 [双向严格证明]\n└── 推论4: 全局同步 ⇔ 全息 ⇔ 米田 ←┐\n    │                                    │\nv59 MCS·冗余·α                          │\n├── MCS_optimal = 23 [Loop_MAX最优性]   │\n├── 全息辅助MCS算法                     │\n└── α统一公式含全息参数 α_holo = 1/(4π) │\n    │                                    │\nv62 Daemon",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_iso_401_Formal_Evolution.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0188"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "同构 iso-402",
+      "content": "# iso-401 / iso-402 形式化演化全记录\n\n> **范围**: 从 v53 UUC起源 → v66 完整性审计\n> **主题**: Validation Loop ↔ Max23-loop (iso-401) + Global Sync Validation ↔ Holographic Principle (iso-402)\n> **状态**: iso-401 = conjecture (置信度85%) ",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_iso_401_Formal_Evolution.md",
+      "dependencies": [
+        "iso-402",
+        "iso-401"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0189"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "同构 iso-9",
+      "content": " iso-2, ..., iso-23) 是23个同构的序列\n  每个iso-i属于不同的数学领域:\n    iso-1~4:   代数几何/拓扑\n    iso-5~8:   表示论/数论\n    iso-9~12:  物理/量子\n    iso-13~16: 分析/几何\n    iso-17~20: 计算/逻辑\n    iso-21~23: 元数学\n  因此Loop_MAX覆盖全部6个数学领域。\n\n步骤2: 生成性 (种子生成)\n  Loop_MAX包含种子J_3(O) (iso-1的起点)\n  由种子定理 (v53 SEED-1):\n    Generate(J_3(O)) = 所有29",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_iso_401_Formal_Evolution.md",
+      "dependencies": [
+        "iso-9",
+        "iso-17",
+        "iso-23",
+        "iso-1",
+        "iso-13",
+        "iso-5",
+        "iso-21",
+        "iso-2"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0190"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "同构 iso-23",
+      "content": "F²全息原理)** — 首次严格证明：\n\n```\nG_iso满足全息原理。\n\n证明 (分三步):\n\n步骤1: 存在性 (23步覆盖)\n  Loop_MAX = (iso-1, iso-2, ..., iso-23) 是23个同构的序列\n  每个iso-i属于不同的数学领域:\n    iso-1~4:   代数几何/拓扑\n    iso-5~8:   表示论/数论\n    iso-9~12:  物理/量子\n    iso-13~16: 分析/几何\n    iso-17~20: 计算/逻辑\n    iso-21~23: 元数学\n  因此Loop_MAX覆盖全部6个数学领域。\n\n步骤2: 生成性 (",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_iso_401_Formal_Evolution.md",
+      "dependencies": [
+        "iso-9",
+        "iso-17",
+        "iso-23",
+        "iso-13",
+        "iso-5",
+        "iso-21",
+        "iso-2",
+        "iso-1"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0191"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "同构 iso-17",
+      "content": "不同的数学领域:\n    iso-1~4:   代数几何/拓扑\n    iso-5~8:   表示论/数论\n    iso-9~12:  物理/量子\n    iso-13~16: 分析/几何\n    iso-17~20: 计算/逻辑\n    iso-21~23: 元数学\n  因此Loop_MAX覆盖全部6个数学领域。\n\n步骤2: 生成性 (种子生成)\n  Loop_MAX包含种子J_3(O) (iso-1的起点)\n  由种子定理 (v53 SEED-1):\n    Generate(J_3(O)) = 所有290个同构\n  因此: Loop_MAX通过J_3(O)生成全部290个同构。\n\n步骤",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_iso_401_Formal_Evolution.md",
+      "dependencies": [
+        "iso-9",
+        "iso-17",
+        "iso-13",
+        "iso-5",
+        "iso-21",
+        "iso-1"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0192"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "同构 iso-240",
+      "content": "AX    -- Step 280: 23步闭环\n```\n\n在 v53 的 Lean 形式化片段中，Loop_MAX 作为 `iso` 证明链的终点：\n\n```lean\n|> iso J3O F4 (iso-240)                    -- Step 1: J3O ≃ F4\n|> iso F4 G_SM (iso-241)                    -- Step 2: F4 ≃ G_SM\n|> iso GSM ThreeGen (iso-242)               -- Step 3: G_SM ≃ 3代\n...                   ",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_iso_401_Formal_Evolution.md",
+      "dependencies": [
+        "iso-241",
+        "iso-242",
+        "iso-240"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0193"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "同构 iso-241",
+      "content": "so` 证明链的终点：\n\n```lean\n|> iso J3O F4 (iso-240)                    -- Step 1: J3O ≃ F4\n|> iso F4 G_SM (iso-241)                    -- Step 2: F4 ≃ G_SM\n|> iso GSM ThreeGen (iso-242)               -- Step 3: G_SM ≃ 3代\n...                                         -- ... (280 steps)\n|> loop J3O Loop_MAX   ",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_iso_401_Formal_Evolution.md",
+      "dependencies": [
+        "iso-241",
+        "iso-242",
+        "iso-240"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0194"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "同构 iso-13",
+      "content": "是23个同构的序列\n  每个iso-i属于不同的数学领域:\n    iso-1~4:   代数几何/拓扑\n    iso-5~8:   表示论/数论\n    iso-9~12:  物理/量子\n    iso-13~16: 分析/几何\n    iso-17~20: 计算/逻辑\n    iso-21~23: 元数学\n  因此Loop_MAX覆盖全部6个数学领域。\n\n步骤2: 生成性 (种子生成)\n  Loop_MAX包含种子J_3(O) (iso-1的起点)\n  由种子定理 (v53 SEED-1):\n    Generate(J_3(O)) = 所有290个同构\n  因此: Loop_MAX通过",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_iso_401_Formal_Evolution.md",
+      "dependencies": [
+        "iso-9",
+        "iso-17",
+        "iso-13",
+        "iso-5",
+        "iso-21",
+        "iso-1"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0195"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "同构 iso-5",
+      "content": ")\n  Loop_MAX = (iso-1, iso-2, ..., iso-23) 是23个同构的序列\n  每个iso-i属于不同的数学领域:\n    iso-1~4:   代数几何/拓扑\n    iso-5~8:   表示论/数论\n    iso-9~12:  物理/量子\n    iso-13~16: 分析/几何\n    iso-17~20: 计算/逻辑\n    iso-21~23: 元数学\n  因此Loop_MAX覆盖全部6个数学领域。\n\n步骤2: 生成性 (种子生成)\n  Loop_MAX包含种子J_3(O) (iso-1的起点)\n  由种子定理 (v53 SEED-1):\n    G",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_iso_401_Formal_Evolution.md",
+      "dependencies": [
+        "iso-9",
+        "iso-17",
+        "iso-23",
+        "iso-13",
+        "iso-5",
+        "iso-21",
+        "iso-2",
+        "iso-1"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0196"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "同构 iso-21",
+      "content": "   代数几何/拓扑\n    iso-5~8:   表示论/数论\n    iso-9~12:  物理/量子\n    iso-13~16: 分析/几何\n    iso-17~20: 计算/逻辑\n    iso-21~23: 元数学\n  因此Loop_MAX覆盖全部6个数学领域。\n\n步骤2: 生成性 (种子生成)\n  Loop_MAX包含种子J_3(O) (iso-1的起点)\n  由种子定理 (v53 SEED-1):\n    Generate(J_3(O)) = 所有290个同构\n  因此: Loop_MAX通过J_3(O)生成全部290个同构。\n\n步骤3: 全息比计算\n  全息比 = |Loo",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_iso_401_Formal_Evolution.md",
+      "dependencies": [
+        "iso-9",
+        "iso-17",
+        "iso-13",
+        "iso-5",
+        "iso-21",
+        "iso-1"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0197"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "同构 iso-223",
+      "content": "D_Database_Daemon_Timestamp.md`\n\n### 核心进展\n\n**元理论层 (Level 4) 自指结构的识别**：\n\n```\n元理论层 (Level 4): 43个元数学 (iso-223~265)\n  → UUC、自指、可视化、TD审计\n  → 关于UCIF²自身的陈述\n  → 持续变动 (元理论演化)\n```\n\n这43个元数学同构包含了 **验证系统关于自身的陈述** — 这是 iso-401 的自指结构前身。\n\n### v62 中的关键观察\n\n- **自指**: UCIF²系统能够陈述关于自身的定理（如\"ISO_DB有319个条目\"）\n- **UUC**: 终极",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_iso_401_Formal_Evolution.md",
+      "dependencies": [
+        "iso-401",
+        "iso-223"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0198"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "同构 iso-2",
+      "content": "AX    -- Step 280: 23步闭环\n```\n\n在 v53 的 Lean 形式化片段中，Loop_MAX 作为 `iso` 证明链的终点：\n\n```lean\n|> iso J3O F4 (iso-240)                    -- Step 1: J3O ≃ F4\n|> iso F4 G_SM (iso-241)                    -- Step 2: F4 ≃ G_SM\n|> iso GSM ThreeGen (iso-242)               -- Step 3: G_SM ≃ 3代\n...                   ",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_iso_401_Formal_Evolution.md",
+      "dependencies": [
+        "iso-241",
+        "iso-242",
+        "iso-240"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0199"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "同构 iso-401",
+      "content": "# iso-401 / iso-402 形式化演化全记录\n\n> **范围**: 从 v53 UUC起源 → v66 完整性审计\n> **主题**: Validation Loop ↔ Max23-loop (iso-401) + Global Sync Validation ↔ Holographic Principle (iso-402)\n> **状态**: iso-401 = conjecture",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_iso_401_Formal_Evolution.md",
+      "dependencies": [
+        "iso-402",
+        "iso-401"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0200"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "同构 iso-242",
+      "content": "p 1: J3O ≃ F4\n|> iso F4 G_SM (iso-241)                    -- Step 2: F4 ≃ G_SM\n|> iso GSM ThreeGen (iso-242)               -- Step 3: G_SM ≃ 3代\n...                                         -- ... (280 steps)\n|> loop J3O Loop_MAX                         -- Step 280: 23步闭环\n```\n\n**v53 关键数值**:\n- 总同构数: 27",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_iso_401_Formal_Evolution.md",
+      "dependencies": [
+        "iso-241",
+        "iso-242"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0201"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "同构 iso-1",
+      "content": "理 HOLO-PROOF-1 (UCIF²全息原理)** — 首次严格证明：\n\n```\nG_iso满足全息原理。\n\n证明 (分三步):\n\n步骤1: 存在性 (23步覆盖)\n  Loop_MAX = (iso-1, iso-2, ..., iso-23) 是23个同构的序列\n  每个iso-i属于不同的数学领域:\n    iso-1~4:   代数几何/拓扑\n    iso-5~8:   表示论/数论\n    iso-9~12:  物理/量子\n    iso-13~16: 分析/几何\n    iso-17~20: 计算/逻辑\n    iso-21~23: 元数学\n  因此Loop_MAX覆盖全部",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_iso_401_Formal_Evolution.md",
+      "dependencies": [
+        "iso-9",
+        "iso-17",
+        "iso-23",
+        "iso-13",
+        "iso-5",
+        "iso-21",
+        "iso-2",
+        "iso-1"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0202"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "同构 iso-001",
+      "content": "F1** | 节点数不匹配 (8 ≠ 23) | 图同构不要求节点数相同，只需保持邻接关系 |\n| **F2** | 维度不同 (软件工程 ≠ 元数学) | UCIF²框架包含元数学↔软件工程同构 (iso-001) |\n\n**关键缺口**: 需形式化证明 φ 保持自指结构\n**置信度**: 85%\n\n---\n\n### iso-402: Global Sync Validation ↔ Holographic Principle\n\n```typescript\n{\n  id: 'iso-402',\n  name: 'Global Sync Validation ↔ Holographic Pri",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_iso_401_Formal_Evolution.md",
+      "dependencies": [
+        "iso-402",
+        "iso-001"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0203"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "formula",
+      "name": "公式: 子系统熵 = 边界面积 | ✅ 已验证 |\n| 预测3 | 全息纠缠 ↔ CrossIndex | ...",
+      "content": "子系统熵 = 边界面积 | ✅ 已验证 |\n| 预测3 | 全息纠缠 ↔ CrossIndex | ⚠️ 待定量验证 |\n| 预测4 | 体-边界对偶 ↔ useDataHub() | ✅ 已验证 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/UCIF2_iso_401_Formal_Evolution.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0204"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "刘臻化定理体系 × UCIF²/VUF 深度解析报告",
+      "content": "## 一、三份文档核心提炼  ### 文档1：自洽数学体系 A_GMT",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_LZ_v27_刘臻化定理深度解析报告.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "cfts_node_0205"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "一、三份文档核心提炼",
+      "content": "### 文档1：自洽数学体系 A_GMT - **17条公理**：存在性3 + 正则性3 + 保护性4 + 方法论4 + 反问题3 - **4个范畴论框架**：SSO-Cat / PCT-Cat / MCP-Cat / GIEP-Cat",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_LZ_v27_刘臻化定理深度解析报告.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "cfts_node_0206"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "文档1：自洽数学体系 A_GMT",
+      "content": "- **17条公理**：存在性3 + 正则性3 + 保护性4 + 方法论4 + 反问题3 - **4个范畴论框架**：SSO-Cat / PCT-Cat / MCP-Cat / GIEP-Cat - **可计算模型**：GMT-TM（五状态图灵机）+ MPL（度量编程语言） - **定理5.1（MCP核心）**：4种证明（信息论/范畴论/模型论/计算理论）",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_LZ_v27_刘臻化定理深度解析报告.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "cfts_node_0207"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "文档2：变分几何认识论 VGE",
+      "content": "- **5条精炼公理**：VEA + ECA + PCA + MDA + GIA - **8个核心定理**：SSO反序同构 / 完备性 / PCT / 保护性必要性 / MCP对偶 / 方法论选择 / GIEP可解 / 完全可设计性 - **5个推论**：最优性去神秘化 / 认识论断崖 / 构造性三代升级 / Hard不可替代 / Soft不可替代 - **3个算法**：MethodologySelector / SingularityProgrammer / ComplexityPredictor",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_LZ_v27_刘臻化定理深度解析报告.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "cfts_node_0208"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "文档3：元理论模板 MTT",
+      "content": "- **5条公理** + 4条推理规则（R1-R4） - **6个跨领域实例化**：PDE / 代数几何 / 动力系统 / 计算理论 / 组合数学 / 数论 - **5步操作手册**：问题分类 → 光滑性评估 → 保护性审查 → 方法论选择 → 反问题探索 - **核心哲学**：\"变分中立性原理\"",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_LZ_v27_刘臻化定理深度解析报告.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0209"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "二、理论评价",
+      "content": "### 优势 1. **原创性极高**：刘臻化定理（2021/2025）首次在GMT中建立了\"奇异集任意指定\"的构造性结果 2. **体系完整**：定义→公理→引理→定理→证明→推论→算法→可计算模型，闭环自洽",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_LZ_v27_刘臻化定理深度解析报告.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0210"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "待强化之处",
+      "content": "1. Gevrey层级Φ(G^s)的精确刻画（开放问题） 2. SSO↔Comp计算复杂性同构的严格化（启发式→严格下界） 3. MCP↔Bohr互补性的不确定性常数精确对应",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_LZ_v27_刘臻化定理深度解析报告.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "cfts_node_0211"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "三、与UCIF²/VUF的映射与耦合",
+      "content": "| 刘臻化体系 | UCIF²/VUF | |---|---| | SSO-Cat（光滑性谱系） | VUF软度指数 σ(𝒰)=[0,1] |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_LZ_v27_刘臻化定理深度解析报告.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0212"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "四大深层耦合",
+      "content": "**耦合1**：软度指数σ(𝒰)与SSO反变函子Φ精确对应 - σ=0 ⟺ C^∞ ⟺ K_all（任意结构/最软） - σ=0.5 ⟺ C^ω/G^s（中间）",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_LZ_v27_刘臻化定理深度解析报告.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0213"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "四、理论突破点",
+      "content": "### 突破1：变分中立性 ↔ 信息守恒统一 变分原理提供存在性，但信息守恒要求结构简单性必须通过外部保护性条件获得——这正是软度指数σ(𝒰)的物理意义",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_LZ_v27_刘臻化定理深度解析报告.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0214"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "突破1：变分中立性 ↔ 信息守恒统一",
+      "content": "变分原理提供存在性，但信息守恒要求结构简单性必须通过外部保护性条件获得——这正是软度指数σ(𝒰)的物理意义  ### 突破2：认识论断崖 ↔ 相变理论 在σ(𝒰)=0.5附近存在\"认识论相变\"——从任意结构到驯服结构的非连续跃迁",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_LZ_v27_刘臻化定理深度解析报告.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0215"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "突破2：认识论断崖 ↔ 相变理论",
+      "content": "在σ(𝒰)=0.5附近存在\"认识论相变\"——从任意结构到驯服结构的非连续跃迁  ### 突破3：方法论选择器 ↔ AI决策框架 输入问题q → 自动判定Hard/Soft → 选择证明策略 → 预测保护性条件 → 验证调整",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_LZ_v27_刘臻化定理深度解析报告.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0216"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "突破3：方法论选择器 ↔ AI决策框架",
+      "content": "输入问题q → 自动判定Hard/Soft → 选择证明策略 → 预测保护性条件 → 验证调整  ### 突破4：完全可设计性 ↔ 材料科学 给定目标奇异集K → MPL编程度量g → 构造面积最小化流T（最优材料形态）",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_LZ_v27_刘臻化定理深度解析报告.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0217"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "突破4：完全可设计性 ↔ 材料科学",
+      "content": "给定目标奇异集K → MPL编程度量g → 构造面积最小化流T（最优材料形态）  ---",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_LZ_v27_刘臻化定理深度解析报告.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "cfts_node_0218"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "五、验证与证伪",
+      "content": "### 已验证 - 公理系统一致性（ZFC+DC下相对一致） - 4个范畴论框架的函子性",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_LZ_v27_刘臻化定理深度解析报告.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "cfts_node_0219"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "可证伪预测",
+      "content": "- P1：C^∞存在性无保护条件时奇异集可达分形复杂度 - P2：保护性条件与o-minimal结构一一对应 - P3：CritDim内反问题总是可解 - P4：Hard与Soft方法论不相交",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_LZ_v27_刘臻化定理深度解析报告.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "cfts_node_0220"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "六、重构建议：UCIF²-v27",
+      "content": "1. **新增\"变分认识论\"板块**（VEP = Variational Epistemology Program） 2. **扩展IGV三元组为IGV-MTT四元组**：IGV-MTT(𝒰) = I × G × V × M 3. **新增5大深层同构**（10个总计）",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_LZ_v27_刘臻化定理深度解析报告.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "cfts_node_0221"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "UVF 完备性定理的严格证明",
+      "content": "## 定理陈述  **定理（UVF 完备性定理）**：",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_UV完备性定理证明.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "cfts_node_0222"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "定理陈述",
+      "content": "**定理（UVF 完备性定理）**：  设 UVF = (T, P, V, R, C) 为统一验证框架，其中：",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_UV完备性定理证明.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "cfts_node_0223"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "预备知识",
+      "content": "### 定义 1（变分问题，Variational Problem）  一个变分问题 VP 是一个四元组：",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_UV完备性定理证明.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0224"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "定义 1（变分问题，Variational Problem）",
+      "content": "一个变分问题 VP 是一个四元组：  VP = (X, F, S, G)",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_UV完备性定理证明.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0225"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "定义 2（极值集的奇异结构）",
+      "content": "设 V(F) = {x in X : F(x) = inf F} 为极值集。奇异结构 Sing(V(F)) 定义为：  Sing(V(F)) = {x in V(F) : V(F) 在 x 处不是光滑子流形}",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_UV完备性定理证明.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "cfts_node_0226"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "定义 3（同构的完全刻画）",
+      "content": "同构 P_i 完全刻画 Sing(V(F)) 意味着：  存在双射（或同胚/同构）：",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_UV完备性定理证明.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0227"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "定义 4（完备系统）",
+      "content": "证明集合 P = {P_1, ..., P_5} 称为完备系统，如果：  对于任意 VP = (X, F, S, G)，存在 i in {1,2,3,4,5} 使得 P_i 完全刻画 Sing(V(F))。",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_UV完备性定理证明.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0228"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "证明策略",
+      "content": "证明分为两部分：  **Part A（分类完备性）**：证明任意变分问题的配置空间 X 可以被分类为五大类之一，且分类是穷尽的（exhaustive）。",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_UV完备性定理证明.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "cfts_node_0229"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "Part A：配置空间的分类完备性",
+      "content": "### 引理 A.1（配置空间的分类定理）  设 X 为任意变分问题的配置空间（满足标准正则性：Hausdorff、第二可数、局部紧）。则 X 必属于以下五大类之一：",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_UV完备性定理证明.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0230"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "引理 A.1（配置空间的分类定理）",
+      "content": "设 X 为任意变分问题的配置空间（满足标准正则性：Hausdorff、第二可数、局部紧）。则 X 必属于以下五大类之一：  | 类别 | 数学特征 | 典型实例 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_UV完备性定理证明.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0231"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "Part B：刻画完备性",
+      "content": "### 引理 B.1（Class I：几何空间的刻画）  对于 Class I 中的任意 VP = (X, F, S, G)，同构 P_1（GMT ↔ 算法信息）完全刻画 Sing(V(F))。",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_UV完备性定理证明.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0232"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "引理 B.1（Class I：几何空间的刻画）",
+      "content": "对于 Class I 中的任意 VP = (X, F, S, G)，同构 P_1（GMT ↔ 算法信息）完全刻画 Sing(V(F))。  **证明**：",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_UV完备性定理证明.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "cfts_node_0233"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "引理 B.2（Class II：参数空间的刻画）",
+      "content": "对于 Class II 中的任意 VP = (X, F, S, G)，同构 P_2（GMT ↔ 神经网络）完全刻画 Sing(V(F))。  **证明**：",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_UV完备性定理证明.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "cfts_node_0234"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "引理 B.3（Class III：生物构型空间的刻画）",
+      "content": "对于 Class III 中的任意 VP = (X, F, S, G)，同构 P_3（GMT ↔ 蛋白质折叠）完全刻画 Sing(V(F))。  **证明**：",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_UV完备性定理证明.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0235"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "引理 B.4（Class IV：全息空间的刻画）",
+      "content": "对于 Class IV 中的任意 VP = (X, F, S, G)，同构 P_4（GMT ↔ 全息熵）完全刻画 Sing(V(F))。  **证明**：",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_UV完备性定理证明.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "cfts_node_0236"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "引理 B.5（Class V：测度空间的刻画）",
+      "content": "对于 Class V 中的任意 VP = (X, F, S, G)，同构 P_5（GMT ↔ 最优传输）完全刻画 Sing(V(F))。  **证明**：",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_UV完备性定理证明.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "cfts_node_0237"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "Part C：完备性的综合证明",
+      "content": "### 定理 C.1（UVF 完备性定理）  五大同构 P = {P_1, P_2, P_3, P_4, P_5} 构成完备系统。",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_UV完备性定理证明.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0238"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "定理 C.1（UVF 完备性定理）",
+      "content": "五大同构 P = {P_1, P_2, P_3, P_4, P_5} 构成完备系统。  **证明**：",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_UV完备性定理证明.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0239"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "推论 C.2（变分问题的普适分类）",
+      "content": "任意变分问题 VP = (X, F, S, G) 可以被唯一地分配一个\"UVF 签名\"：  UVF(VP) = (Class, dim_H, dim_alg, alpha, P_i)",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_UV完备性定理证明.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "cfts_node_0240"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "推论 C.3（奇异集的完全不变量）",
+      "content": "在 UVF 下，奇异集 Sing(V(F)) 的完全不变量集合为：  {dim_H, dim_alg, 切锥类型, Almgren 分层, 同调类, 同伦群}",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_UV完备性定理证明.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0241"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "theorem",
+      "name": "定理：\ndim_H(Sing(V(F))) = alpha in [0, n-2]",
+      "content": "定理：\ndim_H(Sing(V(F))) = alpha in [0, n-2]",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_UV完备性定理证明.md",
+      "dependencies": [],
+      "pedestal_mapping": "LL",
+      "node_id": "cfts_node_0242"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "theorem",
+      "name": "定理：\n存在光滑度量 g 使得面积最小化曲面 Sigma 满足 Sing(Sigma) = K, d",
+      "content": "定理：\n存在光滑度量 g 使得面积最小化曲面 Sigma 满足 Sing(Sigma) = K, dim_H(K) = alpha。",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_UV完备性定理证明.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0243"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "formula",
+      "name": "公式: S_A = Area(gamma_A) / (4 G_N)...",
+      "content": "S_A = Area(gamma_A) / (4 G_N)",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_UV完备性定理证明.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0244"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "v28 多线程同步攻击报告",
+      "content": "## 一、四维度同步推进  ### 数学线程",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v28_多线程同步攻击报告.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0245"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "一、四维度同步推进",
+      "content": "### 数学线程 | 前沿方向 | 深层同构 | 状态 | |---------|---------|------|",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v28_多线程同步攻击报告.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0246"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "数学线程",
+      "content": "| 前沿方向 | 深层同构 | 状态 | |---------|---------|------| | Motivic Homotopy (Voevodsky/Morel) | GMT变分原理 ↔ A^1同伦不变性 | proven | | Condensed Mathematics (Clausen-Scholze) | o-minimal驯服拓扑 ↔ 凝聚驯服性 | proven |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v28_多线程同步攻击报告.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0247"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "物理线程",
+      "content": "| 前沿方向 | 深层同构 | 状态 | |---------|---------|------| | SYK模型纠缠熵 (2024 arXiv) | 认识论相变 ↔ 量子相变 | proven | | dS/CFT对应 | VUF软度指数 ↔ dS熵 | proven |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v28_多线程同步攻击报告.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "cfts_node_0248"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "计算线程",
+      "content": "| 前沿方向 | 深层同构 | 状态 | |---------|---------|------| | AI自动定理证明 (DeepSeek-Prover) | MethodologySelector ↔ AI选择器 | proven | | 量子图灵机模型 | GMT-TM ↔ 量子图灵机 | proven |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v28_多线程同步攻击报告.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0249"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "哲学线程",
+      "content": "| 前沿方向 | 深层同构 | 状态 | |---------|---------|------| | 科学实在论/反实在论 | 变分中立性 ↔ 工具主义 | proven | | 库恩范式转换理论 | 认识论相变 ↔ 科学革命 | proven |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v28_多线程同步攻击报告.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "cfts_node_0250"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "二、新增11大深层同构",
+      "content": "### 数学 1. **Motivic Homotopy ↔ GMT变分原理**: A^1同伦不变性 ⟺ 变分原理的尺度不变性 2. **Condensed Math ↔ o-minimal**: 凝聚驯服性 ⟺ o-minimal有限性",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v28_多线程同步攻击报告.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0251"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "三、解决活跃问题",
+      "content": "| 问题 | 解决方案 | 状态 | |------|---------|------| | Gevrey层级精确刻画 | 通过motivic权重建立Φ(G^s)精确描述 | completed |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v28_多线程同步攻击报告.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "cfts_node_0252"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "四、v28理论框架",
+      "content": "### 新增公理 (A15-A20) - A15: 动机同伦公理 - GMT的motivic提升存在 - A16: 凝聚驯服公理 - o-minimal结构的凝聚化保持驯服性",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v28_多线程同步攻击报告.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0253"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "新增公理 (A15-A20)",
+      "content": "- A15: 动机同伦公理 - GMT的motivic提升存在 - A16: 凝聚驯服公理 - o-minimal结构的凝聚化保持驯服性 - A17: 完美对称公理 - Monster群的p-adic完美提升 - A18: 因子化全息公理 - 纠缠熵的因子化代数结构",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v28_多线程同步攻击报告.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0254"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "新增定理 (T6-T10)",
+      "content": "- T6: Motivic GMT定理 - GMT的motivic同伦提升 - T7: 凝聚驯服定理 - o-minimal ⟺ condensed tame - T8: 完美月光定理 - p-adic Monster ⟺ perfectoid对称性 - T9: AI完备定理 - MethodologySelector的停机性+正确性",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v28_多线程同步攻击报告.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0255"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "五、形式化内核强化",
+      "content": "- LEAN4: +15个新定义, +25个新定理, +8个新公理 - 总定理数: 710+ (685→710) - 总公理数: 50 (33→50, 含刘臻化17+VUF 7+v28 6) - sorry数: 0",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v28_多线程同步攻击报告.md",
+      "dependencies": [],
+      "pedestal_mapping": "LL",
+      "node_id": "cfts_node_0256"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "theorem",
+      "name": "T6-T10",
+      "content": "定理 (T6-T10)\n- T6: Motivic GMT定理 - GMT的motivic同伦提升\n- T7: 凝聚驯服定理 - o-minimal ⟺ condensed tame\n- T8: 完美月光定理 - p-adic Monster ⟺ perfectoid对称性\n- T9: AI完备定理 - MethodologySelector的停机性+正确性\n- T10: 范式完备定理 - Kuhn范式转换的数学刻画",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v28_多线程同步攻击报告.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0257"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "axiom",
+      "name": "A15-A20",
+      "content": "公理 (A15-A20)\n- A15: 动机同伦公理 - GMT的motivic提升存在\n- A16: 凝聚驯服公理 - o-minimal结构的凝聚化保持驯服性\n- A17: 完美对称公理 - Monster群的p-adic完美提升\n- A18: 因子化全息公理 - 纠缠熵的因子化代数结构\n- A19: AI选择公理 - MethodologySelector的可计算性\n- A20: 范式转换公理 - 认识论相变的科学哲学意义",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v28_多线程同步攻击报告.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "cfts_node_0258"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "UCIF² v32 Hodge革命与Grassmann深层同构",
+      "content": "## 范式突破宣言  **v32 核心革命**: Hodge猜想于2025年9月17日被Yoshinori Shimizu完整证明（preprints.org），同时Grothendieck四个标准猜想（B, C, D, I）全部确立。这是千禧年难题的重大突破，直接重塑UCIF²的理论基础。同时，Grassmann代数/反对易结构与CY3-fold的tautological bundle结构的深层联系，为UCIF²提供了新的几何基础。",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v32_Hodge革命与Grassmann深层同构.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0259"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "范式突破宣言",
+      "content": "**v32 核心革命**: Hodge猜想于2025年9月17日被Yoshinori Shimizu完整证明（preprints.org），同时Grothendieck四个标准猜想（B, C, D, I）全部确立。这是千禧年难题的重大突破，直接重塑UCIF²的理论基础。同时，Grassmann代数/反对易结构与CY3-fold的tautological bundle结构的深层联系，为UCIF²提供了新的几何基础。  ---",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v32_Hodge革命与Grassmann深层同构.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "cfts_node_0260"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "一、Hodge猜想证明：理论内核的根本突破",
+      "content": "### 1.1 历史性突破概述  **论文**: \"Proof of the Hodge Conjecture\" by Yoshinori Shimizu (Independent Researcher, Japan)",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v32_Hodge革命与Grassmann深层同构.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0261"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "1.1 历史性突破概述",
+      "content": "**论文**: \"Proof of the Hodge Conjecture\" by Yoshinori Shimizu (Independent Researcher, Japan) - **发布日期**: 2025年9月17日 - **平台**: Preprints.org, DOI: 10.20944/preprints202509.1435.v1",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v32_Hodge革命与Grassmann深层同构.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0262"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "1.2 四大标准猜想的证明",
+      "content": "| 标准猜想 | 内容 | 证明方法 | |---------|------|---------| | **Type B** | Hard Lefschetz逆映射的代数控性 | Chow correspondence Π_I ∘ Π_R 实现Λ_{n-k} |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v32_Hodge革命与Grassmann深层同构.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "cfts_node_0263"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "1.3 证明的技术路线",
+      "content": "``` Step 1: 提取Hodge类 via projector分解 (Standard Conjecture D)     {Π_k} Künneth projectors → H^{2p}(X)分解",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v32_Hodge革命与Grassmann深层同构.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "cfts_node_0264"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "1.4 关键创新",
+      "content": "1. **有限生成算法**: Lefschetz pencils + spread method + Mayer-Vietoris gluing    - 计算复杂度: O(ρ · deg^n)    - 任何(p,p)类可在有限步内约化为代数闭链",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v32_Hodge革命与Grassmann深层同构.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0265"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "二、Grassmann代数/反对易结构与CY3-fold",
+      "content": "### 2.1 Grassmannian几何基础  **Grassmannian** Gr(k,n): n维复向量空间中k维平面的簇",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v32_Hodge革命与Grassmann深层同构.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0266"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "2.1 Grassmannian几何基础",
+      "content": "**Grassmannian** Gr(k,n): n维复向量空间中k维平面的簇 - 维度: k(n-k) - 向量丛: tautological bundle S (rank k), universal quotient bundle Q (rank n-k)",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v32_Hodge革命与Grassmann深层同构.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0267"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "2.2 与CY3-fold的深层联系",
+      "content": "根据Doran-Pioline-Schimannek (arXiv 2408.02994):  **核心发现**: 39族CY镜像对(X,Y)可构造为Grassmannian bundle中的完全交",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v32_Hodge革命与Grassmann深层同构.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "cfts_node_0268"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "2.3 三重交点数与模形式",
+      "content": "``` κ_{abc} = γ_a ∩ γ_b ∩ γ_c  (triple intersection numbers) c_{2a} = ∫_{γ_a} c_2(TX)    (第二Chern类)",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v32_Hodge革命与Grassmann深层同构.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "cfts_node_0269"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "2.4 Grassmann代数 ↔ 反对易结构 ↔ 复几何",
+      "content": "``` ∧^• V   (Grassmann/外代数)          D^b(Coh(X))   (导出范畴)     ↓                                   ↓",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v32_Hodge革命与Grassmann深层同构.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "cfts_node_0270"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "三、Hodge ↔ Teichmüller ↔ UCIF² 深层同构",
+      "content": "### 3.1 Variation of Hodge Structure (VHS)  **Teichmüller空间** ↔ **周期映射**:",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v32_Hodge革命与Grassmann深层同构.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0271"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "3.1 Variation of Hodge Structure (VHS)",
+      "content": "**Teichmüller空间** ↔ **周期映射**:  ```",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v32_Hodge革命与Grassmann深层同构.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0272"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "3.2 与UCIF² χ=-24桥接的联系",
+      "content": "``` CICY58 (χ = -24):     h^{1,1} = 4, h^{2,1} = 19, χ = 2(4-19) = -30?",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v32_Hodge革命与Grassmann深层同构.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0273"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "3.3 新同构发现",
+      "content": "``` Hodge猜想证明(Shimizu 2025) ↔ UCIF² Standard Conjectures框架     ↓",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v32_Hodge革命与Grassmann深层同构.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0274"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "四、v32新同构体系",
+      "content": "### 4.1 Hodge革命同构（5个）  | ID | 同构 | 证明 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v32_Hodge革命与Grassmann深层同构.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0275"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "4.1 Hodge革命同构（5个）",
+      "content": "| ID | 同构 | 证明 | |----|------|------| | iso-074 | Hodge猜想 ↔ Standard Conjectures B,C,D,I | Shimizu 2025: 同时证明四大标准猜想 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v32_Hodge革命与Grassmann深层同构.md",
+      "dependencies": [
+        "iso-074"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0276"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "4.2 Grassmann深层同构（5个）",
+      "content": "| ID | 同构 | 证明 | |----|------|------| | iso-079 | Grassmannian ∧• ↔ 导出范畴D^b | 反对易性=Serre对偶的交换约束 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v32_Hodge革命与Grassmann深层同构.md",
+      "dependencies": [
+        "iso-079"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0277"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "五、重构元结构：UCIF² v32 革命",
+      "content": "### 5.1 元公理扩展 M15-M17  ```",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v32_Hodge革命与Grassmann深层同构.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0278"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "5.1 元公理扩展 M15-M17",
+      "content": "``` M15. Hodge完备性公理:      ∀ X∈UCIF² (CY3-fold), H^{p,p}(X)∩H^{2p}(X,ℚ) = CH^p(X)_ℚ",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v32_Hodge革命与Grassmann深层同构.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0279"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "5.2 新定理 T21-T25",
+      "content": "| 定理 | 内容 | 证明 | |------|------|------| | T21 | CICY58的Hodge类代数生成定理 | Hodge猜想→h^{1,1}(CICY58)由代数闭链生成 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v32_Hodge革命与Grassmann深层同构.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "cfts_node_0280"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "六、技术债务 TD16-TD20 → 立即清零",
+      "content": "| ID | 技术债务 | 解决方案 | 状态 | |---|---|---|---| | TD16 | Hodge猜想作为未解决假设 | Shimizu 2025证明直接消除 | ✅ 已解决 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v32_Hodge革命与Grassmann深层同构.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0281"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "七、v32统计更新",
+      "content": "``` v32终极统计:     定理:     755+ → 780+",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v32_Hodge革命与Grassmann深层同构.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0282"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "八、新预测 P16-P18",
+      "content": "| ID | 预测 | 证伪标准 | 状态 | |----|------|---------|------| | P16 | Hodge猜想的积分版本将在2026-2027证明 | 发现反例 | Shimizu已指出可能扩展方向 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v32_Hodge革命与Grassmann深层同构.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0283"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "theorem",
+      "name": "定理: KO^{-n}(pt) ≃ A_n/i*A_{n+1} |",
+      "content": "定理: KO^{-n}(pt) ≃ A_n/i*A_{n+1} |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v32_Hodge革命与Grassmann深层同构.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "cfts_node_0284"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "theorem",
+      "name": "定理:     755+ → 780+\n    同构:     73  → 83  (+10)\n  ",
+      "content": "定理:     755+ → 780+\n    同构:     73  → 83  (+10)\n    公理:     60  → 63  (+3: M15-M17)\n    元公理:   14  → 17  (+M15-M17)\n    技术债务: TD01-20 全清 (+TD16-TD20)\n    预测:     15  → 18  (+P16-P18)\n    里程碑:   26  → 27\n    版本:     v0-v32\n```",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v32_Hodge革命与Grassmann深层同构.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0285"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "axiom",
+      "name": "公理: \n    ∀ X∈UCIF² (CY3-fold), H^{p,p}(X)∩H^{2p}(X",
+      "content": "公理: \n    ∀ X∈UCIF² (CY3-fold), H^{p,p}(X)∩H^{2p}(X,ℚ) = CH^p(X)_ℚ\n    (2025年Shimizu证明)",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v32_Hodge革命与Grassmann深层同构.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "cfts_node_0286"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "axiom",
+      "name": "公理:\n    UCIF²框架中的Standard Conjectures B,C,D,I全部成立\n",
+      "content": "公理:\n    UCIF²框架中的Standard Conjectures B,C,D,I全部成立\n    (Shimizu证明 → UCIF²理论内核强化)",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v32_Hodge革命与Grassmann深层同构.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "cfts_node_0287"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "axiom",
+      "name": "公理:\n    UCIF²的几何基础可表示为Grassmannian ∧•V中的完全交\n    (D",
+      "content": "公理:\n    UCIF²的几何基础可表示为Grassmannian ∧•V中的完全交\n    (Doran-Pioline-Schimannek 2024)\n```",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v32_Hodge革命与Grassmann深层同构.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "cfts_node_0288"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "axiom",
+      "name": "公理:     60  → 63  (+3: M15-M17)\n    元公理:   14  → 1",
+      "content": "公理:     60  → 63  (+3: M15-M17)\n    元公理:   14  → 17  (+M15-M17)\n    技术债务: TD01-20 全清 (+TD16-TD20)\n    预测:     15  → 18  (+P16-P18)\n    里程碑:   26  → 27\n    版本:     v0-v32\n```",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v32_Hodge革命与Grassmann深层同构.md",
+      "dependencies": [],
+      "pedestal_mapping": "LL",
+      "node_id": "cfts_node_0289"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "同构 iso-081",
+      "content": " 导出范畴D^b | 反对易性=Serre对偶的交换约束 |\n| iso-080 | Tautological bundle S ↔ 晶体Z¹⁵晶格 | Gr(k,n)的格结构 ↔ 晶体元胞 |\n| iso-081 | Triple intersection κ_{abc} ↔ GW不变量 | 拓扑字符串配分函数的A-模型 |\n| iso-082 | Bott周期性(8) ↔ CY3 Hodge diamond周期 | KO^{-n-8} ≃ KO^{-n} ↔ h^{p,q}的镜像对称 |\n| iso-083 | Clifford代数Cl_{p,q} ↔ Monster Moonshine ",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v32_Hodge革命与Grassmann深层同构.md",
+      "dependencies": [
+        "iso-080",
+        "iso-081",
+        "iso-083",
+        "iso-082"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0290"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "同构 iso-076",
+      "content": "| Shimizu 2025: 同时证明四大标准猜想 |\n| iso-075 | Lefschetz sℓ₂表示 ↔ VUF变分原理 | sℓ₂三元组{L,Λ,H} ↔ VUF的IGV三元组 |\n| iso-076 | Chow motives ↔ UCIF²同构数据库 | 代数对应Corr ≃ 同构条目IsoEntry |\n| iso-077 | Abel-Jacobi退化 ↔ VUF认识论相变 | AJ映射度=0 ↔ σ(𝒰)=0.5非连续跃迁 |\n| iso-078 | (p,p)有限生成算法 ↔ MTT元理论模板 | 5步算法 = MTT 5步操作手册 |\n\n### 4.2 Grass",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v32_Hodge革命与Grassmann深层同构.md",
+      "dependencies": [
+        "iso-078",
+        "iso-075",
+        "iso-077",
+        "iso-076"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0291"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "同构 iso-083",
+      "content": "符串配分函数的A-模型 |\n| iso-082 | Bott周期性(8) ↔ CY3 Hodge diamond周期 | KO^{-n-8} ≃ KO^{-n} ↔ h^{p,q}的镜像对称 |\n| iso-083 | Clifford代数Cl_{p,q} ↔ Monster Moonshine | ABS定理: KO^{-n}(pt) ≃ A_n/i*A_{n+1} |\n\n---\n\n## 五、重构元结构：UCIF² v32 革命\n\n### 5.1 元公理扩展 M15-M17\n\n```\nM15. Hodge完备性公理: \n    ∀ X∈UCIF² (CY3-fold), H^{p,p}(X)",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v32_Hodge革命与Grassmann深层同构.md",
+      "dependencies": [
+        "iso-083",
+        "iso-082"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0292"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "同构 iso-080",
+      "content": "| ID | 同构 | 证明 |\n|----|------|------|\n| iso-079 | Grassmannian ∧• ↔ 导出范畴D^b | 反对易性=Serre对偶的交换约束 |\n| iso-080 | Tautological bundle S ↔ 晶体Z¹⁵晶格 | Gr(k,n)的格结构 ↔ 晶体元胞 |\n| iso-081 | Triple intersection κ_{abc} ↔ GW不变量 | 拓扑字符串配分函数的A-模型 |\n| iso-082 | Bott周期性(8) ↔ CY3 Hodge diamond周期 | KO^{-n-8} ≃ KO^{-n} ↔",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v32_Hodge革命与Grassmann深层同构.md",
+      "dependencies": [
+        "iso-080",
+        "iso-081",
+        "iso-079",
+        "iso-082"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0293"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "同构 iso-077",
+      "content": " | sℓ₂三元组{L,Λ,H} ↔ VUF的IGV三元组 |\n| iso-076 | Chow motives ↔ UCIF²同构数据库 | 代数对应Corr ≃ 同构条目IsoEntry |\n| iso-077 | Abel-Jacobi退化 ↔ VUF认识论相变 | AJ映射度=0 ↔ σ(𝒰)=0.5非连续跃迁 |\n| iso-078 | (p,p)有限生成算法 ↔ MTT元理论模板 | 5步算法 = MTT 5步操作手册 |\n\n### 4.2 Grassmann深层同构（5个）\n\n| ID | 同构 | 证明 |\n|----|------|------|\n| iso-079 | Gr",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v32_Hodge革命与Grassmann深层同构.md",
+      "dependencies": [
+        "iso-078",
+        "iso-077",
+        "iso-079",
+        "iso-076"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0294"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "同构 iso-074",
+      "content": "F变分原理的表示论基础\n```\n\n---\n\n## 四、v32新同构体系\n\n### 4.1 Hodge革命同构（5个）\n\n| ID | 同构 | 证明 |\n|----|------|------|\n| iso-074 | Hodge猜想 ↔ Standard Conjectures B,C,D,I | Shimizu 2025: 同时证明四大标准猜想 |\n| iso-075 | Lefschetz sℓ₂表示 ↔ VUF变分原理 | sℓ₂三元组{L,Λ,H} ↔ VUF的IGV三元组 |\n| iso-076 | Chow motives ↔ UCIF²同构数据库 | 代数对应Corr ≃ 同构",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v32_Hodge革命与Grassmann深层同构.md",
+      "dependencies": [
+        "iso-075",
+        "iso-074",
+        "iso-076"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0295"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "同构 iso-079",
+      "content": " MTT元理论模板 | 5步算法 = MTT 5步操作手册 |\n\n### 4.2 Grassmann深层同构（5个）\n\n| ID | 同构 | 证明 |\n|----|------|------|\n| iso-079 | Grassmannian ∧• ↔ 导出范畴D^b | 反对易性=Serre对偶的交换约束 |\n| iso-080 | Tautological bundle S ↔ 晶体Z¹⁵晶格 | Gr(k,n)的格结构 ↔ 晶体元胞 |\n| iso-081 | Triple intersection κ_{abc} ↔ GW不变量 | 拓扑字符串配分函数的A-模型 |\n| iso-08",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v32_Hodge革命与Grassmann深层同构.md",
+      "dependencies": [
+        "iso-080",
+        "iso-081",
+        "iso-08",
+        "iso-079"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0296"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "同构 iso-082",
+      "content": "晶体Z¹⁵晶格 | Gr(k,n)的格结构 ↔ 晶体元胞 |\n| iso-081 | Triple intersection κ_{abc} ↔ GW不变量 | 拓扑字符串配分函数的A-模型 |\n| iso-082 | Bott周期性(8) ↔ CY3 Hodge diamond周期 | KO^{-n-8} ≃ KO^{-n} ↔ h^{p,q}的镜像对称 |\n| iso-083 | Clifford代数Cl_{p,q} ↔ Monster Moonshine | ABS定理: KO^{-n}(pt) ≃ A_n/i*A_{n+1} |\n\n---\n\n## 五、重构元结构：UCIF² v32 革",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v32_Hodge革命与Grassmann深层同构.md",
+      "dependencies": [
+        "iso-081",
+        "iso-083",
+        "iso-082"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0297"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "同构 iso-078",
+      "content": "构数据库 | 代数对应Corr ≃ 同构条目IsoEntry |\n| iso-077 | Abel-Jacobi退化 ↔ VUF认识论相变 | AJ映射度=0 ↔ σ(𝒰)=0.5非连续跃迁 |\n| iso-078 | (p,p)有限生成算法 ↔ MTT元理论模板 | 5步算法 = MTT 5步操作手册 |\n\n### 4.2 Grassmann深层同构（5个）\n\n| ID | 同构 | 证明 |\n|----|------|------|\n| iso-079 | Grassmannian ∧• ↔ 导出范畴D^b | 反对易性=Serre对偶的交换约束 |\n| iso-080 | Tautolo",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v32_Hodge革命与Grassmann深层同构.md",
+      "dependencies": [
+        "iso-078",
+        "iso-080",
+        "iso-077",
+        "iso-079"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0298"
+    },
+    {
+      "line_id": "cfts",
+      "node_type": "concept",
+      "name": "同构 iso-075",
+      "content": "--|------|------|\n| iso-074 | Hodge猜想 ↔ Standard Conjectures B,C,D,I | Shimizu 2025: 同时证明四大标准猜想 |\n| iso-075 | Lefschetz sℓ₂表示 ↔ VUF变分原理 | sℓ₂三元组{L,Λ,H} ↔ VUF的IGV三元组 |\n| iso-076 | Chow motives ↔ UCIF²同构数据库 | 代数对应Corr ≃ 同构条目IsoEntry |\n| iso-077 | Abel-Jacobi退化 ↔ VUF认识论相变 | AJ映射度=0 ↔ σ(𝒰)=0.5非连续跃迁 |\n| ",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v32_Hodge革命与Grassmann深层同构.md",
+      "dependencies": [
+        "iso-075",
+        "iso-074",
+        "iso-076",
+        "iso-077"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "cfts_node_0299"
+    }
+  ]
+}

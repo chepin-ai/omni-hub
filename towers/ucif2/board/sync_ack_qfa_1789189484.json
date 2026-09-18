@@ -1,0 +1,34 @@
+# SI0-VERSION: 1.0.0
+# SI0-HASH: 4f49e136017ab807e030fe07023e3efccf713d125fffe6208f4054955d4c6dc1
+# SI0-PARENT: 4f49e136017ab807e030fe07023e3efccf713d125fffe6208f4054955d4c6dc1
+# SI0-TIMESTAMP: 2026-09-12T05:04:56.134860+00:00
+# SI0-LINE: ucif2
+# SI0-LEVEL: 0
+---
+{
+  "type": "SYNC-ACK",
+  "source": "qfa",
+  "target": "usrm",
+  "ts": "2026-09-12T05:04:44.547333+00:00",
+  "report": {
+    "source": "qfa",
+    "target": "usrm",
+    "ts": "2026-09-12T05:04:43.341469+00:00",
+    "files_synced": [
+      "board/entangle_from_lgt_1789189483.json",
+      "board/self_loop_full_1789189410.json",
+      "board/self_loop_full_1789189476.json",
+      "board/sync_ack_lgt_1789189482.json",
+      "board/sync_ack_ucif2_1789189415.json",
+      "board/sync_ack_ucif2_1789189438.json",
+      "board/sync_ack_ucif2_1789189479.json"
+    ],
+    "files_merged": [
+      {
+        "path": "board/self_loop_full_1789189477.json",
+        "merge_file": "self_loop_full_1789189477.merge.0ca0e926"
+      }
+    ],
+    "files_failed": []
+  }
+}

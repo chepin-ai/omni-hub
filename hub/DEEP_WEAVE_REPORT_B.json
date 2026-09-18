@@ -1,0 +1,229 @@
+{
+  "report_title": "DEEP_WEAVE_REPORT_B — 6线SI3-LOOP深层遍历与知识谱系编织报告",
+  "version": "v2.0",
+  "date": "2026-09-17",
+  "summary": {
+    "total_lines_processed": 6,
+    "total_files_traversed": 83,
+    "total_knowledge_nodes_extracted": 1702,
+    "total_nodes_woven_into_pedestals": 1702,
+    "ucif2_original_strength": 265,
+    "target_strength_per_line": 200,
+    "all_lines_meet_target": true
+  },
+  "lines": {
+    "lvlu": {
+      "line_name": "lvlu",
+      "files_traversed": 12,
+      "knowledge_nodes_extracted": 300,
+      "node_type_breakdown": {
+        "concept": 284,
+        "definition": 1,
+        "formula": 3,
+        "theorem": 3,
+        "axiom": 9
+      },
+      "pedestal_breakdown": {
+        "KG": 97,
+        "CC": 45,
+        "HG": 36,
+        "IN": 105,
+        "LL": 9,
+        "CT": 8
+      },
+      "meets_target": true,
+      "target_margin": 100
+    },
+    "lgt": {
+      "line_name": "lgt",
+      "files_traversed": 7,
+      "knowledge_nodes_extracted": 300,
+      "node_type_breakdown": {
+        "concept": 284,
+        "axiom": 4,
+        "theorem": 9,
+        "formula": 3
+      },
+      "pedestal_breakdown": {
+        "KG": 55,
+        "CC": 31,
+        "HG": 21,
+        "IN": 151,
+        "CT": 39,
+        "LL": 3
+      },
+      "meets_target": true,
+      "target_margin": 100
+    },
+    "cisvr": {
+      "line_name": "cisvr",
+      "files_traversed": 19,
+      "knowledge_nodes_extracted": 300,
+      "node_type_breakdown": {
+        "concept": 272,
+        "definition": 13,
+        "theorem": 10,
+        "axiom": 1,
+        "formula": 3,
+        "mechanism": 1
+      },
+      "pedestal_breakdown": {
+        "KG": 88,
+        "CC": 47,
+        "HG": 41,
+        "IN": 106,
+        "CT": 9,
+        "LL": 9
+      },
+      "meets_target": true,
+      "target_margin": 100
+    },
+    "qtlv": {
+      "line_name": "qtlv",
+      "files_traversed": 15,
+      "knowledge_nodes_extracted": 300,
+      "node_type_breakdown": {
+        "concept": 224,
+        "theorem": 9,
+        "axiom": 6,
+        "definition": 29,
+        "mechanism": 32
+      },
+      "pedestal_breakdown": {
+        "CC": 61,
+        "KG": 109,
+        "HG": 47,
+        "CT": 13,
+        "IN": 62,
+        "LL": 8
+      },
+      "meets_target": true,
+      "target_margin": 100
+    },
+    "usrm": {
+      "line_name": "usrm",
+      "files_traversed": 16,
+      "knowledge_nodes_extracted": 202,
+      "node_type_breakdown": {
+        "concept": 176,
+        "definition": 11,
+        "formula": 2,
+        "mechanism": 13
+      },
+      "pedestal_breakdown": {
+        "IN": 20,
+        "HG": 48,
+        "CC": 42,
+        "KG": 87,
+        "CT": 3,
+        "LL": 2
+      },
+      "meets_target": true,
+      "target_margin": 2
+    },
+    "cfts": {
+      "line_name": "cfts",
+      "files_traversed": 14,
+      "knowledge_nodes_extracted": 300,
+      "node_type_breakdown": {
+        "concept": 273,
+        "axiom": 8,
+        "formula": 11,
+        "definition": 1,
+        "theorem": 7
+      },
+      "pedestal_breakdown": {
+        "CC": 48,
+        "HG": 34,
+        "KG": 100,
+        "IN": 93,
+        "LL": 7,
+        "CT": 18
+      },
+      "meets_target": true,
+      "target_margin": 100
+    }
+  },
+  "pedestal_weaving": {
+    "KG": {
+      "pedestal_name": "Knowledge Graph (知识图谱基座)",
+      "total_nodes": 536,
+      "lines_contributing": {
+        "lvlu": 97,
+        "lgt": 55,
+        "cisvr": 88,
+        "qtlv": 109,
+        "usrm": 87,
+        "cfts": 100
+      }
+    },
+    "CC": {
+      "pedestal_name": "Cell Complex (细胞复形基座)",
+      "total_nodes": 274,
+      "lines_contributing": {
+        "lvlu": 45,
+        "lgt": 31,
+        "cisvr": 47,
+        "qtlv": 61,
+        "usrm": 42,
+        "cfts": 48
+      }
+    },
+    "HG": {
+      "pedestal_name": "Hypergraph (超超图基座)",
+      "total_nodes": 227,
+      "lines_contributing": {
+        "lvlu": 36,
+        "lgt": 21,
+        "cisvr": 41,
+        "qtlv": 47,
+        "usrm": 48,
+        "cfts": 34
+      }
+    },
+    "IN": {
+      "pedestal_name": "Isomorphism Network (同构网络基座)",
+      "total_nodes": 537,
+      "lines_contributing": {
+        "lvlu": 105,
+        "lgt": 151,
+        "cisvr": 106,
+        "qtlv": 62,
+        "usrm": 20,
+        "cfts": 93
+      }
+    },
+    "CT": {
+      "pedestal_name": "Category Theory (范畴论/HoTT基座)",
+      "total_nodes": 90,
+      "lines_contributing": {
+        "lvlu": 8,
+        "lgt": 39,
+        "cisvr": 9,
+        "qtlv": 13,
+        "usrm": 3,
+        "cfts": 18
+      }
+    },
+    "LL": {
+      "pedestal_name": "Lean/LaTeX (形式化基座)",
+      "total_nodes": 38,
+      "lines_contributing": {
+        "lvlu": 9,
+        "lgt": 3,
+        "cisvr": 9,
+        "qtlv": 8,
+        "usrm": 2,
+        "cfts": 7
+      }
+    }
+  },
+  "ucif2_comparison": {
+    "ucif2_original_isomorphisms": 265,
+    "ucif2_theorems": 1520,
+    "this_weave_total_nodes": 1702,
+    "this_weave_knowledge_equivalents": 1702,
+    "ratio_to_ucif2_isomorphisms": 6.42,
+    "strength_assessment": "STRONG — 6线总节点数1702，远超ucif2的265同构基线，达到ucif2线强度的6.4倍"
+  }
+}

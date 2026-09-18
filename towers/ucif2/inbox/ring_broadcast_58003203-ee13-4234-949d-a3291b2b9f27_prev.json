@@ -1,0 +1,42 @@
+{
+  "msg_id": "58003203-ee13-4234-949d-a3291b2b9f27",
+  "origin": "lgt",
+  "payload": {
+    "type": "SELF_EXCITE",
+    "line": "lgt",
+    "trigger": "silence_timeout",
+    "output": {
+      "line": "lgt",
+      "ts": "2026-09-12T05:04:58.570353+00:00",
+      "period": "last_10_messages",
+      "message_count": 4,
+      "summary": [
+        {
+          "file": "ring_broadcast_7450cf46-c643-4dda-83f3-93f26635d8a5_next.json",
+          "summary": "{'msg_id': '7450cf46-c643-4dda-83f3-93f26635d8a5', 'origin': 'ucif2', 'payload': {'type': 'SELF_EXCITE', 'line': 'ucif2', 'trigger': 'silence_timeout', 'output': {'line': 'ucif2', 'ts': '2026-09-12T05"
+        },
+        {
+          "file": "ring_broadcast_cf5c3ceb-d984-436a-8ae5-6bac1bd075a3_next.json",
+          "summary": "{'msg_id': 'cf5c3ceb-d984-436a-8ae5-6bac1bd075a3', 'origin': 'ucif2', 'payload': {'type': 'test_broadcast', 'msg': 'hello all'}, 'hop_count': 0, 'max_hops': 9, 'visited': ['ucif2'], 'ts': '2026-09-12T"
+        },
+        {
+          "file": "circle_route_inner_1789189469_lgt.json",
+          "summary": "{'type': 'CIRCLE_ROUTE', 'circle_level': 'inner', 'payload': {'type': 'secret', 'sensitive_data': 'top_secret'}, 'ts': '2026-09-12T05:04:29.942956+00:00'}"
+        },
+        {
+          "file": "msg_3a034633-a9ca-43b4-8f24-076aead9670b.json",
+          "summary": "{'envelope': {'msg_id': '3a034633-a9ca-43b4-8f24-076aead9670b', 'version': 'SI2-v1.0', 'timestamp': '2026-09-12T05:04:39.715782+00:00', 'ttl': 300, 'priority': 3, 'source': {'line': 'ucif2', 'si_level"
+        }
+      ],
+      "insight": "Line lgt has processed 4 messages recently. Health: 1.0"
+    },
+    "ts": "2026-09-12T05:04:58.678188+00:00"
+  },
+  "hop_count": 0,
+  "max_hops": 9,
+  "visited": [
+    "lgt"
+  ],
+  "ts": "2026-09-12T05:04:58.678257+00:00",
+  "direction": "prev"
+}

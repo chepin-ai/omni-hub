@@ -1,0 +1,39 @@
+# SI0-VERSION: 1.0.0
+# SI0-HASH: b059d3fddffde05096edae6a4799109e24cd41690108098d466d5e23f0ded99b
+# SI0-PARENT: b059d3fddffde05096edae6a4799109e24cd41690108098d466d5e23f0ded99b
+# SI0-TIMESTAMP: 2026-09-12T05:13:04.085993+00:00
+# SI0-LINE: vinf
+# SI0-LEVEL: 0
+---
+{
+  "type": "SYNC-ACK",
+  "source": "qlv",
+  "target": "lvlu",
+  "ts": "2026-09-12T05:04:52.504803+00:00",
+  "report": {
+    "source": "qlv",
+    "target": "lvlu",
+    "ts": "2026-09-12T05:04:50.887636+00:00",
+    "files_synced": [
+      "board/entangle_from_lgt_1789189483.json",
+      "board/self_loop_full_1789189410.json",
+      "board/self_loop_full_1789189476.json",
+      "board/self_loop_full_1789189477.json",
+      "board/sync_ack_lgt_1789189482.json",
+      "board/sync_ack_qfa_1789189484.json",
+      "board/sync_ack_qgl_1789189490.json",
+      "board/sync_ack_ucif2_1789189415.json",
+      "board/sync_ack_ucif2_1789189438.json",
+      "board/sync_ack_ucif2_1789189479.json",
+      "board/sync_ack_usrm_1789189487.json",
+      "board/sync_ack_vinf_1789189488.json"
+    ],
+    "files_merged": [
+      {
+        "path": "board/self_loop_full_1789189478.json",
+        "merge_file": "self_loop_full_1789189478.merge.648d4fba"
+      }
+    ],
+    "files_failed": []
+  }
+}

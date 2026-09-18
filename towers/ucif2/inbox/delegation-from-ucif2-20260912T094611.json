@@ -1,0 +1,8 @@
+{
+  "type": "DELEGATION",
+  "from": "ucif2",
+  "to": "ucif2",
+  "original_task": "{\n  \"type\": \"DELEGATION\",\n  \"from\": \"cfts\",\n  \"to\": \"ucif2\",\n  \"original_task\": \"{\\n  \\\"id\\\": \\\"TASK-cfts-20260912T094610-1588\\\",\\n  \\\"timestamp\\\": \\\"2026-09-12T09:46:10.216248+00:00\\\",\\n  \\\"from\\\": \\",
+  "reason": "ucif2 cannot handle, delegating to ucif2",
+  "timestamp": "2026-09-12T09:46:11.550618+00:00"
+}

@@ -1,0 +1,32 @@
+{
+  "envelope": {
+    "msg_id": "815cbcb9-d950-4c19-89a2-1a4ca6e80039",
+    "version": "SI2-v1.0",
+    "timestamp": "2026-09-12T05:13:27.541285+00:00",
+    "ttl": 300,
+    "priority": 3,
+    "source": {
+      "line": "lvlu",
+      "si_level": 2
+    },
+    "target": {
+      "line": "cfts",
+      "si_level": 2,
+      "broadcast": false
+    }
+  },
+  "payload": {
+    "type": "TASK",
+    "task_id": "801211b3-fca5-4cbc-bc72-2cd0ecd8728c",
+    "content": {
+      "type": "cross_loop",
+      "description": "Cross-loop from lvlu to cfts"
+    },
+    "dependencies": [],
+    "deadline": ""
+  },
+  "signature": {
+    "hash": "437a9cac730236ddf02f59ad64d3e29d98e2b35fcd24f80259f7a1e16edd55dc",
+    "chain_hash": ""
+  }
+}

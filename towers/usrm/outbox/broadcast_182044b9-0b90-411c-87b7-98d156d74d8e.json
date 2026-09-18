@@ -1,0 +1,15 @@
+{
+  "origin": "usrm",
+  "ts": "2026-09-12T05:04:58.944079+00:00",
+  "direction": "both",
+  "hops": [
+    {
+      "to": "vinf",
+      "direction": "next"
+    },
+    {
+      "to": "qfa",
+      "direction": "prev"
+    }
+  ]
+}

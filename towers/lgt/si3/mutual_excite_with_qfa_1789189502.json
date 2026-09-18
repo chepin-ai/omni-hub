@@ -1,0 +1,13 @@
+{
+  "type": "MUTUAL_EXCITE",
+  "partner": "qfa",
+  "my_state": {
+    "health": 1.0,
+    "load": 0.12,
+    "throughput": 0.0667,
+    "latency": 10.0,
+    "entropy": 1.0,
+    "excitation_level": 0.1
+  },
+  "ts": "2026-09-12T05:05:02.040988+00:00"
+}

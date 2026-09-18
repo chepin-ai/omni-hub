@@ -1,0 +1,15 @@
+{
+  "msg_id": "47f9bad8-8863-41e1-80f8-59946c7c38cc",
+  "origin": "ucif2",
+  "payload": {
+    "type": "CYCLE_COMPLETE",
+    "ts": "2026-09-12T05:05:07.011032+00:00"
+  },
+  "hop_count": 0,
+  "max_hops": 9,
+  "visited": [
+    "ucif2"
+  ],
+  "ts": "2026-09-12T05:05:07.011086+00:00",
+  "direction": "prev"
+}

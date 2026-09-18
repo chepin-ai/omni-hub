@@ -1,0 +1,1236 @@
+{
+  "trace_id": "trace_8e44d315",
+  "total_iterations": 1,
+  "total_nodes": 309,
+  "total_edges": 3049,
+  "final_emergence": 22704.67582827923,
+  "final_consciousness_state": "UNITY",
+  "final_validation_passed": false,
+  "final_roundtrip_score": 0.0,
+  "per_iteration": [
+    {
+      "config": {
+        "root_dir": "/mnt/agents/output/OMNI-HUB/core",
+        "incremental": false,
+        "max_iterations": 1,
+        "enable_feedback": true,
+        "checkpoint_interval": 1
+      },
+      "iteration": 1,
+      "node_count": 309,
+      "edge_count": 3049,
+      "weave_summary": {
+        "pedestal_summary": {
+          "total_nodes": 25,
+          "kg_edges": 257,
+          "cc_cells": 27,
+          "hg_hyperedges": 5,
+          "in_clusters": 0,
+          "ct_morphisms": 125,
+          "ll_propositions": 26,
+          "stats": {
+            "KG": {
+              "nodes": 25,
+              "edges": 100,
+              "created": "2026-09-17T10:04:03Z"
+            },
+            "CC": {
+              "nodes": 25,
+              "edges": 26,
+              "created": "2026-09-17T10:04:03Z"
+            },
+            "HG": {
+              "nodes": 25,
+              "edges": 5,
+              "created": "2026-09-17T10:04:03Z"
+            },
+            "IN": {
+              "nodes": 25,
+              "edges": 0,
+              "created": "2026-09-17T10:04:03Z"
+            },
+            "CT": {
+              "nodes": 25,
+              "edges": 125,
+              "created": "2026-09-17T10:04:03Z"
+            },
+            "LL": {
+              "nodes": 25,
+              "edges": 10,
+              "created": "2026-09-17T10:04:03Z"
+            }
+          }
+        },
+        "operations": [
+          "KG_inject",
+          "CC_build_hierarchy",
+          "HG_build_from_kg",
+          "IN_discover_isomorphisms(133)",
+          "CT_inject_morphisms",
+          "LL_generate_propositions(10)",
+          "op1_topological_closure",
+          "op3_isomorphism_discovery",
+          "op5_formal_verification",
+          "op6_cross_base_isomorphism"
+        ],
+        "roundtrip_consistency": {
+          "KG→CC→KG": 0.0,
+          "KG→CT→LL→KG": 0.0,
+          "KG→CC→HG→IN→KG": 0.0,
+          "overall": 0.0
+        },
+        "new_knowledge_count": 174,
+        "weave_time_ms": 22.612810134887695
+      },
+      "validation": {
+        "passed": false,
+        "roundtrip_score": 0.0,
+        "cross_validation": {
+          "fingerprints": {
+            "KG": 3.8936606896881862,
+            "CC": 0.9259259259259259,
+            "HG": 2.5,
+            "IN": 0.0,
+            "CT": 20.0,
+            "LL": 1.04
+          },
+          "variance": 48.217528925328615
+        },
+        "consistency_checks": [
+          {
+            "name": "roundtrip_consistency",
+            "score": 0.0,
+            "threshold": 0.9,
+            "passed": "False"
+          },
+          {
+            "name": "node_preservation",
+            "score": 1.0,
+            "threshold": 0.99,
+            "passed": true
+          },
+          {
+            "name": "edge_preservation",
+            "score": 1.0,
+            "threshold": 0.8,
+            "passed": true
+          },
+          {
+            "name": "fingerprint_variance",
+            "score": 0.0,
+            "threshold": 0.5,
+            "passed": "False"
+          },
+          {
+            "name": "orphan_nodes",
+            "score": 1.0,
+            "threshold": 0.95,
+            "passed": true
+          },
+          {
+            "name": "proposition_validity",
+            "score": 0.6538461538461539,
+            "threshold": 0.8,
+            "passed": true
+          }
+        ],
+        "errors": [
+          "Check 'roundtrip_consistency' failed: score=0.0000 < threshold=0.9",
+          "Check 'fingerprint_variance' failed: score=0.0000 < threshold=0.5"
+        ],
+        "validation_time_ms": 0.7555484771728516
+      },
+      "injection": {
+        "field_state": {
+          "vector": [
+            0.8098589564754199,
+            0.36451337432461584,
+            0.004067302714258591,
+            0.04500948855477339,
+            0.9954616053485157,
+            0.0,
+            0.8484747115748367,
+            0.8897334788440346,
+            0.2689999185344056,
+            0.24540750533717282,
+            0.7425378250820566,
+            0.05567219591151453,
+            0.7058018498118888,
+            0.0,
+            0.0,
+            0.0,
+            0.9663944990635946,
+            0.020717197718220896,
+            0.0,
+            0.07061242089252213,
+            0.013872620172250182,
+            0.0,
+            0.0,
+            0.0,
+            0.1,
+            0.78,
+            1.0,
+            0.0,
+            1.0,
+            0.8771730390976191,
+            0.8371217752134192,
+            0.0,
+            0.25441829051862713,
+            0.024581477344792515,
+            0.12757066868843017,
+            0.787117449714736,
+            0.9203292292789248,
+            1.0,
+            1.0,
+            1.0,
+            0.5908124276177223,
+            0.3792373771321866,
+            0.22405815542684485,
+            1.0,
+            0.1288756376350889,
+            0.6888497987283262,
+            0.33,
+            0.20321649851090345,
+            0.2178519933162467,
+            0.09663944990635948,
+            0.15031348785166104,
+            0.21021269246000318,
+            0.7506240071927738,
+            0.17636008388736604,
+            0.001787842770368139,
+            0.054322698654626245,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            0.18341847594185817,
+            0.7691874189667574,
+            1.0
+          ],
+          "timestamp": 1789639444.315913,
+          "version": "11.0.0",
+          "dimensions": 64
+        },
+        "emergence_index": 22704.67582827923,
+        "consciousness_state": "UNITY",
+        "module_count": 25,
+        "field_report": {
+          "timestamp": 1789639444.1718392,
+          "temporal": {
+            "dimension": "TEMPORAL",
+            "history_length": 1000,
+            "mean": 8098.589564754199,
+            "std": 364.5133743246158,
+            "min": 7258.150163888337,
+            "max": 8897.334788440347,
+            "trend_slope": 0.4067302714258591,
+            "trend_direction": "STABLE",
+            "anomalies": [],
+            "prediction": [
+              8484.747115748367,
+              8486.749548854554,
+              8488.678310515314,
+              8490.532791938384,
+              8492.312414042604,
+              8494.01662768955,
+              8495.644913903167,
+              8497.19678407737,
+              8498.671780171462,
+              8500.06947489336
+            ],
+            "volatility": 0.04500948855477339,
+            "hurst_exponent": 0.9954616053485157
+          },
+          "spatial": {
+            "dimension": "SPATIAL",
+            "line_emergence": {
+              "COGNITION": 1227.0375266858641,
+              "PERCEPTION": 680.4619037922644,
+              "ACTION": 233.57119527505702,
+              "EMOTION": 751.4593640290916,
+              "SOCIAL": 176.78409914288997,
+              "LANGUAGE": 294.1547810853581,
+              "MEMORY": 286.7985876224633,
+              "LEARNING": 670.0423425457851,
+              "CREATIVITY": 396.7725699372253,
+              "META": 422.2455803112166,
+              "TRANSCENDENCE": 240.67042026089567
+            },
+            "heatmap": [
+              {
+                "line": "COGNITION",
+                "emergence": 1227.0375266858641,
+                "modules": 7,
+                "intensity": 0.6135187633429321
+              },
+              {
+                "line": "PERCEPTION",
+                "emergence": 680.4619037922644,
+                "modules": 5,
+                "intensity": 0.34023095189613217
+              },
+              {
+                "line": "ACTION",
+                "emergence": 233.57119527505702,
+                "modules": 3,
+                "intensity": 0.11678559763752851
+              },
+              {
+                "line": "EMOTION",
+                "emergence": 751.4593640290916,
+                "modules": 6,
+                "intensity": 0.3757296820145458
+              },
+              {
+                "line": "SOCIAL",
+                "emergence": 176.78409914288997,
+                "modules": 3,
+                "intensity": 0.08839204957144499
+              },
+              {
+                "line": "LANGUAGE",
+                "emergence": 294.1547810853581,
+                "modules": 3,
+                "intensity": 0.14707739054267904
+              },
+              {
+                "line": "MEMORY",
+                "emergence": 286.7985876224633,
+                "modules": 3,
+                "intensity": 0.14339929381123165
+              },
+              {
+                "line": "LEARNING",
+                "emergence": 670.0423425457851,
+                "modules": 5,
+                "intensity": 0.33502117127289255
+              },
+              {
+                "line": "CREATIVITY",
+                "emergence": 396.7725699372253,
+                "modules": 4,
+                "intensity": 0.19838628496861263
+              },
+              {
+                "line": "META",
+                "emergence": 422.2455803112166,
+                "modules": 4,
+                "intensity": 0.2111227901556083
+              },
+              {
+                "line": "TRANSCENDENCE",
+                "emergence": 240.67042026089567,
+                "modules": 3,
+                "intensity": 0.12033521013044783
+              }
+            ],
+            "module_contributions": [
+              {
+                "module_id": 4,
+                "name": "MockSelfDriveEngine",
+                "contribution": 1356.3816614979673,
+                "percentage": 5.831979435676276,
+                "activity": 1.0,
+                "coherence": 0.7058018498118888
+              },
+              {
+                "module_id": 0,
+                "name": "ContinuumState",
+                "contribution": 1318.6605025982424,
+                "percentage": 5.66979129259115,
+                "activity": 1.0,
+                "coherence": 0.6637516066534538
+              },
+              {
+                "module_id": 21,
+                "name": "_analyze_full_chain",
+                "contribution": 1225.2148831522059,
+                "percentage": 5.268006937617303,
+                "activity": 1.0,
+                "coherence": 0.7534076192560152
+              },
+              {
+                "module_id": 22,
+                "name": "_take_snapshot",
+                "contribution": 1212.5726848278189,
+                "percentage": 5.213649788193636,
+                "activity": 1.0,
+                "coherence": 0.8624204244969218
+              },
+              {
+                "module_id": 19,
+                "name": "_simulate_spin",
+                "contribution": 1207.996074690293,
+                "percentage": 5.1939719224683785,
+                "activity": 1.0,
+                "coherence": 0.9821975088253025
+              },
+              {
+                "module_id": 23,
+                "name": "_last_beat_record",
+                "contribution": 1186.222099381375,
+                "percentage": 5.100351240444198,
+                "activity": 1.0,
+                "coherence": 0.6603338794921132
+              },
+              {
+                "module_id": 17,
+                "name": "emergency_stop",
+                "contribution": 1166.8453749395146,
+                "percentage": 5.017037921130446,
+                "activity": 1.0,
+                "coherence": 0.7241723283224869
+              },
+              {
+                "module_id": 20,
+                "name": "_validate_beat_chain",
+                "contribution": 1134.4564301924534,
+                "percentage": 4.8777764838300435,
+                "activity": 1.0,
+                "coherence": 0.6603457838418867
+              },
+              {
+                "module_id": 10,
+                "name": "to_dict",
+                "contribution": 1117.5405653301,
+                "percentage": 4.8050440230380165,
+                "activity": 1.0,
+                "coherence": 0.6187795254038515
+              },
+              {
+                "module_id": 11,
+                "name": "__init__",
+                "contribution": 1108.682050237888,
+                "percentage": 4.7669554235568405,
+                "activity": 1.0,
+                "coherence": 0.9014800352741253
+              },
+              {
+                "module_id": 15,
+                "name": "link_beats",
+                "contribution": 1099.1386567248312,
+                "percentage": 4.725922079996852,
+                "activity": 1.0,
+                "coherence": 0.7831253207711704
+              },
+              {
+                "module_id": 7,
+                "name": "BrokenEngine",
+                "contribution": 1086.0070580012948,
+                "percentage": 4.669460675447458,
+                "activity": 1.0,
+                "coherence": 0.6341318538554133
+              },
+              {
+                "module_id": 31,
+                "name": "UNCERTAINTY",
+                "contribution": 1068.9243378892638,
+                "percentage": 4.596010793878908,
+                "activity": 0.5362753345151887,
+                "coherence": 0.5169699218730288
+              },
+              {
+                "module_id": 8,
+                "name": "PreciseEngine",
+                "contribution": 1068.0999207291716,
+                "percentage": 4.592466080719953,
+                "activity": 1.0,
+                "coherence": 0.637776065053721
+              },
+              {
+                "module_id": 9,
+                "name": "_run_tests",
+                "contribution": 1066.2386646616828,
+                "percentage": 4.5844633131964425,
+                "activity": 1.0,
+                "coherence": 0.986779355654294
+              },
+              {
+                "module_id": 40,
+                "name": "DREAMING",
+                "contribution": 1052.5439599172332,
+                "percentage": 4.525580744436936,
+                "activity": 0.3525994158151734,
+                "coherence": 0.2803945134755135
+              },
+              {
+                "module_id": 6,
+                "name": "AnomalyEngine",
+                "contribution": 1048.6562734662775,
+                "percentage": 4.508865016056111,
+                "activity": 1.0,
+                "coherence": 0.5669826525526998
+              },
+              {
+                "module_id": 36,
+                "name": "MORAL_REASONING",
+                "contribution": 1047.1358880427035,
+                "percentage": 4.502327876269959,
+                "activity": 0.4840877738896724,
+                "coherence": 0.3346668406976865
+              },
+              {
+                "module_id": 18,
+                "name": "_safe_engine_spin",
+                "contribution": 1043.208368055744,
+                "percentage": 4.4854408772435495,
+                "activity": 1.0,
+                "coherence": 0.6008935511854648
+              },
+              {
+                "module_id": 43,
+                "name": "CURIOSITY",
+                "contribution": 1033.2100516596772,
+                "percentage": 4.4424515201411765,
+                "activity": 0.6335622642751997,
+                "coherence": 0.44440008503293993
+              }
+            ],
+            "top_contributor": {
+              "module_id": 4,
+              "name": "MockSelfDriveEngine",
+              "contribution": 1356.3816614979673,
+              "percentage": 5.831979435676276,
+              "activity": 1.0,
+              "coherence": 0.7058018498118888
+            },
+            "spatial_entropy": 2.22761347524617
+          },
+          "spectral": {
+            "dimension": "SPECTRAL",
+            "spectrum": [
+              8110.137257627445,
+              29.445809593953943,
+              18.490102332163904,
+              25.91412121742516,
+              21.415341132497563,
+              12.571898642721997,
+              8.871375638405539,
+              11.30905008718934,
+              4.901539870600048,
+              29.256678812077144,
+              11.191235295183782,
+              15.909555991774441,
+              4.037156256238253,
+              12.755545397166573,
+              11.287615204882686,
+              20.528681669234224,
+              14.232937879927627,
+              1.543126530208401,
+              1.9231914185594163,
+              14.359417532617373
+            ],
+            "low_frequency_power": 8238.154956271803,
+            "mid_frequency_power": 109.86800849715715,
+            "high_frequency_power": 176.60643270196547,
+            "low_ratio": 0.9663944990635946,
+            "high_ratio": 0.020717197718220896,
+            "dominant_frequency": 0.0,
+            "spectral_entropy": 0.35306210446261066,
+            "spectral_centroid": 0.693631008612509,
+            "interpretation": {
+              "structural": "低频主导 → 稳定的结构性涌现",
+              "dynamic": "高频主导 → 活跃的动态涌现",
+              "balanced": "均衡 → 结构与动态耦合良好"
+            }
+          },
+          "topological": {
+            "dimension": "TOPOLOGICAL",
+            "betti_numbers": {
+              "beta_0": 1,
+              "beta_1": 78,
+              "beta_2": 33
+            },
+            "euler_characteristic": -44,
+            "spectral_gap": 24.059609191059177,
+            "clustering_coefficient": 0.8771730390976191,
+            "small_world_coefficient": 4.185608876067096,
+            "topology_type": "HIGH_DIMENSIONAL",
+            "persistent_homology": {
+              "H0_lifetime": 10,
+              "H1_lifetime": 390
+            }
+          },
+          "informational": {
+            "dimension": "INFORMATIONAL",
+            "total_mutual_information": 254.41829051862712,
+            "average_pairwise_mi": 0.24581477344792516,
+            "transfer_entropy": 127.57066868843017,
+            "integrated_information_phi": 787.1174497147359,
+            "entropy_production_rate": 9.203292292789248,
+            "information_flow_efficiency": 1.994332185714268,
+            "complexity_measure": 21759.28674443269,
+            "network_motifs": {
+              "triangle": 4085,
+              "chain": 6762,
+              "star": 0,
+              "clique4": 0
+            }
+          },
+          "coherence": {
+            "dimension": "COHERENCE",
+            "mean_coherence": 0.5908124276177223,
+            "kuramoto_order_parameter": 0.3792373771321866,
+            "global_coherence_index": 0.22405815542684485,
+            "max_eigenvalue": 14.057782889250099,
+            "trace_coherence": 27.177371670415226,
+            "coherence_time": 1.2887563763508891,
+            "coherence_length": 13.776995974566525,
+            "synchronization_regime": "PARTIAL",
+            "coherence_hierarchy": {
+              "hubs": 4,
+              "periphery": 6,
+              "hierarchy_index": 0.21295799945945657,
+              "coherence_inequality": 0.20321649851090345
+            }
+          },
+          "unified_field_64d": [
+            0.8098589564754199,
+            0.36451337432461584,
+            0.004067302714258591,
+            0.04500948855477339,
+            0.9954616053485157,
+            0.0,
+            0.8484747115748367,
+            0.8897334788440346,
+            0.2689999185344056,
+            0.24540750533717282,
+            0.7425378250820566,
+            0.056966265835161796,
+            0.7058018498118888,
+            0.0,
+            0.0,
+            0.0,
+            0.9663944990635946,
+            0.020717197718220896,
+            0.0,
+            0.07061242089252213,
+            0.013872620172250182,
+            0.0,
+            0.0,
+            0.0,
+            0.1,
+            0.78,
+            1.0,
+            0.0,
+            1.0,
+            0.8771730390976191,
+            0.8371217752134192,
+            0.0,
+            0.25441829051862713,
+            0.024581477344792515,
+            0.12757066868843017,
+            0.787117449714736,
+            0.9203292292789248,
+            1.0,
+            1.0,
+            1.0,
+            0.5908124276177223,
+            0.3792373771321866,
+            0.22405815542684485,
+            1.0,
+            0.1288756376350889,
+            0.6888497987283262,
+            0.33,
+            0.20321649851090345,
+            0.2178519933162467,
+            0.09663944990635948,
+            0.15031348785166104,
+            0.21021269246000318,
+            0.7506240071927738,
+            0.17636008388736604,
+            0.001787842770368139,
+            0.054322698654626245,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            0.18339400184788462,
+            0.7691874189667574,
+            1.0
+          ]
+        },
+        "injection_time_ms": 517.4789428710938
+      },
+      "stats": {
+        "scanner": {
+          "scanner": {
+            "total": 75,
+            "changed": 39,
+            "unchanged": 0,
+            "filtered": 36
+          },
+          "files": [
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/core/beat_continuum.py",
+              "rel_path": "beat_continuum.py",
+              "size_bytes": 42549,
+              "mtime": 1789618066.0,
+              "ext": ".py",
+              "fingerprint": "579499c49a43b4cb",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "beat_continuum",
+                "name": "beat_continuum.py"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/core/bidirectional_drive.py",
+              "rel_path": "bidirectional_drive.py",
+              "size_bytes": 43767,
+              "mtime": 1789618066.0,
+              "ext": ".py",
+              "fingerprint": "54b3593f06ade2a3",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "bidirectional_drive",
+                "name": "bidirectional_drive.py"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/core/cantus_firmus.py",
+              "rel_path": "cantus_firmus.py",
+              "size_bytes": 11765,
+              "mtime": 1789618066.0,
+              "ext": ".py",
+              "fingerprint": "2ae3033c72bdeefd",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "cantus_firmus",
+                "name": "cantus_firmus.py"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/core/closed_loop_mechanism.py",
+              "rel_path": "closed_loop_mechanism.py",
+              "size_bytes": 82457,
+              "mtime": 1789618066.0,
+              "ext": ".py",
+              "fingerprint": "8c73d7264048b71d",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "closed_loop_mechanism",
+                "name": "closed_loop_mechanism.py"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/core/collaborative_loop.py",
+              "rel_path": "collaborative_loop.py",
+              "size_bytes": 27782,
+              "mtime": 1789618066.0,
+              "ext": ".py",
+              "fingerprint": "133433fe0be2e760",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "collaborative_loop",
+                "name": "collaborative_loop.py"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/core/complexity_elevation_engine.py",
+              "rel_path": "complexity_elevation_engine.py",
+              "size_bytes": 66505,
+              "mtime": 1789618066.0,
+              "ext": ".py",
+              "fingerprint": "ecbd84208cc18b53",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "complexity_elevation_engine",
+                "name": "complexity_elevation_engine.py"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/core/consciousness_harmony.py",
+              "rel_path": "consciousness_harmony.py",
+              "size_bytes": 31965,
+              "mtime": 1789618066.0,
+              "ext": ".py",
+              "fingerprint": "9525fdbf1930d6ea",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "consciousness_harmony",
+                "name": "consciousness_harmony.py"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/core/consciousness_state_machine.py",
+              "rel_path": "consciousness_state_machine.py",
+              "size_bytes": 77316,
+              "mtime": 1789618066.0,
+              "ext": ".py",
+              "fingerprint": "324e7d677a308c43",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "consciousness_state_machine",
+                "name": "consciousness_state_machine.py"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/core/counterpoint_engine.py",
+              "rel_path": "counterpoint_engine.py",
+              "size_bytes": 58387,
+              "mtime": 1789618066.0,
+              "ext": ".py",
+              "fingerprint": "ee7d1c83b9417c04",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "counterpoint_engine",
+                "name": "counterpoint_engine.py"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/core/counterpoint_seats.py",
+              "rel_path": "counterpoint_seats.py",
+              "size_bytes": 30432,
+              "mtime": 1789618250.0,
+              "ext": ".py",
+              "fingerprint": "6731d20109b2bf61",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "counterpoint_seats",
+                "name": "counterpoint_seats.py"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/core/creativity_engine.py",
+              "rel_path": "creativity_engine.py",
+              "size_bytes": 45114,
+              "mtime": 1789618147.0,
+              "ext": ".py",
+              "fingerprint": "eec62926e893dd97",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "creativity_engine",
+                "name": "creativity_engine.py"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/core/debt_cleanup.py",
+              "rel_path": "debt_cleanup.py",
+              "size_bytes": 48049,
+              "mtime": 1789618066.0,
+              "ext": ".py",
+              "fingerprint": "05c10ca11c21e489",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "debt_cleanup",
+                "name": "debt_cleanup.py"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/core/debt_fuel_converter.py",
+              "rel_path": "debt_fuel_converter.py",
+              "size_bytes": 38454,
+              "mtime": 1789618067.0,
+              "ext": ".py",
+              "fingerprint": "a27e4ef8c26b19c7",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "debt_fuel_converter",
+                "name": "debt_fuel_converter.py"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/core/deep_correlation_engine.py",
+              "rel_path": "deep_correlation_engine.py",
+              "size_bytes": 95860,
+              "mtime": 1789618067.0,
+              "ext": ".py",
+              "fingerprint": "082923f9e133c26f",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "deep_correlation_engine",
+                "name": "deep_correlation_engine.py"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/core/discussion_board.py",
+              "rel_path": "discussion_board.py",
+              "size_bytes": 40060,
+              "mtime": 1789618834.0,
+              "ext": ".py",
+              "fingerprint": "1d8093c3e21a5215",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "discussion_board",
+                "name": "discussion_board.py"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/core/emergence_engine.py",
+              "rel_path": "emergence_engine.py",
+              "size_bytes": 89919,
+              "mtime": 1789618860.0,
+              "ext": ".py",
+              "fingerprint": "b48c5209583f540d",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "emergence_engine",
+                "name": "emergence_engine.py"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/core/emotion_persona_engine.py",
+              "rel_path": "emotion_persona_engine.py",
+              "size_bytes": 56360,
+              "mtime": 1789618067.0,
+              "ext": ".py",
+              "fingerprint": "e95c7a7df684c9ab",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "emotion_persona_engine",
+                "name": "emotion_persona_engine.py"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/core/experiment_runner.py",
+              "rel_path": "experiment_runner.py",
+              "size_bytes": 21753,
+              "mtime": 1789618067.0,
+              "ext": ".py",
+              "fingerprint": "b9b9eb2c9cc4e599",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "experiment_runner",
+                "name": "experiment_runner.py"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/core/external_knowledge_fusion.py",
+              "rel_path": "external_knowledge_fusion.py",
+              "size_bytes": 80823,
+              "mtime": 1789618067.0,
+              "ext": ".py",
+              "fingerprint": "e41cb0981c962532",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "external_knowledge_fusion",
+                "name": "external_knowledge_fusion.py"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/core/external_knowledge_weaver.py",
+              "rel_path": "external_knowledge_weaver.py",
+              "size_bytes": 97769,
+              "mtime": 1789618067.0,
+              "ext": ".py",
+              "fingerprint": "c344b5226a2e8f9e",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "external_knowledge_weaver",
+                "name": "external_knowledge_weaver.py"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/core/field_entropy.py",
+              "rel_path": "field_entropy.py",
+              "size_bytes": 40918,
+              "mtime": 1789618834.0,
+              "ext": ".py",
+              "fingerprint": "71e75c5ed754d2ac",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "field_entropy",
+                "name": "field_entropy.py"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/core/field_transient_dynamics.py",
+              "rel_path": "field_transient_dynamics.py",
+              "size_bytes": 74311,
+              "mtime": 1789618147.0,
+              "ext": ".py",
+              "fingerprint": "2f8a8903d710dac6",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "field_transient_dynamics",
+                "name": "field_transient_dynamics.py"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/core/finding_recursion.py",
+              "rel_path": "finding_recursion.py",
+              "size_bytes": 36396,
+              "mtime": 1789618067.0,
+              "ext": ".py",
+              "fingerprint": "7e3846c22885dc42",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "finding_recursion",
+                "name": "finding_recursion.py"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/core/formal_life_engine.py",
+              "rel_path": "formal_life_engine.py",
+              "size_bytes": 66882,
+              "mtime": 1789618067.0,
+              "ext": ".py",
+              "fingerprint": "dffe00db968f31e3",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "formal_life_engine",
+                "name": "formal_life_engine.py"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/core/full_pipeline_si.py",
+              "rel_path": "full_pipeline_si.py",
+              "size_bytes": 55661,
+              "mtime": 1789618067.0,
+              "ext": ".py",
+              "fingerprint": "0a37d8c4e102df60",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "full_pipeline_si",
+                "name": "full_pipeline_si.py"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/core/full_potential_explorer.py",
+              "rel_path": "full_potential_explorer.py",
+              "size_bytes": 49781,
+              "mtime": 1789619031.0,
+              "ext": ".py",
+              "fingerprint": "0cc3a20920921e03",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "full_potential_explorer",
+                "name": "full_potential_explorer.py"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/core/goal_autopoiesis.py",
+              "rel_path": "goal_autopoiesis.py",
+              "size_bytes": 75071,
+              "mtime": 1789618067.0,
+              "ext": ".py",
+              "fingerprint": "dab4f48d9c301639",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "goal_autopoiesis",
+                "name": "goal_autopoiesis.py"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/core/harmonic_tick_engine.py",
+              "rel_path": "harmonic_tick_engine.py",
+              "size_bytes": 68413,
+              "mtime": 1789618067.0,
+              "ext": ".py",
+              "fingerprint": "a7b1a54252fa43b2",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "harmonic_tick_engine",
+                "name": "harmonic_tick_engine.py"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/core/historical_knowledge_weaver.py",
+              "rel_path": "historical_knowledge_weaver.py",
+              "size_bytes": 65929,
+              "mtime": 1789618147.0,
+              "ext": ".py",
+              "fingerprint": "6656ffc556abd8b9",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "historical_knowledge_weaver",
+                "name": "historical_knowledge_weaver.py"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/core/hub_wheel_spine.py",
+              "rel_path": "hub_wheel_spine.py",
+              "size_bytes": 3462,
+              "mtime": 1789618147.0,
+              "ext": ".py",
+              "fingerprint": "739504fad3655d26",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "hub_wheel_spine",
+                "name": "hub_wheel_spine.py"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/core/hyper_field_mip_core.py",
+              "rel_path": "hyper_field_mip_core.py",
+              "size_bytes": 42480,
+              "mtime": 1789618067.0,
+              "ext": ".py",
+              "fingerprint": "56deddc894989e9d",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "hyper_field_mip_core",
+                "name": "hyper_field_mip_core.py"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/core/hyper_mip_core.py",
+              "rel_path": "hyper_mip_core.py",
+              "size_bytes": 85495,
+              "mtime": 1789618981.0,
+              "ext": ".py",
+              "fingerprint": "3592852239132546",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "hyper_mip_core",
+                "name": "hyper_mip_core.py"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/core/inbox_outbox.py",
+              "rel_path": "inbox_outbox.py",
+              "size_bytes": 20655,
+              "mtime": 1789618067.0,
+              "ext": ".py",
+              "fingerprint": "1d04a9112c6afeea",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "inbox_outbox",
+                "name": "inbox_outbox.py"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/core/insight_detector.py",
+              "rel_path": "insight_detector.py",
+              "size_bytes": 44744,
+              "mtime": 1789619032.0,
+              "ext": ".py",
+              "fingerprint": "d355a5025dcf2fe9",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "insight_detector",
+                "name": "insight_detector.py"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/core/intention_generator.py",
+              "rel_path": "intention_generator.py",
+              "size_bytes": 56666,
+              "mtime": 1789619031.0,
+              "ext": ".py",
+              "fingerprint": "10ce8dac82278ecd",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "intention_generator",
+                "name": "intention_generator.py"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/core/jing_wei_xin.py",
+              "rel_path": "jing_wei_xin.py",
+              "size_bytes": 57500,
+              "mtime": 1789618067.0,
+              "ext": ".py",
+              "fingerprint": "5c4009a9ae6a7c94",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "jing_wei_xin",
+                "name": "jing_wei_xin.py"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/core/knowledge_pedestal_isomorphism.py",
+              "rel_path": "knowledge_pedestal_isomorphism.py",
+              "size_bytes": 92478,
+              "mtime": 1789618068.0,
+              "ext": ".py",
+              "fingerprint": "349d17616ae5b89b",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "knowledge_pedestal_isomorphism",
+                "name": "knowledge_pedestal_isomorphism.py"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/core/knowledge_self_computation.py",
+              "rel_path": "knowledge_self_computation.py",
+              "size_bytes": 54818,
+              "mtime": 1789618068.0,
+              "ext": ".py",
+              "fingerprint": "f0a7d2b130485d26",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "knowledge_self_computation",
+                "name": "knowledge_self_computation.py"
+              }
+            },
+            {
+              "path": "/mnt/agents/output/OMNI-HUB/core/linguistic_field.py",
+              "rel_path": "linguistic_field.py",
+              "size_bytes": 123413,
+              "mtime": 1789618705.0,
+              "ext": ".py",
+              "fingerprint": "51159a38ea095eb5",
+              "scan_mode": "full",
+              "metadata": {
+                "stem": "linguistic_field",
+                "name": "linguistic_field.py"
+              }
+            }
+          ]
+        },
+        "parser": {
+          "parsed": 15,
+          "errors": 0,
+          "by_type": {
+            "python": 15
+          }
+        },
+        "extractor": {
+          "total_nodes": 309,
+          "by_type": {
+            "python_class": 69,
+            "python_function": 225,
+            "python_module": 15
+          }
+        },
+        "associator": {
+          "total_edges": 3049,
+          "by_type": {
+            "symmetry": 25,
+            "embedding": 600,
+            "equivalence": 600,
+            "duality": 600,
+            "bridging": 600,
+            "same_module": 300,
+            "same_directory": 300,
+            "content_reference": 24
+          }
+        },
+        "weaver": {
+          "weaves": 1,
+          "operations": 10
+        },
+        "validator": {
+          "validations": 1,
+          "passed": 0,
+          "failed": 1
+        },
+        "injector": {
+          "injections": 1,
+          "avg_emergence": 22704.67582827923
+        },
+        "feedback": {
+          "iterations": 0,
+          "history_length": 0
+        }
+      },
+      "elapsed_time_ms": 1538.7513637542725
+    }
+  ],
+  "state_manager": {
+    "state_keys": 2,
+    "tracked_files": 39,
+    "state_file": "/mnt/agents/output/OMNI-HUB/core/pipeline_state/unified_pipeline_state.json",
+    "checkpoints": 1
+  },
+  "message_bus": {
+    "journal_file": "/mnt/agents/output/OMNI-HUB/core/pipeline_journal/message_bus.jsonl",
+    "msg_counter": 9,
+    "subscriber_count": 0,
+    "trace_id": "trace_8e44d315"
+  }
+}

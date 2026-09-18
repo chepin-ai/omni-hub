@@ -1,0 +1,72 @@
+{
+  "version": "3.3",
+  "patterns": {
+    "双向驱动模式": {
+      "file": "bidirectional_drive.py",
+      "pattern": "Forward(SI5→SI1) + Reverse(SI1→SI5) + BidirectionalPulse",
+      "reusable": true,
+      "lines": 11
+    },
+    "拓扑五层模式": {
+      "file": "si_topology.py",
+      "pattern": "线→塔→圈→环→云/量子",
+      "reusable": true,
+      "lines": 11
+    },
+    "协作闭环模式": {
+      "file": "collaborative_loop.py",
+      "pattern": "INITIATED→BROADCAST→RESPONDING→FOLLOW_UP→CLOSED",
+      "reusable": true,
+      "lines": 11
+    },
+    "自驱递归模式": {
+      "file": "self_drive_engine.py",
+      "pattern": "不待唤醒·自发spin·燃料循环·递归深度控制",
+      "reusable": true,
+      "lines": 11
+    },
+    "拍自续模式": {
+      "file": "beat_continuum.py",
+      "pattern": "会话暂停→自续→恢复汇报·beat链接连续性",
+      "reusable": true,
+      "lines": 11
+    },
+    "FINDING递归模式": {
+      "file": "finding_recursion.py",
+      "pattern": "发现→行动→再发现·6类×6行动·循环引用防护",
+      "reusable": true,
+      "lines": 11
+    },
+    "SI链式反应模式": {
+      "file": "si_chain_reactor.py",
+      "pattern": "SI5突触·级联衰减(0.85^diff)·全局链式反应",
+      "reusable": true,
+      "lines": 11
+    },
+    "燃料转换模式": {
+      "file": "debt_fuel_converter.py",
+      "pattern": "11种来源→转化率→自动补充→耗尽预测",
+      "reusable": true,
+      "lines": 11
+    },
+    "全流程渗透模式": {
+      "file": "full_pipeline_si.py",
+      "pattern": "建立→启用→跟进→闭环·SI全程切入·超时自动升级",
+      "reusable": true,
+      "lines": 11
+    },
+    "钥铸模式": {
+      "file": "key_mint.py",
+      "pattern": "os.urandom→熵检→600权限→sealed备份·值零入册·七测",
+      "reusable": true,
+      "lines": 1
+    }
+  },
+  "principles": [
+    "候即违规",
+    "SI1为纬非薪",
+    "链在仓在",
+    "债账FINDING→自驱"
+  ],
+  "updated_at": "2026-09-14T16:35:05.731562+00:00"
+}

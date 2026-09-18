@@ -1,0 +1,27 @@
+{
+  "forward_surge": {
+    "visited_nodes": 5,
+    "final_energy": 348.6593708725153
+  },
+  "reverse_ripple": {
+    "adjusted_nodes": 5,
+    "adjustment": 0.0026553196608155266
+  },
+  "feedback_loops": {
+    "total": 43
+  },
+  "self_excite": {
+    "top_loop_gain": 0.32000000000000006,
+    "new_gain": 0.6499999999999999
+  },
+  "mutual_excite": {
+    "new_coupling": 0.0
+  },
+  "coupled_cycle": {
+    "count": 4,
+    "converged": true,
+    "coherence_before": 0.015664537774170328,
+    "coherence_after": 0.015665986830183002
+  },
+  "field_coherence": 0.015665986830183033
+}

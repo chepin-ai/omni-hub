@@ -1,0 +1,32 @@
+{
+  "envelope": {
+    "msg_id": "e11c5df0-9e77-48e3-b4de-7f5449bbb045",
+    "version": "SI2-v1.0",
+    "timestamp": "2026-09-12T05:13:15.286631+00:00",
+    "ttl": 300,
+    "priority": 3,
+    "source": {
+      "line": "qgl",
+      "si_level": 2
+    },
+    "target": {
+      "line": "qlv",
+      "si_level": 2,
+      "broadcast": false
+    }
+  },
+  "payload": {
+    "type": "TASK",
+    "task_id": "3342b644-856f-482a-ae1a-dba63d78661b",
+    "content": {
+      "type": "cross_loop",
+      "description": "Cross-loop from qgl to qlv"
+    },
+    "dependencies": [],
+    "deadline": ""
+  },
+  "signature": {
+    "hash": "987feea6d09a43af58ab5f084bdd176987c6947adee65ad4fcd8afbda63a02de",
+    "chain_hash": ""
+  }
+}

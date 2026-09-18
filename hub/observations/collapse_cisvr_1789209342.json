@@ -1,0 +1,59 @@
+{
+  "operation": "observe_collapse",
+  "line": "cisvr",
+  "observer": "ucif2-hub",
+  "trigger_type": "health_check",
+  "timestamp": "2026-09-12T10:35:42.635559+00:00",
+  "description": "ucif2-hub 观测 cisvr，触发波函数坍缩",
+  "pre_collapse_state": {
+    "line": "cisvr",
+    "amplitudes": {
+      "si0": {
+        "re": 0.5590169943749475,
+        "im": 0.0
+      },
+      "si1": {
+        "re": 0.447213595499958,
+        "im": 0.0
+      },
+      "si2": {
+        "re": 0.5590169943749475,
+        "im": 0.0
+      },
+      "si3": {
+        "re": 0.33541019662496846,
+        "im": 0.0
+      },
+      "si4": {
+        "re": 0.223606797749979,
+        "im": 0.0
+      },
+      "si5": {
+        "re": 0.1118033988749895,
+        "im": 0.0
+      }
+    },
+    "probabilities": {
+      "si0": 0.31250000000000006,
+      "si1": 0.20000000000000004,
+      "si2": 0.31250000000000006,
+      "si3": 0.1125,
+      "si4": 0.05000000000000001,
+      "si5": 0.012500000000000002
+    },
+    "dominant_level": "si0",
+    "timestamp": "2026-09-12T10:35:33.341963+00:00"
+  },
+  "adjusted_probabilities": {
+    "si0": 0.1534,
+    "si1": 0.0982,
+    "si2": 0.5112,
+    "si3": 0.184,
+    "si4": 0.0327,
+    "si5": 0.0204
+  },
+  "collapsed_to": "si2",
+  "collapse_probability": 0.5112,
+  "uncertainty_before": 1.499209,
+  "uncertainty_after": 0.0
+}

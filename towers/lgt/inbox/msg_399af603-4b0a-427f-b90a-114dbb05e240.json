@@ -1,0 +1,32 @@
+{
+  "envelope": {
+    "msg_id": "399af603-4b0a-427f-b90a-114dbb05e240",
+    "version": "SI2-v1.0",
+    "timestamp": "2026-09-12T05:12:48.604987+00:00",
+    "ttl": 300,
+    "priority": 3,
+    "source": {
+      "line": "ucif2",
+      "si_level": 2
+    },
+    "target": {
+      "line": "lgt",
+      "si_level": 2,
+      "broadcast": false
+    }
+  },
+  "payload": {
+    "type": "TASK",
+    "task_id": "b487ae91-67f6-4356-b679-94caeaf35c91",
+    "content": {
+      "type": "cross_loop",
+      "description": "Cross-loop from ucif2 to lgt"
+    },
+    "dependencies": [],
+    "deadline": ""
+  },
+  "signature": {
+    "hash": "9094ac4f58790114cd1e12d90a88352737984ec5c8eae20ce91f0ac7859589ec",
+    "chain_hash": ""
+  }
+}

@@ -1,0 +1,94 @@
+# =============================================================================
+# OMNI-HUB v12.0 — .gitignore
+# =============================================================================
+
+# --- Python ------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# --- Virtual Environments ----------------------------------------------------
+venv/
+env/
+ENV/
+.venv/
+
+# --- IDE & Editors -----------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# --- Jupyter Notebook --------------------------------------------------------
+.ipynb_checkpoints
+
+# --- Testing -----------------------------------------------------------------
+.pytest_cache/
+.coverage
+htmlcov/
+tox/
+
+# --- Logs & Runtime ----------------------------------------------------------
+*.log
+logs/
+run/
+tmp/
+temp/
+*.pid
+*.sock
+
+# --- Secrets & Environment ---------------------------------------------------
+.env
+.env.local
+.env.*.local
+secrets.yaml
+secrets.json
+*.key
+*.pem
+
+# --- OS Deployment (generated locally) ---------------------------------------
+deploy/.env
+
+# --- Large Data & Artifacts --------------------------------------------------
+*.tar.gz
+*.zip
+*.rar
+snapshots/
+pipeline_state/
+test_state/
+
+# --- Node (if any frontend) --------------------------------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# --- OMNI-HUB Specific -------------------------------------------------------
+.sync/snapshots/
+.sync/logs/
+hub/pipeline_state/checkpoints/
+hub/test_state/
+hub/snapshots/
+*.png
+*.jpg
+*.jpeg
+*.gif

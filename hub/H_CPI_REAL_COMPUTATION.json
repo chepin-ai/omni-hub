@@ -1,0 +1,1009 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "date": "2026-09-17",
+    "analyst": "Cross-Project Coupling Analysis Expert",
+    "source_files": [
+      "UCIF2_FULL_SERIES_ANALYSIS.json",
+      "CAYLEY24_MATH_PHYS_DEEP_ANALYSIS.json",
+      "FULL_MD_DEEP_ANALYSIS.json",
+      "TRIANGLE_COUPLING_REPORT.json"
+    ]
+  },
+  "summary": {
+    "total_concepts_extracted": 4593,
+    "ucif2_concepts": 155,
+    "cayley24_concepts": 510,
+    "omni_hub_concepts": 3928,
+    "bridge_concepts_found": 30,
+    "gap_concepts_identified": 21
+  },
+  "H_concordance": {
+    "current_reported": 0.2203,
+    "real_computed_from_concepts": 0.552006,
+    "computation_method": "H = 1 - I(concept; project) / H_max",
+    "details": {
+      "H_concept": 8.432289,
+      "H_project": 0.492171,
+      "H_joint": 8.432289,
+      "mutual_info": 0.492171,
+      "H_max": 1.098612
+    },
+    "target": 0.65,
+    "gap_to_target": 0.097994
+  },
+  "CPI_cross_project_integration": {
+    "current_reported": 0.2294,
+    "from_jaccard_similarities": {
+      "ucif2_cayley24": 0.117737,
+      "ucif2_omni": 0.022747,
+      "cayley24_omni": 0.065927,
+      "avg_jaccard": 0.068804,
+      "computed_cpi": 0.041212
+    },
+    "from_baseline_coupling": {
+      "ucif2_omni": 0.42,
+      "omni_cayley24": 0.35,
+      "ucif2_cayley24": 0.28,
+      "avg_coupling": 0.35,
+      "computed_cpi": 0.229402
+    },
+    "target": 0.55,
+    "gap_to_target_jaccard": 0.508788,
+    "gap_to_target_baseline": 0.320598
+  },
+  "improvement_scenarios": {
+    "conservative": {
+      "description": "Bridge link injection only",
+      "H": 0.3703,
+      "CPI": 0.3794,
+      "E": 6894.38,
+      "delta_E": 239.91
+    },
+    "realistic": {
+      "description": "Bridge links + gap closure + concept harmonization",
+      "H": 0.4703,
+      "CPI": 0.4794,
+      "E": 7054.38,
+      "delta_E": 399.91
+    },
+    "optimistic": {
+      "description": "Full integration: all gaps closed + full harmonization",
+      "H": 0.78,
+      "CPI": 0.68,
+      "E": 7462.62,
+      "delta_E": 808.15
+    },
+    "target": {
+      "description": "Official targets",
+      "H": 0.65,
+      "CPI": 0.55,
+      "E": 7254.62,
+      "delta_E": 600.15
+    }
+  },
+  "bridge_concepts": [
+    {
+      "id": 1,
+      "ucif2_concept": "HyperionCategory",
+      "cayley24_matches": 3,
+      "omni_matches": 3,
+      "keywords": [
+        "category"
+      ],
+      "priority_score": 6
+    },
+    {
+      "id": 2,
+      "ucif2_concept": "Levi Geometry Y = (T^8/Z_2)^3",
+      "cayley24_matches": 3,
+      "omni_matches": 3,
+      "keywords": [
+        "geometry"
+      ],
+      "priority_score": 6
+    },
+    {
+      "id": 3,
+      "ucif2_concept": "CICY58-TIDS Fusion v5.0",
+      "cayley24_matches": 3,
+      "omni_matches": 3,
+      "keywords": [
+        "calabi-yau"
+      ],
+      "priority_score": 6
+    },
+    {
+      "id": 4,
+      "ucif2_concept": "MonsterVOA",
+      "cayley24_matches": 1,
+      "omni_matches": 3,
+      "keywords": [
+        "voA",
+        "monster"
+      ],
+      "priority_score": 4
+    },
+    {
+      "id": 5,
+      "ucif2_concept": "TopologicalQuantumFieldTheory",
+      "cayley24_matches": 3,
+      "omni_matches": 3,
+      "keywords": [
+        "quantum"
+      ],
+      "priority_score": 6
+    },
+    {
+      "id": 6,
+      "ucif2_concept": "HYPERION Deep Isomorphism",
+      "cayley24_matches": 3,
+      "omni_matches": 3,
+      "keywords": [
+        "isomorphism"
+      ],
+      "priority_score": 6
+    },
+    {
+      "id": 7,
+      "ucif2_concept": "24维Calabi-Yau几何",
+      "cayley24_matches": 2,
+      "omni_matches": 3,
+      "keywords": [
+        "calabi-yau",
+        "geometry"
+      ],
+      "priority_score": 5
+    },
+    {
+      "id": 8,
+      "ucif2_concept": "CICY58 Calabi-Yau threefold (chi=-24)",
+      "cayley24_matches": 3,
+      "omni_matches": 3,
+      "keywords": [
+        "calabi-yau"
+      ],
+      "priority_score": 6
+    },
+    {
+      "id": 9,
+      "ucif2_concept": "LeechLattice",
+      "cayley24_matches": 3,
+      "omni_matches": 3,
+      "keywords": [
+        "leech",
+        "lattice"
+      ],
+      "priority_score": 6
+    },
+    {
+      "id": 10,
+      "ucif2_concept": "Leech格 Λ",
+      "cayley24_matches": 3,
+      "omni_matches": 3,
+      "keywords": [
+        "leech",
+        "lattice"
+      ],
+      "priority_score": 6
+    },
+    {
+      "id": 11,
+      "ucif2_concept": "TIDS Spectral Algebraic Geometry v3.0",
+      "cayley24_matches": 3,
+      "omni_matches": 3,
+      "keywords": [
+        "algebra",
+        "spectral",
+        "algebraic",
+        "geometry"
+      ],
+      "priority_score": 6
+    },
+    {
+      "id": 12,
+      "ucif2_concept": "Holographic Duality",
+      "cayley24_matches": 3,
+      "omni_matches": 3,
+      "keywords": [
+        "dual",
+        "holographic"
+      ],
+      "priority_score": 6
+    },
+    {
+      "id": 13,
+      "ucif2_concept": "量子混沌与引力对应",
+      "cayley24_matches": 3,
+      "omni_matches": 3,
+      "keywords": [
+        "quantum",
+        "gravity"
+      ],
+      "priority_score": 6
+    },
+    {
+      "id": 14,
+      "ucif2_concept": "Leech-Levi Axiomatic System",
+      "cayley24_matches": 3,
+      "omni_matches": 3,
+      "keywords": [
+        "leech"
+      ],
+      "priority_score": 6
+    },
+    {
+      "id": 15,
+      "ucif2_concept": "对称性破缺与相变",
+      "cayley24_matches": 3,
+      "omni_matches": 3,
+      "keywords": [
+        "symmetry"
+      ],
+      "priority_score": 6
+    },
+    {
+      "id": 16,
+      "ucif2_concept": "MonsterVOAInf",
+      "cayley24_matches": 1,
+      "omni_matches": 3,
+      "keywords": [
+        "voA",
+        "monster"
+      ],
+      "priority_score": 4
+    },
+    {
+      "id": 17,
+      "ucif2_concept": "Moonshine Module V^♮ (c=24 holomorphic VOA)",
+      "cayley24_matches": 1,
+      "omni_matches": 3,
+      "keywords": [
+        "moonshine",
+        "voA"
+      ],
+      "priority_score": 4
+    },
+    {
+      "id": 18,
+      "ucif2_concept": "弦论紧化/额外维度",
+      "cayley24_matches": 3,
+      "omni_matches": 3,
+      "keywords": [
+        "string"
+      ],
+      "priority_score": 6
+    },
+    {
+      "id": 19,
+      "ucif2_concept": "Rep(V_{E_8}^{orb}) ≅ Rep(V_Λ^{orb}) ≅ Rep(V^♮) ≅ MTC_194 ≅ Rep(Monster)",
+      "cayley24_matches": 3,
+      "omni_matches": 3,
+      "keywords": [
+        "monster"
+      ],
+      "priority_score": 6
+    },
+    {
+      "id": 20,
+      "ucif2_concept": "DeepIsomorphism",
+      "cayley24_matches": 3,
+      "omni_matches": 3,
+      "keywords": [
+        "isomorphism"
+      ],
+      "priority_score": 6
+    },
+    {
+      "id": 21,
+      "ucif2_concept": "引力涌现",
+      "cayley24_matches": 3,
+      "omni_matches": 3,
+      "keywords": [
+        "gravity"
+      ],
+      "priority_score": 6
+    },
+    {
+      "id": 22,
+      "ucif2_concept": "MoonshineModule",
+      "cayley24_matches": 3,
+      "omni_matches": 3,
+      "keywords": [
+        "moonshine"
+      ],
+      "priority_score": 6
+    },
+    {
+      "id": 23,
+      "ucif2_concept": "Monster模 V^♮",
+      "cayley24_matches": 3,
+      "omni_matches": 3,
+      "keywords": [
+        "monster"
+      ],
+      "priority_score": 6
+    },
+    {
+      "id": 24,
+      "ucif2_concept": "范畴论信息结构",
+      "cayley24_matches": 3,
+      "omni_matches": 3,
+      "keywords": [
+        "category"
+      ],
+      "priority_score": 6
+    },
+    {
+      "id": 25,
+      "ucif2_concept": "Moonshine Framework",
+      "cayley24_matches": 3,
+      "omni_matches": 3,
+      "keywords": [
+        "moonshine"
+      ],
+      "priority_score": 6
+    },
+    {
+      "id": 26,
+      "ucif2_concept": "扩展Golay码 [24,12,8]",
+      "cayley24_matches": 3,
+      "omni_matches": 3,
+      "keywords": [
+        "golay"
+      ],
+      "priority_score": 6
+    },
+    {
+      "id": 27,
+      "ucif2_concept": "Zero-Value Policy (all defaults must be zero)",
+      "cayley24_matches": 3,
+      "omni_matches": 3,
+      "keywords": [
+        "calabi-yau"
+      ],
+      "priority_score": 6
+    },
+    {
+      "id": 28,
+      "ucif2_concept": "全息信息编码原理",
+      "cayley24_matches": 3,
+      "omni_matches": 3,
+      "keywords": [
+        "holographic"
+      ],
+      "priority_score": 6
+    },
+    {
+      "id": 29,
+      "ucif2_concept": "IsomorphismChain",
+      "cayley24_matches": 3,
+      "omni_matches": 3,
+      "keywords": [
+        "isomorphism"
+      ],
+      "priority_score": 6
+    },
+    {
+      "id": 30,
+      "ucif2_concept": "Five-fold Deep Isomorphism",
+      "cayley24_matches": 3,
+      "omni_matches": 3,
+      "keywords": [
+        "isomorphism"
+      ],
+      "priority_score": 6
+    }
+  ],
+  "gap_concepts": [
+    {
+      "concept": "Fifteen Step Loop",
+      "source_project": "ucif2",
+      "missing_in": [
+        "cayley24",
+        "omni"
+      ],
+      "keywords": [
+        "loop",
+        "step",
+        "iteration"
+      ],
+      "priority": "medium"
+    },
+    {
+      "concept": "UUC Existence-Uniqueness",
+      "source_project": "ucif2",
+      "missing_in": [
+        "cayley24",
+        "omni"
+      ],
+      "keywords": [
+        "uniqueness",
+        "existence",
+        "universal"
+      ],
+      "priority": "medium"
+    },
+    {
+      "concept": "Crystal-Knot Duality",
+      "source_project": "ucif2",
+      "missing_in": [
+        "cayley24",
+        "omni"
+      ],
+      "keywords": [
+        "crystal",
+        "knot",
+        "duality"
+      ],
+      "priority": "medium"
+    },
+    {
+      "concept": "piESKMU Framework",
+      "source_project": "ucif2",
+      "missing_in": [
+        "cayley24",
+        "omni"
+      ],
+      "keywords": [
+        "framework",
+        "spectral",
+        "algebraic"
+      ],
+      "priority": "medium"
+    },
+    {
+      "concept": "Zero-Value Policy",
+      "source_project": "ucif2",
+      "missing_in": [
+        "cayley24",
+        "omni"
+      ],
+      "keywords": [
+        "policy",
+        "zero",
+        "default"
+      ],
+      "priority": "medium"
+    },
+    {
+      "concept": "AI Completeness",
+      "source_project": "ucif2",
+      "missing_in": [
+        "cayley24",
+        "omni"
+      ],
+      "keywords": [
+        "ai",
+        "completeness",
+        "intelligence"
+      ],
+      "priority": "medium"
+    },
+    {
+      "concept": "Quantum Error Correction",
+      "source_project": "ucif2",
+      "missing_in": [
+        "cayley24",
+        "omni"
+      ],
+      "keywords": [
+        "quantum",
+        "error",
+        "correction"
+      ],
+      "priority": "high"
+    },
+    {
+      "concept": "Omega Category",
+      "source_project": "ucif2",
+      "missing_in": [
+        "cayley24",
+        "omni"
+      ],
+      "keywords": [
+        "category",
+        "omega",
+        "structure"
+      ],
+      "priority": "medium"
+    },
+    {
+      "concept": "AdS/CFT Correspondence",
+      "source_project": "cayley24",
+      "missing_in": [
+        "ucif2",
+        "omni"
+      ],
+      "keywords": [
+        "ads",
+        "cft",
+        "duality"
+      ],
+      "priority": "high"
+    },
+    {
+      "concept": "Mirror Symmetry",
+      "source_project": "cayley24",
+      "missing_in": [
+        "ucif2",
+        "omni"
+      ],
+      "keywords": [
+        "mirror",
+        "symmetry",
+        "dual"
+      ],
+      "priority": "medium"
+    },
+    {
+      "concept": "Gromov-Witten Invariants",
+      "source_project": "cayley24",
+      "missing_in": [
+        "ucif2",
+        "omni"
+      ],
+      "keywords": [
+        "invariant",
+        "gromov",
+        "witten"
+      ],
+      "priority": "medium"
+    },
+    {
+      "concept": "Ryu-Takayanagi Formula",
+      "source_project": "cayley24",
+      "missing_in": [
+        "ucif2",
+        "omni"
+      ],
+      "keywords": [
+        "ryu",
+        "takayanagi",
+        "entropy"
+      ],
+      "priority": "medium"
+    },
+    {
+      "concept": "SYK Model",
+      "source_project": "cayley24",
+      "missing_in": [
+        "ucif2",
+        "omni"
+      ],
+      "keywords": [
+        "syk",
+        "model",
+        "quantum"
+      ],
+      "priority": "high"
+    },
+    {
+      "concept": "BPS States",
+      "source_project": "cayley24",
+      "missing_in": [
+        "ucif2",
+        "omni"
+      ],
+      "keywords": [
+        "bps",
+        "state",
+        "supersymmetric"
+      ],
+      "priority": "medium"
+    },
+    {
+      "concept": "Kähler Moduli",
+      "source_project": "cayley24",
+      "missing_in": [
+        "ucif2",
+        "omni"
+      ],
+      "keywords": [
+        "kähler",
+        "moduli",
+        "geometry"
+      ],
+      "priority": "medium"
+    },
+    {
+      "concept": "Page Curve",
+      "source_project": "cayley24",
+      "missing_in": [
+        "ucif2",
+        "omni"
+      ],
+      "keywords": [
+        "page",
+        "curve",
+        "entropy"
+      ],
+      "priority": "medium"
+    },
+    {
+      "concept": "Knowledge Weaving",
+      "source_project": "omni",
+      "missing_in": [
+        "ucif2",
+        "cayley24"
+      ],
+      "keywords": [
+        "knowledge",
+        "weaving",
+        "integration"
+      ],
+      "priority": "medium"
+    },
+    {
+      "concept": "Consciousness State Machine",
+      "source_project": "omni",
+      "missing_in": [
+        "ucif2",
+        "cayley24"
+      ],
+      "keywords": [
+        "consciousness",
+        "state",
+        "machine"
+      ],
+      "priority": "medium"
+    },
+    {
+      "concept": "Pipeline Orchestrator",
+      "source_project": "omni",
+      "missing_in": [
+        "ucif2",
+        "cayley24"
+      ],
+      "keywords": [
+        "pipeline",
+        "orchestrator",
+        "workflow"
+      ],
+      "priority": "medium"
+    },
+    {
+      "concept": "Debt Cleanup Engine",
+      "source_project": "omni",
+      "missing_in": [
+        "ucif2",
+        "cayley24"
+      ],
+      "keywords": [
+        "debt",
+        "cleanup",
+        "engine"
+      ],
+      "priority": "medium"
+    },
+    {
+      "concept": "Bidirectional Drive",
+      "source_project": "omni",
+      "missing_in": [
+        "ucif2",
+        "cayley24"
+      ],
+      "keywords": [
+        "bidirectional",
+        "drive",
+        "feedback"
+      ],
+      "priority": "medium"
+    }
+  ],
+  "link_injection_plan": [
+    {
+      "bridge_id": 1,
+      "concept": "HyperionCategory",
+      "keywords": [
+        "category"
+      ],
+      "priority_score": 6,
+      "injected_links": 10,
+      "expected_coupling_increase": 0.03,
+      "link_types": [
+        "ucif2↔cayley24↔omni (triangle)",
+        "ucif2↔cayley24",
+        "ucif2↔omni"
+      ]
+    },
+    {
+      "bridge_id": 2,
+      "concept": "Levi Geometry Y = (T^8/Z_2)^3",
+      "keywords": [
+        "geometry"
+      ],
+      "priority_score": 6,
+      "injected_links": 10,
+      "expected_coupling_increase": 0.03,
+      "link_types": [
+        "ucif2↔cayley24↔omni (triangle)",
+        "ucif2↔cayley24",
+        "ucif2↔omni"
+      ]
+    },
+    {
+      "bridge_id": 3,
+      "concept": "CICY58-TIDS Fusion v5.0",
+      "keywords": [
+        "calabi-yau"
+      ],
+      "priority_score": 6,
+      "injected_links": 10,
+      "expected_coupling_increase": 0.03,
+      "link_types": [
+        "ucif2↔cayley24↔omni (triangle)",
+        "ucif2↔cayley24",
+        "ucif2↔omni"
+      ]
+    },
+    {
+      "bridge_id": 5,
+      "concept": "TopologicalQuantumFieldTheory",
+      "keywords": [
+        "quantum"
+      ],
+      "priority_score": 6,
+      "injected_links": 10,
+      "expected_coupling_increase": 0.03,
+      "link_types": [
+        "ucif2↔cayley24↔omni (triangle)",
+        "ucif2↔cayley24",
+        "ucif2↔omni"
+      ]
+    },
+    {
+      "bridge_id": 6,
+      "concept": "HYPERION Deep Isomorphism",
+      "keywords": [
+        "isomorphism"
+      ],
+      "priority_score": 6,
+      "injected_links": 10,
+      "expected_coupling_increase": 0.03,
+      "link_types": [
+        "ucif2↔cayley24↔omni (triangle)",
+        "ucif2↔cayley24",
+        "ucif2↔omni"
+      ]
+    },
+    {
+      "bridge_id": 8,
+      "concept": "CICY58 Calabi-Yau threefold (chi=-24)",
+      "keywords": [
+        "calabi-yau"
+      ],
+      "priority_score": 6,
+      "injected_links": 10,
+      "expected_coupling_increase": 0.03,
+      "link_types": [
+        "ucif2↔cayley24↔omni (triangle)",
+        "ucif2↔cayley24",
+        "ucif2↔omni"
+      ]
+    },
+    {
+      "bridge_id": 9,
+      "concept": "LeechLattice",
+      "keywords": [
+        "leech",
+        "lattice"
+      ],
+      "priority_score": 6,
+      "injected_links": 10,
+      "expected_coupling_increase": 0.03,
+      "link_types": [
+        "ucif2↔cayley24↔omni (triangle)",
+        "ucif2↔cayley24",
+        "ucif2↔omni"
+      ]
+    },
+    {
+      "bridge_id": 10,
+      "concept": "Leech格 Λ",
+      "keywords": [
+        "leech",
+        "lattice"
+      ],
+      "priority_score": 6,
+      "injected_links": 10,
+      "expected_coupling_increase": 0.03,
+      "link_types": [
+        "ucif2↔cayley24↔omni (triangle)",
+        "ucif2↔cayley24",
+        "ucif2↔omni"
+      ]
+    },
+    {
+      "bridge_id": 11,
+      "concept": "TIDS Spectral Algebraic Geometry v3.0",
+      "keywords": [
+        "algebra",
+        "spectral",
+        "algebraic",
+        "geometry"
+      ],
+      "priority_score": 6,
+      "injected_links": 10,
+      "expected_coupling_increase": 0.03,
+      "link_types": [
+        "ucif2↔cayley24↔omni (triangle)",
+        "ucif2↔cayley24",
+        "ucif2↔omni"
+      ]
+    },
+    {
+      "bridge_id": 12,
+      "concept": "Holographic Duality",
+      "keywords": [
+        "dual",
+        "holographic"
+      ],
+      "priority_score": 6,
+      "injected_links": 10,
+      "expected_coupling_increase": 0.03,
+      "link_types": [
+        "ucif2↔cayley24↔omni (triangle)",
+        "ucif2↔cayley24",
+        "ucif2↔omni"
+      ]
+    },
+    {
+      "bridge_id": 13,
+      "concept": "量子混沌与引力对应",
+      "keywords": [
+        "quantum",
+        "gravity"
+      ],
+      "priority_score": 6,
+      "injected_links": 10,
+      "expected_coupling_increase": 0.03,
+      "link_types": [
+        "ucif2↔cayley24↔omni (triangle)",
+        "ucif2↔cayley24",
+        "ucif2↔omni"
+      ]
+    },
+    {
+      "bridge_id": 14,
+      "concept": "Leech-Levi Axiomatic System",
+      "keywords": [
+        "leech"
+      ],
+      "priority_score": 6,
+      "injected_links": 10,
+      "expected_coupling_increase": 0.03,
+      "link_types": [
+        "ucif2↔cayley24↔omni (triangle)",
+        "ucif2↔cayley24",
+        "ucif2↔omni"
+      ]
+    },
+    {
+      "bridge_id": 15,
+      "concept": "对称性破缺与相变",
+      "keywords": [
+        "symmetry"
+      ],
+      "priority_score": 6,
+      "injected_links": 10,
+      "expected_coupling_increase": 0.03,
+      "link_types": [
+        "ucif2↔cayley24↔omni (triangle)",
+        "ucif2↔cayley24",
+        "ucif2↔omni"
+      ]
+    },
+    {
+      "bridge_id": 18,
+      "concept": "弦论紧化/额外维度",
+      "keywords": [
+        "string"
+      ],
+      "priority_score": 6,
+      "injected_links": 10,
+      "expected_coupling_increase": 0.03,
+      "link_types": [
+        "ucif2↔cayley24↔omni (triangle)",
+        "ucif2↔cayley24",
+        "ucif2↔omni"
+      ]
+    },
+    {
+      "bridge_id": 19,
+      "concept": "Rep(V_{E_8}^{orb}) ≅ Rep(V_Λ^{orb}) ≅ Rep(V^♮) ≅ MTC_194 ≅ Rep(Monster)",
+      "keywords": [
+        "monster"
+      ],
+      "priority_score": 6,
+      "injected_links": 10,
+      "expected_coupling_increase": 0.03,
+      "link_types": [
+        "ucif2↔cayley24↔omni (triangle)",
+        "ucif2↔cayley24",
+        "ucif2↔omni"
+      ]
+    },
+    {
+      "bridge_id": 20,
+      "concept": "DeepIsomorphism",
+      "keywords": [
+        "isomorphism"
+      ],
+      "priority_score": 6,
+      "injected_links": 10,
+      "expected_coupling_increase": 0.03,
+      "link_types": [
+        "ucif2↔cayley24↔omni (triangle)",
+        "ucif2↔cayley24",
+        "ucif2↔omni"
+      ]
+    },
+    {
+      "bridge_id": 21,
+      "concept": "引力涌现",
+      "keywords": [
+        "gravity"
+      ],
+      "priority_score": 6,
+      "injected_links": 10,
+      "expected_coupling_increase": 0.03,
+      "link_types": [
+        "ucif2↔cayley24↔omni (triangle)",
+        "ucif2↔cayley24",
+        "ucif2↔omni"
+      ]
+    },
+    {
+      "bridge_id": 22,
+      "concept": "MoonshineModule",
+      "keywords": [
+        "moonshine"
+      ],
+      "priority_score": 6,
+      "injected_links": 10,
+      "expected_coupling_increase": 0.03,
+      "link_types": [
+        "ucif2↔cayley24↔omni (triangle)",
+        "ucif2↔cayley24",
+        "ucif2↔omni"
+      ]
+    },
+    {
+      "bridge_id": 23,
+      "concept": "Monster模 V^♮",
+      "keywords": [
+        "monster"
+      ],
+      "priority_score": 6,
+      "injected_links": 10,
+      "expected_coupling_increase": 0.03,
+      "link_types": [
+        "ucif2↔cayley24↔omni (triangle)",
+        "ucif2↔cayley24",
+        "ucif2↔omni"
+      ]
+    },
+    {
+      "bridge_id": 24,
+      "concept": "范畴论信息结构",
+      "keywords": [
+        "category"
+      ],
+      "priority_score": 6,
+      "injected_links": 10,
+      "expected_coupling_increase": 0.03,
+      "link_types": [
+        "ucif2↔cayley24↔omni (triangle)",
+        "ucif2↔cayley24",
+        "ucif2↔omni"
+      ]
+    }
+  ],
+  "emergence_index": {
+    "current": 6654.47,
+    "computed": 6654.47,
+    "target": 7000.0,
+    "gap_to_target": 345.53
+  }
+}

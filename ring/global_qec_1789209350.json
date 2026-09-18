@@ -1,0 +1,62 @@
+{
+  "layer": "ring",
+  "operation": "global_qec",
+  "timestamp": "2026-09-12T10:35:45.338606+00:00",
+  "qec_results": [
+    {
+      "line": "ucif2",
+      "consensus_reached": false,
+      "majority_count": 1
+    },
+    {
+      "line": "lgt",
+      "consensus_reached": false,
+      "majority_count": 1
+    },
+    {
+      "line": "qfa",
+      "consensus_reached": false,
+      "majority_count": 1
+    },
+    {
+      "line": "usrm",
+      "consensus_reached": false,
+      "majority_count": 1
+    },
+    {
+      "line": "vinf",
+      "consensus_reached": false,
+      "majority_count": 1
+    },
+    {
+      "line": "qgl",
+      "consensus_reached": false,
+      "majority_count": 1
+    },
+    {
+      "line": "qlv",
+      "consensus_reached": false,
+      "majority_count": 1
+    },
+    {
+      "line": "lvlu",
+      "consensus_reached": false,
+      "majority_count": 1
+    },
+    {
+      "line": "cfts",
+      "consensus_reached": false,
+      "majority_count": 1
+    },
+    {
+      "line": "cisvr",
+      "consensus_reached": false,
+      "majority_count": 1
+    },
+    {
+      "line": "qtlv",
+      "consensus_reached": false,
+      "majority_count": 1
+    }
+  ]
+}

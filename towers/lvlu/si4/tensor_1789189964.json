@@ -1,0 +1,38 @@
+{
+  "line": "lvlu",
+  "metrics": {
+    "health": 1.0,
+    "load": 0.02,
+    "throughput": 0.0,
+    "latency": 0.0,
+    "entropy": 1.0,
+    "excitation_level": 0.0
+  },
+  "tensor": {
+    "si0": {
+      "file_count": 2,
+      "last_activity": 1789189964.0
+    },
+    "si1": {
+      "file_count": 0,
+      "last_activity": 0
+    },
+    "si2": {
+      "file_count": 2,
+      "last_activity": 1789189964.0
+    },
+    "si3": {
+      "file_count": 4,
+      "last_activity": 1789189964.0
+    },
+    "si4": {
+      "file_count": 1,
+      "last_activity": 1789189478.0
+    },
+    "si5": {
+      "file_count": 2,
+      "last_activity": 1789189917.0
+    }
+  },
+  "ts": "2026-09-12T05:12:44.916262+00:00"
+}

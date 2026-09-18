@@ -1,0 +1,209 @@
+{
+  "timestamp": "2026-09-14T01:50:20",
+  "dimensions": {
+    "board_diff": {
+      "dimension": "board_diff",
+      "value": 0.0,
+      "threshold": 0.1,
+      "status": "normal",
+      "details": {
+        "previous_hash": "f5d24d728c9e0fb0f690a8f15852d2f81ff6dcf95612a4eed93994449cdd080a",
+        "current_hash": "0a9e1cf6fdc32b2910e649bee391c2532ce6c6c04941a1b1e07bc13bab5ae395",
+        "diff_fields": [],
+        "diff_count": 0,
+        "board_size": 3
+      }
+    },
+    "hub_tower_peak": {
+      "dimension": "hub_tower_peak",
+      "value": 0.996,
+      "threshold": 0.95,
+      "status": "warning",
+      "details": {
+        "hub_health": {
+          "hub": 0.658,
+          "wheel": 0.753,
+          "spine": 0.987,
+          "cauldron": 0.563,
+          "tower": 0.982,
+          "ring": 0.636
+        },
+        "tower_health": {
+          "tower_1": 0.996,
+          "tower_2": 0.689
+        },
+        "spine_health": {
+          "spine_1": 0.983,
+          "spine_2": 0.764
+        },
+        "peak_value": 0.996,
+        "avg_value": 0.8011,
+        "layers_checked": 3,
+        "nodes_checked": 10
+      }
+    },
+    "receipt_peak": {
+      "dimension": "receipt_peak",
+      "value": 8,
+      "threshold": 5,
+      "status": "critical",
+      "details": {
+        "line_receipts": {
+          "ucif2": 1,
+          "lgt": 3,
+          "qfa": 1,
+          "usrm": 8,
+          "vinf": 2,
+          "qgl": 2,
+          "qlv": 7,
+          "lvlu": 1,
+          "cfts": 3,
+          "cisvr": 7,
+          "qtlv": 2
+        },
+        "total_unprocessed": 37,
+        "peak_lines": [
+          "usrm"
+        ],
+        "lines_checked": 11
+      }
+    },
+    "water_level": {
+      "dimension": "water_level",
+      "value": 0.01,
+      "threshold": 0.2,
+      "status": "normal",
+      "details": {
+        "system_a_level": 0.692,
+        "system_b_level": 0.699,
+        "abs_diff": 0.007,
+        "diff_rate": 0.01,
+        "sync_status": "synced"
+      }
+    },
+    "nonce_registry": {
+      "dimension": "nonce_registry",
+      "value": 54,
+      "threshold": 100,
+      "status": "normal",
+      "details": {
+        "nonce_count": 54,
+        "growth_rate_per_hour": 10.0,
+        "duplicate_count": 0,
+        "duplicates": [],
+        "registry_capacity": 10000,
+        "usage_rate": 0.0054
+      }
+    },
+    "thread_peak": {
+      "dimension": "thread_peak",
+      "value": 11,
+      "threshold": 10,
+      "status": "warning",
+      "details": {
+        "space_threads": {
+          "discussion_room": 11,
+          "bulletin_board": 4,
+          "hall": 11,
+          "wild_ask": 6
+        },
+        "total_active": 32,
+        "peak_space": "discussion_room",
+        "spaces_checked": 4
+      }
+    },
+    "qset_peak": {
+      "dimension": "qset_peak",
+      "value": 18,
+      "threshold": 20,
+      "status": "normal",
+      "details": {
+        "line_qset": {
+          "ucif2": 17,
+          "lgt": 16,
+          "qfa": 5,
+          "usrm": 9,
+          "vinf": 5,
+          "qgl": 17,
+          "qlv": 2,
+          "lvlu": 8,
+          "cfts": 18,
+          "cisvr": 0,
+          "qtlv": 9
+        },
+        "total_depth": 106,
+        "congested_lines": [],
+        "lines_checked": 11
+      }
+    },
+    "w12t_state": {
+      "dimension": "w12t_state",
+      "value": 0.0,
+      "threshold": "error",
+      "status": "normal",
+      "details": {
+        "processes": [
+          {
+            "name": "w12t_worker_0",
+            "pid": 1000,
+            "status": "ok",
+            "uptime": 9193
+          },
+          {
+            "name": "w12t_worker_1",
+            "pid": 1001,
+            "status": "ok",
+            "uptime": 2488
+          },
+          {
+            "name": "w12t_worker_2",
+            "pid": 1002,
+            "status": "ok",
+            "uptime": 8043
+          },
+          {
+            "name": "w12t_worker_3",
+            "pid": 1003,
+            "status": "ok",
+            "uptime": 2991
+          }
+        ],
+        "ok_count": 4,
+        "warning_count": 0,
+        "error_count": 0,
+        "total_processes": 4,
+        "error_details": []
+      }
+    }
+  },
+  "anomalies": [
+    {
+      "dimension": "receipt_peak",
+      "severity": "critical",
+      "value": 8,
+      "threshold": 5,
+      "suggestion": "未处理回执 8 个超过阈值 5"
+    },
+    {
+      "dimension": "hub_tower_peak",
+      "severity": "warning",
+      "value": 0.996,
+      "threshold": 0.95,
+      "suggestion": "毂塔健康度峰值 0.996 接近饱和阈值 0.95"
+    },
+    {
+      "dimension": "thread_peak",
+      "severity": "warning",
+      "value": 11,
+      "threshold": 10,
+      "suggestion": "活跃线程 11 个超过阈值 10"
+    }
+  ],
+  "overall_health": 0.82,
+  "recommendations": [
+    "回执堆积，建议检查 consumer 消费速率或增加处理线",
+    "毂塔层负载尖峰，建议水平扩展或降级非关键任务",
+    "讨论室线程过载，建议归档过期线程或限制并发"
+  ],
+  "scan_id": "4452b687"
+}

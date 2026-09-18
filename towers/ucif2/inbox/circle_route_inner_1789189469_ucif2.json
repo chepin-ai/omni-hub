@@ -1,0 +1,9 @@
+{
+  "type": "CIRCLE_ROUTE",
+  "circle_level": "inner",
+  "payload": {
+    "type": "secret",
+    "sensitive_data": "top_secret"
+  },
+  "ts": "2026-09-12T05:04:29.894752+00:00"
+}

@@ -1,0 +1,31 @@
+{
+  "line": "ucif2",
+  "ts": "2026-09-12T04:54:43.891974+00:00",
+  "total_files": 20,
+  "valid_files": 0,
+  "invalid_files": [
+    "towers/ucif2/si0/self_loop_report_1789188874.json",
+    "towers/ucif2/si0/self_loop_report_1789188875.json",
+    "towers/ucif2/si0/self_loop_report_1789188876.json",
+    "towers/ucif2/si0/self_loop_report_1789188877.json",
+    "towers/ucif2/si0/self_loop_report_1789188878.json",
+    "towers/ucif2/si0/self_loop_report_1789188879.json",
+    "towers/ucif2/si0/self_loop_report_1789188880.json",
+    "towers/ucif2/si0/self_loop_report_1789188881.json",
+    "towers/ucif2/si0/self_loop_report_1789188882.json",
+    "towers/ucif2/si0/self_loop_report_1789188883.json",
+    "towers/ucif2/si2/self_loop_1789188874.json",
+    "towers/ucif2/si2/self_loop_1789188875.json",
+    "towers/ucif2/si2/self_loop_1789188876.json",
+    "towers/ucif2/si2/self_loop_1789188877.json",
+    "towers/ucif2/si2/self_loop_1789188878.json",
+    "towers/ucif2/si2/self_loop_1789188879.json",
+    "towers/ucif2/si2/self_loop_1789188880.json",
+    "towers/ucif2/si2/self_loop_1789188881.json",
+    "towers/ucif2/si2/self_loop_1789188882.json",
+    "towers/ucif2/si2/self_loop_1789188883.json"
+  ],
+  "orphan_locks": [],
+  "tmp_cleaned": 0,
+  "integrity_score": 0.0
+}

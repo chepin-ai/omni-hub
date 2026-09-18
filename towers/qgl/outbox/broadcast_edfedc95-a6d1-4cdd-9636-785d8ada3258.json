@@ -1,0 +1,15 @@
+{
+  "origin": "qgl",
+  "ts": "2026-09-12T05:04:59.269044+00:00",
+  "direction": "both",
+  "hops": [
+    {
+      "to": "qlv",
+      "direction": "next"
+    },
+    {
+      "to": "vinf",
+      "direction": "prev"
+    }
+  ]
+}

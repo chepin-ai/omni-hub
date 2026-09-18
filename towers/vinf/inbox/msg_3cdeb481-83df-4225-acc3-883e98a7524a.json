@@ -1,0 +1,32 @@
+{
+  "envelope": {
+    "msg_id": "3cdeb481-83df-4225-acc3-883e98a7524a",
+    "version": "SI2-v1.0",
+    "timestamp": "2026-09-12T05:13:04.996356+00:00",
+    "ttl": 300,
+    "priority": 3,
+    "source": {
+      "line": "usrm",
+      "si_level": 2
+    },
+    "target": {
+      "line": "vinf",
+      "si_level": 2,
+      "broadcast": false
+    }
+  },
+  "payload": {
+    "type": "TASK",
+    "task_id": "00a1e19e-a8eb-4978-9d85-b86f32a893cc",
+    "content": {
+      "type": "cross_loop",
+      "description": "Cross-loop from usrm to vinf"
+    },
+    "dependencies": [],
+    "deadline": ""
+  },
+  "signature": {
+    "hash": "1789a751307c5f898d9ec49451d4037504737452bcf2221e871e1b249e049ccc",
+    "chain_hash": ""
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "MUTUAL_EXCITE",
+  "partner": "qlv",
+  "my_state": {
+    "health": 1.0,
+    "load": 0.08,
+    "throughput": 0.05,
+    "latency": 10.0,
+    "entropy": 0.0471,
+    "excitation_level": 0.0
+  },
+  "ts": "2026-09-12T05:05:05.048207+00:00"
+}

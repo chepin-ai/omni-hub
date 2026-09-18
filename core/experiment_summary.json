@@ -1,0 +1,10 @@
+{
+  "pe_reduction": 0.22090104294965918,
+  "health_improvement": 0.11578716393553823,
+  "emergence_improvement": 0.1610066236267213,
+  "fe_reduction": 0.1299081539993559,
+  "avg_strength": 0.01914821468318148,
+  "avg_confidence": 0.7845633002679269,
+  "score": 6,
+  "total_steps": 100
+}

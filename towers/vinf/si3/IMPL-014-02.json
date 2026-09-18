@@ -1,0 +1,8 @@
+{
+  "action_id": "IMPL-014-02",
+  "description": "更新vinf-gyroid-real-data-v2→v3（含渗流MC）",
+  "status": "QUEUED_FOR_EXECUTION",
+  "queued_at": "2026-09-12T05:11:56Z",
+  "engine": "SI3-LOOP-01",
+  "priority": "HIGH"
+}

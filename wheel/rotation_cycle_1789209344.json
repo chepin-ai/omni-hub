@@ -1,0 +1,51 @@
+{
+  "layer": "wheel",
+  "operation": "rotation_cycle",
+  "timestamp": "2026-09-12T10:35:43.009544+00:00",
+  "lines_rotated": [
+    {
+      "line": "ucif2",
+      "phase_shift": 0.5711986642890533
+    },
+    {
+      "line": "lgt",
+      "phase_shift": 0.5711986642890533
+    },
+    {
+      "line": "qfa",
+      "phase_shift": 0.5711986642890533
+    },
+    {
+      "line": "usrm",
+      "phase_shift": 0.5711986642890533
+    },
+    {
+      "line": "vinf",
+      "phase_shift": 0.5711986642890533
+    },
+    {
+      "line": "qgl",
+      "phase_shift": 0.5711986642890533
+    },
+    {
+      "line": "qlv",
+      "phase_shift": 0.5711986642890533
+    },
+    {
+      "line": "lvlu",
+      "phase_shift": 0.5711986642890533
+    },
+    {
+      "line": "cfts",
+      "phase_shift": 0.5711986642890533
+    },
+    {
+      "line": "cisvr",
+      "phase_shift": 0.5711986642890533
+    },
+    {
+      "line": "qtlv",
+      "phase_shift": 0.5711986642890533
+    }
+  ]
+}

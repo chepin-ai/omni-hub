@@ -1,0 +1,3332 @@
+{
+  "line_id": "lvlu",
+  "version": "v2.0",
+  "total_nodes": 300,
+  "extraction_date": "2026-09-17",
+  "nodes": [
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "UCIF² 系统架构设计 v65 (ARCH-1.0)",
+      "content": "> **核心原则**：单向数据流、单一数据源、自动推导、零硬编码。 > 所有显示值必须从运行时数据推导，禁止任何形式的先验预设。",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/ARCHITECTURE.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0000"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "一、数据流架构（单向硬化）",
+      "content": "``` Layer 0: 原始数据（ISO_DB, TD_DB, RESEARCH_PHASES）     ↓",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/ARCHITECTURE.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lvlu_node_0001"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "硬化规则（硬性规定，违反即build失败）",
+      "content": "| 规则 | 说明 | 违反后果 | |------|------|---------| | **ARCH-1** | Layer 3+组件禁止直接import数据文件 | build失败 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/ARCHITECTURE.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lvlu_node_0002"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "推导链示例",
+      "content": "```typescript // ✓ 正确：显示值从stats推导 function OverviewSection() {",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/ARCHITECTURE.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lvlu_node_0003"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "二、四引擎架构",
+      "content": "### 2.1 EmergentScanner（自主发现引擎）  ```",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/ARCHITECTURE.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "lvlu_node_0004"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "2.1 EmergentScanner（自主发现引擎）",
+      "content": "``` 输入: 源代码AST + 运行时stats + 历史扫描结果 输出: CheckItem[]（发现的问题清单）",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/ARCHITECTURE.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "lvlu_node_0005"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "2.2 AutoValidator（自动验证流水线）",
+      "content": "``` 阶段1: tsc -b              (类型检查) 阶段2: detectHardcoded.ts  (ZVP硬编码扫描)",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/ARCHITECTURE.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lvlu_node_0006"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "2.3 SyncModifier（同步修改引擎）",
+      "content": "``` 自动修复能力:   - default值非零 → 归零 + 加注释",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/ARCHITECTURE.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0007"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "2.4 BuildVerifier（构建验证系统）",
+      "content": "``` 验证维度:   - TypeScript: 0 errors",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/ARCHITECTURE.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "lvlu_node_0008"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "三、组件分类与职责",
+      "content": "### 3.1 引擎层（/src/engine/）  | 引擎 | 职责 | 输出 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/ARCHITECTURE.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0009"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "3.1 引擎层（/src/engine/）",
+      "content": "| 引擎 | 职责 | 输出 | |------|------|------| | CoreEngine.ts | 数据计算/聚合/分类 | CoreStats |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/ARCHITECTURE.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0010"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "3.2 上下文层（/src/context/）",
+      "content": "| 上下文 | 职责 | 规则 | |--------|------|------| | DataContext.tsx | 统一数据分发 | 默认值必须为零 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/ARCHITECTURE.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lvlu_node_0011"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "3.3 组件层（/src/components/）",
+      "content": "| 组件 | 职责 | 数据源 | |------|------|--------| | Dashboard | 总体概览 | useDataHub().stats |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/ARCHITECTURE.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lvlu_node_0012"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "3.4 数据层（/src/data/）",
+      "content": "| 数据文件 | 职责 | 禁止直接import到组件层 | |----------|------|----------------------| | isomorphismDB.ts | ISO原始数据 | ✓ |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/ARCHITECTURE.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0013"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "四、变更传播机制",
+      "content": "### 4.1 数据变更时  ```",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/ARCHITECTURE.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0014"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "4.1 数据变更时",
+      "content": "``` ISO_DB 新增条目     ↓",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/ARCHITECTURE.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0015"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "4.2 代码变更时",
+      "content": "``` git commit     ↓",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/ARCHITECTURE.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0016"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "五、航天级硬化检查清单",
+      "content": "### 架构合规检查（每次代码变更）  ```markdown",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/ARCHITECTURE.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0017"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "架构合规检查（每次代码变更）",
+      "content": "```markdown ### Architecture Compliance Audit - [ ] 组件层没有直接import数据文件（ARCH-1）",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/ARCHITECTURE.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0018"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "Architecture Compliance Audit",
+      "content": "- [ ] 组件层没有直接import数据文件（ARCH-1） - [ ] 组件层没有非零字面量作为显示值（ARCH-2） - [ ] 所有派生值在CoreEngine/DataContext中计算（ARCH-3） - [ ] 组件没有独立重新计算统计数据（ARCH-4）",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/ARCHITECTURE.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lvlu_node_0019"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "UCIF² OmegaNavigator — 全局审计标准 v66",
+      "content": "> **职责边界**：本文件只保存规则/准则（无具体数值）。 > 数据基线（运行时值）在AUDIT.md中维护。 > 配色/交互/显示细则在PROTOCOL.md中维护。",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/CRITERIA.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lvlu_node_0020"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "ZVP（全局归零制度）",
+      "content": "→ 详见ZVP.md  **硬性规定**：所有Context/Hook/Store的default/fallback值必须为零（0/空串/空数组/空对象）。",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/CRITERIA.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "lvlu_node_0021"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "术语区分（r/d/v 三元组）",
+      "content": "| 概念 | 标记 | 示例 | 含义 | |------|------|------|------| | **对话轮次** | **r** | r211 | 用户与系统的对话序号 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/CRITERIA.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lvlu_node_0022"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "一、数据准确性Criteria（最高优先级）",
+      "content": "### 1.1 数据基线规则（运行时验证为唯一可信来源）  **核心规则**：",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/CRITERIA.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0023"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "1.1 数据基线规则（运行时验证为唯一可信来源）",
+      "content": "**核心规则**： - [ ] 所有统计数字必须从 `coreEngine.stats` 运行时读取，禁止硬编码 - [ ] 禁止组件直接 `import { ISO_DB }` 做独立计算（CoreEngine已计算过的）",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/CRITERIA.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lvlu_node_0024"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "1.2 数据源排序防御（违反记录：AUD-003/v63）",
+      "content": "**规则**： - [ ] 所有阶段数组在显示层强制排序（`verNum`数值排序，非字符串比较） - [ ] 新增阶段时必须插入正确位置（非push到末尾）",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/CRITERIA.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0025"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "1.3 数据基线维护职责",
+      "content": "- AUDIT.md保存运行时验证值（每轮更新） - CRITERIA.md只保存验证规则（不重复数值） - 两者不得重复/冲突",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/CRITERIA.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "lvlu_node_0026"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "1.4 数学同构准入标准（v66新增，违反记录：AUD-013）",
+      "content": "**核心规则**： - [ ] ISO_DB只保存**数学对象之间的同构关系** - [ ] 系统元数据（TD_DB设计/Daemon架构/时间戳/分类系统）不得进入ISO_DB",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/CRITERIA.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0027"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "二、架构设计Criteria",
+      "content": "### 2.1 数据流架构（单一来源原则）  ```",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/CRITERIA.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "lvlu_node_0028"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "2.1 数据流架构（单一来源原则）",
+      "content": "``` 数据文件（ISO_DB/TD_DB/RESEARCH_PHASES）     ↓",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/CRITERIA.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lvlu_node_0029"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "2.2 组件生命周期",
+      "content": "- [ ] 删除组件前确认App.tsx无引用 + 无其他组件import - [ ] 恢复组件时验证TypeScript编译通过 - [ ] 组件重大修改后全量构建验证",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/CRITERIA.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lvlu_node_0030"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "三、杜绝硬编码Criteria（违反记录：AUD-001~011）",
+      "content": "### 3.1 遍历完整性规则（违反：AUD-011/v65, AUD-004/v63）  - [ ] 执行包含\"遍历\"、\"所有\"的指令 → 遍历全部，不能中途退出/中断",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/CRITERIA.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0031"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "3.1 遍历完整性规则（违反：AUD-011/v65, AUD-004/v63）",
+      "content": "- [ ] 执行包含\"遍历\"、\"所有\"的指令 → 遍历全部，不能中途退出/中断 - [ ] 执行包含\"逐步\"、\"逐条\"的指令 → 遍历每一细节，不能简单概括 - [ ] 未经遍历确认的数据不得作为基准（先验预设的变种）",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/CRITERIA.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0032"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "3.2 截断禁止规则（违反：AUD-009/v63）",
+      "content": "- [ ] 禁止人为截断数据（如Top50只显示50/593子域） - [ ] 处理过程/界面组件/显示元件必须检验包含全部数据基线涵盖范围 - [ ] 涵盖全貌、全周期、所有领域、全关联、底层细节、边缘&现状",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/CRITERIA.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "lvlu_node_0033"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "3.3 武断数据源禁止规则（违反：AUD-007/v63, AUD-011/v65）",
+      "content": "- [ ] 禁止未经Balance验证即武断认定采纳某个数据源 - [ ] Balance-sheet操作发现冲突 → 搜索各数据库&遍历溯源 → 纠正错误 - [ ] 多源balance + 重复溯源/纠错 → 直至取得共识",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/CRITERIA.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0034"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "3.4 最小修改规则",
+      "content": "- [ ] 履行最小修改，杜绝没有明确指示的多余动作 - [ ] 禁止随意删改，尤其是违背明确指令的删改 - [ ] 修改前先在AuditDB检索是否已记录",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/CRITERIA.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0035"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "四、术语统一Criteria",
+      "content": "### 4.1 术语规范  | 术语 | 含义 | 代码中 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/CRITERIA.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0036"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "4.1 术语规范",
+      "content": "| 术语 | 含义 | 代码中 | |------|------|-------| | **分支** | 数学6大总纲 | `BRANCH`（NT/AG/TOP/REP/AN/LC）|",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/CRITERIA.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "lvlu_node_0037"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "4.2 同构关系边标准组合（8类）",
+      "content": "→ 详见PROTOCOL.md §1.2  ```typescript",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/CRITERIA.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0038"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "五、持久审计机制Criteria",
+      "content": "### 5.1 跨Session审计文件职责  | 文件 | 职责 | 内容 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/CRITERIA.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0039"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "5.1 跨Session审计文件职责",
+      "content": "| 文件 | 职责 | 内容 | |------|------|------| | `AUDIT.md` | 数据基线+本轮breakdown+债务追踪 | 运行时值（每轮更新） |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/CRITERIA.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0040"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "5.2 动态更新联动",
+      "content": "- [ ] 每轮对话或Daemon触发 → 联动更新所有相关数据库和md文件 - [ ] 每轮任务执行前 → 先读取AUDIT.md - [ ] 引用CRITERIA.md时 → 同步完成自身更新/进化",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/CRITERIA.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0041"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "5.3 防御性编程Checklist（基于AuditDB API）",
+      "content": "→ 详见AUDIT.md §查错/纠错流程  ---",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/CRITERIA.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lvlu_node_0042"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "六、历史问题档案（含违反CRITERIA细则）",
+      "content": "| # | 问题 | 违反CRITERIA | 根因 | 修复 | |---|------|-------------|------|------| | AUD-001 | 网络图四角堆积 | §3.4（无数值验证） | 斥力8000/中心力0.02比379倍 | kR=40,kC=0.4 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/CRITERIA.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0043"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "七、构建验证Criteria",
+      "content": "```bash # 1. 运行时数据验证 cd /mnt/agents/output/app && npx tsx -e \"",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/CRITERIA.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0044"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "1. 运行时数据验证",
+      "content": "cd /mnt/agents/output/app && npx tsx -e \"   import { coreEngine } from './src/engine/CoreEngine';   coreEngine.refresh();   const s = coreEngine.stats;",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/CRITERIA.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "lvlu_node_0045"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "2. 版本排序验证（0逆序）",
+      "content": "cd /mnt/agents/output/app && npx tsx -e \"   import { RESEARCH_PHASES } from './src/data/researchHistoryDB';   import { verNum } from './src/engine/CoreEngine';   let inv = 0;",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/CRITERIA.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "lvlu_node_0046"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "3. TypeScript编译（0错误）",
+      "content": "cd /mnt/agents/output/app && npm run build ```  ---",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/CRITERIA.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0047"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-396",
+      "content": "lassification | 分类系统→非数学 | 迁移meta-002 |\n| iso-395 | TD Coupling Network | 耦合分析→非数学 | 迁移meta-003 |\n| iso-396 | Update Daemon Architecture | 软件架构→非数学 | 迁移meta-004 |\n| iso-397 | Daemon Trigger Rules x6 | 触发规则→非数学 | 迁移meta-005 |\n| iso-398 | Global Timestamp System | 时间戳系统→非数学 | 迁移meta-006 |\n| iso-399 | ",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/CRITERIA.md",
+      "dependencies": [
+        "iso-396",
+        "iso-397",
+        "iso-395",
+        "iso-398",
+        "iso-399"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0048"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-397",
+      "content": "etwork | 耦合分析→非数学 | 迁移meta-003 |\n| iso-396 | Update Daemon Architecture | 软件架构→非数学 | 迁移meta-004 |\n| iso-397 | Daemon Trigger Rules x6 | 触发规则→非数学 | 迁移meta-005 |\n| iso-398 | Global Timestamp System | 时间戳系统→非数学 | 迁移meta-006 |\n| iso-399 | Historical Framework Rescan | 历史重扫→非数学 | 迁移meta-007 |\n| iso-400 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/CRITERIA.md",
+      "dependencies": [
+        "iso-396",
+        "iso-397",
+        "iso-398",
+        "iso-399",
+        "iso-400"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0049"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-395",
+      "content": "ase System | 数据库设计→非数学 | 迁移meta-001 |\n| iso-394 | TD-1~6 Classification | 分类系统→非数学 | 迁移meta-002 |\n| iso-395 | TD Coupling Network | 耦合分析→非数学 | 迁移meta-003 |\n| iso-396 | Update Daemon Architecture | 软件架构→非数学 | 迁移meta-004 |\n| iso-397 | Daemon Trigger Rules x6 | 触发规则→非数学 | 迁移meta-005 |\n| iso-398 | Globa",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/CRITERIA.md",
+      "dependencies": [
+        "iso-396",
+        "iso-397",
+        "iso-395",
+        "iso-398",
+        "iso-394"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0050"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-398",
+      "content": "hitecture | 软件架构→非数学 | 迁移meta-004 |\n| iso-397 | Daemon Trigger Rules x6 | 触发规则→非数学 | 迁移meta-005 |\n| iso-398 | Global Timestamp System | 时间戳系统→非数学 | 迁移meta-006 |\n| iso-399 | Historical Framework Rescan | 历史重扫→非数学 | 迁移meta-007 |\n| iso-400 | Network Reconstruction v62 | 重构操作→非数学 | 迁移meta-008 |\n\n---\n\n##",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/CRITERIA.md",
+      "dependencies": [
+        "iso-399",
+        "iso-397",
+        "iso-398",
+        "iso-400"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0051"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-394",
+      "content": "型 | 处理 |\n|----|------|---------|------|\n| iso-393 | TD Database System | 数据库设计→非数学 | 迁移meta-001 |\n| iso-394 | TD-1~6 Classification | 分类系统→非数学 | 迁移meta-002 |\n| iso-395 | TD Coupling Network | 耦合分析→非数学 | 迁移meta-003 |\n| iso-396 | Update Daemon Architecture | 软件架构→非数学 | 迁移meta-004 |\n| iso-397 | Daemon ",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/CRITERIA.md",
+      "dependencies": [
+        "iso-396",
+        "iso-397",
+        "iso-395",
+        "iso-394",
+        "iso-393"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0052"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-399",
+      "content": "Rules x6 | 触发规则→非数学 | 迁移meta-005 |\n| iso-398 | Global Timestamp System | 时间戳系统→非数学 | 迁移meta-006 |\n| iso-399 | Historical Framework Rescan | 历史重扫→非数学 | 迁移meta-007 |\n| iso-400 | Network Reconstruction v62 | 重构操作→非数学 | 迁移meta-008 |\n\n---\n\n## 二、架构设计Criteria\n\n### 2.1 数据流架构（单一来源原则）\n\n```\n数据文件（ISO_DB/TD_DB/R",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/CRITERIA.md",
+      "dependencies": [
+        "iso-398",
+        "iso-399",
+        "iso-400"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0053"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-393",
+      "content": "PE_COMBINATION.includes(t);\n```\n\n**历史违规**：\n| ID | 名称 | 违规类型 | 处理 |\n|----|------|---------|------|\n| iso-393 | TD Database System | 数据库设计→非数学 | 迁移meta-001 |\n| iso-394 | TD-1~6 Classification | 分类系统→非数学 | 迁移meta-002 |\n| iso-395 | TD Coupling Network | 耦合分析→非数学 | 迁移meta-003 |\n| iso-396 | Update Daemon ",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/CRITERIA.md",
+      "dependencies": [
+        "iso-396",
+        "iso-393",
+        "iso-395",
+        "iso-394"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0054"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-400",
+      "content": "stem | 时间戳系统→非数学 | 迁移meta-006 |\n| iso-399 | Historical Framework Rescan | 历史重扫→非数学 | 迁移meta-007 |\n| iso-400 | Network Reconstruction v62 | 重构操作→非数学 | 迁移meta-008 |\n\n---\n\n## 二、架构设计Criteria\n\n### 2.1 数据流架构（单一来源原则）\n\n```\n数据文件（ISO_DB/TD_DB/RESEARCH_PHASES）\n    ↓\nCoreEngine（统一计算/聚合/统计）\n    ↓\nDataContext（Rea",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/CRITERIA.md",
+      "dependencies": [
+        "iso-399",
+        "iso-400"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0055"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "UCIF² 系统演化制度 v65 (EVOLUTION-1.0)",
+      "content": "> **核心原则**：制度不是静态文档，而是自我进化的活体。 > 本制度规定：如何发现制度缺陷 → 如何修正制度 → 如何验证修正 → 如何防止回归。 > 参考：中国航天技术归零五标准 + 涌现系统理论。",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/EVOLUTION.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0056"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "一、经验模式库（从v65归零提取）",
+      "content": "### 模式P1：硬编码漂移（Hardcode Drift）  **现象**：组件最初用硬编码演示 → 后来接入数据源 → 旧硬编码被遗忘 → 显示数据与真实数据不一致。",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/EVOLUTION.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lvlu_node_0057"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "模式P1：硬编码漂移（Hardcode Drift）",
+      "content": "**现象**：组件最初用硬编码演示 → 后来接入数据源 → 旧硬编码被遗忘 → 显示数据与真实数据不一致。  **检测特征**：",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/EVOLUTION.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0058"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "模式P2：默认值伪装（Default Camouflage）",
+      "content": "**现象**：Context/Hook的默认值设置成\"合理\"的非零值 → Provider初始化前用户看到正确数字 → 问题被隐藏。  **检测特征**：",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/EVOLUTION.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lvlu_node_0059"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "模式P3：审计盲区（Audit Blind Spot）",
+      "content": "**现象**：审计Checklist关注\"功能是否正确\" → 不关注\"数据来源是否正确\" → 硬编码数据被视为正确。  **检测特征**：",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/EVOLUTION.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lvlu_node_0060"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "模式P4：耦合常数（Coupling Constant）",
+      "content": "**现象**：两个本应从同一源计算的值被独立硬编码 → 修改一处后另一处不匹配。  **检测特征**：",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/EVOLUTION.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0061"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "模式P5：先验预设（A Priori Assumption）",
+      "content": "**现象**：开发者假设数据范围/结构不变 → 硬编码依赖这些假设 → 数据演化后显示错误。  **检测特征**：",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/EVOLUTION.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "lvlu_node_0062"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "二、涌现检查清单（Emergent Checklist）",
+      "content": "> 不是静态清单，而是每次运行 EmergentScanner 后自动生成的动态清单。  ### 检查项（自动从模式库生成）",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/EVOLUTION.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0063"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "检查项（自动从模式库生成）",
+      "content": "```typescript // 每轮对话或Daemon tick时自动执行 const checklist = emergentScanner.generateChecklist({",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/EVOLUTION.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lvlu_node_0064"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "检查项状态流转",
+      "content": "``` 发现 → [自动修复?] → 是 → SyncModifier修复 → 验证 → 关闭                 ↓",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/EVOLUTION.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0065"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "三、四引擎协作架构",
+      "content": "``` ┌─────────────────────────────────────────────────────────┐ │                    EmergentScanner                        │",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/EVOLUTION.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0066"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "四、制度演化规则",
+      "content": "### 规则E1：模式提取  每次发现问题 → 分析根因 → 提取为模式 → 加入模式库 → EmergentScanner自动检测",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/EVOLUTION.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "lvlu_node_0067"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "规则E1：模式提取",
+      "content": "每次发现问题 → 分析根因 → 提取为模式 → 加入模式库 → EmergentScanner自动检测  ### 规则E2：工具增强",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/EVOLUTION.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0068"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "规则E2：工具增强",
+      "content": "每次人工修复 → 评估是否可自动化 → 增强SyncModifier → 下次自动修复  ### 规则E3：清单进化",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/EVOLUTION.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lvlu_node_0069"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "规则E3：清单进化",
+      "content": "每次审计 → 检查是否有遗漏 → 更新涌现检查清单 → 下次自动检查  ### 规则E4：架构硬化",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/EVOLUTION.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0070"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "规则E4：架构硬化",
+      "content": "每次数据流变更 → 评估架构完整性 → 更新ARCHITECTURE.md → 强制执行  ---",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/EVOLUTION.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "lvlu_node_0071"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "五、航天级归零检查点（每轮必执行）",
+      "content": "```markdown ### Emergent Zeroing Check (每轮对话/Daemon tick) - [ ] 运行 `npx tsx scripts/EmergentScanner.ts`",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/EVOLUTION.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0072"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "Emergent Zeroing Check (每轮对话/Daemon tick)",
+      "content": "- [ ] 运行 `npx tsx scripts/EmergentScanner.ts` - [ ] 检查新增硬编码（增量检测） - [ ] 检查数据推导链一致性 - [ ] 检查模式匹配结果",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/EVOLUTION.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0073"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "UCIF² 统一控制策略 v65 (POLICY-1.0)",
+      "content": "> **核心原则**：系统化越成熟，控制文件越精简。 > 本文件只保留**不可形式化的原则**（需人工判断的5条）。 > 所有可自动化的规则已移至代码/工具——运行 `npm run validate` 自动验证。",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/POLICY.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0074"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "一、不可形式化的原则（5条）",
+      "content": "### P1 术语区分 r/d/v  | 概念 | 标记 | 示例 | 含义 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/POLICY.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lvlu_node_0075"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "P1 术语区分 r/d/v",
+      "content": "| 概念 | 标记 | 示例 | 含义 | |------|------|------|------| | **对话轮次** | **r** | r211 | 用户与系统的对话序号 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/POLICY.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "lvlu_node_0076"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "P2 职责边界",
+      "content": "| 文件 | 职责 | 内容 | |------|------|------| | `src/engine/` | 可执行规则 | MetricsRegistry, ComplianceEngine, CoreEngine |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/POLICY.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0077"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "P3 历史问题档案",
+      "content": "| # | 问题 | 根因 | 修复 | |---|------|------|------| | AUD-001~011 | 参见CRITERIA.md §六 | — | — |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/POLICY.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "lvlu_node_0078"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "P4 设计理念",
+      "content": "1. **问题不可能发生** > 问题被发现后修复 2. **工具自发发现** > 人眼逐行检查 3. **运行时自动验证** > 文档约定",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/POLICY.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0079"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "P5 豁免流程",
+      "content": "非零默认值需： 1. 代码中写 `// ZVP-EXEMPT:` 注释 2. 获得审计员批准",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/POLICY.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "lvlu_node_0080"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "二、可自动化的规则（已移至代码）",
+      "content": "运行 `npm run validate` 自动验证全部规则：  ```",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/POLICY.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0081"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "自动化规则清单（31条 → 0条手动）",
+      "content": "| 规则 | 自动化工具 | 状态 | |------|-----------|------| | 禁止硬编码统计数字 | detectHardcoded.ts | ✅ |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/POLICY.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "lvlu_node_0082"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "三、涌现原则（从架构中自然涌现的属性）",
+      "content": "> 这些原则不是让人遵守的规则，而是从架构中**自然涌现**的属性。 > 做到即自然，违反即不可能。",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/POLICY.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0083"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "UCIF² 界面一致性协议 v66",
+      "content": "> 职责边界：本文件只保存元件定义和界面协议细则（配色/交互/显示）。 > 不包含数据基线（AUDIT.md维护运行时值）。 > 不包含规则准则（CRITERIA.md维护审计标准）。",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/PROTOCOL.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0084"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "术语区分（r/d/v 三元组）",
+      "content": "| 概念 | 标记 | 示例 | 含义 | 代码中 | |------|------|------|------|--------| | **对话轮次** | **r** | r211 | 用户与系统的对话序号 | `round` |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/PROTOCOL.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "lvlu_node_0085"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "一、术语规范",
+      "content": "### 1.1 基础术语  | 术语 | 含义 | 代码标识 | 示例 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/PROTOCOL.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0086"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "1.1 基础术语",
+      "content": "| 术语 | 含义 | 代码标识 | 示例 | |------|------|---------|------| | **分支** | 数学6大总纲 | `BRANCH` | NT/AG/TOP/REP/AN/LC |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/PROTOCOL.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "lvlu_node_0087"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "1.2 同构关系边标准组合（8类）",
+      "content": "所有同构关系的「边」统一为以下8类标准组合，禁止自行发明新类别：  ```typescript",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/PROTOCOL.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0088"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "二、元件完整定义",
+      "content": "### 2.1 元件分类总表（穷举，v65更新）  | 类别 | 元件 | 代码标识 `kind` | 说明 | 所在组件 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/PROTOCOL.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lvlu_node_0089"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "2.1 元件分类总表（穷举，v65更新）",
+      "content": "| 类别 | 元件 | 代码标识 `kind` | 说明 | 所在组件 | |------|------|----------------|------|---------| | **容器** | 窗口 | `window` | 独立浮动窗体 | Modal/Dialog |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/PROTOCOL.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0090"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "2.2 元件统一规则",
+      "content": "- [ ] 同类组件的同类元件：位置/布局/配色/类型/数量必须统一 - [ ] 同类元件的配色：遵循§2配色协议 - [ ] 同类元件的响应：hover/active/disabled状态统一",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/PROTOCOL.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0091"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "三、配色协议",
+      "content": "### 3.1 数学6大分支色  ```typescript",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/PROTOCOL.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0092"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "3.1 数学6大分支色",
+      "content": "```typescript const BRANCH_COLORS = {   NT:  '#f59e0b', // 琥珀",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/PROTOCOL.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0093"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "3.2 同构类型色（8类标准组合）",
+      "content": "```typescript const ISO_TYPE_COLORS = {   equivalence:    '#10b981', // 翠绿",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/PROTOCOL.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0094"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "3.3 状态色",
+      "content": "```typescript const STATUS_COLORS = {   completed:      { bg: '#065f46', text: '#10b981' },",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/PROTOCOL.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0095"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "3.4 界面主题",
+      "content": "- **全局背景**：暗色主题（bg-slate-950） - **统计卡片**：暗色背景 + 分支色文字 - **标签页**：激活=暗色背景+分支色边框，未激活=暗色背景+灰色文字",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/PROTOCOL.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "lvlu_node_0096"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "四、数字显示协议",
+      "content": "### 4.1 显示规则  - 所有数字必须从 `coreEngine.stats` 动态读取（禁止硬编码）",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/PROTOCOL.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0097"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "4.1 显示规则",
+      "content": "- 所有数字必须从 `coreEngine.stats` 动态读取（禁止硬编码） - 统计数字格式：`<值><标签>`（粗体，分支色） - 所有数据更新必须显示时间戳",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/PROTOCOL.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0098"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "4.2 时间戳",
+      "content": "```typescript {stats.timestamp ? new Date(stats.timestamp).toLocaleTimeString() : ''} ```",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/PROTOCOL.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lvlu_node_0099"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "五、符号协议",
+      "content": "### 5.1 节点符号（细胞复形维度）  | 维度 | 形状 | 大小 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/PROTOCOL.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0100"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "5.1 节点符号（细胞复形维度）",
+      "content": "| 维度 | 形状 | 大小 | |------|------|------| | 0-细胞(概念) | 圆形 | r=8+count*0.5 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/PROTOCOL.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0101"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "5.2 边符号（同构关系8类）",
+      "content": "| 类型 | 线型 | 粗细 | |------|------|------| | 同构关系 | 实线 | 1.5px |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/PROTOCOL.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0102"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "六、交互协议",
+      "content": "### 6.1 选中/取消选中  - [ ] 点击节点 → 选中（高亮+详情面板）",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/PROTOCOL.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0103"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "6.1 选中/取消选中",
+      "content": "- [ ] 点击节点 → 选中（高亮+详情面板） - [ ] 点击已选中节点 → 取消 - [ ] 点击空白区域 → 取消",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/PROTOCOL.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lvlu_node_0104"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "6.2 Hover",
+      "content": "- [ ] 节点放大1.2-1.3倍 - [ ] 显示tooltip（名称+统计） - [ ] 关联边高亮，非关联淡化",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/PROTOCOL.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lvlu_node_0105"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "6.3 拖拽",
+      "content": "- [ ] mousedown → 开始拖拽 - [ ] mousemove → 更新位置（fx/fy固定） - [ ] mouseup → 释放固定（fx/fy=undefined）",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/PROTOCOL.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0106"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "6.4 视图切换",
+      "content": "- [ ] 按钮组切换（网络/矩阵/等价聚类） - [ ] 激活状态：暗色背景+白色文字 - [ ] 非激活：暗色背景+灰色文字",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/PROTOCOL.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lvlu_node_0107"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "七、显示协议",
+      "content": "### 7.1 全貌原则  - [ ] **不人为截断**：全部593子域必须显示（高频大节点+中频中节点+低频小节点r=3）",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/PROTOCOL.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0108"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "7.1 全貌原则",
+      "content": "- [ ] **不人为截断**：全部593子域必须显示（高频大节点+中频中节点+低频小节点r=3） - [ ] **涵盖全貌**：所有ISO/TD/阶段/里程碑/外部范式 - [ ] **全周期**：v0→v63完整时间线",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/PROTOCOL.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0109"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "7.2 防御性排序",
+      "content": "- [ ] 所有显示数组必须 `.sort((a,b) => verNum(a.version)-verNum(b.version))` - [ ] 新增数据时验证单调性（0逆序） - [ ] 版本排序用数值比较，非字符串比较",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/PROTOCOL.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lvlu_node_0110"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "7.3 Balance-sheet验算",
+      "content": "``` ISO总数 = 等价类 + 桥接 + 对偶 + 蕴含 + 特化 + 包含 + 推广 - 重复计 状态: ISO总数 = 已证 + 猜想 + 开放",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/PROTOCOL.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0111"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "八、全局统一规则",
+      "content": "### 8.1 同类组件统一  - [ ] 布局统一：同类组件采用相同布局结构",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/PROTOCOL.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lvlu_node_0112"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "8.1 同类组件统一",
+      "content": "- [ ] 布局统一：同类组件采用相同布局结构 - [ ] 配色统一：同类元件使用相同配色方案 - [ ] 类型统一：同类组件包含相同类型的元件",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/PROTOCOL.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0113"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "8.2 版本标记",
+      "content": "- 对话轮次：V0 ~ V211+（大写V开头） - 代码版本：v0 ~ v63+（小写v开头） - 控制文档版本：v65（当前）",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/PROTOCOL.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0114"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "React + TypeScript + Vite",
+      "content": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.  Currently, two official plugins are available:",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/README.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lvlu_node_0115"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "React Compiler",
+      "content": "The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).  ## Expanding the ESLint configuration",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/README.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lvlu_node_0116"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "Expanding the ESLint configuration",
+      "content": "If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:  ```js",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/README.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "lvlu_node_0117"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "航天技术归零报告 v65",
+      "content": "> 参照中国航天技术归零五标准：定位准确、机理清楚、问题复现、措施有效、举一反三  ---",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/ZEROING_REPORT_v65.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0118"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "归零项：硬编码问题（AU-011扩展）",
+      "content": "### 一、定位准确  | # | 文件 | 位置 | 硬编码内容 | 严重程度 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/ZEROING_REPORT_v65.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0119"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "一、定位准确",
+      "content": "| # | 文件 | 位置 | 硬编码内容 | 严重程度 | |---|------|------|-----------|---------| | 1 | V48Dashboard.tsx | L16-22 | `iso.total:240`, `axioms.total:118`, `theorems:1350`, `hLevels:{h0:42...}`, `lean.modules:39`, `communities:6`, `smallWorld:{L:2.8,C:0.65,Q:0.72}` | **严重** |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/ZEROING_REPORT_v65.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0120"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "二、机理清楚（5Why）",
+      "content": "**现象**：多个组件中存在大量硬编码数字  - **Why 1**：开发者为什么写硬编码？ → 这些组件最初作为静态演示页面创建，当时没有DataContext/CoreEngine",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/ZEROING_REPORT_v65.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0121"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "三、问题复现",
+      "content": "复现方法：运行 `npx tsx scripts/detectHardcoded.ts --dirs=src/components`  预期结果：扫描通过（零违规）",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/ZEROING_REPORT_v65.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "lvlu_node_0122"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "四、措施有效",
+      "content": "修复措施： 1. V48Dashboard.tsx：接入DataContext，所有统计从coreEngine.stats动态计算 2. MoonshineCrystal.tsx：版本标签从RESEARCH_PHASES动态生成",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/ZEROING_REPORT_v65.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0123"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "五、举一反三",
+      "content": "从\"硬编码\"问题扩展到以下缺陷模式： 1. **静态展示组件陷阱**：以`Dashboard`/`Overview`命名的组件最易成为硬编码重灾区 2. **版本号陷阱**：组件中硬编码版本号（v18, v19等）在版本演进时必然过时",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/ZEROING_REPORT_v65.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0124"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "航天级归零检查点（新建）",
+      "content": "### 检查点1：组件创建时 ``` □ 该组件是否需要展示动态数据？→ 必须接入DataContext",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/ZEROING_REPORT_v65.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "lvlu_node_0125"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "检查点1：组件创建时",
+      "content": "``` □ 该组件是否需要展示动态数据？→ 必须接入DataContext □ 组件中是否有数字字面量？→ 必须来自数据源 □ 组件中是否有版本号？→ 必须从RESEARCH_PHASES读取",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/ZEROING_REPORT_v65.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0126"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "检查点2：Code Review时",
+      "content": "``` □ 运行 npx tsx scripts/detectHardcoded.ts □ 检查所有新增/修改的文件 □ 确认零违规",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/ZEROING_REPORT_v65.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0127"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "检查点3：部署前",
+      "content": "``` □ 运行 npx tsx scripts/detectHardcoded.ts --dirs=src/components,src/context □ 确认零违规 → 否则阻断部署 □ 更新ZEROING_REPORT",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/ZEROING_REPORT_v65.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0128"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "检查点4：每轮对话开始时",
+      "content": "``` □ 读取ZEROING_REPORT □ 审计未完成的归零项 □ 新问题立即登记",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/ZEROING_REPORT_v65.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "lvlu_node_0129"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "Leech 格随机投影 → 持续同调计算 → H₁ 寿命提取",
+      "content": "## 1. 算法数学基础  ### 1.1 Leech 格 Λ 的结构参数",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/LEECH_PH_ALGORITHM.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "lvlu_node_0130"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "1. 算法数学基础",
+      "content": "### 1.1 Leech 格 Λ 的结构参数  - **维度**：n = 24",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/LEECH_PH_ALGORITHM.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0131"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "1.1 Leech 格 Λ 的结构参数",
+      "content": "- **维度**：n = 24 - **最短向量**：|Λ_min| = 196,560 个，长度平方 ⟨v, v⟩ = 4 - **坐标表示**：基于 Golay 码 𝒢₂₄ 的显式构造：",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/LEECH_PH_ALGORITHM.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0132"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "1.2 随机投影映射",
+      "content": "从高斯正交系综（GOE）采样投影矩阵 P: ℝ²⁴ → ℝ³：  $$P_{ij} \\sim \\mathcal{N}(0, 1/24), \\quad P^T P \\approx I_3$$",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/LEECH_PH_ALGORITHM.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0133"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "1.3 持续同调流程",
+      "content": "1. **点云**：X = { P(v) | v ∈ Λ_sample } ⊂ ℝ³，|X| = N ~ 10⁴ 2. **Vietoris-Rips 复形**：VR_ε(X) = {σ ⊂ X | diam(σ) ≤ 2ε} 3. **Barcode 提取**：β₁(ε) = dim H₁(VR_ε(X))",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/LEECH_PH_ALGORITHM.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0134"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "2. 完整 Python 实现",
+      "content": "```python import numpy as np import scipy.linalg as la",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/LEECH_PH_ALGORITHM.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0135"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "########## 3. 主执行流程 ##########",
+      "content": "def run_mhp_simulation():     \"\"\"     MHP 框架模拟主流程：",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/LEECH_PH_ALGORITHM.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0136"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "3. 算法复杂度优化",
+      "content": "### 3.1 计算瓶颈分析  | 步骤 | 复杂度 | 优化策略 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/LEECH_PH_ALGORITHM.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0137"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "3.1 计算瓶颈分析",
+      "content": "| 步骤 | 复杂度 | 优化策略 | |------|--------|----------| | Leech 格生成 | O(196560) | 预计算二进制文件 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/LEECH_PH_ALGORITHM.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0138"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "3.2 快速近似算法",
+      "content": "```python def fast_h1_approximation(self, points: np.ndarray) -> float:     \"\"\"",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/LEECH_PH_ALGORITHM.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0139"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "4. 与 CDG-2 观测的数值对应",
+      "content": "### 4.1 尺度转换关系  模拟值 τ_sim ≈ 0.01523（无量纲）与观测值 τ_obs = 65.8 pc 的转换：",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/LEECH_PH_ALGORITHM.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0140"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "4.1 尺度转换关系",
+      "content": "模拟值 τ_sim ≈ 0.01523（无量纲）与观测值 τ_obs = 65.8 pc 的转换：  $$\\tau_{obs} = \\tau_{sim} \\times \\frac{L_0}{\\lambda_{unit}}$$",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/LEECH_PH_ALGORITHM.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lvlu_node_0141"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "4.2 Marcenko-Pastur 常数提取",
+      "content": "代码中计算的 K 值应与理论值 2987.2 一致，验证： - 随机投影确实产生 β = 3/24 的 MP 分布 - 高阶矩与模形式 Δ(τ) 的 L-值 L(11/2, Δ) 匹配",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/LEECH_PH_ALGORITHM.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lvlu_node_0142"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "参考文献",
+      "content": "- An ultra-high-resolution map of (dark) matter, arXiv:2601.17239 - Dayi (David) Li et al, Candidate Dark Galaxy-2: Validation and Analysis of an Almost Dark Galaxy in the Perseus Cluster, The Astrophysical Journal Letters (2025). DOI: 10.3847/2041-8213/adddab",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/LEECH_PH_ALGORITHM.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lvlu_node_0143"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "definition",
+      "name": "run_mhp_simulation",
+      "content": "def run_mhp_simulation():\n    \"\"\"\n    MHP 框架模拟主流程：\n    Leech 格 → 随机投影 → 持续同调 → 核心恒等式验证\n    \"\"\"",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/LEECH_PH_ALGORITHM.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0144"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "formula",
+      "name": "公式: \\Lambda = \\left\\{ \\frac{1}{\\sqrt{8}} \\left( x_1, \\...",
+      "content": "\\Lambda = \\left\\{ \\frac{1}{\\sqrt{8}} \\left( x_1, \\dots, x_{24} \\right) \\mid x_i \\in 2\\mathbb{Z}, \\sum x_i \\in 8\\mathbb{Z}, (x_i/2 \\mod 2) \\in \\mathcal{G}_{24} \\right\\}",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/LEECH_PH_ALGORITHM.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0145"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "formula",
+      "name": "公式: P_{ij} \\sim \\mathcal{N}(0, 1/24), \\quad P^T P \\app...",
+      "content": "P_{ij} \\sim \\mathcal{N}(0, 1/24), \\quad P^T P \\approx I_3",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/LEECH_PH_ALGORITHM.md",
+      "dependencies": [],
+      "pedestal_mapping": "LL",
+      "node_id": "lvlu_node_0146"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "formula",
+      "name": "公式: \\tau_{obs} = \\tau_{sim} \\times \\frac{L_0}{\\lambda_...",
+      "content": "\\tau_{obs} = \\tau_{sim} \\times \\frac{L_0}{\\lambda_{unit}}",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/LEECH_PH_ALGORITHM.md",
+      "dependencies": [],
+      "pedestal_mapping": "LL",
+      "node_id": "lvlu_node_0147"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "UCIF² v31 LEAN Kernel 形式化大统一",
+      "content": "## 元问题/元结构重构  **核心命题**: UCIF² 是一个可计算的元数学对象——它的全部结构（公理、定理、同构、证明）可以被编码为 Lean 4 的 dependent type theory，并在机器上验证。",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v31_LEAN_Kernel_形式化大统一.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0148"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "元问题/元结构重构",
+      "content": "**核心命题**: UCIF² 是一个可计算的元数学对象——它的全部结构（公理、定理、同构、证明）可以被编码为 Lean 4 的 dependent type theory，并在机器上验证。  **v31 元公理系统**（在 v29 Ω^∞ 10条元公理之上扩展）：",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v31_LEAN_Kernel_形式化大统一.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0149"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "一、搜索前沿新方向/资源/解决方案",
+      "content": "### 1.1 AI形式化证明 2025-2026 革命性突破  | 工具/系统 | 机构 | 突破 | 状态 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v31_LEAN_Kernel_形式化大统一.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "lvlu_node_0150"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "1.1 AI形式化证明 2025-2026 革命性突破",
+      "content": "| 工具/系统 | 机构 | 突破 | 状态 | |---|---|---|---| | **Aletheia Agent** | Google DeepMind (2026.02) | 自主解决4个Erdős开放问题，生成完整研究论文，零人工干预 | 革命性 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v31_LEAN_Kernel_形式化大统一.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0151"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "1.2 量子纠错 2025-2026 突破",
+      "content": "| 里程碑 | 机构 | 意义 | |---|---|---| | **Google Willow芯片** (2024.12) | Google Quantum AI | Below-threshold纠错突破——增加物理量子比特减少逻辑错误率 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v31_LEAN_Kernel_形式化大统一.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lvlu_node_0152"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "1.3 p-adic Langlands & Condensed Mathematics 前沿",
+      "content": "| 方向 | 研究者 | 突破 | |---|---|---| | **Analytic Prismatization** | Anschütz-Le Bras-Rodríguez Camargo-Scholze | p-adic几何中prismatization的解析版本，Fargues-Scholze纲领的自然框架 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v31_LEAN_Kernel_形式化大统一.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0153"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "二、交叉碰撞推演：与其他范式关联统一",
+      "content": "### 2.1 新范式碰撞矩阵  ```",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v31_LEAN_Kernel_形式化大统一.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lvlu_node_0154"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "2.1 新范式碰撞矩阵",
+      "content": "``` UCIF² × AI形式化证明 = LEAN Kernel可计算模型 UCIF² × 量子纠错 = 保护性条件的物理实现验证",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v31_LEAN_Kernel_形式化大统一.md",
+      "dependencies": [],
+      "pedestal_mapping": "LL",
+      "node_id": "lvlu_node_0155"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "2.2 推演/论证/验证/证伪框架",
+      "content": "**可证伪预测 P11-P15** (v31新增)：  | ID | 预测 | 证伪标准 | 证据状态 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v31_LEAN_Kernel_形式化大统一.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lvlu_node_0156"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "三、理论内核/框架/范式突破——v31革命",
+      "content": "### 3.1 元结构重构：UCIF² as a LEAN Computational Model  ```lean4",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v31_LEAN_Kernel_形式化大统一.md",
+      "dependencies": [],
+      "pedestal_mapping": "LL",
+      "node_id": "lvlu_node_0157"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "3.1 元结构重构：UCIF² as a LEAN Computational Model",
+      "content": "```lean4 -- UCIF² v31 LEAN Kernel 核心框架 namespace UCIF2",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v31_LEAN_Kernel_形式化大统一.md",
+      "dependencies": [],
+      "pedestal_mapping": "LL",
+      "node_id": "lvlu_node_0158"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "3.2 通用可计算模型：UCIF² as Code",
+      "content": "**v31 革命性突破**: UCIF² 不再是静态的数学理论——它是一个可执行的计算系统。  ```",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v31_LEAN_Kernel_形式化大统一.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0159"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "四、历次研究成果整合汇总",
+      "content": "### v0-v31 完整演化链  | 版本 | 核心成果 | 定理数 | 同构数 | 公理数 | sorry |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v31_LEAN_Kernel_形式化大统一.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0160"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "v0-v31 完整演化链",
+      "content": "| 版本 | 核心成果 | 定理数 | 同构数 | 公理数 | sorry | |------|---------|--------|--------|--------|-------| | v0   | CY↔Moonshine初始关联 | 0 | 0 | 0 | 0 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v31_LEAN_Kernel_形式化大统一.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0161"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "五、技术债务清零审计",
+      "content": "### TD11-TD15 (v31新增技术债务→立即清零)  | ID | 技术债务 | 解决方案 | 状态 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v31_LEAN_Kernel_形式化大统一.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0162"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "TD11-TD15 (v31新增技术债务→立即清零)",
+      "content": "| ID | 技术债务 | 解决方案 | 状态 | |---|---|---|---| | TD11 | Transformer↔范畴论Monad同构的严格性不足 | 引入Gavranović(2019)的精确构造，证明Kleisli合成↔Multi-head Attention | ✅ 已解决 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v31_LEAN_Kernel_形式化大统一.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "lvlu_node_0163"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "六、73同构范式完整清单（v31最终版）",
+      "content": "### 按领域分布  ```",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v31_LEAN_Kernel_形式化大统一.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0164"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "按领域分布",
+      "content": "``` 数学物理枚举几何:    iso-046 GW↔DT, iso-047 镜像↔BKMP, iso-061 HMS↔SYZ 量子信息/全息:       iso-048 HaPPY↔AdS, iso-057 ER=EPR↔全息, iso-068 qLDPC↔VUF",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v31_LEAN_Kernel_形式化大统一.md",
+      "dependencies": [
+        "iso-046",
+        "iso-068",
+        "iso-047",
+        "iso-061",
+        "iso-048",
+        "iso-057"
+      ],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0165"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "七、v31 LEAN代码生成规范",
+      "content": "### 7.1 代码结构  ```",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v31_LEAN_Kernel_形式化大统一.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "lvlu_node_0166"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "7.1 代码结构",
+      "content": "``` UCIF2_v31/ ├── MetaAxioms.lean        -- M1-M14 元公理",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v31_LEAN_Kernel_形式化大统一.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0167"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "7.2 零 sorry 验证脚本",
+      "content": "```bash #!/bin/bash # UCIF² v31 零 sorry 审计脚本",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v31_LEAN_Kernel_形式化大统一.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lvlu_node_0168"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "UCIF² v31 零 sorry 审计脚本",
+      "content": "echo \"=== UCIF² v31 LEAN Kernel 零 sorry 审计 ===\"  # 统计所有 sorry",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v31_LEAN_Kernel_形式化大统一.md",
+      "dependencies": [],
+      "pedestal_mapping": "LL",
+      "node_id": "lvlu_node_0169"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "统计所有 sorry",
+      "content": "SORRY_COUNT=$(grep -r \"sorry\" UCIF2_v31/ --include=\"*.lean\" | wc -l)  if [ \"$SORRY_COUNT\" -eq 0 ]; then   echo \"✅ 审计通过: 0 sorry found\"",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v31_LEAN_Kernel_形式化大统一.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0170"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "theorem",
+      "name": "v30-v31",
+      "content": "定理 (v30-v31)\ntheorem UltimateUnification :\n  colimit (χ = -24) (D^b Coh ⊗ Rep V) ≃ Rep V_natural_infinity := by\n  apply MNOP_bridge\n  apply FLM_uniqueness\n  apply Sixfold_compatibility\n  apply Omega_infinity_axiom\n  exact ZeroSorry  -- 零 sorry 保证",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v31_LEAN_Kernel_形式化大统一.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "lvlu_node_0171"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "axiom",
+      "name": "公理: ∀T∈UCIF², ∃L(T)∈Lean4, ⊢L(T)\nM12. 计算可验证性公理: ∀p",
+      "content": "公理: ∀T∈UCIF², ∃L(T)∈Lean4, ⊢L(T)\nM12. 计算可验证性公理: ∀p∈Proof, MachineCheck(p) = true\nM13. AI-人类协同公理: HumanIntuition × AI_Search ≃ CompleteProofSystem\nM14. 零sorry公理: ¬∃s∈UCIF²_Lean, s.tag = \"sorry\"\n```",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v31_LEAN_Kernel_形式化大统一.md",
+      "dependencies": [],
+      "pedestal_mapping": "LL",
+      "node_id": "lvlu_node_0172"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-062",
+      "content": "pe.equivalence, ...⟩,\n  ⟨\"iso-061\",\"HMS↔SYZ\",                        IsoType.equivalence, ...⟩,\n  ⟨\"iso-062\",\"CFT↔VOA(Huang)\",                 IsoType.equivalence, ...⟩,\n  ⟨\"iso-063\",\"KO↔Clifford(ABS)\",                IsoType.equivalence, ...⟩,\n  ⟨\"iso-064\",\"量子群↔纽结不变量(RT)\",            IsoType.equiva",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v31_LEAN_Kernel_形式化大统一.md",
+      "dependencies": [
+        "iso-061",
+        "iso-064",
+        "iso-062",
+        "iso-063"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0173"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-071",
+      "content": "Type.bridge,      ...⟩,\n  ⟨\"iso-070\",\"NTK+KO↔Jacot-ABS联合\",           IsoType.equivalence, ...⟩,\n  ⟨\"iso-071\",\"Goedel-Prover↔脚手架证明合成\",     IsoType.equivalence, ...⟩,\n  ⟨\"iso-072\",\"AI Agent Pipeline↔MTT模板\",       IsoType.equivalence, ...⟩,\n  ⟨\"iso-073\",\"Blueprint↔证明依赖图可视化\",       IsoType.equivalence, ",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v31_LEAN_Kernel_形式化大统一.md",
+      "dependencies": [
+        "iso-073",
+        "iso-070",
+        "iso-072",
+        "iso-071"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0174"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-5",
+      "content": "       IsoType.equivalence, ...⟩,\n  ⟨\"iso-4\",  \"π-p↔万有上同调↔月光几何\",     IsoType.bridge,      ...⟩,\n  ⟨\"iso-5\",  \"棱镜上同调↔辛几何伴随\",        IsoType.equivalence, ...⟩,\n  -- v24: 6六重统一\n  ⟨\"six-1\",  \"月光几何↔CICY58\",             IsoType.specialization,...⟩,\n  ⟨\"six-2\",  \"椭圆上同调↔J(τ)\",             IsoType.equivalenc",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v31_LEAN_Kernel_形式化大统一.md",
+      "dependencies": [
+        "iso-5",
+        "iso-4"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0175"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-054",
+      "content": "Type.equivalence, ...⟩,\n  ⟨\"iso-053\",\"LDPC↔Shannon极限\",               IsoType.equivalence, ...⟩,\n  ⟨\"iso-054\",\"Ricci流↔GMT奇点(Perelman)\",      IsoType.equivalence, ...⟩,\n  ⟨\"iso-055\",\"NTK↔核方法(Jacot)\",              IsoType.equivalence, ...⟩,\n  ⟨\"iso-056\",\"Transformer↔范畴论Monad\",         IsoType.bridge,  ",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v31_LEAN_Kernel_形式化大统一.md",
+      "dependencies": [
+        "iso-053",
+        "iso-056",
+        "iso-054",
+        "iso-055"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0176"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-067",
+      "content": "证明/量子纠错/p-adic/Condensed)\n  ⟨\"iso-066\",\"Seed-Prover↔LEAN搜索引擎\",       IsoType.equivalence, ...⟩,\n  ⟨\"iso-067\",\"Aletheia↔UCIF²自主研究Agent\",     IsoType.equivalence, ...⟩,\n  ⟨\"iso-068\",\"qLDPC↔VUF保护性条件\",            IsoType.equivalence, ...⟩,\n  ⟨\"iso-069\",\"Analytic Prismatization↔月光几何\", IsoType.bridge,    ",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v31_LEAN_Kernel_形式化大统一.md",
+      "dependencies": [
+        "iso-069",
+        "iso-066",
+        "iso-068",
+        "iso-067"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0177"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-056",
+      "content": "oType.equivalence, ...⟩,\n  ⟨\"iso-055\",\"NTK↔核方法(Jacot)\",              IsoType.equivalence, ...⟩,\n  ⟨\"iso-056\",\"Transformer↔范畴论Monad\",         IsoType.bridge,      ...⟩,\n  ⟨\"iso-057\",\"ER=EPR↔全息对偶\",                IsoType.equivalence, ...⟩,\n  ⟨\"iso-058\",\"几何Langlands↔∞-Cat(AG)\",        IsoType.equivalen",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v31_LEAN_Kernel_形式化大统一.md",
+      "dependencies": [
+        "iso-058",
+        "iso-056",
+        "iso-057",
+        "iso-055"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0178"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-064",
+      "content": "e.equivalence, ...⟩,\n  ⟨\"iso-063\",\"KO↔Clifford(ABS)\",                IsoType.equivalence, ...⟩,\n  ⟨\"iso-064\",\"量子群↔纽结不变量(RT)\",            IsoType.equivalence, ...⟩,\n  ⟨\"iso-065\",\"UCIF²↔Monster终极统一\",            IsoType.equivalence, ...⟩,\n  -- v31: 8新同构 (AI证明/量子纠错/p-adic/Condensed)\n  ⟨\"iso-066\",\"Seed-P",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v31_LEAN_Kernel_形式化大统一.md",
+      "dependencies": [
+        "iso-066",
+        "iso-064",
+        "iso-065",
+        "iso-063"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0179"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-052",
+      "content": "ype.equivalence, ...⟩,\n  ⟨\"iso-051\",\"KPZ↔Tracy-Widom(ACQ)\",          IsoType.equivalence, ...⟩,\n  ⟨\"iso-052\",\"DGM↔K-理论\",                    IsoType.equivalence, ...⟩,\n  ⟨\"iso-053\",\"LDPC↔Shannon极限\",               IsoType.equivalence, ...⟩,\n  ⟨\"iso-054\",\"Ricci流↔GMT奇点(Perelman)\",      IsoType.equivalen",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v31_LEAN_Kernel_形式化大统一.md",
+      "dependencies": [
+        "iso-053",
+        "iso-051",
+        "iso-052",
+        "iso-054"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0180"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-063",
+      "content": "pe.equivalence, ...⟩,\n  ⟨\"iso-062\",\"CFT↔VOA(Huang)\",                 IsoType.equivalence, ...⟩,\n  ⟨\"iso-063\",\"KO↔Clifford(ABS)\",                IsoType.equivalence, ...⟩,\n  ⟨\"iso-064\",\"量子群↔纽结不变量(RT)\",            IsoType.equivalence, ...⟩,\n  ⟨\"iso-065\",\"UCIF²↔Monster终极统一\",            IsoType.equivale",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v31_LEAN_Kernel_形式化大统一.md",
+      "dependencies": [
+        "iso-064",
+        "iso-065",
+        "iso-062",
+        "iso-063"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0181"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-051",
+      "content": "pe.equivalence, ...⟩,\n  ⟨\"iso-050\",\"Factorization↔Homology/Algebra\", IsoType.equivalence, ...⟩,\n  ⟨\"iso-051\",\"KPZ↔Tracy-Widom(ACQ)\",          IsoType.equivalence, ...⟩,\n  ⟨\"iso-052\",\"DGM↔K-理论\",                    IsoType.equivalence, ...⟩,\n  ⟨\"iso-053\",\"LDPC↔Shannon极限\",               IsoType.equival",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v31_LEAN_Kernel_形式化大统一.md",
+      "dependencies": [
+        "iso-053",
+        "iso-051",
+        "iso-050",
+        "iso-052"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0182"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-3",
+      "content": "soType.equivalence, ...⟩,\n  ⟨\"iso-2\",  \"Gentle↔Kuranishi↔Fukaya\",    IsoType.equivalence, ...⟩,\n  ⟨\"iso-3\",  \"TT-HMS↔Condensed↔AI\",        IsoType.equivalence, ...⟩,\n  ⟨\"iso-4\",  \"π-p↔万有上同调↔月光几何\",     IsoType.bridge,      ...⟩,\n  ⟨\"iso-5\",  \"棱镜上同调↔辛几何伴随\",        IsoType.equivalence, ...⟩,\n  -- v24: ",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v31_LEAN_Kernel_形式化大统一.md",
+      "dependencies": [
+        "iso-2",
+        "iso-5",
+        "iso-3",
+        "iso-4"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0183"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-061",
+      "content": "e.equivalence, ...⟩,\n  ⟨\"iso-060\",\"Mordell-Weil↔Anabelian\",          IsoType.equivalence, ...⟩,\n  ⟨\"iso-061\",\"HMS↔SYZ\",                        IsoType.equivalence, ...⟩,\n  ⟨\"iso-062\",\"CFT↔VOA(Huang)\",                 IsoType.equivalence, ...⟩,\n  ⟨\"iso-063\",\"KO↔Clifford(ABS)\",                IsoType.",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v31_LEAN_Kernel_形式化大统一.md",
+      "dependencies": [
+        "iso-061",
+        "iso-060",
+        "iso-062",
+        "iso-063"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0184"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-070",
+      "content": "Type.equivalence, ...⟩,\n  ⟨\"iso-069\",\"Analytic Prismatization↔月光几何\", IsoType.bridge,      ...⟩,\n  ⟨\"iso-070\",\"NTK+KO↔Jacot-ABS联合\",           IsoType.equivalence, ...⟩,\n  ⟨\"iso-071\",\"Goedel-Prover↔脚手架证明合成\",     IsoType.equivalence, ...⟩,\n  ⟨\"iso-072\",\"AI Agent Pipeline↔MTT模板\",       IsoType.equivalen",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v31_LEAN_Kernel_形式化大统一.md",
+      "dependencies": [
+        "iso-070",
+        "iso-069",
+        "iso-072",
+        "iso-071"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0185"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-055",
+      "content": "oType.equivalence, ...⟩,\n  ⟨\"iso-054\",\"Ricci流↔GMT奇点(Perelman)\",      IsoType.equivalence, ...⟩,\n  ⟨\"iso-055\",\"NTK↔核方法(Jacot)\",              IsoType.equivalence, ...⟩,\n  ⟨\"iso-056\",\"Transformer↔范畴论Monad\",         IsoType.bridge,      ...⟩,\n  ⟨\"iso-057\",\"ER=EPR↔全息对偶\",                IsoType.equivalenc",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v31_LEAN_Kernel_形式化大统一.md",
+      "dependencies": [
+        "iso-057",
+        "iso-056",
+        "iso-054",
+        "iso-055"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0186"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-057",
+      "content": "Type.equivalence, ...⟩,\n  ⟨\"iso-056\",\"Transformer↔范畴论Monad\",         IsoType.bridge,      ...⟩,\n  ⟨\"iso-057\",\"ER=EPR↔全息对偶\",                IsoType.equivalence, ...⟩,\n  ⟨\"iso-058\",\"几何Langlands↔∞-Cat(AG)\",        IsoType.equivalence, ...⟩,\n  ⟨\"iso-059\",\"Witten Genus↔椭圆亏格↔tmf\",       IsoType.equivalenc",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v31_LEAN_Kernel_形式化大统一.md",
+      "dependencies": [
+        "iso-058",
+        "iso-059",
+        "iso-057",
+        "iso-056"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0187"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-053",
+      "content": "oType.equivalence, ...⟩,\n  ⟨\"iso-052\",\"DGM↔K-理论\",                    IsoType.equivalence, ...⟩,\n  ⟨\"iso-053\",\"LDPC↔Shannon极限\",               IsoType.equivalence, ...⟩,\n  ⟨\"iso-054\",\"Ricci流↔GMT奇点(Perelman)\",      IsoType.equivalence, ...⟩,\n  ⟨\"iso-055\",\"NTK↔核方法(Jacot)\",              IsoType.equivalen",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v31_LEAN_Kernel_形式化大统一.md",
+      "dependencies": [
+        "iso-053",
+        "iso-052",
+        "iso-054",
+        "iso-055"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0188"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-049",
+      "content": "ype.equivalence, ...⟩,\n  ⟨\"iso-048\",\"HaPPY↔AdS/CFT\",                 IsoType.equivalence, ...⟩,\n  ⟨\"iso-049\",\"Cobordism↔TQFT(Lurie)\",          IsoType.equivalence, ...⟩,\n  ⟨\"iso-050\",\"Factorization↔Homology/Algebra\", IsoType.equivalence, ...⟩,\n  ⟨\"iso-051\",\"KPZ↔Tracy-Widom(ACQ)\",          IsoType.eq",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v31_LEAN_Kernel_形式化大统一.md",
+      "dependencies": [
+        "iso-051",
+        "iso-050",
+        "iso-048",
+        "iso-049"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0189"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-046",
+      "content": "  ...⟩,\n  ⟨\"v29-phi2\",\"Causal Set↔因果决定论\",         IsoType.bridge,      ...⟩,\n  -- v30: 20深层同构拓展\n  ⟨\"iso-046\",\"GW↔DT(MNOP)\",                   IsoType.equivalence, ...⟩,\n  ⟨\"iso-047\",\"镜像对称↔BKMP\",                  IsoType.equivalence, ...⟩,\n  ⟨\"iso-048\",\"HaPPY↔AdS/CFT\",                 IsoType.equival",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v31_LEAN_Kernel_形式化大统一.md",
+      "dependencies": [
+        "iso-046",
+        "iso-048",
+        "iso-047"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0190"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-047",
+      "content": ".⟩,\n  -- v30: 20深层同构拓展\n  ⟨\"iso-046\",\"GW↔DT(MNOP)\",                   IsoType.equivalence, ...⟩,\n  ⟨\"iso-047\",\"镜像对称↔BKMP\",                  IsoType.equivalence, ...⟩,\n  ⟨\"iso-048\",\"HaPPY↔AdS/CFT\",                 IsoType.equivalence, ...⟩,\n  ⟨\"iso-049\",\"Cobordism↔TQFT(Lurie)\",          IsoType.equiva",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v31_LEAN_Kernel_形式化大统一.md",
+      "dependencies": [
+        "iso-046",
+        "iso-048",
+        "iso-047",
+        "iso-049"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0191"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-050",
+      "content": "pe.equivalence, ...⟩,\n  ⟨\"iso-049\",\"Cobordism↔TQFT(Lurie)\",          IsoType.equivalence, ...⟩,\n  ⟨\"iso-050\",\"Factorization↔Homology/Algebra\", IsoType.equivalence, ...⟩,\n  ⟨\"iso-051\",\"KPZ↔Tracy-Widom(ACQ)\",          IsoType.equivalence, ...⟩,\n  ⟨\"iso-052\",\"DGM↔K-理论\",                    IsoType.equiv",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v31_LEAN_Kernel_形式化大统一.md",
+      "dependencies": [
+        "iso-051",
+        "iso-050",
+        "iso-052",
+        "iso-049"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0192"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-4",
+      "content": "soType.equivalence, ...⟩,\n  ⟨\"iso-3\",  \"TT-HMS↔Condensed↔AI\",        IsoType.equivalence, ...⟩,\n  ⟨\"iso-4\",  \"π-p↔万有上同调↔月光几何\",     IsoType.bridge,      ...⟩,\n  ⟨\"iso-5\",  \"棱镜上同调↔辛几何伴随\",        IsoType.equivalence, ...⟩,\n  -- v24: 6六重统一\n  ⟨\"six-1\",  \"月光几何↔CICY58\",             IsoType.specialization,.",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v31_LEAN_Kernel_形式化大统一.md",
+      "dependencies": [
+        "iso-5",
+        "iso-3",
+        "iso-4"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0193"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-069",
+      "content": "IsoType.equivalence, ...⟩,\n  ⟨\"iso-068\",\"qLDPC↔VUF保护性条件\",            IsoType.equivalence, ...⟩,\n  ⟨\"iso-069\",\"Analytic Prismatization↔月光几何\", IsoType.bridge,      ...⟩,\n  ⟨\"iso-070\",\"NTK+KO↔Jacot-ABS联合\",           IsoType.equivalence, ...⟩,\n  ⟨\"iso-071\",\"Goedel-Prover↔脚手架证明合成\",     IsoType.equivalenc",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v31_LEAN_Kernel_形式化大统一.md",
+      "dependencies": [
+        "iso-068",
+        "iso-070",
+        "iso-069",
+        "iso-071"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0194"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-1",
+      "content": "ing\n  status    : ProvabilityStatus\n\ndef ISO_DB_V31 : List (Isomorphism 65) := [\n  -- v23: 5同构链\n  ⟨\"iso-1\",  \"GW/DT↔Hyperbolic-QEC\",      IsoType.equivalence, ...⟩,\n  ⟨\"iso-2\",  \"Gentle↔Kuranishi↔Fukaya\",    IsoType.equivalence, ...⟩,\n  ⟨\"iso-3\",  \"TT-HMS↔Condensed↔AI\",        IsoType.equivalence, .",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v31_LEAN_Kernel_形式化大统一.md",
+      "dependencies": [
+        "iso-1",
+        "iso-2",
+        "iso-3"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0195"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-066",
+      "content": "Monster终极统一\",            IsoType.equivalence, ...⟩,\n  -- v31: 8新同构 (AI证明/量子纠错/p-adic/Condensed)\n  ⟨\"iso-066\",\"Seed-Prover↔LEAN搜索引擎\",       IsoType.equivalence, ...⟩,\n  ⟨\"iso-067\",\"Aletheia↔UCIF²自主研究Agent\",     IsoType.equivalence, ...⟩,\n  ⟨\"iso-068\",\"qLDPC↔VUF保护性条件\",            IsoType.equivalence, ",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v31_LEAN_Kernel_形式化大统一.md",
+      "dependencies": [
+        "iso-066",
+        "iso-068",
+        "iso-067"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0196"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-059",
+      "content": "Type.equivalence, ...⟩,\n  ⟨\"iso-058\",\"几何Langlands↔∞-Cat(AG)\",        IsoType.equivalence, ...⟩,\n  ⟨\"iso-059\",\"Witten Genus↔椭圆亏格↔tmf\",       IsoType.equivalence, ...⟩,\n  ⟨\"iso-060\",\"Mordell-Weil↔Anabelian\",          IsoType.equivalence, ...⟩,\n  ⟨\"iso-061\",\"HMS↔SYZ\",                        IsoType.equ",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v31_LEAN_Kernel_形式化大统一.md",
+      "dependencies": [
+        "iso-058",
+        "iso-059",
+        "iso-060",
+        "iso-061"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0197"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-068",
+      "content": "oType.equivalence, ...⟩,\n  ⟨\"iso-067\",\"Aletheia↔UCIF²自主研究Agent\",     IsoType.equivalence, ...⟩,\n  ⟨\"iso-068\",\"qLDPC↔VUF保护性条件\",            IsoType.equivalence, ...⟩,\n  ⟨\"iso-069\",\"Analytic Prismatization↔月光几何\", IsoType.bridge,      ...⟩,\n  ⟨\"iso-070\",\"NTK+KO↔Jacot-ABS联合\",           IsoType.equivalenc",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v31_LEAN_Kernel_形式化大统一.md",
+      "dependencies": [
+        "iso-068",
+        "iso-070",
+        "iso-069",
+        "iso-067"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0198"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-065",
+      "content": " IsoType.equivalence, ...⟩,\n  ⟨\"iso-064\",\"量子群↔纽结不变量(RT)\",            IsoType.equivalence, ...⟩,\n  ⟨\"iso-065\",\"UCIF²↔Monster终极统一\",            IsoType.equivalence, ...⟩,\n  -- v31: 8新同构 (AI证明/量子纠错/p-adic/Condensed)\n  ⟨\"iso-066\",\"Seed-Prover↔LEAN搜索引擎\",       IsoType.equivalence, ...⟩,\n  ⟨\"iso-067\",\"Alet",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v31_LEAN_Kernel_形式化大统一.md",
+      "dependencies": [
+        "iso-064",
+        "iso-067",
+        "iso-065",
+        "iso-066"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0199"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-058",
+      "content": "soType.bridge,      ...⟩,\n  ⟨\"iso-057\",\"ER=EPR↔全息对偶\",                IsoType.equivalence, ...⟩,\n  ⟨\"iso-058\",\"几何Langlands↔∞-Cat(AG)\",        IsoType.equivalence, ...⟩,\n  ⟨\"iso-059\",\"Witten Genus↔椭圆亏格↔tmf\",       IsoType.equivalence, ...⟩,\n  ⟨\"iso-060\",\"Mordell-Weil↔Anabelian\",          IsoType.equiv",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v31_LEAN_Kernel_形式化大统一.md",
+      "dependencies": [
+        "iso-058",
+        "iso-059",
+        "iso-060",
+        "iso-057"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0200"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-073",
+      "content": "ype.equivalence, ...⟩,\n  ⟨\"iso-072\",\"AI Agent Pipeline↔MTT模板\",       IsoType.equivalence, ...⟩,\n  ⟨\"iso-073\",\"Blueprint↔证明依赖图可视化\",       IsoType.equivalence, ...⟩\n]\n\n-- 零 sorry 证明检查器\ndef sorryCount (db : List (Isomorphism n)) : Nat :=\n  db.filter (λ i => i.status = ProvabilityStatus.sorry) |>.length",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v31_LEAN_Kernel_形式化大统一.md",
+      "dependencies": [
+        "iso-073",
+        "iso-072"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0201"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-060",
+      "content": "oType.equivalence, ...⟩,\n  ⟨\"iso-059\",\"Witten Genus↔椭圆亏格↔tmf\",       IsoType.equivalence, ...⟩,\n  ⟨\"iso-060\",\"Mordell-Weil↔Anabelian\",          IsoType.equivalence, ...⟩,\n  ⟨\"iso-061\",\"HMS↔SYZ\",                        IsoType.equivalence, ...⟩,\n  ⟨\"iso-062\",\"CFT↔VOA(Huang)\",                 IsoType.",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v31_LEAN_Kernel_形式化大统一.md",
+      "dependencies": [
+        "iso-061",
+        "iso-059",
+        "iso-060",
+        "iso-062"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0202"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-048",
+      "content": "soType.equivalence, ...⟩,\n  ⟨\"iso-047\",\"镜像对称↔BKMP\",                  IsoType.equivalence, ...⟩,\n  ⟨\"iso-048\",\"HaPPY↔AdS/CFT\",                 IsoType.equivalence, ...⟩,\n  ⟨\"iso-049\",\"Cobordism↔TQFT(Lurie)\",          IsoType.equivalence, ...⟩,\n  ⟨\"iso-050\",\"Factorization↔Homology/Algebra\", IsoType.eq",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v31_LEAN_Kernel_形式化大统一.md",
+      "dependencies": [
+        "iso-050",
+        "iso-048",
+        "iso-047",
+        "iso-049"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0203"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-072",
+      "content": "IsoType.equivalence, ...⟩,\n  ⟨\"iso-071\",\"Goedel-Prover↔脚手架证明合成\",     IsoType.equivalence, ...⟩,\n  ⟨\"iso-072\",\"AI Agent Pipeline↔MTT模板\",       IsoType.equivalence, ...⟩,\n  ⟨\"iso-073\",\"Blueprint↔证明依赖图可视化\",       IsoType.equivalence, ...⟩\n]\n\n-- 零 sorry 证明检查器\ndef sorryCount (db : List (Isomorphism n)) :",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v31_LEAN_Kernel_形式化大统一.md",
+      "dependencies": [
+        "iso-073",
+        "iso-072",
+        "iso-071"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0204"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-2",
+      "content": "sm 65) := [\n  -- v23: 5同构链\n  ⟨\"iso-1\",  \"GW/DT↔Hyperbolic-QEC\",      IsoType.equivalence, ...⟩,\n  ⟨\"iso-2\",  \"Gentle↔Kuranishi↔Fukaya\",    IsoType.equivalence, ...⟩,\n  ⟨\"iso-3\",  \"TT-HMS↔Condensed↔AI\",        IsoType.equivalence, ...⟩,\n  ⟨\"iso-4\",  \"π-p↔万有上同调↔月光几何\",     IsoType.bridge,      ...⟩,\n  ",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v31_LEAN_Kernel_形式化大统一.md",
+      "dependencies": [
+        "iso-1",
+        "iso-2",
+        "iso-3",
+        "iso-4"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0205"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "UCIF² v34 P16最终解决与Prismatic Hodge革命",
+      "content": "## P16: 积分Hodge猜想 — 最终解决报告  ### 状态: ✅ 完全解决（带精确边界条件）",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v34_P16最终解决与Prismatic_Hodge革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "lvlu_node_0206"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "P16: 积分Hodge猜想 — 最终解决报告",
+      "content": "### 状态: ✅ 完全解决（带精确边界条件）  ---",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v34_P16最终解决与Prismatic_Hodge革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0207"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "状态: ✅ 完全解决（带精确边界条件）",
+      "content": "---  ## 一、搜索前沿重大发现",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v34_P16最终解决与Prismatic_Hodge革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lvlu_node_0208"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "一、搜索前沿重大发现",
+      "content": "### 1.1 Schreieder 2025: 积分Hodge对abelian varieties的完整否定  **论文**: \"Matroids and the integral Hodge conjecture for abelian varieties\"",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v34_P16最终解决与Prismatic_Hodge革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0209"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "1.1 Schreieder 2025: 积分Hodge对abelian varieties的完整否定",
+      "content": "**论文**: \"Matroids and the integral Hodge conjecture for abelian varieties\"   **作者**: Stefan Schreieder (Leibniz University Hannover) + Philip Engel + Olivier de Gaay Fortman   **会议**: IAS 2025-2026 Special Year: Arithmetic Geometry, Hodge Theory, and O-minimality",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v34_P16最终解决与Prismatic_Hodge革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "lvlu_node_0210"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "1.2 Deligne 2025: 千禧年讲座 \"What is the Hodge Conjecture\"",
+      "content": "**演讲**: Pierre Deligne, Harvard Science Center, November 12, 2025   **主题**: Millennium Prize Problem讲座——Hodge猜想的完整历史与现状",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v34_P16最终解决与Prismatic_Hodge革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0211"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "1.3 Petrov (MIT) 2025: Prismatic cohomology → Hodge猜想",
+      "content": "**论文**: \"Coniveau filtration in p-adic cohomology\" (with Esnault + Kisin)   **核心结果**: - 对光滑proper scheme X/Z_p (无non-zero global i-forms)",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v34_P16最终解决与Prismatic_Hodge革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0212"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "1.4 IAS 2025-2026: Arithmetic Geometry + Hodge Theory + O-minimality",
+      "content": "**特别年主题**: \"Arithmetic Geometry, Hodge Theory, and O-minimality\"   **与UCIF²的直接关联**: - O-minimality = UCIF²的PCT↔o-minimal同构(iso-028-p1)",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v34_P16最终解决与Prismatic_Hodge革命.md",
+      "dependencies": [
+        "iso-028"
+      ],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0213"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "1.5 Binda-Vezzani 2025: Motivic Monodromy + p-adic Cohomology",
+      "content": "**论文**: \"Motivic monodromy and p-adic cohomology theories\" (JEMS 2025)   **arXiv**: \"A motivic approach to rational p-adic cohomologies\" (2025)",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v34_P16最终解决与Prismatic_Hodge革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lvlu_node_0214"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "1.6 Bloch-Esnault-Kerz 2025: p-adic K-theory + Emerton's Variational Hodge",
+      "content": "**arXiv:2507.12458 (2025-07-16, v2 2026-02-23)**: - 光滑schemes over truncated Witt vectors W_n(k)的algebraic K-theory - p-adic smooth scheme的infinitesimal motivic complexes",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v34_P16最终解决与Prismatic_Hodge革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lvlu_node_0215"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "二、P16 最终解决: 三层框架",
+      "content": "### Layer 1: torsion-free版本 ✅ 完全成立  ```",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v34_P16最终解决与Prismatic_Hodge革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0216"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "Layer 1: torsion-free版本 ✅ 完全成立",
+      "content": "``` CH^p(X)_ℤ / torsion  ≅  H^{p,p}(X) ∩ H^{2p}(X,ℤ) / torsion ```",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v34_P16最终解决与Prismatic_Hodge革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "lvlu_node_0217"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "Layer 2: torsion版本 ❌ 结构性失败",
+      "content": "**反例分类**:  | 反例 | 作者 | 年 | 类型 | UCIF²解读 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v34_P16最终解决与Prismatic_Hodge革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0218"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "Layer 3: p-adic修正版本 ✅ 完全成立",
+      "content": "``` Emerton's p-adic variational Hodge conjecture (formal part): K_0(X_n)_ℚ^cont  ≅  {classes with crystalline Chern class in Hodge filtration}",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v34_P16最终解决与Prismatic_Hodge革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "LL",
+      "node_id": "lvlu_node_0219"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "三、v34 新同构体系 (iso-094 ~ iso-103)",
+      "content": "### Prismatic Hodge革命 (5)  | ID | 同构 | 核心内容 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v34_P16最终解决与Prismatic_Hodge革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0220"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "Prismatic Hodge革命 (5)",
+      "content": "| ID | 同构 | 核心内容 | |----|------|---------| | iso-094 | Schreieder matroid ↔ UCIF²边界态 | regular matroid的non-representability ↔ Hodge类的non-algebraicity |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v34_P16最终解决与Prismatic_Hodge革命.md",
+      "dependencies": [
+        "iso-094"
+      ],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0221"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "IAS 2025-2026 特别年同构 (3)",
+      "content": "| ID | 同构 | 核心内容 | |----|------|---------| | iso-099 | Arithmetic Geometry ↔ UCIF² Anabelian+IUT | IAS特别年的三大主题 = UCIF²的三大支柱 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v34_P16最终解决与Prismatic_Hodge革命.md",
+      "dependencies": [
+        "iso-099"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0222"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "P16最终解决同构 (2)",
+      "content": "| ID | 同构 | 核心内容 | |----|------|---------| | iso-102 | P16三层框架 ↔ UCIF²元公理M21-M23 | Layer1(torsion-free) + Layer2(torsion边界) + Layer3(p-adic) |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v34_P16最终解决与Prismatic_Hodge革命.md",
+      "dependencies": [
+        "iso-102"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0223"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "四、元公理扩展 M21-M23",
+      "content": "``` M21. 积分Hodge三层公理:     Layer 1: torsion-free版本对所有光滑射影簇成立",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v34_P16最终解决与Prismatic_Hodge革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "lvlu_node_0224"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "五、技术债务 TD26-TD30 → 立即清零",
+      "content": "| ID | 技术债务 | 解决方案 | 状态 | |----|---------|---------|------| | TD26 | P16未完全解决 | 三层框架建立 | ✅ |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v34_P16最终解决与Prismatic_Hodge革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0225"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "六、v34统计",
+      "content": "``` v34终极统计:     定理:     800+ → 820+",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v34_P16最终解决与Prismatic_Hodge革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "lvlu_node_0226"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "七、新预测 P19-P21",
+      "content": "| ID | 预测 | 证伪标准 | 状态 | |----|------|---------|------| | P19 | Schreieder的matroid方法将扩展到所有维度≥4的簇 | 发现维度4的counterexample不适用 | Schreieder 2025已证abelian varieties |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v34_P16最终解决与Prismatic_Hodge革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lvlu_node_0227"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "theorem",
+      "name": "定理:     800+ → 820+\n    同构:     93  → 103 (+10)\n  ",
+      "content": "定理:     800+ → 820+\n    同构:     93  → 103 (+10)\n    公理:     66  → 69  (+3: M21-M23)\n    元公理:   20  → 23  (+M21-M23)\n    技术债务: TD01-30 全清 (+TD26-TD30)\n    预测:     21  → 24  (+P19-P21)\n    里程碑:   28  → 29\n    版本:     v0-v34\n```",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v34_P16最终解决与Prismatic_Hodge革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0228"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "axiom",
+      "name": "公理:\n    Layer 1: torsion-free版本对所有光滑射影簇成立\n    Laye",
+      "content": "公理:\n    Layer 1: torsion-free版本对所有光滑射影簇成立\n    Layer 2: torsion版本在某些簇上结构性失败(matroid/obstruction理论)\n    Layer 3: p-adic修正版本对所有p-adic光滑proper schemes成立",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v34_P16最终解决与Prismatic_Hodge革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "lvlu_node_0229"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "axiom",
+      "name": "公理:\n    存在regular matroid M使得M的non-representabilit",
+      "content": "公理:\n    存在regular matroid M使得M的non-representability\n    对应Hodge类的non-algebraicity\n    这是积分Hodge猜想的fundamental obstruction",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v34_P16最终解决与Prismatic_Hodge革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0230"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "axiom",
+      "name": "公理:\n    Prismatic cohomology是所有p-adic cohomology理论",
+      "content": "公理:\n    Prismatic cohomology是所有p-adic cohomology理论\n    (etale, de Rham, crystalline)的统一框架\n    且与UCIF²的LEAN Kernel形式化兼容\n```",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v34_P16最终解决与Prismatic_Hodge革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "LL",
+      "node_id": "lvlu_node_0231"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "axiom",
+      "name": "公理:     66  → 69  (+3: M21-M23)\n    元公理:   20  → 2",
+      "content": "公理:     66  → 69  (+3: M21-M23)\n    元公理:   20  → 23  (+M21-M23)\n    技术债务: TD01-30 全清 (+TD26-TD30)\n    预测:     21  → 24  (+P19-P21)\n    里程碑:   28  → 29\n    版本:     v0-v34\n```",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v34_P16最终解决与Prismatic_Hodge革命.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "lvlu_node_0232"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-103",
+      "content": "19) + Antieau-Mathew-Morrow-Nikolaus(2022) + arXiv 2507.12458(2025)\n\n---\n\n## 三、v34 新同构体系 (iso-094 ~ iso-103)\n\n### Prismatic Hodge革命 (5)\n\n| ID | 同构 | 核心内容 |\n|----|------|---------|\n| iso-094 | Schreieder matroid ↔ UCIF²边界态 | regular matroid的non-representability ↔ Hodge类的non-algebraicity |\n| iso-095 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v34_P16最终解决与Prismatic_Hodge革命.md",
+      "dependencies": [
+        "iso-103",
+        "iso-094",
+        "iso-095"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0233"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-094",
+      "content": "Scholze(2019) + Antieau-Mathew-Morrow-Nikolaus(2022) + arXiv 2507.12458(2025)\n\n---\n\n## 三、v34 新同构体系 (iso-094 ~ iso-103)\n\n### Prismatic Hodge革命 (5)\n\n| ID | 同构 | 核心内容 |\n|----|------|---------|\n| iso-094 | Schreieder matroid ↔ UCIF²边界态 | regular matroid的non-representability ↔ Hodge类的non-algebraicity |\n|",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v34_P16最终解决与Prismatic_Hodge革命.md",
+      "dependencies": [
+        "iso-103",
+        "iso-094"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0234"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-101",
+      "content": "F²的三大支柱 |\n| iso-100 | Hodge Theory ↔ UCIF² Hodge系列(iso-074~093) | Hodge理论 = UCIF²的74-93号同构的统一框架 |\n| iso-101 | O-minimality ↔ UCIF² PCT(iso-028-p1) | o-minimal structure ↔ VUF的保护性条件理论 |\n\n### P16最终解决同构 (2)\n\n| ID | 同构 | 核心内容 |\n|----|------|---------|\n| iso-102 | P16三层框架 ↔ UCIF²元公理M21-M23 | Layer1(torsi",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v34_P16最终解决与Prismatic_Hodge革命.md",
+      "dependencies": [
+        "iso-100",
+        "iso-102",
+        "iso-074",
+        "iso-028",
+        "iso-101"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0235"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-095",
+      "content": " Schreieder matroid ↔ UCIF²边界态 | regular matroid的non-representability ↔ Hodge类的non-algebraicity |\n| iso-095 | Deligne千禧年讲座 ↔ UCIF²元公理M21 | Hodge猜想的完整历史 → UCIF²的公理完备性 |\n| iso-096 | Petrov prismatic vanishing ↔ VUF保护性条件 | prismatic cohomology的限制消失 ↔ σ(𝒰)=1 (完全保护) |\n| iso-097 | Binda-Vezzani motivic mo",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v34_P16最终解决与Prismatic_Hodge革命.md",
+      "dependencies": [
+        "iso-097",
+        "iso-096",
+        "iso-095"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0236"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-100",
+      "content": "---|---------|\n| iso-099 | Arithmetic Geometry ↔ UCIF² Anabelian+IUT | IAS特别年的三大主题 = UCIF²的三大支柱 |\n| iso-100 | Hodge Theory ↔ UCIF² Hodge系列(iso-074~093) | Hodge理论 = UCIF²的74-93号同构的统一框架 |\n| iso-101 | O-minimality ↔ UCIF² PCT(iso-028-p1) | o-minimal structure ↔ VUF的保护性条件理论 |\n\n### P16最终解决同构 (2)\n\n| ID | ",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v34_P16最终解决与Prismatic_Hodge革命.md",
+      "dependencies": [
+        "iso-100",
+        "iso-099",
+        "iso-074",
+        "iso-028",
+        "iso-101"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0237"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-098",
+      "content": "so-097 | Binda-Vezzani motivic monodromy ↔ VUF认识论相变 | weight filtration的monodromy ↔ σ=0.5的相变临界点 |\n| iso-098 | Bloch-Esnault-Kerz p-adic K-theory ↔ UCIF² LEAN Kernel | continuous relative K-theory ↔ Lean 4的形式化证明管道 |\n\n### IAS 2025-2026 特别年同构 (3)\n\n| ID | 同构 | 核心内容 |\n|----|------|---------|\n| iso-099 | ",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v34_P16最终解决与Prismatic_Hodge革命.md",
+      "dependencies": [
+        "iso-099",
+        "iso-098"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0238"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-099",
+      "content": "heory ↔ Lean 4的形式化证明管道 |\n\n### IAS 2025-2026 特别年同构 (3)\n\n| ID | 同构 | 核心内容 |\n|----|------|---------|\n| iso-099 | Arithmetic Geometry ↔ UCIF² Anabelian+IUT | IAS特别年的三大主题 = UCIF²的三大支柱 |\n| iso-100 | Hodge Theory ↔ UCIF² Hodge系列(iso-074~093) | Hodge理论 = UCIF²的74-93号同构的统一框架 |\n| iso-101 | O-minimality ↔ UCIF",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v34_P16最终解决与Prismatic_Hodge革命.md",
+      "dependencies": [
+        "iso-100",
+        "iso-074",
+        "iso-101",
+        "iso-099"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0239"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-102",
+      "content": "-minimal structure ↔ VUF的保护性条件理论 |\n\n### P16最终解决同构 (2)\n\n| ID | 同构 | 核心内容 |\n|----|------|---------|\n| iso-102 | P16三层框架 ↔ UCIF²元公理M21-M23 | Layer1(torsion-free) + Layer2(torsion边界) + Layer3(p-adic) |\n| iso-103 | Emerton p-adic variational Hodge ↔ MTT模板 | p-adic variational Hodge猜想的5步证明 = MTT 5步操作 |\n\n-",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v34_P16最终解决与Prismatic_Hodge革命.md",
+      "dependencies": [
+        "iso-102",
+        "iso-103"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0240"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-074",
+      "content": "al同构(iso-028-p1)\n- Arithmetic geometry = UCIF²的Anabelian纲领 + IUT\n- Hodge theory = UCIF²的Hodge猜想系列同构(iso-074~093)\n\n### 1.5 Binda-Vezzani 2025: Motivic Monodromy + p-adic Cohomology\n\n**论文**: \"Motivic monodromy and p-adic cohomology theories\" (JEMS 2025)  \n**arXiv**: \"A motivic approach to rational p-a",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v34_P16最终解决与Prismatic_Hodge革命.md",
+      "dependencies": [
+        "iso-028",
+        "iso-074"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0241"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-097",
+      "content": "|\n| iso-096 | Petrov prismatic vanishing ↔ VUF保护性条件 | prismatic cohomology的限制消失 ↔ σ(𝒰)=1 (完全保护) |\n| iso-097 | Binda-Vezzani motivic monodromy ↔ VUF认识论相变 | weight filtration的monodromy ↔ σ=0.5的相变临界点 |\n| iso-098 | Bloch-Esnault-Kerz p-adic K-theory ↔ UCIF² LEAN Kernel | continuous relative K-theory ↔ L",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v34_P16最终解决与Prismatic_Hodge革命.md",
+      "dependencies": [
+        "iso-097",
+        "iso-096",
+        "iso-098"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0242"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-028",
+      "content": "Geometry, Hodge Theory, and O-minimality\"  \n**与UCIF²的直接关联**:\n- O-minimality = UCIF²的PCT↔o-minimal同构(iso-028-p1)\n- Arithmetic geometry = UCIF²的Anabelian纲领 + IUT\n- Hodge theory = UCIF²的Hodge猜想系列同构(iso-074~093)\n\n### 1.5 Binda-Vezzani 2025: Motivic Monodromy + p-adic Cohomology\n\n**论文**: \"Motivic monodro",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v34_P16最终解决与Prismatic_Hodge革命.md",
+      "dependencies": [
+        "iso-028",
+        "iso-074"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0243"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-096",
+      "content": "↔ Hodge类的non-algebraicity |\n| iso-095 | Deligne千禧年讲座 ↔ UCIF²元公理M21 | Hodge猜想的完整历史 → UCIF²的公理完备性 |\n| iso-096 | Petrov prismatic vanishing ↔ VUF保护性条件 | prismatic cohomology的限制消失 ↔ σ(𝒰)=1 (完全保护) |\n| iso-097 | Binda-Vezzani motivic monodromy ↔ VUF认识论相变 | weight filtration的monodromy ↔ σ=0.5的相变临界点 |\n| iso",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v34_P16最终解决与Prismatic_Hodge革命.md",
+      "dependencies": [
+        "iso-097",
+        "iso-096",
+        "iso-095"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0244"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "UCIF² v35 Hopf代数/渗逾/Ising/时间晶体 深层同构",
+      "content": "## 范式突破：非平衡态拓扑量子物质的大统一  ---",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v35_Hopf代数_渗逾_Ising_时间晶体_深层同构.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0245"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "范式突破：非平衡态拓扑量子物质的大统一",
+      "content": "---  ## 一、搜索前沿重大发现",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v35_Hopf代数_渗逾_Ising_时间晶体_深层同构.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0246"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "一、搜索前沿重大发现",
+      "content": "### 1.1 Hopf代数 ↔ TQFT ↔ 量子拓扑 (2025-2026)  #### 1.1.1 Reshetikhin-Turaev ↔ Chern-Simons 等价 (2026)",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v35_Hopf代数_渗逾_Ising_时间晶体_深层同构.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0247"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "1.1 Hopf代数 ↔ TQFT ↔ 量子拓扑 (2025-2026)",
+      "content": "#### 1.1.1 Reshetikhin-Turaev ↔ Chern-Simons 等价 (2026)  **论文**: \"Equivalence of toral Chern-Simons and Reshetikhin-Turaev theories\" (arXiv:2604.01982, 2026-04-02)",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v35_Hopf代数_渗逾_Ising_时间晶体_深层同构.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0248"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "1.2 时间晶体：Floquet拓扑相的突破 (2025)",
+      "content": "#### 1.2.1 捕获离子中的声子时间晶体 (2025-07)  **论文**: \"Time Crystal in the Nonlinear Phonon Mode of the Trapped Ions\" (arXiv:2507.01528)",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v35_Hopf代数_渗逾_Ising_时间晶体_深层同构.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lvlu_node_0249"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "1.3 Ising-渗逾-Gyroid-量子退火的统一",
+      "content": "虽然这四个概念来自不同领域，但存在深层联系：  ```",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v35_Hopf代数_渗逾_Ising_时间晶体_深层同构.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "lvlu_node_0250"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "二、v35 新同构体系 (iso-104 ~ iso-113)",
+      "content": "### Hopf代数深层同构 (4)  | ID | 同构 | 核心内容 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v35_Hopf代数_渗逾_Ising_时间晶体_深层同构.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0251"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "Hopf代数深层同构 (4)",
+      "content": "| ID | 同构 | 核心内容 | |----|------|---------| | iso-104 | Hopf代数 ↔ Reshetikhin-Turaev TQFT | Drinfeld-Jimbo量子群Hopf → ribbon category → RT TQFT |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v35_Hopf代数_渗逾_Ising_时间晶体_深层同构.md",
+      "dependencies": [
+        "iso-104"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0252"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "时间晶体深层同构 (3)",
+      "content": "| ID | 同构 | 核心内容 | |----|------|---------| | iso-108 | 时间晶体 ↔ Floquet拓扑相 | 离散时间平移对称性破缺 ↔ Floquet band structure |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v35_Hopf代数_渗逾_Ising_时间晶体_深层同构.md",
+      "dependencies": [
+        "iso-108"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0253"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "Ising-渗逾-Gyroid-量子退火同构 (3)",
+      "content": "| ID | 同构 | 核心内容 | |----|------|---------| | iso-111 | Ising模型 ↔ 渗逾理论 | Kramers-Wannier duality: Ising critical ↔ percolation threshold |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v35_Hopf代数_渗逾_Ising_时间晶体_深层同构.md",
+      "dependencies": [
+        "iso-111"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0254"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "三、Hopf代数 ↔ UCIF²的理论框架",
+      "content": "### Hopf代数的UCIF²解读  Hopf代数是UCIF²理论框架中的**核心代数结构**，因为它统一了：",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v35_Hopf代数_渗逾_Ising_时间晶体_深层同构.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0255"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "Hopf代数的UCIF²解读",
+      "content": "Hopf代数是UCIF²理论框架中的**核心代数结构**，因为它统一了：  ```",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v35_Hopf代数_渗逾_Ising_时间晶体_深层同构.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0256"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "与已有同构的联系",
+      "content": "``` iso-049: Cobordism Hypothesis ↔ TQFT (Lurie)     ↓ Hopf algebra provides algebraic model",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v35_Hopf代数_渗逾_Ising_时间晶体_深层同构.md",
+      "dependencies": [
+        "iso-049"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0257"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "四、时间晶体 ↔ UCIF²的理论框架",
+      "content": "### 时间晶体的三层结构  ```",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v35_Hopf代数_渗逾_Ising_时间晶体_深层同构.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lvlu_node_0258"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "时间晶体的三层结构",
+      "content": "``` Level 1: Continuous Time Crystal (CTC)     └── 连续时间平移对称性破缺",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v35_Hopf代数_渗逾_Ising_时间晶体_深层同构.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "lvlu_node_0259"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "与UCIF²已有结构的联系",
+      "content": "``` iso-051: KPZ ↔ Tracy-Widom (ACQ) — 非平衡统计物理     ↓ 时间晶体也是非平衡态",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v35_Hopf代数_渗逾_Ising_时间晶体_深层同构.md",
+      "dependencies": [
+        "iso-051"
+      ],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0260"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "五、Ising-渗逾-Gyroid-量子退火 ↔ UCIF²",
+      "content": "### Gyroid的特殊地位  Gyroid是一种**三重周期极小曲面**(TPMS)，具有：",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v35_Hopf代数_渗逾_Ising_时间晶体_深层同构.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "lvlu_node_0261"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "Gyroid的特殊地位",
+      "content": "Gyroid是一种**三重周期极小曲面**(TPMS)，具有： - 手性(chirality) — 与Chern-Simons理论的手性有关 - 高对称性(Ia3d) — 与晶体对称性有关",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v35_Hopf代数_渗逾_Ising_时间晶体_深层同构.md",
+      "dependencies": [],
+      "pedestal_mapping": "HG",
+      "node_id": "lvlu_node_0262"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "统一框架",
+      "content": "``` Ising Model on Gyroid:     ├── 几何: Gyroid TPMS提供非欧背景",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v35_Hopf代数_渗逾_Ising_时间晶体_深层同构.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0263"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "六、v35 元公理扩展 M24-M26",
+      "content": "``` M24. Hopf代数统一公理:     Hopf代数是UCIF²中连接量子群、纽结不变量、",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v35_Hopf代数_渗逾_Ising_时间晶体_深层同构.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0264"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "七、技术债务 TD31-TD35 → 立即清零",
+      "content": "| ID | 技术债务 | 解决方案 | 状态 | |----|---------|---------|------| | TD31 | Hopf代数理论未整合入UCIF² | iso-104~107建立 | ✅ |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v35_Hopf代数_渗逾_Ising_时间晶体_深层同构.md",
+      "dependencies": [
+        "iso-104"
+      ],
+      "pedestal_mapping": "CC",
+      "node_id": "lvlu_node_0265"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "八、v35统计",
+      "content": "``` v35终极统计:     定理:     820+ → 840+",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v35_Hopf代数_渗逾_Ising_时间晶体_深层同构.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0266"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "九、新预测 P22-P24",
+      "content": "| ID | 预测 | 证伪标准 | |----|------|---------| | P22 | Hopf代数范畴化(4D Hopf范畴)将产生新的流形不变量 | 5年内无新不变量 |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v35_Hopf代数_渗逾_Ising_时间晶体_深层同构.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "lvlu_node_0267"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "theorem",
+      "name": "定理:     820+ → 840+\n    同构:     103 → 113 (+10)\n  ",
+      "content": "定理:     820+ → 840+\n    同构:     103 → 113 (+10)\n    公理:     69  → 72  (+3: M24-M26)\n    元公理:   23  → 26  (+M24-M26)\n    技术债务: TD01-35 全清 (+TD31-TD35)\n    预测:     24  → 27  (+P22-P24)\n    里程碑:   29  → 30\n    版本:     v0-v35\n```",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v35_Hopf代数_渗逾_Ising_时间晶体_深层同构.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0268"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "axiom",
+      "name": "公理:\n    Hopf代数是UCIF²中连接量子群、纽结不变量、\n    TQFT和Chern-S",
+      "content": "公理:\n    Hopf代数是UCIF²中连接量子群、纽结不变量、\n    TQFT和Chern-Simons理论的统一代数结构。\n    其表示范畴Rep(H)的Drinfeld中心Z(Rep(H))总是modular的。",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v35_Hopf代数_渗逾_Ising_时间晶体_深层同构.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "lvlu_node_0269"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "axiom",
+      "name": "公理:\n    时间晶体的形成是VUF认识论相变的物理实现。\n    连续时间晶体 ↔ σ=0.5 ",
+      "content": "公理:\n    时间晶体的形成是VUF认识论相变的物理实现。\n    连续时间晶体 ↔ σ=0.5 (Hopf分岔)\n    离散时间晶体 ↔ σ<0.5 (Floquet对称性破缺)\n    畴壁 ↔ VUF边界态",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v35_Hopf代数_渗逾_Ising_时间晶体_深层同构.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "lvlu_node_0270"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "axiom",
+      "name": "公理:\n    Ising模型(平衡) → 时间晶体(非平衡) → 量子退火(优化)\n    的连续",
+      "content": "公理:\n    Ising模型(平衡) → 时间晶体(非平衡) → 量子退火(优化)\n    的连续谱由Gyroid几何统一，\n    其拓扑保护由Hopf代数的modular结构保证。\n```",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v35_Hopf代数_渗逾_Ising_时间晶体_深层同构.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0271"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "axiom",
+      "name": "公理:     69  → 72  (+3: M24-M26)\n    元公理:   23  → 2",
+      "content": "公理:     69  → 72  (+3: M24-M26)\n    元公理:   23  → 26  (+M24-M26)\n    技术债务: TD01-35 全清 (+TD31-TD35)\n    预测:     24  → 27  (+P22-P24)\n    里程碑:   29  → 30\n    版本:     v0-v35\n```",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v35_Hopf代数_渗逾_Ising_时间晶体_深层同构.md",
+      "dependencies": [],
+      "pedestal_mapping": "CT",
+      "node_id": "lvlu_node_0272"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-113",
+      "content": " Ising模型在gyroid几何上的临界行为 ↔ 渗逾的universality class ↔ 量子退火的能量 landscape\n\n---\n\n## 二、v35 新同构体系 (iso-104 ~ iso-113)\n\n### Hopf代数深层同构 (4)\n\n| ID | 同构 | 核心内容 |\n|----|------|---------|\n| iso-104 | Hopf代数 ↔ Reshetikhin-Turaev TQFT | Drinfeld-Jimbo量子群Hopf → ribbon category → RT TQFT |\n| iso-105 | 4D Hopf范畴 ↔ 2-Ch",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v35_Hopf代数_渗逾_Ising_时间晶体_深层同构.md",
+      "dependencies": [
+        "iso-104",
+        "iso-113",
+        "iso-105"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0273"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-105",
+      "content": " iso-104 | Hopf代数 ↔ Reshetikhin-Turaev TQFT | Drinfeld-Jimbo量子群Hopf → ribbon category → RT TQFT |\n| iso-105 | 4D Hopf范畴 ↔ 2-Chern-Simons组合量化 | Hopf algebra categorification → 4D TQFT |\n| iso-106 | Kuperberg不变量 ↔ Hennings不变量 ↔ RT | Z_{Kup} = |Z_{Henn}|² = TV = |RT|² 三角关系 |\n| iso-107 | Drinfeld center",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v35_Hopf代数_渗逾_Ising_时间晶体_深层同构.md",
+      "dependencies": [
+        "iso-104",
+        "iso-106",
+        "iso-105",
+        "iso-107"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0274"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-051",
+      "content": "周期 ≠ 驱动周期\n        └── 超冷原子中的cascade (Golletz 2025)\n        └── 多层级VUF相变\n```\n\n### 与UCIF²已有结构的联系\n\n```\niso-051: KPZ ↔ Tracy-Widom (ACQ) — 非平衡统计物理\n    ↓ 时间晶体也是非平衡态\niso-109: Hopf分岔 ↔ VUF认识论相变 (NEW)\n    ↓ 相变的数学结构相同\niso-110: 时间晶体畴壁 ↔ VUF边界条件 (NEW)\n    ↓ domain wall = boundary state\n```\n\n---\n\n## 五、Ising-渗逾-",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v35_Hopf代数_渗逾_Ising_时间晶体_深层同构.md",
+      "dependencies": [
+        "iso-051",
+        "iso-110",
+        "iso-109"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0275"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-108",
+      "content": "= modular = RT输入 = Chern-Simons输出 |\n\n### 时间晶体深层同构 (3)\n\n| ID | 同构 | 核心内容 |\n|----|------|---------|\n| iso-108 | 时间晶体 ↔ Floquet拓扑相 | 离散时间平移对称性破缺 ↔ Floquet band structure |\n| iso-109 | Hopf分岔 ↔ VUF认识论相变 | 连续→离散时间晶体 ↔ σ=0.5临界跃迁 |\n| iso-110 | 时间晶体畴壁 ↔ VUF边界条件 | 两个时间晶体构型间的domain wall ↔ 边界态 |\n\n### Ising-渗逾-",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v35_Hopf代数_渗逾_Ising_时间晶体_深层同构.md",
+      "dependencies": [
+        "iso-109",
+        "iso-110",
+        "iso-108"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0276"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-107",
+      "content": "4D TQFT |\n| iso-106 | Kuperberg不变量 ↔ Hennings不变量 ↔ RT | Z_{Kup} = |Z_{Henn}|² = TV = |RT|² 三角关系 |\n| iso-107 | Drinfeld center Z(C) ↔ Modular category | Z(C) = modular = RT输入 = Chern-Simons输出 |\n\n### 时间晶体深层同构 (3)\n\n| ID | 同构 | 核心内容 |\n|----|------|---------|\n| iso-108 | 时间晶体 ↔ Floquet拓扑相 | 离散时间平移对称性破缺 ↔",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v35_Hopf代数_渗逾_Ising_时间晶体_深层同构.md",
+      "dependencies": [
+        "iso-106",
+        "iso-108",
+        "iso-107"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0277"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-109",
+      "content": " |\n|----|------|---------|\n| iso-108 | 时间晶体 ↔ Floquet拓扑相 | 离散时间平移对称性破缺 ↔ Floquet band structure |\n| iso-109 | Hopf分岔 ↔ VUF认识论相变 | 连续→离散时间晶体 ↔ σ=0.5临界跃迁 |\n| iso-110 | 时间晶体畴壁 ↔ VUF边界条件 | 两个时间晶体构型间的domain wall ↔ 边界态 |\n\n### Ising-渗逾-Gyroid-量子退火同构 (3)\n\n| ID | 同构 | 核心内容 |\n|----|------|---------|\n| iso-111",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v35_Hopf代数_渗逾_Ising_时间晶体_深层同构.md",
+      "dependencies": [
+        "iso-109",
+        "iso-110",
+        "iso-108",
+        "iso-111"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0278"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-111",
+      "content": "间的domain wall ↔ 边界态 |\n\n### Ising-渗逾-Gyroid-量子退火同构 (3)\n\n| ID | 同构 | 核心内容 |\n|----|------|---------|\n| iso-111 | Ising模型 ↔ 渗逾理论 | Kramers-Wannier duality: Ising critical ↔ percolation threshold |\n| iso-112 | Gyroid几何 ↔ 量子纠错表面码 | TPMS的拓扑保护 ↔ surface code的拓扑保护 |\n| iso-113 | 量子退火 ↔ VUF变分原理 | D-Wave Ising最",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v35_Hopf代数_渗逾_Ising_时间晶体_深层同构.md",
+      "dependencies": [
+        "iso-113",
+        "iso-112",
+        "iso-111"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0279"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-106",
+      "content": " RT TQFT |\n| iso-105 | 4D Hopf范畴 ↔ 2-Chern-Simons组合量化 | Hopf algebra categorification → 4D TQFT |\n| iso-106 | Kuperberg不变量 ↔ Hennings不变量 ↔ RT | Z_{Kup} = |Z_{Henn}|² = TV = |RT|² 三角关系 |\n| iso-107 | Drinfeld center Z(C) ↔ Modular category | Z(C) = modular = RT输入 = Chern-Simons输出 |\n\n### 时间晶体深层同构 (3)\n\n",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v35_Hopf代数_渗逾_Ising_时间晶体_深层同构.md",
+      "dependencies": [
+        "iso-106",
+        "iso-105",
+        "iso-107"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0280"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-104",
+      "content": "\n**统一原理**: Ising模型在gyroid几何上的临界行为 ↔ 渗逾的universality class ↔ 量子退火的能量 landscape\n\n---\n\n## 二、v35 新同构体系 (iso-104 ~ iso-113)\n\n### Hopf代数深层同构 (4)\n\n| ID | 同构 | 核心内容 |\n|----|------|---------|\n| iso-104 | Hopf代数 ↔ Reshetikhin-Turaev TQFT | Drinfeld-Jimbo量子群Hopf → ribbon category → RT TQFT |\n| iso-105 | 4D Hop",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v35_Hopf代数_渗逾_Ising_时间晶体_深层同构.md",
+      "dependencies": [
+        "iso-104",
+        "iso-113",
+        "iso-105"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0281"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-112",
+      "content": "-|\n| iso-111 | Ising模型 ↔ 渗逾理论 | Kramers-Wannier duality: Ising critical ↔ percolation threshold |\n| iso-112 | Gyroid几何 ↔ 量子纠错表面码 | TPMS的拓扑保护 ↔ surface code的拓扑保护 |\n| iso-113 | 量子退火 ↔ VUF变分原理 | D-Wave Ising最小化 ↔ VUF的变分最小化 |\n\n---\n\n## 三、Hopf代数 ↔ UCIF²的理论框架\n\n### Hopf代数的UCIF²解读\n\nHopf代数是UCIF²理论框架中的**核心代数结构",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v35_Hopf代数_渗逾_Ising_时间晶体_深层同构.md",
+      "dependencies": [
+        "iso-113",
+        "iso-112",
+        "iso-111"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0282"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-064",
+      "content": "pf代数到TQFT的构造\n- 有限维factorizable ribbon Hopf代数 → modular category → TQFT\n\n**对UCIF²的意义**: Hopf代数是连接量子群(iso-064)、纽结不变量、Chern-Simons理论和TQFT(iso-049)的统一代数结构。\n\n#### 1.1.2 4D 2-Chern-Simons的Hopf范畴 (2025)\n\n**论文**: \"Combinatorial quantization of 4d 2-Chern-Simons theory I: the Hopf category of higher-graph st",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v35_Hopf代数_渗逾_Ising_时间晶体_深层同构.md",
+      "dependencies": [
+        "iso-064",
+        "iso-049"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0283"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-110",
+      "content": " | 离散时间平移对称性破缺 ↔ Floquet band structure |\n| iso-109 | Hopf分岔 ↔ VUF认识论相变 | 连续→离散时间晶体 ↔ σ=0.5临界跃迁 |\n| iso-110 | 时间晶体畴壁 ↔ VUF边界条件 | 两个时间晶体构型间的domain wall ↔ 边界态 |\n\n### Ising-渗逾-Gyroid-量子退火同构 (3)\n\n| ID | 同构 | 核心内容 |\n|----|------|---------|\n| iso-111 | Ising模型 ↔ 渗逾理论 | Kramers-Wannier duality: Ising criti",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v35_Hopf代数_渗逾_Ising_时间晶体_深层同构.md",
+      "dependencies": [
+        "iso-110",
+        "iso-109",
+        "iso-111"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0284"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "同构 iso-049",
+      "content": "on Hopf代数 → modular category → TQFT\n\n**对UCIF²的意义**: Hopf代数是连接量子群(iso-064)、纽结不变量、Chern-Simons理论和TQFT(iso-049)的统一代数结构。\n\n#### 1.1.2 4D 2-Chern-Simons的Hopf范畴 (2025)\n\n**论文**: \"Combinatorial quantization of 4d 2-Chern-Simons theory I: the Hopf category of higher-graph states\" (arXiv:2501.06486)\n\n**核心发现**:",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v35_Hopf代数_渗逾_Ising_时间晶体_深层同构.md",
+      "dependencies": [
+        "iso-064",
+        "iso-049"
+      ],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0285"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "UCIF2 v42 Ultimate Functor U and Meta-Meta Theory",
+      "content": "## Paradigm Breakthrough: From Sixfold Unity to Ultimate Functor U  ---",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v42_Ultimate_Functor_U.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0286"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "Paradigm Breakthrough: From Sixfold Unity to Ultimate Functor U",
+      "content": "---  ## I. High-Order Unification: Four Ultimate Directions",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v42_Ultimate_Functor_U.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lvlu_node_0287"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "I. High-Order Unification: Four Ultimate Directions",
+      "content": "### 1.1 Motivic Framework  ```",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v42_Ultimate_Functor_U.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0288"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "1.1 Motivic Framework",
+      "content": "``` M_Q(i) = M_triv + M_chi-4",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v42_Ultimate_Functor_U.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lvlu_node_0289"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "1.2 Perfectoid Spaces",
+      "content": "Prismatic cohomology unifies all p-adic theories Tilting equivalence: X (char 0) <-> X^flat (char p)",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v42_Ultimate_Functor_U.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0290"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "1.3 Period Conjecture",
+      "content": "trdeg_Q Q(Omega, 2*pi*i) = 2 Omega/pi, Omega^2/pi, Omega/(2*pi) are NOT simple rationals",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v42_Ultimate_Functor_U.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0291"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "1.4 Mumford-Tate Group",
+      "content": "MT(E) = T_Q(i) = Res_{Q(i)/Q} G_m Hodge decomposition: H^10 + H^01 Omega is the H^10 period",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v42_Ultimate_Functor_U.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0292"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "II. Deep Isomorphism Chain",
+      "content": "``` Spectral {rho_n} <-> Arithmetic {p}  (Explicit Formula)        |                   |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v42_Ultimate_Functor_U.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0293"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "III. Meta-Meta Theory: Ultimate Functor U",
+      "content": "### 3.1 Four Axioms Equivalent to Ultimate Functor U  | Axiom | Trace | Value | L-Function |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v42_Ultimate_Functor_U.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0294"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "3.1 Four Axioms Equivalent to Ultimate Functor U",
+      "content": "| Axiom | Trace | Value | L-Function | |-------|-------|-------|------------| | A1 | tr(U(triv)) | zeta(2) = pi^2/6 = 1.6449... | Riemann zeta |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v42_Ultimate_Functor_U.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0295"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "3.2 Formalization Kernel",
+      "content": "``` ArithGeom --U--> RepTheory     |              |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v42_Ultimate_Functor_U.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0296"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "3.3 Theorem 1.4: U is fully faithful",
+      "content": "| Property | Guarantee | Source | |----------|-----------|--------| | Faithful | Anabelian geometry | Mochizuki: pi_1^et(X) determines X |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v42_Ultimate_Functor_U.md",
+      "dependencies": [],
+      "pedestal_mapping": "CC",
+      "node_id": "lvlu_node_0297"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "IV. Deep Isomorphism Network (All Paths)",
+      "content": "``` Spectral --Explicit Formula--> Arithmetic --Euler Product--> Motivic    ^                                                          |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v42_Ultimate_Functor_U.md",
+      "dependencies": [],
+      "pedestal_mapping": "KG",
+      "node_id": "lvlu_node_0298"
+    },
+    {
+      "line_id": "lvlu",
+      "node_type": "concept",
+      "name": "V. v42 New Isomorphisms (iso-170 ~ iso-179)",
+      "content": "### Ultimate Functor U Isomorphisms (10)  | ID | Isomorphism | Core Content |",
+      "source_file": "/mnt/agents/output/UCIF2-OS-Source/public/docs/VUF_v42_Ultimate_Functor_U.md",
+      "dependencies": [],
+      "pedestal_mapping": "IN",
+      "node_id": "lvlu_node_0299"
+    }
+  ]
+}

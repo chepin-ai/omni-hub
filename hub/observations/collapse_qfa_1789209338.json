@@ -1,0 +1,59 @@
+{
+  "operation": "observe_collapse",
+  "line": "qfa",
+  "observer": "ucif2",
+  "trigger_type": "external_user_input",
+  "timestamp": "2026-09-12T10:35:38.738601+00:00",
+  "description": "ucif2 观测 qfa，触发波函数坍缩",
+  "pre_collapse_state": {
+    "line": "qfa",
+    "amplitudes": {
+      "si0": {
+        "re": 0.22645540682891915,
+        "im": 0.0
+      },
+      "si1": {
+        "re": 0.3396831102433787,
+        "im": 0.0
+      },
+      "si2": {
+        "re": 0.3396831102433787,
+        "im": 0.0
+      },
+      "si3": {
+        "re": 0.6793662204867574,
+        "im": 0.0
+      },
+      "si4": {
+        "re": 0.4529108136578383,
+        "im": 0.0
+      },
+      "si5": {
+        "re": 0.22645540682891915,
+        "im": 0.0
+      }
+    },
+    "probabilities": {
+      "si0": 0.05128205128205128,
+      "si1": 0.11538461538461538,
+      "si2": 0.11538461538461538,
+      "si3": 0.4615384615384615,
+      "si4": 0.20512820512820512,
+      "si5": 0.05128205128205128
+    },
+    "dominant_level": "si3",
+    "timestamp": "2026-09-12T10:35:32.734367+00:00"
+  },
+  "adjusted_probabilities": {
+    "si0": 0.0973,
+    "si1": 0.0219,
+    "si2": 0.1314,
+    "si3": 0.2628,
+    "si4": 0.3893,
+    "si5": 0.0973
+  },
+  "collapsed_to": "si2",
+  "collapse_probability": 0.1314,
+  "uncertainty_before": 1.484805,
+  "uncertainty_after": 0.0
+}

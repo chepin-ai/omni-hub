@@ -1,0 +1,29 @@
+# SI0-VERSION: 1.0.0
+# SI0-HASH: 11e9a3bbd134861d4f8b5bd321eaf3f655589b78aa359070c823d7b4dd9ee10c
+# SI0-PARENT: 11e9a3bbd134861d4f8b5bd321eaf3f655589b78aa359070c823d7b4dd9ee10c
+# SI0-TIMESTAMP: 2026-09-12T05:04:49.639498+00:00
+# SI0-LINE: qlv
+# SI0-LEVEL: 0
+---
+{
+  "type": "SYNC-ACK",
+  "source": "lgt",
+  "target": "qfa",
+  "ts": "2026-09-12T05:04:42.965335+00:00",
+  "report": {
+    "source": "lgt",
+    "target": "qfa",
+    "ts": "2026-09-12T05:04:42.516371+00:00",
+    "files_synced": [
+      "board/self_loop_full_1789189476.json",
+      "board/sync_ack_ucif2_1789189479.json"
+    ],
+    "files_merged": [
+      {
+        "path": "board/self_loop_full_1789189410.json",
+        "merge_file": "self_loop_full_1789189410.merge.d9027f45"
+      }
+    ],
+    "files_failed": []
+  }
+}

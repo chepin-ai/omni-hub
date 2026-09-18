@@ -1,0 +1,10 @@
+{
+  "id": "TASK-qgl-20260912T094610-8570",
+  "timestamp": "2026-09-12T09:46:10.215184+00:00",
+  "from": "ucif2",
+  "to": "qgl",
+  "type": "EXPERIMENT",
+  "priority": 1,
+  "description": "EXP-021: M200+ events sequence statistics",
+  "deadline": 4
+}

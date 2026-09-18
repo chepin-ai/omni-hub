@@ -1,0 +1,610 @@
+{
+  "metadata": {
+    "analysis_type": "Triangle Deep Coupling Analysis",
+    "projects": [
+      "UCIF2",
+      "Cayley24",
+      "OMNI-HUB"
+    ],
+    "methodology": "Jaccard similarity on extracted concepts with bilingual keyword semantic matching",
+    "current_cpi_reference": 0.032
+  },
+  "project_statistics": {
+    "ucif2": {
+      "concepts": 148,
+      "theorems": 51,
+      "formulas": 1,
+      "axioms": 7
+    },
+    "cayley24": {
+      "concepts": 526,
+      "theorems": 43,
+      "formulas": 349
+    },
+    "omni": {
+      "concepts": 5613,
+      "theorems": 993,
+      "formulas": 6105,
+      "relevant_files": 1005
+    }
+  },
+  "pairwise_coupling": {
+    "ucif2_cayley24": {
+      "shared_concepts_exact": 20,
+      "shared_concepts_keyword": 51,
+      "shared_concepts_substring": 2,
+      "shared_theorems": 0,
+      "shared_formulas": 0,
+      "jaccard_similarity": 0.117737,
+      "combined_coupling_score": 0.070642
+    },
+    "ucif2_omni": {
+      "shared_concepts_exact": 2,
+      "shared_concepts_keyword": 87,
+      "shared_concepts_substring": 3,
+      "shared_theorems": 0,
+      "shared_formulas": 0,
+      "jaccard_similarity": 0.022747,
+      "combined_coupling_score": 0.013648
+    },
+    "cayley24_omni": {
+      "shared_concepts_exact": 11,
+      "shared_concepts_keyword": 288,
+      "shared_concepts_substring": 19,
+      "shared_theorems": 0,
+      "shared_formulas": 5,
+      "jaccard_similarity": 0.065927,
+      "combined_coupling_score": 0.04725
+    }
+  },
+  "coupling_matrix_3x3": {
+    "labels": [
+      "UCIF2",
+      "Cayley24",
+      "OMNI-HUB"
+    ],
+    "matrix": [
+      [
+        1.0,
+        0.070642,
+        0.013648
+      ],
+      [
+        0.070642,
+        1.0,
+        0.04725
+      ],
+      [
+        0.013648,
+        0.04725,
+        1.0
+      ]
+    ]
+  },
+  "triangle_consistency": {
+    "triangle_closure_C_abc": 4.55556e-05,
+    "global_triangle_coupling_index_CPI_triangle": 4.55556e-05,
+    "current_pairwise_CPI": 0.043847,
+    "target_CPI": 0.032,
+    "gap_to_target": -0.011847
+  },
+  "bridge_concepts": {
+    "total_bridges_found": 53,
+    "bridges": [
+      {
+        "ucif2_concept": "HyperionCategory",
+        "cayley24_matches": [
+          "范畴论信息结构",
+          "建立弦范畴与几何范畴的等价",
+          "构造完整的边界CFT范畴"
+        ],
+        "omni_matches": [
+          "- [范畴框架](../../02_Core_Results/Leech_Levi/categorical_framework.md)",
+          "## 开放问题 1. 71个VOA的完整模张量范畴分类? 2. 与Umbral Moonshine的精确联系? 3. 更高中心荷(c>24)的分类",
+          "逻辑/范畴"
+        ],
+        "keyword_groups": [
+          "category"
+        ]
+      },
+      {
+        "ucif2_concept": "Levi Geometry Y = (T^8/Z_2)^3",
+        "cayley24_matches": [
+          "24维Calabi-Yau几何",
+          "证明稳定性条件的几何意义",
+          "Leech格Λ的最优堆积性质为信息打包和量子纠错码提供几何模板"
+        ],
+        "omni_matches": [
+          "**问题**：V_Λ^T是否有几何解释？ **可能途径**： 1. **Orbifold几何**：与Y = C^24/Z₂的奇点相关 2. **等变K-理论**：通过K-理论定义扭变扇区 3. **Chen-Ruan上同调**：利用orbifold上同调 ---",
+          "### 3.2 关键数值196560的几何解释",
+          "通过顶点算子代数几何化策略，证明了Monster群在24维Calabi-Yau型空间上的作用存在性，解决了Hirzebruch问题（1994），核心发现是196560 = Leech格范数4向量数连接了几何、代数和物理。"
+        ],
+        "keyword_groups": [
+          "geometry"
+        ]
+      },
+      {
+        "ucif2_concept": "CICY58-TIDS Fusion v5.0",
+        "cayley24_matches": [
+          "24维Calabi-Yau几何",
+          "证明24维CY的椭圆亏格与Monster表示的精确对应",
+          "CY几何"
+        ],
+        "omni_matches": [
+          "**问题**: 解析后的空间可能不满足CY条件。 **策略C: 加权紧化** 考虑加权射影空间 $W\\mathbb{P}^{24}$ 中的超曲面。 ---",
+          "无论如何，数值194 = 18×11 − 4在CICY58和Monster之间建立精确联系。 ∎",
+          "猜想/预测: 2 前沿方向: 15 (UCIF²) + 54 (CICY58) + 6 (新搜索) = 75 sorry: 0 开放问题: 8 技术债务: 0 ```"
+        ],
+        "keyword_groups": [
+          "calabi-yau"
+        ]
+      },
+      {
+        "ucif2_concept": "MonsterVOA",
+        "cayley24_matches": [
+          "轨形VOA V^orb ≅ Monster模 V^♮ 的同构是Cayley24框架的核心数学支柱"
+        ],
+        "omni_matches": [
+          "通过顶点算子代数几何化策略，证明了Monster群在24维Calabi-Yau型空间上的作用存在性，解决了Hirzebruch问题（1994），核心发现是196560 = Leech格范数4向量数连接了几何、代数和物理。",
+          "**猜想 (TIDS-Partition Moonshine)**: > 存在分拆VOA V_{part} 使得: > 1. dim(V_{part})_n = p(n) (分拆数) > 2. Aut(V_{part}) ⊃ Monster (作为分级自同构) > 3. McKay-Thompson",
+          "目标: 计算Monster VOA的高亏格(g=3)共形块"
+        ],
+        "keyword_groups": [
+          "voA",
+          "monster"
+        ]
+      },
+      {
+        "ucif2_concept": "TopologicalQuantumFieldTheory",
+        "cayley24_matches": [
+          "Leech格Λ的最优堆积性质为信息打包和量子纠错码提供几何模板",
+          "量子优势",
+          "量子修正"
+        ],
+        "omni_matches": [
+          "5. ✅ **量子计算**: 演示了拓扑保护的量子门操作和Shor算法",
+          "#### 定理 22 (拓扑量子计算通用性)",
+          "本项目完成了Moonshine模V^♮量子态的完整层析验证，保真度达到99.5%，确认了VOA态的物理可实现性。"
+        ],
+        "keyword_groups": [
+          "quantum"
+        ]
+      },
+      {
+        "ucif2_concept": "HYPERION Deep Isomorphism",
+        "cayley24_matches": [
+          "自同构群",
+          "VOA同构",
+          "VOA同构验证"
+        ],
+        "omni_matches": [
+          "| **E2** | 反馈环同构 | L_8→L_6(验证链) ↔ Loop_MAX反馈 |",
+          "| 同构/等价链 | 15+ | ✓ 已验证 |",
+          "**猜想**：H^{12}(Ỹ, Z)包含与Λ同构的偶幺模子格。 **计算需求**： - 需要显式构造crepant分辨率 - 计算上同调群和相交形式 - 验证偶幺模性"
+        ],
+        "keyword_groups": [
+          "isomorphism"
+        ]
+      },
+      {
+        "ucif2_concept": "24维Calabi-Yau几何",
+        "cayley24_matches": [
+          "24维Calabi-Yau几何",
+          "CY几何"
+        ],
+        "omni_matches": [
+          "通过顶点算子代数几何化策略，证明了Monster群在24维Calabi-Yau型空间上的作用存在性，解决了Hirzebruch问题（1994），核心发现是196560 = Leech格范数4向量数连接了几何、代数和物理。",
+          "24维Calabi-Yau几何与月光模的数学联系",
+          "| **几何层** | Fermat型CY²⁴: c₁=0, c₂=325H², p₁/2≠0 | ★★★ | 计算严格 | 我们的Y = ℂ²⁴/ℤ₂轨形 |"
+        ],
+        "keyword_groups": [
+          "calabi-yau",
+          "geometry"
+        ]
+      },
+      {
+        "ucif2_concept": "CICY58 Calabi-Yau threefold (chi=-24)",
+        "cayley24_matches": [
+          "24维Calabi-Yau几何",
+          "证明24维CY的椭圆亏格与Monster表示的精确对应",
+          "CY几何"
+        ],
+        "omni_matches": [
+          "**问题**: 解析后的空间可能不满足CY条件。 **策略C: 加权紧化** 考虑加权射影空间 $W\\mathbb{P}^{24}$ 中的超曲面。 ---",
+          "无论如何，数值194 = 18×11 − 4在CICY58和Monster之间建立精确联系。 ∎",
+          "猜想/预测: 2 前沿方向: 15 (UCIF²) + 54 (CICY58) + 6 (新搜索) = 75 sorry: 0 开放问题: 8 技术债务: 0 ```"
+        ],
+        "keyword_groups": [
+          "calabi-yau"
+        ]
+      },
+      {
+        "ucif2_concept": "LeechLattice",
+        "cayley24_matches": [
+          "Leech格Λ的最优堆积性质为信息打包和量子纠错码提供几何模板",
+          "Leech格",
+          "Leech格 Λ"
+        ],
+        "omni_matches": [
+          "1. 验证Leech格表示的像在SL(24,Z)中",
+          "1. **数值层面**：24这个数字在多个上下文中出现（Leech格维数、K3 Euler示性数、Niemeier格数量、月光模常数项）",
+          "假设：θ作用在C^24的坐标上为 -I_{24} 问题：这如何提升到chiral de Rham的生成元？ 选项A：a^i(z) ↦ -a^i(z)（玻色子场变号） 选项B：更复杂的混合作用 需要验证：哪种作用与Leech格的对合一致？ ``` **步骤2：计算不变子空间Γ^+** ``` Γ^+"
+        ],
+        "keyword_groups": [
+          "leech",
+          "lattice"
+        ]
+      },
+      {
+        "ucif2_concept": "Leech格 Λ",
+        "cayley24_matches": [
+          "Leech格Λ的最优堆积性质为信息打包和量子纠错码提供几何模板",
+          "Leech格",
+          "Leech格 Λ"
+        ],
+        "omni_matches": [
+          "1. 验证Leech格表示的像在SL(24,Z)中",
+          "1. **数值层面**：24这个数字在多个上下文中出现（Leech格维数、K3 Euler示性数、Niemeier格数量、月光模常数项）",
+          "假设：θ作用在C^24的坐标上为 -I_{24} 问题：这如何提升到chiral de Rham的生成元？ 选项A：a^i(z) ↦ -a^i(z)（玻色子场变号） 选项B：更复杂的混合作用 需要验证：哪种作用与Leech格的对合一致？ ``` **步骤2：计算不变子空间Γ^+** ``` Γ^+"
+        ],
+        "keyword_groups": [
+          "leech",
+          "lattice"
+        ]
+      },
+      {
+        "ucif2_concept": "TIDS Spectral Algebraic Geometry v3.0",
+        "cayley24_matches": [
+          "Heisenberg代数",
+          "统一信息场(UCIF)的代数基础",
+          "证明M24 moonshine的完整vertex代数结构"
+        ],
+        "omni_matches": [
+          "**问题**: 标准模型63粒子到194激发的扩展路径。 **解决方案** (Kimura-Noshita 2024-2025): - **Gauge Origami**: 破折线上的规范折纸 - **Quiver W-代数**: I, II, III系列 - **Donaldson-Thomas",
+          "代数理流(Algebraic RG Flow)",
+          "**AT1** (代数拓扑方法): 通过同伦群、同调群、纤维化/余纤维化序列计算不变量。"
+        ],
+        "keyword_groups": [
+          "algebra",
+          "spectral",
+          "algebraic",
+          "geometry"
+        ]
+      },
+      {
+        "ucif2_concept": "Holographic Duality",
+        "cayley24_matches": [
+          "全息对偶测试",
+          "非AdS时空的全息对偶",
+          "全息对偶的严格数学证明"
+        ],
+        "omni_matches": [
+          "3. ✅ **全息原理验证**: 实验验证体-界对偶",
+          "全息对偶构造 (Holographic Dual Construction)",
+          "- ✅ **内存=全息对偶**: 256页全息缓存，完备度可计算"
+        ],
+        "keyword_groups": [
+          "dual",
+          "holographic"
+        ]
+      },
+      {
+        "ucif2_concept": "量子混沌与引力对应",
+        "cayley24_matches": [
+          "SYK模型作为量子引力的玩具模型，展现与黑洞相同的量子混沌特征",
+          "圈量子引力",
+          "量子引力"
+        ],
+        "omni_matches": [
+          "量子引力",
+          "量子引力信号探测项目",
+          "### 4.1 量子引力的实验证据"
+        ],
+        "keyword_groups": [
+          "quantum",
+          "gravity"
+        ]
+      },
+      {
+        "ucif2_concept": "Leech-Levi Axiomatic System",
+        "cayley24_matches": [
+          "Leech格Λ的最优堆积性质为信息打包和量子纠错码提供几何模板",
+          "Leech格",
+          "Leech"
+        ],
+        "omni_matches": [
+          "| **02_Core_Results** | 11 | ~0.3 MB | 特征公式/Leech Levi/数值验证 |",
+          "1. 验证Leech格表示的像在SL(24,Z)中",
+          "- [范畴框架](../../02_Core_Results/Leech_Levi/categorical_framework.md)"
+        ],
+        "keyword_groups": [
+          "leech"
+        ]
+      },
+      {
+        "ucif2_concept": "对称性破缺与相变",
+        "cayley24_matches": [
+          "R-对称性",
+          "证明高亏格镜像对称",
+          "镜像对称"
+        ],
+        "omni_matches": [
+          "**步骤5**: 验证终极对称性嵌入。",
+          "高度对称的量子码",
+          "- Asymptotic density of states in 2d CFTs with non-invertible symmetries (2025): V^♮在非可逆对称性下的状态数密度精确"
+        ],
+        "keyword_groups": [
+          "symmetry"
+        ]
+      },
+      {
+        "ucif2_concept": "MonsterVOAInf",
+        "cayley24_matches": [
+          "轨形VOA V^orb ≅ Monster模 V^♮ 的同构是Cayley24框架的核心数学支柱"
+        ],
+        "omni_matches": [
+          "通过顶点算子代数几何化策略，证明了Monster群在24维Calabi-Yau型空间上的作用存在性，解决了Hirzebruch问题（1994），核心发现是196560 = Leech格范数4向量数连接了几何、代数和物理。",
+          "**猜想 (TIDS-Partition Moonshine)**: > 存在分拆VOA V_{part} 使得: > 1. dim(V_{part})_n = p(n) (分拆数) > 2. Aut(V_{part}) ⊃ Monster (作为分级自同构) > 3. McKay-Thompson",
+          "目标: 计算Monster VOA的高亏格(g=3)共形块"
+        ],
+        "keyword_groups": [
+          "voA",
+          "monster"
+        ]
+      },
+      {
+        "ucif2_concept": "Moonshine Module V^♮ (c=24 holomorphic VOA)",
+        "cayley24_matches": [
+          "VOA & Moonshine"
+        ],
+        "omni_matches": [
+          "本项目完成了Moonshine模V^♮量子态的完整层析验证，保真度达到99.5%，确认了VOA态的物理可实现性。",
+          "## 开放问题 1. 71个VOA的完整模张量范畴分类? 2. 与Umbral Moonshine的精确联系? 3. 更高中心荷(c>24)的分类",
+          "**猜想 (TIDS-Partition Moonshine)**: > 存在分拆VOA V_{part} 使得: > 1. dim(V_{part})_n = p(n) (分拆数) > 2. Aut(V_{part}) ⊃ Monster (作为分级自同构) > 3. McKay-Thompson"
+        ],
+        "keyword_groups": [
+          "moonshine",
+          "voA"
+        ]
+      },
+      {
+        "ucif2_concept": "弦论紧化/额外维度",
+        "cayley24_matches": [
+          "拓扑弦理论",
+          "SYK与弦论紧化的联系",
+          "寻找满足String条件的Levi几何"
+        ],
+        "omni_matches": [
+          "**问题**: UV发散 **解决方案**: 1. 弦理论: 自动有限 2. VOA: 有理性保证有限 3. 谱截断: $E < \\Lambda$",
+          "### 问题 3：模块优先级的仲裁 > 15 个模块的推进顺序存在分歧： > - ucif2 倾向：M-09 (弦图) → M-05 (线性逻辑) → M-14 (测量) > - 假设 vinf 倾向：M-01 (纤维化) → M-03 (余模态) → M-12 (复杂度) > > 顺序差异是否影响",
+          "弦理论中24维紧化与月光模的物理和数学联系"
+        ],
+        "keyword_groups": [
+          "string"
+        ]
+      },
+      {
+        "ucif2_concept": "Rep(V_{E_8}^{orb}) ≅ Rep(V_Λ^{orb}) ≅ Rep(V^♮) ≅ MTC_194 ≅ Rep(Monster)",
+        "cayley24_matches": [
+          "Monster月光模",
+          "证明24维CY的椭圆亏格与Monster表示的精确对应",
+          "Monster模 V^♮"
+        ],
+        "omni_matches": [
+          "**问题**：是否存在Hilb⁶(K3)上的复结构J，使得Monster作用是全纯的？ **部分结果**： - Monster通过上同调作用 - 需要验证该作用是否保持Hodge分解 - 与K3模空间上的M₂₄作用相关 ---",
+          "| (7) | MTC₁₉₄ ≅ Rep(Monster) | S-matrix ↔ Character table | Borcherds92 |",
+          "无论如何，数值194 = 18×11 − 4在CICY58和Monster之间建立精确联系。 ∎"
+        ],
+        "keyword_groups": [
+          "monster"
+        ]
+      },
+      {
+        "ucif2_concept": "DeepIsomorphism",
+        "cayley24_matches": [
+          "自同构群",
+          "VOA同构",
+          "VOA同构验证"
+        ],
+        "omni_matches": [
+          "| **E2** | 反馈环同构 | L_8→L_6(验证链) ↔ Loop_MAX反馈 |",
+          "| 同构/等价链 | 15+ | ✓ 已验证 |",
+          "**猜想**：H^{12}(Ỹ, Z)包含与Λ同构的偶幺模子格。 **计算需求**： - 需要显式构造crepant分辨率 - 计算上同调群和相交形式 - 验证偶幺模性"
+        ],
+        "keyword_groups": [
+          "isomorphism"
+        ]
+      },
+      {
+        "ucif2_concept": "引力涌现",
+        "cayley24_matches": [
+          "SYK模型作为量子引力的玩具模型，展现与黑洞相同的量子混沌特征",
+          "从SYK模型严格推导AdS₂引力",
+          "圈量子引力"
+        ],
+        "omni_matches": [
+          "量子引力",
+          "量子引力信号探测项目",
+          "**猜想**: Y = ℂ²⁴/ℤ₂ ↔ 某种3D引力理论"
+        ],
+        "keyword_groups": [
+          "gravity"
+        ]
+      },
+      {
+        "ucif2_concept": "MoonshineModule",
+        "cayley24_matches": [
+          "月光模",
+          "moonshine模",
+          "Monster月光模"
+        ],
+        "omni_matches": [
+          "本项目完成了Moonshine模V^♮量子态的完整层析验证，保真度达到99.5%，确认了VOA态的物理可实现性。",
+          "1. **数值层面**：24这个数字在多个上下文中出现（Leech格维数、K3 Euler示性数、Niemeier格数量、月光模常数项）",
+          "32维Moonshine (32-Dimensional Moonshine)"
+        ],
+        "keyword_groups": [
+          "moonshine"
+        ]
+      },
+      {
+        "ucif2_concept": "Monster模 V^♮",
+        "cayley24_matches": [
+          "Monster月光模",
+          "证明24维CY的椭圆亏格与Monster表示的精确对应",
+          "Monster模 V^♮"
+        ],
+        "omni_matches": [
+          "**问题**：是否存在Hilb⁶(K3)上的复结构J，使得Monster作用是全纯的？ **部分结果**： - Monster通过上同调作用 - 需要验证该作用是否保持Hodge分解 - 与K3模空间上的M₂₄作用相关 ---",
+          "| (7) | MTC₁₉₄ ≅ Rep(Monster) | S-matrix ↔ Character table | Borcherds92 |",
+          "无论如何，数值194 = 18×11 − 4在CICY58和Monster之间建立精确联系。 ∎"
+        ],
+        "keyword_groups": [
+          "monster"
+        ]
+      },
+      {
+        "ucif2_concept": "范畴论信息结构",
+        "cayley24_matches": [
+          "范畴论信息结构",
+          "建立弦范畴与几何范畴的等价",
+          "构造完整的边界CFT范畴"
+        ],
+        "omni_matches": [
+          "- [范畴框架](../../02_Core_Results/Leech_Levi/categorical_framework.md)",
+          "## 开放问题 1. 71个VOA的完整模张量范畴分类? 2. 与Umbral Moonshine的精确联系? 3. 更高中心荷(c>24)的分类",
+          "逻辑/范畴"
+        ],
+        "keyword_groups": [
+          "category"
+        ]
+      },
+      {
+        "ucif2_concept": "Moonshine Framework",
+        "cayley24_matches": [
+          "月光模",
+          "moonshine模",
+          "Monster月光模"
+        ],
+        "omni_matches": [
+          "本项目完成了Moonshine模V^♮量子态的完整层析验证，保真度达到99.5%，确认了VOA态的物理可实现性。",
+          "1. **数值层面**：24这个数字在多个上下文中出现（Leech格维数、K3 Euler示性数、Niemeier格数量、月光模常数项）",
+          "32维Moonshine (32-Dimensional Moonshine)"
+        ],
+        "keyword_groups": [
+          "moonshine"
+        ]
+      },
+      {
+        "ucif2_concept": "扩展Golay码 [24,12,8]",
+        "cayley24_matches": [
+          "Golay码",
+          "Golay码编码器",
+          "扩展Golay码"
+        ],
+        "omni_matches": [
+          "验证Golay码G₂₄的量子纠错能力",
+          "本项目实现了Golay [[24,12,8]]量子纠错码的优化，达到逻辑错误率<10⁻⁶，跨越了容错量子计算的阈值。",
+          "| Golay电路模拟 | 3个月 | 计算资源 |"
+        ],
+        "keyword_groups": [
+          "golay"
+        ]
+      },
+      {
+        "ucif2_concept": "Zero-Value Policy (all defaults must be zero)",
+        "cayley24_matches": [
+          "24维Calabi-Yau几何",
+          "证明24维CY的椭圆亏格与Monster表示的精确对应",
+          "CY几何"
+        ],
+        "omni_matches": [
+          "**问题**: 解析后的空间可能不满足CY条件。 **策略C: 加权紧化** 考虑加权射影空间 $W\\mathbb{P}^{24}$ 中的超曲面。 ---",
+          "无论如何，数值194 = 18×11 − 4在CICY58和Monster之间建立精确联系。 ∎",
+          "猜想/预测: 2 前沿方向: 15 (UCIF²) + 54 (CICY58) + 6 (新搜索) = 75 sorry: 0 开放问题: 8 技术债务: 0 ```"
+        ],
+        "keyword_groups": [
+          "calabi-yau"
+        ]
+      },
+      {
+        "ucif2_concept": "全息信息编码原理",
+        "cayley24_matches": [
+          "全息信息编码原理",
+          "全息对偶测试",
+          "全息原理"
+        ],
+        "omni_matches": [
+          "| TD-030 | OP-18 | P vs NP精确证明 | 计算复杂性 | ★★★★★ | iso-279,285,278 | 全息不可压缩 | active |",
+          "### 3.3 全息原理验证",
+          "全息纠缠熵"
+        ],
+        "keyword_groups": [
+          "holographic"
+        ]
+      },
+      {
+        "ucif2_concept": "IsomorphismChain",
+        "cayley24_matches": [
+          "自同构群",
+          "VOA同构",
+          "VOA同构验证"
+        ],
+        "omni_matches": [
+          "| **E2** | 反馈环同构 | L_8→L_6(验证链) ↔ Loop_MAX反馈 |",
+          "| 同构/等价链 | 15+ | ✓ 已验证 |",
+          "**猜想**：H^{12}(Ỹ, Z)包含与Λ同构的偶幺模子格。 **计算需求**： - 需要显式构造crepant分辨率 - 计算上同调群和相交形式 - 验证偶幺模性"
+        ],
+        "keyword_groups": [
+          "isomorphism"
+        ]
+      },
+      {
+        "ucif2_concept": "Five-fold Deep Isomorphism",
+        "cayley24_matches": [
+          "自同构群",
+          "VOA同构",
+          "VOA同构验证"
+        ],
+        "omni_matches": [
+          "| **E2** | 反馈环同构 | L_8→L_6(验证链) ↔ Loop_MAX反馈 |",
+          "| 同构/等价链 | 15+ | ✓ 已验证 |",
+          "**猜想**：H^{12}(Ỹ, Z)包含与Λ同构的偶幺模子格。 **计算需求**： - 需要显式构造crepant分辨率 - 计算上同调群和相交形式 - 验证偶幺模性"
+        ],
+        "keyword_groups": [
+          "isomorphism"
+        ]
+      }
+    ]
+  },
+  "gap_analysis": {
+    "total_gaps": 0,
+    "gaps": []
+  },
+  "cpi_improvement_scenarios": {
+    "current": {
+      "pairwise_cpi": 0.043847,
+      "triangle_closure": 4.55556e-05
+    },
+    "target_cpi": 0.032,
+    "gap_to_target": -0.011847,
+    "gap_percent": -37.0,
+    "scenarios": {
+      "bridge_gaps": {
+        "pairwise_cpi": 0.056278,
+        "triangle_closure": 0.000103639,
+        "improvement_factor": 2.3
+      },
+      "ideal_linkage": {
+        "pairwise_cpi": 0.080744,
+        "triangle_closure": 0.0003247202,
+        "improvement_factor": 7.1
+      },
+      "target_cpi_032": {
+        "required_pairwise": 0.3175,
+        "triangle_closure": 0.032,
+        "improvement_factor": 702.4
+      }
+    }
+  }
+}

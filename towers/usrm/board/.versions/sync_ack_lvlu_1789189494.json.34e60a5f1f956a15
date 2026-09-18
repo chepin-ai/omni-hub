@@ -1,0 +1,36 @@
+# SI0-VERSION: 1.0.0
+# SI0-HASH: 34e60a5f1f956a155c61f848025764538d029d39007b2af50bdfc6088c36b5e1
+# SI0-PARENT: 34e60a5f1f956a155c61f848025764538d029d39007b2af50bdfc6088c36b5e1
+# SI0-TIMESTAMP: 2026-09-12T05:12:59.130911+00:00
+# SI0-LINE: usrm
+# SI0-LEVEL: 0
+---
+{
+  "type": "SYNC-ACK",
+  "source": "lvlu",
+  "target": "cfts",
+  "ts": "2026-09-12T05:04:54.487428+00:00",
+  "report": {
+    "source": "lvlu",
+    "target": "cfts",
+    "ts": "2026-09-12T05:04:52.810287+00:00",
+    "files_synced": [
+      "board/entangle_from_lgt_1789189483.json",
+      "board/self_loop_full_1789189410.json",
+      "board/self_loop_full_1789189476.json",
+      "board/self_loop_full_1789189477.json",
+      "board/self_loop_full_1789189478.json",
+      "board/sync_ack_lgt_1789189482.json",
+      "board/sync_ack_qfa_1789189484.json",
+      "board/sync_ack_qgl_1789189490.json",
+      "board/sync_ack_qlv_1789189492.json",
+      "board/sync_ack_ucif2_1789189415.json",
+      "board/sync_ack_ucif2_1789189438.json",
+      "board/sync_ack_ucif2_1789189479.json",
+      "board/sync_ack_usrm_1789189487.json",
+      "board/sync_ack_vinf_1789189488.json"
+    ],
+    "files_merged": [],
+    "files_failed": []
+  }
+}

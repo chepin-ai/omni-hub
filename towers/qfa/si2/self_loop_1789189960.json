@@ -1,0 +1,34 @@
+{
+  "line": "qfa",
+  "ts": "2026-09-12T05:12:39.853972+00:00",
+  "processed": [],
+  "expired": [
+    {
+      "msg_id": "2db9f05a-8dee-4b3c-9b6f-19ccb07152d7",
+      "age_sec": 455.906221
+    },
+    {
+      "msg_id": "3641aea8-a6fe-43c2-8f76-00ea056076f7",
+      "age_sec": 476.910358
+    },
+    {
+      "msg_id": "41f31bc8-0715-4154-9573-b914c5b5f055",
+      "age_sec": 458.840469
+    },
+    {
+      "msg_id": "570d9c33-15dc-4c0d-9c7e-c3ac67819406",
+      "age_sec": 457.857277
+    },
+    {
+      "msg_id": "d9c732ff-4fd5-4b50-9d96-1ff3facae8bf",
+      "age_sec": 455.560011
+    },
+    {
+      "msg_id": "f00417f5-eeb4-40a7-a557-0be2acfc37b4",
+      "age_sec": 456.465311
+    }
+  ],
+  "failed": [],
+  "pending_acks": 6,
+  "stalled": false
+}

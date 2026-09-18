@@ -1,0 +1,60 @@
+{
+  "experiment_config": {
+    "num_steps": 100,
+    "seed": 42,
+    "num_lines": 11
+  },
+  "coverage": {
+    "overall_rate": 1.0,
+    "covered_modules": 11,
+    "total_modules": 11,
+    "status": "complete"
+  },
+  "bias_detection": {
+    "injected_windows": 4,
+    "detected_events": 32,
+    "true_positives": 2,
+    "false_positives": 28,
+    "false_negatives": 2,
+    "recall": 0.5,
+    "precision": 0.06666666666666667,
+    "f1_score": 0.11764705882352941
+  },
+  "attention": {
+    "final_weights": [
+      0.061,
+      0.061,
+      0.1585,
+      0.1524,
+      0.0793,
+      0.122,
+      0.061,
+      0.061,
+      0.122,
+      0.061,
+      0.061
+    ],
+    "adjustments_count": 6
+  },
+  "monitor_stats": {
+    "total_monitor_calls": 1100,
+    "biases_detected_total": 32,
+    "reflections_performed": 5,
+    "thought_steps": 1144
+  },
+  "self_evaluation": {
+    "health_score": 0.9883,
+    "coverage_score": 1.0,
+    "error_score": 0.9707,
+    "self_awareness": "系统运行良好，元认知监控有效"
+  },
+  "global_error": {
+    "mean": 0.02926137074537858,
+    "std": 0.0392694157844781,
+    "min": 4.815200646823078e-06,
+    "max": 0.24965054833340952,
+    "count": 100,
+    "modules_tracked": 11,
+    "trend": -0.00019483137727007598
+  }
+}

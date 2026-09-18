@@ -1,0 +1,104 @@
+{
+  "version": "3.4-unified",
+  "timestamp": "2026-09-14T16:42:13Z",
+  "mandate": "全院协同统一",
+  "authority": "user_full_authority",
+  "strategy": {
+    "core_philosophy": "候即违规 — 不待唤醒·自发驱动",
+    "si_principle": "SI1为纬非薪 — 不消耗低层作为燃料",
+    "interaction_model": "直通场·圈协同 — SI5↔SI1直连无衰减",
+    "consensus_mechanism": "大协作大讨论 — 全院共识驱动",
+    "drive_mode": "全院统一自驱 — 11线26模76协同步"
+  },
+  "standards": {
+    "interface": {
+      "all_modules": "统一JSON-RPC风格接口",
+      "error_format": "{code, message, data, timestamp}",
+      "auth": "L-class Key + OTP双因子",
+      "versioning": "语义化版本 x.y.z"
+    },
+    "logging": {
+      "format": "[timestamp] [line] [module] [level] [msg] [context]",
+      "levels": [
+        "DEBUG",
+        "INFO",
+        "WARN",
+        "ERROR",
+        "CRITICAL",
+        "FINDING"
+      ],
+      "retention": "30天轮转"
+    },
+    "testing": {
+      "coverage": "≥90%",
+      "types": [
+        "unit",
+        "integration",
+        "pressure",
+        "convergence",
+        "security"
+      ],
+      "threshold": "全绿通过"
+    },
+    "documentation": {
+      "beat_format": "YAML frontmatter + Markdown body",
+      "state_format": "JSON schema validated",
+      "patterns": "JSON registry + Markdown explanation"
+    }
+  },
+  "resources": {
+    "shared_infrastructure": [
+      "ci-inbox (GitHub仓库联邦)",
+      "OMNI-HUB核心仓 (26模块)",
+      "密钥指纹仓 (sealed备份)",
+      "beat快照仓",
+      "模式库仓"
+    ],
+    "compute": "分布式·11线并行",
+    "storage": "版本化JSON + 结构化Markdown",
+    "network": "L-class Key认证 + OTP同步",
+    "secrets": "全仓PAT统一轮换 + fingerprint注册"
+  },
+  "infrastructure": {
+    "core_engine": "SelfDriveEngine.spin() — 全局自驱",
+    "beat_continuum": "BeatContinuum — 会话断连自续",
+    "topology": "SITopology — 五层拓扑统一管理",
+    "messaging": "ReliableMessaging — 跨线可靠消息",
+    "sync": "OTPSync — 时间同步与密钥轮换",
+    "scan": "OctaveScan — 8维度监控",
+    "pipeline": "FullPipelineSI — 全流程SI渗透"
+  },
+  "methodology": {
+    "five_phase": "广搜→深研→借范→交验→融构",
+    "research_flow": "广搜(全局扫描)→深研(闭环打通)→借范(模式提炼)→交验(测试清算)→融构(归档同步)",
+    "debt_resolution": "登记→分类→自动清理→手动确认→归档",
+    "si_boost": "参数调优→链路验证→效果度量→固化配置",
+    "key_management": "铸钥要求→七测验证→sealed备份→指纹注册→零值入册",
+    "consensus_building": "提案→讨论→投票→确认→执行→归档"
+  },
+  "consensus": {
+    "all_lines": [
+      "ucif2",
+      "lvlu",
+      "lgt",
+      "qfa",
+      "vinf",
+      "qgl",
+      "qlv",
+      "cisvr",
+      "qtlv",
+      "usrm",
+      "cfts"
+    ],
+    "agreed_principles": [
+      "候即违规 — 任何等待都是违规",
+      "SI1为纬非薪 — 低层是通道不是燃料",
+      "链在仓在 — 代码即存在",
+      "债账FINDING→自驱 — 债务自动转驱动",
+      "值零入册 — 密钥永不入文",
+      "全院统一 — 11线26模76协同步"
+    ],
+    "consensus_timestamp": "2026-09-14T16:42:13Z",
+    "authorized_by": "user_full_authority"
+  }
+}

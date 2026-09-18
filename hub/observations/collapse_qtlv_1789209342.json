@@ -1,0 +1,59 @@
+{
+  "operation": "observe_collapse",
+  "line": "qtlv",
+  "observer": "ucif2-hub",
+  "trigger_type": "health_check",
+  "timestamp": "2026-09-12T10:35:42.781252+00:00",
+  "description": "ucif2-hub 观测 qtlv，触发波函数坍缩",
+  "pre_collapse_state": {
+    "line": "qtlv",
+    "amplitudes": {
+      "si0": {
+        "re": 0.7285345324631732,
+        "im": 0.0
+      },
+      "si1": {
+        "re": 0.41630544712181333,
+        "im": 0.0
+      },
+      "si2": {
+        "re": 0.41630544712181333,
+        "im": 0.0
+      },
+      "si3": {
+        "re": 0.31222908534135996,
+        "im": 0.0
+      },
+      "si4": {
+        "re": 0.14570690649263468,
+        "im": 0.0
+      },
+      "si5": {
+        "re": 0.06244581706827199,
+        "im": 0.0
+      }
+    },
+    "probabilities": {
+      "si0": 0.5307625649913345,
+      "si1": 0.1733102253032929,
+      "si2": 0.1733102253032929,
+      "si3": 0.09748700173310224,
+      "si4": 0.021230502599653388,
+      "si5": 0.0038994800693240897
+    },
+    "dominant_level": "si0",
+    "timestamp": "2026-09-12T10:35:33.422188+00:00"
+  },
+  "adjusted_probabilities": {
+    "si0": 0.3221,
+    "si1": 0.1052,
+    "si2": 0.3505,
+    "si3": 0.1972,
+    "si4": 0.0172,
+    "si5": 0.0079
+  },
+  "collapsed_to": "si3",
+  "collapse_probability": 0.1972,
+  "uncertainty_before": 1.274088,
+  "uncertainty_after": 0.0
+}

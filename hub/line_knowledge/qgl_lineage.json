@@ -1,0 +1,187 @@
+{
+  "line_id": "qgl",
+  "line_name": "量子引力",
+  "timestamp": 1789662470.3625367,
+  "version": "12.0.0",
+  "lineage_tree": {
+    "root": {
+      "name": "qgl",
+      "type": "line_root",
+      "children": [
+        "md_heading"
+      ],
+      "weight": 1.0
+    },
+    "branches": {
+      "md_heading": {
+        "type": "md_heading",
+        "node_count": 12,
+        "avg_relevance": 0.75,
+        "nodes": [
+          {
+            "name": "qgl线 SI5 升级自证报告",
+            "signature": "qgl-SI5-self-cert-report.md::heading:qgl线 SI5 升级自证报告",
+            "relevance": 0.75,
+            "source": "qgl-SI5-self-cert-report.md"
+          },
+          {
+            "name": "线基本信息",
+            "signature": "qgl-SI5-self-cert-report.md::heading:线基本信息",
+            "relevance": 0.75,
+            "source": "qgl-SI5-self-cert-report.md"
+          },
+          {
+            "name": "1. 升级资格评估",
+            "signature": "qgl-SI5-self-cert-report.md::heading:1. 升级资格评估",
+            "relevance": 0.75,
+            "source": "qgl-SI5-self-cert-report.md"
+          },
+          {
+            "name": "1.1 数据充分性: 0.87",
+            "signature": "qgl-SI5-self-cert-report.md::heading:1.1 数据充分性: 0.87",
+            "relevance": 0.75,
+            "source": "qgl-SI5-self-cert-report.md"
+          },
+          {
+            "name": "1.2 验证充分性: 0.88",
+            "signature": "qgl-SI5-self-cert-report.md::heading:1.2 验证充分性: 0.88",
+            "relevance": 0.75,
+            "source": "qgl-SI5-self-cert-report.md"
+          },
+          {
+            "name": "1.3 形式化程度: 0.81",
+            "signature": "qgl-SI5-self-cert-report.md::heading:1.3 形式化程度: 0.81",
+            "relevance": 0.75,
+            "source": "qgl-SI5-self-cert-report.md"
+          },
+          {
+            "name": "1.4 边界测试",
+            "signature": "qgl-SI5-self-cert-report.md::heading:1.4 边界测试",
+            "relevance": 0.75,
+            "source": "qgl-SI5-self-cert-report.md"
+          },
+          {
+            "name": "1.5 交叉验证: 0.91",
+            "signature": "qgl-SI5-self-cert-report.md::heading:1.5 交叉验证: 0.91",
+            "relevance": 0.75,
+            "source": "qgl-SI5-self-cert-report.md"
+          },
+          {
+            "name": "2. 核心能力演进",
+            "signature": "qgl-SI5-self-cert-report.md::heading:2. 核心能力演进",
+            "relevance": 0.75,
+            "source": "qgl-SI5-self-cert-report.md"
+          },
+          {
+            "name": "2.1 序列统计引擎 v4.0→v5.0",
+            "signature": "qgl-SI5-self-cert-report.md::heading:2.1 序列统计引擎 v4.0→v5.0",
+            "relevance": 0.75,
+            "source": "qgl-SI5-self-cert-report.md"
+          },
+          {
+            "name": "3. 验证数据",
+            "signature": "qgl-SI5-self-cert-report.md::heading:3. 验证数据",
+            "relevance": 0.75,
+            "source": "qgl-SI5-self-cert-report.md"
+          },
+          {
+            "name": "4. 结论",
+            "signature": "qgl-SI5-self-cert-report.md::heading:4. 结论",
+            "relevance": 0.75,
+            "source": "qgl-SI5-self-cert-report.md"
+          }
+        ]
+      }
+    }
+  },
+  "knowledge_nodes": [
+    {
+      "type": "md_heading",
+      "name": "qgl线 SI5 升级自证报告",
+      "source_file": "qgl-SI5-self-cert-report.md",
+      "signature": "qgl-SI5-self-cert-report.md::heading:qgl线 SI5 升级自证报告",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "线基本信息",
+      "source_file": "qgl-SI5-self-cert-report.md",
+      "signature": "qgl-SI5-self-cert-report.md::heading:线基本信息",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "1. 升级资格评估",
+      "source_file": "qgl-SI5-self-cert-report.md",
+      "signature": "qgl-SI5-self-cert-report.md::heading:1. 升级资格评估",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "1.1 数据充分性: 0.87",
+      "source_file": "qgl-SI5-self-cert-report.md",
+      "signature": "qgl-SI5-self-cert-report.md::heading:1.1 数据充分性: 0.87",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "1.2 验证充分性: 0.88",
+      "source_file": "qgl-SI5-self-cert-report.md",
+      "signature": "qgl-SI5-self-cert-report.md::heading:1.2 验证充分性: 0.88",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "1.3 形式化程度: 0.81",
+      "source_file": "qgl-SI5-self-cert-report.md",
+      "signature": "qgl-SI5-self-cert-report.md::heading:1.3 形式化程度: 0.81",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "1.4 边界测试",
+      "source_file": "qgl-SI5-self-cert-report.md",
+      "signature": "qgl-SI5-self-cert-report.md::heading:1.4 边界测试",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "1.5 交叉验证: 0.91",
+      "source_file": "qgl-SI5-self-cert-report.md",
+      "signature": "qgl-SI5-self-cert-report.md::heading:1.5 交叉验证: 0.91",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "2. 核心能力演进",
+      "source_file": "qgl-SI5-self-cert-report.md",
+      "signature": "qgl-SI5-self-cert-report.md::heading:2. 核心能力演进",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "2.1 序列统计引擎 v4.0→v5.0",
+      "source_file": "qgl-SI5-self-cert-report.md",
+      "signature": "qgl-SI5-self-cert-report.md::heading:2.1 序列统计引擎 v4.0→v5.0",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "3. 验证数据",
+      "source_file": "qgl-SI5-self-cert-report.md",
+      "signature": "qgl-SI5-self-cert-report.md::heading:3. 验证数据",
+      "relevance": 0.75
+    },
+    {
+      "type": "md_heading",
+      "name": "4. 结论",
+      "source_file": "qgl-SI5-self-cert-report.md",
+      "signature": "qgl-SI5-self-cert-report.md::heading:4. 结论",
+      "relevance": 0.75
+    }
+  ],
+  "node_count": 12,
+  "si_level": 1,
+  "activity_level": 0.4498,
+  "contribution_score": 0.4617
+}

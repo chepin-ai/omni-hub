@@ -1,0 +1,58 @@
+{
+  "operation": "superposition_state",
+  "line": "usrm",
+  "timestamp": "2026-09-12T10:35:43.328158+00:00",
+  "description": "创建/演化 usrm 的量子叠加态",
+  "state_vector": {
+    "line": "usrm",
+    "amplitudes": {
+      "si0": {
+        "re": 0.37160364578561345,
+        "im": 0.2388151621198967
+      },
+      "si1": {
+        "re": 0.6625891564490792,
+        "im": 0.0
+      },
+      "si2": {
+        "re": 0.4417261042993862,
+        "im": 0.0
+      },
+      "si3": {
+        "re": 0.3312945782245396,
+        "im": 0.0
+      },
+      "si4": {
+        "re": 0.2208630521496931,
+        "im": 0.0
+      },
+      "si5": {
+        "re": 0.11043152607484655,
+        "im": 0.0
+      }
+    },
+    "probabilities": {
+      "si0": 0.1951219512195122,
+      "si1": 0.4390243902439024,
+      "si2": 0.1951219512195122,
+      "si3": 0.1097560975609756,
+      "si4": 0.04878048780487805,
+      "si5": 0.012195121951219513
+    },
+    "dominant_level": "si1",
+    "timestamp": "2026-09-12T10:35:43.328592+00:00"
+  },
+  "entropy": 1.442698,
+  "purity": 0.1948,
+  "dominant_level": "si1",
+  "dominant_probability": 0.439,
+  "is_uniform_superposition": false,
+  "layer_distribution": {
+    "tower": 0.1951,
+    "spine": 0.439,
+    "wheel": 0.1951,
+    "cauldron": 0.1098,
+    "ring": 0.0488,
+    "hub": 0.0122
+  }
+}

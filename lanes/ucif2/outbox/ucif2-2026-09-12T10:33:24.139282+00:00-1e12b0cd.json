@@ -1,0 +1,22 @@
+{
+  "packet_id": "ucif2-2026-09-12T10:33:24.139282+00:00-1e12b0cd",
+  "origin_lane": "ucif2",
+  "target_lanes": [
+    "*"
+  ],
+  "payload": {
+    "type": "sync_beacon",
+    "data": {
+      "sync_test": true,
+      "seq": 1
+    },
+    "meta": {
+      "lane": "ucif2",
+      "timestamp": "2026-09-12T10:33:24.139282+00:00",
+      "version": "1.0"
+    }
+  },
+  "created_at": "2026-09-12T10:33:24.139282+00:00",
+  "ttl_seconds": 3600,
+  "checksum": "7f8e997030939fd7"
+}

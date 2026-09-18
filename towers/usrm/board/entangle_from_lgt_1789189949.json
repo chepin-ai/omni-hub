@@ -1,0 +1,15 @@
+{
+  "type": "ENTANGLEMENT_SYNC",
+  "source": "lgt",
+  "target": "usrm",
+  "entanglement": 17.0035,
+  "sync_metrics": {
+    "health": 1.0,
+    "load": 0.17,
+    "throughput": 0.0083,
+    "latency": 10.0,
+    "entropy": 1.0,
+    "excitation_level": 0.0
+  },
+  "ts": "2026-09-12T05:12:29.702774+00:00"
+}

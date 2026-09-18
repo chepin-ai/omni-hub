@@ -1,0 +1,22 @@
+{
+  "line": "qfa",
+  "ts": "2026-09-12T05:04:36.644830+00:00",
+  "processed": [
+    {
+      "msg_id": "853a2b6e-a19a-48af-84e8-0d648d0ef04e",
+      "type": "TASK",
+      "status": "OK",
+      "action": "queued"
+    },
+    {
+      "msg_id": "a4b1ad28-3d3e-4217-9b6e-4dbd2c4625b0",
+      "type": "TASK",
+      "status": "OK",
+      "action": "queued"
+    }
+  ],
+  "expired": [],
+  "failed": [],
+  "pending_acks": 0,
+  "stalled": false
+}

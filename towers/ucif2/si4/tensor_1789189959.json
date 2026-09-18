@@ -1,0 +1,38 @@
+{
+  "line": "ucif2",
+  "metrics": {
+    "health": 1.0,
+    "load": 0.28,
+    "throughput": 0.0,
+    "latency": 10.0,
+    "entropy": 1.0,
+    "excitation_level": 0.0
+  },
+  "tensor": {
+    "si0": {
+      "file_count": 443,
+      "last_activity": 1789189958.0
+    },
+    "si1": {
+      "file_count": 0,
+      "last_activity": 0
+    },
+    "si2": {
+      "file_count": 441,
+      "last_activity": 1789189958.0
+    },
+    "si3": {
+      "file_count": 10,
+      "last_activity": 1789189958.0
+    },
+    "si4": {
+      "file_count": 3,
+      "last_activity": 1789189822.0
+    },
+    "si5": {
+      "file_count": 1,
+      "last_activity": 1789189443.0
+    }
+  },
+  "ts": "2026-09-12T05:12:39.056451+00:00"
+}

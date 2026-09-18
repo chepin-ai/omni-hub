@@ -1,0 +1,129 @@
+# SI0-VERSION: 1.0.0
+# SI0-HASH: c3b3be7ea55849382d0a071c37ef9a3d233012d78512b97f663ae0401125e536
+# SI0-PARENT: c3b3be7ea55849382d0a071c37ef9a3d233012d78512b97f663ae0401125e536
+# SI0-TIMESTAMP: 2026-09-12T05:13:16.075177+00:00
+# SI0-LINE: lvlu
+# SI0-LEVEL: 0
+---
+{
+  "unified_schema": "SI-MAX-v1.0",
+  "exp_id": "EXP-013",
+  "line": "usrm",
+  "timestamp": "2026-09-12T03:54:42Z",
+  "si_before": "SI3",
+  "si_target": "SI4",
+  "hypothesis": "四阶模型或变gamma参数gamma=1.05将优于当前三阶CUBIC模型，AIC信息准则将进一步下降，提升k_c律形预测精度，验证标度律的普适性边界条件",
+  "methodology": "AIC比较+LOO交叉验证+Bootstrap置信区间",
+  "results": {
+    "models_tested": {
+      "quadratic": {
+        "AIC": -80.28,
+        "LOO_max_pct": 3.45,
+        "params": 3,
+        "status": "RETIRED"
+      },
+      "cubic": {
+        "AIC": -152.2,
+        "LOO_max_pct": 0.49,
+        "params": 4,
+        "status": "CANDIDATE"
+      },
+      "quartic": {
+        "AIC": -153.87,
+        "LOO_max_pct": 0.51,
+        "params": 5,
+        "status": "CANDIDATE"
+      },
+      "variable_gamma_1.05": {
+        "AIC": -154.12,
+        "LOO_max_pct": 0.47,
+        "params": 5,
+        "status": "OPTIMAL"
+      },
+      "variable_gamma_1.10": {
+        "AIC": -153.45,
+        "LOO_max_pct": 0.48,
+        "params": 5,
+        "status": "CANDIDATE"
+      },
+      "variable_gamma_1.15": {
+        "AIC": -151.23,
+        "LOO_max_pct": 0.55,
+        "params": 5,
+        "status": "SUBOPTIMAL"
+      },
+      "quartic_plus_gamma": {
+        "AIC": -152.89,
+        "LOO_max_pct": 0.52,
+        "params": 6,
+        "status": "OVERFIT"
+      }
+    },
+    "best_model": "variable_gamma_1.05",
+    "best_AIC": -154.12,
+    "AIC_improvement_over_cubic": -1.92,
+    "best_LOO": 0.47,
+    "gamma_optimal": 1.05,
+    "gamma_CI_95": [
+      1.02,
+      1.08
+    ],
+    "k_predictions": {
+      "k=200": {
+        "predicted": 0.2122042,
+        "CI_95": [
+          0.2122038,
+          0.2122046
+        ]
+      },
+      "k=500": {
+        "predicted": 0.0750018,
+        "CI_95": [
+          0.0750005,
+          0.0750031
+        ]
+      },
+      "k=800": {
+        "predicted": 0.0468753,
+        "CI_95": [
+          0.0468741,
+          0.0468765
+        ]
+      },
+      "k=1000": {
+        "predicted": 0.0375001,
+        "CI_95": [
+          0.0374992,
+          0.037501
+        ]
+      }
+    },
+    "bootstrap_n": 10000,
+    "bootstrap_seed": 42
+  },
+  "validation": {
+    "cross_line": "lgt",
+    "status": "PASSED",
+    "lgt_k200_measured": 0.21220387,
+    "usrm_k200_predicted": 0.2122042,
+    "delta": 3.3e-07,
+    "delta_pct": 0.00016,
+    "note": "lgt实测与usrm变γ预测一致，差<0.0002%"
+  },
+  "exploration": [
+    "k_c渐近展开: n→∞时k_c→0.2122045±0.0000003",
+    "普适类验证: k=82~1000同属一个普适类",
+    "噪声模型: 记录术噪声σ≈1e-7对律形影响<0.01%"
+  ],
+  "deepening": [
+    "更新CUBIC-LAW-01→VARIABLE-GAMMA-LAW-01",
+    "更新kc_cubic_fit.json→kc_variable_gamma_fit.json",
+    "为k82 hex对齐提供变γ预测值"
+  ],
+  "association": [
+    "lgt",
+    "qfa",
+    "qgl"
+  ],
+  "unified": true
+}

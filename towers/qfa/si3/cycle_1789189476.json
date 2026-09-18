@@ -1,0 +1,13 @@
+{
+  "line": "qfa",
+  "ts": "2026-09-12T05:04:36.821812+00:00",
+  "signals_scanned": 4,
+  "actions_executed": 3,
+  "recursion_depth": 3,
+  "side_effects": [],
+  "terminated": true,
+  "low_confidence_signals": 1,
+  "entropy": 0.0,
+  "health": 0.7,
+  "triggers": []
+}

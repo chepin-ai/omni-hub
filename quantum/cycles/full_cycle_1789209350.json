@@ -1,0 +1,366 @@
+{
+  "cycle_id": "b7cf5959-a473-412e-8b3a-b7f2bdbe2995",
+  "timestamp": "2026-09-12T10:35:41.012458+00:00",
+  "phases": {
+    "hub": {
+      "layer": "hub",
+      "operation": "global_observation",
+      "timestamp": "2026-09-12T10:35:41.012485+00:00",
+      "lines_observed": [
+        {
+          "line": "ucif2",
+          "collapsed_to": "si2",
+          "probability": 0.3578
+        },
+        {
+          "line": "lgt",
+          "collapsed_to": "si2",
+          "probability": 0.25
+        },
+        {
+          "line": "qfa",
+          "collapsed_to": "si4",
+          "probability": 0.1079
+        },
+        {
+          "line": "usrm",
+          "collapsed_to": "si2",
+          "probability": 0.3704
+        },
+        {
+          "line": "vinf",
+          "collapsed_to": "si2",
+          "probability": 0.3412
+        },
+        {
+          "line": "qgl",
+          "collapsed_to": "si4",
+          "probability": 0.1805
+        },
+        {
+          "line": "qlv",
+          "collapsed_to": "si5",
+          "probability": 0.0837
+        },
+        {
+          "line": "lvlu",
+          "collapsed_to": "si0",
+          "probability": 0.243
+        },
+        {
+          "line": "cfts",
+          "collapsed_to": "si0",
+          "probability": 0.25
+        },
+        {
+          "line": "cisvr",
+          "collapsed_to": "si2",
+          "probability": 0.5112
+        },
+        {
+          "line": "qtlv",
+          "collapsed_to": "si3",
+          "probability": 0.1972
+        }
+      ]
+    },
+    "wheel": {
+      "layer": "wheel",
+      "operation": "rotation_cycle",
+      "timestamp": "2026-09-12T10:35:43.009544+00:00",
+      "lines_rotated": [
+        {
+          "line": "ucif2",
+          "phase_shift": 0.5711986642890533
+        },
+        {
+          "line": "lgt",
+          "phase_shift": 0.5711986642890533
+        },
+        {
+          "line": "qfa",
+          "phase_shift": 0.5711986642890533
+        },
+        {
+          "line": "usrm",
+          "phase_shift": 0.5711986642890533
+        },
+        {
+          "line": "vinf",
+          "phase_shift": 0.5711986642890533
+        },
+        {
+          "line": "qgl",
+          "phase_shift": 0.5711986642890533
+        },
+        {
+          "line": "qlv",
+          "phase_shift": 0.5711986642890533
+        },
+        {
+          "line": "lvlu",
+          "phase_shift": 0.5711986642890533
+        },
+        {
+          "line": "cfts",
+          "phase_shift": 0.5711986642890533
+        },
+        {
+          "line": "cisvr",
+          "phase_shift": 0.5711986642890533
+        },
+        {
+          "line": "qtlv",
+          "phase_shift": 0.5711986642890533
+        }
+      ]
+    },
+    "spine": {
+      "layer": "spine",
+      "operation": "entanglement_sync",
+      "timestamp": "2026-09-12T10:35:44.087207+00:00",
+      "channels_synced": [
+        {
+          "pair": [
+            "qfa",
+            "qgl"
+          ],
+          "strength": 0.82,
+          "bell_state": "phi_plus"
+        },
+        {
+          "pair": [
+            "lgt",
+            "qfa"
+          ],
+          "strength": 0.78,
+          "bell_state": "phi_minus"
+        },
+        {
+          "pair": [
+            "qgl",
+            "qlv"
+          ],
+          "strength": 0.75,
+          "bell_state": "phi_minus"
+        },
+        {
+          "pair": [
+            "ucif2",
+            "lgt"
+          ],
+          "strength": 0.72,
+          "bell_state": "phi_minus"
+        },
+        {
+          "pair": [
+            "qfa",
+            "qlv"
+          ],
+          "strength": 0.71,
+          "bell_state": "phi_minus"
+        },
+        {
+          "pair": [
+            "usrm",
+            "vinf"
+          ],
+          "strength": 0.67,
+          "bell_state": "psi_plus"
+        },
+        {
+          "pair": [
+            "lvlu",
+            "cfts"
+          ],
+          "strength": 0.55,
+          "bell_state": "psi_minus"
+        }
+      ]
+    },
+    "cauldron": {
+      "layer": "cauldron",
+      "operation": "exp_processing",
+      "timestamp": "2026-09-12T10:35:44.830187+00:00",
+      "processed": []
+    },
+    "tower": [
+      {
+        "layer": "tower",
+        "line": "ucif2",
+        "operation": "level_check",
+        "timestamp": "2026-09-12T10:35:44.898960+00:00",
+        "si_levels": {
+          "si0": {
+            "file_count": 537,
+            "last_activity": "2026-09-12T05:30:24+00:00",
+            "status": "active"
+          },
+          "si1": {
+            "file_count": 1,
+            "last_activity": "2026-09-12T09:46:11+00:00",
+            "status": "active"
+          },
+          "si2": {
+            "file_count": 533,
+            "last_activity": "2026-09-12T05:30:25+00:00",
+            "status": "active"
+          },
+          "si3": {
+            "file_count": 10,
+            "last_activity": "2026-09-12T05:12:38+00:00",
+            "status": "active"
+          },
+          "si4": {
+            "file_count": 4,
+            "last_activity": "2026-09-12T05:12:39+00:00",
+            "status": "active"
+          },
+          "si5": {
+            "file_count": 1,
+            "last_activity": "2026-09-12T05:04:03+00:00",
+            "status": "active"
+          }
+        }
+      },
+      {
+        "layer": "tower",
+        "line": "lgt",
+        "operation": "level_check",
+        "timestamp": "2026-09-12T10:35:45.131010+00:00",
+        "si_levels": {
+          "si0": {
+            "file_count": 3,
+            "last_activity": "2026-09-12T05:12:39+00:00",
+            "status": "active"
+          },
+          "si1": {
+            "file_count": 1,
+            "last_activity": "2026-09-12T09:46:10+00:00",
+            "status": "active"
+          },
+          "si2": {
+            "file_count": 3,
+            "last_activity": "2026-09-12T05:12:39+00:00",
+            "status": "active"
+          },
+          "si3": {
+            "file_count": 12,
+            "last_activity": "2026-09-12T05:12:39+00:00",
+            "status": "active"
+          },
+          "si4": {
+            "file_count": 3,
+            "last_activity": "2026-09-12T05:12:39+00:00",
+            "status": "active"
+          },
+          "si5": {
+            "file_count": 4,
+            "last_activity": "2026-09-12T05:11:57+00:00",
+            "status": "active"
+          }
+        }
+      },
+      {
+        "layer": "tower",
+        "line": "qfa",
+        "operation": "level_check",
+        "timestamp": "2026-09-12T10:35:45.241693+00:00",
+        "si_levels": {
+          "si0": {
+            "file_count": 2,
+            "last_activity": "2026-09-12T05:12:39+00:00",
+            "status": "active"
+          },
+          "si1": {
+            "file_count": 1,
+            "last_activity": "2026-09-12T09:46:11+00:00",
+            "status": "active"
+          },
+          "si2": {
+            "file_count": 2,
+            "last_activity": "2026-09-12T05:12:40+00:00",
+            "status": "active"
+          },
+          "si3": {
+            "file_count": 9,
+            "last_activity": "2026-09-12T05:12:40+00:00",
+            "status": "active"
+          },
+          "si4": {
+            "file_count": 2,
+            "last_activity": "2026-09-12T05:12:40+00:00",
+            "status": "active"
+          },
+          "si5": {
+            "file_count": 2,
+            "last_activity": "2026-09-12T05:11:57+00:00",
+            "status": "active"
+          }
+        }
+      }
+    ],
+    "ring": {
+      "layer": "ring",
+      "operation": "global_qec",
+      "timestamp": "2026-09-12T10:35:45.338606+00:00",
+      "qec_results": [
+        {
+          "line": "ucif2",
+          "consensus_reached": false,
+          "majority_count": 1
+        },
+        {
+          "line": "lgt",
+          "consensus_reached": false,
+          "majority_count": 1
+        },
+        {
+          "line": "qfa",
+          "consensus_reached": false,
+          "majority_count": 1
+        },
+        {
+          "line": "usrm",
+          "consensus_reached": false,
+          "majority_count": 1
+        },
+        {
+          "line": "vinf",
+          "consensus_reached": false,
+          "majority_count": 1
+        },
+        {
+          "line": "qgl",
+          "consensus_reached": false,
+          "majority_count": 1
+        },
+        {
+          "line": "qlv",
+          "consensus_reached": false,
+          "majority_count": 1
+        },
+        {
+          "line": "lvlu",
+          "consensus_reached": false,
+          "majority_count": 1
+        },
+        {
+          "line": "cfts",
+          "consensus_reached": false,
+          "majority_count": 1
+        },
+        {
+          "line": "cisvr",
+          "consensus_reached": false,
+          "majority_count": 1
+        },
+        {
+          "line": "qtlv",
+          "consensus_reached": false,
+          "majority_count": 1
+        }
+      ]
+    }
+  }
+}

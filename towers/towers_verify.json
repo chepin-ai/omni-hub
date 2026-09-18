@@ -1,0 +1,49 @@
+{
+  "timestamp": "2026-09-13T12:23:03.540979+00:00",
+  "module": "si_tower_bridge",
+  "version": "1.0",
+  "bridge_up_count": 3,
+  "bridge_down_count": 3,
+  "resonance_results": [
+    {
+      "pair": "hub->wheel",
+      "resonance": 0.710825
+    },
+    {
+      "pair": "wheel->spine",
+      "resonance": 0.720825
+    },
+    {
+      "pair": "spine->cauldron",
+      "resonance": 0.700825
+    },
+    {
+      "pair": "cauldron->tower",
+      "resonance": 0.710825
+    },
+    {
+      "pair": "tower->ring",
+      "resonance": 0.720825
+    },
+    {
+      "pair": "hub->ring",
+      "resonance": 0.374544
+    }
+  ],
+  "cascade": {
+    "steps": 5,
+    "total_resonance": 0.527732,
+    "path_layers": [
+      "wheel",
+      "spine",
+      "cauldron",
+      "tower",
+      "ring"
+    ]
+  },
+  "summary": {
+    "total_operations": 11,
+    "active_queues": 4
+  },
+  "status": "PASS"
+}

@@ -1,0 +1,63 @@
+{
+  "layer": "spine",
+  "operation": "entanglement_sync",
+  "timestamp": "2026-09-12T10:35:44.087207+00:00",
+  "channels_synced": [
+    {
+      "pair": [
+        "qfa",
+        "qgl"
+      ],
+      "strength": 0.82,
+      "bell_state": "phi_plus"
+    },
+    {
+      "pair": [
+        "lgt",
+        "qfa"
+      ],
+      "strength": 0.78,
+      "bell_state": "phi_minus"
+    },
+    {
+      "pair": [
+        "qgl",
+        "qlv"
+      ],
+      "strength": 0.75,
+      "bell_state": "phi_minus"
+    },
+    {
+      "pair": [
+        "ucif2",
+        "lgt"
+      ],
+      "strength": 0.72,
+      "bell_state": "phi_minus"
+    },
+    {
+      "pair": [
+        "qfa",
+        "qlv"
+      ],
+      "strength": 0.71,
+      "bell_state": "phi_minus"
+    },
+    {
+      "pair": [
+        "usrm",
+        "vinf"
+      ],
+      "strength": 0.67,
+      "bell_state": "psi_plus"
+    },
+    {
+      "pair": [
+        "lvlu",
+        "cfts"
+      ],
+      "strength": 0.55,
+      "bell_state": "psi_minus"
+    }
+  ]
+}

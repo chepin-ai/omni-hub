@@ -1,0 +1,2796 @@
+{
+  "experiment_1": {
+    "normal": {
+      "profile": {
+        "timestamp": 1.0,
+        "dimensions": {
+          "health": 3.457386352984635,
+          "queue_depth": 2.91880841503349,
+          "debt": 3.270559729619244,
+          "finding": 3.401919564740736,
+          "consensus": 3.4435981182179076,
+          "fuel": 3.365899911833065,
+          "message": 6.623601970114592,
+          "topology": 6.6438561896655
+        },
+        "total_entropy": 3.661487270228038,
+        "cross_entropy_debt_finding": 2.8453509354555293,
+        "mutual_info_debt_finding": 3.8271283589044507,
+        "entropy_gradient": {
+          "health": 0.0,
+          "queue_depth": 0.0,
+          "debt": 0.0,
+          "finding": 0.0,
+          "consensus": 0.0,
+          "fuel": 0.0,
+          "message": 0.0,
+          "topology": 0.0
+        }
+      },
+      "entropy_values": {
+        "health": 3.457386352984635,
+        "queue_depth": 2.91880841503349,
+        "debt": 3.270559729619244,
+        "finding": 3.401919564740736,
+        "consensus": 3.4435981182179076,
+        "fuel": 3.365899911833065,
+        "message": 6.623601970114592,
+        "topology": 6.6438561896655
+      }
+    },
+    "high_debt": {
+      "profile": {
+        "timestamp": 2.0,
+        "dimensions": {
+          "health": 3.4428546600950316,
+          "queue_depth": 3.3425340578264318,
+          "debt": 3.4457914550863302,
+          "finding": 3.433220758527371,
+          "consensus": 3.2768145124495036,
+          "fuel": 3.355004262089654,
+          "message": 6.632186835238394,
+          "topology": 6.523561955896857
+        },
+        "total_entropy": 3.7112940901527915,
+        "cross_entropy_debt_finding": 3.27761343535974,
+        "mutual_info_debt_finding": 3.6013987782539614,
+        "entropy_gradient": {
+          "health": 0.0,
+          "queue_depth": 0.0,
+          "debt": 0.0,
+          "finding": 0.0,
+          "consensus": 0.0,
+          "fuel": 0.0,
+          "message": 0.0,
+          "topology": 0.0
+        }
+      },
+      "entropy_values": {
+        "health": 3.4428546600950316,
+        "queue_depth": 3.3425340578264318,
+        "debt": 3.4457914550863302,
+        "finding": 3.433220758527371,
+        "consensus": 3.2768145124495036,
+        "fuel": 3.355004262089654,
+        "message": 6.632186835238394,
+        "topology": 6.523561955896857
+      }
+    },
+    "high_finding": {
+      "profile": {
+        "timestamp": 3.0,
+        "dimensions": {
+          "health": 3.455128518584014,
+          "queue_depth": 3.1300205001627814,
+          "debt": 3.431851992301376,
+          "finding": 3.3732884319744145,
+          "consensus": 3.3822327834661063,
+          "fuel": 3.4403525067822223,
+          "message": 6.624097848317339,
+          "topology": 6.727920454488406
+        },
+        "total_entropy": 3.711270495997464,
+        "cross_entropy_debt_finding": 3.27761343535974,
+        "mutual_info_debt_finding": 3.527526988916051,
+        "entropy_gradient": {
+          "dhealth/dt": 0.012273858488982547,
+          "dqueue_depth/dt": -0.21251355766365032,
+          "ddebt/dt": -0.01393946278495406,
+          "dfinding/dt": -0.05993232655295655,
+          "dconsensus/dt": 0.10541827101660273,
+          "dfuel/dt": 0.08534824469256819,
+          "dmessage/dt": -0.008088986921054975,
+          "dtopology/dt": 0.20435849859154942
+        }
+      },
+      "entropy_values": {
+        "health": 3.455128518584014,
+        "queue_depth": 3.1300205001627814,
+        "debt": 3.431851992301376,
+        "finding": 3.3732884319744145,
+        "consensus": 3.3822327834661063,
+        "fuel": 3.4403525067822223,
+        "message": 6.624097848317339,
+        "topology": 6.727920454488406
+      }
+    },
+    "imbalance": {
+      "profile": {
+        "timestamp": 4.0,
+        "dimensions": {
+          "health": 3.4489548828356393,
+          "queue_depth": 3.377556214310877,
+          "debt": 3.4525246895270882,
+          "finding": 3.4396272317344097,
+          "consensus": 3.220358726196623,
+          "fuel": 3.277361736429861,
+          "message": 6.615859874587738,
+          "topology": 6.554588851530807
+        },
+        "total_entropy": 3.70284165698714,
+        "cross_entropy_debt_finding": 3.4594316170319996,
+        "mutual_info_debt_finding": 3.432720304229498,
+        "entropy_gradient": {
+          "dhealth/dt": -0.006173635748374817,
+          "dqueue_depth/dt": 0.2475357141480954,
+          "ddebt/dt": 0.020672697225712078,
+          "dfinding/dt": 0.06633879975999513,
+          "dconsensus/dt": -0.16187405726948345,
+          "dfuel/dt": -0.1629907703523612,
+          "dmessage/dt": -0.008237973729601222,
+          "dtopology/dt": -0.17333160295759953
+        }
+      },
+      "entropy_values": {
+        "health": 3.4489548828356393,
+        "queue_depth": 3.377556214310877,
+        "debt": 3.4525246895270882,
+        "finding": 3.4396272317344097,
+        "consensus": 3.220358726196623,
+        "fuel": 3.277361736429861,
+        "message": 6.615859874587738,
+        "topology": 6.554588851530807
+      }
+    },
+    "consensus": {
+      "profile": {
+        "timestamp": 5.0,
+        "dimensions": {
+          "health": 3.458411144052442,
+          "queue_depth": 3.351348523680904,
+          "debt": 3.437917801377493,
+          "finding": 3.4315855081014592,
+          "consensus": 3.458693705373804,
+          "fuel": 3.4571012800369543,
+          "message": 6.651655084555733,
+          "topology": 6.3575520043843285
+        },
+        "total_entropy": 3.7427717241285166,
+        "cross_entropy_debt_finding": 3.27761343535974,
+        "mutual_info_debt_finding": 3.5918898741192127,
+        "entropy_gradient": {
+          "dhealth/dt": 0.009456261216802542,
+          "dqueue_depth/dt": -0.026207690629972635,
+          "ddebt/dt": -0.01460688814959532,
+          "dfinding/dt": -0.008041723632950415,
+          "dconsensus/dt": 0.23833497917718116,
+          "dfuel/dt": 0.1797395436070932,
+          "dmessage/dt": 0.035795209967995234,
+          "dtopology/dt": -0.19703684714647807
+        }
+      },
+      "entropy_values": {
+        "health": 3.458411144052442,
+        "queue_depth": 3.351348523680904,
+        "debt": 3.437917801377493,
+        "finding": 3.4315855081014592,
+        "consensus": 3.458693705373804,
+        "fuel": 3.4571012800369543,
+        "message": 6.651655084555733,
+        "topology": 6.3575520043843285
+      }
+    }
+  },
+  "experiment_2": {
+    "normal": {
+      "H_debt": 3.2637833843314628,
+      "H_finding": 3.344203045171649,
+      "mutual_information": 3.762635494047583,
+      "kl_divergence": 0.2951029396558028,
+      "entropy_diff": 0.08041966084018615,
+      "entropy_ratio": 0.9759525184770431,
+      "normalized_mutual_info": 1.3223801138304798,
+      "coupling_coefficient": 0.984452420974098,
+      "self_drive_potential_index": 46.060075086778156,
+      "balance_status": "balanced"
+    },
+    "high_debt": {
+      "H_debt": 3.4536813081776847,
+      "H_finding": 3.4174427566301135,
+      "mutual_information": 3.5935106294480583,
+      "kl_divergence": 0.06292173753706529,
+      "entropy_diff": 0.03623855154757116,
+      "entropy_ratio": 1.010603996621803,
+      "normalized_mutual_info": 1.096380247460149,
+      "coupling_coefficient": 1.0295196476248183,
+      "self_drive_potential_index": 102.08989125572195,
+      "balance_status": "balanced"
+    },
+    "high_finding": {
+      "H_debt": 3.3141785962670425,
+      "H_finding": 3.4162010655542385,
+      "mutual_information": 3.634584408133801,
+      "kl_divergence": 0.1720436759376341,
+      "entropy_diff": 0.10202246928719605,
+      "entropy_ratio": 0.9701356953450696,
+      "normalized_mutual_info": 1.1740390142685149,
+      "coupling_coefficient": 0.9884732250636206,
+      "self_drive_potential_index": 35.214687443400145,
+      "balance_status": "balanced"
+    },
+    "imbalance": {
+      "H_debt": 3.4509744547194683,
+      "H_finding": 3.4568686550166463,
+      "mutual_information": 3.630229674376375,
+      "kl_divergence": 0.010647304327188169,
+      "entropy_diff": 0.0058942002971780205,
+      "entropy_ratio": 0.998294930763871,
+      "normalized_mutual_info": 1.10758322964562,
+      "coupling_coefficient": 1.0958530123448245,
+      "self_drive_potential_index": 674.9343178208825,
+      "balance_status": "balanced"
+    },
+    "consensus": {
+      "H_debt": 3.403554778070806,
+      "H_finding": 3.4371424805930575,
+      "mutual_information": 3.3812656416318645,
+      "kl_divergence": 0.08240768560016949,
+      "entropy_diff": 0.033587702522251295,
+      "entropy_ratio": 0.9902280156231759,
+      "normalized_mutual_info": 0.9774049658582534,
+      "coupling_coefficient": 0.9000887592987912,
+      "self_drive_potential_index": 90.61171079381381,
+      "balance_status": "balanced"
+    }
+  },
+  "experiment_3": [
+    {
+      "layer_entropy": 3.4403628483280304,
+      "network_entropy": 3.4448474773477855,
+      "tower_entropy": 3.4024577201704855,
+      "flow_layer_to_network": 0.02888709254517922,
+      "flow_network_to_tower": 0.08718895413143603,
+      "entropy_production": 10.171591999169685,
+      "is_conserved": true,
+      "conservation_error": 0.0,
+      "entropy_reduction_detected": false,
+      "reduction_locations": []
+    },
+    {
+      "layer_entropy": 3.453340016909899,
+      "network_entropy": 3.4475004871386097,
+      "tower_entropy": 3.3545020749896506,
+      "flow_layer_to_network": 0.007982291229453781,
+      "flow_network_to_tower": 0.11419822796796854,
+      "entropy_production": 0.0,
+      "is_conserved": false,
+      "conservation_error": 10.133162059840735,
+      "entropy_reduction_detected": true,
+      "reduction_locations": [
+        "tower"
+      ]
+    },
+    {
+      "layer_entropy": 3.440814091709079,
+      "network_entropy": 3.4517526852791525,
+      "tower_entropy": 3.406117439625012,
+      "flow_layer_to_network": 0.021349730036442874,
+      "flow_network_to_tower": 0.0734428765221064,
+      "entropy_production": 0.0,
+      "is_conserved": false,
+      "conservation_error": 10.203891610054693,
+      "entropy_reduction_detected": true,
+      "reduction_locations": [
+        "layer"
+      ]
+    },
+    {
+      "layer_entropy": 3.455518260529753,
+      "network_entropy": 3.449988928242974,
+      "tower_entropy": 3.349684942720002,
+      "flow_layer_to_network": 0.01749846544903813,
+      "flow_network_to_tower": 0.14101901474570686,
+      "entropy_production": 0.0,
+      "is_conserved": false,
+      "conservation_error": 10.096674651297985,
+      "entropy_reduction_detected": true,
+      "reduction_locations": [
+        "network",
+        "tower"
+      ]
+    },
+    {
+      "layer_entropy": 3.4504975473977866,
+      "network_entropy": 3.4313005351196013,
+      "tower_entropy": 3.3328032557300364,
+      "flow_layer_to_network": 0.03821837759473208,
+      "flow_network_to_tower": 0.1493736190354456,
+      "entropy_production": 0.0,
+      "is_conserved": false,
+      "conservation_error": 10.027009341617248,
+      "entropy_reduction_detected": true,
+      "reduction_locations": [
+        "layer",
+        "network",
+        "tower"
+      ]
+    },
+    {
+      "layer_entropy": 3.4435022598823726,
+      "network_entropy": 3.4525088104462047,
+      "tower_entropy": 3.390607941657392,
+      "flow_layer_to_network": 0.01114793946325026,
+      "flow_network_to_tower": 0.07726554561946146,
+      "entropy_production": 0.0,
+      "is_conserved": false,
+      "conservation_error": 10.198205526903259,
+      "entropy_reduction_detected": true,
+      "reduction_locations": [
+        "layer"
+      ]
+    },
+    {
+      "layer_entropy": 3.447681626710562,
+      "network_entropy": 3.4500284314828615,
+      "tower_entropy": 3.285497359348697,
+      "flow_layer_to_network": 0.02352002365618694,
+      "flow_network_to_tower": 0.15940327522047015,
+      "entropy_production": 0.0,
+      "is_conserved": false,
+      "conservation_error": 10.000284118665464,
+      "entropy_reduction_detected": true,
+      "reduction_locations": [
+        "network",
+        "tower"
+      ]
+    },
+    {
+      "layer_entropy": 3.4354729075261394,
+      "network_entropy": 3.4418184176801754,
+      "tower_entropy": 3.3371932544002925,
+      "flow_layer_to_network": 0.06269441444404249,
+      "flow_network_to_tower": 0.14757147873159432,
+      "entropy_production": 0.0,
+      "is_conserved": false,
+      "conservation_error": 10.00421868643097,
+      "entropy_reduction_detected": true,
+      "reduction_locations": [
+        "layer",
+        "network"
+      ]
+    },
+    {
+      "layer_entropy": 3.446299651750773,
+      "network_entropy": 3.4539960535195218,
+      "tower_entropy": 3.438596292612396,
+      "flow_layer_to_network": 0.022219624334831562,
+      "flow_network_to_tower": 0.023770315213727,
+      "entropy_production": 0.07841747872752514,
+      "is_conserved": false,
+      "conservation_error": 10.214484579606607,
+      "entropy_reduction_detected": false,
+      "reduction_locations": []
+    },
+    {
+      "layer_entropy": 3.4455841025143386,
+      "network_entropy": 3.4432183484286427,
+      "tower_entropy": 3.3744113209514226,
+      "flow_layer_to_network": 0.020831587008041684,
+      "flow_network_to_tower": 0.082590408668729,
+      "entropy_production": 0.0,
+      "is_conserved": false,
+      "conservation_error": 10.159791776217633,
+      "entropy_reduction_detected": true,
+      "reduction_locations": [
+        "layer",
+        "network",
+        "tower"
+      ]
+    }
+  ],
+  "experiment_4": {
+    "profiles": [
+      {
+        "timestamp": 1.0,
+        "dimensions": {
+          "health": 3.43670564303409,
+          "queue_depth": 3.4070443290474324,
+          "debt": 3.4559729747795522,
+          "finding": 3.400982083389211,
+          "consensus": 3.3353165057478606,
+          "fuel": 3.3586579285065463,
+          "message": 6.67070840077405,
+          "topology": 6.584962500587243
+        },
+        "total_entropy": 3.726548104774508,
+        "cross_entropy_debt_finding": 3.27761343535974,
+        "mutual_info_debt_finding": 3.5793416228090233,
+        "entropy_gradient": {
+          "dhealth/dt": -0.021705501018352003,
+          "dqueue_depth/dt": 0.055695805366528184,
+          "ddebt/dt": 0.01805517340205931,
+          "dfinding/dt": -0.030603424712248195,
+          "dconsensus/dt": -0.1233771996259434,
+          "dfuel/dt": -0.09844335153040795,
+          "dmessage/dt": 0.01905331621831685,
+          "dtopology/dt": 0.2274104962029142
+        }
+      },
+      {
+        "timestamp": 2.0,
+        "dimensions": {
+          "health": 3.435257682665013,
+          "queue_depth": 3.403201704526644,
+          "debt": 3.456529760657176,
+          "finding": 3.366136380081812,
+          "consensus": 3.3360671346135944,
+          "fuel": 3.3367380958712873,
+          "message": 6.745461122877311,
+          "topology": 6.584962500587243
+        },
+        "total_entropy": 3.7207471119526097,
+        "cross_entropy_debt_finding": 3.27761343535974,
+        "mutual_info_debt_finding": 3.5450527053792484,
+        "entropy_gradient": {
+          "dhealth/dt": -0.001447960369076906,
+          "dqueue_depth/dt": -0.00384262452078854,
+          "ddebt/dt": 0.0005567858776238666,
+          "dfinding/dt": -0.03484570330739922,
+          "dconsensus/dt": 0.0007506288657337379,
+          "dfuel/dt": -0.021919832635258985,
+          "dmessage/dt": 0.0747527221032609,
+          "dtopology/dt": 0.0
+        }
+      },
+      {
+        "timestamp": 3.0,
+        "dimensions": {
+          "health": 3.436298172262516,
+          "queue_depth": 3.4099584198924777,
+          "debt": 3.4557394855017676,
+          "finding": 3.3731569780654906,
+          "consensus": 3.3355177484025016,
+          "fuel": 3.3203751541045903,
+          "message": 6.741282677850511,
+          "topology": 6.584962500587243
+        },
+        "total_entropy": 3.720897297134799,
+        "cross_entropy_debt_finding": 3.09579525368748,
+        "mutual_info_debt_finding": 3.7331012098797776,
+        "entropy_gradient": {
+          "dhealth/dt": 0.0010404895975031359,
+          "dqueue_depth/dt": 0.006756715365833887,
+          "ddebt/dt": -0.0007902751554085263,
+          "dfinding/dt": 0.007020597983678822,
+          "dconsensus/dt": -0.000549386211092795,
+          "dfuel/dt": -0.01636294176669706,
+          "dmessage/dt": -0.004178445026799871,
+          "dtopology/dt": 0.0
+        }
+      },
+      {
+        "timestamp": 4.0,
+        "dimensions": {
+          "health": 3.4379365920954346,
+          "queue_depth": 3.409122710120802,
+          "debt": 3.4565448522535864,
+          "finding": 3.3648512990484107,
+          "consensus": 3.3333440275258015,
+          "fuel": 3.3348462383269686,
+          "message": 6.785073981535344,
+          "topology": 6.584962500587243
+        },
+        "total_entropy": 3.7228700421544914,
+        "cross_entropy_debt_finding": 3.27761343535974,
+        "mutual_info_debt_finding": 3.543782715942257,
+        "entropy_gradient": {
+          "dhealth/dt": 0.0016384198329184585,
+          "dqueue_depth/dt": -0.0008357097716755746,
+          "ddebt/dt": 0.000805366751818859,
+          "dfinding/dt": -0.008305679017079903,
+          "dconsensus/dt": -0.0021737208767000915,
+          "dfuel/dt": 0.014471084222378305,
+          "dmessage/dt": 0.043791303684833416,
+          "dtopology/dt": 0.0
+        }
+      },
+      {
+        "timestamp": 5.0,
+        "dimensions": {
+          "health": 3.4372552745883866,
+          "queue_depth": 3.4059880916075964,
+          "debt": 3.455544248577275,
+          "finding": 3.394077566518541,
+          "consensus": 3.3334449675677726,
+          "fuel": 3.3131642899569904,
+          "message": 6.73990331684376,
+          "topology": 6.584962500587243
+        },
+        "total_entropy": 3.7236879283705964,
+        "cross_entropy_debt_finding": 3.4594316170319996,
+        "mutual_info_debt_finding": 3.390190198063816,
+        "entropy_gradient": {
+          "dhealth/dt": -0.0006813175070479183,
+          "dqueue_depth/dt": -0.0031346185132057336,
+          "ddebt/dt": -0.0010006036763114956,
+          "dfinding/dt": 0.029226267470130463,
+          "dconsensus/dt": 0.00010094004197114259,
+          "dfuel/dt": -0.021681948369978166,
+          "dmessage/dt": -0.04517066469158415,
+          "dtopology/dt": 0.0
+        }
+      },
+      {
+        "timestamp": 6.0,
+        "dimensions": {
+          "health": 3.4358487104978113,
+          "queue_depth": 3.4181010771466607,
+          "debt": 3.455037168457305,
+          "finding": 3.4135881487764044,
+          "consensus": 3.334786639215334,
+          "fuel": 3.3084151853592982,
+          "message": 6.787624783901316,
+          "topology": 6.584962500587243
+        },
+        "total_entropy": 3.7306013563787377,
+        "cross_entropy_debt_finding": 3.27761343535974,
+        "mutual_info_debt_finding": 3.5910118818739694,
+        "entropy_gradient": {
+          "dhealth/dt": -0.0014065640905753796,
+          "dqueue_depth/dt": 0.012112985539064258,
+          "ddebt/dt": -0.000507080119970027,
+          "dfinding/dt": 0.019510582257863174,
+          "dconsensus/dt": 0.00134167164756116,
+          "dfuel/dt": -0.0047491045976921775,
+          "dmessage/dt": 0.04772146705755631,
+          "dtopology/dt": 0.0
+        }
+      },
+      {
+        "timestamp": 7.0,
+        "dimensions": {
+          "health": 3.436286747481819,
+          "queue_depth": 3.419843310489233,
+          "debt": 3.4561608862703292,
+          "finding": 3.429982174001305,
+          "consensus": 3.3370761844205816,
+          "fuel": 3.3022404185216856,
+          "message": 6.74742958859965,
+          "topology": 6.584962500587243
+        },
+        "total_entropy": 3.7320610292001235,
+        "cross_entropy_debt_finding": 3.27761343535974,
+        "mutual_info_debt_finding": 3.6085296249118937,
+        "entropy_gradient": {
+          "dhealth/dt": 0.00043803698400779467,
+          "dqueue_depth/dt": 0.0017422333425725078,
+          "ddebt/dt": 0.0011237178130243386,
+          "dfinding/dt": 0.01639402522490041,
+          "dconsensus/dt": 0.0022895452052478227,
+          "dfuel/dt": -0.006174766837612644,
+          "dmessage/dt": -0.04019519530166615,
+          "dtopology/dt": 0.0
+        }
+      },
+      {
+        "timestamp": 8.0,
+        "dimensions": {
+          "health": 3.435900534431317,
+          "queue_depth": 3.4186244243048005,
+          "debt": 3.4560381311269093,
+          "finding": 3.428951254811426,
+          "consensus": 3.338967775647804,
+          "fuel": 3.3181296593683505,
+          "message": 6.770880343986215,
+          "topology": 6.584962500587243
+        },
+        "total_entropy": 3.7346956742955233,
+        "cross_entropy_debt_finding": 3.4594316170319996,
+        "mutual_info_debt_finding": 3.425557768906335,
+        "entropy_gradient": {
+          "dhealth/dt": -0.0003862130505019046,
+          "dqueue_depth/dt": -0.001218886184432666,
+          "ddebt/dt": -0.0001227551434199725,
+          "dfinding/dt": -0.001030919189878965,
+          "dconsensus/dt": 0.0018915912272223778,
+          "dfuel/dt": 0.015889240846664876,
+          "dmessage/dt": 0.02345075538656438,
+          "dtopology/dt": 0.0
+        }
+      },
+      {
+        "timestamp": 9.0,
+        "dimensions": {
+          "health": 3.4380907767112494,
+          "queue_depth": 3.415474269697286,
+          "debt": 3.455416356050776,
+          "finding": 3.4345315359585933,
+          "consensus": 3.3416138514846927,
+          "fuel": 3.3420661666338622,
+          "message": 6.770180381171288,
+          "topology": 6.584962500587243
+        },
+        "total_entropy": 3.7384564603523067,
+        "cross_entropy_debt_finding": 3.27761343535974,
+        "mutual_info_debt_finding": 3.612334456649629,
+        "entropy_gradient": {
+          "dhealth/dt": 0.002190242279932253,
+          "dqueue_depth/dt": -0.003150154607514555,
+          "ddebt/dt": -0.0006217750761332574,
+          "dfinding/dt": 0.005580281147167465,
+          "dconsensus/dt": 0.002646075836888695,
+          "dfuel/dt": 0.023936507265511775,
+          "dmessage/dt": -0.0006999628149264581,
+          "dtopology/dt": 0.0
+        }
+      },
+      {
+        "timestamp": 10.0,
+        "dimensions": {
+          "health": 3.4394575768680884,
+          "queue_depth": 3.41634621966729,
+          "debt": 3.453969455332664,
+          "finding": 3.4408299289306816,
+          "consensus": 3.3438297688799787,
+          "fuel": 3.3489186062568406,
+          "message": 6.746044318842841,
+          "topology": 6.584962500587243
+        },
+        "total_entropy": 3.7395298022787964,
+        "cross_entropy_debt_finding": 3.27761343535974,
+        "mutual_info_debt_finding": 3.6171859489036056,
+        "entropy_gradient": {
+          "dhealth/dt": 0.0013668001568389876,
+          "dqueue_depth/dt": 0.00087194997000406,
+          "ddebt/dt": -0.001446900718112154,
+          "dfinding/dt": 0.00629839297208834,
+          "dconsensus/dt": 0.002215917395286038,
+          "dfuel/dt": 0.0068524396229783235,
+          "dmessage/dt": -0.024136062328446783,
+          "dtopology/dt": 0.0
+        }
+      },
+      {
+        "timestamp": 11.0,
+        "dimensions": {
+          "health": 3.4400604361027094,
+          "queue_depth": 3.4242788872564476,
+          "debt": 3.454483236953175,
+          "finding": 3.4370967329879902,
+          "consensus": 3.344570940730726,
+          "fuel": 3.3730762100971545,
+          "message": 6.771219837695181,
+          "topology": 6.584962500587243
+        },
+        "total_entropy": 3.74355532716273,
+        "cross_entropy_debt_finding": 3.0957952536874807,
+        "mutual_info_debt_finding": 3.795784716253685,
+        "entropy_gradient": {
+          "dhealth/dt": 0.0006028592346210004,
+          "dqueue_depth/dt": 0.00793266758915756,
+          "ddebt/dt": 0.0005137816205111889,
+          "dfinding/dt": -0.003733195942691392,
+          "dconsensus/dt": 0.0007411718507470688,
+          "dfuel/dt": 0.024157603840313957,
+          "dmessage/dt": 0.025175518852339707,
+          "dtopology/dt": 0.0
+        }
+      },
+      {
+        "timestamp": 12.0,
+        "dimensions": {
+          "health": 3.4397523792017126,
+          "queue_depth": 3.4305204016690727,
+          "debt": 3.4545531887306997,
+          "finding": 3.4374555249858525,
+          "consensus": 3.3457402908526905,
+          "fuel": 3.3641154833562146,
+          "message": 6.818191601497385,
+          "topology": 6.584962500587243
+        },
+        "total_entropy": 3.7458469368582312,
+        "cross_entropy_debt_finding": 3.4594316170319996,
+        "mutual_info_debt_finding": 3.4325770966845526,
+        "entropy_gradient": {
+          "dhealth/dt": -0.0003080569009967782,
+          "dqueue_depth/dt": 0.006241514412625104,
+          "ddebt/dt": 6.99517775246683e-05,
+          "dfinding/dt": 0.00035879199786226224,
+          "dconsensus/dt": 0.0011693501219647295,
+          "dfuel/dt": -0.00896072674093995,
+          "dmessage/dt": 0.0469717638022038,
+          "dtopology/dt": 0.0
+        }
+      },
+      {
+        "timestamp": 13.0,
+        "dimensions": {
+          "health": 3.4377267396777063,
+          "queue_depth": 3.429615009268618,
+          "debt": 3.451864676484345,
+          "finding": 3.435077112370767,
+          "consensus": 3.345615497373581,
+          "fuel": 3.3607801919937925,
+          "message": 6.811936076937543,
+          "topology": 6.584962500587243
+        },
+        "total_entropy": 3.743774142331196,
+        "cross_entropy_debt_finding": 3.4594316170319996,
+        "mutual_info_debt_finding": 3.4275101718231125,
+        "entropy_gradient": {
+          "dhealth/dt": -0.002025639524006362,
+          "dqueue_depth/dt": -0.0009053924004547298,
+          "ddebt/dt": -0.0026885122463546907,
+          "dfinding/dt": -0.0023784126150854235,
+          "dconsensus/dt": -0.00012479347910954175,
+          "dfuel/dt": -0.003335291362422055,
+          "dmessage/dt": -0.006255524559842129,
+          "dtopology/dt": 0.0
+        }
+      },
+      {
+        "timestamp": 14.0,
+        "dimensions": {
+          "health": 3.438582006177083,
+          "queue_depth": 3.428538700208485,
+          "debt": 3.449938401628164,
+          "finding": 3.4338184532793163,
+          "consensus": 3.3432594852826307,
+          "fuel": 3.3689484792626794,
+          "message": 6.783200794730357,
+          "topology": 6.584962500587243
+        },
+        "total_entropy": 3.7421844774134496,
+        "cross_entropy_debt_finding": 3.4594316170319996,
+        "mutual_info_debt_finding": 3.4243252378754803,
+        "entropy_gradient": {
+          "dhealth/dt": 0.0008552664993768389,
+          "dqueue_depth/dt": -0.0010763090601328962,
+          "ddebt/dt": -0.0019262748561810206,
+          "dfinding/dt": -0.0012586590914507312,
+          "dconsensus/dt": -0.0023560120909502658,
+          "dfuel/dt": 0.008168287268886854,
+          "dmessage/dt": -0.028735282207185797,
+          "dtopology/dt": 0.0
+        }
+      },
+      {
+        "timestamp": 15.0,
+        "dimensions": {
+          "health": 3.4380609763136962,
+          "queue_depth": 3.4344200935172458,
+          "debt": 3.4503444556734655,
+          "finding": 3.436001193760131,
+          "consensus": 3.343791449634998,
+          "fuel": 3.363720375906328,
+          "message": 6.786817069045795,
+          "topology": 6.584962500587243
+        },
+        "total_entropy": 3.742950019203033,
+        "cross_entropy_debt_finding": 3.4594316170319996,
+        "mutual_info_debt_finding": 3.4269140324015974,
+        "entropy_gradient": {
+          "dhealth/dt": -0.0005210298633868682,
+          "dqueue_depth/dt": 0.005881393308760696,
+          "ddebt/dt": 0.0004060540453014738,
+          "dfinding/dt": 0.002182740480814793,
+          "dconsensus/dt": 0.0005319643523673534,
+          "dfuel/dt": -0.005228103356351266,
+          "dmessage/dt": 0.003616274315437984,
+          "dtopology/dt": 0.0
+        }
+      },
+      {
+        "timestamp": 16.0,
+        "dimensions": {
+          "health": 3.4385614576577495,
+          "queue_depth": 3.4334538536446595,
+          "debt": 3.450847818673777,
+          "finding": 3.4358246952618297,
+          "consensus": 3.3423522212265033,
+          "fuel": 3.3609147312453533,
+          "message": 6.804668841851318,
+          "topology": 6.584962500587243
+        },
+        "total_entropy": 3.7433899802306887,
+        "cross_entropy_debt_finding": 3.27761343535974,
+        "mutual_info_debt_finding": 3.609059078575867,
+        "entropy_gradient": {
+          "dhealth/dt": 0.0005004813440532274,
+          "dqueue_depth/dt": -0.0009662398725862609,
+          "ddebt/dt": 0.0005033630003117295,
+          "dfinding/dt": -0.00017649849830148057,
+          "dconsensus/dt": -0.0014392284084947526,
+          "dfuel/dt": -0.002805644660974771,
+          "dmessage/dt": 0.01785177280552297,
+          "dtopology/dt": 0.0
+        }
+      },
+      {
+        "timestamp": 17.0,
+        "dimensions": {
+          "health": 3.437187002936173,
+          "queue_depth": 3.43126661377617,
+          "debt": 3.4514073732489186,
+          "finding": 3.437913986846767,
+          "consensus": 3.3459544149899916,
+          "fuel": 3.348591953878586,
+          "message": 6.808515179631535,
+          "topology": 6.584962500587243
+        },
+        "total_entropy": 3.7429952254844765,
+        "cross_entropy_debt_finding": 3.4594316170319996,
+        "mutual_info_debt_finding": 3.429889743063686,
+        "entropy_gradient": {
+          "dhealth/dt": -0.0013744547215766012,
+          "dqueue_depth/dt": -0.0021872398684896766,
+          "ddebt/dt": 0.0005595545751413411,
+          "dfinding/dt": 0.002089291584937314,
+          "dconsensus/dt": 0.0036021937634882484,
+          "dfuel/dt": -0.012322777366767124,
+          "dmessage/dt": 0.003846337780217368,
+          "dtopology/dt": 0.0
+        }
+      },
+      {
+        "timestamp": 18.0,
+        "dimensions": {
+          "health": 3.4396179480462568,
+          "queue_depth": 3.428583121226116,
+          "debt": 3.4499642737877965,
+          "finding": 3.44124990916301,
+          "consensus": 3.345313599634872,
+          "fuel": 3.358491152770956,
+          "message": 6.806771440860621,
+          "topology": 6.584962500587243
+        },
+        "total_entropy": 3.744276693214431,
+        "cross_entropy_debt_finding": 3.27761343535974,
+        "mutual_info_debt_finding": 3.6136007475910663,
+        "entropy_gradient": {
+          "dhealth/dt": 0.002430945110083904,
+          "dqueue_depth/dt": -0.0026834925500538453,
+          "ddebt/dt": -0.0014430994611220882,
+          "dfinding/dt": 0.003335922316243245,
+          "dconsensus/dt": -0.0006408153551196172,
+          "dfuel/dt": 0.009899198892369565,
+          "dmessage/dt": -0.0017437387709140495,
+          "dtopology/dt": 0.0
+        }
+      },
+      {
+        "timestamp": 19.0,
+        "dimensions": {
+          "health": 3.4423854836998418,
+          "queue_depth": 3.433985766254911,
+          "debt": 3.450028996693609,
+          "finding": 3.4432162128644412,
+          "consensus": 3.3489074707550754,
+          "fuel": 3.3615622207063796,
+          "message": 6.7887856854015425,
+          "topology": 6.584962500587243
+        },
+        "total_entropy": 3.7455851930754163,
+        "cross_entropy_debt_finding": 3.4594316170319996,
+        "mutual_info_debt_finding": 3.4338135925260507,
+        "entropy_gradient": {
+          "dhealth/dt": 0.002767535653585007,
+          "dqueue_depth/dt": 0.00540264502879495,
+          "ddebt/dt": 6.472290581260864e-05,
+          "dfinding/dt": 0.001966303701431027,
+          "dconsensus/dt": 0.0035938711202034845,
+          "dfuel/dt": 0.003071067935423777,
+          "dmessage/dt": -0.017985755459078767,
+          "dtopology/dt": 0.0
+        }
+      },
+      {
+        "timestamp": 20.0,
+        "dimensions": {
+          "health": 3.4433150450766763,
+          "queue_depth": 3.4294644962062835,
+          "debt": 3.452286880004438,
+          "finding": 3.4428736000843267,
+          "consensus": 3.349658764225584,
+          "fuel": 3.3806067751490163,
+          "message": 6.823020020896964,
+          "topology": 6.584962500587243
+        },
+        "total_entropy": 3.7493844206228326,
+        "cross_entropy_debt_finding": 3.4594316170319996,
+        "mutual_info_debt_finding": 3.4357288630567653,
+        "entropy_gradient": {
+          "dhealth/dt": 0.0009295613768345312,
+          "dqueue_depth/dt": -0.004521270048627457,
+          "ddebt/dt": 0.0022578833108291008,
+          "dfinding/dt": -0.0003426127801144929,
+          "dconsensus/dt": 0.0007512934705085073,
+          "dfuel/dt": 0.019044554442636752,
+          "dmessage/dt": 0.03423433549542132,
+          "dtopology/dt": 0.0
+        }
+      },
+      {
+        "timestamp": 21.0,
+        "dimensions": {
+          "health": 3.4422979977117922,
+          "queue_depth": 3.424637885369654,
+          "debt": 3.451565968562223,
+          "finding": 3.441963579936872,
+          "consensus": 3.35073353373108,
+          "fuel": 3.3572183901221044,
+          "message": 6.811076623958736,
+          "topology": 6.584962500587243
+        },
+        "total_entropy": 3.745648223192725,
+        "cross_entropy_debt_finding": 3.27761343535974,
+        "mutual_info_debt_finding": 3.615916113139355,
+        "entropy_gradient": {
+          "dhealth/dt": -0.0010170473648840606,
+          "dqueue_depth/dt": -0.004826610836629275,
+          "ddebt/dt": -0.0007209114422153107,
+          "dfinding/dt": -0.00091002014745456,
+          "dconsensus/dt": 0.0010747695054962314,
+          "dfuel/dt": -0.023388385026911873,
+          "dmessage/dt": -0.011943396938227657,
+          "dtopology/dt": 0.0
+        }
+      },
+      {
+        "timestamp": 22.0,
+        "dimensions": {
+          "health": 3.4427388819739253,
+          "queue_depth": 3.430158818534082,
+          "debt": 3.4511670408416886,
+          "finding": 3.442760025894949,
+          "consensus": 3.3511642005093534,
+          "fuel": 3.3728237623308033,
+          "message": 6.800878221797316,
+          "topology": 6.584962500587243
+        },
+        "total_entropy": 3.747461169925536,
+        "cross_entropy_debt_finding": 3.4594316170319996,
+        "mutual_info_debt_finding": 3.4344954497046376,
+        "entropy_gradient": {
+          "dhealth/dt": 0.00044088426213306775,
+          "dqueue_depth/dt": 0.005520933164427699,
+          "ddebt/dt": -0.00039892772053429226,
+          "dfinding/dt": 0.0007964459580769301,
+          "dconsensus/dt": 0.0004306667782731921,
+          "dfuel/dt": 0.015605372208698842,
+          "dmessage/dt": -0.010198402161420539,
+          "dtopology/dt": 0.0
+        }
+      },
+      {
+        "timestamp": 23.0,
+        "dimensions": {
+          "health": 3.4431019851933726,
+          "queue_depth": 3.427855395244994,
+          "debt": 3.4503473760716816,
+          "finding": 3.4421115463266347,
+          "consensus": 3.3529424881577263,
+          "fuel": 3.3675488935748317,
+          "message": 6.8174040774938005,
+          "topology": 6.584962500587243
+        },
+        "total_entropy": 3.747557213268363,
+        "cross_entropy_debt_finding": 3.4594316170319996,
+        "mutual_info_debt_finding": 3.4330273053663167,
+        "entropy_gradient": {
+          "dhealth/dt": 0.00036310321944732493,
+          "dqueue_depth/dt": -0.002303423289087725,
+          "ddebt/dt": -0.0008196647700069448,
+          "dfinding/dt": -0.0006484795683143751,
+          "dconsensus/dt": 0.001778287648372956,
+          "dfuel/dt": -0.005274868755971607,
+          "dmessage/dt": 0.016525855696484903,
+          "dtopology/dt": 0.0
+        }
+      },
+      {
+        "timestamp": 24.0,
+        "dimensions": {
+          "health": 3.4434514448967413,
+          "queue_depth": 3.426416696888064,
+          "debt": 3.450012077052221,
+          "finding": 3.4419739881275357,
+          "consensus": 3.3534165571265935,
+          "fuel": 3.3692889336179372,
+          "message": 6.8053386174913095,
+          "topology": 6.584962500587243
+        },
+        "total_entropy": 3.7470130322939794,
+        "cross_entropy_debt_finding": 3.4594316170319996,
+        "mutual_info_debt_finding": 3.4325544481477572,
+        "entropy_gradient": {
+          "dhealth/dt": 0.0003494597033686375,
+          "dqueue_depth/dt": -0.0014386983569303347,
+          "ddebt/dt": -0.0003352990194604999,
+          "dfinding/dt": -0.00013755819909899714,
+          "dconsensus/dt": 0.00047406896886714733,
+          "dfuel/dt": 0.001740040043105573,
+          "dmessage/dt": -0.01206546000249098,
+          "dtopology/dt": 0.0
+        }
+      },
+      {
+        "timestamp": 25.0,
+        "dimensions": {
+          "health": 3.4421059628323736,
+          "queue_depth": 3.4253363171802684,
+          "debt": 3.450036335473887,
+          "finding": 3.4436732063938846,
+          "consensus": 3.3517641347414666,
+          "fuel": 3.378575063107981,
+          "message": 6.822828629324016,
+          "topology": 6.584962500587243
+        },
+        "total_entropy": 3.748603117534018,
+        "cross_entropy_debt_finding": 3.4594316170319996,
+        "mutual_info_debt_finding": 3.4342779248357718,
+        "entropy_gradient": {
+          "dhealth/dt": -0.0013454820643676868,
+          "dqueue_depth/dt": -0.001080379707795398,
+          "ddebt/dt": 2.4258421666090157e-05,
+          "dfinding/dt": 0.0016992182663488897,
+          "dconsensus/dt": -0.0016524223851268616,
+          "dfuel/dt": 0.009286129490043926,
+          "dmessage/dt": 0.01749001183270682,
+          "dtopology/dt": 0.0
+        }
+      },
+      {
+        "timestamp": 26.0,
+        "dimensions": {
+          "health": 3.4413424966363486,
+          "queue_depth": 3.4307889472260813,
+          "debt": 3.4503806563407506,
+          "finding": 3.447074444693296,
+          "consensus": 3.3533034884992157,
+          "fuel": 3.3959499798327353,
+          "message": 6.840986794980736,
+          "topology": 6.584962500587243
+        },
+        "total_entropy": 3.7526592754614247,
+        "cross_entropy_debt_finding": 3.27761343535974,
+        "mutual_info_debt_finding": 3.619841665674307,
+        "entropy_gradient": {
+          "dhealth/dt": -0.0007634661960249645,
+          "dqueue_depth/dt": 0.005452630045812867,
+          "ddebt/dt": 0.00034432086686342345,
+          "dfinding/dt": 0.0034012382994115242,
+          "dconsensus/dt": 0.0015393537577490513,
+          "dfuel/dt": 0.017374916724754108,
+          "dmessage/dt": 0.018158165656720016,
+          "dtopology/dt": 0.0
+        }
+      },
+      {
+        "timestamp": 27.0,
+        "dimensions": {
+          "health": 3.4411899770151666,
+          "queue_depth": 3.4329086962696196,
+          "debt": 3.450212323710097,
+          "finding": 3.449212853892413,
+          "consensus": 3.355764596726665,
+          "fuel": 3.3900938088920833,
+          "message": 6.814313407288407,
+          "topology": 6.584962500587243
+        },
+        "total_entropy": 3.7516922674917295,
+        "cross_entropy_debt_finding": 3.4594316170319996,
+        "mutual_info_debt_finding": 3.43999356057051,
+        "entropy_gradient": {
+          "dhealth/dt": -0.00015251962118201234,
+          "dqueue_depth/dt": 0.002119749043538288,
+          "ddebt/dt": -0.00016833263065363369,
+          "dfinding/dt": 0.0021384091991167864,
+          "dconsensus/dt": 0.0024611082274494933,
+          "dfuel/dt": -0.005856170940651939,
+          "dmessage/dt": -0.02667338769232952,
+          "dtopology/dt": 0.0
+        }
+      },
+      {
+        "timestamp": 28.0,
+        "dimensions": {
+          "health": 3.440765131651164,
+          "queue_depth": 3.4347147250597647,
+          "debt": 3.450173010363421,
+          "finding": 3.44763430235259,
+          "consensus": 3.3576737612409167,
+          "fuel": 3.36833453837559,
+          "message": 6.829614579082646,
+          "topology": 6.584962500587243
+        },
+        "total_entropy": 3.7503610768040443,
+        "cross_entropy_debt_finding": 3.4594316170319996,
+        "mutual_info_debt_finding": 3.438375695684012,
+        "entropy_gradient": {
+          "dhealth/dt": -0.00042484536400255735,
+          "dqueue_depth/dt": 0.001806028790145131,
+          "ddebt/dt": -3.9313346675839966e-05,
+          "dfinding/dt": -0.0015785515398230032,
+          "dconsensus/dt": 0.0019091645142514935,
+          "dfuel/dt": -0.021759270516493512,
+          "dmessage/dt": 0.015301171794239288,
+          "dtopology/dt": 0.0
+        }
+      },
+      {
+        "timestamp": 29.0,
+        "dimensions": {
+          "health": 3.4398298850294555,
+          "queue_depth": 3.432309270200434,
+          "debt": 3.4489632319512427,
+          "finding": 3.449567296654991,
+          "consensus": 3.3594255534100577,
+          "fuel": 3.367603395846181,
+          "message": 6.819179570431789,
+          "topology": 6.584962500587243
+        },
+        "total_entropy": 3.749792791642787,
+        "cross_entropy_debt_finding": 3.0957952536874807,
+        "mutual_info_debt_finding": 3.802735274918753,
+        "entropy_gradient": {
+          "dhealth/dt": -0.0009352466217085187,
+          "dqueue_depth/dt": -0.0024054548593306357,
+          "ddebt/dt": -0.0012097784121785082,
+          "dfinding/dt": 0.0019329943024009033,
+          "dconsensus/dt": 0.0017517921691410088,
+          "dfuel/dt": -0.000731142529408757,
+          "dmessage/dt": -0.010435008650857114,
+          "dtopology/dt": 0.0
+        }
+      },
+      {
+        "timestamp": 30.0,
+        "dimensions": {
+          "health": 3.439830165202392,
+          "queue_depth": 3.4319940696606523,
+          "debt": 3.448536005384174,
+          "finding": 3.4505920827174172,
+          "consensus": 3.363620441013734,
+          "fuel": 3.376319038160222,
+          "message": 6.828556662294419,
+          "topology": 6.584962500587243
+        },
+        "total_entropy": 3.751850477478908,
+        "cross_entropy_debt_finding": 3.4594316170319996,
+        "mutual_info_debt_finding": 3.4396964710695914,
+        "entropy_gradient": {
+          "dhealth/dt": 2.8017293640658636e-07,
+          "dqueue_depth/dt": -0.0003152005397817348,
+          "ddebt/dt": -0.0004272265670688391,
+          "dfinding/dt": 0.0010247860624263971,
+          "dconsensus/dt": 0.004194887603676367,
+          "dfuel/dt": 0.008715642314041094,
+          "dmessage/dt": 0.009377091862630138,
+          "dtopology/dt": 0.0
+        }
+      },
+      {
+        "timestamp": 31.0,
+        "dimensions": {
+          "health": 3.44072539526802,
+          "queue_depth": 3.4339954979010954,
+          "debt": 3.4503823439238532,
+          "finding": 3.451939489659804,
+          "consensus": 3.36323515594281,
+          "fuel": 3.3709549950582467,
+          "message": 6.822077847866015,
+          "topology": 6.584962500587243
+        },
+        "total_entropy": 3.751905516116953,
+        "cross_entropy_debt_finding": 3.4594316170319996,
+        "mutual_info_debt_finding": 3.442890216551658,
+        "entropy_gradient": {
+          "dhealth/dt": 0.0008952300656281942,
+          "dqueue_depth/dt": 0.002001428240443026,
+          "ddebt/dt": 0.0018463385396794152,
+          "dfinding/dt": 0.0013474069423868862,
+          "dconsensus/dt": -0.00038528507092383535,
+          "dfuel/dt": -0.005364043101975469,
+          "dmessage/dt": -0.006478814428404256,
+          "dtopology/dt": 0.0
+        }
+      },
+      {
+        "timestamp": 32.0,
+        "dimensions": {
+          "health": 3.4413742939841216,
+          "queue_depth": 3.434710434818081,
+          "debt": 3.448485236338069,
+          "finding": 3.4521998422225715,
+          "consensus": 3.3639173135832983,
+          "fuel": 3.382616751890463,
+          "message": 6.851070033867828,
+          "topology": 6.584962500587243
+        },
+        "total_entropy": 3.7544651022408493,
+        "cross_entropy_debt_finding": 3.4594316170319996,
+        "mutual_info_debt_finding": 3.4412534615286403,
+        "entropy_gradient": {
+          "dhealth/dt": 0.0006488987161015203,
+          "dqueue_depth/dt": 0.0007149369169856534,
+          "ddebt/dt": -0.001897107585784319,
+          "dfinding/dt": 0.00026035256276735197,
+          "dconsensus/dt": 0.000682157640488068,
+          "dfuel/dt": 0.011661756832216152,
+          "dmessage/dt": 0.028992186001812748,
+          "dtopology/dt": 0.0
+        }
+      },
+      {
+        "timestamp": 33.0,
+        "dimensions": {
+          "health": 3.4406485547739103,
+          "queue_depth": 3.433165007629611,
+          "debt": 3.446527273127618,
+          "finding": 3.4527663081122957,
+          "consensus": 3.3655121142343627,
+          "fuel": 3.3799131574279704,
+          "message": 6.828749993261032,
+          "topology": 6.584962500587243
+        },
+        "total_entropy": 3.7527762577973958,
+        "cross_entropy_debt_finding": 3.27761343535974,
+        "mutual_info_debt_finding": 3.6216801458801733,
+        "entropy_gradient": {
+          "dhealth/dt": -0.0007257392102113513,
+          "dqueue_depth/dt": -0.001545427188470061,
+          "ddebt/dt": -0.0019579632104509415,
+          "dfinding/dt": 0.0005664658897241992,
+          "dconsensus/dt": 0.001594800651064432,
+          "dfuel/dt": -0.0027035944624924646,
+          "dmessage/dt": -0.02232004060679582,
+          "dtopology/dt": 0.0
+        }
+      },
+      {
+        "timestamp": 34.0,
+        "dimensions": {
+          "health": 3.439767447152418,
+          "queue_depth": 3.432422890678332,
+          "debt": 3.4457616450290773,
+          "finding": 3.453424544208486,
+          "consensus": 3.3675978494559824,
+          "fuel": 3.3743867498732882,
+          "message": 6.831287903560721,
+          "topology": 6.584962500587243
+        },
+        "total_entropy": 3.752435516601333,
+        "cross_entropy_debt_finding": 3.4594316170319996,
+        "mutual_info_debt_finding": 3.439754572205563,
+        "entropy_gradient": {
+          "dhealth/dt": -0.0008811076214922942,
+          "dqueue_depth/dt": -0.0007421169512791259,
+          "ddebt/dt": -0.0007656280985406383,
+          "dfinding/dt": 0.0006582360961902012,
+          "dconsensus/dt": 0.0020857352216197,
+          "dfuel/dt": -0.0055264075546821445,
+          "dmessage/dt": 0.0025379102996891945,
+          "dtopology/dt": 0.0
+        }
+      },
+      {
+        "timestamp": 35.0,
+        "dimensions": {
+          "health": 3.4396294322499386,
+          "queue_depth": 3.4392086550305647,
+          "debt": 3.446297126154484,
+          "finding": 3.453317321262091,
+          "consensus": 3.370301194904092,
+          "fuel": 3.3602468011586426,
+          "message": 6.84156642577333,
+          "topology": 6.584962500587243
+        },
+        "total_entropy": 3.752684475493369,
+        "cross_entropy_debt_finding": 3.4594316170319996,
+        "mutual_info_debt_finding": 3.440182830384575,
+        "entropy_gradient": {
+          "dhealth/dt": -0.00013801490247944415,
+          "dqueue_depth/dt": 0.0067857643522328814,
+          "ddebt/dt": 0.0005354811254068004,
+          "dfinding/dt": -0.00010722294639498031,
+          "dconsensus/dt": 0.002703345448109573,
+          "dfuel/dt": -0.014139948714645634,
+          "dmessage/dt": 0.01027852221260872,
+          "dtopology/dt": 0.0
+        }
+      },
+      {
+        "timestamp": 36.0,
+        "dimensions": {
+          "health": 3.4403322400011356,
+          "queue_depth": 3.4425497310682243,
+          "debt": 3.447228039904788,
+          "finding": 3.453471626174833,
+          "consensus": 3.3710295722143497,
+          "fuel": 3.3501075375583826,
+          "message": 6.837009044636726,
+          "topology": 6.584962500587243
+        },
+        "total_entropy": 3.7522085091721062,
+        "cross_entropy_debt_finding": 3.4594316170319996,
+        "mutual_info_debt_finding": 3.4412680490476215,
+        "entropy_gradient": {
+          "dhealth/dt": 0.000702807751197021,
+          "dqueue_depth/dt": 0.0033410760376595405,
+          "ddebt/dt": 0.0009309137503037412,
+          "dfinding/dt": 0.0001543049127419316,
+          "dconsensus/dt": 0.0007283773102577662,
+          "dfuel/dt": -0.010139263600259962,
+          "dmessage/dt": -0.004557381136603311,
+          "dtopology/dt": 0.0
+        }
+      },
+      {
+        "timestamp": 37.0,
+        "dimensions": {
+          "health": 3.4403340261475592,
+          "queue_depth": 3.441963546267846,
+          "debt": 3.4478128184133174,
+          "finding": 3.4542962258383483,
+          "consensus": 3.3703608151214386,
+          "fuel": 3.3518237373946613,
+          "message": 6.829264037691405,
+          "topology": 6.584962500587243
+        },
+        "total_entropy": 3.752116090320866,
+        "cross_entropy_debt_finding": 3.27761343535974,
+        "mutual_info_debt_finding": 3.624495608891926,
+        "entropy_gradient": {
+          "dhealth/dt": 1.7861464236545999e-06,
+          "dqueue_depth/dt": -0.0005861848003783088,
+          "ddebt/dt": 0.0005847785085295598,
+          "dfinding/dt": 0.0008245996635154462,
+          "dconsensus/dt": -0.000668757092911143,
+          "dfuel/dt": 0.0017161998362786868,
+          "dmessage/dt": -0.007745006945321542,
+          "dtopology/dt": 0.0
+        }
+      },
+      {
+        "timestamp": 38.0,
+        "dimensions": {
+          "health": 3.4422106203474963,
+          "queue_depth": 3.4404874648162918,
+          "debt": 3.4485117528191687,
+          "finding": 3.4533899127551817,
+          "consensus": 3.3740213161591126,
+          "fuel": 3.3319914347453787,
+          "message": 6.80474510246058,
+          "topology": 6.584962500587243
+        },
+        "total_entropy": 3.7495483936994196,
+        "cross_entropy_debt_finding": 3.4594316170319996,
+        "mutual_info_debt_finding": 3.4424700485423503,
+        "entropy_gradient": {
+          "dhealth/dt": 0.0018765941999370206,
+          "dqueue_depth/dt": -0.001476081451554201,
+          "ddebt/dt": 0.0006989344058512259,
+          "dfinding/dt": -0.0009063130831665767,
+          "dconsensus/dt": 0.0036605010376740132,
+          "dfuel/dt": -0.019832302649282596,
+          "dmessage/dt": -0.024518935230824823,
+          "dtopology/dt": 0.0
+        }
+      },
+      {
+        "timestamp": 39.0,
+        "dimensions": {
+          "health": 3.4422672224844435,
+          "queue_depth": 3.44007836839487,
+          "debt": 3.4487657422667146,
+          "finding": 3.453920450422011,
+          "consensus": 3.374849112285054,
+          "fuel": 3.326449292325864,
+          "message": 6.844495967983555,
+          "topology": 6.584962500587243
+        },
+        "total_entropy": 3.751230378253783,
+        "cross_entropy_debt_finding": 3.4594316170319996,
+        "mutual_info_debt_finding": 3.443254575656726,
+        "entropy_gradient": {
+          "dhealth/dt": 5.660213694724803e-05,
+          "dqueue_depth/dt": -0.00040909642142183955,
+          "ddebt/dt": 0.00025398944754595476,
+          "dfinding/dt": 0.0005305376668292006,
+          "dconsensus/dt": 0.0008277961259413047,
+          "dfuel/dt": -0.005542142419514562,
+          "dmessage/dt": 0.0397508655229748,
+          "dtopology/dt": 0.0
+        }
+      },
+      {
+        "timestamp": 40.0,
+        "dimensions": {
+          "health": 3.441415289972073,
+          "queue_depth": 3.437367532658423,
+          "debt": 3.449754061797496,
+          "finding": 3.4539964711843374,
+          "consensus": 3.3733985183723436,
+          "fuel": 3.3195765575720713,
+          "message": 6.823150211774432,
+          "topology": 6.584962500587243
+        },
+        "total_entropy": 3.7490722224891626,
+        "cross_entropy_debt_finding": 3.4594316170319996,
+        "mutual_info_debt_finding": 3.4443189159498337,
+        "entropy_gradient": {
+          "dhealth/dt": -0.000851932512370368,
+          "dqueue_depth/dt": -0.002710835736446704,
+          "ddebt/dt": 0.0009883195307813786,
+          "dfinding/dt": 7.602076232648969e-05,
+          "dconsensus/dt": -0.0014505939127102963,
+          "dfuel/dt": -0.0068727347537929084,
+          "dmessage/dt": -0.021345756209123046,
+          "dtopology/dt": 0.0
+        }
+      },
+      {
+        "timestamp": 41.0,
+        "dimensions": {
+          "health": 3.442182306072823,
+          "queue_depth": 3.4373462516767592,
+          "debt": 3.4516308351694094,
+          "finding": 3.45376853993041,
+          "consensus": 3.3740705879487956,
+          "fuel": 3.315622288077187,
+          "message": 6.8388025583731125,
+          "topology": 6.584962500587243
+        },
+        "total_entropy": 3.7500029160466193,
+        "cross_entropy_debt_finding": 3.0957952536874807,
+        "mutual_info_debt_finding": 3.809604121412338,
+        "entropy_gradient": {
+          "dhealth/dt": 0.0007670161007498066,
+          "dqueue_depth/dt": -2.1280981663984733e-05,
+          "ddebt/dt": 0.0018767733719133872,
+          "dfinding/dt": -0.00022793125392750468,
+          "dconsensus/dt": 0.0006720695764519391,
+          "dfuel/dt": -0.0039542694948844215,
+          "dmessage/dt": 0.015652346598680644,
+          "dtopology/dt": 0.0
+        }
+      },
+      {
+        "timestamp": 42.0,
+        "dimensions": {
+          "health": 3.443602371085132,
+          "queue_depth": 3.4353609319791074,
+          "debt": 3.449970699898638,
+          "finding": 3.4538317485985295,
+          "consensus": 3.374307668683625,
+          "fuel": 3.3463730626813413,
+          "message": 6.848315028000788,
+          "topology": 6.584962500587243
+        },
+        "total_entropy": 3.7532842715601937,
+        "cross_entropy_debt_finding": 3.27761343535974,
+        "mutual_info_debt_finding": 3.6261890131374273,
+        "entropy_gradient": {
+          "dhealth/dt": 0.0014200650123088465,
+          "dqueue_depth/dt": -0.0019853196976518106,
+          "ddebt/dt": -0.0016601352707712458,
+          "dfinding/dt": 6.320866811959647e-05,
+          "dconsensus/dt": 0.00023708073482930914,
+          "dfuel/dt": 0.03075077460415443,
+          "dmessage/dt": 0.00951246962767538,
+          "dtopology/dt": 0.0
+        }
+      },
+      {
+        "timestamp": 43.0,
+        "dimensions": {
+          "health": 3.443681157450343,
+          "queue_depth": 3.4351099441266086,
+          "debt": 3.448796469480124,
+          "finding": 3.454045182784681,
+          "consensus": 3.37628013973406,
+          "fuel": 3.3494059252547,
+          "message": 6.833293193694212,
+          "topology": 6.584962500587243
+        },
+        "total_entropy": 3.7529268966828253,
+        "cross_entropy_debt_finding": 3.27761343535974,
+        "mutual_info_debt_finding": 3.6252282169050645,
+        "entropy_gradient": {
+          "dhealth/dt": 7.878636521141402e-05,
+          "dqueue_depth/dt": -0.0002509878524987741,
+          "ddebt/dt": -0.0011742304185142771,
+          "dfinding/dt": 0.00021343418615149545,
+          "dconsensus/dt": 0.001972471050434965,
+          "dfuel/dt": 0.0030328625733586634,
+          "dmessage/dt": -0.015021834306575776,
+          "dtopology/dt": 0.0
+        }
+      },
+      {
+        "timestamp": 44.0,
+        "dimensions": {
+          "health": 3.4433445945839614,
+          "queue_depth": 3.436493251027167,
+          "debt": 3.4499626754530412,
+          "finding": 3.4546461846347074,
+          "consensus": 3.378324306196955,
+          "fuel": 3.347975195092821,
+          "message": 6.829568284231256,
+          "topology": 6.584962500587243
+        },
+        "total_entropy": 3.753345490987611,
+        "cross_entropy_debt_finding": 3.27761343535974,
+        "mutual_info_debt_finding": 3.6269954247280083,
+        "entropy_gradient": {
+          "dhealth/dt": -0.00033656286638183985,
+          "dqueue_depth/dt": 0.0013833069005584342,
+          "ddebt/dt": 0.001166205972917389,
+          "dfinding/dt": 0.000601001850026428,
+          "dconsensus/dt": 0.0020441664628951806,
+          "dfuel/dt": -0.0014307301618790014,
+          "dmessage/dt": -0.0037249094629556723,
+          "dtopology/dt": 0.0
+        }
+      },
+      {
+        "timestamp": 45.0,
+        "dimensions": {
+          "health": 3.4439660773224667,
+          "queue_depth": 3.4350691856231754,
+          "debt": 3.4537647122445616,
+          "finding": 3.4548165066900847,
+          "consensus": 3.37997954287407,
+          "fuel": 3.3279174181125866,
+          "message": 6.84441088598236,
+          "topology": 6.584962500587243
+        },
+        "total_entropy": 3.7530754165184663,
+        "cross_entropy_debt_finding": 3.4594316170319996,
+        "mutual_info_debt_finding": 3.4491496019026466,
+        "entropy_gradient": {
+          "dhealth/dt": 0.0006214827385053745,
+          "dqueue_depth/dt": -0.0014240654039916478,
+          "ddebt/dt": 0.003802036791520358,
+          "dfinding/dt": 0.00017032205537725886,
+          "dconsensus/dt": 0.0016552366771152016,
+          "dfuel/dt": -0.020057776980234365,
+          "dmessage/dt": 0.014842601751103857,
+          "dtopology/dt": 0.0
+        }
+      },
+      {
+        "timestamp": 46.0,
+        "dimensions": {
+          "health": 3.4437381383498877,
+          "queue_depth": 3.433339703695354,
+          "debt": 3.453644273324532,
+          "finding": 3.454466525101956,
+          "consensus": 3.3794674209458333,
+          "fuel": 3.331939978124005,
+          "message": 6.837936450597892,
+          "topology": 6.584962500587243
+        },
+        "total_entropy": 3.7527759093208486,
+        "cross_entropy_debt_finding": 3.4594316170319996,
+        "mutual_info_debt_finding": 3.4486791813944886,
+        "entropy_gradient": {
+          "dhealth/dt": -0.00022793897257900042,
+          "dqueue_depth/dt": -0.001729481927821297,
+          "ddebt/dt": -0.00012043892002955303,
+          "dfinding/dt": -0.00034998158812848956,
+          "dconsensus/dt": -0.0005121219282369083,
+          "dfuel/dt": 0.004022560011418541,
+          "dmessage/dt": -0.0064744353844679026,
+          "dtopology/dt": 0.0
+        }
+      },
+      {
+        "timestamp": 47.0,
+        "dimensions": {
+          "health": 3.4442703994018045,
+          "queue_depth": 3.432827350956693,
+          "debt": 3.4524879298744002,
+          "finding": 3.4544061628030414,
+          "consensus": 3.3801695319950578,
+          "fuel": 3.3238109070512127,
+          "message": 6.842088762397038,
+          "topology": 6.584962500587243
+        },
+        "total_entropy": 3.7520611971950224,
+        "cross_entropy_debt_finding": 3.4594316170319996,
+        "mutual_info_debt_finding": 3.4474624756454424,
+        "entropy_gradient": {
+          "dhealth/dt": 0.000532261051916727,
+          "dqueue_depth/dt": -0.0005123527386610149,
+          "ddebt/dt": -0.0011563434501318248,
+          "dfinding/dt": -6.0362298914817814e-05,
+          "dconsensus/dt": 0.0007021110492244631,
+          "dfuel/dt": -0.008129071072792371,
+          "dmessage/dt": 0.004152311799145991,
+          "dtopology/dt": 0.0
+        }
+      },
+      {
+        "timestamp": 48.0,
+        "dimensions": {
+          "health": 3.4440219462945243,
+          "queue_depth": 3.4318454569506494,
+          "debt": 3.453952883333111,
+          "finding": 3.454735255720556,
+          "consensus": 3.3799829851964684,
+          "fuel": 3.340268809055194,
+          "message": 6.839724669773819,
+          "topology": 6.584962500587243
+        },
+        "total_entropy": 3.75378415265302,
+        "cross_entropy_debt_finding": 3.27761343535974,
+        "mutual_info_debt_finding": 3.631074703693927,
+        "entropy_gradient": {
+          "dhealth/dt": -0.00024845310728016656,
+          "dqueue_depth/dt": -0.0009818940060437598,
+          "ddebt/dt": 0.0014649534587105606,
+          "dfinding/dt": 0.0003290929175148172,
+          "dconsensus/dt": -0.00018654679858931544,
+          "dfuel/dt": 0.01645790200398123,
+          "dmessage/dt": -0.0023640926232193493,
+          "dtopology/dt": 0.0
+        }
+      },
+      {
+        "timestamp": 49.0,
+        "dimensions": {
+          "health": 3.4458072229034507,
+          "queue_depth": 3.430274394145369,
+          "debt": 3.4504267531156874,
+          "finding": 3.455189839609899,
+          "consensus": 3.3835430764268875,
+          "fuel": 3.3450888783363952,
+          "message": 6.827256769969625,
+          "topology": 6.584962500587243
+        },
+        "total_entropy": 3.753673154220688,
+        "cross_entropy_debt_finding": 3.27761343535974,
+        "mutual_info_debt_finding": 3.628003157365846,
+        "entropy_gradient": {
+          "dhealth/dt": 0.001785276608926356,
+          "dqueue_depth/dt": -0.0015710628052802988,
+          "ddebt/dt": -0.003526130217423429,
+          "dfinding/dt": 0.00045458388934260796,
+          "dconsensus/dt": 0.0035600912304190047,
+          "dfuel/dt": 0.004820069281201267,
+          "dmessage/dt": -0.012467899804193827,
+          "dtopology/dt": 0.0
+        }
+      },
+      {
+        "timestamp": 50.0,
+        "dimensions": {
+          "health": 3.4459755642765155,
+          "queue_depth": 3.430703534935139,
+          "debt": 3.4510645975049963,
+          "finding": 3.455303742815257,
+          "consensus": 3.3825965269631153,
+          "fuel": 3.3120676994468816,
+          "message": 6.830782503351968,
+          "topology": 6.584962500587243
+        },
+        "total_entropy": 3.7506238553851583,
+        "cross_entropy_debt_finding": 3.4594316170319996,
+        "mutual_info_debt_finding": 3.4469367232882537,
+        "entropy_gradient": {
+          "dhealth/dt": 0.00016834137306487307,
+          "dqueue_depth/dt": 0.0004291407897700772,
+          "ddebt/dt": 0.000637844389308917,
+          "dfinding/dt": 0.00011390320535831222,
+          "dconsensus/dt": -0.0009465494637721505,
+          "dfuel/dt": -0.033021178889513614,
+          "dmessage/dt": 0.003525733382343077,
+          "dtopology/dt": 0.0
+        }
+      }
+    ],
+    "df_maps": [
+      {
+        "H_debt": 3.4559729747795522,
+        "H_finding": 3.400982083389211,
+        "mutual_information": 3.5793416228090233,
+        "kl_divergence": 0.06213619521532637,
+        "entropy_diff": 0.05499089139034119,
+        "entropy_ratio": 1.0161691211363053,
+        "normalized_mutual_info": 1.0920572829257276,
+        "coupling_coefficient": 1.0262661695569129,
+        "self_drive_potential_index": 66.79937562788999,
+        "balance_status": "balanced"
+      },
+      {
+        "H_debt": 3.456529760657176,
+        "H_finding": 3.366136380081812,
+        "mutual_information": 3.5450527053792484,
+        "kl_divergence": 0.08774356970094122,
+        "entropy_diff": 0.09039338057536428,
+        "entropy_ratio": 1.0268537487095166,
+        "normalized_mutual_info": 1.0815957327444856,
+        "coupling_coefficient": 0.9907370789128158,
+        "self_drive_potential_index": 38.85478268074807,
+        "balance_status": "balanced"
+      },
+      {
+        "H_debt": 3.4557394855017676,
+        "H_finding": 3.3731569780654906,
+        "mutual_information": 3.7331012098797776,
+        "kl_divergence": 0.08526411612271861,
+        "entropy_diff": 0.08258250743627693,
+        "entropy_ratio": 1.0244822603486392,
+        "normalized_mutual_info": 1.2058617911868041,
+        "coupling_coefficient": 1.107306372404917,
+        "self_drive_potential_index": 50.055234236094535,
+        "balance_status": "balanced"
+      },
+      {
+        "H_debt": 3.4565448522535864,
+        "H_finding": 3.3648512990484107,
+        "mutual_information": 3.543782715942257,
+        "kl_divergence": 0.09647815931335187,
+        "entropy_diff": 0.09169355320517569,
+        "entropy_ratio": 1.0272504027528295,
+        "normalized_mutual_info": 1.0812082589126872,
+        "coupling_coefficient": 0.9817692427395465,
+        "self_drive_potential_index": 37.943527631486596,
+        "balance_status": "balanced"
+      },
+      {
+        "H_debt": 3.455544248577275,
+        "H_finding": 3.394077566518541,
+        "mutual_information": 3.390190198063816,
+        "kl_divergence": 0.07213818571412207,
+        "entropy_diff": 0.061466682058733735,
+        "entropy_ratio": 1.018109981505217,
+        "normalized_mutual_info": 0.9799847412143422,
+        "coupling_coefficient": 0.9117800754368938,
+        "self_drive_potential_index": 50.28916098893149,
+        "balance_status": "balanced"
+      },
+      {
+        "H_debt": 3.455037168457305,
+        "H_finding": 3.4135881487764044,
+        "mutual_information": 3.5910118818739694,
+        "kl_divergence": 0.054262866534377396,
+        "entropy_diff": 0.041449019680900534,
+        "entropy_ratio": 1.0121423609917746,
+        "normalized_mutual_info": 1.0956178794679214,
+        "coupling_coefficient": 1.0377507296706554,
+        "self_drive_potential_index": 89.90743859250175,
+        "balance_status": "balanced"
+      },
+      {
+        "H_debt": 3.4561608862703292,
+        "H_finding": 3.429982174001305,
+        "mutual_information": 3.6085296249118937,
+        "kl_divergence": 0.03568107899472281,
+        "entropy_diff": 0.026178712269024462,
+        "entropy_ratio": 1.0076323172658714,
+        "normalized_mutual_info": 1.1009625436215413,
+        "coupling_coefficient": 1.062371589786915,
+        "self_drive_potential_index": 146.43956892802996,
+        "balance_status": "balanced"
+      },
+      {
+        "H_debt": 3.4560381311269093,
+        "H_finding": 3.428951254811426,
+        "mutual_information": 3.425557768906335,
+        "kl_divergence": 0.04074317888531796,
+        "entropy_diff": 0.027086876315483455,
+        "entropy_ratio": 1.0078994637723957,
+        "normalized_mutual_info": 0.9902082619416691,
+        "coupling_coefficient": 0.9506748565537674,
+        "self_drive_potential_index": 120.22765529029894,
+        "balance_status": "balanced"
+      },
+      {
+        "H_debt": 3.455416356050776,
+        "H_finding": 3.4345315359585933,
+        "mutual_information": 3.612334456649629,
+        "kl_divergence": 0.031272377081275116,
+        "entropy_diff": 0.020884820092182732,
+        "entropy_ratio": 1.0060808351220294,
+        "normalized_mutual_info": 1.1021233979482206,
+        "coupling_coefficient": 1.068190722527356,
+        "self_drive_potential_index": 184.75917521680853,
+        "balance_status": "balanced"
+      },
+      {
+        "H_debt": 3.453969455332664,
+        "H_finding": 3.4408299289306816,
+        "mutual_information": 3.6171859489036056,
+        "kl_divergence": 0.02554720814951583,
+        "entropy_diff": 0.013139526401982238,
+        "entropy_ratio": 1.0038187084433097,
+        "normalized_mutual_info": 1.1036035884433806,
+        "coupling_coefficient": 1.0757666893680382,
+        "self_drive_potential_index": 296.1482784401387,
+        "balance_status": "balanced"
+      },
+      {
+        "H_debt": 3.454483236953175,
+        "H_finding": 3.4370967329879902,
+        "mutual_information": 3.795784716253685,
+        "kl_divergence": 0.023804525357109325,
+        "entropy_diff": 0.01738650396518482,
+        "entropy_ratio": 1.0050584854647266,
+        "normalized_mutual_info": 1.2261097408201715,
+        "coupling_coefficient": 1.197267431108743,
+        "self_drive_potential_index": 261.38488791263336,
+        "balance_status": "balanced"
+      },
+      {
+        "H_debt": 3.4545531887306997,
+        "H_finding": 3.4374555249858525,
+        "mutual_information": 3.4325770966845526,
+        "kl_divergence": 0.02292880790031935,
+        "entropy_diff": 0.017097663744847225,
+        "entropy_ratio": 1.0049739301410803,
+        "normalized_mutual_info": 0.9922373027076308,
+        "coupling_coefficient": 0.9697453266850893,
+        "self_drive_potential_index": 194.68891353828462,
+        "balance_status": "balanced"
+      },
+      {
+        "H_debt": 3.451864676484345,
+        "H_finding": 3.435077112370767,
+        "mutual_information": 3.4275101718231125,
+        "kl_divergence": 0.02839239841363026,
+        "entropy_diff": 0.016787564113577957,
+        "entropy_ratio": 1.0048870996090982,
+        "normalized_mutual_info": 0.9907726329519555,
+        "coupling_coefficient": 0.963037813764834,
+        "self_drive_potential_index": 196.62303956279263,
+        "balance_status": "balanced"
+      },
+      {
+        "H_debt": 3.449938401628164,
+        "H_finding": 3.4338184532793163,
+        "mutual_information": 3.4243252378754803,
+        "kl_divergence": 0.03407447971212249,
+        "entropy_diff": 0.016119948348847668,
+        "entropy_ratio": 1.0046944672433056,
+        "normalized_mutual_info": 0.9898519805731486,
+        "coupling_coefficient": 0.9566914614728051,
+        "self_drive_potential_index": 203.22786557146154,
+        "balance_status": "balanced"
+      },
+      {
+        "H_debt": 3.4503444556734655,
+        "H_finding": 3.436001193760131,
+        "mutual_information": 3.4269140324015974,
+        "kl_divergence": 0.03518514059432162,
+        "entropy_diff": 0.014343261913334349,
+        "entropy_ratio": 1.0041744053637014,
+        "normalized_mutual_info": 0.990600310013539,
+        "coupling_coefficient": 0.9563519487358597,
+        "self_drive_potential_index": 228.49306594209355,
+        "balance_status": "balanced"
+      },
+      {
+        "H_debt": 3.450847818673777,
+        "H_finding": 3.4358246952618297,
+        "mutual_information": 3.609059078575867,
+        "kl_divergence": 0.03692074537813648,
+        "entropy_diff": 0.015023123411947559,
+        "entropy_ratio": 1.0043724941299328,
+        "normalized_mutual_info": 1.1011240799571704,
+        "coupling_coefficient": 1.0612111004645908,
+        "self_drive_potential_index": 254.9385654302399,
+        "balance_status": "balanced"
+      },
+      {
+        "H_debt": 3.4514073732489186,
+        "H_finding": 3.437913986846767,
+        "mutual_information": 3.429889743063686,
+        "kl_divergence": 0.032831284482404084,
+        "entropy_diff": 0.013493386402151586,
+        "entropy_ratio": 1.0039248760595476,
+        "normalized_mutual_info": 0.9914604832996222,
+        "coupling_coefficient": 0.9594381063434756,
+        "self_drive_potential_index": 243.8799866532545,
+        "balance_status": "balanced"
+      },
+      {
+        "H_debt": 3.4499642737877965,
+        "H_finding": 3.44124990916301,
+        "mutual_information": 3.6136007475910663,
+        "kl_divergence": 0.028891223153424878,
+        "entropy_diff": 0.008714364624786253,
+        "entropy_ratio": 1.0025323253918088,
+        "normalized_mutual_info": 1.1025097433688664,
+        "coupling_coefficient": 1.0711126228601215,
+        "self_drive_potential_index": 444.1601306532991,
+        "balance_status": "balanced"
+      },
+      {
+        "H_debt": 3.450028996693609,
+        "H_finding": 3.4432162128644412,
+        "mutual_information": 3.4338135925260507,
+        "kl_divergence": 0.026783155907806833,
+        "entropy_diff": 0.006812783829167834,
+        "entropy_ratio": 1.0019786104931536,
+        "normalized_mutual_info": 0.9925947301634518,
+        "coupling_coefficient": 0.9663627662209782,
+        "self_drive_potential_index": 487.0710177309253,
+        "balance_status": "balanced"
+      },
+      {
+        "H_debt": 3.452286880004438,
+        "H_finding": 3.4428736000843267,
+        "mutual_information": 3.4357288630567653,
+        "kl_divergence": 0.022516954991185972,
+        "entropy_diff": 0.009413279920111428,
+        "entropy_ratio": 1.0027341345960559,
+        "normalized_mutual_info": 0.9931483675070054,
+        "coupling_coefficient": 0.9710355810072262,
+        "self_drive_potential_index": 354.4157791538991,
+        "balance_status": "balanced"
+      },
+      {
+        "H_debt": 3.451565968562223,
+        "H_finding": 3.441963579936872,
+        "mutual_information": 3.615916113139355,
+        "kl_divergence": 0.024055054005884795,
+        "entropy_diff": 0.009602388625350677,
+        "entropy_ratio": 1.0027897995728496,
+        "normalized_mutual_info": 1.103216161497142,
+        "coupling_coefficient": 1.0769948787290569,
+        "self_drive_potential_index": 405.55774684311615,
+        "balance_status": "balanced"
+      },
+      {
+        "H_debt": 3.4511670408416886,
+        "H_finding": 3.442760025894949,
+        "mutual_information": 3.4344954497046376,
+        "kl_divergence": 0.022200115811504117,
+        "entropy_diff": 0.008407014946739455,
+        "entropy_ratio": 1.0024419404150338,
+        "normalized_mutual_info": 0.9927918310904393,
+        "coupling_coefficient": 0.9709945833901258,
+        "self_drive_potential_index": 396.6778291463417,
+        "balance_status": "balanced"
+      },
+      {
+        "H_debt": 3.4503473760716816,
+        "H_finding": 3.4421115463266347,
+        "mutual_information": 3.4330273053663167,
+        "kl_divergence": 0.020659937064340664,
+        "entropy_diff": 0.008235829745046885,
+        "entropy_ratio": 1.0023926678534276,
+        "normalized_mutual_info": 0.9923674422020884,
+        "coupling_coefficient": 0.9720755298835495,
+        "self_drive_potential_index": 405.20043514202285,
+        "balance_status": "balanced"
+      },
+      {
+        "H_debt": 3.450012077052221,
+        "H_finding": 3.4419739881275357,
+        "mutual_information": 3.4325544481477572,
+        "kl_divergence": 0.02055142668918804,
+        "entropy_diff": 0.008038088924685383,
+        "entropy_ratio": 1.0023353136462325,
+        "normalized_mutual_info": 0.9922307558122728,
+        "coupling_coefficient": 0.9720471099287583,
+        "self_drive_potential_index": 415.0992382328994,
+        "balance_status": "balanced"
+      },
+      {
+        "H_debt": 3.450036335473887,
+        "H_finding": 3.4436732063938846,
+        "mutual_information": 3.4342779248357718,
+        "kl_divergence": 0.018683084842397266,
+        "entropy_diff": 0.006363129080002583,
+        "entropy_ratio": 1.0018477737573948,
+        "normalized_mutual_info": 0.9927289523019734,
+        "coupling_coefficient": 0.974353898894494,
+        "self_drive_potential_index": 525.8736686451599,
+        "balance_status": "balanced"
+      },
+      {
+        "H_debt": 3.4503806563407506,
+        "H_finding": 3.447074444693296,
+        "mutual_information": 3.619841665674307,
+        "kl_divergence": 0.013047272056023932,
+        "entropy_diff": 0.0033062116474544823,
+        "entropy_ratio": 1.0009591355221377,
+        "normalized_mutual_info": 1.1044138477442396,
+        "coupling_coefficient": 1.0900978552201555,
+        "self_drive_potential_index": 1193.5054187095568,
+        "balance_status": "balanced"
+      },
+      {
+        "H_debt": 3.450212323710097,
+        "H_finding": 3.449212853892413,
+        "mutual_information": 3.43999356057051,
+        "kl_divergence": 0.014338347340565587,
+        "entropy_diff": 0.0009994698176840622,
+        "entropy_ratio": 1.0002897674802897,
+        "normalized_mutual_info": 0.9943811415536508,
+        "coupling_coefficient": 0.9802250890814252,
+        "self_drive_potential_index": 3373.7563629360325,
+        "balance_status": "balanced"
+      },
+      {
+        "H_debt": 3.450173010363421,
+        "H_finding": 3.44763430235259,
+        "mutual_information": 3.438375695684012,
+        "kl_divergence": 0.014184316578798987,
+        "entropy_diff": 0.0025387080108312254,
+        "entropy_ratio": 1.0007363622960315,
+        "normalized_mutual_info": 0.9939134737210259,
+        "coupling_coefficient": 0.9799150044187924,
+        "self_drive_potential_index": 1327.1773626336599,
+        "balance_status": "balanced"
+      },
+      {
+        "H_debt": 3.4489632319512427,
+        "H_finding": 3.449567296654991,
+        "mutual_information": 3.802735274918753,
+        "kl_divergence": 0.01546035833103863,
+        "entropy_diff": 0.0006040647037481861,
+        "entropy_ratio": 0.9998248867896224,
+        "normalized_mutual_info": 1.2283549017869908,
+        "coupling_coefficient": 1.20951014356396,
+        "self_drive_potential_index": 7614.161361104671,
+        "balance_status": "balanced"
+      },
+      {
+        "H_debt": 3.448536005384174,
+        "H_finding": 3.4505920827174172,
+        "mutual_information": 3.4396964710695914,
+        "kl_divergence": 0.014186235532625664,
+        "entropy_diff": 0.0020560773332434223,
+        "entropy_ratio": 0.9994041377874012,
+        "normalized_mutual_info": 0.9942952634286295,
+        "coupling_coefficient": 0.9802895357942644,
+        "self_drive_potential_index": 1639.966667781998,
+        "balance_status": "balanced"
+      },
+      {
+        "H_debt": 3.4503823439238532,
+        "H_finding": 3.451939489659804,
+        "mutual_information": 3.442890216551658,
+        "kl_divergence": 0.012327147117447547,
+        "entropy_diff": 0.0015571457359508933,
+        "entropy_ratio": 0.9995489069722774,
+        "normalized_mutual_info": 0.9952184629121084,
+        "coupling_coefficient": 0.9830255647314967,
+        "self_drive_potential_index": 2173.495263767299,
+        "balance_status": "balanced"
+      },
+      {
+        "H_debt": 3.448485236338069,
+        "H_finding": 3.4521998422225715,
+        "mutual_information": 3.4412534615286403,
+        "kl_divergence": 0.01393135328419961,
+        "entropy_diff": 0.0037146058845025642,
+        "entropy_ratio": 0.9989239887161331,
+        "normalized_mutual_info": 0.9947453346054489,
+        "coupling_coefficient": 0.9809832705898271,
+        "self_drive_potential_index": 908.7941196732327,
+        "balance_status": "balanced"
+      },
+      {
+        "H_debt": 3.446527273127618,
+        "H_finding": 3.4527663081122957,
+        "mutual_information": 3.6216801458801733,
+        "kl_divergence": 0.013716013493997835,
+        "entropy_diff": 0.006239034984677705,
+        "entropy_ratio": 0.9981930329110782,
+        "normalized_mutual_info": 1.10497476813405,
+        "coupling_coefficient": 1.0899223846331845,
+        "self_drive_potential_index": 632.6860175334773,
+        "balance_status": "balanced"
+      },
+      {
+        "H_debt": 3.4457616450290773,
+        "H_finding": 3.453424544208486,
+        "mutual_information": 3.439754572205563,
+        "kl_divergence": 0.011618672110141108,
+        "entropy_diff": 0.007662899179408544,
+        "entropy_ratio": 0.997781072329483,
+        "normalized_mutual_info": 0.9943120584234154,
+        "coupling_coefficient": 0.9828263263270344,
+        "self_drive_potential_index": 441.17522968778326,
+        "balance_status": "balanced"
+      },
+      {
+        "H_debt": 3.446297126154484,
+        "H_finding": 3.453317321262091,
+        "mutual_information": 3.440182830384575,
+        "kl_divergence": 0.011595343661961932,
+        "entropy_diff": 0.007020195107606764,
+        "entropy_ratio": 0.9979671155140653,
+        "normalized_mutual_info": 0.9944358527996044,
+        "coupling_coefficient": 0.9829716216354754,
+        "self_drive_potential_index": 481.69630551604826,
+        "balance_status": "balanced"
+      },
+      {
+        "H_debt": 3.447228039904788,
+        "H_finding": 3.453471626174833,
+        "mutual_information": 3.4412680490476215,
+        "kl_divergence": 0.00958743310484732,
+        "entropy_diff": 0.006243586270044954,
+        "entropy_ratio": 0.9981920840691024,
+        "normalized_mutual_info": 0.9947495513440915,
+        "coupling_coefficient": 0.9852580289366347,
+        "self_drive_potential_index": 543.0431764849385,
+        "balance_status": "balanced"
+      },
+      {
+        "H_debt": 3.4478128184133174,
+        "H_finding": 3.4542962258383483,
+        "mutual_information": 3.624495608891926,
+        "kl_divergence": 0.007490312691185962,
+        "entropy_diff": 0.0064834074250308404,
+        "entropy_ratio": 0.9981230887274962,
+        "normalized_mutual_info": 1.105833766019918,
+        "coupling_coefficient": 1.09758166930215,
+        "self_drive_potential_index": 613.5939975124408,
+        "balance_status": "balanced"
+      },
+      {
+        "H_debt": 3.4485117528191687,
+        "H_finding": 3.4533899127551817,
+        "mutual_information": 3.4424700485423503,
+        "kl_divergence": 0.007538159994413191,
+        "entropy_diff": 0.004878159936013038,
+        "entropy_ratio": 0.9985874285385922,
+        "normalized_mutual_info": 0.9950970071194206,
+        "coupling_coefficient": 0.9876240083868516,
+        "self_drive_potential_index": 696.9566482020987,
+        "balance_status": "balanced"
+      },
+      {
+        "H_debt": 3.4487657422667146,
+        "H_finding": 3.453920450422011,
+        "mutual_information": 3.443254575656726,
+        "kl_divergence": 0.005192971604500898,
+        "entropy_diff": 0.005154708155296284,
+        "entropy_ratio": 0.9985075775979388,
+        "normalized_mutual_info": 0.995323786313578,
+        "coupling_coefficient": 0.9901684953788882,
+        "self_drive_potential_index": 661.4151632891057,
+        "balance_status": "balanced"
+      },
+      {
+        "H_debt": 3.449754061797496,
+        "H_finding": 3.4539964711843374,
+        "mutual_information": 3.4443189159498337,
+        "kl_divergence": 0.004613182094418765,
+        "entropy_diff": 0.004242409386841395,
+        "entropy_ratio": 0.9987717389053198,
+        "normalized_mutual_info": 0.9956314496556822,
+        "coupling_coefficient": 0.9910489984471862,
+        "self_drive_potential_index": 804.6108756291296,
+        "balance_status": "balanced"
+      },
+      {
+        "H_debt": 3.4516308351694094,
+        "H_finding": 3.45376853993041,
+        "mutual_information": 3.809604121412338,
+        "kl_divergence": 0.0034463920479930795,
+        "entropy_diff": 0.002137704761000503,
+        "entropy_ratio": 0.9993810514988993,
+        "normalized_mutual_info": 1.230573668188025,
+        "coupling_coefficient": 1.2263399286372336,
+        "self_drive_potential_index": 2185.460552399342,
+        "balance_status": "balanced"
+      },
+      {
+        "H_debt": 3.449970699898638,
+        "H_finding": 3.4538317485985295,
+        "mutual_information": 3.6261890131374273,
+        "kl_divergence": 0.003333685442918486,
+        "entropy_diff": 0.003861048699891345,
+        "entropy_ratio": 0.9988820970212732,
+        "normalized_mutual_info": 1.1063504237279873,
+        "coupling_coefficient": 1.1026683402896738,
+        "self_drive_potential_index": 1035.595256088299,
+        "balance_status": "balanced"
+      },
+      {
+        "H_debt": 3.448796469480124,
+        "H_finding": 3.454045182784681,
+        "mutual_information": 3.6252282169050645,
+        "kl_divergence": 0.0047434379203367336,
+        "entropy_diff": 0.005248713304557118,
+        "entropy_ratio": 0.9984804155340627,
+        "normalized_mutual_info": 1.1060572847562073,
+        "coupling_coefficient": 1.1008231942952202,
+        "self_drive_potential_index": 760.3263882378684,
+        "balance_status": "balanced"
+      },
+      {
+        "H_debt": 3.4499626754530412,
+        "H_finding": 3.4546461846347074,
+        "mutual_information": 3.6269954247280083,
+        "kl_divergence": 0.0050943663511705956,
+        "entropy_diff": 0.004683509181666157,
+        "entropy_ratio": 0.998644286844088,
+        "normalized_mutual_info": 1.1065964599389255,
+        "coupling_coefficient": 1.1009733873261354,
+        "self_drive_potential_index": 852.6139692326183,
+        "balance_status": "balanced"
+      },
+      {
+        "H_debt": 3.4537647122445616,
+        "H_finding": 3.4548165066900847,
+        "mutual_information": 3.4491496019026466,
+        "kl_divergence": 0.005077954464117942,
+        "entropy_diff": 0.0010517944455230577,
+        "entropy_ratio": 0.9996955570452277,
+        "normalized_mutual_info": 0.9970278310522359,
+        "coupling_coefficient": 0.9919778018872725,
+        "self_drive_potential_index": 3252.9925687856135,
+        "balance_status": "balanced"
+      },
+      {
+        "H_debt": 3.453644273324532,
+        "H_finding": 3.454466525101956,
+        "mutual_information": 3.4486791813944886,
+        "kl_divergence": 0.005213840954154756,
+        "entropy_diff": 0.0008222517774241211,
+        "entropy_ratio": 0.9997619742812891,
+        "normalized_mutual_info": 0.9968918490296896,
+        "coupling_coefficient": 0.9917077397846913,
+        "self_drive_potential_index": 4159.4089720261645,
+        "balance_status": "balanced"
+      },
+      {
+        "H_debt": 3.4524879298744002,
+        "H_finding": 3.4544061628030414,
+        "mutual_information": 3.4474624756454424,
+        "kl_divergence": 0.005807294651771133,
+        "entropy_diff": 0.0019182329286411282,
+        "entropy_ratio": 0.9994446996276115,
+        "normalized_mutual_info": 0.9965401421935086,
+        "coupling_coefficient": 0.9907697114683647,
+        "self_drive_potential_index": 1780.618596017441,
+        "balance_status": "balanced"
+      },
+      {
+        "H_debt": 3.453952883333111,
+        "H_finding": 3.454735255720556,
+        "mutual_information": 3.631074703693927,
+        "kl_divergence": 0.009046297557640217,
+        "entropy_diff": 0.0007823723874453847,
+        "entropy_ratio": 0.999773536196116,
+        "normalized_mutual_info": 1.1078410481267167,
+        "coupling_coefficient": 1.097864382339493,
+        "self_drive_potential_index": 5095.306456667511,
+        "balance_status": "balanced"
+      },
+      {
+        "H_debt": 3.4504267531156874,
+        "H_finding": 3.455189839609899,
+        "mutual_information": 3.628003157365846,
+        "kl_divergence": 0.009906232708613938,
+        "entropy_diff": 0.0047630864942114215,
+        "entropy_ratio": 0.9986214689162748,
+        "normalized_mutual_info": 1.106903919210033,
+        "coupling_coefficient": 1.0959928046488652,
+        "self_drive_potential_index": 834.8085379234312,
+        "balance_status": "balanced"
+      },
+      {
+        "H_debt": 3.4510645975049963,
+        "H_finding": 3.455303742815257,
+        "mutual_information": 3.4469367232882537,
+        "kl_divergence": 0.00951235696990788,
+        "entropy_diff": 0.004239145310260817,
+        "entropy_ratio": 0.9987731482597,
+        "normalized_mutual_info": 0.9963881656796255,
+        "coupling_coefficient": 0.986955102229588,
+        "self_drive_potential_index": 802.5135863179959,
+        "balance_status": "balanced"
+      }
+    ],
+    "sdi_values": [
+      {
+        "self_drive_index": 1.7341963607353252,
+        "self_drive_index_normalized": 0.34683927214706506,
+        "total_entropy": 3.726548104774508,
+        "debt_finding_coupling": 1.0262661695569129,
+        "entropy_production_avg": 1.025000947789721,
+        "interpretation": "low"
+      },
+      {
+        "self_drive_index": 1.720648143654593,
+        "self_drive_index_normalized": 0.3441296287309186,
+        "total_entropy": 3.7207471119526097,
+        "debt_finding_coupling": 0.9907370789128158,
+        "entropy_production_avg": 1.025000947789721,
+        "interpretation": "low"
+      },
+      {
+        "self_drive_index": 1.795863206259072,
+        "self_drive_index_normalized": 0.3591726412518144,
+        "total_entropy": 3.720897297134799,
+        "debt_finding_coupling": 1.107306372404917,
+        "entropy_production_avg": 1.025000947789721,
+        "interpretation": "low"
+      },
+      {
+        "self_drive_index": 1.720078844040029,
+        "self_drive_index_normalized": 0.3440157688080058,
+        "total_entropy": 3.7228700421544914,
+        "debt_finding_coupling": 0.9817692427395465,
+        "entropy_production_avg": 1.025000947789721,
+        "interpretation": "low"
+      },
+      {
+        "self_drive_index": 1.658618237447033,
+        "self_drive_index_normalized": 0.33172364748940664,
+        "total_entropy": 3.7236879283705964,
+        "debt_finding_coupling": 0.9117800754368938,
+        "entropy_production_avg": 1.025000947789721,
+        "interpretation": "low"
+      },
+      {
+        "self_drive_index": 1.7387478430342544,
+        "self_drive_index_normalized": 0.3477495686068509,
+        "total_entropy": 3.7306013563787377,
+        "debt_finding_coupling": 1.0377507296706554,
+        "entropy_production_avg": 1.025000947789721,
+        "interpretation": "low"
+      },
+      {
+        "self_drive_index": 1.7457130041597593,
+        "self_drive_index_normalized": 0.34914260083195187,
+        "total_entropy": 3.7320610292001235,
+        "debt_finding_coupling": 1.062371589786915,
+        "entropy_production_avg": 1.025000947789721,
+        "interpretation": "low"
+      },
+      {
+        "self_drive_index": 1.672448651945795,
+        "self_drive_index_normalized": 0.334489730389159,
+        "total_entropy": 3.7346956742955233,
+        "debt_finding_coupling": 0.9506748565537674,
+        "entropy_production_avg": 1.025000947789721,
+        "interpretation": "low"
+      },
+      {
+        "self_drive_index": 1.7470515835445137,
+        "self_drive_index_normalized": 0.34941031670890277,
+        "total_entropy": 3.7384564603523067,
+        "debt_finding_coupling": 1.068190722527356,
+        "entropy_production_avg": 1.025000947789721,
+        "interpretation": "low"
+      },
+      {
+        "self_drive_index": 1.7489614698137115,
+        "self_drive_index_normalized": 0.3497922939627423,
+        "total_entropy": 3.7395298022787964,
+        "debt_finding_coupling": 1.0757666893680382,
+        "entropy_production_avg": 1.025000947789721,
+        "interpretation": "low"
+      },
+      {
+        "self_drive_index": 1.8202859546644126,
+        "self_drive_index_normalized": 0.3640571909328825,
+        "total_entropy": 3.74355532716273,
+        "debt_finding_coupling": 1.197267431108743,
+        "entropy_production_avg": 1.025000947789721,
+        "interpretation": "low"
+      },
+      {
+        "self_drive_index": 1.6749375386619305,
+        "self_drive_index_normalized": 0.3349875077323861,
+        "total_entropy": 3.7458469368582312,
+        "debt_finding_coupling": 0.9697453266850893,
+        "entropy_production_avg": 1.025000947789721,
+        "interpretation": "low"
+      },
+      {
+        "self_drive_index": 1.6729698917329048,
+        "self_drive_index_normalized": 0.33459397834658094,
+        "total_entropy": 3.743774142331196,
+        "debt_finding_coupling": 0.963037813764834,
+        "entropy_production_avg": 1.025000947789721,
+        "interpretation": "low"
+      },
+      {
+        "self_drive_index": 1.6717413050775902,
+        "self_drive_index_normalized": 0.33434826101551807,
+        "total_entropy": 3.7421844774134496,
+        "debt_finding_coupling": 0.9566914614728051,
+        "entropy_production_avg": 1.025000947789721,
+        "interpretation": "low"
+      },
+      {
+        "self_drive_index": 1.672754960898934,
+        "self_drive_index_normalized": 0.3345509921797868,
+        "total_entropy": 3.742950019203033,
+        "debt_finding_coupling": 0.9563519487358597,
+        "entropy_production_avg": 1.025000947789721,
+        "interpretation": "low"
+      },
+      {
+        "self_drive_index": 1.7456004192107852,
+        "self_drive_index_normalized": 0.34912008384215704,
+        "total_entropy": 3.7433899802306887,
+        "debt_finding_coupling": 1.0612111004645908,
+        "entropy_production_avg": 1.025000947789721,
+        "interpretation": "low"
+      },
+      {
+        "self_drive_index": 1.6739439544632797,
+        "self_drive_index_normalized": 0.33478879089265595,
+        "total_entropy": 3.7429952254844765,
+        "debt_finding_coupling": 0.9594381063434756,
+        "entropy_production_avg": 1.025000947789721,
+        "interpretation": "low"
+      },
+      {
+        "self_drive_index": 1.7473917816007403,
+        "self_drive_index_normalized": 0.34947835632014806,
+        "total_entropy": 3.744276693214431,
+        "debt_finding_coupling": 1.0711126228601215,
+        "entropy_production_avg": 1.025000947789721,
+        "interpretation": "low"
+      },
+      {
+        "self_drive_index": 1.6754395991946562,
+        "self_drive_index_normalized": 0.33508791983893127,
+        "total_entropy": 3.7455851930754163,
+        "debt_finding_coupling": 0.9663627662209782,
+        "entropy_production_avg": 1.025000947789721,
+        "interpretation": "low"
+      },
+      {
+        "self_drive_index": 1.6760974953513716,
+        "self_drive_index_normalized": 0.3352194990702743,
+        "total_entropy": 3.7493844206228326,
+        "debt_finding_coupling": 0.9710355810072262,
+        "entropy_production_avg": 1.025000947789721,
+        "interpretation": "low"
+      },
+      {
+        "self_drive_index": 1.748278810384687,
+        "self_drive_index_normalized": 0.3496557620769374,
+        "total_entropy": 3.745648223192725,
+        "debt_finding_coupling": 1.0769948787290569,
+        "entropy_production_avg": 1.025000947789721,
+        "interpretation": "low"
+      },
+      {
+        "self_drive_index": 1.6756588818579767,
+        "self_drive_index_normalized": 0.33513177637159536,
+        "total_entropy": 3.747461169925536,
+        "debt_finding_coupling": 0.9709945833901258,
+        "entropy_production_avg": 1.025000947789721,
+        "interpretation": "low"
+      },
+      {
+        "self_drive_index": 1.6750688885903593,
+        "self_drive_index_normalized": 0.33501377771807184,
+        "total_entropy": 3.747557213268363,
+        "debt_finding_coupling": 0.9720755298835495,
+        "entropy_production_avg": 1.025000947789721,
+        "interpretation": "low"
+      },
+      {
+        "self_drive_index": 1.674895247065343,
+        "self_drive_index_normalized": 0.3349790494130686,
+        "total_entropy": 3.7470130322939794,
+        "debt_finding_coupling": 0.9720471099287583,
+        "entropy_production_avg": 1.025000947789721,
+        "interpretation": "low"
+      },
+      {
+        "self_drive_index": 1.6755393557268308,
+        "self_drive_index_normalized": 0.33510787114536617,
+        "total_entropy": 3.748603117534018,
+        "debt_finding_coupling": 0.974353898894494,
+        "entropy_production_avg": 1.025000947789721,
+        "interpretation": "low"
+      },
+      {
+        "self_drive_index": 1.749649515699578,
+        "self_drive_index_normalized": 0.34992990313991557,
+        "total_entropy": 3.7526592754614247,
+        "debt_finding_coupling": 1.0900978552201555,
+        "entropy_production_avg": 1.025000947789721,
+        "interpretation": "low"
+      },
+      {
+        "self_drive_index": 1.6777377477724598,
+        "self_drive_index_normalized": 0.33554754955449195,
+        "total_entropy": 3.7516922674917295,
+        "debt_finding_coupling": 0.9802250890814252,
+        "entropy_production_avg": 1.025000947789721,
+        "interpretation": "low"
+      },
+      {
+        "self_drive_index": 1.6771284460738318,
+        "self_drive_index_normalized": 0.33542568921476634,
+        "total_entropy": 3.7503610768040443,
+        "debt_finding_coupling": 0.9799150044187924,
+        "entropy_production_avg": 1.025000947789721,
+        "interpretation": "low"
+      },
+      {
+        "self_drive_index": 1.822888441660281,
+        "self_drive_index_normalized": 0.3645776883320562,
+        "total_entropy": 3.749792791642787,
+        "debt_finding_coupling": 1.20951014356396,
+        "entropy_production_avg": 1.025000947789721,
+        "interpretation": "low"
+      },
+      {
+        "self_drive_index": 1.6776144160253676,
+        "self_drive_index_normalized": 0.3355228832050735,
+        "total_entropy": 3.751850477478908,
+        "debt_finding_coupling": 0.9802895357942644,
+        "entropy_production_avg": 1.025000947789721,
+        "interpretation": "low"
+      },
+      {
+        "self_drive_index": 1.6788903502415808,
+        "self_drive_index_normalized": 0.33577807004831617,
+        "total_entropy": 3.751905516116953,
+        "debt_finding_coupling": 0.9830255647314967,
+        "entropy_production_avg": 1.025000947789721,
+        "interpretation": "low"
+      },
+      {
+        "self_drive_index": 1.6781629657463524,
+        "self_drive_index_normalized": 0.33563259314927046,
+        "total_entropy": 3.7544651022408493,
+        "debt_finding_coupling": 0.9809832705898271,
+        "entropy_production_avg": 1.025000947789721,
+        "interpretation": "low"
+      },
+      {
+        "self_drive_index": 1.7503815851022553,
+        "self_drive_index_normalized": 0.35007631702045106,
+        "total_entropy": 3.7527762577973958,
+        "debt_finding_coupling": 1.0899223846331845,
+        "entropy_production_avg": 1.025000947789721,
+        "interpretation": "low"
+      },
+      {
+        "self_drive_index": 1.6776210343702056,
+        "self_drive_index_normalized": 0.3355242068740411,
+        "total_entropy": 3.752435516601333,
+        "debt_finding_coupling": 0.9828263263270344,
+        "entropy_production_avg": 1.025000947789721,
+        "interpretation": "low"
+      },
+      {
+        "self_drive_index": 1.6777852658031274,
+        "self_drive_index_normalized": 0.33555705316062545,
+        "total_entropy": 3.752684475493369,
+        "debt_finding_coupling": 0.9829716216354754,
+        "entropy_production_avg": 1.025000947789721,
+        "interpretation": "low"
+      },
+      {
+        "self_drive_index": 1.6782328742181474,
+        "self_drive_index_normalized": 0.3356465748436295,
+        "total_entropy": 3.7522085091721062,
+        "debt_finding_coupling": 0.9852580289366347,
+        "entropy_production_avg": 1.025000947789721,
+        "interpretation": "low"
+      },
+      {
+        "self_drive_index": 1.751526523929764,
+        "self_drive_index_normalized": 0.3503053047859528,
+        "total_entropy": 3.752116090320866,
+        "debt_finding_coupling": 1.09758166930215,
+        "entropy_production_avg": 1.025000947789721,
+        "interpretation": "low"
+      },
+      {
+        "self_drive_index": 1.6787893040949236,
+        "self_drive_index_normalized": 0.33575786081898473,
+        "total_entropy": 3.7495483936994196,
+        "debt_finding_coupling": 0.9876240083868516,
+        "entropy_production_avg": 1.025000947789721,
+        "interpretation": "low"
+      },
+      {
+        "self_drive_index": 1.6790552817562114,
+        "self_drive_index_normalized": 0.3358110563512423,
+        "total_entropy": 3.751230378253783,
+        "debt_finding_coupling": 0.9901684953788882,
+        "entropy_production_avg": 1.025000947789721,
+        "interpretation": "low"
+      },
+      {
+        "self_drive_index": 1.6795424004670048,
+        "self_drive_index_normalized": 0.33590848009340096,
+        "total_entropy": 3.7490722224891626,
+        "debt_finding_coupling": 0.9910489984471862,
+        "entropy_production_avg": 1.025000947789721,
+        "interpretation": "low"
+      },
+      {
+        "self_drive_index": 1.8256300030601587,
+        "self_drive_index_normalized": 0.3651260006120317,
+        "total_entropy": 3.7500029160466193,
+        "debt_finding_coupling": 1.2263399286372336,
+        "entropy_production_avg": 1.025000947789721,
+        "interpretation": "low"
+      },
+      {
+        "self_drive_index": 1.7521707051610755,
+        "self_drive_index_normalized": 0.3504341410322151,
+        "total_entropy": 3.7532842715601937,
+        "debt_finding_coupling": 1.1026683402896738,
+        "entropy_production_avg": 1.025000947789721,
+        "interpretation": "low"
+      },
+      {
+        "self_drive_index": 1.7517965351819376,
+        "self_drive_index_normalized": 0.3503593070363875,
+        "total_entropy": 3.7529268966828253,
+        "debt_finding_coupling": 1.1008231942952202,
+        "entropy_production_avg": 1.025000947789721,
+        "interpretation": "low"
+      },
+      {
+        "self_drive_index": 1.7524915315192298,
+        "self_drive_index_normalized": 0.35049830630384593,
+        "total_entropy": 3.753345490987611,
+        "debt_finding_coupling": 1.1009733873261354,
+        "entropy_production_avg": 1.025000947789721,
+        "interpretation": "low"
+      },
+      {
+        "self_drive_index": 1.681360871370555,
+        "self_drive_index_normalized": 0.336272174274111,
+        "total_entropy": 3.7530754165184663,
+        "debt_finding_coupling": 0.9919778018872725,
+        "entropy_production_avg": 1.025000947789721,
+        "interpretation": "low"
+      },
+      {
+        "self_drive_index": 1.6811812092055438,
+        "self_drive_index_normalized": 0.3362362418411088,
+        "total_entropy": 3.7527759093208486,
+        "debt_finding_coupling": 0.9917077397846913,
+        "entropy_production_avg": 1.025000947789721,
+        "interpretation": "low"
+      },
+      {
+        "self_drive_index": 1.680714830297775,
+        "self_drive_index_normalized": 0.336142966059555,
+        "total_entropy": 3.7520611971950224,
+        "debt_finding_coupling": 0.9907697114683647,
+        "entropy_production_avg": 1.025000947789721,
+        "interpretation": "low"
+      },
+      {
+        "self_drive_index": 1.7541107893070766,
+        "self_drive_index_normalized": 0.35082215786141535,
+        "total_entropy": 3.75378415265302,
+        "debt_finding_coupling": 1.097864382339493,
+        "entropy_production_avg": 1.025000947789721,
+        "interpretation": "low"
+      },
+      {
+        "self_drive_index": 1.7528853217953067,
+        "self_drive_index_normalized": 0.35057706435906133,
+        "total_entropy": 3.753673154220688,
+        "debt_finding_coupling": 1.0959928046488652,
+        "entropy_production_avg": 1.025000947789721,
+        "interpretation": "low"
+      },
+      {
+        "self_drive_index": 1.6805453844875722,
+        "self_drive_index_normalized": 0.33610907689751446,
+        "total_entropy": 3.7506238553851583,
+        "debt_finding_coupling": 0.986955102229588,
+        "entropy_production_avg": 1.025000947789721,
+        "interpretation": "low"
+      }
+    ],
+    "temperatures": [
+      1.0772139806718972,
+      1.075537117689364,
+      1.075580530942969,
+      1.0761507821394558,
+      1.0763872042764622,
+      1.0783856331428967,
+      1.0788075732134914,
+      1.0795691564404024,
+      1.0806562674087254,
+      1.0809665328062859,
+      1.0821301704576984,
+      1.0827925942163168,
+      1.0821934222263667,
+      1.0817339060130147,
+      1.0819551972174597,
+      1.0820823744755057,
+      1.0819682647633537,
+      1.082338692010145,
+      1.0827169332951976,
+      1.0838151563463336,
+      1.0827351530851101,
+      1.0832592122175537,
+      1.0832869749697671,
+      1.0831296713909215,
+      1.083589309104664,
+      1.0847618016914675,
+      1.0844822737006596,
+      1.084097473295728,
+      1.08393320204429,
+      1.084528006643125,
+      1.0845439163774724,
+      1.0852838026958223,
+      1.0847956171700974,
+      1.0846971208754381,
+      1.0847690861343249,
+      1.0846315010123357,
+      1.0846047859731536,
+      1.083862555195238,
+      1.0843487577683146,
+      1.0837249108470477,
+      1.083993941618589,
+      1.0849424660802076,
+      1.0848391615733508,
+      1.0849601624633614,
+      1.084882093433845,
+      1.0847955164377847,
+      1.0845889183012656,
+      1.085086964121485,
+      1.0850548783789213,
+      1.0841734333406376
+    ],
+    "trends": {
+      "total_entropy_start": 3.726548104774508,
+      "total_entropy_end": 3.7506238553851583,
+      "debt_entropy_delta": -0.004908377274555953,
+      "finding_entropy_delta": 0.054321659426046054
+    }
+  },
+  "experiment_5": {
+    "entropy_changes": [
+      0.0034918168838053987,
+      0.009709762171690173,
+      0.004413154622020077,
+      0.008175522959081416,
+      0.0034591440255686834,
+      0.022337391745093083,
+      0.02570738502499781,
+      0.0024321157233404556,
+      0.0190388319935475,
+      0.02041506655865799,
+      0.014875488481596921,
+      0.02356016528699456,
+      0.009297620107097337,
+      0.0006448212957281818,
+      0.0030330438025436557,
+      0.012522791040607828,
+      0.013560072125705869,
+      0.019519096676330783,
+      0.01898156977378429,
+      0.005202642229398258
+    ],
+    "mean_change": 0.012018875126379513,
+    "std_change": 0.007880871569261486,
+    "increase_count": 20,
+    "decrease_count": 0,
+    "entropy_law_holds": true
+  }
+}

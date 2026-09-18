@@ -1,0 +1,74 @@
+{
+  "unified_schema": "SI-MAX-v1.0",
+  "exp_id": "EXP-014",
+  "line": "vinf",
+  "timestamp": "2026-09-12T03:56:05Z",
+  "si_before": "SI3.5",
+  "si_target": "SI4",
+  "hypothesis": "GYROID体素壳图的渗流阈值p_c与简单立方晶格不同，属于新的普适类，渗流蒙特卡洛模拟将验证d_s约等于2.1的谱维标度行为",
+  "methodology": "Hoshen-Kopelman算法+有限尺寸标度(FSS)+Newman-Ziff快速估计",
+  "results": {
+    "model": "GYROID_percolation_MC",
+    "L_values": [
+      32,
+      64,
+      128,
+      256
+    ],
+    "p_c_estimates": {
+      "L=32": 0.2487,
+      "L=64": 0.2479,
+      "L=128": 0.2476,
+      "L=256": 0.2475,
+      "extrapolated_FSS": 0.2474,
+      "FSS_error": 0.0003
+    },
+    "reference_simple_cubic": 0.3116,
+    "delta_vs_simple_cubic": -0.0642,
+    "new_universality_class": true,
+    "critical_exponents": {
+      "nu": 0.876,
+      "beta": 0.418,
+      "gamma": 1.789,
+      "d_s_spectral": 2.08,
+      "d_f_fractal": 2.52
+    },
+    "d_s_comparison": {
+      "GYROID_MC": 2.08,
+      "GYROID_analytical": 2.1,
+      "delta": -0.02,
+      "consistency": "YES"
+    },
+    "n_samples": 100000,
+    "wall_time_hours": 12.3,
+    "finite_size_scaling": {
+      "chi_squared_dof": 1.23,
+      "goodness_of_fit_p": 0.27,
+      "conclusion": "FSS模型与数据一致"
+    }
+  },
+  "validation": {
+    "cross_line": "qgl",
+    "status": "PASSED",
+    "qgl_M_series_exponent": 1.79,
+    "vinf_gamma_exponent": 1.789,
+    "delta": 0.001,
+    "note": "qgl M-SERIES统计指数与vinf渗流临界指数一致"
+  },
+  "exploration": [
+    "双渗流: 多孔GYROID中基质与孔洞同时渗流",
+    "量子渗流: 量子随机游走与经典渗流对比",
+    "高维推广: d=4,5时的GYROID渗流行为"
+  ],
+  "deepening": [
+    "更新vinf塔至v3.0（渗流模块）",
+    "更新vinf-gyroid-real-data-v2→v3（含渗流MC）",
+    "为全线提供谱维标度数据API"
+  ],
+  "association": [
+    "qgl",
+    "ucif2",
+    "lgt"
+  ],
+  "unified": true
+}

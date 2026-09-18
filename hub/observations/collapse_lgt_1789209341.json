@@ -1,0 +1,59 @@
+{
+  "operation": "observe_collapse",
+  "line": "lgt",
+  "observer": "ucif2-hub",
+  "trigger_type": "health_check",
+  "timestamp": "2026-09-12T10:35:41.223251+00:00",
+  "description": "ucif2-hub 观测 lgt，触发波函数坍缩",
+  "pre_collapse_state": {
+    "line": "lgt",
+    "amplitudes": {
+      "si0": {
+        "re": 0.4082482904638631,
+        "im": 0.0
+      },
+      "si1": {
+        "re": 0.4082482904638631,
+        "im": 0.0
+      },
+      "si2": {
+        "re": 0.4082482904638631,
+        "im": 0.0
+      },
+      "si3": {
+        "re": 0.4082482904638631,
+        "im": 0.0
+      },
+      "si4": {
+        "re": 0.4082482904638631,
+        "im": 0.0
+      },
+      "si5": {
+        "re": 0.4082482904638631,
+        "im": 0.0
+      }
+    },
+    "probabilities": {
+      "si0": 0.1666666666666667,
+      "si1": 0.1666666666666667,
+      "si2": 0.1666666666666667,
+      "si3": 0.1666666666666667,
+      "si4": 0.1666666666666667,
+      "si5": 0.1666666666666667
+    },
+    "dominant_level": "si0",
+    "timestamp": "2026-09-12T10:35:38.509529+00:00"
+  },
+  "adjusted_probabilities": {
+    "si0": 0.075,
+    "si1": 0.075,
+    "si2": 0.25,
+    "si3": 0.25,
+    "si4": 0.1,
+    "si5": 0.25
+  },
+  "collapsed_to": "si2",
+  "collapse_probability": 0.25,
+  "uncertainty_before": 1.791759,
+  "uncertainty_after": 0.0
+}

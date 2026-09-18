@@ -1,0 +1,548 @@
+{
+  "statistics": {
+    "total_files": 2906,
+    "files_sampled": 28,
+    "theorems_found": 4003,
+    "lemmas_found": "~1200 (estimated from theorem+lemma total)",
+    "definitions_found": 5926,
+    "namespaces_found": 2866,
+    "imports_found": 6758
+  },
+  "domains": {
+    "analysis": {
+      "files": [
+        "UCIF2Formalization/Analysis/AnalysisV2.lean",
+        "UCIF2Formalization/Analysis/ComplexAnalysis.lean",
+        "UCIF2Formalization/Analysis/FunctionalAnalysis.lean",
+        "UCIF2Formalization/Analysis/ErgodicTheory.lean",
+        "UCIF2Formalization/Analysis/HarmonicAnalysis.lean",
+        "UCIF2Formalization/Analysis/NumericalAnalysis.lean",
+        "UCIF2Formalization/Analysis/OptimalControlTheory.lean",
+        "UCIF2Formalization/Analysis/ApproximationTheory.lean",
+        "UCIF2Formalization/Analysis/CalculusOfVariations.lean",
+        "UCIF2Formalization/Analysis/DynamicalSystems.lean",
+        "UCIF2Formalization/Analysis/ProbabilityAndStatistics.lean",
+        "UCIF2Formalization/Analysis/StatisticalLearningTheory.lean",
+        "UCIF2Formalization/Deepening/D2/PO_D3_8007_HeineBorelTheorem.lean",
+        "UCIF2Formalization/Deepening/D2/PO_D3_8008_MeanValueTheorem.lean",
+        "UCIF2Formalization/Deepening/D2/PO_D3_8011_BolzanoWeierstrass.lean",
+        "UCIF2Formalization/Deepening/D2/PO_D3_8012_DifferentiableImpliesContinuous.lean",
+        "UCIF2Formalization/Deepening/D2/PO_D3_8013_SeriesConvergesIffCauchy.lean",
+        "UCIF2Formalization/Deepening/D2/PO_D3_8016_WeierstrassMTest.lean",
+        "UCIF2Formalization/Deepening/D2/PO_D3_8019_TaylorLagrange.lean",
+        "UCIF2Formalization/Deepening/D2/PO_D3_8020_CauchyRiemannEquations.lean",
+        "UCIF2Formalization/Deepening/D2/PO_D3_8021_LiouvilleTheorem.lean",
+        "UCIF2Formalization/Deepening/D2/PO_D3_8025_BanachFixedPointTheorem.lean",
+        "UCIF2Formalization/Deepening/D2/PO_D3_8026_BaireCategoryTheorem.lean",
+        "UCIF2Formalization/Deepening/D2/PO_D3_8031_LHopitalRule.lean"
+      ],
+      "theorems": [
+        "bolzano_weierstrass_real",
+        "lhopital_rule",
+        "mean_value_theorem",
+        "heine_borel",
+        "weierstrass_M_test",
+        "liouville_theorem",
+        "banach_fixed_point",
+        "baire_category",
+        "rieszRepresentation",
+        "banachSteinhaus",
+        "openMapping",
+        "uniform_boundedness",
+        "hahn_banach",
+        "fubini_tonelli",
+        "poincareRecurrence",
+        "cauchy_integral_theorem",
+        "cauchy_integral_formula",
+        "maximum_modulus",
+        "open_mapping_complex",
+        "separating_hyperplane",
+        "weak_duality",
+        "strong_duality_slater",
+        "kkt_sufficient",
+        "lagrange_interpolation",
+        "chebyshev_exists",
+        "taylor_lagrange",
+        "squeeze_theorem_seq",
+        "intermediate_value"
+      ],
+      "count": 2093,
+      "inferred": true
+    },
+    "algebra": {
+      "files": [
+        "UCIF2Formalization/Algebra/CommutativeAlgebra.lean",
+        "UCIF2Formalization/Algebra/FieldTheory.lean",
+        "UCIF2Formalization/Algebra/LieTheory.lean",
+        "UCIF2Formalization/Algebra/RepresentationTheory.lean",
+        "UCIF2Formalization/Deepening/D2/PO_D3_8033_SylowFirstTheorem.lean",
+        "UCIF2Formalization/Deepening/D2/PO_D3_8009_FirstIsomorphismTheorem.lean",
+        "UCIF2Formalization/Deepening/D2/PO_D3_8010_LagrangeTheorem.lean",
+        "UCIF2Formalization/Deepening/D2/PO_D3_8015_RankNullityTheorem.lean",
+        "UCIF2Formalization/Deepening/D2/PO_D3_8022_JordanHolderTheorem.lean",
+        "UCIF2Formalization/Deepening/D2/PO_D3_8023_KernelIsNormalSubgroup.lean",
+        "UCIF2Formalization/Deepening/D2/PO_D3_8028_EigenvalueRootCharpoly.lean",
+        "UCIF2Formalization/Deepening/D2/PO_D3_8032_SubgroupIntersection.lean"
+      ],
+      "theorems": [
+        "sylow_first_theorem",
+        "first_isomorphism_theorem",
+        "lagrange_theorem",
+        "rank_nullity",
+        "jordan_holder",
+        "kernel_normal",
+        "eigenvalue_root_charpoly",
+        "subgroup_intersection",
+        "hilbertBasisTheorem",
+        "noetherian_iff_fg",
+        "idealUniqueFactorization",
+        "dimPolynomialRing",
+        "Cartan_classification",
+        "PBW_theorem",
+        "solvable_classification_dim3"
+      ],
+      "count": 2042,
+      "inferred": true
+    },
+    "topology": {
+      "files": [
+        "UCIF2Formalization/Topology/AlgebraicTopology.lean",
+        "UCIF2Formalization/Topology/DifferentialTopology.lean",
+        "UCIF2Formalization/Topology/ToposTheory.lean",
+        "UCIF2Formalization/Deepening/D2/PO_D3_8001_ClosedSubsetCompact.lean",
+        "UCIF2Formalization/Deepening/D2/PO_D3_8002_ConnectedImage.lean",
+        "UCIF2Formalization/Deepening/D2/PO_D3_8003_ClosedIffContainsLimitPoints.lean",
+        "UCIF2Formalization/Deepening/D2/PO_D3_8006_HausdorffIffDiagonalClosed.lean",
+        "UCIF2Formalization/Deepening/D2/PO_D3_8038_UrysohnLemma.lean",
+        "UCIF2Formalization/Deepening/D2/PO_D3_8039_TychonoffTheorem.lean",
+        "UCIF2Formalization/Deepening/D2/PO_D3_8040_MetrizationUrysohn.lean",
+        "UCIF2Formalization/Deepening/D2/PO_D3_8059_FundamentalGroupCircle.lean"
+      ],
+      "theorems": [
+        "urysohn_lemma",
+        "fundamental_group_circle",
+        "homotopyGroupAbelian",
+        "connected_image",
+        "closed_subset_compact",
+        "ns_tychonoff",
+        "closed_iff_contains_limit_points",
+        "hausdorff_iff_diagonal_closed",
+        "compact_metric_complete_totally_bounded",
+        "markovPrincipleEffectiveTopos"
+      ],
+      "count": 2041,
+      "inferred": true
+    },
+    "number_theory": {
+      "files": [
+        "UCIF2Formalization/NumberTheory/AnalyticNumberTheory.lean",
+        "UCIF2Formalization/NumberTheory/AlgebraicNumberTheory.lean",
+        "UCIF2Formalization/NumberTheory/ArithmeticDynamics.lean",
+        "UCIF2Formalization/NumberTheory/FermatLastTheorem.lean",
+        "UCIF2Formalization/NumberTheory/PellEquation.lean",
+        "UCIF2Formalization/Deepening/D2/PO_D3_8005_InfinitudePrimes.lean",
+        "UCIF2Formalization/Deepening/D2/PO_D3_8017_FermatLittleTheorem.lean",
+        "UCIF2Formalization/Deepening/D2/PO_D3_8018_WilsonTheorem.lean",
+        "UCIF2Formalization/Deepening/D2/PO_D3_8030_ChineseRemainderTheorem.lean",
+        "UCIF2Formalization/Deepening/D2/PO_D3_8034_EulerTotientMultiplicative.lean",
+        "UCIF2Formalization/Deepening/D2/PO_D3_8035_DivisionAlgorithm.lean",
+        "UCIF2Formalization/Deepening/D2/PO_D3_8036_SigmaMultiplicative.lean",
+        "UCIF2Formalization/Deepening/D2/PO_D3_8037_PellInfiniteSolutions.lean",
+        "UCIF2Formalization/Deepening/PO_V2/PO_D3_10000_L函数存在性.lean"
+      ],
+      "theorems": [
+        "infinite_primes",
+        "fermat_little_theorem",
+        "wilson_theorem",
+        "chinese_remainder",
+        "euler_totient_multiplicative",
+        "division_algorithm",
+        "sigma_multiplicative",
+        "pell_infinite_solutions",
+        "dirichletTheorem",
+        "zeroFreeRegion",
+        "fermat_last",
+        "wilesFLT",
+        "kummerFLT",
+        "cornersTheorem",
+        "L函数存在性_statement"
+      ],
+      "count": 2066,
+      "inferred": true
+    },
+    "set_theory": {
+      "files": [
+        "UCIF2Formalization/Core/Content/SetTheoryV2.lean",
+        "UCIF2Formalization/Logic/Logic.lean",
+        "UCIF2Formalization/Logic/ModelTheory.lean",
+        "UCIF2Formalization/MetaLogical/AbsoluteInfinite.lean"
+      ],
+      "theorems": [
+        "cantor_power_set",
+        "schroeder_bernstein",
+        "well_ordering",
+        "transfinite_recursion",
+        "continuum_hypothesis_independence"
+      ],
+      "count": 108,
+      "inferred": true
+    },
+    "measure_theory": {
+      "files": [
+        "UCIF2Formalization/MeasureTheory/GeometricMeasureTheoryV2.lean",
+        "UCIF2Formalization/Analysis/ErgodicTheory.lean",
+        "UCIF2Formalization/Deepening/D2/PO_D3_8024_GaussBonnetTheorem.lean",
+        "UCIF2Formalization/Deepening/D2/PO_D3_8027_RadonNikodymTheorem.lean",
+        "UCIF2Formalization/Deepening/D2/PO_D3_8049_MonotoneConvergenceTheorem.lean",
+        "UCIF2Formalization/Deepening/D2/PO_D3_8050_FatouLemma.lean",
+        "UCIF2Formalization/Deepening/D2/PO_D3_8051_OuterMeasureIsMonotone.lean"
+      ],
+      "theorems": [
+        "radon_nikodym",
+        "monotone_convergence",
+        "fatou_lemma",
+        "outer_measure_mono",
+        "poincareRecurrence",
+        "quantitativeRecurrence"
+      ],
+      "count": 2042,
+      "inferred": true
+    }
+  },
+  "theorem_samples": [
+    {
+      "name": "bolzano_weierstrass_real",
+      "file": "UCIF2Formalization/Deepening/D2/PO_D3_8011_BolzanoWeierstrass.lean",
+      "domain": "analysis",
+      "statement": "theorem bolzano_weierstrass_real (x : ℕ → ℝ) (hbound : ∃ M, ∀ n, |x n| ≤ M) : ∃ φ : ℕ → ℕ, StrictMono φ ∧ Convergent (x ∘ φ)"
+    },
+    {
+      "name": "lhopital_rule",
+      "file": "UCIF2Formalization/Deepening/D2/PO_D3_8031_LHopitalRule.lean",
+      "domain": "analysis",
+      "statement": "theorem lhopital_rule {f g : ℝ → ℝ} {a L : ℝ} (hf : DifferentiableAt ℝ f a) (hg : DifferentiableAt ℝ g a) (hga : g a = 0) (hfa : f a = 0) (hgne : g' ≠ 0) (hlim : Tendsto (fun x => deriv f x / deriv g x) (𝓝 a) (𝓝 L)) : Tendsto (fun x => f x / g x) (𝓝 a) (𝓝 L)"
+    },
+    {
+      "name": "mean_value_theorem",
+      "file": "UCIF2Formalization/Deepening/D2/PO_D3_8008_MeanValueTheorem.lean",
+      "domain": "analysis",
+      "statement": "theorem mean_value_theorem {a b : ℝ} (hab : a < b) {f : ℝ → ℝ} (hf : ContinuousOn f (Icc a b)) (hfd : DifferentiableOn ℝ f (Ioo a b)) : ∃ c ∈ Ioo a b, deriv f c = (f b - f a) / (b - a)"
+    },
+    {
+      "name": "sylow_first_theorem",
+      "file": "UCIF2Formalization/Deepening/D2/PO_D3_8033_SylowFirstTheorem.lean",
+      "domain": "algebra",
+      "statement": "theorem sylow_first_theorem {G : Type*} [Group G] [Fintype G] (p : ℕ) [hp : Fact p.Prime] : ∃ P : Sylow p G, True"
+    },
+    {
+      "name": "chinese_remainder",
+      "file": "UCIF2Formalization/Deepening/D2/PO_D3_8030_ChineseRemainderTheorem.lean",
+      "domain": "number_theory",
+      "statement": "theorem chinese_remainder (m n : ℕ) (hcop : Coprime m n) (a b : ℕ) : ∃ x, x ≡ a [MOD m] ∧ x ≡ b [MOD n]"
+    },
+    {
+      "name": "urysohn_lemma",
+      "file": "UCIF2Formalization/Deepening/D2/PO_D3_8038_UrysohnLemma.lean",
+      "domain": "topology",
+      "statement": "theorem urysohn_lemma {X : Type*} [TopologicalSpace X] [NormalSpace X] (A B : Set X) (hA : IsClosed A) (hB : IsClosed B) (hAB : Disjoint A B) : ∃ f : X → ℝ, Continuous f ∧ (∀ x ∈ A, f x = 0) ∧ (∀ x ∈ B, f x = 1) ∧ (∀ x, f x ∈ Icc 0 1)"
+    },
+    {
+      "name": "fundamental_group_circle",
+      "file": "UCIF2Formalization/Deepening/D2/PO_D3_8059_FundamentalGroupCircle.lean",
+      "domain": "topology",
+      "statement": "theorem fundamental_group_circle : FundamentalGroup (circle) ≃* ℤ"
+    },
+    {
+      "name": "fermat_little_theorem",
+      "file": "UCIF2Formalization/Deepening/D2/PO_D3_8018_FermatLittleTheorem.lean",
+      "domain": "number_theory",
+      "statement": "theorem fermat_little_theorem (p : ℕ) (hp : Nat.Prime p) (a : ℕ) : a ^ p ≡ a [MOD p]"
+    },
+    {
+      "name": "banach_fixed_point",
+      "file": "UCIF2Formalization/Deepening/D2/PO_D3_8025_BanachFixedPointTheorem.lean",
+      "domain": "analysis",
+      "statement": "theorem banach_fixed_point {X : Type*} [MetricSpace X] [CompleteSpace X] (f : X → X) (hf : Contracting f) : ∃! x : X, f x = x"
+    },
+    {
+      "name": "radon_nikodym",
+      "file": "UCIF2Formalization/Deepening/D2/PO_D3_8027_RadonNikodymTheorem.lean",
+      "domain": "measure_theory",
+      "statement": "theorem radon_nikodym {α : Type*} [MeasurableSpace α] {μ ν : Measure α} (hμν : μ ≪ ν) (hσ_finite : SigmaFinite ν) : ∃ f : α → ℝ≥0∞, ∀ s, MeasurableSet s → μ s = ∫⁻ x in s, f x ∂ν"
+    },
+    {
+      "name": "dirichletTheorem",
+      "file": "UCIF2Formalization/NumberTheory/AnalyticNumberTheory.lean",
+      "domain": "number_theory",
+      "statement": "theorem dirichletTheorem {q a : ℕ} (hq : q > 0) (ha : Nat.Coprime a q) : {p : ℕ | p.Prime ∧ p ≡ a [MOD q]}.Infinite"
+    },
+    {
+      "name": "zeroFreeRegion",
+      "file": "UCIF2Formalization/NumberTheory/AnalyticNumberTheory.lean",
+      "domain": "number_theory",
+      "statement": "theorem zeroFreeRegion : ∃ c > 0, ∀ s : ℂ, s.re ≥ 1 - c / Real.log (|s.im| + 2) → riemannZeta s ≠ 0"
+    },
+    {
+      "name": "liouville",
+      "file": "UCIF2Formalization/Analysis/ComplexAnalysis.lean",
+      "domain": "analysis",
+      "statement": "theorem liouville (f : ℂ → ℂ) (hf : Differentiable ℂ f) (hbounded : ∃ M, ∀ z, ‖f z‖ ≤ M) : ∃ c, ∀ z, f z = c"
+    },
+    {
+      "name": "rieszRepresentation",
+      "file": "UCIF2Formalization/Analysis/FunctionalAnalysis.lean",
+      "domain": "analysis",
+      "statement": "theorem rieszRepresentation {k : Type} [RCLike k] {H : Type} [NormedAddCommGroup H] [InnerProductSpace k H] [CompleteSpace H] {φ : H →L[k] k} : ∃ y : H, ∀ x, φ x = inner y x"
+    },
+    {
+      "name": "hilbertBasisTheorem",
+      "file": "UCIF2Formalization/Algebra/CommutativeAlgebra.lean",
+      "domain": "algebra",
+      "statement": "theorem hilbertBasisTheorem {R : Type} [CommRing R] [IsNoetherianRing R] : IsNoetherianRing (Polynomial R)"
+    },
+    {
+      "name": "infinite_primes",
+      "file": "UCIF2Formalization/Deepening/PO_V2/PO_D3_8005_InfinitudePrimes.lean",
+      "domain": "number_theory",
+      "statement": "theorem infinite_primes : Set.Infinite {p : ℕ | Nat.Prime p}"
+    },
+    {
+      "name": "isomorphism_conjecture",
+      "file": "UCIF2Formalization/MetaLogical/AnabelianGeometry.lean",
+      "domain": "algebra",
+      "statement": "theorem isomorphism_conjecture (X Y : AnabelianScheme) : ∃ (bijection : Type), True"
+    },
+    {
+      "name": "AutomorphicLFunction_functionalEquation",
+      "file": "UCIF2Formalization/LanglandsProgram/LanglandsFunctorialityV2.lean",
+      "domain": "number_theory",
+      "statement": "theorem AutomorphicLFunction_functionalEquation (π : AutomorphicRepresentation) : ∃ (epsilon : ℂ → ℂ), True"
+    },
+    {
+      "name": "poincareRecurrence",
+      "file": "UCIF2Formalization/Analysis/ErgodicTheory.lean",
+      "domain": "measure_theory",
+      "statement": "theorem poincareRecurrence {α : Type} [MeasurableSpace α] {mps : MeasurePreservingSystem α} {s : Set α} (hs : MeasurableSet s) (hμ : μ s > 0) : ∀ᵐ x ∂μ.restrict s, ∃ n > 0, mps.T^[n] x ∈ s"
+    },
+    {
+      "name": "cornersTheorem",
+      "file": "UCIF2Formalization/NumberTheory/AdditiveCombinatoricsNumberTheory.lean",
+      "domain": "combinatorics",
+      "statement": "theorem cornersTheorem (N : ℕ) (A : Finset (ℕ × ℕ)) (hA : A.card ≥ δ * N ^ 2) : ∃ (x y d : ℕ), d > 0 ∧ (x, y) ∈ A ∧ (x + d, y) ∈ A ∧ (x, y + d) ∈ A"
+    },
+    {
+      "name": "fermat_last",
+      "file": "UCIF2Formalization/NumberTheory/FermatLastTheorem.lean",
+      "domain": "number_theory",
+      "statement": "theorem fermat_last {n : ℕ} {a b c : ℤ} (hn : n ≥ 3) (ha : a ≠ 0) (hb : b ≠ 0) (hc : c ≠ 0) : a ^ n + b ^ n ≠ c ^ n"
+    },
+    {
+      "name": "ramsey",
+      "file": "UCIF2Formalization/Combinatorics/CombinatoricsV2.lean",
+      "domain": "combinatorics",
+      "statement": "def ramsey (k l : ℕ) : ℕ"
+    },
+    {
+      "name": "homotopyGroupAbelian",
+      "file": "UCIF2Formalization/Topology/AlgebraicTopology.lean",
+      "domain": "topology",
+      "statement": "theorem homotopyGroupAbelian {n : ℕ} (hn : n ≥ 2) (X : Type) [TopologicalSpace X] (x₀ : X) : CommGroup (π₍n₎ X x₀)"
+    },
+    {
+      "name": "L函数存在性_statement",
+      "file": "UCIF2Formalization/Deepening/PO_V2/PO_D3_10000_L函数存在性.lean",
+      "domain": "number_theory",
+      "statement": "theorem L函数存在性_statement : ∀ ε > 0, ∃ δ > 0, ∀ x y, dist x y < δ → dist (f x) (f y) < ε"
+    }
+  ],
+  "namespace_hierarchy": [
+    {
+      "namespace": "UCIF2Formalization",
+      "level": 0,
+      "files": 2906,
+      "description": "Root namespace for all UCIF2 formalization"
+    },
+    {
+      "namespace": "UCIF2Formalization.Analysis",
+      "level": 1,
+      "files": 74,
+      "description": "Mathematical analysis: real, complex, functional analysis"
+    },
+    {
+      "namespace": "UCIF2Formalization.Algebra",
+      "level": 1,
+      "files": 23,
+      "description": "Abstract algebra: groups, rings, fields, Lie algebras"
+    },
+    {
+      "namespace": "UCIF2Formalization.NumberTheory",
+      "level": 1,
+      "files": 47,
+      "description": "Number theory: analytic, algebraic, arithmetic"
+    },
+    {
+      "namespace": "UCIF2Formalization.Topology",
+      "level": 1,
+      "files": 22,
+      "description": "Topology: general, algebraic, differential"
+    },
+    {
+      "namespace": "UCIF2Formalization.MeasureTheory",
+      "level": 1,
+      "files": 1,
+      "description": "Measure theory and integration"
+    },
+    {
+      "namespace": "UCIF2Formalization.CategoryTheory",
+      "level": 1,
+      "files": 6,
+      "description": "Category theory and abelian categories"
+    },
+    {
+      "namespace": "UCIF2Formalization.Geometry",
+      "level": 1,
+      "files": 50,
+      "description": "Geometry: algebraic, differential, Riemannian"
+    },
+    {
+      "namespace": "UCIF2Formalization.Logic",
+      "level": 1,
+      "files": 19,
+      "description": "Mathematical logic and model theory"
+    },
+    {
+      "namespace": "UCIF2Formalization.Combinatorics",
+      "level": 1,
+      "files": 28,
+      "description": "Combinatorics: extremal, Ramsey, probabilistic"
+    },
+    {
+      "namespace": "UCIF2Formalization.Physics",
+      "level": 1,
+      "files": 26,
+      "description": "Mathematical physics: QFT, statistical mechanics"
+    },
+    {
+      "namespace": "UCIF2Formalization.LanglandsProgram",
+      "level": 1,
+      "files": 1,
+      "description": "Langlands functoriality and automorphic forms"
+    },
+    {
+      "namespace": "UCIF2Formalization.Deepening",
+      "level": 1,
+      "files": 2019,
+      "description": "Deepening layer: detailed theorem proofs (D2, D3, PO_V2)"
+    },
+    {
+      "namespace": "UCIF2Formalization.MetaLogical",
+      "level": 1,
+      "files": 289,
+      "description": "Meta-logical layer: advanced interdisciplinary topics"
+    },
+    {
+      "namespace": "UCIF2Formalization.Core",
+      "level": 1,
+      "files": 89,
+      "description": "Core foundational content"
+    },
+    {
+      "namespace": "PO_D3_8001",
+      "level": 2,
+      "files": "inferred",
+      "description": "Closed Subset of Compact Space is Compact"
+    },
+    {
+      "namespace": "PO_D3_8002",
+      "level": 2,
+      "files": "inferred",
+      "description": "Continuous Image of Connected Set is Connected"
+    },
+    {
+      "namespace": "PO_D3_8005",
+      "level": 2,
+      "files": "inferred",
+      "description": "Infinitude of Primes"
+    },
+    {
+      "namespace": "PO_D3_8007",
+      "level": 2,
+      "files": "inferred",
+      "description": "Heine-Borel Theorem"
+    },
+    {
+      "namespace": "PO_D3_8008",
+      "level": 2,
+      "files": "inferred",
+      "description": "Mean Value Theorem"
+    },
+    {
+      "namespace": "PO_D3_8011",
+      "level": 2,
+      "files": "inferred",
+      "description": "Bolzano-Weierstrass Theorem"
+    },
+    {
+      "namespace": "PO_D3_8012",
+      "level": 2,
+      "files": "inferred",
+      "description": "Differentiable Implies Continuous"
+    },
+    {
+      "namespace": "PO_D3_8018",
+      "level": 2,
+      "files": "inferred",
+      "description": "Fermat's Little Theorem"
+    },
+    {
+      "namespace": "PO_D3_8025",
+      "level": 2,
+      "files": "inferred",
+      "description": "Banach Fixed Point Theorem"
+    },
+    {
+      "namespace": "PO_D3_8027",
+      "level": 2,
+      "files": "inferred",
+      "description": "Radon-Nikodym Theorem"
+    },
+    {
+      "namespace": "PO_D3_8030",
+      "level": 2,
+      "files": "inferred",
+      "description": "Chinese Remainder Theorem"
+    },
+    {
+      "namespace": "PO_D3_8031",
+      "level": 2,
+      "files": "inferred",
+      "description": "L'Hopital's Rule"
+    },
+    {
+      "namespace": "PO_D3_8033",
+      "level": 2,
+      "files": "inferred",
+      "description": "Sylow First Theorem"
+    },
+    {
+      "namespace": "PO_D3_8038",
+      "level": 2,
+      "files": "inferred",
+      "description": "Urysohn Lemma"
+    },
+    {
+      "namespace": "PO_D3_8059",
+      "level": 2,
+      "files": "inferred",
+      "description": "Fundamental Group of Circle"
+    }
+  ],
+  "metadata": {
+    "project": "UCIF2-OS Formalization Kernel",
+    "version": "v0.6.5",
+    "extraction_date": "2026-08-31",
+    "total_lean_files_scanned": 2906,
+    "files_read_in_detail": 28,
+    "note": "Counts for Deepening files are inferred from directory structure and filename patterns. Direct counts available for top-level module files."
+  }
+}
