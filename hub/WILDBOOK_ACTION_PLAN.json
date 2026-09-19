@@ -1,0 +1,892 @@
+{
+  "metadata": {
+    "version": "12.1.0",
+    "generated_at": "2026-09-18T18:37:19.302923+00:00",
+    "generator": "OMNI-HUB WildBook Global Action Coordinator",
+    "total_questions": 61,
+    "critical": 2,
+    "high": 28,
+    "medium": 25,
+    "low": 6,
+    "total_estimated_hours": 2494
+  },
+  "action_plan": {
+    "LEAN_FORMALIZATION": {
+      "category_id": "LEAN_FORMALIZATION",
+      "category_name": "Lean形式化证明",
+      "priority": "CRITICAL",
+      "total_questions": 12,
+      "estimated_hours": 868,
+      "actions": [
+        {
+          "qid": "LEAN-001",
+          "action": "使用Lindenbaum代数+Gödel完备性策略",
+          "assigned_tools": [
+            "Goedel-Architect",
+            "COPRA",
+            "LeanDojo"
+          ],
+          "eta_hours": 80,
+          "owner": "formal_team"
+        },
+        {
+          "qid": "LEAN-002",
+          "action": "应用FormalFlow的MIP*=RE成果",
+          "assigned_tools": [
+            "FormalFlow"
+          ],
+          "eta_hours": 120,
+          "owner": "formal_team+physicist"
+        },
+        {
+          "qid": "LEAN-003A",
+          "action": "表示论证明64维充分性",
+          "assigned_tools": [
+            "LongCat-Flash-Prover",
+            "MA-LoT"
+          ],
+          "eta_hours": 100,
+          "owner": "formal_team"
+        },
+        {
+          "qid": "LEAN-003B",
+          "action": "图熵证明64维必要性",
+          "assigned_tools": [
+            "Goedel-Architect"
+          ],
+          "eta_hours": 80,
+          "owner": "formal_team"
+        },
+        {
+          "qid": "LEAN-004A",
+          "action": "Python中部署sigmoid修复",
+          "assigned_tools": [
+            "手动"
+          ],
+          "eta_hours": 40,
+          "owner": "core_team"
+        },
+        {
+          "qid": "LEAN-004B",
+          "action": "sigmoid连续性已在Lean中验证",
+          "assigned_tools": [
+            "已完成"
+          ],
+          "eta_hours": 0,
+          "owner": "formal_team"
+        },
+        {
+          "qid": "LEAN-005",
+          "action": "选择并形式化HoTT等价框架",
+          "assigned_tools": [
+            "ITPEval",
+            "ProofBridge"
+          ],
+          "eta_hours": 150,
+          "owner": "formal_team+category_theorist"
+        },
+        {
+          "qid": "LEAN-006",
+          "action": "半经典极限+波算子证明",
+          "assigned_tools": [
+            "FormalFlow",
+            "Lean-Quantum"
+          ],
+          "eta_hours": 120,
+          "owner": "formal_team+physicist"
+        },
+        {
+          "qid": "LEAN-007",
+          "action": "Banach不动点定理已完成",
+          "assigned_tools": [
+            "已完成"
+          ],
+          "eta_hours": 0,
+          "owner": "formal_team"
+        },
+        {
+          "qid": "LEAN-008",
+          "action": "Gershgorin+对角占优证明正定性",
+          "assigned_tools": [
+            "Nazrin",
+            "Seed-Prover 1.5"
+          ],
+          "eta_hours": 60,
+          "owner": "formal_team"
+        },
+        {
+          "qid": "LEAN-009A",
+          "action": "修正Weaver测度并证明递减",
+          "assigned_tools": [
+            "BFS-Prover",
+            "LeanProgress"
+          ],
+          "eta_hours": 50,
+          "owner": "formal_team"
+        },
+        {
+          "qid": "LEAN-009B",
+          "action": "良基归纳证明管道终止性",
+          "assigned_tools": [
+            "BFS-Prover",
+            "Reward-Oracle MCTS"
+          ],
+          "eta_hours": 60,
+          "owner": "formal_team"
+        }
+      ]
+    },
+    "CROSS_PROJECT_ALIGNMENT": {
+      "category_id": "CROSS_PROJECT_ALIGNMENT",
+      "category_name": "跨项目概念对齐",
+      "priority": "HIGH",
+      "total_questions": 7,
+      "estimated_hours": 250,
+      "actions": [
+        {
+          "qid": "CPI-001",
+          "action": "建立UCIF2-LGT概念等价映射函数",
+          "assigned_tools": [
+            "手动"
+          ],
+          "eta_hours": 40,
+          "owner": "ucif2_team+lgt_team"
+        },
+        {
+          "qid": "CPI-002",
+          "action": "建立QFA量子算子到经典时钟语义桥",
+          "assigned_tools": [
+            "手动"
+          ],
+          "eta_hours": 60,
+          "owner": "qfa_team+qtlv_team"
+        },
+        {
+          "qid": "CPI-003",
+          "action": "统一VINF信息熵与QGL耦合权重量纲",
+          "assigned_tools": [
+            "手动"
+          ],
+          "eta_hours": 30,
+          "owner": "vinf_team+qgl_team"
+        },
+        {
+          "qid": "CPI-004",
+          "action": "建立USRM-CISVR意识状态形式化映射",
+          "assigned_tools": [
+            "手动"
+          ],
+          "eta_hours": 35,
+          "owner": "usrm_team+cisvr_team"
+        },
+        {
+          "qid": "CPI-005",
+          "action": "统一六基座语义(CT↔HG↔KG)",
+          "assigned_tools": [
+            "手动"
+          ],
+          "eta_hours": 50,
+          "owner": "qlv_team+cfts_team+lgt_team"
+        },
+        {
+          "qid": "CPI-006",
+          "action": "修复4子系统6处版本漂移",
+          "assigned_tools": [
+            "手动"
+          ],
+          "eta_hours": 20,
+          "owner": "all_teams"
+        },
+        {
+          "qid": "CPI-007",
+          "action": "统一线命名空间(全小写/大小写混合)",
+          "assigned_tools": [
+            "手动"
+          ],
+          "eta_hours": 15,
+          "owner": "all_teams"
+        }
+      ]
+    },
+    "COHERENCE_OPTIMIZATION": {
+      "category_id": "COHERENCE_OPTIMIZATION",
+      "category_name": "协和度优化",
+      "priority": "HIGH",
+      "total_questions": 7,
+      "estimated_hours": 225,
+      "actions": [
+        {
+          "qid": "H-001",
+          "action": "修复Jing-Wei-Xin编织一致性>0.9",
+          "assigned_tools": [
+            "手动"
+          ],
+          "eta_hours": 50,
+          "owner": "jing_wei_xin_team"
+        },
+        {
+          "qid": "H-002",
+          "action": "稳定MutualExcitationEngine 5线以上共振",
+          "assigned_tools": [
+            "手动"
+          ],
+          "eta_hours": 45,
+          "owner": "qgl_team+vinf_team+lgt_team"
+        },
+        {
+          "qid": "H-003",
+          "action": "优化FieldExcitationEngine能量保持",
+          "assigned_tools": [
+            "手动"
+          ],
+          "eta_hours": 30,
+          "owner": "qtlv_team+cfts_team"
+        },
+        {
+          "qid": "H-004",
+          "action": "添加SelfExcitationEngine渐变中间态",
+          "assigned_tools": [
+            "手动"
+          ],
+          "eta_hours": 25,
+          "owner": "cisvr_team+usrm_team"
+        },
+        {
+          "qid": "H-005",
+          "action": "限制RippleEngine干涉复杂度上限",
+          "assigned_tools": [
+            "手动"
+          ],
+          "eta_hours": 20,
+          "owner": "vinf_team+qgl_team"
+        },
+        {
+          "qid": "H-006",
+          "action": "正定化UnifiedFieldState协方差矩阵",
+          "assigned_tools": [
+            "手动"
+          ],
+          "eta_hours": 35,
+          "owner": "ucif2_team+qfa_team"
+        },
+        {
+          "qid": "H-007",
+          "action": "提升DiscussionBoard覆盖率到>60%",
+          "assigned_tools": [
+            "手动"
+          ],
+          "eta_hours": 20,
+          "owner": "usrm_team+qgl_team"
+        }
+      ]
+    },
+    "KNOWLEDGE_PEDESTAL_INTEGRITY": {
+      "category_id": "KNOWLEDGE_PEDESTAL_INTEGRITY",
+      "category_name": "知识基座完整性",
+      "priority": "HIGH",
+      "total_questions": 8,
+      "estimated_hours": 265,
+      "actions": [
+        {
+          "qid": "KG-001",
+          "action": "标准化KNode.metadata字段",
+          "assigned_tools": [
+            "手动"
+          ],
+          "eta_hours": 25,
+          "owner": "qlv_team+cfts_team"
+        },
+        {
+          "qid": "CC-001",
+          "action": "填充CC基座空壳注入为实际认知结构",
+          "assigned_tools": [
+            "手动"
+          ],
+          "eta_hours": 40,
+          "owner": "cisvr_team+qlv_team"
+        },
+        {
+          "qid": "HG-001",
+          "action": "添加超边权重、方向性和时序信息",
+          "assigned_tools": [
+            "手动"
+          ],
+          "eta_hours": 30,
+          "owner": "lgt_team+vinf_team"
+        },
+        {
+          "qid": "IN-001",
+          "action": "使用信息网络度量替代简单字符串聚类",
+          "assigned_tools": [
+            "手动"
+          ],
+          "eta_hours": 25,
+          "owner": "qgl_team+lvlu_team"
+        },
+        {
+          "qid": "CT-001",
+          "action": "构造实际范畴对象和态射复合",
+          "assigned_tools": [
+            "手动"
+          ],
+          "eta_hours": 50,
+          "owner": "ucif2_team+qtlv_team"
+        },
+        {
+          "qid": "LL-001",
+          "action": "将LL命题从字符串转换为可判定形式",
+          "assigned_tools": [
+            "手动"
+          ],
+          "eta_hours": 35,
+          "owner": "qlv_team+lgt_team"
+        },
+        {
+          "qid": "PED-001",
+          "action": "建立六基座间交叉引用机制",
+          "assigned_tools": [
+            "手动"
+          ],
+          "eta_hours": 45,
+          "owner": "qlv_team+cfts_team+lgt_team"
+        },
+        {
+          "qid": "PED-002",
+          "action": "交叉验证注入统计信息",
+          "assigned_tools": [
+            "手动"
+          ],
+          "eta_hours": 15,
+          "owner": "vinf_team+qgl_team"
+        }
+      ]
+    },
+    "SI_11_LINE_COORDINATION": {
+      "category_id": "SI_11_LINE_COORDINATION",
+      "category_name": "11线SI协调",
+      "priority": "CRITICAL",
+      "total_questions": 7,
+      "estimated_hours": 180,
+      "actions": [
+        {
+          "qid": "SI-001",
+          "action": "调整SI1降级阈值并验证",
+          "assigned_tools": [
+            "手动"
+          ],
+          "eta_hours": 20,
+          "owner": "all_teams"
+        },
+        {
+          "qid": "SI-002",
+          "action": "验证SI1降级后fallback审计功能",
+          "assigned_tools": [
+            "手动"
+          ],
+          "eta_hours": 30,
+          "owner": "usrm_team+qgl_team+vinf_team"
+        },
+        {
+          "qid": "SI-003",
+          "action": "修复tick()线状态映射丢失",
+          "assigned_tools": [
+            "手动"
+          ],
+          "eta_hours": 25,
+          "owner": "all_teams"
+        },
+        {
+          "qid": "SI-004",
+          "action": "统一SI Loop与WildNotebook命名空间",
+          "assigned_tools": [
+            "手动"
+          ],
+          "eta_hours": 15,
+          "owner": "all_teams"
+        },
+        {
+          "qid": "SI-005",
+          "action": "为surge_coordination添加上限保护",
+          "assigned_tools": [
+            "手动"
+          ],
+          "eta_hours": 15,
+          "owner": "qgl_team+qtlv_team"
+        },
+        {
+          "qid": "SI-006",
+          "action": "修复薪动力虚假增长",
+          "assigned_tools": [
+            "手动"
+          ],
+          "eta_hours": 35,
+          "owner": "cisvr_team+qfa_team"
+        },
+        {
+          "qid": "SI-007",
+          "action": "实现11线负载均衡算法",
+          "assigned_tools": [
+            "手动"
+          ],
+          "eta_hours": 40,
+          "owner": "lvlu_team+usrm_team"
+        }
+      ]
+    },
+    "FCTN_NETWORK_OPTIMIZATION": {
+      "category_id": "FCTN_NETWORK_OPTIMIZATION",
+      "category_name": "FCTN网络优化",
+      "priority": "HIGH",
+      "total_questions": 6,
+      "estimated_hours": 240,
+      "actions": [
+        {
+          "qid": "FCTN-001",
+          "action": "使用近似算法替代2070维特征值分解",
+          "assigned_tools": [
+            "手动"
+          ],
+          "eta_hours": 50,
+          "owner": "qgl_team+vinf_team+lgt_team"
+        },
+        {
+          "qid": "FCTN-002",
+          "action": "实现耦合权重动态学习机制",
+          "assigned_tools": [
+            "手动"
+          ],
+          "eta_hours": 60,
+          "owner": "qgl_team+lvlu_team"
+        },
+        {
+          "qid": "FCTN-003",
+          "action": "实现图熵近似算法",
+          "assigned_tools": [
+            "手动"
+          ],
+          "eta_hours": 40,
+          "owner": "vinf_team+qgl_team"
+        },
+        {
+          "qid": "FCTN-004",
+          "action": "添加超边动态分裂机制",
+          "assigned_tools": [
+            "手动"
+          ],
+          "eta_hours": 25,
+          "owner": "lgt_team+vinf_team"
+        },
+        {
+          "qid": "FCTN-005",
+          "action": "实现CT态射复合计算",
+          "assigned_tools": [
+            "手动"
+          ],
+          "eta_hours": 45,
+          "owner": "ucif2_team+qtlv_team"
+        },
+        {
+          "qid": "FCTN-006",
+          "action": "添加IN聚类质量量化指标",
+          "assigned_tools": [
+            "手动"
+          ],
+          "eta_hours": 20,
+          "owner": "qgl_team+lvlu_team"
+        }
+      ]
+    },
+    "EMERGENCE_INDEX_VERIFICATION": {
+      "category_id": "EMERGENCE_INDEX_VERIFICATION",
+      "category_name": "涌现指数真实性验证",
+      "priority": "CRITICAL",
+      "total_questions": 6,
+      "estimated_hours": 345,
+      "actions": [
+        {
+          "qid": "E-001",
+          "action": "大规模实验验证涌现阈值0.9",
+          "assigned_tools": [
+            "手动"
+          ],
+          "eta_hours": 80,
+          "owner": "cisvr_team+usrm_team+qlv_team"
+        },
+        {
+          "qid": "E-002",
+          "action": "实现OT(Overall Transfer)测量算法",
+          "assigned_tools": [
+            "手动"
+          ],
+          "eta_hours": 50,
+          "owner": "ucif2_team+qgl_team+vinf_team"
+        },
+        {
+          "qid": "E-003",
+          "action": "明确AG(Anti-Gravity)物理定义",
+          "assigned_tools": [
+            "手动"
+          ],
+          "eta_hours": 40,
+          "owner": "qfa_team+qtlv_team"
+        },
+        {
+          "qid": "E-004",
+          "action": "添加涌现指数抗操纵机制",
+          "assigned_tools": [
+            "手动"
+          ],
+          "eta_hours": 60,
+          "owner": "cisvr_team+qgl_team+usrm_team"
+        },
+        {
+          "qid": "E-005",
+          "action": "完成自指性公理形式化",
+          "assigned_tools": [
+            "手动"
+          ],
+          "eta_hours": 70,
+          "owner": "ucif2_team+qlv_team+lgt_team"
+        },
+        {
+          "qid": "E-006",
+          "action": "验证涌现指数与认知负荷负相关性",
+          "assigned_tools": [
+            "手动"
+          ],
+          "eta_hours": 45,
+          "owner": "usrm_team+cisvr_team"
+        }
+      ]
+    },
+    "DEPLOYMENT_INFRASTRUCTURE": {
+      "category_id": "DEPLOYMENT_INFRASTRUCTURE",
+      "category_name": "部署和基础设施",
+      "priority": "HIGH",
+      "total_questions": 8,
+      "estimated_hours": 121,
+      "actions": [
+        {
+          "qid": "DEP-001",
+          "action": "修复discussion_board.py语法错误",
+          "assigned_tools": [
+            "手动"
+          ],
+          "eta_hours": 4,
+          "owner": "core_team"
+        },
+        {
+          "qid": "DEP-002",
+          "action": "替换硬编码路径为配置变量",
+          "assigned_tools": [
+            "手动"
+          ],
+          "eta_hours": 12,
+          "owner": "all_teams"
+        },
+        {
+          "qid": "DEP-003",
+          "action": "创建11线交叉验证集成测试",
+          "assigned_tools": [
+            "pytest"
+          ],
+          "eta_hours": 40,
+          "owner": "all_teams"
+        },
+        {
+          "qid": "DEP-004",
+          "action": "实现_import_errors自动修复",
+          "assigned_tools": [
+            "手动"
+          ],
+          "eta_hours": 20,
+          "owner": "all_teams"
+        },
+        {
+          "qid": "DEP-005",
+          "action": "统一日志配置",
+          "assigned_tools": [
+            "手动"
+          ],
+          "eta_hours": 10,
+          "owner": "all_teams"
+        },
+        {
+          "qid": "DEP-006",
+          "action": "添加board_state.json版本控制",
+          "assigned_tools": [
+            "手动"
+          ],
+          "eta_hours": 15,
+          "owner": "usrm_team+vinf_team"
+        },
+        {
+          "qid": "DEP-007",
+          "action": "声明numpy依赖版本",
+          "assigned_tools": [
+            "手动"
+          ],
+          "eta_hours": 5,
+          "owner": "qgl_team+qfa_team"
+        },
+        {
+          "qid": "DEP-008",
+          "action": "配置Lean 4 lake build CI管道",
+          "assigned_tools": [
+            "GitHub Actions"
+          ],
+          "eta_hours": 15,
+          "owner": "ucif2_team+qlv_team"
+        }
+      ]
+    }
+  },
+  "critical_path": [
+    {
+      "step": 1,
+      "action": "修复DEP-001语法错误(CRITICAL)",
+      "blocks": [
+        "DEP-003",
+        "所有测试"
+      ]
+    },
+    {
+      "step": 2,
+      "action": "添加E-004抗操纵机制(CRITICAL)",
+      "blocks": [
+        "E-001",
+        "系统可靠性"
+      ]
+    },
+    {
+      "step": 3,
+      "action": "统一命名空间(CPI-007, SI-004)",
+      "blocks": [
+        "CPI-006",
+        "SI-003"
+      ]
+    },
+    {
+      "step": 4,
+      "action": "修复SI-001降级阈值",
+      "blocks": [
+        "SI-002",
+        "系统稳定性"
+      ]
+    },
+    {
+      "step": 5,
+      "action": "完成Lean T-THEO-0009终止性",
+      "blocks": [
+        "LEAN-009A",
+        "LEAN-009B"
+      ]
+    },
+    {
+      "step": 6,
+      "action": "部署R2存储",
+      "blocks": [
+        "DEP-008",
+        "资产持久化"
+      ]
+    }
+  ],
+  "team_assignments": {
+    "formal_team": {
+      "questions": [
+        "LEAN-001",
+        "LEAN-002",
+        "LEAN-003A",
+        "LEAN-003B",
+        "LEAN-005",
+        "LEAN-006",
+        "LEAN-008",
+        "LEAN-009A",
+        "LEAN-009B",
+        "DEP-008"
+      ],
+      "total_hours": 810
+    },
+    "core_team": {
+      "questions": [
+        "DEP-001",
+        "DEP-002",
+        "DEP-003",
+        "DEP-004",
+        "DEP-005"
+      ],
+      "total_hours": 86
+    },
+    "ucif2_team": {
+      "questions": [
+        "LEAN-003A",
+        "LEAN-005",
+        "H-006",
+        "CT-001",
+        "FCTN-005",
+        "E-002",
+        "E-005"
+      ],
+      "total_hours": 305
+    },
+    "lgt_team": {
+      "questions": [
+        "CPI-001",
+        "CPI-005",
+        "H-002",
+        "HG-001",
+        "LL-001",
+        "PED-001",
+        "FCTN-001"
+      ],
+      "total_hours": 230
+    },
+    "qlv_team": {
+      "questions": [
+        "LEAN-001",
+        "LEAN-007",
+        "LEAN-009A",
+        "LEAN-009B",
+        "CPI-001",
+        "CPI-004",
+        "CPI-005",
+        "KG-001",
+        "CC-001",
+        "LL-001",
+        "PED-001",
+        "E-001",
+        "E-005"
+      ],
+      "total_hours": 455
+    },
+    "qgl_team": {
+      "questions": [
+        "LEAN-003B",
+        "H-002",
+        "H-005",
+        "H-007",
+        "CPI-003",
+        "IN-001",
+        "SI-005",
+        "FCTN-001",
+        "FCTN-002",
+        "FCTN-003",
+        "FCTN-006",
+        "E-002",
+        "E-004"
+      ],
+      "total_hours": 390
+    },
+    "vinf_team": {
+      "questions": [
+        "LEAN-003B",
+        "CPI-003",
+        "H-002",
+        "H-005",
+        "H-007",
+        "HG-001",
+        "PED-002",
+        "FCTN-001",
+        "FCTN-003",
+        "DEP-006",
+        "E-002"
+      ],
+      "total_hours": 265
+    },
+    "qfa_team": {
+      "questions": [
+        "LEAN-002",
+        "LEAN-006",
+        "H-006",
+        "E-003",
+        "SI-006",
+        "DEP-007"
+      ],
+      "total_hours": 250
+    },
+    "qtlv_team": {
+      "questions": [
+        "LEAN-002",
+        "LEAN-006",
+        "H-003",
+        "CPI-002",
+        "CT-001",
+        "FCTN-005",
+        "E-003",
+        "SI-005"
+      ],
+      "total_hours": 285
+    },
+    "cfts_team": {
+      "questions": [
+        "LEAN-009A",
+        "CPI-002",
+        "H-003",
+        "CPI-005",
+        "KG-001",
+        "CC-001",
+        "PED-001"
+      ],
+      "total_hours": 220
+    },
+    "cisvr_team": {
+      "questions": [
+        "LEAN-004A",
+        "H-004",
+        "CC-001",
+        "E-001",
+        "E-004",
+        "E-005",
+        "E-006",
+        "SI-006"
+      ],
+      "total_hours": 295
+    },
+    "usrm_team": {
+      "questions": [
+        "LEAN-004A",
+        "CPI-004",
+        "H-004",
+        "H-007",
+        "E-001",
+        "E-004",
+        "E-006",
+        "SI-002",
+        "SI-007",
+        "DEP-006"
+      ],
+      "total_hours": 315
+    },
+    "lvlu_team": {
+      "questions": [
+        "LEAN-009A",
+        "CPI-003",
+        "IN-001",
+        "FCTN-002",
+        "FCTN-006",
+        "SI-007"
+      ],
+      "total_hours": 195
+    },
+    "jing_wei_xin_team": {
+      "questions": [
+        "H-001"
+      ],
+      "total_hours": 50
+    },
+    "all_teams": {
+      "questions": [
+        "CPI-006",
+        "CPI-007",
+        "SI-001",
+        "SI-003",
+        "SI-004",
+        "DEP-002",
+        "DEP-003",
+        "DEP-004",
+        "DEP-005"
+      ],
+      "total_hours": 152
+    }
+  }
+}

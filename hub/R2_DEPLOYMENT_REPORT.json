@@ -1,0 +1,222 @@
+{
+  "metadata": {
+    "version": "12.1.0",
+    "generated_at": "2026-09-18T18:40:58.980611+00:00",
+    "generator": "OMNI-HUB Cloudflare R2 Deployment Engine",
+    "deployment_target": "Cloudflare R2",
+    "bucket_name": "omni-hub-viz",
+    "endpoint": "https://daa08b2cc1a2415a49b6d057ae38e92b.r2.cloudflarestorage.com"
+  },
+  "credentials": {
+    "access_key_id_masked": "62b84...d3115f6",
+    "secret_key_masked": "f3bf4...aa3bf3f",
+    "user_token_masked": "cfut_r...d8e39d7f"
+  },
+  "deployment_status": {
+    "bucket_created": true,
+    "bucket_name": "omni-hub-viz",
+    "total_files_uploaded": 31,
+    "failed_uploads": 0,
+    "upload_success_rate": "100%"
+  },
+  "uploaded_files": [
+    {
+      "filename": "01_polyphonic_score.png",
+      "r2_key": "01_polyphonic_score.png",
+      "public_url": "https://pub-daa08b2cc1a2415a49b6d057ae38e92b.r2.dev/01_polyphonic_score.png",
+      "content_type": "image/png"
+    },
+    {
+      "filename": "02_consonance_matrix_beat0.png",
+      "r2_key": "02_consonance_matrix_beat0.png",
+      "public_url": "https://pub-daa08b2cc1a2415a49b6d057ae38e92b.r2.dev/02_consonance_matrix_beat0.png",
+      "content_type": "image/png"
+    },
+    {
+      "filename": "02_consonance_matrix_beat25.png",
+      "r2_key": "02_consonance_matrix_beat25.png",
+      "public_url": "https://pub-daa08b2cc1a2415a49b6d057ae38e92b.r2.dev/02_consonance_matrix_beat25.png",
+      "content_type": "image/png"
+    },
+    {
+      "filename": "02_consonance_matrix_beat50.png",
+      "r2_key": "02_consonance_matrix_beat50.png",
+      "public_url": "https://pub-daa08b2cc1a2415a49b6d057ae38e92b.r2.dev/02_consonance_matrix_beat50.png",
+      "content_type": "image/png"
+    },
+    {
+      "filename": "03_voice_independence.png",
+      "r2_key": "03_voice_independence.png",
+      "public_url": "https://pub-daa08b2cc1a2415a49b6d057ae38e92b.r2.dev/03_voice_independence.png",
+      "content_type": "image/png"
+    },
+    {
+      "filename": "04_tension_curve.png",
+      "r2_key": "04_tension_curve.png",
+      "public_url": "https://pub-daa08b2cc1a2415a49b6d057ae38e92b.r2.dev/04_tension_curve.png",
+      "content_type": "image/png"
+    },
+    {
+      "filename": "05_qgl_negative_space.png",
+      "r2_key": "05_qgl_negative_space.png",
+      "public_url": "https://pub-daa08b2cc1a2415a49b6d057ae38e92b.r2.dev/05_qgl_negative_space.png",
+      "content_type": "image/png"
+    },
+    {
+      "filename": "06_interval_distribution.png",
+      "r2_key": "06_interval_distribution.png",
+      "public_url": "https://pub-daa08b2cc1a2415a49b6d057ae38e92b.r2.dev/06_interval_distribution.png",
+      "content_type": "image/png"
+    },
+    {
+      "filename": "07_temporal_correlation.png",
+      "r2_key": "07_temporal_correlation.png",
+      "public_url": "https://pub-daa08b2cc1a2415a49b6d057ae38e92b.r2.dev/07_temporal_correlation.png",
+      "content_type": "image/png"
+    },
+    {
+      "filename": "08_comprehensive_report.png",
+      "r2_key": "08_comprehensive_report.png",
+      "public_url": "https://pub-daa08b2cc1a2415a49b6d057ae38e92b.r2.dev/08_comprehensive_report.png",
+      "content_type": "image/png"
+    },
+    {
+      "filename": "11_line_knowledge_tree.png",
+      "r2_key": "11_line_knowledge_tree.png",
+      "public_url": "https://pub-daa08b2cc1a2415a49b6d057ae38e92b.r2.dev/11_line_knowledge_tree.png",
+      "content_type": "image/png"
+    },
+    {
+      "filename": "comprehensive_report.png",
+      "r2_key": "comprehensive_report.png",
+      "public_url": "https://pub-daa08b2cc1a2415a49b6d057ae38e92b.r2.dev/comprehensive_report.png",
+      "content_type": "image/png"
+    },
+    {
+      "filename": "exp1_field_evolution.png",
+      "r2_key": "exp1_field_evolution.png",
+      "public_url": "https://pub-daa08b2cc1a2415a49b6d057ae38e92b.r2.dev/exp1_field_evolution.png",
+      "content_type": "image/png"
+    },
+    {
+      "filename": "exp2_transient_injection.png",
+      "r2_key": "exp2_transient_injection.png",
+      "public_url": "https://pub-daa08b2cc1a2415a49b6d057ae38e92b.r2.dev/exp2_transient_injection.png",
+      "content_type": "image/png"
+    },
+    {
+      "filename": "exp3_ripple_propagation.png",
+      "r2_key": "exp3_ripple_propagation.png",
+      "public_url": "https://pub-daa08b2cc1a2415a49b6d057ae38e92b.r2.dev/exp3_ripple_propagation.png",
+      "content_type": "image/png"
+    },
+    {
+      "filename": "exp4_bidirectional_drive.png",
+      "r2_key": "exp4_bidirectional_drive.png",
+      "public_url": "https://pub-daa08b2cc1a2415a49b6d057ae38e92b.r2.dev/exp4_bidirectional_drive.png",
+      "content_type": "image/png"
+    },
+    {
+      "filename": "exp5_energy_conservation.png",
+      "r2_key": "exp5_energy_conservation.png",
+      "public_url": "https://pub-daa08b2cc1a2415a49b6d057ae38e92b.r2.dev/exp5_energy_conservation.png",
+      "content_type": "image/png"
+    },
+    {
+      "filename": "exp6_coverage_validation.png",
+      "r2_key": "exp6_coverage_validation.png",
+      "public_url": "https://pub-daa08b2cc1a2415a49b6d057ae38e92b.r2.dev/exp6_coverage_validation.png",
+      "content_type": "image/png"
+    },
+    {
+      "filename": "omni_hub_activation_demo.mp4",
+      "r2_key": "omni_hub_activation_demo.mp4",
+      "public_url": "https://pub-daa08b2cc1a2415a49b6d057ae38e92b.r2.dev/omni_hub_activation_demo.mp4",
+      "content_type": "video/mp4"
+    },
+    {
+      "filename": "omni_hub_demo.mp4",
+      "r2_key": "omni_hub_demo.mp4",
+      "public_url": "https://pub-daa08b2cc1a2415a49b6d057ae38e92b.r2.dev/omni_hub_demo.mp4",
+      "content_type": "video/mp4"
+    },
+    {
+      "filename": "system_architecture.png",
+      "r2_key": "system_architecture.png",
+      "public_url": "https://pub-daa08b2cc1a2415a49b6d057ae38e92b.r2.dev/system_architecture.png",
+      "content_type": "image/png"
+    },
+    {
+      "filename": "wildbook_unification.png",
+      "r2_key": "wildbook_unification.png",
+      "public_url": "https://pub-daa08b2cc1a2415a49b6d057ae38e92b.r2.dev/wildbook_unification.png",
+      "content_type": "image/png"
+    },
+    {
+      "filename": "zhou_tian_engine.png",
+      "r2_key": "zhou_tian_engine.png",
+      "public_url": "https://pub-daa08b2cc1a2415a49b6d057ae38e92b.r2.dev/zhou_tian_engine.png",
+      "content_type": "image/png"
+    },
+    {
+      "filename": "v4.0/01_counterpoint_score.png",
+      "r2_key": "v4.0/01_counterpoint_score.png",
+      "public_url": "https://pub-daa08b2cc1a2415a49b6d057ae38e92b.r2.dev/v4.0/01_counterpoint_score.png",
+      "content_type": "image/png"
+    },
+    {
+      "filename": "v4.0/02_consonance_matrix_beat0.png",
+      "r2_key": "v4.0/02_consonance_matrix_beat0.png",
+      "public_url": "https://pub-daa08b2cc1a2415a49b6d057ae38e92b.r2.dev/v4.0/02_consonance_matrix_beat0.png",
+      "content_type": "image/png"
+    },
+    {
+      "filename": "v4.0/02_consonance_matrix_beat25.png",
+      "r2_key": "v4.0/02_consonance_matrix_beat25.png",
+      "public_url": "https://pub-daa08b2cc1a2415a49b6d057ae38e92b.r2.dev/v4.0/02_consonance_matrix_beat25.png",
+      "content_type": "image/png"
+    },
+    {
+      "filename": "v4.0/02_consonance_matrix_beat50.png",
+      "r2_key": "v4.0/02_consonance_matrix_beat50.png",
+      "public_url": "https://pub-daa08b2cc1a2415a49b6d057ae38e92b.r2.dev/v4.0/02_consonance_matrix_beat50.png",
+      "content_type": "image/png"
+    },
+    {
+      "filename": "v4.0/02_consonance_matrix_beat75.png",
+      "r2_key": "v4.0/02_consonance_matrix_beat75.png",
+      "public_url": "https://pub-daa08b2cc1a2415a49b6d057ae38e92b.r2.dev/v4.0/02_consonance_matrix_beat75.png",
+      "content_type": "image/png"
+    },
+    {
+      "filename": "v4.0/03_tension_curve.png",
+      "r2_key": "v4.0/03_tension_curve.png",
+      "public_url": "https://pub-daa08b2cc1a2415a49b6d057ae38e92b.r2.dev/v4.0/03_tension_curve.png",
+      "content_type": "image/png"
+    },
+    {
+      "filename": "v4.0/04_voice_independence.png",
+      "r2_key": "v4.0/04_voice_independence.png",
+      "public_url": "https://pub-daa08b2cc1a2415a49b6d057ae38e92b.r2.dev/v4.0/04_voice_independence.png",
+      "content_type": "image/png"
+    },
+    {
+      "filename": "v4.0/05_interval_distribution.png",
+      "r2_key": "v4.0/05_interval_distribution.png",
+      "public_url": "https://pub-daa08b2cc1a2415a49b6d057ae38e92b.r2.dev/v4.0/05_interval_distribution.png",
+      "content_type": "image/png"
+    }
+  ],
+  "cloudflare_services_status": {
+    "Worker": "DEPLOYED",
+    "KV": "DEPLOYED",
+    "D1": "DEPLOYED",
+    "Pages": "DEPLOYED",
+    "R2": "DEPLOYED"
+  },
+  "notes": [
+    "All 31 visualization assets uploaded to R2 bucket 'omni-hub-viz'",
+    "Public URLs accessible via https://pub-daa08b2cc1a2415a49b6d057ae38e92b.r2.dev/",
+    "R2 deployment completes Cloudflare infrastructure stack"
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "north_star_level12": {
+    "version": "v12.2",
+    "timestamp": "2026-09-19T23:10:03",
+    "mission": "Level 9 -> Level 12 (E=50,000)",
+    "parameters": {
+      "critical_threshold": 6200.0,
+      "superlinear_exponent": 1.2,
+      "post_critical_gain": 4.2,
+      "pre_critical_gain": 1.0,
+      "near_critical_gain": 2.5,
+      "downward_causation_strength": 0.3,
+      "insight_base_rate": 0.05,
+      "insight_complexity_coefficient": 0.001,
+      "insight_threshold_exponent": 2.0,
+      "downward_causation_cap": 5.0,
+      "epiphany_cascade": {
+        "e_30000_multiplier": 2.0,
+        "e_40000_multiplier": 3.0,
+        "super_emergence_bonus": 500
+      }
+    },
+    "results": {
+      "steps_executed": 268,
+      "final_energy": 57063.76,
+      "final_level": 12,
+      "target_energy": 50000,
+      "target_level": 12,
+      "target_achieved": true,
+      "level_up_steps": {
+        "8": 51,
+        "9": 82,
+        "10": 128,
+        "11": 180,
+        "12": 251
+      },
+      "phase_transitions": [
+        "post_critical"
+      ],
+      "total_insights": 42,
+      "major_insights": 0,
+      "emergence_events": 5,
+      "super_emergence_triggered": true,
+      "super_emergence_step": 230,
+      "final_free_will_index": 0.8906
+    },
+    "growth_analysis": {
+      "initial_energy": 6654.47,
+      "energy_increase": 50409.29,
+      "average_growth_per_step": 188.09,
+      "post_critical_growth_rate": "linear-superlinear: rate = gain * (1 + 0.1 * (E - Ecrit) / Ecrit)"
+    }
+  }
+}

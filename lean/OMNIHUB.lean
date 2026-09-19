@@ -7,3 +7,4 @@ import OMNIHUB.DebtTheorems
 import OMNIHUB.SorryScan
 import OMNIHUB.ATPOrchestrator
 import OMNIHUB.ResultCollector
+import OMNIHUB.LeanCopilotConfig

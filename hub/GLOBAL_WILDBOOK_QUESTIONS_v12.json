@@ -1,0 +1,1067 @@
+{
+  "metadata": {
+    "version": "12.0.0",
+    "generated_at": "2026-09-18T15:46:10.385138Z",
+    "generator": "OMNI-HUB WildNotebook Global Surge Coordinator",
+    "sources": [
+      "v12_wild_notebook.py",
+      "discussion_board.py",
+      "jing_wei_xin.py",
+      "v12_wild_notebook_unified.py",
+      "debt_theorems.lean"
+    ],
+    "total_debts_processed": 39,
+    "theoretical_debts": 9,
+    "technical_debts": 30
+  },
+  "categories": {
+    "LEAN_FORMALIZATION": {
+      "category_id": "LEAN_FORMALIZATION",
+      "category_name": "Lean形式化证明",
+      "description": "Lean 4定理证明中的未完成证明(sorry)和形式化债务",
+      "priority": "CRITICAL",
+      "estimated_sorry": 22,
+      "questions": [
+        {
+          "qid": "LEAN-001",
+          "title": "涌现指数公理完备性证明 (T-THEO-0001)",
+          "theorem_id": "T-THEO-0001",
+          "status": "DEFERRED",
+          "lean_status": "sorry",
+          "description": "证明涌现指数E的4条公理系统（单调性、连续性、超线性性、自指性）构成最大一致集，无需额外独立公理",
+          "blocking": "7个指标作为类型化测度及其相互依赖关系未完全形式化",
+          "strategy": "Lindenbaum代数 + Gödel完备性",
+          "academic_refs": [
+            "Kwon & Paeng (2026)",
+            "Das et al. (2026)",
+            "Goldbring (2024)"
+          ],
+          "severity": "HIGH",
+          "assigned_lines": [
+            "ucif2",
+            "qlv",
+            "qtlv"
+          ],
+          "estimated_hours": 80
+        },
+        {
+          "qid": "LEAN-002",
+          "title": "MIP*一致性指标理论基础 (T-THEO-0002)",
+          "theorem_id": "T-THEO-0002",
+          "status": "NEEDS_MANUAL",
+          "lean_status": "sorry",
+          "description": "证明MIP*一致性指数C_MIP ≈ 0.0111在非局域博弈中有意义地界定了量子-经典偏差",
+          "blocking": "需要算子代数专家精确定义'一致性偏差'",
+          "strategy": "MIP* = RE + Connes嵌入 + Tsirelson界",
+          "academic_refs": [
+            "Ji et al. (2020)",
+            "Goldbring (2021)",
+            "Frei (2022)"
+          ],
+          "severity": "HIGH",
+          "assigned_lines": [
+            "qfa",
+            "qlv",
+            "ucif2"
+          ],
+          "estimated_hours": 120
+        },
+        {
+          "qid": "LEAN-003A",
+          "title": "64维统一场维度充分性 (T-THEO-0003a)",
+          "theorem_id": "T-THEO-0003",
+          "status": "DEFERRED",
+          "lean_status": "sorry",
+          "description": "证明64维（Cayley-24 + 意识4维 + 耦合36维）足以覆盖所有OMNI-HUB可观测量",
+          "blocking": "Observable类型和伴随丛形式化未定义",
+          "strategy": "例外李代数的表示论 + 八元数结构",
+          "academic_refs": [
+            "Baez (2002)",
+            "Wilson (2009)",
+            "Harvey & Moore (1996)"
+          ],
+          "severity": "HIGH",
+          "assigned_lines": [
+            "ucif2",
+            "lgt",
+            "qtlv"
+          ],
+          "estimated_hours": 100
+        },
+        {
+          "qid": "LEAN-003B",
+          "title": "64维统一场维度必要性/下界 (T-THEO-0003b)",
+          "theorem_id": "T-THEO-0003b",
+          "status": "DEFERRED",
+          "lean_status": "sorry",
+          "description": "证明64维是2070个耦合配置空间的下界（信息论下界）",
+          "blocking": "图熵形式化在Lean中未完成",
+          "strategy": "图熵 + Shannon源编码定理",
+          "academic_refs": [
+            "Korner (1973)",
+            "Baez (2002)"
+          ],
+          "severity": "HIGH",
+          "assigned_lines": [
+            "ucif2",
+            "vinf",
+            "qgl"
+          ],
+          "estimated_hours": 80
+        },
+        {
+          "qid": "LEAN-004A",
+          "title": "意识状态转换非连续性 (T-THEO-0004)",
+          "theorem_id": "T-THEO-0004",
+          "status": "DEFERRED",
+          "lean_status": "counterexample_proved",
+          "description": "已证明：当前阶跃函数定义下状态转换不连续（COUNTEREXAMPLE）",
+          "blocking": "需要修复：用sigmoid插值替代阶跃函数",
+          "strategy": "显式反例构造 + sigmoid平滑修复",
+          "academic_refs": [
+            "Li (2026)",
+            "Engel et al. (2016)"
+          ],
+          "severity": "HIGH",
+          "assigned_lines": [
+            "cisvr",
+            "qlv",
+            "usrm"
+          ],
+          "estimated_hours": 40
+        },
+        {
+          "qid": "LEAN-004B",
+          "title": "意识状态sigmoid平滑转换连续性 (T-THEO-0004-fix)",
+          "theorem_id": "T-THEO-0004-fix",
+          "status": "PROVED",
+          "lean_status": "proved",
+          "description": "sigmoid平滑转换函数是连续的（修复方案已验证）",
+          "blocking": "无——但需要在Python实现中部署此修复",
+          "strategy": "连续函数组合",
+          "academic_refs": [
+            "Rudin (1976)"
+          ],
+          "severity": "MEDIUM",
+          "assigned_lines": [
+            "cisvr",
+            "lgt"
+          ],
+          "estimated_hours": 8
+        },
+        {
+          "qid": "LEAN-005",
+          "title": "跨项目概念等价形式化 (T-THEO-0005)",
+          "theorem_id": "T-THEO-0005",
+          "status": "NEEDS_MANUAL",
+          "lean_status": "sorry",
+          "description": "为159,893个跨项目链接给出概念等价的形式化定义",
+          "blocking": "需要选择并形式化等价框架（范畴论/模型论/类型论）",
+          "strategy": "同伦类型论 / 单值公理",
+          "academic_refs": [
+            "Voevodsky et al. (2013)",
+            "Ahrens et al. (2015)",
+            "Palmgren (2016)"
+          ],
+          "severity": "HIGH",
+          "assigned_lines": [
+            "ucif2",
+            "qlv",
+            "usrm",
+            "qgl"
+          ],
+          "estimated_hours": 150
+        },
+        {
+          "qid": "LEAN-006",
+          "title": "量子-经典时钟同步 (T-THEO-0006)",
+          "theorem_id": "T-THEO-0006",
+          "status": "NEEDS_MANUAL",
+          "lean_status": "sorry",
+          "description": "证明p-adic树上的量子时钟算子(σ,τ,π,ω)存在半经典极限与经典时钟同步",
+          "blocking": "需要从Python代码提取算子代数对易关系",
+          "strategy": "半经典极限 + 波算子(Moeller算子)",
+          "academic_refs": [
+            "Sannino (2026)",
+            "McCaul et al. (2023)",
+            "Vladimirov et al. (1994)"
+          ],
+          "severity": "HIGH",
+          "assigned_lines": [
+            "qfa",
+            "qtlv",
+            "ucif2"
+          ],
+          "estimated_hours": 120
+        },
+        {
+          "qid": "LEAN-007",
+          "title": "知识自运算规则收敛性 (T-THEO-0007)",
+          "theorem_id": "T-THEO-0007",
+          "status": "AUTO_CLEANED",
+          "lean_status": "proved",
+          "description": "证明知识基座10条自运算规则迭代收敛到不动点",
+          "blocking": "无——已完全证明",
+          "strategy": "Banach不动点定理（几何压缩因子0.99）",
+          "academic_refs": [
+            "Banach (1922)"
+          ],
+          "severity": "MEDIUM",
+          "assigned_lines": [
+            "qlv",
+            "vinf"
+          ],
+          "estimated_hours": 0
+        },
+        {
+          "qid": "LEAN-008",
+          "title": "耦合矩阵正定性 (T-THEO-0008)",
+          "theorem_id": "T-THEO-0008",
+          "status": "DEFERRED",
+          "lean_status": "sorry",
+          "description": "证明2070个注册耦合构成的耦合矩阵C是正定的",
+          "blocking": "矩阵元素未指定；需要耦合强度模型",
+          "strategy": "Gershgorin圆盘定理 + 对角占优",
+          "academic_refs": [
+            "Yang et al. (2020, 2021)",
+            "Hariprasad (2020)",
+            "Varga (2004)"
+          ],
+          "severity": "MEDIUM",
+          "assigned_lines": [
+            "qgl",
+            "vinf",
+            "lgt"
+          ],
+          "estimated_hours": 60
+        },
+        {
+          "qid": "LEAN-009A",
+          "title": "统一管道步骤测度递减 (T-THEO-0009a)",
+          "theorem_id": "T-THEO-0009a",
+          "status": "DEFERRED",
+          "lean_status": "partially_proved",
+          "description": "证明管道每个步骤递减良基测度",
+          "blocking": "Weaver阶段测度需要修正（迭代次数应递减而非递增）",
+          "strategy": "良基递归 + 字典序测度",
+          "academic_refs": [
+            "Jacob-Rao et al. (2018)",
+            "Sterling & Ye (2025)"
+          ],
+          "severity": "MEDIUM",
+          "assigned_lines": [
+            "qlv",
+            "lvlu",
+            "cfts"
+          ],
+          "estimated_hours": 50
+        },
+        {
+          "qid": "LEAN-009B",
+          "title": "统一管道终止性 (T-THEO-0009b)",
+          "theorem_id": "T-THEO-0009b",
+          "status": "DEFERRED",
+          "lean_status": "sorry",
+          "description": "证明统一管道对所有有效输入终止（8阶段无无限循环）",
+          "blocking": "转移函数未完全形式化；Weaver测度需要修正",
+          "strategy": "良基归纳",
+          "academic_refs": [
+            "Jacob-Rao et al. (2018)",
+            "Goncharov et al. (2016)"
+          ],
+          "severity": "MEDIUM",
+          "assigned_lines": [
+            "qlv",
+            "cfts",
+            "vinf"
+          ],
+          "estimated_hours": 60
+        }
+      ],
+      "sorry_count": 8
+    },
+    "CROSS_PROJECT_ALIGNMENT": {
+      "category_id": "CROSS_PROJECT_ALIGNMENT",
+      "category_name": "跨项目概念对齐",
+      "description": "提升跨项目一致性指数(CPI)，解决159,893个跨项目链接中的概念不匹配",
+      "priority": "HIGH",
+      "cpi_target": 0.95,
+      "current_cpi": "unknown",
+      "questions": [
+        {
+          "qid": "CPI-001",
+          "title": "UCIF2-LGT概念等价映射缺失",
+          "description": "UCIF2线的形式化定义与LGT线的图灵完备性概念之间缺乏显式等价映射",
+          "gap_source": "unified_notebook_pedestal_CC",
+          "severity": "HIGH",
+          "assigned_lines": [
+            "ucif2",
+            "lgt",
+            "qlv"
+          ],
+          "estimated_hours": 40
+        },
+        {
+          "qid": "CPI-002",
+          "title": "QFA量子算子与经典时钟语义鸿沟",
+          "description": "QFA线中量子可观测量的形式化定义与经典时钟树的语义映射未建立",
+          "gap_source": "jing_wei_xin_quantum_classical_bridge",
+          "severity": "HIGH",
+          "assigned_lines": [
+            "qfa",
+            "qtlv",
+            "cfts"
+          ],
+          "estimated_hours": 60
+        },
+        {
+          "qid": "CPI-003",
+          "title": "VINF信息测度与QGL耦合强度单位不统一",
+          "description": "VINF线的信息熵测度(bits)与QGL耦合权重(无量纲标量)缺乏量纲协调机制",
+          "gap_source": "unified_notebook_metric_mismatch",
+          "severity": "MEDIUM",
+          "assigned_lines": [
+            "vinf",
+            "qgl",
+            "lvlu"
+          ],
+          "estimated_hours": 30
+        },
+        {
+          "qid": "CPI-004",
+          "title": "USRM用户认知模型与CISVR意识状态映射模糊",
+          "description": "USRM线的用户认知状态空间与CISVR线的意识层级之间没有形式化映射函数",
+          "gap_source": "discussion_board_thread_45",
+          "severity": "MEDIUM",
+          "assigned_lines": [
+            "usrm",
+            "cisvr",
+            "qlv"
+          ],
+          "estimated_hours": 35
+        },
+        {
+          "qid": "CPI-005",
+          "title": "六基座语义不一致：CT ↔ HG ↔ KG",
+          "description": "Category Theory基座、Hypergraph基座与Knowledge Graph基座之间的节点标识符方案不一致，导致注入失败",
+          "gap_source": "v12_wn_injector_knowledge_pedestal",
+          "severity": "HIGH",
+          "assigned_lines": [
+            "qlv",
+            "cfts",
+            "lgt"
+          ],
+          "estimated_hours": 50
+        },
+        {
+          "qid": "CPI-006",
+          "title": "统一野问册与子系统版本漂移",
+          "description": "UnifiedWildNotebook期望的接口版本与各子系统实际版本不匹配，导致4个子系统间存在6处版本漂移",
+          "gap_source": "v12_unified_subsystem_bridge",
+          "severity": "HIGH",
+          "assigned_lines": [
+            "all"
+          ],
+          "estimated_hours": 20
+        },
+        {
+          "qid": "CPI-007",
+          "title": "SI Loop 11线与WildNotebook 4空间的线命名空间冲突",
+          "description": "SI Loop使用全小写ID(ucif2等)，DiscussionBoard使用大小写混合标签，JingWeiXin使用混合命名",
+          "gap_source": "migration_engine_line_id_mapping",
+          "severity": "MEDIUM",
+          "assigned_lines": [
+            "all"
+          ],
+          "estimated_hours": 15
+        }
+      ]
+    },
+    "COHERENCE_OPTIMIZATION": {
+      "category_id": "COHERENCE_OPTIMIZATION",
+      "category_name": "协和度优化",
+      "description": "提升系统整体协和度H，解决编织一致性和跨线共振问题",
+      "priority": "HIGH",
+      "h_target": 0.95,
+      "current_h": "unknown",
+      "questions": [
+        {
+          "qid": "H-001",
+          "title": "Jing-Wei-Xin编织一致性低于阈值",
+          "description": "weave_coherence指标需要达到>0.9，但目前编织矩阵中经-纬-薪三维耦合不一致",
+          "gap_source": "jing_wei_xin_weave_matrix",
+          "severity": "HIGH",
+          "assigned_lines": [
+            "jing_wei_xin",
+            "all"
+          ],
+          "estimated_hours": 50
+        },
+        {
+          "qid": "H-002",
+          "title": "互激引擎多线共振不稳定",
+          "description": "MutualExcitationEngine的resonate()在5线以上共振时方差过大，sync_index无法维持",
+          "gap_source": "jing_wei_xin_mutual_engine",
+          "severity": "HIGH",
+          "assigned_lines": [
+            "qgl",
+            "vinf",
+            "lgt"
+          ],
+          "estimated_hours": 45
+        },
+        {
+          "qid": "H-003",
+          "title": "场激引擎能量耗散过快",
+          "description": "FieldExcitationEngine.excitation_waves()在20步后能量衰减至峰值的<10%，需要优化能量保持",
+          "gap_source": "jing_wei_xin_field_engine",
+          "severity": "MEDIUM",
+          "assigned_lines": [
+            "qtlv",
+            "cfts"
+          ],
+          "estimated_hours": 30
+        },
+        {
+          "qid": "H-004",
+          "title": "自激引擎状态跳变而非平滑过渡",
+          "description": "SelfExcitationEngine在ignite后直接从LATENT跳变到SURGE，缺少渐变中间态",
+          "gap_source": "jing_wei_xin_self_engine",
+          "severity": "MEDIUM",
+          "assigned_lines": [
+            "cisvr",
+            "usrm"
+          ],
+          "estimated_hours": 25
+        },
+        {
+          "qid": "H-005",
+          "title": "涟漪引擎干涉复杂度不可控",
+          "description": "RippleEngine在多涟漪叠加时interference_complexity呈指数增长，未设置上限",
+          "gap_source": "jing_wei_xin_ripple_engine",
+          "severity": "LOW",
+          "assigned_lines": [
+            "vinf",
+            "qgl"
+          ],
+          "estimated_hours": 20
+        },
+        {
+          "qid": "H-006",
+          "title": "统一场状态64维协方差矩阵未正定化",
+          "description": "UnifiedFieldState.compute_coherence()使用的协方差矩阵在数值计算中可能失去正定性",
+          "gap_source": "v12_unified_field_state",
+          "severity": "HIGH",
+          "assigned_lines": [
+            "ucif2",
+            "qfa"
+          ],
+          "estimated_hours": 35
+        },
+        {
+          "qid": "H-007",
+          "title": "讨论板4空间覆盖率缺口",
+          "description": "DiscussionBoard.ensure_coverage()报告存在未覆盖的tag组合，wild_ask空间覆盖率<60%",
+          "gap_source": "discussion_board_coverage",
+          "severity": "MEDIUM",
+          "assigned_lines": [
+            "usrm",
+            "qgl"
+          ],
+          "estimated_hours": 20
+        }
+      ]
+    },
+    "KNOWLEDGE_PEDESTAL_INTEGRITY": {
+      "category_id": "KNOWLEDGE_PEDESTAL_INTEGRITY",
+      "category_name": "知识基座完整性",
+      "description": "六大知识基座(KG, CC, HG, IN, CT, LL)的完整性、一致性和注入机制问题",
+      "priority": "HIGH",
+      "pedestals": [
+        "KG",
+        "CC",
+        "HG",
+        "IN",
+        "CT",
+        "LL"
+      ],
+      "questions": [
+        {
+          "qid": "KG-001",
+          "title": "知识图谱基座(KG)节点元数据不完整",
+          "description": "KNode.metadata字段未标准化，不同子系统注入的节点使用不同的键命名约定",
+          "gap_source": "v12_wn_knowledge_pedestal_add_node",
+          "severity": "HIGH",
+          "assigned_lines": [
+            "qlv",
+            "cfts"
+          ],
+          "estimated_hours": 25
+        },
+        {
+          "qid": "CC-001",
+          "title": "认知复合体基座(CC)空壳注入",
+          "description": "UnifiedKnowledgeInjector.inject_question_answer()对CC基座的注入仅为占位符（空列表），无实际认知结构",
+          "gap_source": "v12_unified_injector_CC",
+          "severity": "HIGH",
+          "assigned_lines": [
+            "cisvr",
+            "qlv"
+          ],
+          "estimated_hours": 40
+        },
+        {
+          "qid": "HG-001",
+          "title": "超图基座(HG)超边元数据缺失",
+          "description": "HG基座的超边仅记录respondents列表，缺少超边权重、方向性和时序信息",
+          "gap_source": "v12_unified_injector_HG",
+          "severity": "MEDIUM",
+          "assigned_lines": [
+            "lgt",
+            "vinf"
+          ],
+          "estimated_hours": 30
+        },
+        {
+          "qid": "IN-001",
+          "title": "信息网络基座(IN)聚类策略过于简单",
+          "description": "IN基座仅按source_system做简单字符串聚类，未使用实际的信息网络度量",
+          "gap_source": "v12_unified_injector_IN",
+          "severity": "MEDIUM",
+          "assigned_lines": [
+            "qgl",
+            "lvlu"
+          ],
+          "estimated_hours": 25
+        },
+        {
+          "qid": "CT-001",
+          "title": "范畴论基座(CT)仅记录字符串态射",
+          "description": "CT基座仅注入字符串形式的morphism描述，未构造实际的范畴对象和态射复合",
+          "gap_source": "v12_unified_injector_CT",
+          "severity": "MEDIUM",
+          "assigned_lines": [
+            "ucif2",
+            "qtlv"
+          ],
+          "estimated_hours": 50
+        },
+        {
+          "qid": "LL-001",
+          "title": "逻辑层基座(LL)命题不可判定",
+          "description": "LL基座记录的命题为字符串截断形式，无法用于自动推理或一致性检查",
+          "gap_source": "v12_unified_injector_LL",
+          "severity": "MEDIUM",
+          "assigned_lines": [
+            "qlv",
+            "lgt"
+          ],
+          "estimated_hours": 35
+        },
+        {
+          "qid": "PED-001",
+          "title": "六基座间交叉引用缺失",
+          "description": "6个基座之间缺少跨基座引用机制，无法从KG节点追踪到对应的CC认知结构或CT态射",
+          "gap_source": "unified_notebook_pedestal_bridge",
+          "severity": "HIGH",
+          "assigned_lines": [
+            "qlv",
+            "cfts",
+            "lgt"
+          ],
+          "estimated_hours": 45
+        },
+        {
+          "qid": "PED-002",
+          "title": "知识注入统计信息不准确",
+          "description": "UnifiedKnowledgeInjector.get_injection_stats()返回的计数未与基座实际内容交叉验证",
+          "gap_source": "v12_unified_injector_stats",
+          "severity": "LOW",
+          "assigned_lines": [
+            "vinf",
+            "qgl"
+          ],
+          "estimated_hours": 15
+        }
+      ]
+    },
+    "SI_11_LINE_COORDINATION": {
+      "category_id": "SI_11_LINE_COORDINATION",
+      "category_name": "11线SI协调",
+      "description": "SI Loop 11线协调机制、SI1锚降级和线间负载均衡问题",
+      "priority": "CRITICAL",
+      "line_names": [
+        "ucif2",
+        "lgt",
+        "qlv",
+        "qgl",
+        "vinf",
+        "qfa",
+        "qtlv",
+        "cfts",
+        "cisvr",
+        "usrm",
+        "lvlu"
+      ],
+      "questions": [
+        {
+          "qid": "SI-001",
+          "title": "SI1锚降级条件过于激进",
+          "description": "JingWeiXin.degrade_si1_anchor()的阈值(xin_power>3.0)可能过于激进，导致系统过早失去协调",
+          "gap_source": "jing_wei_xin_si1_degradation",
+          "severity": "HIGH",
+          "assigned_lines": [
+            "all"
+          ],
+          "estimated_hours": 20
+        },
+        {
+          "qid": "SI-002",
+          "title": "SI1降级后fallback机制未验证",
+          "description": "当SI1降级为fallback_audit_layer后，异常检测和审计功能未经过充分测试",
+          "gap_source": "jing_wei_xin_si1_fallback",
+          "severity": "HIGH",
+          "assigned_lines": [
+            "usrm",
+            "qgl",
+            "vinf"
+          ],
+          "estimated_hours": 30
+        },
+        {
+          "qid": "SI-003",
+          "title": "UnifiedSICoordinator.tick()线状态映射丢失",
+          "description": "tick()中LineState到JingWeiXin.mutual_engine.line_states的映射使用简单activity_level，丢失状态结构",
+          "gap_source": "v12_unified_coordinator_tick",
+          "severity": "MEDIUM",
+          "assigned_lines": [
+            "all"
+          ],
+          "estimated_hours": 25
+        },
+        {
+          "qid": "SI-004",
+          "title": "SI Loop与WildNotebook线命名空间不一致",
+          "description": "SILoopSystemIntelligence使用LINE_NAMES全小写列表，但DiscussionBoard的required_responders使用大小写混合",
+          "gap_source": "v12_unified_migration_engine",
+          "severity": "MEDIUM",
+          "assigned_lines": [
+            "all"
+          ],
+          "estimated_hours": 15
+        },
+        {
+          "qid": "SI-005",
+          "title": " surge_coordination能量注入无上限",
+          "description": "UnifiedSICoordinator.surge_coordination()中transient_engine.inject_pulse()的intensity*3.0无上限保护",
+          "gap_source": "v12_unified_coordinator_surge",
+          "severity": "HIGH",
+          "assigned_lines": [
+            "qgl",
+            "qtlv"
+          ],
+          "estimated_hours": 15
+        },
+        {
+          "qid": "SI-006",
+          "title": "自维持循环中薪动力虚假增长",
+          "description": "JingWeiXin.self_sustain()使用np.random随机注入，可能导致虚假的xin_power增长",
+          "gap_source": "jing_wei_xin_self_sustain",
+          "severity": "HIGH",
+          "assigned_lines": [
+            "cisvr",
+            "qfa"
+          ],
+          "estimated_hours": 35
+        },
+        {
+          "qid": "SI-007",
+          "title": "11线负载均衡算法缺失",
+          "description": "没有显式的11线负载均衡算法，Wei层的通道分配是静态初始化",
+          "gap_source": "jing_wei_xin_wei_channels",
+          "severity": "MEDIUM",
+          "assigned_lines": [
+            "lvlu",
+            "usrm"
+          ],
+          "estimated_hours": 40
+        }
+      ]
+    },
+    "FCTN_NETWORK_OPTIMIZATION": {
+      "category_id": "FCTN_NETWORK_OPTIMIZATION",
+      "category_name": "FCTN网络优化",
+      "description": "形式化概念传输网络(FCTN)的优化，包括2070个注册耦合的矩阵运算和图算法",
+      "priority": "HIGH",
+      "registered_couplings": 2070,
+      "questions": [
+        {
+          "qid": "FCTN-001",
+          "title": "耦合矩阵2070维特征值计算不可行",
+          "description": "2070×2070耦合矩阵的特征值分解在实时系统中计算复杂度过高(O(n³))",
+          "gap_source": "v12_standards_coupling_matrix",
+          "severity": "HIGH",
+          "assigned_lines": [
+            "qgl",
+            "vinf",
+            "lgt"
+          ],
+          "estimated_hours": 50
+        },
+        {
+          "qid": "FCTN-002",
+          "title": "耦合权重学习机制缺失",
+          "description": "耦合矩阵C的权重是静态初始化，没有根据实际数据传输反馈动态调整的学习机制",
+          "gap_source": "v12_unified_coupling_static",
+          "severity": "HIGH",
+          "assigned_lines": [
+            "qgl",
+            "lvlu"
+          ],
+          "estimated_hours": 60
+        },
+        {
+          "qid": "FCTN-003",
+          "title": "图熵计算近似算法未实现",
+          "description": "虽然T-THEO-0003b理论分析了图熵，但实际系统中未实现任何图熵近似算法",
+          "gap_source": "v12_standards_graph_entropy",
+          "severity": "MEDIUM",
+          "assigned_lines": [
+            "vinf",
+            "qgl"
+          ],
+          "estimated_hours": 40
+        },
+        {
+          "qid": "FCTN-004",
+          "title": "Hypergraph基座超边动态分裂缺失",
+          "description": "当超边respondents超过阈值时，没有自动分裂为子超边的机制",
+          "gap_source": "v12_unified_hg_splitting",
+          "severity": "LOW",
+          "assigned_lines": [
+            "lgt",
+            "vinf"
+          ],
+          "estimated_hours": 25
+        },
+        {
+          "qid": "FCTN-005",
+          "title": "范畴论基座态射复合不可计算",
+          "description": "CT基座仅记录字符串态射，无法计算态射复合或检查结合律",
+          "gap_source": "v12_unified_ct_composition",
+          "severity": "MEDIUM",
+          "assigned_lines": [
+            "ucif2",
+            "qtlv"
+          ],
+          "estimated_hours": 45
+        },
+        {
+          "qid": "FCTN-006",
+          "title": "信息网络基座聚类质量未量化",
+          "description": "IN基座的source_system聚类没有使用任何聚类质量指标(如silhouette score)",
+          "gap_source": "v12_unified_in_quality",
+          "severity": "LOW",
+          "assigned_lines": [
+            "qgl",
+            "lvlu"
+          ],
+          "estimated_hours": 20
+        }
+      ]
+    },
+    "EMERGENCE_INDEX_VERIFICATION": {
+      "category_id": "EMERGENCE_INDEX_VERIFICATION",
+      "category_name": "涌现指数真实性验证",
+      "description": "涌现指数E的7个指标(OT, AG, QI, RC, SP, IS, AI)的真实性、可测量性和防操纵性",
+      "priority": "CRITICAL",
+      "emergence_dimensions": [
+        "OT",
+        "AG",
+        "QI",
+        "RC",
+        "SP",
+        "IS",
+        "AI"
+      ],
+      "questions": [
+        {
+          "qid": "E-001",
+          "title": "涌现指数E的涌现阈值0.9缺乏实验验证",
+          "description": "ThresholdConsciousness.L2(0.9)的阈值选择基于启发式，未经过大规模实验验证",
+          "gap_source": "v12_standards_threshold_consciousness",
+          "severity": "HIGH",
+          "assigned_lines": [
+            "cisvr",
+            "usrm",
+            "qlv"
+          ],
+          "estimated_hours": 80
+        },
+        {
+          "qid": "E-002",
+          "title": "涌现指标OT(Overall Transfer)测量方法未定义",
+          "description": "OT维度声称测量'知识跨域迁移率'，但实际compute_emergence_index()中未实现具体测量算法",
+          "gap_source": "v12_standards_emergence_ot",
+          "severity": "HIGH",
+          "assigned_lines": [
+            "ucif2",
+            "qgl",
+            "vinf"
+          ],
+          "estimated_hours": 50
+        },
+        {
+          "qid": "E-003",
+          "title": "涌现指标AG(Anti-Gravity)概念不明确",
+          "description": "AG声称反映'反重力系数'，但物理定义模糊，与引力无关的隐喻导致测量不可行",
+          "gap_source": "v12_standards_emergence_ag",
+          "severity": "MEDIUM",
+          "assigned_lines": [
+            "qfa",
+            "qtlv"
+          ],
+          "estimated_hours": 40
+        },
+        {
+          "qid": "E-004",
+          "title": "涌现指数可被随机波动操纵",
+          "description": "JingWeiXin.self_sustain()中的随机注入可能导致涌现指数被人为抬升，缺乏抗操纵机制",
+          "gap_source": "jing_wei_xin_emergence_manipulation",
+          "severity": "CRITICAL",
+          "assigned_lines": [
+            "cisvr",
+            "qgl",
+            "usrm"
+          ],
+          "estimated_hours": 60
+        },
+        {
+          "qid": "E-005",
+          "title": "自指性公理(Self-Reference Axiom)形式化未完成",
+          "description": "公理4声称E(SelfField)=1，但SelfField的形式化定义和SelfField=SelfField的证明未完成",
+          "gap_source": "v12_standards_self_reference",
+          "severity": "HIGH",
+          "assigned_lines": [
+            "ucif2",
+            "qlv",
+            "lgt"
+          ],
+          "estimated_hours": 70
+        },
+        {
+          "qid": "E-006",
+          "title": "涌现指数与认知负荷(Cognitive Load)的负相关性未验证",
+          "description": "理论假设高涌现对应低认知负荷，但未建立两者的定量关系模型",
+          "gap_source": "v12_standards_emergence_cognitive_load",
+          "severity": "MEDIUM",
+          "assigned_lines": [
+            "usrm",
+            "cisvr"
+          ],
+          "estimated_hours": 45
+        }
+      ]
+    },
+    "DEPLOYMENT_INFRASTRUCTURE": {
+      "category_id": "DEPLOYMENT_INFRASTRUCTURE",
+      "category_name": "部署和基础设施",
+      "description": "代码质量、测试覆盖、部署配置和跨平台兼容性问题",
+      "priority": "MEDIUM",
+      "questions": [
+        {
+          "qid": "DEP-001",
+          "title": "discussion_board.py存在语法错误",
+          "description": "文件第415行附近存在未闭合的字符串/缩进问题，导致Python解析失败",
+          "gap_source": "discussion_board_py_syntax",
+          "severity": "CRITICAL",
+          "assigned_lines": [
+            "all"
+          ],
+          "estimated_hours": 4,
+          "file_path": "/mnt/agents/output/OMNI-HUB/core/discussion_board.py"
+        },
+        {
+          "qid": "DEP-002",
+          "title": "硬编码路径阻止跨平台部署",
+          "description": "多个文件使用硬编码的/mnt/agents/...路径，无法在其他环境部署",
+          "gap_source": "v12_wn_hardcoded_paths",
+          "severity": "HIGH",
+          "assigned_lines": [
+            "all"
+          ],
+          "estimated_hours": 12,
+          "affected_files": [
+            "v12_wild_notebook.py",
+            "v12_wild_notebook_unified.py",
+            "discussion_board.py"
+          ]
+        },
+        {
+          "qid": "DEP-003",
+          "title": "缺少11线交叉验证集成测试",
+          "description": "没有为11线交叉验证管道创建pytest fixtures和集成测试",
+          "gap_source": "v12_wn_missing_tests",
+          "severity": "HIGH",
+          "assigned_lines": [
+            "all"
+          ],
+          "estimated_hours": 40
+        },
+        {
+          "qid": "DEP-004",
+          "title": "子系统导入错误未自动修复",
+          "description": "UnifiedWildNotebook记录_import_errors但无自动修复机制",
+          "gap_source": "v12_unified_import_errors",
+          "severity": "MEDIUM",
+          "assigned_lines": [
+            "all"
+          ],
+          "estimated_hours": 20
+        },
+        {
+          "qid": "DEP-005",
+          "title": "日志配置未统一",
+          "description": "不同子系统使用不同的日志格式和级别，统一调试困难",
+          "gap_source": "v12_unified_logging",
+          "severity": "LOW",
+          "assigned_lines": [
+            "all"
+          ],
+          "estimated_hours": 10
+        },
+        {
+          "qid": "DEP-006",
+          "title": "DiscussionBoard状态持久化格式不稳定",
+          "description": "board_state.json使用简单JSON序列化，缺乏版本控制和向后兼容",
+          "gap_source": "discussion_board_persistence",
+          "severity": "MEDIUM",
+          "assigned_lines": [
+            "usrm",
+            "vinf"
+          ],
+          "estimated_hours": 15
+        },
+        {
+          "qid": "DEP-007",
+          "title": "JingWeiXin实验依赖numpy但未声明",
+          "description": "JingWeiXin大量使用numpy但未在文件头声明依赖版本",
+          "gap_source": "jing_wei_xin_dependencies",
+          "severity": "LOW",
+          "assigned_lines": [
+            "qgl",
+            "qfa"
+          ],
+          "estimated_hours": 5
+        },
+        {
+          "qid": "DEP-008",
+          "title": "Lean债务文件缺少CI集成",
+          "description": "debt_theorems.lean未配置Lean 4 lake build CI管道",
+          "gap_source": "debt_theorems_lean_ci",
+          "severity": "MEDIUM",
+          "assigned_lines": [
+            "ucif2",
+            "qlv"
+          ],
+          "estimated_hours": 15
+        }
+      ]
+    }
+  },
+  "summary": {
+    "total_questions": 61,
+    "severity_distribution": {
+      "critical": 2,
+      "high": 28,
+      "medium": 25,
+      "low": 6
+    },
+    "category_breakdown": {
+      "LEAN_FORMALIZATION": {
+        "total": 12,
+        "critical": 0,
+        "high": 7,
+        "medium": 5,
+        "low": 0,
+        "estimated_hours": 868,
+        "sorry_count": 8
+      },
+      "CROSS_PROJECT_ALIGNMENT": {
+        "total": 7,
+        "critical": 0,
+        "high": 4,
+        "medium": 3,
+        "low": 0,
+        "estimated_hours": 250,
+        "sorry_count": 0
+      },
+      "COHERENCE_OPTIMIZATION": {
+        "total": 7,
+        "critical": 0,
+        "high": 3,
+        "medium": 3,
+        "low": 1,
+        "estimated_hours": 225,
+        "sorry_count": 0
+      },
+      "KNOWLEDGE_PEDESTAL_INTEGRITY": {
+        "total": 8,
+        "critical": 0,
+        "high": 3,
+        "medium": 4,
+        "low": 1,
+        "estimated_hours": 265,
+        "sorry_count": 0
+      },
+      "SI_11_LINE_COORDINATION": {
+        "total": 7,
+        "critical": 0,
+        "high": 4,
+        "medium": 3,
+        "low": 0,
+        "estimated_hours": 180,
+        "sorry_count": 0
+      },
+      "FCTN_NETWORK_OPTIMIZATION": {
+        "total": 6,
+        "critical": 0,
+        "high": 2,
+        "medium": 2,
+        "low": 2,
+        "estimated_hours": 240,
+        "sorry_count": 0
+      },
+      "EMERGENCE_INDEX_VERIFICATION": {
+        "total": 6,
+        "critical": 1,
+        "high": 3,
+        "medium": 2,
+        "low": 0,
+        "estimated_hours": 345,
+        "sorry_count": 0
+      },
+      "DEPLOYMENT_INFRASTRUCTURE": {
+        "total": 8,
+        "critical": 1,
+        "high": 2,
+        "medium": 3,
+        "low": 2,
+        "estimated_hours": 121,
+        "sorry_count": 0
+      }
+    },
+    "total_estimated_hours": 2494,
+    "total_lean_sorry": 8,
+    "priority_order": [
+      "LEAN_FORMALIZATION",
+      "SI_11_LINE_COORDINATION",
+      "EMERGENCE_INDEX_VERIFICATION",
+      "CROSS_PROJECT_ALIGNMENT",
+      "COHERENCE_OPTIMIZATION",
+      "KNOWLEDGE_PEDESTAL_INTEGRITY",
+      "FCTN_NETWORK_OPTIMIZATION",
+      "DEPLOYMENT_INFRASTRUCTURE"
+    ]
+  }
+}

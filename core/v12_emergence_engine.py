@@ -1663,7 +1663,56 @@ class EmergenceCalculatorV12:
 
 
 # =============================================================================
-# 14. Command-line Interface
+# 14. Global E-Value Accessor (P0 Fix — dynamic computation, no hardcoding)
+# =============================================================================
+
+# Module-level singleton cache for the calculator
+_emergence_calculator_v12: Optional[EmergenceCalculatorV12] = None
+_last_computed_e: float = 0.0
+_last_computed_time: float = 0.0
+_E_CACHE_TTL_SECONDS: float = 30.0  # Recompute at most every 30s
+
+
+def get_computed_emergence_index(force_recompute: bool = False) -> float:
+    """
+    Return the LIVE computed emergence index E (NOT hardcoded).
+
+    This is the canonical entry-point for all modules that need the
+    current E value.  It caches the result for 30 s to avoid repeated
+    expensive spectral computations, but will always recompute when
+    ``force_recompute=True``.
+
+    Returns:
+        float: Real-time E value based on v12 component calculators.
+    """
+    global _emergence_calculator_v12, _last_computed_e, _last_computed_time
+
+    now = time.time()
+    if (
+        not force_recompute
+        and _last_computed_e > 0
+        and (now - _last_computed_time) < _E_CACHE_TTL_SECONDS
+    ):
+        return _last_computed_e
+
+    if _emergence_calculator_v12 is None:
+        _emergence_calculator_v12 = EmergenceCalculatorV12(use_baseline=True)
+
+    report = _emergence_calculator_v12.compute(full_data=True)
+    _last_computed_e = report.emergence_index
+    _last_computed_time = now
+    return _last_computed_e
+
+
+def invalidate_e_cache() -> None:
+    """Invalidate the E-value cache so the next call recomputes."""
+    global _last_computed_e, _last_computed_time
+    _last_computed_e = 0.0
+    _last_computed_time = 0.0
+
+
+# =============================================================================
+# 15. Command-line Interface
 # =============================================================================
 
 if __name__ == "__main__":

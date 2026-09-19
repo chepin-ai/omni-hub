@@ -1,0 +1,89 @@
+{
+  "timestamp": "2026-09-18T18:57:47.221540+00:00",
+  "version": "12.0.0",
+  "tests": {
+    "init": {
+      "status": "PASS",
+      "components": {
+        "observer": true,
+        "coordinator": true,
+        "reflector": true,
+        "evolver": true
+      }
+    },
+    "tick": {
+      "status": "PASS",
+      "tick_result_keys": [
+        "tick",
+        "timestamp",
+        "mode",
+        "emergence_level",
+        "meta_stability",
+        "anomalies_detected",
+        "coordination_actions",
+        "evolution_proposals",
+        "execution_ms"
+      ]
+    },
+    "multi_tick": {
+      "status": "PASS",
+      "final_tick": 5,
+      "history_size": 5
+    },
+    "observe": {
+      "status": "PASS",
+      "circles_observed": 5,
+      "anomalies_detected": 0
+    },
+    "coordinate": {
+      "status": "PASS",
+      "actions_taken": 0
+    },
+    "reflect": {
+      "status": "PASS",
+      "frame_id": "reflect-5",
+      "stability": 1.0,
+      "self_references": 6
+    },
+    "relation_matrix": {
+      "status": "PASS",
+      "shape": [
+        6,
+        6
+      ]
+    },
+    "evolve": {
+      "status": "PASS",
+      "proposals": 0
+    },
+    "self_reference": {
+      "status": "PASS",
+      "recursion_depth": 0,
+      "meta_stability": 1.0
+    },
+    "meta_emergence": {
+      "status": "PASS",
+      "second_order_emergence": 0.0,
+      "recursive_stability": 1.0
+    },
+    "full_report": {
+      "status": "PASS",
+      "report_keys": [
+        "version",
+        "timestamp",
+        "meta_circle_state",
+        "tick_count",
+        "self_reference",
+        "observation",
+        "coordination",
+        "reflection",
+        "evolution",
+        "circle_manager",
+        "relation_matrix"
+      ]
+    }
+  },
+  "overall_status": "ALL_PASS",
+  "pass_count": 11,
+  "total_tests": 11
+}

@@ -1,0 +1,78 @@
+{
+  "version": "12.0.0",
+  "timestamp": "2026-09-18T15:52:37.491708+00:00",
+  "scenarios": [
+    {
+      "name": "Standard Consensus E=9734.51",
+      "config": {
+        "target_emergence": 9734.51,
+        "noise_level": 0.1,
+        "random_seed": 42,
+        "damping": 0.35,
+        "arbitration_strategy": "HYBRID"
+      },
+      "convergence_steps": 6,
+      "final_consensus": 9747.635163,
+      "consensus_error": 13.1252,
+      "conflicts_detected": 34,
+      "conflicts_resolved": 34,
+      "pedestal_consistency": 0.86
+    },
+    {
+      "name": "High Noise Robustness",
+      "config": {
+        "target_emergence": 9734.51,
+        "noise_level": 0.25,
+        "random_seed": 43,
+        "damping": 0.35,
+        "arbitration_strategy": "HYBRID"
+      },
+      "convergence_steps": 7,
+      "final_consensus": 9161.815653,
+      "consensus_error": 572.6943,
+      "conflicts_detected": 37,
+      "conflicts_resolved": 37,
+      "pedestal_consistency": 0.8699
+    },
+    {
+      "name": "Low Noise Precision",
+      "config": {
+        "target_emergence": 9734.51,
+        "noise_level": 0.05,
+        "random_seed": 44,
+        "damping": 0.35,
+        "arbitration_strategy": "HYBRID"
+      },
+      "convergence_steps": 2,
+      "final_consensus": 9579.024999,
+      "consensus_error": 155.485,
+      "conflicts_detected": 5,
+      "conflicts_resolved": 5,
+      "pedestal_consistency": 0.8446
+    },
+    {
+      "name": "Different Target E=7000.0",
+      "config": {
+        "target_emergence": 7000.0,
+        "noise_level": 0.1,
+        "random_seed": 45,
+        "damping": 0.35,
+        "arbitration_strategy": "HYBRID"
+      },
+      "convergence_steps": 6,
+      "final_consensus": 6820.717186,
+      "consensus_error": 179.2828,
+      "conflicts_detected": 29,
+      "conflicts_resolved": 29,
+      "pedestal_consistency": 0.8784
+    }
+  ],
+  "summary": {
+    "total_scenarios": 4,
+    "avg_convergence_steps": 5.25,
+    "avg_consensus_error": 230.15,
+    "total_conflicts_detected": 105,
+    "total_conflicts_resolved": 105,
+    "avg_pedestal_consistency": 0.8632
+  }
+}

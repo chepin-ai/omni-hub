@@ -1,0 +1,30 @@
+{
+  "version": "v12.0-all-resources-COMPLETE",
+  "timestamp": "2026-09-18T15:16:18.997444",
+  "status": "TRANSCENDENCE",
+  "emergence_index": 9734.51,
+  "level": 7,
+  "deployments": {
+    "github": {
+      "repo": "https://github.com/chepin-ai/omni-hub",
+      "release": "https://github.com/chepin-ai/omni-hub/releases/tag/v12.0-all-resources",
+      "bundle": "https://github.com/chepin-ai/omni-hub/releases/download/v12.0-all-resources/omni-hub-v12.bundle",
+      "status": "DEPLOYED"
+    },
+    "cloudflare": {
+      "worker": "https://omni-hub.chepin-ai.workers.dev",
+      "pages": "https://9575624d.omni-hub-pages.pages.dev",
+      "kv_namespace": "omni-hub-state",
+      "d1_database": "omni-hub-db",
+      "status": "DEPLOYED"
+    }
+  },
+  "lean_resolution": {
+    "total_sorrys": 22,
+    "proved": 1,
+    "disproven": 1,
+    "auto_attempted": 22,
+    "auto_succeeded": 1,
+    "strategy_annotated": 19
+  }
+}

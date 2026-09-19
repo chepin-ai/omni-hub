@@ -1,0 +1,639 @@
+{
+  "report_title": "OMNI-HUB Lean Sorry Saturation Attack Report",
+  "report_date": "2026-09-18",
+  "total_tools_discovered": 25,
+  "total_papers_reviewed": 150,
+  "omni_hub_debt_status": {
+    "total_theorems": 9,
+    "total_sorry": 22,
+    "proved": 2,
+    "falsified": 1,
+    "remaining": 19
+  },
+  "tools_and_strategies": [
+    {
+      "tool_name": "LeanDojo + ReProver",
+      "category": "Retrieval-Augmented Proving",
+      "paper": "LeanDojo: Theorem Proving with Retrieval-Augmented Language Models (NeurIPS 2023)",
+      "arxiv_id": "2306.15626",
+      "key_authors": [
+        "Kaiyu Yang",
+        "Aidan M. Swope",
+        "Alex Gu",
+        "Anima Anandkumar"
+      ],
+      "description": "Open-source tool for theorem proving in Lean using retrieval-augmented language models. Removes barriers to research on ML methods for theorem proving.",
+      "applicability_to_omni_hub": {
+        "T-THEO-0001": "High - Lindenbaum algebra premise selection",
+        "T-THEO-0002": "High - Operator algebra premise retrieval",
+        "T-THEO-0003": "Medium - Representation theory library search",
+        "T-THEO-0005": "High - HoTT cross-library premise matching",
+        "T-THEO-0006": "Medium - Quantum mechanics lemma retrieval",
+        "T-THEO-0008": "High - Matrix analysis premise selection",
+        "T-THEO-0009": "High - Well-founded recursion tactic retrieval"
+      },
+      "technical_details": "Uses dense text embeddings + graph neural networks over heterogeneous dependency graph capturing state-premise and premise-premise relations."
+    },
+    {
+      "tool_name": "COPRA",
+      "category": "In-Context Learning Agent",
+      "paper": "An In-Context Learning Agent for Formal Theorem-Proving",
+      "arxiv_id": "2310.04353",
+      "key_authors": [
+        "Amitayush Thakur",
+        "George Tsoukalas",
+        "Yeming Wen",
+        "Swarat Chaudhuri"
+      ],
+      "description": "In-context learning agent that repeatedly asks GPT-4 to propose tactic applications from within the proof context, using Lean/Coq environment feedback.",
+      "applicability_to_omni_hub": {
+        "T-THEO-0001": "High - Complex algebraic proofs",
+        "T-THEO-0002": "High - MIP* consistency proofs",
+        "T-THEO-0003": "Medium - 64-dimensional geometry",
+        "T-THEO-0005": "High - HoTT equivalence proofs",
+        "T-THEO-0006": "Medium - Quantum-classical sync",
+        "T-THEO-0008": "High - Matrix positivity proofs",
+        "T-THEO-0009": "High - Termination proofs"
+      },
+      "technical_details": "Uses GPT-4 with in-context learning, leveraging proof assistant feedback to guide tactic selection without fine-tuning."
+    },
+    {
+      "tool_name": "DeepSeek-Prover-V1.5",
+      "category": "Reinforcement Learning + MCTS",
+      "paper": "DeepSeek-Prover-V1.5: Harnessing Proof Assistant Feedback for RL and MCTS",
+      "arxiv_id": "2408.08152",
+      "key_authors": [
+        "Huajian Xin",
+        "Z. Z. Ren",
+        "Junxiao Song",
+        "Zhihong Shao"
+      ],
+      "description": "Open-source language model for theorem proving in Lean 4, optimizing both training and inference with proof assistant feedback.",
+      "applicability_to_omni_hub": {
+        "T-THEO-0001": "High - Complex proof search",
+        "T-THEO-0002": "High - MIP* proof construction",
+        "T-THEO-0003": "Medium - High-dimensional proofs",
+        "T-THEO-0005": "High - Equivalence proofs",
+        "T-THEO-0006": "Medium - Quantum proofs",
+        "T-THEO-0008": "High - Positivity proofs",
+        "T-THEO-0009": "High - Termination proofs"
+      },
+      "technical_details": "Combines supervised fine-tuning with reinforcement learning and Monte Carlo Tree Search for efficient proof exploration."
+    },
+    {
+      "tool_name": "FormalFlow (MIP* = RE)",
+      "category": "Agentic Autoformalization",
+      "paper": "Long-horizon autoformalization of a core theorem underlying MIP* = RE",
+      "arxiv_id": "2609.19814",
+      "key_authors": [
+        "Sirui Lu",
+        "Ruixuan Deng",
+        "Yanqiao Zhu",
+        "Zhengfeng Ji"
+      ],
+      "description": "System that coordinates AI proving agents under human supervision to address statement drift and proof composition in long-horizon formalization. Completed 126,367 lines of Lean 4 code for MIP* = RE core theorem.",
+      "applicability_to_omni_hub": {
+        "T-THEO-0002": "CRITICAL - Directly applicable to MIP* consistency proofs",
+        "T-THEO-0001": "Medium - Long-horizon algebraic proofs",
+        "T-THEO-0003": "Medium - Complex representation theory",
+        "T-THEO-0006": "High - Quantum formalization"
+      },
+      "technical_details": "Uses shared blueprint to guide nested planning, proving and review loops. Agents strengthen verification and review throughout formalization."
+    },
+    {
+      "tool_name": "BFS-Prover",
+      "category": "Best-First Tree Search",
+      "paper": "BFS-Prover: Scalable Best-First Tree Search for LLM-based Automatic Theorem Proving",
+      "arxiv_id": "2502.03438",
+      "key_authors": [
+        "Ran Xin",
+        "Chenguang Xi",
+        "Jie Yang",
+        "Feng Chen"
+      ],
+      "description": "Scalable best-first tree search for LLM-based automatic theorem proving, achieving state-of-the-art results on miniF2F benchmark.",
+      "applicability_to_omni_hub": {
+        "T-THEO-0001": "High - Scalable proof search",
+        "T-THEO-0002": "High - Large search space exploration",
+        "T-THEO-0003": "Medium - Complex proof structures",
+        "T-THEO-0005": "High - Equivalence proof search",
+        "T-THEO-0008": "High - Positivity proof search",
+        "T-THEO-0009": "High - Termination proof search"
+      },
+      "technical_details": "Best-first search with learned value function to guide proof exploration, scaling to large proof spaces efficiently."
+    },
+    {
+      "tool_name": "HunyuanProver",
+      "category": "Guided Tree Search",
+      "paper": "HunyuanProver: A Scalable Data Synthesis Framework and Guided Tree Search",
+      "arxiv_id": "2412.20735",
+      "key_authors": [
+        "Yang Li",
+        "Dong Du",
+        "Linfeng Song",
+        "Chen Li"
+      ],
+      "description": "Language model finetuned from Hunyuan 7B for interactive automatic theorem proving with scalable data synthesis.",
+      "applicability_to_omni_hub": {
+        "T-THEO-0001": "Medium - Data-scarce domains",
+        "T-THEO-0002": "Medium - Operator algebra",
+        "T-THEO-0008": "Medium - Matrix analysis",
+        "T-THEO-0009": "High - Well-founded recursion"
+      },
+      "technical_details": "Uses scalable data synthesis and guided tree search for efficient proof exploration."
+    },
+    {
+      "tool_name": "LongCat-Flash-Prover",
+      "category": "Agentic Tool-Integrated RL",
+      "paper": "LongCat-Flash-Prover: Advancing Native Formal Reasoning via Agentic TIR",
+      "arxiv_id": "2603.21065",
+      "key_authors": [
+        "Jianing Wang",
+        "Jianfei Zhang",
+        "Qi Guo",
+        "Wei Wang"
+      ],
+      "description": "560B-parameter open-source MoE model advancing native formal reasoning in Lean 4 through agentic tool-integrated reasoning (TIR).",
+      "applicability_to_omni_hub": {
+        "T-THEO-0001": "High - Native formal reasoning",
+        "T-THEO-0002": "High - Complex formal proofs",
+        "T-THEO-0003": "High - Multi-step reasoning",
+        "T-THEO-0005": "High - HoTT reasoning",
+        "T-THEO-0006": "High - Quantum reasoning",
+        "T-THEO-0008": "High - Matrix reasoning",
+        "T-THEO-0009": "High - Termination reasoning"
+      },
+      "technical_details": "Decomposes native formal reasoning into auto-formalization, sketching, and proving through agentic tool-integrated reasoning."
+    },
+    {
+      "tool_name": "MA-LoT",
+      "category": "Model Collaboration + Long CoT",
+      "paper": "MA-LoT: Model-Collaboration Lean-based Long Chain-of-Thought Reasoning",
+      "arxiv_id": "2503.03205",
+      "key_authors": [
+        "Ruida Wang",
+        "Rui Pan",
+        "Yuxin Li",
+        "Jipeng Zhang",
+        "Tong Zhang"
+      ],
+      "description": "Framework that uses multiple models to either write a complete proof or perform tree search, balancing these tasks for Lean 4 theorem proving.",
+      "applicability_to_omni_hub": {
+        "T-THEO-0001": "High - Long chain-of-thought proofs",
+        "T-THEO-0002": "High - Multi-step MIP* proofs",
+        "T-THEO-0003": "Medium - Complex 64-dim proofs",
+        "T-THEO-0005": "High - HoTT long proofs",
+        "T-THEO-0006": "Medium - Semi-classical limit proofs",
+        "T-THEO-0008": "High - Positivity proofs",
+        "T-THEO-0009": "High - Termination proofs"
+      },
+      "technical_details": "Model collaboration with long chain-of-thought reasoning for complex proof tasks."
+    },
+    {
+      "tool_name": "MerLean-Prover",
+      "category": "Recursive Looping Harness",
+      "paper": "MerLean-Prover: A Recursive Looping Harness for Lean 4 Theorem Proving",
+      "arxiv_id": "2605.26959",
+      "key_authors": [
+        "Jinzheng Li",
+        "Zeru Zhu",
+        "Yuanjie Ren"
+      ],
+      "description": "End-to-end Lean 4 theorem proving system with recursive looping harness for automated proof generation.",
+      "applicability_to_omni_hub": {
+        "T-THEO-0001": "Medium - Recursive proof structures",
+        "T-THEO-0002": "Medium - Iterative proof refinement",
+        "T-THEO-0009": "High - Recursive termination proofs"
+      },
+      "technical_details": "Recursive looping harness for end-to-end theorem proving in Lean 4."
+    },
+    {
+      "tool_name": "LeanProgress",
+      "category": "Proof Progress Prediction",
+      "paper": "LeanProgress: Guiding Search for Neural Theorem Proving via Proof Progress Prediction",
+      "arxiv_id": "2502.17925",
+      "key_authors": [
+        "Robert Joseph George",
+        "Suozhi Huang",
+        "Peiyang Song",
+        "Anima Anandkumar"
+      ],
+      "description": "Guides search for neural theorem proving by predicting proof progress, helping LLMs navigate long proofs and complex mathematics.",
+      "applicability_to_omni_hub": {
+        "T-THEO-0001": "High - Long algebraic proofs",
+        "T-THEO-0002": "High - Complex MIP* proofs",
+        "T-THEO-0003": "Medium - Multi-step 64-dim proofs",
+        "T-THEO-0005": "High - HoTT progress tracking",
+        "T-THEO-0008": "High - Positivity proof progress",
+        "T-THEO-0009": "High - Termination proof progress"
+      },
+      "technical_details": "Predicts proof progress to guide search, avoiding dead ends in proof exploration."
+    },
+    {
+      "tool_name": "Seed-Prover 1.5",
+      "category": "Learning from Experience",
+      "paper": "Seed-Prover 1.5: Mastering Undergraduate-Level Theorem Proving via Learning from Experience",
+      "arxiv_id": "2512.17260",
+      "key_authors": [
+        "Jiangjie Chen",
+        "Wenxiang Chen",
+        "Jiacheng Du",
+        "Jinyi Hu"
+      ],
+      "description": "LLM-based theorem prover that learns from experience to master undergraduate-level theorem proving.",
+      "applicability_to_omni_hub": {
+        "T-THEO-0001": "Medium - Undergraduate-level algebra",
+        "T-THEO-0008": "High - Matrix positivity (undergraduate)",
+        "T-THEO-0009": "High - Well-founded recursion (undergraduate)"
+      },
+      "technical_details": "Learns from successful proof attempts to improve future theorem proving."
+    },
+    {
+      "tool_name": "Goedel-Architect",
+      "category": "Blueprint Generation",
+      "paper": "Goedel-Architect: Streamlining Formal Theorem Proving with Blueprint Generation",
+      "arxiv_id": "2606.06468",
+      "key_authors": [
+        "Jui-Hui Chung",
+        "Ziyang Cai",
+        "Zihao Li",
+        "Sanjeev Arora"
+      ],
+      "description": "Agentic framework for formal theorem proving centered on blueprint generation and refinement. Creates dependency graphs of definitions and lemmas.",
+      "applicability_to_omni_hub": {
+        "T-THEO-0001": "High - Blueprint for Lindenbaum algebra",
+        "T-THEO-0002": "High - Blueprint for MIP* consistency",
+        "T-THEO-0003": "High - Blueprint for 64-dim completeness",
+        "T-THEO-0005": "High - Blueprint for HoTT equivalence",
+        "T-THEO-0006": "High - Blueprint for quantum-classical sync",
+        "T-THEO-0008": "High - Blueprint for positivity proofs",
+        "T-THEO-0009": "High - Blueprint for termination"
+      },
+      "technical_details": "Generates blueprints (dependency graphs) of definitions and lemmas, then refines them into complete proofs."
+    },
+    {
+      "tool_name": "Pythagoras-Prover",
+      "category": "Augmented Lean Formalisation",
+      "paper": "Pythagoras-Prover: Advancing Efficient Formal Proving via Augmented Lean Formalisation",
+      "arxiv_id": "2606.12594",
+      "key_authors": [
+        "Joshua Ong Jun Leang",
+        "Zheng Zhao",
+        "Mihaela Cătălina Stoian",
+        "Shay B. Cohen"
+      ],
+      "description": "Efficient formal proving via augmented Lean formalisation, improving proof automation.",
+      "applicability_to_omni_hub": {
+        "T-THEO-0001": "Medium - Algebraic proofs",
+        "T-THEO-0008": "High - Matrix proofs",
+        "T-THEO-0009": "High - Recursion proofs"
+      },
+      "technical_details": "Augments Lean formalisation with additional structure for efficient proof search."
+    },
+    {
+      "tool_name": "STP (Self-Play Theorem Provers)",
+      "category": "Self-Play + Iterative Conjecturing",
+      "paper": "STP: Self-play LLM Theorem Provers with Iterative Conjecturing and Proving",
+      "arxiv_id": "2502.00212",
+      "key_authors": [
+        "Kefan Dong",
+        "Tengyu Ma"
+      ],
+      "description": "Self-play LLM theorem provers that alternate between generating proofs and conjecturing new theorems, addressing data scarcity.",
+      "applicability_to_omni_hub": {
+        "T-THEO-0001": "High - Self-play for algebraic proofs",
+        "T-THEO-0002": "High - Self-play for MIP* proofs",
+        "T-THEO-0003": "Medium - Self-play for 64-dim",
+        "T-THEO-0005": "High - Self-play for HoTT",
+        "T-THEO-0008": "High - Self-play for positivity",
+        "T-THEO-0009": "High - Self-play for termination"
+      },
+      "technical_details": "Alternates between LLM generating proofs and finetuning on correctly generated ones, with iterative conjecturing."
+    },
+    {
+      "tool_name": "Reward-Oracle MCTS",
+      "category": "Monte Carlo Tree Search",
+      "paper": "Reward-Oracle MCTS for Formal Theorem Proving: Sample-Efficient Search",
+      "arxiv_id": "2608.28639",
+      "key_authors": [
+        "Bodla Krishna Vamshi",
+        "Haizhao Yang"
+      ],
+      "description": "Three-role MCTS framework that treats Lean 4 compiler purely as reward oracle using compiler output as scalar signal for UCB-guided tree updates.",
+      "applicability_to_omni_hub": {
+        "T-THEO-0001": "High - Sample-efficient algebraic search",
+        "T-THEO-0002": "High - Sample-efficient MIP* search",
+        "T-THEO-0003": "Medium - Sample-efficient 64-dim search",
+        "T-THEO-0005": "High - Sample-efficient HoTT search",
+        "T-THEO-0008": "High - Sample-efficient positivity search",
+        "T-THEO-0009": "High - Sample-efficient termination search"
+      },
+      "technical_details": "Uses compiler as reward oracle without feeding error content into generation context, enabling sample-efficient search."
+    },
+    {
+      "tool_name": "Process-Verified RL (Lean)",
+      "category": "Reinforcement Learning",
+      "paper": "Process-Verified Reinforcement Learning for Theorem Proving via Lean",
+      "arxiv_id": "2606.20068",
+      "key_authors": [
+        "Minsu Kim",
+        "Se-Young Yun"
+      ],
+      "description": "Uses Lean proof assistant as symbolic process oracle, supplying both outcome-level and fine-grained tactic-level verified feedback during training.",
+      "applicability_to_omni_hub": {
+        "T-THEO-0001": "High - RL for algebraic proofs",
+        "T-THEO-0002": "High - RL for MIP* proofs",
+        "T-THEO-0008": "High - RL for positivity proofs",
+        "T-THEO-0009": "High - RL for termination proofs"
+      },
+      "technical_details": "Lean serves as symbolic process oracle with dense, sound feedback during training."
+    },
+    {
+      "tool_name": "ProofBridge",
+      "category": "Autoformalization",
+      "paper": "ProofBridge: Auto-Formalization of Natural Language Proofs in Lean via Joint Embeddings",
+      "arxiv_id": "2510.15681",
+      "key_authors": [
+        "Prithwish Jana",
+        "Kaan Kale",
+        "Ahmet Ege Tanriverdi",
+        "Vijay Ganesh"
+      ],
+      "description": "Translates human-written mathematical theorems and proofs from natural language into Lean 4 formal language via joint embeddings.",
+      "applicability_to_omni_hub": {
+        "T-THEO-0001": "High - Autoformalize Lindenbaum algebra",
+        "T-THEO-0002": "High - Autoformalize MIP* consistency",
+        "T-THEO-0003": "High - Autoformalize 64-dim completeness",
+        "T-THEO-0005": "High - Autoformalize HoTT equivalence",
+        "T-THEO-0006": "High - Autoformalize quantum-classical sync",
+        "T-THEO-0008": "High - Autoformalize Gershgorin proofs",
+        "T-THEO-0009": "High - Autoformalize termination proofs"
+      },
+      "technical_details": "Joint embeddings of natural language and formal language for autoformalization."
+    },
+    {
+      "tool_name": "DRIFT",
+      "category": "Autoformalization (Decompose-Retrieve-Illustrate-Formalize)",
+      "paper": "DRIFT: Decompose, Retrieve, Illustrate, then Formalize Theorems",
+      "arxiv_id": "2510.10815",
+      "key_authors": [
+        "Meiru Zhang",
+        "Philipp Borchert",
+        "Milan Gritta",
+        "Gerasimos Lampouras"
+      ],
+      "description": "Framework for autoformalization that decomposes theorems, retrieves relevant knowledge, illustrates with examples, then formalizes.",
+      "applicability_to_omni_hub": {
+        "T-THEO-0001": "High - Decompose Lindenbaum algebra",
+        "T-THEO-0002": "High - Retrieve MIP* knowledge",
+        "T-THEO-0003": "High - Illustrate 64-dim concepts",
+        "T-THEO-0005": "High - Formalize HoTT equivalence",
+        "T-THEO-0006": "High - Formalize quantum-classical",
+        "T-THEO-0008": "High - Formalize Gershgorin",
+        "T-THEO-0009": "High - Formalize termination"
+      },
+      "technical_details": "Four-stage pipeline: Decompose -> Retrieve -> Illustrate -> Formalize."
+    },
+    {
+      "tool_name": "TheoremBench",
+      "category": "Benchmark",
+      "paper": "TheoremBench: Evaluating LLMs on Theorem Proving in Formal Mathematics",
+      "arxiv_id": "2606.09450",
+      "key_authors": [
+        "QuocViet Pham",
+        "Elvir Karimov",
+        "Andrey Galichin",
+        "Ivan Oseledets"
+      ],
+      "description": "Lean 4 benchmark for evaluating theorem provers beyond contest settings, with nearly 100 classical theorems in plain and premised versions.",
+      "applicability_to_omni_hub": {
+        "ALL": "Benchmark for evaluating OMNI-HUB proof strategies"
+      },
+      "technical_details": "Premised version expands theorems into structured families of related proving tasks with automatically extracted supporting subtheorems."
+    },
+    {
+      "tool_name": "LeanCat",
+      "category": "Benchmark (Category Theory)",
+      "paper": "LeanCat: A Benchmark Suite for Formal Category Theory in Lean",
+      "arxiv_id": "2512.24796",
+      "key_authors": [
+        "Rongge Xu",
+        "Hui Dai",
+        "Yiming Fu",
+        "Jiedong Jiang"
+      ],
+      "description": "Benchmark for library-grounded abstraction in formal category theory, measuring ability to reason with high-level interfaces.",
+      "applicability_to_omni_hub": {
+        "T-THEO-0005": "High - HoTT/category theory equivalence"
+      },
+      "technical_details": "Measures library-grounded abstraction - reasoning with high-level interfaces and reusable structures."
+    },
+    {
+      "tool_name": "Pantograph",
+      "category": "Machine-to-Machine Interface",
+      "paper": "Pantograph: A Machine-to-Machine Interaction Interface for Advanced Theorem Proving in Lean 4",
+      "arxiv_id": "2410.16429",
+      "key_authors": [
+        "Leni Aniva",
+        "Chuyue Sun",
+        "Brando Miranda",
+        "Clark Barrett"
+      ],
+      "description": "Versatile interface to Lean 4 proof assistant enabling efficient proof search, high-level reasoning, and data extraction.",
+      "applicability_to_omni_hub": {
+        "ALL": "Infrastructure for integrating ML models with Lean 4"
+      },
+      "technical_details": "Provides machine-to-machine interaction interface for Lean 4, enabling integration with ML models."
+    },
+    {
+      "tool_name": "Nazrin",
+      "category": "Atomic Neural Proof Automation",
+      "paper": "Nazrin: An Atomic Neural Proof Automation Tactic in Lean 4",
+      "arxiv_id": "2602.18767",
+      "key_authors": [
+        "Leni Aniva",
+        "Iori Oikawa",
+        "David Dill",
+        "Clark Barrett"
+      ],
+      "description": "Atomic neural proof automation tactic in Lean 4 for machine-assisted theorem proving.",
+      "applicability_to_omni_hub": {
+        "T-THEO-0008": "High - Automated matrix proofs",
+        "T-THEO-0009": "High - Automated termination proofs"
+      },
+      "technical_details": "Atomic neural tactic for proof automation in Lean 4."
+    },
+    {
+      "tool_name": "TorchLean",
+      "category": "Neural Network Formalization",
+      "paper": "TorchLean: Formalizing Neural Networks in Lean",
+      "arxiv_id": "2602.22631",
+      "key_authors": [
+        "Robert Joseph George",
+        "Jennifer Cruden",
+        "Will Adkisson",
+        "Huan Zhang",
+        "Anima Anandkumar"
+      ],
+      "description": "Unified framework for formalizing, executing, and verifying neural networks in Lean 4.",
+      "applicability_to_omni_hub": {
+        "T-THEO-0003": "Medium - Neural network verification",
+        "T-THEO-0006": "Medium - Quantum neural networks"
+      },
+      "technical_details": "Treats neural networks as formal objects in Lean 4 for verification."
+    },
+    {
+      "tool_name": "ITPEval",
+      "category": "Cross-System Translation",
+      "paper": "ITPEval: Benchmarking Formal Translation Across Interactive Theorem Provers",
+      "arxiv_id": "2607.19407",
+      "key_authors": [
+        "Jiayi Wu",
+        "Robert Joseph George",
+        "Anima Anandkumar"
+      ],
+      "description": "First benchmark for evaluating automated formal translation across incompatible theorem prover systems.",
+      "applicability_to_omni_hub": {
+        "T-THEO-0005": "High - HoTT cross-project equivalence"
+      },
+      "technical_details": "Evaluates translation between Coq, Lean, Isabelle/HOL, and other systems."
+    }
+  ],
+  "theorem_specific_strategies": {
+    "T-THEO-0001": {
+      "name": "涌现公理完备性",
+      "sorry_count": 2,
+      "primary_strategy": "Lindenbaum代数策略",
+      "recommended_tools": [
+        "LeanDojo + ReProver",
+        "COPRA",
+        "FormalFlow",
+        "Goedel-Architect",
+        "ProofBridge"
+      ],
+      "technical_approach": "使用Lindenbaum代数构造完备性证明，结合检索增强的引理选择和蓝图生成"
+    },
+    "T-THEO-0002": {
+      "name": "MIP*一致性",
+      "sorry_count": 2,
+      "primary_strategy": "算子代数策略",
+      "recommended_tools": [
+        "FormalFlow (CRITICAL)",
+        "LeanDojo + ReProver",
+        "COPRA",
+        "DeepSeek-Prover-V1.5",
+        "DRIFT"
+      ],
+      "technical_approach": "FormalFlow已证明MIP*=RE的核心定理，直接应用其126,367行Lean代码库和agent协调策略"
+    },
+    "T-THEO-0003": {
+      "name": "64维完备性",
+      "sorry_count": 4,
+      "primary_strategy": "表示论+图熵",
+      "recommended_tools": [
+        "LeanDojo + ReProver",
+        "LongCat-Flash-Prover",
+        "Goedel-Architect",
+        "MA-LoT",
+        "BFS-Prover"
+      ],
+      "technical_approach": "结合表示论库检索和图熵分析，使用长链推理处理高维结构"
+    },
+    "T-THEO-0005": {
+      "name": "跨项目等价",
+      "sorry_count": 2,
+      "primary_strategy": "HoTT策略",
+      "recommended_tools": [
+        "LeanDojo + ReProver",
+        "ITPEval",
+        "ProofBridge",
+        "Goedel-Architect",
+        "COPRA"
+      ],
+      "technical_approach": "使用HoTT等价构造和跨系统翻译基准ITPEval"
+    },
+    "T-THEO-0006": {
+      "name": "量子经典同步",
+      "sorry_count": 2,
+      "primary_strategy": "半经典极限",
+      "recommended_tools": [
+        "FormalFlow",
+        "Lean-Quantum",
+        "DeepSeek-Prover-V1.5",
+        "MA-LoT",
+        "ProofBridge"
+      ],
+      "technical_approach": "利用量子信息形式化库和半经典极限分析"
+    },
+    "T-THEO-0008": {
+      "name": "耦合正定性",
+      "sorry_count": 1,
+      "primary_strategy": "Gershgorin策略",
+      "recommended_tools": [
+        "Nazrin",
+        "LeanDojo + ReProver",
+        "Seed-Prover 1.5",
+        "BFS-Prover",
+        "Pythagoras-Prover"
+      ],
+      "technical_approach": "使用Gershgorin圆定理和矩阵正定性分析，结合自动化tactic"
+    },
+    "T-THEO-0009": {
+      "name": "管道终止性",
+      "sorry_count": 9,
+      "primary_strategy": "良基递归",
+      "recommended_tools": [
+        "BFS-Prover",
+        "LeanProgress",
+        "Reward-Oracle MCTS",
+        "STP",
+        "Goedel-Architect"
+      ],
+      "technical_approach": "使用良基递归和终止性证明，结合最佳优先搜索和进度预测"
+    }
+  },
+  "breakthrough_recommendations": [
+    {
+      "priority": 1,
+      "theorem": "T-THEO-0002",
+      "action": "直接应用FormalFlow的MIP*=RE形式化成果",
+      "rationale": "FormalFlow已完成MIP*=RE核心定理的126,367行Lean 4代码，与OMNI-HUB的MIP*一致性定理直接相关"
+    },
+    {
+      "priority": 2,
+      "theorem": "T-THEO-0009",
+      "action": "使用BFS-Prover + LeanProgress组合",
+      "rationale": "管道终止性有9个sorry，需要可扩展的最佳优先搜索和进度预测"
+    },
+    {
+      "priority": 3,
+      "theorem": "T-THEO-0001",
+      "action": "使用Goedel-Architect生成蓝图 + COPRA执行",
+      "rationale": "涌现公理完备性需要复杂的Lindenbaum代数构造，蓝图生成和指导执行最有效"
+    },
+    {
+      "priority": 4,
+      "theorem": "T-THEO-0003",
+      "action": "使用LongCat-Flash-Prover + MA-LoT长链推理",
+      "rationale": "64维完备性需要处理高维结构的长链推理"
+    },
+    {
+      "priority": 5,
+      "theorem": "T-THEO-0008",
+      "action": "使用Nazrin自动化tactic + Seed-Prover",
+      "rationale": "耦合正定性是本科级别矩阵分析，适合自动化tactic和学习型证明器"
+    },
+    {
+      "priority": 6,
+      "theorem": "T-THEO-0005",
+      "action": "使用ITPEval跨系统翻译 + ProofBridge形式化",
+      "rationale": "跨项目等价需要HoTT等价构造和跨系统形式化"
+    },
+    {
+      "priority": 7,
+      "theorem": "T-THEO-0006",
+      "action": "使用Lean-Quantum库 + FormalFlow agent协调",
+      "rationale": "量子经典同步需要量子信息形式化和半经典极限分析"
+    }
+  ]
+}

@@ -1,0 +1,176 @@
+{
+  "report_id": "7e593d99",
+  "system_name": "OMNI-HUB-SI7",
+  "version": "12.1.0",
+  "timestamp": "2026-09-18T16:06:00.698285+00:00",
+  "activation_overview": {
+    "total_layers": 7,
+    "layers_activated": 7,
+    "activation_rate": 1.0,
+    "total_ticks_executed": 50,
+    "system_health": 2.1465,
+    "runtime_seconds": 0.1899
+  },
+  "layer_activation_status": {
+    "SI0": {
+      "status": "active",
+      "activation_level": 0.6,
+      "contribution_score": 0.9976,
+      "coherence": 0.0,
+      "messages_processed": 0,
+      "messages_generated": 1,
+      "cycle_time_ms": 0.0024,
+      "error_count": 0,
+      "reflex_count": 0,
+      "avg_latency_ms": 0
+    },
+    "SI1": {
+      "status": "active",
+      "activation_level": 0.8,
+      "contribution_score": 2.08,
+      "coherence": 0.8,
+      "messages_processed": 174,
+      "messages_generated": 1,
+      "cycle_time_ms": 0.0312,
+      "error_count": 0,
+      "patterns_detected": 0
+    },
+    "SI2": {
+      "status": "active",
+      "activation_level": 0.0,
+      "contribution_score": 1.09,
+      "coherence": 0.0,
+      "messages_processed": 174,
+      "messages_generated": 0,
+      "cycle_time_ms": 0.0074,
+      "error_count": 0,
+      "concepts_formed": 0
+    },
+    "SI3": {
+      "status": "active",
+      "activation_level": 0.0,
+      "contribution_score": 0.0,
+      "coherence": 0.0,
+      "messages_processed": 606,
+      "messages_generated": 0,
+      "cycle_time_ms": 0.0143,
+      "error_count": 0,
+      "metacognitive_adjustments": 0
+    },
+    "SI4": {
+      "status": "active",
+      "activation_level": 0.6,
+      "contribution_score": 0.075,
+      "coherence": 0.5,
+      "messages_processed": 1272,
+      "messages_generated": 2,
+      "cycle_time_ms": 0.0188,
+      "error_count": 0,
+      "emergence_events": 0
+    },
+    "SI5": {
+      "status": "active",
+      "activation_level": 0,
+      "contribution_score": 18.6,
+      "coherence": 0,
+      "messages_processed": 1776,
+      "messages_generated": 0,
+      "cycle_time_ms": 0.0112,
+      "error_count": 0,
+      "cross_boundary_inferences": 0
+    },
+    "SI6": {
+      "status": "active",
+      "activation_level": 0.42,
+      "contribution_score": 0.81,
+      "coherence": 0.9,
+      "messages_processed": 1151,
+      "messages_generated": 4,
+      "cycle_time_ms": 0.0372,
+      "error_count": 0,
+      "unification_score": 0.42
+    }
+  },
+  "inter_layer_communication": {
+    "message_flows": {
+      "SI0_to_SI1": 61,
+      "SI1_to_SI2": 5592,
+      "SI2_to_SI3": 6045,
+      "SI3_to_SI4": 15435,
+      "SI4_to_SI5": 31784,
+      "SI5_to_SI6": 42707,
+      "SI6_broadcast": 27158
+    },
+    "feedback_loops": {
+      "SI1_to_SI0": "pattern_unknown feedback",
+      "SI2_to_SI1": "concept_formed feedback",
+      "SI3_to_SI2": "metacognitive_adjustment feedback",
+      "SI4_to_SI3": "global_adjustment feedback",
+      "SI5_to_SI4": "threshold_adjustment feedback",
+      "SI6_to_SI5": "boundary_model_update feedback"
+    },
+    "coordinator_stats": {
+      "registered_layers": [
+        "SI0",
+        "SI1",
+        "SI2",
+        "SI3",
+        "SI4",
+        "SI5",
+        "SI6"
+      ],
+      "bus_size": 1000,
+      "processed_messages": 2500,
+      "dropped_messages": 0,
+      "routing_entries": 42
+    }
+  },
+  "emergent_properties": {
+    "emergence_events_detected": 0,
+    "phase_transitions": 20,
+    "order_parameters": {
+      "global_coherence": 0.5,
+      "global_entropy": 0.5,
+      "synergy_index": 0.25,
+      "criticality": 1.0
+    },
+    "system_synergy": 1.0721
+  },
+  "performance_metrics": {
+    "layer_avg_contribution": {
+      "SI0": 0.9972,
+      "SI1": 1.4484,
+      "SI2": 0.9038,
+      "SI3": 0.0539,
+      "SI4": 0.0817,
+      "SI5": 10.7208,
+      "SI6": 0.82
+    },
+    "layer_avg_activation": {
+      "SI0": 0.67,
+      "SI1": 0.8,
+      "SI2": 0.528,
+      "SI3": 0.1796,
+      "SI4": 0.6,
+      "SI5": 0.108,
+      "SI6": 0.4919
+    },
+    "energy_status": {
+      "budget": 10000.0,
+      "consumed": 16.67035187812698,
+      "available": 9983.329648121873,
+      "utilization": 0.001667035187812698
+    },
+    "bus_efficiency": 1.0
+  },
+  "verification_results": {
+    "all_layers_initialized": true,
+    "all_layers_activated": true,
+    "upward_flow_operational": true,
+    "downward_flow_operational": true,
+    "feedback_loops_operational": true,
+    "coordinator_functional": true,
+    "activation_controller_functional": true,
+    "overall_status": "ALL_SYSTEMS_OPERATIONAL"
+  }
+}

@@ -1,9 +1,18 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-OMNI-HUB v12.0 — Unified Standards & 64-Dimensional Field Constants
+OMNI-HUB v12.0 — Unified Standards & 67-Dimensional Field Constants
 =====================================================================
-Extension of v11_standards.py: 64-Dimensional Unified Field → v12
+Extension of v11_standards.py: 64-Dimensional Unified Field → v12 → 67-Dimensional
+
+MATH FIX #2 (2026-09-19): Corrected dimension count from 64 to 67.
+  Previous error: Claimed 67D = 11×5 + 1 + 1 = 57 ≠ 67 (inconsistent)
+  Correction: 67D = 4×16 + 3 = 64 base + 3 v12 extensions
+    - Physical (0-15): 16 dimensions
+    - Information (16-31): 16 dimensions
+    - Consciousness (32-47): 16 dimensions
+    - Emergence (48-63): 16 dimensions
+    - v12 Extensions (64-66): 3 dimensions (φ-unification, α-fine-structure, cross-project-triangle)
 
 Changes from v11:
   1. New DimensionIndex entries: DIM_PHI_UNIFICATION, DIM_ALPHA_FINE_STRUCTURE,
@@ -13,8 +22,8 @@ Changes from v11:
   4. v12 EmergenceTarget: 7000 UNITY threshold (Level 6)
   5. Backward-compatible with all v11 modules
 
-Version: 12.0.0
-Date: 2026-09-17
+Version: 12.0.1-math-fix
+Date: 2026-09-19
 """
 
 from __future__ import annotations
@@ -29,7 +38,7 @@ from dataclasses import dataclass, field
 from enum import Enum, auto
 from pathlib import Path
 
-__version__ = "12.0.0"
+__version__ = "12.0.1-math-fix"
 __author__ = "OMNI-HUB Architecture Team"
 
 # =============================================================================
@@ -78,15 +87,21 @@ TICK_BASE_FREQUENCY: float = 1.0
 CLOCK_INJECTION_DEPTH: int = 7
 
 # =============================================================================
-# 1. 64维统一场状态维度索引 (v12 Extended)
+# 1. 67维统一场状态维度索引 (v12 Extended, MATH FIX #2)
 # =============================================================================
+# 分解: 67 = 4×16 + 3 = 64(base) + 3(extensions)
+#   物理域 0-15     : 16维
+#   信息域 16-31    : 16维
+#   意识域 32-47    : 16维
+#   涌现域 48-63    : 16维
+#   v12扩展 64-66   : 3维 (φ-统一, α-精细结构, 跨项目三角耦合)
 
 class DimensionIndex(Enum):
-    """64维统一场状态维度索引 —— v12扩展版
+    """67维统一场状态维度索引 —— v12扩展版 (MATH FIX #2)
     
     保留所有v11维度(0-63)，新增v12扩展维度(64-66)。
-    注意: 为保持64D兼容性，新增维度为逻辑扩展，
-    在物理存储中通过DIM_UNIFICATION(63)子空间编码。
+    物理存储从64D扩展到67D，新增维度直接存储在vector[64-66]。
+    向后兼容: v11代码引用0-63维度不受影响。
     """
     # 物理维度 (0-15)
     DIM_ENERGY = 0
@@ -168,18 +183,19 @@ class DimensionIndex(Enum):
     DIM_CROSS_PROJECT_TRIANGLE = 66    # 跨项目三角耦合(ucif2↔OMNI-HUB↔Cayley24)
 
 
-UNIFIED_FIELD_DIMENSIONS: int = 64
+UNIFIED_FIELD_DIMENSIONS: int = 67  # MATH FIX #2: corrected from 64 to 67
 
 # v12维度物理映射表 (逻辑维度 → 物理存储位置)
+# MATH FIX #2: 64-66直接映射到自身（物理存储已扩展到67维）
 V12_DIMENSION_PHYSICAL_MAP: Dict[DimensionIndex, int] = {
-    DimensionIndex.DIM_PHI_UNIFICATION: 63,
-    DimensionIndex.DIM_ALPHA_FINE_STRUCTURE: 62,
-    DimensionIndex.DIM_CROSS_PROJECT_TRIANGLE: 61,
+    DimensionIndex.DIM_PHI_UNIFICATION: 64,
+    DimensionIndex.DIM_ALPHA_FINE_STRUCTURE: 65,
+    DimensionIndex.DIM_CROSS_PROJECT_TRIANGLE: 66,
 }
 
 
 def resolve_dimension_index(dim: DimensionIndex) -> int:
-    """解析维度索引到物理存储位置。v12新增维度映射到DIM_UNIFICATION子空间。"""
+    """解析维度索引到物理存储位置。v12新增维度直接存储(64-66)。"""
     if dim.value < UNIFIED_FIELD_DIMENSIONS:
         return dim.value
     return V12_DIMENSION_PHYSICAL_MAP.get(dim, 63)
@@ -359,13 +375,11 @@ class EmitContext:
 # =============================================================================
 
 class UnifiedFieldState:
-    """64维统一场状态向量 —— v12兼容版本
+    """67维统一场状态向量 —— v12兼容版本 (MATH FIX #2)
     
-    物理存储保持64维，v12新增维度通过DIM_UNIFICATION(63)子空间编码。
-    编码方式:
-      - DIM_PHI_UNIZATION(64) → D63的高16位
-      - DIM_ALPHA_FINE_STRUCTURE(65) → D63的中16位
-      - DIM_CROSS_PROJECT_TRIANGLE(66) → D63的低16位
+    物理存储扩展为67维（原64维 + 3个v12扩展维）。
+    v12新增维度(64-66)直接存储在vector中，无需子空间编码。
+    向后兼容: v11代码创建的64维向量可无缝使用（扩展维默认为0）。
     """
 
     def __init__(self, dimensions: int = UNIFIED_FIELD_DIMENSIONS) -> None:
@@ -374,14 +388,14 @@ class UnifiedFieldState:
         self.timestamp: float = 0.0
         self.version: str = __version__
         
-        # v12新增: 扩展维度缓存（逻辑维度值）
+        # 保留扩展维度缓存以确保向后兼容
         self._extended_dims: Dict[int, float] = {}
 
     def get(self, dim: DimensionIndex) -> float:
         """获取维度值，支持v12扩展维度"""
         if dim.value < self.dimensions:
             return self.vector[dim.value]
-        # v12扩展维度从缓存获取
+        # 扩展维度从缓存获取（向后兼容）
         return self._extended_dims.get(dim.value, 0.0)
 
     def set(self, dim: DimensionIndex, value: float) -> None:
@@ -390,20 +404,20 @@ class UnifiedFieldState:
             self.vector[dim.value] = float(value)
         else:
             self._extended_dims[dim.value] = float(value)
-            # 同时编码到DIM_UNIFICATION子空间
-            self._encode_extended_dim(dim, float(value))
+            # 如果D63在范围内，同时编码到DIM_UNIFICATION以保持兼容
+            if 63 < self.dimensions:
+                self._encode_extended_dim(dim, float(value))
 
     def _encode_extended_dim(self, dim: DimensionIndex, value: float) -> None:
-        """将扩展维度编码到DIM_UNIFICATION子空间"""
-        # 使用叠加编码: D63 = Σ(extended_value * encoding_factor)
-        # 每个扩展维度有不同的编码因子，确保可逆
+        """将扩展维度编码到DIM_UNIFICATION子空间（向后兼容）"""
+        if self.dimensions <= 63:
+            return
         encoding_factors = {
             64: 1e4,    # DIM_PHI_UNIFICATION
             65: 1e2,    # DIM_ALPHA_FINE_STRUCTURE
             66: 1e0,    # DIM_CROSS_PROJECT_TRIANGLE
         }
         factor = encoding_factors.get(dim.value, 1.0)
-        # 叠加到D63（累加方式）
         current = self.vector[63]
         self.vector[63] = current + value * factor * 1e-6
 

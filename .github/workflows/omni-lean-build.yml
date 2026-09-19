@@ -27,6 +27,9 @@ permissions:
 
 env:
   MATHLIB_CACHE_DIR: ~/.cache/mathlib
+  LEANCOPILOT_CACHE_DIR: ~/.cache/lean_copilot
+  LEANCOPILOT_MODE: hybrid
+  LEANCOPILOT_TIMEOUT: 300
 
 jobs:
   # ==========================================================================
@@ -44,14 +47,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Cache Mathlib
+      - name: Cache Mathlib + LeanCopilot
         uses: actions/cache@v4
         with:
           path: |
             ~/.cache/mathlib
+            ~/.cache/lean_copilot
             lean/.lake
-          key: mathlib-${{ runner.os }}-${{ hashFiles('lean/lean-toolchain', 'lean/lakefile.lean') }}
-          restore-keys: mathlib-${{ runner.os }}-
+          key: mathlib-leancopilot-${{ runner.os }}-${{ hashFiles('lean/lean-toolchain', 'lean/lakefile.lean') }}
+          restore-keys: |
+            mathlib-leancopilot-${{ runner.os }}-
+            mathlib-${{ runner.os }}-
 
       - name: Install elan + Lean toolchain
         run: |
@@ -62,7 +68,7 @@ jobs:
           lean --version
           lake --version
 
-      - name: lake build (with Mathlib)
+      - name: lake build (with Mathlib + LeanCopilot)
         id: build
         run: |
           set +e
@@ -73,8 +79,18 @@ jobs:
           end=$(date +%s)
           echo "rc=$rc" >> "$GITHUB_OUTPUT"
           echo "secs=$((end-start))" >> "$GITHUB_OUTPUT"
-          tail -50 /tmp/lake-build.log
+          tail -100 /tmp/lake-build.log
           exit 0
+
+      - name: Download LeanCopilot models
+        if: steps.build.outputs.rc == '0'
+        run: |
+          cd lean
+          # 下载 LeanCopilot 内置模型（用于本地推理）
+          # 模型缓存到 ~/.cache/lean_copilot/
+          lake exe LeanCopilot/download || echo "Model download may have partially failed, continuing..."
+          echo "LeanCopilot model cache status:"
+          ls -la ~/.cache/lean_copilot/ 2>/dev/null || echo "No cache yet"
 
       - name: Sorry Scan + Theorem Inventory
         id: scan
@@ -147,7 +163,92 @@ jobs:
           path: lean/results/sorry-scan-latest.json
 
   # ==========================================================================
-  # Stage 2: ATP Saturation Attack (Parallel Tool Execution)
+  # Stage 2: LeanCopilot LLM Assistance
+  # ==========================================================================
+  leancopilot-suggest:
+    needs: build-and-scan
+    if: needs.build-and-scan.outputs.sorry_free == 'false'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    outputs:
+      suggestions_count: ${{ steps.leancopilot.outputs.suggestions_count }}
+      rc: ${{ steps.leancopilot.outputs.rc }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Cache Mathlib + LeanCopilot
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/mathlib
+            ~/.cache/lean_copilot
+            lean/.lake
+          key: mathlib-leancopilot-${{ runner.os }}-${{ hashFiles('lean/lean-toolchain', 'lean/lakefile.lean') }}
+          restore-keys: |
+            mathlib-leancopilot-${{ runner.os }}-
+            mathlib-${{ runner.os }}-
+
+      - name: Install elan + Lean toolchain
+        run: |
+          curl -fsSL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh \
+            | sh -s -- -y --default-toolchain "$(cat lean/lean-toolchain)"
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+          lean --version
+          lake --version
+
+      - name: Install Python dependencies
+        run: |
+          pip install openai 2>/dev/null || true
+
+      - name: Run LeanCopilot CI suggestions
+        id: leancopilot
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          LEANCOPILOT_API_KEY: ${{ secrets.LEANCOPILOT_API_KEY }}
+          LEANCOPILOT_MODE: hybrid
+          LEANCOPILOT_TIMEOUT: 300
+        run: |
+          set +e
+          cd lean
+          # 确保 LeanCopilot 模型已下载
+          lake exe LeanCopilot/download || true
+
+          # 运行 LeanCopilot CI 脚本
+          python3 scripts/run_leancopilot_ci.py \
+            --lean-dir "." \
+            --output "leancopilot-results.json" \
+            --patch "leancopilot-suggestions.lean" \
+            --mode "$LEANCOPILOT_MODE" \
+            --timeout "$LEANCOPILOT_TIMEOUT" \
+            --target-theorem "${{ github.event.inputs.target_theorem || 'all' }}" \
+            2>&1 | tee /tmp/leancopilot.log
+          rc=${PIPESTATUS[0]}
+
+          echo "rc=$rc" >> "$GITHUB_OUTPUT"
+
+          # 统计建议数量
+          if [ -f "results/leancopilot-results.json" ]; then
+            count=$(python3 -c "import json; d=json.load(open('results/leancopilot-results.json')); print(len(d.get('results', [])))" 2>/dev/null || echo 0)
+            echo "suggestions_count=$count" >> "$GITHUB_OUTPUT"
+          else
+            echo "suggestions_count=0" >> "$GITHUB_OUTPUT"
+          fi
+
+          exit 0
+
+      - name: Upload LeanCopilot results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: leancopilot-results
+          path: |
+            lean/results/leancopilot-results.json
+            lean/results/leancopilot-suggestions.lean
+            /tmp/leancopilot.log
+
+  # ==========================================================================
+  # Stage 3: ATP Saturation Attack (Parallel Tool Execution)
   # ==========================================================================
   atp-saturation:
     needs: build-and-scan
@@ -231,10 +332,10 @@ jobs:
             /tmp/atp-${{ matrix.tool.name }}.log
 
   # ==========================================================================
-  # Stage 3: Result Aggregation + Auto-Fill
+  # Stage 4: Result Aggregation + Auto-Fill
   # ==========================================================================
   aggregate-and-fill:
-    needs: [build-and-scan, atp-saturation]
+    needs: [build-and-scan, leancopilot-suggest, atp-saturation]
     if: always() && needs.build-and-scan.outputs.sorry_free == 'false'
     runs-on: ubuntu-latest
     steps:
@@ -249,14 +350,27 @@ jobs:
           path: lean/results/artifacts
           pattern: atp-*-results
 
+      - name: Download LeanCopilot artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: leancopilot-results
+          path: lean/results/artifacts/leancopilot
+
       - name: Aggregate results + Auto-fill proven sorry
         run: |
           python3 - <<'PY'
           import json, pathlib, re
           
           results_dir = pathlib.Path("lean/results/artifacts")
-          aggregated = {"tools": [], "proved": [], "partial": [], "failed": []}
+          aggregated = {
+              "tools": [],
+              "proved": [],
+              "partial": [],
+              "failed": [],
+              "leancopilot": None
+          }
           
+          # Aggregate ATP results
           for tool_dir in results_dir.glob("atp-*"):
               result_file = tool_dir / f"atp-{tool_dir.name.replace('atp-', '').replace('-results', '')}.json"
               if result_file.exists():
@@ -266,6 +380,23 @@ jobs:
                   aggregated["partial"].extend(data.get("partial", []))
                   aggregated["failed"].extend(data.get("failed", []))
           
+          # Aggregate LeanCopilot results
+          lc_file = results_dir / "leancopilot" / "leancopilot-results.json"
+          if lc_file.exists():
+              lc_data = json.loads(lc_file.read_text())
+              aggregated["leancopilot"] = lc_data
+              # LeanCopilot suggestions go to "partial" for human review
+              for r in lc_data.get("results", []):
+                  if r.get("best_tactic"):
+                      aggregated["partial"].append({
+                          "theorem": r["location"]["theorem_name"],
+                          "file": r["location"]["file"],
+                          "line": r["location"]["line"],
+                          "suggestion": r["best_tactic"],
+                          "source": "leancopilot",
+                          "confidence": max((s["confidence"] for s in r.get("suggestions", [])), default=0)
+                      })
+          
           # Write aggregate
           pathlib.Path("lean/results").mkdir(exist_ok=True)
           with open("lean/results/atp-aggregate-latest.json", "w") as f:
@@ -274,6 +405,8 @@ jobs:
           print(f"Aggregated: {len(aggregated['proved'])} proved, "
                 f"{len(aggregated['partial'])} partial, "
                 f"{len(aggregated['failed'])} failed")
+          if aggregated["leancopilot"]:
+              print(f"LeanCopilot suggestions: {aggregated['leancopilot'].get('suggestions_generated', 0)}")
           PY
 
       - name: Commit filled results
@@ -286,7 +419,7 @@ jobs:
           git push || echo "No changes to push"
 
   # ==========================================================================
-  # Stage 4: Verification Build (post-fill)
+  # Stage 5: Verification Build (post-fill)
   # ==========================================================================
   verify-build:
     needs: aggregate-and-fill
@@ -296,13 +429,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Cache Mathlib
+      - name: Cache Mathlib + LeanCopilot
         uses: actions/cache@v4
         with:
           path: |
             ~/.cache/mathlib
+            ~/.cache/lean_copilot
             lean/.lake
-          key: mathlib-${{ runner.os }}-${{ hashFiles('lean/lean-toolchain', 'lean/lakefile.lean') }}
+          key: mathlib-leancopilot-${{ runner.os }}-${{ hashFiles('lean/lean-toolchain', 'lean/lakefile.lean') }}
+          restore-keys: |
+            mathlib-leancopilot-${{ runner.os }}-
+            mathlib-${{ runner.os }}-
 
       - name: Install elan
         run: |

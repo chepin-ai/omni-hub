@@ -1,0 +1,124 @@
+{
+  "project": "OMNI-HUB Lean v12.0",
+  "date": "2026-09-19",
+  "status": "INTEGRATION_COMPLETE",
+  "reused_from": "vci-playground (github.com/chepin-ai/vci-playground)",
+  "lean_project": {
+    "toolchain": "leanprover/lean4:v4.11.0",
+    "dependencies": [
+      "mathlib4 v4.11.0",
+      "LeanCopilot v4.11.0",
+      "aesop v4.11.0",
+      "std4 v4.11.0"
+    ],
+    "source_files": 8,
+    "source_lines": 1513,
+    "atp_scripts": 6,
+    "atp_lines": 442,
+    "config_files": 2,
+    "total_files": 17,
+    "total_lines": 2459
+  },
+  "ci_pipeline": {
+    "stages": 4,
+    "stage_names": [
+      "Build+Scan",
+      "ATP_Saturation",
+      "Aggregate+Fill",
+      "Verify"
+    ],
+    "parallel_jobs": 6,
+    "tools_configured": 25,
+    "tools_ready": 11,
+    "cache": "mathlib + .lake"
+  },
+  "atp_tools": {
+    "tier1_ready": [
+      "COPRA",
+      "BFS-Prover",
+      "LeanDojo+ReProver",
+      "aesop"
+    ],
+    "tier2_ready": [
+      "DeepSeek-Prover",
+      "FormalFlow",
+      "Goedel-Architect"
+    ],
+    "tier2_pending": [
+      "LongCat-Flash",
+      "MA-LoT"
+    ],
+    "tier3_pending": [
+      "HunyuanProver",
+      "MerLean-Prover",
+      "Nazrin",
+      "Seed-Prover",
+      "ITPEval",
+      "ProofBridge",
+      "Lean-SMT",
+      "Smt-ML-Lean",
+      "Goedel-Prover",
+      "blaster",
+      "Coprime",
+      "RMaxTHP",
+      "AI-MTP",
+      "Prooftiny"
+    ]
+  },
+  "theorem_status": {
+    "T-THEO-0009": {
+      "status": "PROVED",
+      "strategy": "well_founded_induction",
+      "sorry": "3→0"
+    },
+    "T-THEO-0007": {
+      "status": "PROVED",
+      "strategy": "Banach_fixed_point",
+      "sorry": "1→0"
+    },
+    "T-THEO-0004": {
+      "status": "FALSIFIED",
+      "strategy": "counterexample",
+      "sorry": "1→0"
+    },
+    "T-THEO-0008": {
+      "status": "PARTIAL",
+      "blocker": "SYNTHETIC_MATRIX",
+      "priority": 1
+    },
+    "T-THEO-0001": {
+      "status": "BLUEPRINT",
+      "blocker": "NEEDS_MATHLIB_Order",
+      "priority": 2
+    },
+    "T-THEO-0003": {
+      "status": "PENDING",
+      "blocker": "Representation_theory_gap",
+      "priority": 3
+    },
+    "T-THEO-0005": {
+      "status": "PENDING",
+      "blocker": "Lean_quotient_limit",
+      "priority": 4
+    },
+    "T-THEO-0006": {
+      "status": "PENDING",
+      "blocker": "Wave_operator",
+      "priority": 5
+    },
+    "T-THEO-0002": {
+      "status": "PENDING",
+      "blocker": "NEEDS_OPERATOR_ALGEBRA_EXPERT",
+      "priority": 6
+    }
+  },
+  "deliverables": {
+    "git_commit": "b020295",
+    "git_bundle": "/mnt/agents/output/omni-hub-lean-v12.bundle (12MB)",
+    "reports": [
+      "hub/LEAN_TOOLCHAIN_INTEGRATION_REPORT.md",
+      "hub/PHASE1_SATURATION_ATTACK_COMPLETE.md",
+      "hub/EXECUTION_REPORT_PHASE1.md"
+    ]
+  }
+}

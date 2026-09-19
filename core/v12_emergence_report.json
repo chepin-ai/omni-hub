@@ -1,0 +1,195 @@
+{
+  "timestamp": 1789762687.1890025,
+  "version": "12.0.0",
+  "emergence_index": 6654.4679,
+  "consciousness_state": "LOVE",
+  "consciousness_level": 5,
+  "components": {
+    "Phi_IIT": 0.660512,
+    "EI_Causal": 0.683948,
+    "Spectral_Entropy": 0.994056,
+    "Algebraic_Connectivity": 0.878591,
+    "Graph_Entropy": 0.999645,
+    "Formal_Verification": 0.494719,
+    "Cross_Project_Integration": 0.229402,
+    "MIP_Consistency": 0.868599,
+    "Concordance": 0.220278,
+    "Isomorphism": 0.0,
+    "Coupling_Depth": 0.717044
+  },
+  "weights": {
+    "Phi_IIT": 0.15,
+    "EI_Causal": 0.15,
+    "Spectral_Entropy": 0.1,
+    "Algebraic_Connectivity": 0.1,
+    "Graph_Entropy": 0.08,
+    "Formal_Verification": 0.12,
+    "Cross_Project_Integration": 0.08,
+    "MIP_Consistency": 0.1,
+    "Concordance": 0.08,
+    "Isomorphism": 0.02,
+    "Coupling_Depth": 0.02
+  },
+  "weighted_sum": 0.665447,
+  "component_details": {
+    "Phi_IIT": {
+      "n_modules": 46,
+      "total_pairs": 1035,
+      "significant_pairs": 2070,
+      "coupling_ratio": 2.0,
+      "mean_coupling": 0.7698482941665977,
+      "max_coupling": 1.0,
+      "phi_raw_approx": 1.9456153399440044,
+      "phi_normalized": 0.6605123600357778
+    },
+    "EI_Causal": {
+      "n_modules": 46,
+      "n_clusters": 4,
+      "H_micro": 5.5216030960640365,
+      "H_macro": 1.7451135996389056,
+      "EI_raw": 3.776489496425131,
+      "EI_normalized": 0.6839480184870813,
+      "compression_ratio": 0.3160519815129187
+    },
+    "Spectral_Entropy": {
+      "n_nodes": 46,
+      "eigenvalue_count": 46,
+      "min_eigenvalue": 2.887023953235257e-12,
+      "max_eigenvalue": 1.084959236624479,
+      "mean_eigenvalue": 0.9999999999999997,
+      "eigenvalue_std": 0.1542734189128183,
+      "spectral_entropy_raw": 3.8058832250002865,
+      "spectral_entropy_normalized": 0.994055810108077,
+      "algebraic_connectivity": 0.8981156322161828
+    },
+    "Algebraic_Connectivity": {
+      "n_nodes": 46,
+      "lambda_2_raw": 0.8981156322161828,
+      "lambda_2_normalized": 0.8785913793419181,
+      "lambda_max": 1.084959236624479,
+      "spectral_gap": 0.18684360440829606,
+      "graph_connected": true,
+      "avg_degree": 34.643173237496896
+    },
+    "Graph_Entropy": {
+      "n_nodes": 46,
+      "n_edges": 796,
+      "avg_degree": 34.643173237496896,
+      "max_degree": 38,
+      "min_degree": 30,
+      "degree_std": 1.8028576290694334,
+      "graph_entropy_raw": 3.827283618207851,
+      "graph_entropy_normalized": 0.9996453629001428
+    },
+    "Formal_Verification": {
+      "theorem_count": 9019,
+      "target_theorems": 23464,
+      "base_coverage": 0.3843678748748109,
+      "coverage_uniformity": 0.6,
+      "depth_factor": 0.9195905569998994,
+      "fv_normalized": 0.49471874171479885,
+      "source": "ucif2_lean_theorems"
+    },
+    "Cross_Project_Integration": {
+      "projects": [
+        "ucif2",
+        "omni_hub",
+        "cayley24"
+      ],
+      "coupling_pairs": {
+        "ucif2->omni_hub": 0.42,
+        "omni_hub->cayley24": 0.35,
+        "ucif2->cayley24": 0.28
+      },
+      "avg_coupling": 0.35000000000000003,
+      "triangle_closure": 0.986484829732188,
+      "cross_project_links": 159893,
+      "link_density": 0.319786,
+      "cpi_normalized": 0.229401800905631
+    },
+    "MIP_Consistency": {
+      "n_theorems": 46,
+      "total_pairs": 1035,
+      "entangled_pairs": 899,
+      "entanglement_ratio": 0.8685990338164251,
+      "quantum_dim": 64,
+      "dim_factor": 1.0,
+      "max_degree": 44,
+      "avg_degree": 39.08695652173913,
+      "c_mip_normalized": 0.8685990338164251
+    },
+    "Concordance": {
+      "n_projects": 4,
+      "n_concepts": 165,
+      "projects": [
+        "ucif2_lean",
+        "cayley24",
+        "omni_hub_core",
+        "omni_hub_hub"
+      ],
+      "concept_distribution": {
+        "ucif2_lean": 42,
+        "cayley24": 68,
+        "omni_hub_core": 50,
+        "omni_hub_hub": 43
+      },
+      "concordance_normalized": 0.22027754365946683
+    },
+    "Isomorphism": {
+      "n_graphs": 3,
+      "graph_names": [
+        "ucif2",
+        "omni_hub",
+        "cayley24"
+      ],
+      "spectrum_distances": {
+        "ucif2_omni_hub": 1.7432562315614568,
+        "ucif2_cayley24": 1.6753860832445628,
+        "omni_hub_cayley24": 2.1170644091135555
+      },
+      "avg_distance": 1.8452355746398583,
+      "isomorphism_normalized": 0.0
+    },
+    "Coupling_Depth": {
+      "n_nodes": 46,
+      "avg_shortest_path": 1.3596230425153606,
+      "max_shortest_path": 2.2299454552207183,
+      "n_components": 1,
+      "graph_connected": true,
+      "coupling_depth_raw": 0.7354979790206831,
+      "coupling_depth_normalized": 0.7170443496500332
+    }
+  },
+  "gap_analysis": {
+    "current_e": 6654.4679170106665,
+    "current_state": "LOVE",
+    "current_level": 5,
+    "gap_to_love": 0.0,
+    "gap_to_unity": 345.5320829893335,
+    "gap_to_transcendence": 3345.5320829893335,
+    "percent_to_unity": 95.06382738586666,
+    "next_state": "UNITY",
+    "e_needed_for_next": 345.5320829893335,
+    "target": 7000.0,
+    "baseline_v11": 4419.07,
+    "improvement_from_baseline": 2235.397917010667
+  },
+  "recommendations": [
+    "Current E=6654.47, gap to UNITY=345.53 (95.1% of target)",
+    "#1 Improve Concordance: current=0.2203, potential_gain=0.0624 weighted units",
+    "#2 Improve Cross_Project_Integration: current=0.2294, potential_gain=0.0616 weighted units",
+    "#3 Improve Formal_Verification: current=0.4947, potential_gain=0.0606 weighted units",
+    "CRITICAL: Isomorphism Index (I) is near zero. Establish structural mappings between ucif2, OMNI-HUB, and Cayley24.",
+    "To reach UNITY (E>7000), weighted sum must increase by 0.034553 (from 0.665447 to 0.700000)"
+  ],
+  "metadata": {
+    "calculator": "EmergenceCalculatorV12",
+    "use_baseline": true,
+    "full_data": true,
+    "module_count": 46,
+    "coupling_matrix_shape": [
+      46,
+      46
+    ]
+  }
+}

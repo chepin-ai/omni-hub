@@ -1,0 +1,71 @@
+{
+  "timestamp": "2026-09-18T16:01:49.851926+00:00",
+  "version": "12.1.0",
+  "tests": {
+    "si0_reflex": {
+      "status": "PASS",
+      "action": "NOOP",
+      "message_count": 1,
+      "latency_ms": 0.0045
+    },
+    "si1_perception": {
+      "status": "PASS",
+      "pattern": null,
+      "confidence": 0.3,
+      "feature_count": 6
+    },
+    "si2_cognition": {
+      "status": "PASS",
+      "concepts_formed": 1,
+      "inference_count": 4
+    },
+    "si3_metacognition": {
+      "status": "PASS",
+      "health": 0.5008,
+      "adjustments": 0
+    },
+    "si4_emergence": {
+      "status": "PASS",
+      "event_type": "criticality",
+      "emergence_count": 0
+    },
+    "si5_hypercognition": {
+      "status": "PASS",
+      "cross_boundary_inferences": 2,
+      "confidence": 0.675
+    },
+    "si6_unification": {
+      "status": "PASS",
+      "unification_score": 0.6625,
+      "directive_actions": 2,
+      "downward_msgs": 4
+    },
+    "coordinator": {
+      "status": "PASS",
+      "registered_layers": 7,
+      "route_length": 2
+    },
+    "activation_controller": {
+      "status": "PASS",
+      "active_layers": [
+        "SI0",
+        "SI1"
+      ],
+      "energy_status": {
+        "budget": 100.0,
+        "consumed": 10.0,
+        "available": 90.0,
+        "utilization": 0.1
+      }
+    },
+    "full_system": {
+      "status": "PASS",
+      "total_ticks": 10,
+      "system_health": 0.817,
+      "runtime_sec": 0.0388
+    }
+  },
+  "overall_status": "ALL_PASS",
+  "pass_count": 10,
+  "total_tests": 10
+}

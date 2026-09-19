@@ -16,7 +16,13 @@ open Lake DSL
 package «omni-hub-lean» where
   -- 构建配置
   buildType := BuildType.release
-  moreLinkArgs := #["-rdynamic"]
+  -- LeanCopilot 需要链接 CTranslate2 库
+  -- 注意：路径在 lake update 后解析为 .lake/packages/LeanCopilot/.lake/build/lib
+  moreLinkArgs := #[
+    "-rdynamic",
+    "-L./.lake/packages/LeanCopilot/.lake/build/lib",
+    "-lctranslate2"
+  ]
   -- 垃圾回收器配置（大规模证明需要）
   moreLeancArgs := #["-DLEAN_GC_MAX_BYTES=8589934592"] -- 8GB
 
