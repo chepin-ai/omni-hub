@@ -118,6 +118,12 @@ def zeroField67 : UnifiedField67 where
   -- MATHEMATICAL CERTAINTY: This is a standard result. See:
   --   - Fulton & Harris, Exercise 8.1
   --   - Helgason, "Differential Geometry, Lie Groups, and Symmetric Spaces", Ch. II
+  -- PROOF SKETCH (informal):
+  --   Basis: {E_ij - E_ji | 1 ≤ i < j ≤ n}
+  --   Linear independence: c_ij(E_ij - E_ji) = 0 ⇒ all c_ij = 0
+  --   Span: Any A ∈ so(n) with A^T = -A has A = Σ_{i<j} A_ij(E_ij - E_ji)
+  --   Count: C(n,2) = n(n-1)/2 basis elements
+  -- TODO: Formalize once Mathlib develops matrix Lie algebra dimension theory
   sorry
 
 /-- 规范Lie代数: g = so(16) × so(16) × so(16) × so(16) × so(3)
