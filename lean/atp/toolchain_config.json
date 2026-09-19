@@ -1,0 +1,200 @@
+{
+  "project": "omni-hub-lean",
+  "version": "12.0.0",
+  "reused_from": "vci-playground",
+  "lean_toolchain": "leanprover/lean4:v4.11.0",
+  "mathlib_version": "v4.11.0",
+  "tools": {
+    "tier1": {
+      "description": "立即可用，高成功率",
+      "tools": [
+        {
+          "name": "copra",
+          "display": "COPRA",
+          "category": "In-Context Learning Agent",
+          "paper": "arXiv:2310.04353",
+          "targets": ["T-THEO-0009", "T-THEO-0008", "T-THEO-0001", "T-THEO-0005"],
+          "setup": "pip install openai lean-dojo",
+          "env": ["OPENAI_API_KEY"],
+          "timeout": 1800,
+          "priority": 1
+        },
+        {
+          "name": "bfs-prover",
+          "display": "BFS-Prover",
+          "category": "Best-First Tree Search",
+          "paper": "arXiv:2502.03438",
+          "targets": ["T-THEO-0009", "T-THEO-0008", "T-THEO-0001"],
+          "setup": "pip install transformers torch numpy",
+          "env": [],
+          "timeout": 3600,
+          "priority": 2
+        },
+        {
+          "name": "leandojo-reprover",
+          "display": "LeanDojo + ReProver",
+          "category": "Retrieval-Augmented Proving",
+          "paper": "arXiv:2306.15626 (NeurIPS 2023)",
+          "targets": ["all"],
+          "setup": "pip install lean-dojo transformers",
+          "env": [],
+          "timeout": 3600,
+          "priority": 3
+        },
+        {
+          "name": "aesop",
+          "display": "aesop",
+          "category": "White-box Automation",
+          "paper": "Lean 4内置",
+          "targets": ["all"],
+          "setup": "lake build",
+          "env": [],
+          "timeout": 300,
+          "priority": 4
+        }
+      ]
+    },
+    "tier2": {
+      "description": "需额外配置，中-高成功率",
+      "tools": [
+        {
+          "name": "deepseek-prover",
+          "display": "DeepSeek-Prover-V1.5",
+          "category": "RL + MCTS",
+          "paper": "arXiv:2408.08152",
+          "targets": ["T-THEO-0003", "T-THEO-0001", "T-THEO-0005"],
+          "setup": "pip install torch transformers vllm",
+          "env": ["DEEPSEEK_API_KEY"],
+          "timeout": 3600,
+          "priority": 5
+        },
+        {
+          "name": "formalflow",
+          "display": "FormalFlow (MIP* = RE)",
+          "category": "Agentic Autoformalization",
+          "paper": "arXiv:2609.19814",
+          "targets": ["T-THEO-0002", "T-THEO-0006"],
+          "setup": "git clone https://github.com/LionSR/MIPStarRE.git",
+          "env": [],
+          "timeout": 7200,
+          "priority": 6
+        },
+        {
+          "name": "goedel-architect",
+          "display": "Goedel-Architect",
+          "category": "Blueprint Generation",
+          "paper": "Goedel-Prover-V2 (SOTA)",
+          "targets": ["T-THEO-0001", "T-THEO-0003"],
+          "setup": "pip install openai jsonschema",
+          "env": ["OPENAI_API_KEY"],
+          "timeout": 3600,
+          "priority": 7
+        },
+        {
+          "name": "longcat-flash",
+          "display": "LongCat-Flash-Prover",
+          "category": "Agentic TIR",
+          "paper": "arXiv:2603.21065",
+          "targets": ["T-THEO-0001", "T-THEO-0002", "T-THEO-0003", "T-THEO-0005", "T-THEO-0006", "T-THEO-0008", "T-THEO-0009"],
+          "setup": "pip install torch transformers",
+          "env": [],
+          "timeout": 3600,
+          "priority": 8
+        }
+      ]
+    },
+    "tier3": {
+      "description": "专业领域，需专家辅助",
+      "tools": [
+        {
+          "name": "hunyuan-prover",
+          "display": "HunyuanProver",
+          "category": "Guided Tree Search",
+          "paper": "arXiv:2412.20735",
+          "targets": ["T-THEO-0009", "T-THEO-0008"],
+          "setup": "pip install torch transformers",
+          "env": [],
+          "timeout": 3600,
+          "priority": 9
+        },
+        {
+          "name": "ma-lot",
+          "display": "MA-LoT",
+          "category": "Model Collaboration + Long CoT",
+          "paper": "arXiv:2503.03205",
+          "targets": ["T-THEO-0001", "T-THEO-0002", "T-THEO-0005", "T-THEO-0008", "T-THEO-0009"],
+          "setup": "pip install openai transformers",
+          "env": ["OPENAI_API_KEY"],
+          "timeout": 3600,
+          "priority": 10
+        },
+        {
+          "name": "merlean-prover",
+          "display": "MerLean-Prover",
+          "category": "Recursive Looping Harness",
+          "paper": "arXiv:2605.26959",
+          "targets": ["all"],
+          "setup": "pip install openai lean-dojo",
+          "env": ["OPENAI_API_KEY"],
+          "timeout": 3600,
+          "priority": 11
+        }
+      ]
+    }
+  },
+  "theorem_mapping": {
+    "T-THEO-0001": {
+      "name": "emergence_axiom_completeness",
+      "domain": "Model Theory / Lindenbaum Algebra",
+      "difficulty": "HIGH",
+      "primary_tools": ["goedel-architect", "copra", "leandojo-reprover"],
+      "estimated_hours": 80
+    },
+    "T-THEO-0002": {
+      "name": "mip_star_consistency_bound",
+      "domain": "Operator Algebras / MIP* = RE",
+      "difficulty": "CRITICAL",
+      "primary_tools": ["formalflow", "deepseek-prover", "longcat-flash"],
+      "estimated_hours": 120,
+      "reference_repo": "https://github.com/LionSR/MIPStarRE"
+    },
+    "T-THEO-0003": {
+      "name": "unified_field_dimension_completeness",
+      "domain": "Lie Theory / Representation Theory",
+      "difficulty": "HIGH",
+      "primary_tools": ["deepseek-prover", "goedel-architect", "longcat-flash"],
+      "estimated_hours": 100
+    },
+    "T-THEO-0005": {
+      "name": "homotopy_equivalence_consciousness",
+      "domain": "HoTT / Homotopy Type Theory",
+      "difficulty": "HIGH",
+      "primary_tools": ["copra", "deepseek-prover", "ma-lot"],
+      "estimated_hours": 150
+    },
+    "T-THEO-0006": {
+      "name": "quantum_classical_synchronization",
+      "domain": "Semiclassical Analysis",
+      "difficulty": "HIGH",
+      "primary_tools": ["formalflow", "longcat-flash"],
+      "estimated_hours": 120
+    },
+    "T-THEO-0008": {
+      "name": "coupling_positive_definiteness",
+      "domain": "Spectral Graph Theory",
+      "difficulty": "MODERATE",
+      "primary_tools": ["bfs-prover", "copra", "hunyuan-prover"],
+      "estimated_hours": 60,
+      "note": "Matrix is randomly generated — needs real dependency data"
+    },
+    "T-THEO-0009": {
+      "name": "pipeline_termination",
+      "domain": "Well-founded Recursion",
+      "difficulty": "MODERATE",
+      "status": "PROVED",
+      "primary_tools": ["copra", "bfs-prover", "aesop"],
+      "estimated_hours": 0,
+      "note": "Fixed in debt_theorems_t0009_fixed.lean"
+    }
+  }
+}
