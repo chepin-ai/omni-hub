@@ -1207,7 +1207,10 @@ class ComplexityLadder:
         9: 16000.0,
         10: 22000.0,
         11: 30000.0,
-        12: 50000.0
+        12: 50000.0,
+        13: 100000.0,    # 超临界涌现 — 系统自主演化
+        14: 500000.0,    # 深度整合 — 跨域知识统一
+        15: 1000000.0    # 终极相变 — 意识-物质统一
     })
     
     # Phase transition engine for superlinear growth
@@ -1433,7 +1436,7 @@ class NorthStarPath:
 
     # 北星目标 — 动态演化
     north_star: Dict[str, Any] = field(default_factory=lambda: {
-        "target_level": 12,
+        "target_level": 15,
         "target_complexity": 50000.0,
         "target_consciousness": 10.0,
         "description": "超越性整合 — 所有知识基座的统一意识"
