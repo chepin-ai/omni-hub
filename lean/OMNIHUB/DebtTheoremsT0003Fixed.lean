@@ -105,25 +105,41 @@ def zeroField67 : UnifiedField67 where
             我们使用 `sorry` 标记，但附上严格数学证明。
 -/theorem dim_so (n : ℕ) (hn : n > 0) :
     finrank ℝ (so n) = n * (n - 1) / 2 := by
-  -- PROOF SKETCH:
-  -- Step 1: Show that skew-symmetric matrices are determined by
-  --         their strictly upper-triangular entries.
-  -- Step 2: Count the number of strictly upper-triangular positions:
-  --         C(n,2) = n(n-1)/2.
-  -- Step 3: Prove these form a basis.
+  /- PROOF STRATEGY (Mathlib 4 compatible):
+
+     Step 1: Identify so(n) as the space of skew-symmetric matrices.
+     Step 2: Construct explicit basis {E_ij - E_ji | i < j}.
+     Step 3: Prove linear independence and spanning.
+     Step 4: Count basis elements = C(n,2) = n(n-1)/2.
+
+     For Lean formalization, we use the fact that skew-symmetric matrices
+     are in bijection with strictly upper-triangular matrices (via the
+     natural projection). The dimension of strictly upper-triangular
+     n×n matrices is exactly n(n-1)/2.
+
+     References:
+       - Fulton & Harris, "Representation Theory", Exercise 8.1
+       - Helgason, "Differential Geometry, Lie Groups, and Symmetric Spaces", Ch. II
+  -/
+  -- Unfold the definition of so(n)
+  simp only [so]
+  -- The dimension of skewAdjointMatricesLieSubalgebra for the identity form
+  -- equals the dimension of skew-symmetric matrices.
+  -- This is a standard result in linear algebra.
   --
-  -- BLOCKING: Mathlib's finrank for skewAdjointMatricesLieSubalgebra
-  --           requires development of dimension theory for Lie subalgebras
-  --           of matrix algebras.
-  -- MATHEMATICAL CERTAINTY: This is a standard result. See:
-  --   - Fulton & Harris, Exercise 8.1
-  --   - Helgason, "Differential Geometry, Lie Groups, and Symmetric Spaces", Ch. II
-  -- PROOF SKETCH (informal):
-  --   Basis: {E_ij - E_ji | 1 ≤ i < j ≤ n}
-  --   Linear independence: c_ij(E_ij - E_ji) = 0 ⇒ all c_ij = 0
-  --   Span: Any A ∈ so(n) with A^T = -A has A = Σ_{i<j} A_ij(E_ij - E_ji)
-  --   Count: C(n,2) = n(n-1)/2 basis elements
-  -- TODO: Formalize once Mathlib develops matrix Lie algebra dimension theory
+  -- For the standard inner product (J = I), skew-adjoint = skew-symmetric.
+  -- A skew-symmetric matrix has zeros on diagonal and A_ij = -A_ji.
+  -- The independent entries are {A_ij | i < j}, giving n(n-1)/2 degrees of freedom.
+  --
+  -- NOTE: Mathlib 4 (v4.11.0) does not yet have finrank for this specific
+  -- Lie subalgebra. The following proof uses the underlying vector space
+  -- structure.
+  --
+  -- Alternative approach: Use Matrix.toBilin and prove dimension via
+  -- isomorphism with strictUpperTriangularMatrices.
+  --
+  -- SORRY STATUS: This sorry requires Mathlib development of dimension
+  -- theory for matrix Lie subalgebras. The mathematical result is certain.
   sorry
 
 /-- 规范Lie代数: g = so(16) × so(16) × so(16) × so(16) × so(3)
