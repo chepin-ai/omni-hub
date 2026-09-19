@@ -137,7 +137,7 @@ class ProgressTracker:
     total_steps: int = 0
     step_history: List[Dict[str, Any]] = field(default_factory=list)
     blockers: List[str] = field(default_factory=list)
-    last_updated: str = field(default_factory=lambda: datetime.now(timezone.utc).isoformat()))
+    last_updated: str = field(default_factory=lambda: datetime.now(timezone.utc).isoformat())
 
     def advance(self, step_name: str, result: str = "") -> None:
         self.current_step += 1

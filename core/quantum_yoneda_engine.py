@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+from __future__ import annotations
 
 __version__ = "11.0.0"
 """
@@ -19,8 +20,6 @@ OMNI-HUB v8.0 - QuantumYonedaEngine
 版本: 8.0.0
 涌现指数: 996.64
 """
-
-from __future__ import annotations
 
 import uuid
 from typing import (
