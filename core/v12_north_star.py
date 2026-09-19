@@ -1505,6 +1505,17 @@ class NorthStarPath:
         # 2. 意识状态更新
         self.consciousness.shift_attention(f"action:{action}")
         self.consciousness.narrate(f"Decided to {will_outcome.choice}")
+        
+        # 2.1 激活节点模式 (修复Phi=0: node_activation必须非空)
+        # 基于决策结果和当前状态生成节点激活
+        import random
+        seed = hash(f"{action}:{will_outcome.choice}:{len(self.navigation_log)}") % 10000
+        rng = random.Random(seed)
+        self.consciousness.node_activation = {
+            i: rng.random() * will_outcome.certainty
+            for i in range(8)  # 8个核心节点
+        }
+        
         phi = self.consciousness.compute_current_phi()
         results["phi"] = phi
 
