@@ -1,8 +1,8 @@
 /-! 
 # OMNI-HUB v12 — T-THEO-0008: Coupling Matrix Positive Definiteness
 # =================================================================
-# STATUS: PROVED (via Schoenberg's Theorem on CND Metrics)
-# FILE: DebtTheoremsT0008Fixed.lean
+# FILE: DebtTheoremsT0008Complete.lean
+# STATUS: STRUCTURALLY COMPLETE (2 documented proof gaps in supporting lemmas)
 #
 # This file contains the complete formal proof that the OMNI-HUB
 # coupling matrix (derived from the real dependency graph) is
@@ -32,10 +32,37 @@
 # - Graph edges: 53 (9 connected components)
 # - Distance matrix is CND: VERIFIED
 #
-# SORRY COUNT: This proof eliminates the sorry in the original
-# coupling_positive_definite theorem. The remaining sorrys are in
-# supporting lemmas for deep mathematical results (Schoenberg's
-# theorem) and computational verification (CND property).
+# REMAINING PROOF GAPS (2 sorrys):
+# 1. couplingDistance_cnd: CND verification for the 46×46 explicit
+#    distance matrix. Requires component-wise CND proofs or a
+#    verified computational decision procedure.
+# 2. schoenberg_theorem: Full Schoenberg theorem requires deep
+#    harmonic analysis machinery (Bernstein's theorem, complete
+#    monotonicity, preservation of PosDef under integration) not
+#    yet available in Mathlib.
+#
+# Both gaps are in supporting lemmas for foundational mathematical
+# results. The main theorem (coupling_positive_definiteness) is
+# structurally complete modulo these gaps.
+/-/
+
+/-! 
+# COMPLETION NOTES
+# ================
+# This Complete version documents the exact proof structure and
+# identifies the mathematical machinery needed to close each gap.
+#
+# Gap 1 (CND): The 46×46 distance matrix decomposes into 9 connected
+# components. Tree components (0,3,4,6,7,8) are CND by the tree
+# metric theorem. Non-tree components (1,2,5) require computational
+# verification or explicit CND proofs.
+#
+# Gap 2 (Schoenberg): Requires formalization of:
+#   - Completely monotone functions
+#   - Bernstein's theorem (Laplace transform representation)
+#   - Theorem 3.2.2 from Berg et al. (CND → PD of e^{-sD})
+#   - Integration of positive definite kernels
+# These are active research areas in formalized mathematics.
 /-/
 
 import Mathlib

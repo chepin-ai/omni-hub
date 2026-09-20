@@ -1,17 +1,17 @@
 # OMNI-HUB v12.0 — Integration Test Report
 
-**Timestamp:** 2026-09-19T16:39:28.198273+00:00
-**System Health:** 96.8%
+**Timestamp:** 2026-09-20T05:21:26.917500+00:00
+**System Health:** 100.0%
 
 ## Summary
 
 | Metric | Value |
 |--------|-------|
 | Total Tests | 62 |
-| Passed | 60 |
-| Failed | 2 |
+| Passed | 62 |
+| Failed | 0 |
 | Skipped | 0 |
-| Health | 96.8% |
+| Health | 100.0% |
 
 ## Results by Category
 
@@ -32,7 +32,7 @@
 | knowledge | 1 | 0 | 100% |
 | lean | 1 | 0 | 100% |
 | meta | 1 | 0 | 100% |
-| module_import | 34 | 2 | 94% |
+| module_import | 36 | 0 | 100% |
 | north_star | 1 | 0 | 100% |
 | orchestrator | 1 | 0 | 100% |
 | pattern | 1 | 0 | 100% |
@@ -58,7 +58,7 @@ These are source-level issues that require manual code fixes.
 
 ### [PASS] import_v12_standards
 - **Category:** module_import
-- **Duration:** 55.38ms
+- **Duration:** 21.17ms
 - **Message:** Imported v12_standards (89 members, class=True)
 - **Details:**
   - module: v12_standards
@@ -69,7 +69,7 @@ These are source-level issues that require manual code fixes.
 
 ### [PASS] import_v12_emergence_engine
 - **Category:** module_import
-- **Duration:** 838.05ms
+- **Duration:** 1430.43ms
 - **Message:** Imported v12_emergence_engine (59 members, class=True)
 - **Details:**
   - module: v12_emergence_engine
@@ -80,7 +80,7 @@ These are source-level issues that require manual code fixes.
 
 ### [PASS] import_v12_si_seven_layers
 - **Category:** module_import
-- **Duration:** 14.21ms
+- **Duration:** 20.10ms
 - **Message:** Imported v12_si_seven_layers (80 members, class=True)
 - **Details:**
   - module: v12_si_seven_layers
@@ -91,7 +91,7 @@ These are source-level issues that require manual code fixes.
 
 ### [PASS] import_v12_fctn_full_bridge
 - **Category:** module_import
-- **Duration:** 5.68ms
+- **Duration:** 5.56ms
 - **Message:** Imported v12_fctn_full_bridge (63 members, class=True)
 - **Details:**
   - module: v12_fctn_full_bridge
@@ -102,7 +102,7 @@ These are source-level issues that require manual code fixes.
 
 ### [PASS] import_v12_north_star
 - **Category:** module_import
-- **Duration:** 11.51ms
+- **Duration:** 18.03ms
 - **Message:** Imported v12_north_star (41 members, class=True)
 - **Details:**
   - module: v12_north_star
@@ -113,7 +113,7 @@ These are source-level issues that require manual code fixes.
 
 ### [PASS] import_v12_circle_systems
 - **Category:** module_import
-- **Duration:** 13.03ms
+- **Duration:** 18.12ms
 - **Message:** Imported v12_circle_systems (89 members, class=True)
 - **Details:**
   - module: v12_circle_systems
@@ -124,7 +124,7 @@ These are source-level issues that require manual code fixes.
 
 ### [PASS] import_v12_unified_orchestrator
 - **Category:** module_import
-- **Duration:** 4.18ms
+- **Duration:** 5.54ms
 - **Message:** Imported v12_unified_orchestrator (85 members, class=True)
 - **Details:**
   - module: v12_unified_orchestrator
@@ -135,7 +135,7 @@ These are source-level issues that require manual code fixes.
 
 ### [PASS] import_v12_pattern_tower
 - **Category:** module_import
-- **Duration:** 7.94ms
+- **Duration:** 33.74ms
 - **Message:** Imported v12_pattern_tower (37 members, class=True)
 - **Details:**
   - module: v12_pattern_tower
@@ -146,7 +146,7 @@ These are source-level issues that require manual code fixes.
 
 ### [PASS] import_v12_zhou_tian
 - **Category:** module_import
-- **Duration:** 4.90ms
+- **Duration:** 6.99ms
 - **Message:** Imported v12_zhou_tian (27 members, class=True)
 - **Details:**
   - module: v12_zhou_tian
@@ -157,7 +157,7 @@ These are source-level issues that require manual code fixes.
 
 ### [PASS] import_v12_cross_line_si
 - **Category:** module_import
-- **Duration:** 4.68ms
+- **Duration:** 7.12ms
 - **Message:** Imported v12_cross_line_si (53 members, class=True)
 - **Details:**
   - module: v12_cross_line_si
@@ -168,7 +168,7 @@ These are source-level issues that require manual code fixes.
 
 ### [PASS] import_v12_cross_line_fctn
 - **Category:** module_import
-- **Duration:** 2.90ms
+- **Duration:** 4.42ms
 - **Message:** Imported v12_cross_line_fctn (51 members, class=True)
 - **Details:**
   - module: v12_cross_line_fctn
@@ -179,7 +179,7 @@ These are source-level issues that require manual code fixes.
 
 ### [PASS] import_v12_eleven_lines_si_loop
 - **Category:** module_import
-- **Duration:** 6.06ms
+- **Duration:** 9.42ms
 - **Message:** Imported v12_eleven_lines_si_loop (84 members, class=True)
 - **Details:**
   - module: v12_eleven_lines_si_loop
@@ -190,7 +190,7 @@ These are source-level issues that require manual code fixes.
 
 ### [PASS] import_v12_qfos_microkernel
 - **Category:** module_import
-- **Duration:** 98.40ms
+- **Duration:** 204.83ms
 - **Message:** Imported v12_qfos_microkernel (51 members, class=True)
 - **Details:**
   - module: v12_qfos_microkernel
@@ -201,7 +201,7 @@ These are source-level issues that require manual code fixes.
 
 ### [PASS] import_v12_qfos_rebuild
 - **Category:** module_import
-- **Duration:** 10.09ms
+- **Duration:** 11.05ms
 - **Message:** Imported v12_qfos_rebuild (47 members, class=False)
 - **Details:**
   - module: v12_qfos_rebuild
@@ -212,7 +212,7 @@ These are source-level issues that require manual code fixes.
 
 ### [PASS] import_v12_self_evolving
 - **Category:** module_import
-- **Duration:** 4.31ms
+- **Duration:** 6.34ms
 - **Message:** Imported v12_self_evolving (38 members, class=True)
 - **Details:**
   - module: v12_self_evolving
@@ -223,7 +223,7 @@ These are source-level issues that require manual code fixes.
 
 ### [PASS] import_v12_global_alignment
 - **Category:** module_import
-- **Duration:** 4.84ms
+- **Duration:** 6.94ms
 - **Message:** Imported v12_global_alignment (46 members, class=True)
 - **Details:**
   - module: v12_global_alignment
@@ -234,7 +234,7 @@ These are source-level issues that require manual code fixes.
 
 ### [PASS] import_v12_meta_circle
 - **Category:** module_import
-- **Duration:** 3.51ms
+- **Duration:** 5.26ms
 - **Message:** Imported v12_meta_circle (57 members, class=True)
 - **Details:**
   - module: v12_meta_circle
@@ -245,7 +245,7 @@ These are source-level issues that require manual code fixes.
 
 ### [PASS] import_v12_triangle_coupling
 - **Category:** module_import
-- **Duration:** 1.19ms
+- **Duration:** 1.67ms
 - **Message:** Imported v12_triangle_coupling (12 members, class=True)
 - **Details:**
   - module: v12_triangle_coupling
@@ -256,7 +256,7 @@ These are source-level issues that require manual code fixes.
 
 ### [PASS] import_v12_field_circle_tensor_network
 - **Category:** module_import
-- **Duration:** 0.02ms
+- **Duration:** 0.03ms
 - **Message:** Imported v12_field_circle_tensor_network (30 members, class=True)
 - **Details:**
   - module: v12_field_circle_tensor_network
@@ -267,7 +267,7 @@ These are source-level issues that require manual code fixes.
 
 ### [PASS] import_v12_surge_ripple_engine
 - **Category:** module_import
-- **Duration:** 0.02ms
+- **Duration:** 0.04ms
 - **Message:** Imported v12_surge_ripple_engine (70 members, class=True)
 - **Details:**
   - module: v12_surge_ripple_engine
@@ -278,7 +278,7 @@ These are source-level issues that require manual code fixes.
 
 ### [PASS] import_v12_module_bus
 - **Category:** module_import
-- **Duration:** 2.92ms
+- **Duration:** 4.01ms
 - **Message:** Imported v12_module_bus (27 members, class=True)
 - **Details:**
   - module: v12_module_bus
@@ -289,7 +289,7 @@ These are source-level issues that require manual code fixes.
 
 ### [PASS] import_v12_consensus_engine
 - **Category:** module_import
-- **Duration:** 0.03ms
+- **Duration:** 0.06ms
 - **Message:** Imported v12_consensus_engine (82 members, class=True)
 - **Details:**
   - module: v12_consensus_engine
@@ -300,7 +300,7 @@ These are source-level issues that require manual code fixes.
 
 ### [PASS] import_v12_context_syntax_semantics_pragmatics
 - **Category:** module_import
-- **Duration:** 6.75ms
+- **Duration:** 30.33ms
 - **Message:** Imported v12_context_syntax_semantics_pragmatics (22 members, class=False)
 - **Details:**
   - module: v12_context_syntax_semantics_pragmatics
@@ -311,7 +311,7 @@ These are source-level issues that require manual code fixes.
 
 ### [PASS] import_v12_debt_cleanup
 - **Category:** module_import
-- **Duration:** 3.47ms
+- **Duration:** 5.30ms
 - **Message:** Imported v12_debt_cleanup (29 members, class=True)
 - **Details:**
   - module: v12_debt_cleanup
@@ -322,7 +322,7 @@ These are source-level issues that require manual code fixes.
 
 ### [PASS] import_v12_h_cpi_real
 - **Category:** module_import
-- **Duration:** 0.66ms
+- **Duration:** 1.32ms
 - **Message:** Imported v12_h_cpi_real (28 members, class=False)
 - **Details:**
   - module: v12_h_cpi_real
@@ -333,7 +333,7 @@ These are source-level issues that require manual code fixes.
 
 ### [PASS] import_v12_knowledge_weaving
 - **Category:** module_import
-- **Duration:** 5.82ms
+- **Duration:** 7.99ms
 - **Message:** Imported v12_knowledge_weaving (43 members, class=True)
 - **Details:**
   - module: v12_knowledge_weaving
@@ -344,7 +344,7 @@ These are source-level issues that require manual code fixes.
 
 ### [PASS] import_v12_lean_auto_pipeline
 - **Category:** module_import
-- **Duration:** 6.75ms
+- **Duration:** 7.81ms
 - **Message:** Imported v12_lean_auto_pipeline (38 members, class=True)
 - **Details:**
   - module: v12_lean_auto_pipeline
@@ -355,7 +355,7 @@ These are source-level issues that require manual code fixes.
 
 ### [PASS] import_v12_mitchell_yoneda
 - **Category:** module_import
-- **Duration:** 8.22ms
+- **Duration:** 14.88ms
 - **Message:** Imported v12_mitchell_yoneda (59 members, class=False)
 - **Details:**
   - module: v12_mitchell_yoneda
@@ -366,7 +366,7 @@ These are source-level issues that require manual code fixes.
 
 ### [PASS] import_v12_version_align
 - **Category:** module_import
-- **Duration:** 4.26ms
+- **Duration:** 10.24ms
 - **Message:** Imported v12_version_align (25 members, class=True)
 - **Details:**
   - module: v12_version_align
@@ -377,7 +377,7 @@ These are source-level issues that require manual code fixes.
 
 ### [PASS] import_v12_wild_notebook
 - **Category:** module_import
-- **Duration:** 509.04ms
+- **Duration:** 1059.96ms
 - **Message:** Imported v12_wild_notebook (114 members, class=True)
 - **Details:**
   - module: v12_wild_notebook
@@ -388,7 +388,7 @@ These are source-level issues that require manual code fixes.
 
 ### [PASS] import_v12_wild_notebook_unified
 - **Category:** module_import
-- **Duration:** 26.93ms
+- **Duration:** 45.23ms
 - **Message:** Imported v12_wild_notebook_unified (134 members, class=True)
 - **Details:**
   - module: v12_wild_notebook_unified
@@ -397,15 +397,20 @@ These are source-level issues that require manual code fixes.
   - module_members_count: 134
   - message: Imported v12_wild_notebook_unified (134 members, class=True)
 
-### [FAIL] import_v12_wildbook_resolver
+### [PASS] import_v12_wildbook_resolver
 - **Category:** module_import
-- **Duration:** 2.33ms
-- **Message:** SyntaxError: unmatched ')' (v12_wildbook_resolver.py, line 140)
+- **Duration:** 6.82ms
+- **Message:** Imported v12_wildbook_resolver (40 members, class=True)
 - **Details:**
+  - module: v12_wildbook_resolver
+  - expected_class: WildbookResolver
+  - class_found: True
+  - module_members_count: 40
+  - message: Imported v12_wildbook_resolver (40 members, class=True)
 
 ### [PASS] import_v12_unified_integration
 - **Category:** module_import
-- **Duration:** 4.32ms
+- **Duration:** 5.29ms
 - **Message:** Imported v12_unified_integration (41 members, class=True)
 - **Details:**
   - module: v12_unified_integration
@@ -416,7 +421,7 @@ These are source-level issues that require manual code fixes.
 
 ### [PASS] import_v12_integration_test
 - **Category:** module_import
-- **Duration:** 3.24ms
+- **Duration:** 4.39ms
 - **Message:** Imported v12_integration_test (51 members, class=False)
 - **Details:**
   - module: v12_integration_test
@@ -427,7 +432,7 @@ These are source-level issues that require manual code fixes.
 
 ### [PASS] import_cfts_phi_pi_e_alpha_integration
 - **Category:** module_import
-- **Duration:** 2.09ms
+- **Duration:** 2.24ms
 - **Message:** Imported cfts_phi_pi_e_alpha_integration (21 members, class=False)
 - **Details:**
   - module: cfts_phi_pi_e_alpha_integration
@@ -436,11 +441,16 @@ These are source-level issues that require manual code fixes.
   - module_members_count: 21
   - message: Imported cfts_phi_pi_e_alpha_integration (21 members, class=False)
 
-### [FAIL] import_quantum_yoneda_engine
+### [PASS] import_quantum_yoneda_engine
 - **Category:** module_import
-- **Duration:** 14.82ms
-- **Message:** SyntaxError: from __future__ imports must occur at the beginning of the file (quantum_yoneda_engine.py, line 23)
+- **Duration:** 1.76ms
+- **Message:** Imported quantum_yoneda_engine (29 members, class=False)
 - **Details:**
+  - module: quantum_yoneda_engine
+  - expected_class: QuantumYoneda
+  - class_found: False
+  - module_members_count: 29
+  - message: Imported quantum_yoneda_engine (29 members, class=False)
 
 ### [PASS] standards_constants
 - **Category:** standards
@@ -455,7 +465,7 @@ These are source-level issues that require manual code fixes.
 
 ### [PASS] si_seven_layers
 - **Category:** si_communication
-- **Duration:** 8.38ms
+- **Duration:** 30.24ms
 - **Message:** SI7: 0/1000 processed, 1000 errors
 - **Details:**
   - messages_sent: 1000
@@ -467,21 +477,21 @@ These are source-level issues that require manual code fixes.
 
 ### [PASS] fctn_energy_conservation
 - **Category:** fctn_cycle
-- **Duration:** 42.54ms
-- **Message:** FCTN: 10 cycles, conserved=False, latency=4.22ms
+- **Duration:** 93.45ms
+- **Message:** FCTN: 10 cycles, conserved=False, latency=9.29ms
 - **Details:**
   - cycles: 10
   - initial_energy: 9.242
-  - final_energy: 12.7834
-  - energy_delta: 3.5414
+  - final_energy: 12.7679
+  - energy_delta: 3.5259
   - energy_conserved: False
-  - avg_latency_ms: 4.2224
-  - max_latency_ms: 4.837
-  - message: FCTN: 10 cycles, conserved=False, latency=4.22ms
+  - avg_latency_ms: 9.2855
+  - max_latency_ms: 32.7039
+  - message: FCTN: 10 cycles, conserved=False, latency=9.29ms
 
 ### [PASS] circle_systems_22
 - **Category:** circle_systems
-- **Duration:** 1.41ms
+- **Duration:** 2.35ms
 - **Message:** Circles: 22/22 tests passed
 - **Details:**
   - tests_passed: 22
@@ -492,7 +502,7 @@ These are source-level issues that require manual code fixes.
 
 ### [PASS] north_star_268
 - **Category:** north_star
-- **Duration:** 46.78ms
+- **Duration:** 109.85ms
 - **Message:** NorthStar: 268 steps, E=6654.47
 - **Details:**
   - steps_executed: 268
@@ -504,7 +514,7 @@ These are source-level issues that require manual code fixes.
 
 ### [PASS] cross_line_alignment
 - **Category:** cross_line
-- **Duration:** 2.37ms
+- **Duration:** 5.01ms
 - **Message:** CrossLine: 11/11 lines, cross_msg=True
 - **Details:**
   - lines_tested: 11
@@ -515,7 +525,7 @@ These are source-level issues that require manual code fixes.
 
 ### [PASS] emergence_engine
 - **Category:** emergence
-- **Duration:** 11.81ms
+- **Duration:** 16.24ms
 - **Message:** Emergence: E=6654.47, threshold=7000.0
 - **Details:**
   - emergence_index: 6654.47
@@ -527,7 +537,7 @@ These are source-level issues that require manual code fixes.
 
 ### [PASS] pattern_tower
 - **Category:** pattern
-- **Duration:** 0.29ms
+- **Duration:** 0.38ms
 - **Message:** PatternTower: 7 layers, 0 patterns
 - **Details:**
   - tower_layers_count: 7
@@ -538,7 +548,7 @@ These are source-level issues that require manual code fixes.
 
 ### [PASS] zhou_tian
 - **Category:** zhou_tian
-- **Duration:** 0.58ms
+- **Duration:** 0.86ms
 - **Message:** ZhouTian: coordinator, small(5 ticks), great(3 ticks) OK
 - **Details:**
   - coordinator_created: True
@@ -548,7 +558,7 @@ These are source-level issues that require manual code fixes.
 
 ### [PASS] unified_orchestrator
 - **Category:** orchestrator
-- **Duration:** 89.22ms
+- **Duration:** 139.63ms
 - **Message:** Orchestrator: created, field_dims=67
 - **Details:**
   - orchestrator_created: True
@@ -559,7 +569,7 @@ These are source-level issues that require manual code fixes.
 
 ### [PASS] qfos_microkernel
 - **Category:** qfos
-- **Duration:** 0.03ms
+- **Duration:** 0.06ms
 - **Message:** QF-OS: kernel created, services=True
 - **Details:**
   - kernel_created: True
@@ -569,7 +579,7 @@ These are source-level issues that require manual code fixes.
 
 ### [PASS] self_evolving
 - **Category:** evolution
-- **Duration:** 0.13ms
+- **Duration:** 0.28ms
 - **Message:** SelfEvolving: orchestrator created, evolution cycle OK
 - **Details:**
   - orchestrator_created: True
@@ -588,7 +598,7 @@ These are source-level issues that require manual code fixes.
 
 ### [PASS] consensus_engine
 - **Category:** consensus
-- **Duration:** 0.06ms
+- **Duration:** 0.04ms
 - **Message:** Consensus: tracker created, proposal OK
 - **Details:**
   - tracker_created: True
@@ -597,7 +607,7 @@ These are source-level issues that require manual code fixes.
 
 ### [PASS] field_circle_tensor
 - **Category:** tensor
-- **Duration:** 0.76ms
+- **Duration:** 0.72ms
 - **Message:** FCTN-Bridge: energy=9.2420, health=0.9373, coherence=0.9426
 - **Details:**
   - bridge_created: True
@@ -608,7 +618,7 @@ These are source-level issues that require manual code fixes.
 
 ### [PASS] eleven_lines_si
 - **Category:** eleven_lines
-- **Duration:** 33.30ms
+- **Duration:** 0.97ms
 - **Message:** 11-Line SI: 0 lines ticked
 - **Details:**
   - si_created: True
@@ -626,7 +636,7 @@ These are source-level issues that require manual code fixes.
 
 ### [PASS] meta_circle
 - **Category:** meta
-- **Duration:** 4.36ms
+- **Duration:** 4.56ms
 - **Message:** MetaCircle: created, verification OK
 - **Details:**
   - meta_circle_created: True
@@ -635,7 +645,7 @@ These are source-level issues that require manual code fixes.
 
 ### [PASS] knowledge_weaving
 - **Category:** knowledge
-- **Duration:** 0.19ms
+- **Duration:** 0.23ms
 - **Message:** KnowledgeWeaving: engine created
 - **Details:**
   - weaver_created: True
@@ -643,7 +653,7 @@ These are source-level issues that require manual code fixes.
 
 ### [PASS] debt_cleanup
 - **Category:** debt
-- **Duration:** 0.02ms
+- **Duration:** 0.03ms
 - **Message:** DebtCleanup: executor created
 - **Details:**
   - engine_created: True
@@ -651,7 +661,7 @@ These are source-level issues that require manual code fixes.
 
 ### [PASS] version_alignment
 - **Category:** version
-- **Duration:** 0.50ms
+- **Duration:** 0.59ms
 - **Message:** VersionAlign: manager created
 - **Details:**
   - aligner_created: True
@@ -659,7 +669,7 @@ These are source-level issues that require manual code fixes.
 
 ### [PASS] surge_ripple
 - **Category:** surge
-- **Duration:** 0.40ms
+- **Duration:** 0.44ms
 - **Message:** SurgeRipple: engine created
 - **Details:**
   - engine_created: True
@@ -675,7 +685,7 @@ These are source-level issues that require manual code fixes.
 
 ### [PASS] cross_line_fctn
 - **Category:** cross_line_fctn
-- **Duration:** 1.29ms
+- **Duration:** 1.19ms
 - **Message:** CrossLineFCTN: integrator created
 - **Details:**
   - integrator_created: True
@@ -683,7 +693,7 @@ These are source-level issues that require manual code fixes.
 
 ### [PASS] lean_pipeline
 - **Category:** lean
-- **Duration:** 0.15ms
+- **Duration:** 0.13ms
 - **Message:** LeanPipeline: pipeline created
 - **Details:**
   - pipeline_created: True
@@ -691,67 +701,11 @@ These are source-level issues that require manual code fixes.
 
 ### [PASS] unified_integration
 - **Category:** integration
-- **Duration:** 0.80ms
+- **Duration:** 0.71ms
 - **Message:** UnifiedIntegration: hub created
 - **Details:**
   - engine_created: True
   - message: UnifiedIntegration: hub created
-
-## Failed Tests Detail
-
-### import_v12_wildbook_resolver
-```
-Traceback (most recent call last):
-  File "/mnt/agents/output/OMNI-HUB/test/integration_test.py", line 111, in run_test
-    details = test_fn()
-              ^^^^^^^^^
-  File "/mnt/agents/output/OMNI-HUB/test/integration_test.py", line 177, in _test
-    mod = importlib.import_module(module_name)
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/importlib/__init__.py", line 90, in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
-  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
-  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
-  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
-  File "<frozen importlib._bootstrap_external>", line 1133, in get_code
-  File "<frozen importlib._bootstrap_external>", line 1063, in source_to_code
-  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
-  File "/mnt/agents/output/OMNI-HUB/core/v12_wildbook_resolver.py", line 140
-    last_updated: str = field(default_factory=lambda: datetime.now(timezone.utc).isoformat()))
-                                                                                             ^
-SyntaxError: unmatched ')'
-
-```
-
-### import_quantum_yoneda_engine
-```
-Traceback (most recent call last):
-  File "/mnt/agents/output/OMNI-HUB/test/integration_test.py", line 111, in run_test
-    details = test_fn()
-              ^^^^^^^^^
-  File "/mnt/agents/output/OMNI-HUB/test/integration_test.py", line 177, in _test
-    mod = importlib.import_module(module_name)
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/importlib/__init__.py", line 90, in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
-  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
-  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
-  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
-  File "<frozen importlib._bootstrap_external>", line 1133, in get_code
-  File "<frozen importlib._bootstrap_external>", line 1063, in source_to_code
-  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
-  File "/mnt/agents/output/OMNI-HUB/core/quantum_yoneda_engine.py", line 23
-    from __future__ import annotations
-    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-SyntaxError: from __future__ imports must occur at the beginning of the file
-
-```
 
 ## System Health Assessment
 

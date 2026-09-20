@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-09-19T16:39:28.198273+00:00",
+  "timestamp": "2026-09-20T05:21:26.917500+00:00",
   "total_tests": 62,
-  "passed_tests": 60,
-  "failed_tests": 2,
+  "passed_tests": 62,
+  "failed_tests": 0,
   "skipped_tests": 0,
-  "system_health_percent": 96.77,
-  "summary": "Integration Test Complete: 60/62 passed, 2 failed. System Health: 96.8%",
+  "system_health_percent": 100.0,
+  "summary": "Integration Test Complete: 62/62 passed, 0 failed. System Health: 100.0%",
   "results": [
     {
       "name": "import_v12_standards",
       "category": "module_import",
       "passed": true,
-      "duration_ms": 55.38,
+      "duration_ms": 21.17,
       "message": "Imported v12_standards (89 members, class=True)",
       "details": {
         "module": "v12_standards",
@@ -25,7 +25,7 @@
       "name": "import_v12_emergence_engine",
       "category": "module_import",
       "passed": true,
-      "duration_ms": 838.05,
+      "duration_ms": 1430.43,
       "message": "Imported v12_emergence_engine (59 members, class=True)",
       "details": {
         "module": "v12_emergence_engine",
@@ -39,7 +39,7 @@
       "name": "import_v12_si_seven_layers",
       "category": "module_import",
       "passed": true,
-      "duration_ms": 14.21,
+      "duration_ms": 20.1,
       "message": "Imported v12_si_seven_layers (80 members, class=True)",
       "details": {
         "module": "v12_si_seven_layers",
@@ -53,7 +53,7 @@
       "name": "import_v12_fctn_full_bridge",
       "category": "module_import",
       "passed": true,
-      "duration_ms": 5.68,
+      "duration_ms": 5.56,
       "message": "Imported v12_fctn_full_bridge (63 members, class=True)",
       "details": {
         "module": "v12_fctn_full_bridge",
@@ -67,7 +67,7 @@
       "name": "import_v12_north_star",
       "category": "module_import",
       "passed": true,
-      "duration_ms": 11.51,
+      "duration_ms": 18.03,
       "message": "Imported v12_north_star (41 members, class=True)",
       "details": {
         "module": "v12_north_star",
@@ -81,7 +81,7 @@
       "name": "import_v12_circle_systems",
       "category": "module_import",
       "passed": true,
-      "duration_ms": 13.03,
+      "duration_ms": 18.12,
       "message": "Imported v12_circle_systems (89 members, class=True)",
       "details": {
         "module": "v12_circle_systems",
@@ -95,7 +95,7 @@
       "name": "import_v12_unified_orchestrator",
       "category": "module_import",
       "passed": true,
-      "duration_ms": 4.18,
+      "duration_ms": 5.54,
       "message": "Imported v12_unified_orchestrator (85 members, class=True)",
       "details": {
         "module": "v12_unified_orchestrator",
@@ -109,7 +109,7 @@
       "name": "import_v12_pattern_tower",
       "category": "module_import",
       "passed": true,
-      "duration_ms": 7.94,
+      "duration_ms": 33.74,
       "message": "Imported v12_pattern_tower (37 members, class=True)",
       "details": {
         "module": "v12_pattern_tower",
@@ -123,7 +123,7 @@
       "name": "import_v12_zhou_tian",
       "category": "module_import",
       "passed": true,
-      "duration_ms": 4.9,
+      "duration_ms": 6.99,
       "message": "Imported v12_zhou_tian (27 members, class=True)",
       "details": {
         "module": "v12_zhou_tian",
@@ -137,7 +137,7 @@
       "name": "import_v12_cross_line_si",
       "category": "module_import",
       "passed": true,
-      "duration_ms": 4.68,
+      "duration_ms": 7.12,
       "message": "Imported v12_cross_line_si (53 members, class=True)",
       "details": {
         "module": "v12_cross_line_si",
@@ -151,7 +151,7 @@
       "name": "import_v12_cross_line_fctn",
       "category": "module_import",
       "passed": true,
-      "duration_ms": 2.9,
+      "duration_ms": 4.42,
       "message": "Imported v12_cross_line_fctn (51 members, class=True)",
       "details": {
         "module": "v12_cross_line_fctn",
@@ -165,7 +165,7 @@
       "name": "import_v12_eleven_lines_si_loop",
       "category": "module_import",
       "passed": true,
-      "duration_ms": 6.06,
+      "duration_ms": 9.42,
       "message": "Imported v12_eleven_lines_si_loop (84 members, class=True)",
       "details": {
         "module": "v12_eleven_lines_si_loop",
@@ -179,7 +179,7 @@
       "name": "import_v12_qfos_microkernel",
       "category": "module_import",
       "passed": true,
-      "duration_ms": 98.4,
+      "duration_ms": 204.83,
       "message": "Imported v12_qfos_microkernel (51 members, class=True)",
       "details": {
         "module": "v12_qfos_microkernel",
@@ -193,7 +193,7 @@
       "name": "import_v12_qfos_rebuild",
       "category": "module_import",
       "passed": true,
-      "duration_ms": 10.09,
+      "duration_ms": 11.05,
       "message": "Imported v12_qfos_rebuild (47 members, class=False)",
       "details": {
         "module": "v12_qfos_rebuild",
@@ -207,7 +207,7 @@
       "name": "import_v12_self_evolving",
       "category": "module_import",
       "passed": true,
-      "duration_ms": 4.31,
+      "duration_ms": 6.34,
       "message": "Imported v12_self_evolving (38 members, class=True)",
       "details": {
         "module": "v12_self_evolving",
@@ -221,7 +221,7 @@
       "name": "import_v12_global_alignment",
       "category": "module_import",
       "passed": true,
-      "duration_ms": 4.84,
+      "duration_ms": 6.94,
       "message": "Imported v12_global_alignment (46 members, class=True)",
       "details": {
         "module": "v12_global_alignment",
@@ -235,7 +235,7 @@
       "name": "import_v12_meta_circle",
       "category": "module_import",
       "passed": true,
-      "duration_ms": 3.51,
+      "duration_ms": 5.26,
       "message": "Imported v12_meta_circle (57 members, class=True)",
       "details": {
         "module": "v12_meta_circle",
@@ -249,7 +249,7 @@
       "name": "import_v12_triangle_coupling",
       "category": "module_import",
       "passed": true,
-      "duration_ms": 1.19,
+      "duration_ms": 1.67,
       "message": "Imported v12_triangle_coupling (12 members, class=True)",
       "details": {
         "module": "v12_triangle_coupling",
@@ -263,7 +263,7 @@
       "name": "import_v12_field_circle_tensor_network",
       "category": "module_import",
       "passed": true,
-      "duration_ms": 0.02,
+      "duration_ms": 0.03,
       "message": "Imported v12_field_circle_tensor_network (30 members, class=True)",
       "details": {
         "module": "v12_field_circle_tensor_network",
@@ -277,7 +277,7 @@
       "name": "import_v12_surge_ripple_engine",
       "category": "module_import",
       "passed": true,
-      "duration_ms": 0.02,
+      "duration_ms": 0.04,
       "message": "Imported v12_surge_ripple_engine (70 members, class=True)",
       "details": {
         "module": "v12_surge_ripple_engine",
@@ -291,7 +291,7 @@
       "name": "import_v12_module_bus",
       "category": "module_import",
       "passed": true,
-      "duration_ms": 2.92,
+      "duration_ms": 4.01,
       "message": "Imported v12_module_bus (27 members, class=True)",
       "details": {
         "module": "v12_module_bus",
@@ -305,7 +305,7 @@
       "name": "import_v12_consensus_engine",
       "category": "module_import",
       "passed": true,
-      "duration_ms": 0.03,
+      "duration_ms": 0.06,
       "message": "Imported v12_consensus_engine (82 members, class=True)",
       "details": {
         "module": "v12_consensus_engine",
@@ -319,7 +319,7 @@
       "name": "import_v12_context_syntax_semantics_pragmatics",
       "category": "module_import",
       "passed": true,
-      "duration_ms": 6.75,
+      "duration_ms": 30.33,
       "message": "Imported v12_context_syntax_semantics_pragmatics (22 members, class=False)",
       "details": {
         "module": "v12_context_syntax_semantics_pragmatics",
@@ -333,7 +333,7 @@
       "name": "import_v12_debt_cleanup",
       "category": "module_import",
       "passed": true,
-      "duration_ms": 3.47,
+      "duration_ms": 5.3,
       "message": "Imported v12_debt_cleanup (29 members, class=True)",
       "details": {
         "module": "v12_debt_cleanup",
@@ -347,7 +347,7 @@
       "name": "import_v12_h_cpi_real",
       "category": "module_import",
       "passed": true,
-      "duration_ms": 0.66,
+      "duration_ms": 1.32,
       "message": "Imported v12_h_cpi_real (28 members, class=False)",
       "details": {
         "module": "v12_h_cpi_real",
@@ -361,7 +361,7 @@
       "name": "import_v12_knowledge_weaving",
       "category": "module_import",
       "passed": true,
-      "duration_ms": 5.82,
+      "duration_ms": 7.99,
       "message": "Imported v12_knowledge_weaving (43 members, class=True)",
       "details": {
         "module": "v12_knowledge_weaving",
@@ -375,7 +375,7 @@
       "name": "import_v12_lean_auto_pipeline",
       "category": "module_import",
       "passed": true,
-      "duration_ms": 6.75,
+      "duration_ms": 7.81,
       "message": "Imported v12_lean_auto_pipeline (38 members, class=True)",
       "details": {
         "module": "v12_lean_auto_pipeline",
@@ -389,7 +389,7 @@
       "name": "import_v12_mitchell_yoneda",
       "category": "module_import",
       "passed": true,
-      "duration_ms": 8.22,
+      "duration_ms": 14.88,
       "message": "Imported v12_mitchell_yoneda (59 members, class=False)",
       "details": {
         "module": "v12_mitchell_yoneda",
@@ -403,7 +403,7 @@
       "name": "import_v12_version_align",
       "category": "module_import",
       "passed": true,
-      "duration_ms": 4.26,
+      "duration_ms": 10.24,
       "message": "Imported v12_version_align (25 members, class=True)",
       "details": {
         "module": "v12_version_align",
@@ -417,7 +417,7 @@
       "name": "import_v12_wild_notebook",
       "category": "module_import",
       "passed": true,
-      "duration_ms": 509.04,
+      "duration_ms": 1059.96,
       "message": "Imported v12_wild_notebook (114 members, class=True)",
       "details": {
         "module": "v12_wild_notebook",
@@ -431,7 +431,7 @@
       "name": "import_v12_wild_notebook_unified",
       "category": "module_import",
       "passed": true,
-      "duration_ms": 26.93,
+      "duration_ms": 45.23,
       "message": "Imported v12_wild_notebook_unified (134 members, class=True)",
       "details": {
         "module": "v12_wild_notebook_unified",
@@ -444,18 +444,22 @@
     {
       "name": "import_v12_wildbook_resolver",
       "category": "module_import",
-      "passed": false,
-      "duration_ms": 2.33,
-      "message": "SyntaxError: unmatched ')' (v12_wildbook_resolver.py, line 140)",
+      "passed": true,
+      "duration_ms": 6.82,
+      "message": "Imported v12_wildbook_resolver (40 members, class=True)",
       "details": {
-        "traceback": "Traceback (most recent call last):\n  File \"/mnt/agents/output/OMNI-HUB/test/integration_test.py\", line 111, in run_test\n    details = test_fn()\n              ^^^^^^^^^\n  File \"/mnt/agents/output/OMNI-HUB/test/integration_test.py\", line 177, in _test\n    mod = importlib.import_module(module_name)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/importlib/__init__.py\", line 90, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1387, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1360, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1331, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 935, in _load_unlocked\n  File \"<frozen importlib._bootstrap_external>\", line 995, in exec_module\n  File \"<frozen importlib._bootstrap_external>\", line 1133, in get_code\n  File \"<frozen importlib._bootstrap_external>\", line 1063, in source_to_code\n  File \"<frozen importlib._bootstrap>\", line 488, in _call_with_frames_removed\n  File \"/mnt/agents/output/OMNI-HUB/core/v12_wildbook_resolver.py\", line 140\n    last_updated: str = field(default_factory=lambda: datetime.now(timezone.utc).isoformat()))\n                                                                                             ^\nSyntaxError: unmatched ')'\n"
+        "module": "v12_wildbook_resolver",
+        "expected_class": "WildbookResolver",
+        "class_found": true,
+        "module_members_count": 40,
+        "message": "Imported v12_wildbook_resolver (40 members, class=True)"
       }
     },
     {
       "name": "import_v12_unified_integration",
       "category": "module_import",
       "passed": true,
-      "duration_ms": 4.32,
+      "duration_ms": 5.29,
       "message": "Imported v12_unified_integration (41 members, class=True)",
       "details": {
         "module": "v12_unified_integration",
@@ -469,7 +473,7 @@
       "name": "import_v12_integration_test",
       "category": "module_import",
       "passed": true,
-      "duration_ms": 3.24,
+      "duration_ms": 4.39,
       "message": "Imported v12_integration_test (51 members, class=False)",
       "details": {
         "module": "v12_integration_test",
@@ -483,7 +487,7 @@
       "name": "import_cfts_phi_pi_e_alpha_integration",
       "category": "module_import",
       "passed": true,
-      "duration_ms": 2.09,
+      "duration_ms": 2.24,
       "message": "Imported cfts_phi_pi_e_alpha_integration (21 members, class=False)",
       "details": {
         "module": "cfts_phi_pi_e_alpha_integration",
@@ -496,11 +500,15 @@
     {
       "name": "import_quantum_yoneda_engine",
       "category": "module_import",
-      "passed": false,
-      "duration_ms": 14.82,
-      "message": "SyntaxError: from __future__ imports must occur at the beginning of the file (quantum_yoneda_engine.py, line 23)",
+      "passed": true,
+      "duration_ms": 1.76,
+      "message": "Imported quantum_yoneda_engine (29 members, class=False)",
       "details": {
-        "traceback": "Traceback (most recent call last):\n  File \"/mnt/agents/output/OMNI-HUB/test/integration_test.py\", line 111, in run_test\n    details = test_fn()\n              ^^^^^^^^^\n  File \"/mnt/agents/output/OMNI-HUB/test/integration_test.py\", line 177, in _test\n    mod = importlib.import_module(module_name)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/importlib/__init__.py\", line 90, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1387, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1360, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1331, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 935, in _load_unlocked\n  File \"<frozen importlib._bootstrap_external>\", line 995, in exec_module\n  File \"<frozen importlib._bootstrap_external>\", line 1133, in get_code\n  File \"<frozen importlib._bootstrap_external>\", line 1063, in source_to_code\n  File \"<frozen importlib._bootstrap>\", line 488, in _call_with_frames_removed\n  File \"/mnt/agents/output/OMNI-HUB/core/quantum_yoneda_engine.py\", line 23\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file\n"
+        "module": "quantum_yoneda_engine",
+        "expected_class": "QuantumYoneda",
+        "class_found": false,
+        "module_members_count": 29,
+        "message": "Imported quantum_yoneda_engine (29 members, class=False)"
       }
     },
     {
@@ -542,7 +550,7 @@
       "name": "si_seven_layers",
       "category": "si_communication",
       "passed": true,
-      "duration_ms": 8.38,
+      "duration_ms": 30.24,
       "message": "SI7: 0/1000 processed, 1000 errors",
       "details": {
         "messages_sent": 1000,
@@ -557,24 +565,24 @@
       "name": "fctn_energy_conservation",
       "category": "fctn_cycle",
       "passed": true,
-      "duration_ms": 42.54,
-      "message": "FCTN: 10 cycles, conserved=False, latency=4.22ms",
+      "duration_ms": 93.45,
+      "message": "FCTN: 10 cycles, conserved=False, latency=9.29ms",
       "details": {
         "cycles": 10,
         "initial_energy": 9.242,
-        "final_energy": 12.7834,
-        "energy_delta": 3.5414,
+        "final_energy": 12.7679,
+        "energy_delta": 3.5259,
         "energy_conserved": false,
-        "avg_latency_ms": 4.2224,
-        "max_latency_ms": 4.837,
-        "message": "FCTN: 10 cycles, conserved=False, latency=4.22ms"
+        "avg_latency_ms": 9.2855,
+        "max_latency_ms": 32.7039,
+        "message": "FCTN: 10 cycles, conserved=False, latency=9.29ms"
       }
     },
     {
       "name": "circle_systems_22",
       "category": "circle_systems",
       "passed": true,
-      "duration_ms": 1.41,
+      "duration_ms": 2.35,
       "message": "Circles: 22/22 tests passed",
       "details": {
         "tests_passed": 22,
@@ -610,7 +618,7 @@
       "name": "north_star_268",
       "category": "north_star",
       "passed": true,
-      "duration_ms": 46.78,
+      "duration_ms": 109.85,
       "message": "NorthStar: 268 steps, E=6654.47",
       "details": {
         "steps_executed": 268,
@@ -627,7 +635,7 @@
       "name": "cross_line_alignment",
       "category": "cross_line",
       "passed": true,
-      "duration_ms": 2.37,
+      "duration_ms": 5.01,
       "message": "CrossLine: 11/11 lines, cross_msg=True",
       "details": {
         "lines_tested": 11,
@@ -641,7 +649,7 @@
       "name": "emergence_engine",
       "category": "emergence",
       "passed": true,
-      "duration_ms": 11.81,
+      "duration_ms": 16.24,
       "message": "Emergence: E=6654.47, threshold=7000.0",
       "details": {
         "emergence_index": 6654.47,
@@ -656,7 +664,7 @@
       "name": "pattern_tower",
       "category": "pattern",
       "passed": true,
-      "duration_ms": 0.29,
+      "duration_ms": 0.38,
       "message": "PatternTower: 7 layers, 0 patterns",
       "details": {
         "tower_layers_count": 7,
@@ -670,7 +678,7 @@
       "name": "zhou_tian",
       "category": "zhou_tian",
       "passed": true,
-      "duration_ms": 0.58,
+      "duration_ms": 0.86,
       "message": "ZhouTian: coordinator, small(5 ticks), great(3 ticks) OK",
       "details": {
         "coordinator_created": true,
@@ -683,7 +691,7 @@
       "name": "unified_orchestrator",
       "category": "orchestrator",
       "passed": true,
-      "duration_ms": 89.22,
+      "duration_ms": 139.63,
       "message": "Orchestrator: created, field_dims=67",
       "details": {
         "orchestrator_created": true,
@@ -697,7 +705,7 @@
       "name": "qfos_microkernel",
       "category": "qfos",
       "passed": true,
-      "duration_ms": 0.03,
+      "duration_ms": 0.06,
       "message": "QF-OS: kernel created, services=True",
       "details": {
         "kernel_created": true,
@@ -710,7 +718,7 @@
       "name": "self_evolving",
       "category": "evolution",
       "passed": true,
-      "duration_ms": 0.13,
+      "duration_ms": 0.28,
       "message": "SelfEvolving: orchestrator created, evolution cycle OK",
       "details": {
         "orchestrator_created": true,
@@ -735,7 +743,7 @@
       "name": "consensus_engine",
       "category": "consensus",
       "passed": true,
-      "duration_ms": 0.06,
+      "duration_ms": 0.04,
       "message": "Consensus: tracker created, proposal OK",
       "details": {
         "tracker_created": true,
@@ -747,7 +755,7 @@
       "name": "field_circle_tensor",
       "category": "tensor",
       "passed": true,
-      "duration_ms": 0.76,
+      "duration_ms": 0.72,
       "message": "FCTN-Bridge: energy=9.2420, health=0.9373, coherence=0.9426",
       "details": {
         "bridge_created": true,
@@ -761,7 +769,7 @@
       "name": "eleven_lines_si",
       "category": "eleven_lines",
       "passed": true,
-      "duration_ms": 33.3,
+      "duration_ms": 0.97,
       "message": "11-Line SI: 0 lines ticked",
       "details": {
         "si_created": true,
@@ -789,7 +797,7 @@
       "name": "meta_circle",
       "category": "meta",
       "passed": true,
-      "duration_ms": 4.36,
+      "duration_ms": 4.56,
       "message": "MetaCircle: created, verification OK",
       "details": {
         "meta_circle_created": true,
@@ -801,7 +809,7 @@
       "name": "knowledge_weaving",
       "category": "knowledge",
       "passed": true,
-      "duration_ms": 0.19,
+      "duration_ms": 0.23,
       "message": "KnowledgeWeaving: engine created",
       "details": {
         "weaver_created": true,
@@ -812,7 +820,7 @@
       "name": "debt_cleanup",
       "category": "debt",
       "passed": true,
-      "duration_ms": 0.02,
+      "duration_ms": 0.03,
       "message": "DebtCleanup: executor created",
       "details": {
         "engine_created": true,
@@ -823,7 +831,7 @@
       "name": "version_alignment",
       "category": "version",
       "passed": true,
-      "duration_ms": 0.5,
+      "duration_ms": 0.59,
       "message": "VersionAlign: manager created",
       "details": {
         "aligner_created": true,
@@ -834,7 +842,7 @@
       "name": "surge_ripple",
       "category": "surge",
       "passed": true,
-      "duration_ms": 0.4,
+      "duration_ms": 0.44,
       "message": "SurgeRipple: engine created",
       "details": {
         "engine_created": true,
@@ -856,7 +864,7 @@
       "name": "cross_line_fctn",
       "category": "cross_line_fctn",
       "passed": true,
-      "duration_ms": 1.29,
+      "duration_ms": 1.19,
       "message": "CrossLineFCTN: integrator created",
       "details": {
         "integrator_created": true,
@@ -867,7 +875,7 @@
       "name": "lean_pipeline",
       "category": "lean",
       "passed": true,
-      "duration_ms": 0.15,
+      "duration_ms": 0.13,
       "message": "LeanPipeline: pipeline created",
       "details": {
         "pipeline_created": true,
@@ -878,7 +886,7 @@
       "name": "unified_integration",
       "category": "integration",
       "passed": true,
-      "duration_ms": 0.8,
+      "duration_ms": 0.71,
       "message": "UnifiedIntegration: hub created",
       "details": {
         "engine_created": true,
