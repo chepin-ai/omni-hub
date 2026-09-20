@@ -1,19 +1,19 @@
 {
   "version": "12.0.0",
-  "timestamp": 1789881686.6098294,
-  "timestamp_human": "Sun Sep 20 13:21:26 2026",
+  "timestamp": 1789892511.4477313,
+  "timestamp_human": "Sun Sep 20 16:21:51 2026",
   "total_tests": 21,
-  "passed": 18,
-  "failed": 3,
+  "passed": 21,
+  "failed": 0,
   "skipped": 0,
   "errors": 0,
-  "duration_ms": 3317.091,
-  "pass_rate": 85.71,
+  "duration_ms": 4375.272,
+  "pass_rate": 100.0,
   "results": [
     {
       "name": "import_v12_standards",
       "status": "PASS",
-      "duration_ms": 8.788,
+      "duration_ms": 78.633,
       "message": "All 14 attributes found",
       "details": {
         "checks": {
@@ -38,7 +38,7 @@
     {
       "name": "import_v12_emergence_engine",
       "status": "PASS",
-      "duration_ms": 1304.489,
+      "duration_ms": 1247.423,
       "message": "All 14 classes found",
       "details": {
         "checks": {
@@ -62,7 +62,7 @@
     {
       "name": "import_v12_unified_orchestrator",
       "status": "PASS",
-      "duration_ms": 6.956,
+      "duration_ms": 47.976,
       "message": "All 13 classes found",
       "details": {
         "checks": {
@@ -99,9 +99,9 @@
     },
     {
       "name": "v12_constants",
-      "status": "FAIL",
-      "duration_ms": 0.002,
-      "message": "Failed: ['UNIFIED_FIELD_DIMENSIONS']",
+      "status": "PASS",
+      "duration_ms": 0.001,
+      "message": "All constants accurate",
       "details": {
         "checks": {
           "PHI_GOLDEN_accuracy": true,
@@ -112,7 +112,7 @@
           "PHI_identity": true,
           "PHI_PI_ratio": true,
           "EMERGENCE_THRESHOLD_V12": true,
-          "UNIFIED_FIELD_DIMENSIONS": false
+          "UNIFIED_FIELD_DIMENSIONS": true
         },
         "PHI_GOLDEN": 1.618033988749895,
         "PI": 3.141592653589793,
@@ -124,7 +124,7 @@
     {
       "name": "v12_dimensions",
       "status": "PASS",
-      "duration_ms": 0.001,
+      "duration_ms": 0.0,
       "message": "64 v11 dims + 3 v12 dims = 67 total",
       "details": {
         "checks": {
@@ -175,7 +175,7 @@
     {
       "name": "emergence_computation_baseline",
       "status": "PASS",
-      "duration_ms": 0.003,
+      "duration_ms": 0.022,
       "message": "E=3559.30 (v11 baseline with v12 weights)",
       "details": {
         "checks": {
@@ -228,7 +228,7 @@
     {
       "name": "emergence_target_7000_path",
       "status": "PASS",
-      "duration_ms": 0.007,
+      "duration_ms": 0.006,
       "message": "Current E=3559.30, Improved E=7369.18, Target=7000",
       "details": {
         "checks": {
@@ -289,7 +289,7 @@
     {
       "name": "orchestrator_initialization",
       "status": "PASS",
-      "duration_ms": 0.005,
+      "duration_ms": 0.003,
       "message": "Orchestrator initialized with 14 modules",
       "details": {
         "checks": {
@@ -308,14 +308,14 @@
     },
     {
       "name": "orchestrator_field_management",
-      "status": "FAIL",
-      "duration_ms": 0.006,
-      "message": "Failed: ['field_dimensions']",
+      "status": "PASS",
+      "duration_ms": 0.005,
+      "message": "Field management works",
       "details": {
         "checks": {
           "field_initialized": true,
           "field_valid": true,
-          "field_dimensions": false,
+          "field_dimensions": true,
           "state_retrievable": true,
           "state_copy_independent": true,
           "tick_increments": true
@@ -341,7 +341,7 @@
     {
       "name": "v11_module_imports",
       "status": "PASS",
-      "duration_ms": 0.001,
+      "duration_ms": 0.0,
       "message": "9/9 v11 modules imported",
       "details": {
         "checks": {
@@ -430,15 +430,15 @@
     },
     {
       "name": "v12_v11_field_compatibility",
-      "status": "FAIL",
-      "duration_ms": 0.002,
-      "message": "Failed: ['deserialization_works']",
+      "status": "PASS",
+      "duration_ms": 0.001,
+      "message": "v12/v11 field compatibility verified",
       "details": {
         "checks": {
           "v11_dims_accessible": true,
           "v12_dims_accessible": true,
           "serialization_works": true,
-          "deserialization_works": false,
+          "deserialization_works": true,
           "field_coherence_computable": true,
           "emergence_computable": true
         },
@@ -459,7 +459,7 @@
     {
       "name": "cross_project_triangle",
       "status": "PASS",
-      "duration_ms": 0.001,
+      "duration_ms": 0.0,
       "message": "Triangle index=0.3500, closure=0.9865",
       "details": {
         "checks": {
@@ -482,7 +482,7 @@
     {
       "name": "line_system",
       "status": "PASS",
-      "duration_ms": 0.001,
+      "duration_ms": 0.0,
       "message": "11 lines: ['ucif2', 'lvlu', 'lgt', 'qfa', 'vinf', 'qgl', 'qlv', 'cisvr', 'qtlv', 'usrm', 'cfts']",
       "details": {
         "checks": {
@@ -511,7 +511,7 @@
     {
       "name": "emergence_weights",
       "status": "PASS",
-      "duration_ms": 0.001,
+      "duration_ms": 0.0,
       "message": "11 weights sum to 1.000000",
       "details": {
         "checks": {
@@ -541,12 +541,12 @@
   ],
   "summary": {
     "total_tests": 21,
-    "passed": 18,
-    "failed": 3,
+    "passed": 21,
+    "failed": 0,
     "skipped": 0,
     "errors": 0,
-    "pass_rate": 85.71,
-    "duration_ms": 3317.091,
+    "pass_rate": 100.0,
+    "duration_ms": 4375.272,
     "baseline_e": 4419.07,
     "target_e": 7000.0,
     "baseline_state": "REASON",

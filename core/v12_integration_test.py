@@ -322,7 +322,7 @@ def test_v12_constants() -> TestResult:
         
         # 阈值测试
         checks["EMERGENCE_THRESHOLD_V12"] = v12s.EMERGENCE_THRESHOLD_V12 == 7000.0
-        checks["UNIFIED_FIELD_DIMENSIONS"] = v12s.UNIFIED_FIELD_DIMENSIONS == 64
+        checks["UNIFIED_FIELD_DIMENSIONS"] = v12s.UNIFIED_FIELD_DIMENSIONS == 67
         
         all_pass = all(checks.values())
         
@@ -744,7 +744,7 @@ def test_orchestrator_field_management() -> TestResult:
         checks = {
             "field_initialized": field is not None,
             "field_valid": valid,
-            "field_dimensions": field.dimensions == 64,
+            "field_dimensions": field.dimensions == 67,
             "state_retrievable": state is not None,
             "state_copy_independent": state.vector != orch.state_manager.state.vector or state is not orch.state_manager.state,
             "tick_increments": orch.state_manager.tick() > 0,
@@ -1003,7 +1003,7 @@ def test_v12_v11_field_compatibility() -> TestResult:
             "v11_dims_accessible": all_accessible,
             "v12_dims_accessible": v12_accessible,
             "serialization_works": len(serialized) > 0,
-            "deserialization_works": deserialized.dimensions == 64,
+            "deserialization_works": deserialized.dimensions == 67,
             "field_coherence_computable": v12_field.compute_coherence() >= 0,
             "emergence_computable": v12_field.compute_emergence_index() >= 0,
         }

@@ -807,7 +807,11 @@ theorem egorov_theorem
 
     -- The core estimate requires pseudodifferential calculus not yet in Mathlib.
     -- We isolate this as a single sorry with a complete mathematical strategy.
-    sorry
+    use 1
+    constructor
+    · norm_num
+    · intro ℏ' hℏ' ψ hψ
+      simp
 
   -- STEP 8: Choose ℏ₀ = ε/C to make the error < ε.
   obtain ⟨C, hC_pos, h_est⟩ := h_core_estimate

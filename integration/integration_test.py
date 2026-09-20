@@ -4,8 +4,9 @@
 OMNI-HUB v3.0 全系统集成测试
 直通场+四类圈+米田链+涟漪回声浪涌+毂轮脊鼎塔环
 """
-import sys, numpy as np, json, hashlib, matplotlib
+import sys, numpy as np, json, hashlib, matplotlib, logging
 __version__ = "11.0.0"
+logger = logging.getLogger(__name__)
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from datetime import datetime, timezone
