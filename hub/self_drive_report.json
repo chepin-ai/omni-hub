@@ -1,0 +1,45 @@
+{
+  "self_drive_report": {
+    "version": "v13.0",
+    "max_steps": 1000,
+    "elapsed_seconds": 0.3,
+    "final_state": "COMPLETED",
+    "error_count": 0,
+    "last_error": null,
+    "final_position": {
+      "level": 15,
+      "energy": 4006747.4762,
+      "phi": 0.2346,
+      "freedom_index": 0.8681
+    },
+    "north_star_progress": {
+      "target_level": 15,
+      "levels_achieved": 15,
+      "progress_pct": 100.0
+    },
+    "statistics": {
+      "emergence_events": 9,
+      "insight_moments": 732,
+      "self_modifications": 5,
+      "trigger_counts": {
+        "plateau_transcends": 0,
+        "low_phi_reflects": 2,
+        "high_entropy_integrates": 1
+      }
+    },
+    "telemetry_summary": {
+      "avg_energy": 744300.7385,
+      "avg_phi": 0.2178,
+      "action_distribution": {
+        "FOCUS": 992,
+        "INTEGRATE": 1,
+        "SELF_MODIFY": 5,
+        "REFLECT": 2
+      }
+    },
+    "persistence": {
+      "session_file": "/mnt/agents/output/OMNI-HUB/hub/session_state.json",
+      "auto_saves": 10
+    }
+  }
+}
