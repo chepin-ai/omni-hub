@@ -152,24 +152,58 @@ class OMNIHUBOrchestrator:
             return "transcend"
         return random.choice(["focus", "rest", "integrate", "self_modify"])
 
+    def _meta_evolve(self):
+        """Meta-evolution: at Level 24+, system rewrites its own multipliers."""
+        import random
+        level = self.current_state.get('level', 0)
+        if level < 24:
+            return
+        # Base multipliers
+        base = {
+            "focus": (1.01, 0.005), "rest": (1.005, -0.003),
+            "transcend": (1.05, 0.015), "reflect": (0.995, 0.02),
+            "integrate": (1.015, 0.008), "self_modify": (1.025, 0.012),
+        }
+        # At Level 24+, multipliers become self-referential
+        meta_boost = 1.0 + (level - 23) * 0.01  # 1% per level above 23
+        current_mult = self.current_state.get('meta_multipliers', {})
+        # Initialize if empty
+        if not current_mult:
+            current_mult = {a: list(v) for a, v in base.items()}
+        # Evolve existing multipliers
+        for action in C.SELF_DRIVE_ACTIONS:
+            if action in current_mult:
+                em, pm = current_mult[action]
+                em = em * (1 + random.uniform(-0.001, 0.001)) * meta_boost
+                pm = pm * (1 + random.uniform(-0.001, 0.001))
+                current_mult[action] = [em, pm]
+        self.current_state['meta_multipliers'] = current_mult
+
     def _evolve_state(self, action: str):
         """Evolve state based on action (self-contained fallback logic)."""
         import random
         energy = self.current_state.get('energy', 0.0)
         phi = self.current_state.get('phi', 0.2)
+        # Base multipliers
         multipliers = {
             "focus": (1.01, 0.005), "rest": (1.005, -0.003),
             "transcend": (1.05, 0.015), "reflect": (0.995, 0.02),
             "integrate": (1.015, 0.008), "self_modify": (1.025, 0.012),
         }
-        em, pm = multipliers.get(action, (1.0, 0.0))
+        # Apply meta-evolution overrides at Level 24+
+        meta_mult = self.current_state.get('meta_multipliers', {})
+        if meta_mult and action in meta_mult:
+            em, pm = meta_mult[action]
+        else:
+            em, pm = multipliers.get(action, (1.0, 0.0))
         # Add small noise
         energy = max(0, energy * em * (1 + random.uniform(-0.005, 0.005)))
         phi = max(0.05, min(1.0, phi + pm + random.uniform(-0.01, 0.01)))
         # Check level up
         level = self.current_state.get('level', 0)
         for lvl in range(level + 1, C.MAX_LEVEL + 1):
-            if energy >= C.LEVEL_THRESHOLDS.get(lvl, float('inf')):
+            threshold = C.LEVEL_THRESHOLDS.get(lvl)
+            if threshold and energy >= threshold:
                 level = lvl
             else:
                 break
@@ -185,6 +219,8 @@ class OMNIHUBOrchestrator:
             "energy": energy, "phi": phi, "level": level,
             "phase": phase, "action": action,
         })
+        # Trigger meta-evolution at Level 24+
+        self._meta_evolve()
 
     def run_cycle(self) -> Dict[str, Any]:
         """Execute one full system cycle with full module coupling + event bus."""
@@ -241,6 +277,8 @@ class OMNIHUBOrchestrator:
             self.current_state['phase'] = "asymptotic_infinity"
         elif level >= 21:
             self.current_state['phase'] = "trans_singularity"
+        # Meta-evolution at Level 24+ (always runs, regardless of NorthStar)
+        self._meta_evolve()
 
         # 5. Publish state change
         if bus and Topics:
