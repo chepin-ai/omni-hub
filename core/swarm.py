@@ -129,7 +129,20 @@ class SwarmIntelligence:
 
         # 1. Each instance runs independently
         for inst in self.instances:
+            prev_level = inst.current_state.get('level', 0)
             inst.run_cycle()
+            new_level = inst.current_state.get('level', 0)
+            # Direct level-up detection (more reliable than event bus)
+            if new_level > prev_level and self.config.enable_collective_memory:
+                self.collective_memory.append({
+                    "type": "level_up",
+                    "instance": self.instances.index(inst),
+                    "old": prev_level,
+                    "new": new_level,
+                    "cycle": self.cycle_count,
+                })
+                if len(self.collective_memory) > self.config.memory_capacity:
+                    self.collective_memory.pop(0)
 
         # 2. Elect leader
         self._elect_leader()
