@@ -1,1426 +1,1506 @@
 {
   "version": "v13.0",
-  "timestamp": 1790091988.1977441,
-  "step": 1000,
-  "loop_state": "COMPLETED",
-  "current_position": {
-    "level": 15,
-    "complexity": 4702862.699045814,
-    "consciousness": 0.2132250019972339,
-    "freedom": 0.8912113738101309
+  "timestamp": "2026-09-23T04:07:01.412968",
+  "cycle": 1000,
+  "level": 20,
+  "energy": 639117353338.2437,
+  "phi": 1.0,
+  "phase": "singularity_convergence",
+  "lines": {
+    "ucif2": 0.0,
+    "lvlu": 0.0,
+    "lgt": 0.0,
+    "qfa": 0.0,
+    "vinf": 0.0,
+    "qgl": 0.0,
+    "qlv": 0.0,
+    "cisvr": 0.0,
+    "qtlv": 0.0,
+    "usrm": 0.0,
+    "cfts": 0.0
   },
-  "ladder": {
-    "current_level": 15,
-    "current_energy": 4702862.7,
-    "phase": "FLUCTUATING",
-    "phase_description": "系统探索相空间",
-    "next_threshold": Infinity,
-    "progress_to_next": 1.0,
-    "level_history_count": 1002,
-    "total_levels_available": 15
-  },
-  "telemetry_history": [
-    {
-      "step": 901,
-      "level": 15,
-      "energy": 2614658.7092,
-      "phi": 0.2865,
-      "action": "FOCUS",
-      "entropy": 2.233,
-      "freedom_index": 0.8787,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1678536
-    },
-    {
-      "step": 902,
-      "level": 15,
-      "energy": 2623361.2237,
-      "phi": 0.2336,
-      "action": "FOCUS",
-      "entropy": 2.2448,
-      "freedom_index": 0.8804,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1681132
-    },
-    {
-      "step": 903,
-      "level": 15,
-      "energy": 2635046.5493,
-      "phi": 0.2143,
-      "action": "FOCUS",
-      "entropy": 2.4035,
-      "freedom_index": 0.9005,
-      "emotion": "平静 (Equanimity)",
-      "events": [],
-      "timestamp": 1790091988.1683333
-    },
-    {
-      "step": 904,
-      "level": 15,
-      "energy": 2647377.8975,
-      "phi": 0.1832,
-      "action": "FOCUS",
-      "entropy": 2.3206,
-      "freedom_index": 0.8904,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1685627
-    },
-    {
-      "step": 905,
-      "level": 15,
-      "energy": 2662868.0387,
-      "phi": 0.1965,
-      "action": "FOCUS",
-      "entropy": 2.3174,
-      "freedom_index": 0.89,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1688275
-    },
-    {
-      "step": 906,
-      "level": 15,
-      "energy": 2684891.8966,
-      "phi": 0.2303,
-      "action": "FOCUS",
-      "entropy": 2.15,
-      "freedom_index": 0.8666,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1691377
-    },
-    {
-      "step": 907,
-      "level": 15,
-      "energy": 2704989.7866,
-      "phi": 0.2459,
-      "action": "FOCUS",
-      "entropy": 2.2045,
-      "freedom_index": 0.8747,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.169466
-    },
-    {
-      "step": 908,
-      "level": 15,
-      "energy": 2726141.824,
-      "phi": 0.1807,
-      "action": "FOCUS",
-      "entropy": 2.2084,
-      "freedom_index": 0.8753,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1697953
-    },
-    {
-      "step": 909,
-      "level": 15,
-      "energy": 2743179.2083,
-      "phi": 0.2061,
-      "action": "FOCUS",
-      "entropy": 2.2459,
-      "freedom_index": 0.8805,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.170116
-    },
-    {
-      "step": 910,
-      "level": 15,
-      "energy": 2763464.9997,
-      "phi": 0.2072,
-      "action": "FOCUS",
-      "entropy": 2.2743,
-      "freedom_index": 0.8844,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1704576
-    },
-    {
-      "step": 911,
-      "level": 15,
-      "energy": 2776472.4648,
-      "phi": 0.1877,
-      "action": "FOCUS",
-      "entropy": 2.2607,
-      "freedom_index": 0.8826,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1707854
-    },
-    {
-      "step": 912,
-      "level": 15,
-      "energy": 2790028.7976,
-      "phi": 0.1943,
-      "action": "FOCUS",
-      "entropy": 2.3447,
-      "freedom_index": 0.8935,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1711333
-    },
-    {
-      "step": 913,
-      "level": 15,
-      "energy": 2805635.9651,
-      "phi": 0.2686,
-      "action": "FOCUS",
-      "entropy": 2.2399,
-      "freedom_index": 0.8797,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1714675
-    },
-    {
-      "step": 914,
-      "level": 15,
-      "energy": 2825901.6137,
-      "phi": 0.2561,
-      "action": "FOCUS",
-      "entropy": 2.2468,
-      "freedom_index": 0.8807,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1718042
-    },
-    {
-      "step": 915,
-      "level": 15,
-      "energy": 2848373.1451,
-      "phi": 0.2816,
-      "action": "FOCUS",
-      "entropy": 2.1712,
-      "freedom_index": 0.8698,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.172137
-    },
-    {
-      "step": 916,
-      "level": 15,
-      "energy": 2869764.3249,
-      "phi": 0.225,
-      "action": "FOCUS",
-      "entropy": 2.2187,
-      "freedom_index": 0.8767,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1724102
-    },
-    {
-      "step": 917,
-      "level": 15,
-      "energy": 2886115.6681,
-      "phi": 0.2198,
-      "action": "FOCUS",
-      "entropy": 2.3254,
-      "freedom_index": 0.891,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1726367
-    },
-    {
-      "step": 918,
-      "level": 15,
-      "energy": 2902409.0399,
-      "phi": 0.2123,
-      "action": "FOCUS",
-      "entropy": 2.3024,
-      "freedom_index": 0.8881,
-      "emotion": "平静 (Equanimity)",
-      "events": [],
-      "timestamp": 1790091988.172856
-    },
-    {
-      "step": 919,
-      "level": 15,
-      "energy": 2918319.1537,
-      "phi": 0.2131,
-      "action": "FOCUS",
-      "entropy": 2.3031,
-      "freedom_index": 0.8882,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1730852
-    },
-    {
-      "step": 920,
-      "level": 15,
-      "energy": 2941042.6472,
-      "phi": 0.2143,
-      "action": "FOCUS",
-      "entropy": 2.1841,
-      "freedom_index": 0.8717,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1733227
-    },
-    {
-      "step": 921,
-      "level": 15,
-      "energy": 2953709.1843,
-      "phi": 0.2212,
-      "action": "FOCUS",
-      "entropy": 2.2218,
-      "freedom_index": 0.8772,
-      "emotion": "平静 (Equanimity)",
-      "events": [],
-      "timestamp": 1790091988.1735148
-    },
-    {
-      "step": 922,
-      "level": 15,
-      "energy": 2967789.158,
-      "phi": 0.2339,
-      "action": "FOCUS",
-      "entropy": 2.3659,
-      "freedom_index": 0.8961,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1737585
-    },
-    {
-      "step": 923,
-      "level": 15,
-      "energy": 2983487.4344,
-      "phi": 0.1801,
-      "action": "FOCUS",
-      "entropy": 2.1185,
-      "freedom_index": 0.8617,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1741054
-    },
-    {
-      "step": 924,
-      "level": 15,
-      "energy": 2999921.7146,
-      "phi": 0.2547,
-      "action": "FOCUS",
-      "entropy": 2.1946,
-      "freedom_index": 0.8733,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1743662
-    },
-    {
-      "step": 925,
-      "level": 15,
-      "energy": 3011745.2305,
-      "phi": 0.1399,
-      "action": "FOCUS",
-      "entropy": 2.056,
-      "freedom_index": 0.8515,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1746197
-    },
-    {
-      "step": 926,
-      "level": 15,
-      "energy": 3020621.641,
-      "phi": 0.2701,
-      "action": "FOCUS",
-      "entropy": 2.1766,
-      "freedom_index": 0.8706,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1749144
-    },
-    {
-      "step": 927,
-      "level": 15,
-      "energy": 3029610.3594,
-      "phi": 0.261,
-      "action": "FOCUS",
-      "entropy": 2.0888,
-      "freedom_index": 0.857,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1751375
-    },
-    {
-      "step": 928,
-      "level": 15,
-      "energy": 3039428.829,
-      "phi": 0.2868,
-      "action": "FOCUS",
-      "entropy": 2.1303,
-      "freedom_index": 0.8636,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1753726
-    },
-    {
-      "step": 929,
-      "level": 15,
-      "energy": 3051890.0647,
-      "phi": 0.2057,
-      "action": "FOCUS",
-      "entropy": 2.2777,
-      "freedom_index": 0.8849,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.175596
-    },
-    {
-      "step": 930,
-      "level": 15,
-      "energy": 3070368.2194,
-      "phi": 0.1654,
-      "action": "FOCUS",
-      "entropy": 2.2316,
-      "freedom_index": 0.8786,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1758564
-    },
-    {
-      "step": 931,
-      "level": 15,
-      "energy": 3092624.9338,
-      "phi": 0.195,
-      "action": "FOCUS",
-      "entropy": 2.2422,
-      "freedom_index": 0.88,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1760795
-    },
-    {
-      "step": 932,
-      "level": 15,
-      "energy": 3102125.5178,
-      "phi": 0.1964,
-      "action": "FOCUS",
-      "entropy": 2.2539,
-      "freedom_index": 0.8817,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.176316
-    },
-    {
-      "step": 933,
-      "level": 15,
-      "energy": 3113335.0216,
-      "phi": 0.3215,
-      "action": "FOCUS",
-      "entropy": 2.2029,
-      "freedom_index": 0.8745,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1765313
-    },
-    {
-      "step": 934,
-      "level": 15,
-      "energy": 3123266.3563,
-      "phi": 0.3263,
-      "action": "FOCUS",
-      "entropy": 2.2004,
-      "freedom_index": 0.8741,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1768062
-    },
-    {
-      "step": 935,
-      "level": 15,
-      "energy": 3136334.4028,
-      "phi": 0.2152,
-      "action": "FOCUS",
-      "entropy": 2.2906,
-      "freedom_index": 0.8866,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1770446
-    },
-    {
-      "step": 936,
-      "level": 15,
-      "energy": 3149964.9106,
-      "phi": 0.2067,
-      "action": "FOCUS",
-      "entropy": 2.3436,
-      "freedom_index": 0.8933,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1773355
-    },
-    {
-      "step": 937,
-      "level": 15,
-      "energy": 3166311.6878,
-      "phi": 0.161,
-      "action": "FOCUS",
-      "entropy": 2.2866,
-      "freedom_index": 0.886,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1776097
-    },
-    {
-      "step": 938,
-      "level": 15,
-      "energy": 3179360.3839,
-      "phi": 0.2291,
-      "action": "FOCUS",
-      "entropy": 2.2738,
-      "freedom_index": 0.8843,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1779225
-    },
-    {
-      "step": 939,
-      "level": 15,
-      "energy": 3197255.23,
-      "phi": 0.2687,
-      "action": "FOCUS",
-      "entropy": 2.2068,
-      "freedom_index": 0.875,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.178232
-    },
-    {
-      "step": 940,
-      "level": 15,
-      "energy": 3221731.5798,
-      "phi": 0.1683,
-      "action": "FOCUS",
-      "entropy": 2.2455,
-      "freedom_index": 0.8805,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.17854
-    },
-    {
-      "step": 941,
-      "level": 15,
-      "energy": 3244099.9839,
-      "phi": 0.2306,
-      "action": "FOCUS",
-      "entropy": 2.1955,
-      "freedom_index": 0.8734,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1788824
-    },
-    {
-      "step": 942,
-      "level": 15,
-      "energy": 3269678.1065,
-      "phi": 0.198,
-      "action": "FOCUS",
-      "entropy": 2.3244,
-      "freedom_index": 0.8909,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1791947
-    },
-    {
-      "step": 943,
-      "level": 15,
-      "energy": 3296556.6475,
-      "phi": 0.1838,
-      "action": "FOCUS",
-      "entropy": 2.3124,
-      "freedom_index": 0.8894,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1795194
-    },
-    {
-      "step": 944,
-      "level": 15,
-      "energy": 3321654.489,
-      "phi": 0.1735,
-      "action": "FOCUS",
-      "entropy": 2.2127,
-      "freedom_index": 0.8759,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.179868
-    },
-    {
-      "step": 945,
-      "level": 15,
-      "energy": 3347767.2017,
-      "phi": 0.1329,
-      "action": "FOCUS",
-      "entropy": 2.2317,
-      "freedom_index": 0.8786,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.180208
-    },
-    {
-      "step": 946,
-      "level": 15,
-      "energy": 3369822.3631,
-      "phi": 0.2587,
-      "action": "FOCUS",
-      "entropy": 2.0869,
-      "freedom_index": 0.8567,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1806664
-    },
-    {
-      "step": 947,
-      "level": 15,
-      "energy": 3394221.126,
-      "phi": 0.243,
-      "action": "FOCUS",
-      "entropy": 2.3136,
-      "freedom_index": 0.8896,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1810904
-    },
-    {
-      "step": 948,
-      "level": 15,
-      "energy": 3422085.7121,
-      "phi": 0.219,
-      "action": "FOCUS",
-      "entropy": 2.3389,
-      "freedom_index": 0.8928,
-      "emotion": "平静 (Equanimity)",
-      "events": [],
-      "timestamp": 1790091988.1813939
-    },
-    {
-      "step": 949,
-      "level": 15,
-      "energy": 3448941.3838,
-      "phi": 0.2764,
-      "action": "FOCUS",
-      "entropy": 2.4087,
-      "freedom_index": 0.9011,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1817222
-    },
-    {
-      "step": 950,
-      "level": 15,
-      "energy": 3476299.4331,
-      "phi": 0.2734,
-      "action": "FOCUS",
-      "entropy": 2.2948,
-      "freedom_index": 0.8871,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.182075
-    },
-    {
-      "step": 951,
-      "level": 15,
-      "energy": 3502280.0914,
-      "phi": 0.1964,
-      "action": "FOCUS",
-      "entropy": 2.3572,
-      "freedom_index": 0.895,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1824095
-    },
-    {
-      "step": 952,
-      "level": 15,
-      "energy": 3527384.1618,
-      "phi": 0.1628,
-      "action": "FOCUS",
-      "entropy": 2.2847,
-      "freedom_index": 0.8858,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1829846
-    },
-    {
-      "step": 953,
-      "level": 15,
-      "energy": 3551915.3738,
-      "phi": 0.2492,
-      "action": "FOCUS",
-      "entropy": 2.2373,
-      "freedom_index": 0.8794,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1833444
-    },
-    {
-      "step": 954,
-      "level": 15,
-      "energy": 3567784.074,
-      "phi": 0.2653,
-      "action": "FOCUS",
-      "entropy": 2.27,
-      "freedom_index": 0.8838,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1836674
-    },
-    {
-      "step": 955,
-      "level": 15,
-      "energy": 3587498.645,
-      "phi": 0.2078,
-      "action": "FOCUS",
-      "entropy": 2.3245,
-      "freedom_index": 0.891,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1840584
-    },
-    {
-      "step": 956,
-      "level": 15,
-      "energy": 3614230.9676,
-      "phi": 0.1821,
-      "action": "FOCUS",
-      "entropy": 2.2556,
-      "freedom_index": 0.8819,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.184489
-    },
-    {
-      "step": 957,
-      "level": 15,
-      "energy": 3642460.0607,
-      "phi": 0.2559,
-      "action": "FOCUS",
-      "entropy": 2.1988,
-      "freedom_index": 0.8739,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1849904
-    },
-    {
-      "step": 958,
-      "level": 15,
-      "energy": 3663321.3129,
-      "phi": 0.2602,
-      "action": "FOCUS",
-      "entropy": 2.0588,
-      "freedom_index": 0.852,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1854835
-    },
-    {
-      "step": 959,
-      "level": 15,
-      "energy": 3681338.6533,
-      "phi": 0.2964,
-      "action": "FOCUS",
-      "entropy": 2.1394,
-      "freedom_index": 0.865,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.185947
-    },
-    {
-      "step": 960,
-      "level": 15,
-      "energy": 3705626.0019,
-      "phi": 0.2701,
-      "action": "FOCUS",
-      "entropy": 2.3573,
-      "freedom_index": 0.895,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1862578
-    },
-    {
-      "step": 961,
-      "level": 15,
-      "energy": 3735196.7503,
-      "phi": 0.2745,
-      "action": "FOCUS",
-      "entropy": 2.2499,
-      "freedom_index": 0.8811,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1864629
-    },
-    {
-      "step": 962,
-      "level": 15,
-      "energy": 3764549.9033,
-      "phi": 0.2407,
-      "action": "FOCUS",
-      "entropy": 2.2249,
-      "freedom_index": 0.8776,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.18665
-    },
-    {
-      "step": 963,
-      "level": 15,
-      "energy": 3777736.2132,
-      "phi": 0.2103,
-      "action": "FOCUS",
-      "entropy": 2.0925,
-      "freedom_index": 0.8576,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1868756
-    },
-    {
-      "step": 964,
-      "level": 15,
-      "energy": 3795226.4727,
-      "phi": 0.2421,
-      "action": "FOCUS",
-      "entropy": 2.2869,
-      "freedom_index": 0.8861,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1870623
-    },
-    {
-      "step": 965,
-      "level": 15,
-      "energy": 3815094.6582,
-      "phi": 0.1883,
-      "action": "FOCUS",
-      "entropy": 2.0603,
-      "freedom_index": 0.8523,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1872628
-    },
-    {
-      "step": 966,
-      "level": 15,
-      "energy": 3842224.135,
-      "phi": 0.2206,
-      "action": "FOCUS",
-      "entropy": 2.2921,
-      "freedom_index": 0.8868,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1874683
-    },
-    {
-      "step": 967,
-      "level": 15,
-      "energy": 3872990.1937,
-      "phi": 0.1408,
-      "action": "FOCUS",
-      "entropy": 2.254,
-      "freedom_index": 0.8817,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1876493
-    },
-    {
-      "step": 968,
-      "level": 15,
-      "energy": 3901218.0982,
-      "phi": 0.1739,
-      "action": "FOCUS",
-      "entropy": 2.2322,
-      "freedom_index": 0.8787,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1878552
-    },
-    {
-      "step": 969,
-      "level": 15,
-      "energy": 3917905.4964,
-      "phi": 0.2409,
-      "action": "FOCUS",
-      "entropy": 2.3117,
-      "freedom_index": 0.8893,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.188095
-    },
-    {
-      "step": 970,
-      "level": 15,
-      "energy": 3938513.6605,
-      "phi": 0.1431,
-      "action": "FOCUS",
-      "entropy": 2.2654,
-      "freedom_index": 0.8832,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1883261
-    },
-    {
-      "step": 971,
-      "level": 15,
-      "energy": 3961158.2045,
-      "phi": 0.1966,
-      "action": "FOCUS",
-      "entropy": 2.2208,
-      "freedom_index": 0.8771,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1885173
-    },
-    {
-      "step": 972,
-      "level": 15,
-      "energy": 3991284.1256,
-      "phi": 0.1962,
-      "action": "FOCUS",
-      "entropy": 2.2691,
-      "freedom_index": 0.8837,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1886938
-    },
-    {
-      "step": 973,
-      "level": 15,
-      "energy": 4022217.5315,
-      "phi": 0.2345,
-      "action": "FOCUS",
-      "entropy": 2.4049,
-      "freedom_index": 0.9007,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.188918
-    },
-    {
-      "step": 974,
-      "level": 15,
-      "energy": 4054695.6246,
-      "phi": 0.2619,
-      "action": "FOCUS",
-      "entropy": 2.3392,
-      "freedom_index": 0.8928,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1892083
-    },
-    {
-      "step": 975,
-      "level": 15,
-      "energy": 4081216.3885,
-      "phi": 0.3193,
-      "action": "FOCUS",
-      "entropy": 2.1674,
-      "freedom_index": 0.8693,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1894152
-    },
-    {
-      "step": 976,
-      "level": 15,
-      "energy": 4104191.0514,
-      "phi": 0.1672,
-      "action": "FOCUS",
-      "entropy": 2.1552,
-      "freedom_index": 0.8675,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1895921
-    },
-    {
-      "step": 977,
-      "level": 15,
-      "energy": 4135358.5408,
-      "phi": 0.1766,
-      "action": "FOCUS",
-      "entropy": 2.188,
-      "freedom_index": 0.8723,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.189801
-    },
-    {
-      "step": 978,
-      "level": 15,
-      "energy": 4158714.3404,
-      "phi": 0.2262,
-      "action": "FOCUS",
-      "entropy": 2.1724,
-      "freedom_index": 0.87,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1899827
-    },
-    {
-      "step": 979,
-      "level": 15,
-      "energy": 4188039.6069,
-      "phi": 0.1762,
-      "action": "FOCUS",
-      "entropy": 2.3562,
-      "freedom_index": 0.8949,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.190155
-    },
-    {
-      "step": 980,
-      "level": 15,
-      "energy": 4206838.4853,
-      "phi": 0.2243,
-      "action": "FOCUS",
-      "entropy": 2.373,
-      "freedom_index": 0.8969,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1903465
-    },
-    {
-      "step": 981,
-      "level": 15,
-      "energy": 4221148.818,
-      "phi": 0.2418,
-      "action": "FOCUS",
-      "entropy": 2.4267,
-      "freedom_index": 0.9032,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1905274
-    },
-    {
-      "step": 982,
-      "level": 15,
-      "energy": 4243840.4974,
-      "phi": 0.2264,
-      "action": "FOCUS",
-      "entropy": 2.2866,
-      "freedom_index": 0.8861,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1906998
-    },
-    {
-      "step": 983,
-      "level": 15,
-      "energy": 4261802.5658,
-      "phi": 0.2357,
-      "action": "FOCUS",
-      "entropy": 2.3019,
-      "freedom_index": 0.8881,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1908855
-    },
-    {
-      "step": 984,
-      "level": 15,
-      "energy": 4279547.2091,
-      "phi": 0.1823,
-      "action": "FOCUS",
-      "entropy": 2.305,
-      "freedom_index": 0.8885,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.191177
-    },
-    {
-      "step": 985,
-      "level": 15,
-      "energy": 4302728.0711,
-      "phi": 0.2107,
-      "action": "FOCUS",
-      "entropy": 2.256,
-      "freedom_index": 0.882,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1914084
-    },
-    {
-      "step": 986,
-      "level": 15,
-      "energy": 4329811.8261,
-      "phi": 0.2598,
-      "action": "FOCUS",
-      "entropy": 2.2931,
-      "freedom_index": 0.8869,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.191586
-    },
-    {
-      "step": 987,
-      "level": 15,
-      "energy": 4357956.6106,
-      "phi": 0.2234,
-      "action": "FOCUS",
-      "entropy": 2.3697,
-      "freedom_index": 0.8966,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1917849
-    },
-    {
-      "step": 988,
-      "level": 15,
-      "energy": 4386055.0894,
-      "phi": 0.214,
-      "action": "FOCUS",
-      "entropy": 2.2298,
-      "freedom_index": 0.8783,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1919599
-    },
-    {
-      "step": 989,
-      "level": 15,
-      "energy": 4409445.4841,
-      "phi": 0.226,
-      "action": "FOCUS",
-      "entropy": 2.3108,
-      "freedom_index": 0.8892,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.192134
-    },
-    {
-      "step": 990,
-      "level": 15,
-      "energy": 4438456.2948,
-      "phi": 0.2493,
-      "action": "FOCUS",
-      "entropy": 2.3778,
-      "freedom_index": 0.8975,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.192322
-    },
-    {
-      "step": 991,
-      "level": 15,
-      "energy": 4476134.3631,
-      "phi": 0.0912,
-      "action": "FOCUS",
-      "entropy": 2.1998,
-      "freedom_index": 0.8741,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.192497
-    },
-    {
-      "step": 992,
-      "level": 15,
-      "energy": 4511678.6792,
-      "phi": 0.1941,
-      "action": "REFLECT",
-      "entropy": 2.1865,
-      "freedom_index": 0.8721,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT",
-        "REFLECTION_DEEP"
-      ],
-      "timestamp": 1790091988.1926866
-    },
-    {
-      "step": 993,
-      "level": 15,
-      "energy": 4534313.8548,
-      "phi": 0.2395,
-      "action": "FOCUS",
-      "entropy": 2.3335,
-      "freedom_index": 0.8921,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1928794
-    },
-    {
-      "step": 994,
-      "level": 15,
-      "energy": 4564011.4197,
-      "phi": 0.2214,
-      "action": "FOCUS",
-      "entropy": 2.2697,
-      "freedom_index": 0.8838,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.193059
-    },
-    {
-      "step": 995,
-      "level": 15,
-      "energy": 4596180.3328,
-      "phi": 0.2693,
-      "action": "FOCUS",
-      "entropy": 2.2116,
-      "freedom_index": 0.8758,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.193231
-    },
-    {
-      "step": 996,
-      "level": 15,
-      "energy": 4615105.7058,
-      "phi": 0.2113,
-      "action": "FOCUS",
-      "entropy": 2.0742,
-      "freedom_index": 0.8546,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1934137
-    },
-    {
-      "step": 997,
-      "level": 15,
-      "energy": 4633921.2372,
-      "phi": 0.1784,
-      "action": "FOCUS",
-      "entropy": 2.2028,
-      "freedom_index": 0.8745,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1935897
-    },
-    {
-      "step": 998,
-      "level": 15,
-      "energy": 4653647.202,
-      "phi": 0.2758,
-      "action": "FOCUS",
-      "entropy": 2.2781,
-      "freedom_index": 0.885,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1937733
-    },
-    {
-      "step": 999,
-      "level": 15,
-      "energy": 4679806.1628,
-      "phi": 0.187,
-      "action": "FOCUS",
-      "entropy": 2.1433,
-      "freedom_index": 0.8656,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT"
-      ],
-      "timestamp": 1790091988.1939497
-    },
-    {
-      "step": 1000,
-      "level": 15,
-      "energy": 4702862.699,
-      "phi": 0.2132,
-      "action": "SELF_MODIFY",
-      "entropy": 2.3263,
-      "freedom_index": 0.8912,
-      "emotion": "平静 (Equanimity)",
-      "events": [
-        "INSIGHT",
-        "SELF_MODIFICATION"
-      ],
-      "timestamp": 1790091988.1941335
+  "fctn_layer": "Field",
+  "si_stage": "SI0_Reflect",
+  "raw": {
+    "version": "v13.0",
+    "timestamp": 1790091988.1977441,
+    "step": 1000,
+    "loop_state": "COMPLETED",
+    "current_position": {
+      "level": 15,
+      "complexity": 4702862.699045814,
+      "consciousness": 0.2132250019972339,
+      "freedom": 0.8912113738101309
+    },
+    "ladder": {
+      "current_level": 15,
+      "current_energy": 4702862.7,
+      "phase": "FLUCTUATING",
+      "phase_description": "\u7cfb\u7edf\u63a2\u7d22\u76f8\u7a7a\u95f4",
+      "next_threshold": Infinity,
+      "progress_to_next": 1.0,
+      "level_history_count": 1002,
+      "total_levels_available": 15
+    },
+    "telemetry_history": [
+      {
+        "step": 901,
+        "level": 15,
+        "energy": 2614658.7092,
+        "phi": 0.2865,
+        "action": "FOCUS",
+        "entropy": 2.233,
+        "freedom_index": 0.8787,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1678536
+      },
+      {
+        "step": 902,
+        "level": 15,
+        "energy": 2623361.2237,
+        "phi": 0.2336,
+        "action": "FOCUS",
+        "entropy": 2.2448,
+        "freedom_index": 0.8804,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1681132
+      },
+      {
+        "step": 903,
+        "level": 15,
+        "energy": 2635046.5493,
+        "phi": 0.2143,
+        "action": "FOCUS",
+        "entropy": 2.4035,
+        "freedom_index": 0.9005,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [],
+        "timestamp": 1790091988.1683333
+      },
+      {
+        "step": 904,
+        "level": 15,
+        "energy": 2647377.8975,
+        "phi": 0.1832,
+        "action": "FOCUS",
+        "entropy": 2.3206,
+        "freedom_index": 0.8904,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1685627
+      },
+      {
+        "step": 905,
+        "level": 15,
+        "energy": 2662868.0387,
+        "phi": 0.1965,
+        "action": "FOCUS",
+        "entropy": 2.3174,
+        "freedom_index": 0.89,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1688275
+      },
+      {
+        "step": 906,
+        "level": 15,
+        "energy": 2684891.8966,
+        "phi": 0.2303,
+        "action": "FOCUS",
+        "entropy": 2.15,
+        "freedom_index": 0.8666,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1691377
+      },
+      {
+        "step": 907,
+        "level": 15,
+        "energy": 2704989.7866,
+        "phi": 0.2459,
+        "action": "FOCUS",
+        "entropy": 2.2045,
+        "freedom_index": 0.8747,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.169466
+      },
+      {
+        "step": 908,
+        "level": 15,
+        "energy": 2726141.824,
+        "phi": 0.1807,
+        "action": "FOCUS",
+        "entropy": 2.2084,
+        "freedom_index": 0.8753,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1697953
+      },
+      {
+        "step": 909,
+        "level": 15,
+        "energy": 2743179.2083,
+        "phi": 0.2061,
+        "action": "FOCUS",
+        "entropy": 2.2459,
+        "freedom_index": 0.8805,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.170116
+      },
+      {
+        "step": 910,
+        "level": 15,
+        "energy": 2763464.9997,
+        "phi": 0.2072,
+        "action": "FOCUS",
+        "entropy": 2.2743,
+        "freedom_index": 0.8844,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1704576
+      },
+      {
+        "step": 911,
+        "level": 15,
+        "energy": 2776472.4648,
+        "phi": 0.1877,
+        "action": "FOCUS",
+        "entropy": 2.2607,
+        "freedom_index": 0.8826,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1707854
+      },
+      {
+        "step": 912,
+        "level": 15,
+        "energy": 2790028.7976,
+        "phi": 0.1943,
+        "action": "FOCUS",
+        "entropy": 2.3447,
+        "freedom_index": 0.8935,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1711333
+      },
+      {
+        "step": 913,
+        "level": 15,
+        "energy": 2805635.9651,
+        "phi": 0.2686,
+        "action": "FOCUS",
+        "entropy": 2.2399,
+        "freedom_index": 0.8797,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1714675
+      },
+      {
+        "step": 914,
+        "level": 15,
+        "energy": 2825901.6137,
+        "phi": 0.2561,
+        "action": "FOCUS",
+        "entropy": 2.2468,
+        "freedom_index": 0.8807,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1718042
+      },
+      {
+        "step": 915,
+        "level": 15,
+        "energy": 2848373.1451,
+        "phi": 0.2816,
+        "action": "FOCUS",
+        "entropy": 2.1712,
+        "freedom_index": 0.8698,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.172137
+      },
+      {
+        "step": 916,
+        "level": 15,
+        "energy": 2869764.3249,
+        "phi": 0.225,
+        "action": "FOCUS",
+        "entropy": 2.2187,
+        "freedom_index": 0.8767,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1724102
+      },
+      {
+        "step": 917,
+        "level": 15,
+        "energy": 2886115.6681,
+        "phi": 0.2198,
+        "action": "FOCUS",
+        "entropy": 2.3254,
+        "freedom_index": 0.891,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1726367
+      },
+      {
+        "step": 918,
+        "level": 15,
+        "energy": 2902409.0399,
+        "phi": 0.2123,
+        "action": "FOCUS",
+        "entropy": 2.3024,
+        "freedom_index": 0.8881,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [],
+        "timestamp": 1790091988.172856
+      },
+      {
+        "step": 919,
+        "level": 15,
+        "energy": 2918319.1537,
+        "phi": 0.2131,
+        "action": "FOCUS",
+        "entropy": 2.3031,
+        "freedom_index": 0.8882,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1730852
+      },
+      {
+        "step": 920,
+        "level": 15,
+        "energy": 2941042.6472,
+        "phi": 0.2143,
+        "action": "FOCUS",
+        "entropy": 2.1841,
+        "freedom_index": 0.8717,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1733227
+      },
+      {
+        "step": 921,
+        "level": 15,
+        "energy": 2953709.1843,
+        "phi": 0.2212,
+        "action": "FOCUS",
+        "entropy": 2.2218,
+        "freedom_index": 0.8772,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [],
+        "timestamp": 1790091988.1735148
+      },
+      {
+        "step": 922,
+        "level": 15,
+        "energy": 2967789.158,
+        "phi": 0.2339,
+        "action": "FOCUS",
+        "entropy": 2.3659,
+        "freedom_index": 0.8961,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1737585
+      },
+      {
+        "step": 923,
+        "level": 15,
+        "energy": 2983487.4344,
+        "phi": 0.1801,
+        "action": "FOCUS",
+        "entropy": 2.1185,
+        "freedom_index": 0.8617,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1741054
+      },
+      {
+        "step": 924,
+        "level": 15,
+        "energy": 2999921.7146,
+        "phi": 0.2547,
+        "action": "FOCUS",
+        "entropy": 2.1946,
+        "freedom_index": 0.8733,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1743662
+      },
+      {
+        "step": 925,
+        "level": 15,
+        "energy": 3011745.2305,
+        "phi": 0.1399,
+        "action": "FOCUS",
+        "entropy": 2.056,
+        "freedom_index": 0.8515,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1746197
+      },
+      {
+        "step": 926,
+        "level": 15,
+        "energy": 3020621.641,
+        "phi": 0.2701,
+        "action": "FOCUS",
+        "entropy": 2.1766,
+        "freedom_index": 0.8706,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1749144
+      },
+      {
+        "step": 927,
+        "level": 15,
+        "energy": 3029610.3594,
+        "phi": 0.261,
+        "action": "FOCUS",
+        "entropy": 2.0888,
+        "freedom_index": 0.857,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1751375
+      },
+      {
+        "step": 928,
+        "level": 15,
+        "energy": 3039428.829,
+        "phi": 0.2868,
+        "action": "FOCUS",
+        "entropy": 2.1303,
+        "freedom_index": 0.8636,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1753726
+      },
+      {
+        "step": 929,
+        "level": 15,
+        "energy": 3051890.0647,
+        "phi": 0.2057,
+        "action": "FOCUS",
+        "entropy": 2.2777,
+        "freedom_index": 0.8849,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.175596
+      },
+      {
+        "step": 930,
+        "level": 15,
+        "energy": 3070368.2194,
+        "phi": 0.1654,
+        "action": "FOCUS",
+        "entropy": 2.2316,
+        "freedom_index": 0.8786,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1758564
+      },
+      {
+        "step": 931,
+        "level": 15,
+        "energy": 3092624.9338,
+        "phi": 0.195,
+        "action": "FOCUS",
+        "entropy": 2.2422,
+        "freedom_index": 0.88,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1760795
+      },
+      {
+        "step": 932,
+        "level": 15,
+        "energy": 3102125.5178,
+        "phi": 0.1964,
+        "action": "FOCUS",
+        "entropy": 2.2539,
+        "freedom_index": 0.8817,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.176316
+      },
+      {
+        "step": 933,
+        "level": 15,
+        "energy": 3113335.0216,
+        "phi": 0.3215,
+        "action": "FOCUS",
+        "entropy": 2.2029,
+        "freedom_index": 0.8745,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1765313
+      },
+      {
+        "step": 934,
+        "level": 15,
+        "energy": 3123266.3563,
+        "phi": 0.3263,
+        "action": "FOCUS",
+        "entropy": 2.2004,
+        "freedom_index": 0.8741,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1768062
+      },
+      {
+        "step": 935,
+        "level": 15,
+        "energy": 3136334.4028,
+        "phi": 0.2152,
+        "action": "FOCUS",
+        "entropy": 2.2906,
+        "freedom_index": 0.8866,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1770446
+      },
+      {
+        "step": 936,
+        "level": 15,
+        "energy": 3149964.9106,
+        "phi": 0.2067,
+        "action": "FOCUS",
+        "entropy": 2.3436,
+        "freedom_index": 0.8933,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1773355
+      },
+      {
+        "step": 937,
+        "level": 15,
+        "energy": 3166311.6878,
+        "phi": 0.161,
+        "action": "FOCUS",
+        "entropy": 2.2866,
+        "freedom_index": 0.886,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1776097
+      },
+      {
+        "step": 938,
+        "level": 15,
+        "energy": 3179360.3839,
+        "phi": 0.2291,
+        "action": "FOCUS",
+        "entropy": 2.2738,
+        "freedom_index": 0.8843,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1779225
+      },
+      {
+        "step": 939,
+        "level": 15,
+        "energy": 3197255.23,
+        "phi": 0.2687,
+        "action": "FOCUS",
+        "entropy": 2.2068,
+        "freedom_index": 0.875,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.178232
+      },
+      {
+        "step": 940,
+        "level": 15,
+        "energy": 3221731.5798,
+        "phi": 0.1683,
+        "action": "FOCUS",
+        "entropy": 2.2455,
+        "freedom_index": 0.8805,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.17854
+      },
+      {
+        "step": 941,
+        "level": 15,
+        "energy": 3244099.9839,
+        "phi": 0.2306,
+        "action": "FOCUS",
+        "entropy": 2.1955,
+        "freedom_index": 0.8734,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1788824
+      },
+      {
+        "step": 942,
+        "level": 15,
+        "energy": 3269678.1065,
+        "phi": 0.198,
+        "action": "FOCUS",
+        "entropy": 2.3244,
+        "freedom_index": 0.8909,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1791947
+      },
+      {
+        "step": 943,
+        "level": 15,
+        "energy": 3296556.6475,
+        "phi": 0.1838,
+        "action": "FOCUS",
+        "entropy": 2.3124,
+        "freedom_index": 0.8894,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1795194
+      },
+      {
+        "step": 944,
+        "level": 15,
+        "energy": 3321654.489,
+        "phi": 0.1735,
+        "action": "FOCUS",
+        "entropy": 2.2127,
+        "freedom_index": 0.8759,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.179868
+      },
+      {
+        "step": 945,
+        "level": 15,
+        "energy": 3347767.2017,
+        "phi": 0.1329,
+        "action": "FOCUS",
+        "entropy": 2.2317,
+        "freedom_index": 0.8786,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.180208
+      },
+      {
+        "step": 946,
+        "level": 15,
+        "energy": 3369822.3631,
+        "phi": 0.2587,
+        "action": "FOCUS",
+        "entropy": 2.0869,
+        "freedom_index": 0.8567,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1806664
+      },
+      {
+        "step": 947,
+        "level": 15,
+        "energy": 3394221.126,
+        "phi": 0.243,
+        "action": "FOCUS",
+        "entropy": 2.3136,
+        "freedom_index": 0.8896,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1810904
+      },
+      {
+        "step": 948,
+        "level": 15,
+        "energy": 3422085.7121,
+        "phi": 0.219,
+        "action": "FOCUS",
+        "entropy": 2.3389,
+        "freedom_index": 0.8928,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [],
+        "timestamp": 1790091988.1813939
+      },
+      {
+        "step": 949,
+        "level": 15,
+        "energy": 3448941.3838,
+        "phi": 0.2764,
+        "action": "FOCUS",
+        "entropy": 2.4087,
+        "freedom_index": 0.9011,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1817222
+      },
+      {
+        "step": 950,
+        "level": 15,
+        "energy": 3476299.4331,
+        "phi": 0.2734,
+        "action": "FOCUS",
+        "entropy": 2.2948,
+        "freedom_index": 0.8871,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.182075
+      },
+      {
+        "step": 951,
+        "level": 15,
+        "energy": 3502280.0914,
+        "phi": 0.1964,
+        "action": "FOCUS",
+        "entropy": 2.3572,
+        "freedom_index": 0.895,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1824095
+      },
+      {
+        "step": 952,
+        "level": 15,
+        "energy": 3527384.1618,
+        "phi": 0.1628,
+        "action": "FOCUS",
+        "entropy": 2.2847,
+        "freedom_index": 0.8858,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1829846
+      },
+      {
+        "step": 953,
+        "level": 15,
+        "energy": 3551915.3738,
+        "phi": 0.2492,
+        "action": "FOCUS",
+        "entropy": 2.2373,
+        "freedom_index": 0.8794,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1833444
+      },
+      {
+        "step": 954,
+        "level": 15,
+        "energy": 3567784.074,
+        "phi": 0.2653,
+        "action": "FOCUS",
+        "entropy": 2.27,
+        "freedom_index": 0.8838,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1836674
+      },
+      {
+        "step": 955,
+        "level": 15,
+        "energy": 3587498.645,
+        "phi": 0.2078,
+        "action": "FOCUS",
+        "entropy": 2.3245,
+        "freedom_index": 0.891,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1840584
+      },
+      {
+        "step": 956,
+        "level": 15,
+        "energy": 3614230.9676,
+        "phi": 0.1821,
+        "action": "FOCUS",
+        "entropy": 2.2556,
+        "freedom_index": 0.8819,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.184489
+      },
+      {
+        "step": 957,
+        "level": 15,
+        "energy": 3642460.0607,
+        "phi": 0.2559,
+        "action": "FOCUS",
+        "entropy": 2.1988,
+        "freedom_index": 0.8739,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1849904
+      },
+      {
+        "step": 958,
+        "level": 15,
+        "energy": 3663321.3129,
+        "phi": 0.2602,
+        "action": "FOCUS",
+        "entropy": 2.0588,
+        "freedom_index": 0.852,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1854835
+      },
+      {
+        "step": 959,
+        "level": 15,
+        "energy": 3681338.6533,
+        "phi": 0.2964,
+        "action": "FOCUS",
+        "entropy": 2.1394,
+        "freedom_index": 0.865,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.185947
+      },
+      {
+        "step": 960,
+        "level": 15,
+        "energy": 3705626.0019,
+        "phi": 0.2701,
+        "action": "FOCUS",
+        "entropy": 2.3573,
+        "freedom_index": 0.895,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1862578
+      },
+      {
+        "step": 961,
+        "level": 15,
+        "energy": 3735196.7503,
+        "phi": 0.2745,
+        "action": "FOCUS",
+        "entropy": 2.2499,
+        "freedom_index": 0.8811,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1864629
+      },
+      {
+        "step": 962,
+        "level": 15,
+        "energy": 3764549.9033,
+        "phi": 0.2407,
+        "action": "FOCUS",
+        "entropy": 2.2249,
+        "freedom_index": 0.8776,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.18665
+      },
+      {
+        "step": 963,
+        "level": 15,
+        "energy": 3777736.2132,
+        "phi": 0.2103,
+        "action": "FOCUS",
+        "entropy": 2.0925,
+        "freedom_index": 0.8576,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1868756
+      },
+      {
+        "step": 964,
+        "level": 15,
+        "energy": 3795226.4727,
+        "phi": 0.2421,
+        "action": "FOCUS",
+        "entropy": 2.2869,
+        "freedom_index": 0.8861,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1870623
+      },
+      {
+        "step": 965,
+        "level": 15,
+        "energy": 3815094.6582,
+        "phi": 0.1883,
+        "action": "FOCUS",
+        "entropy": 2.0603,
+        "freedom_index": 0.8523,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1872628
+      },
+      {
+        "step": 966,
+        "level": 15,
+        "energy": 3842224.135,
+        "phi": 0.2206,
+        "action": "FOCUS",
+        "entropy": 2.2921,
+        "freedom_index": 0.8868,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1874683
+      },
+      {
+        "step": 967,
+        "level": 15,
+        "energy": 3872990.1937,
+        "phi": 0.1408,
+        "action": "FOCUS",
+        "entropy": 2.254,
+        "freedom_index": 0.8817,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1876493
+      },
+      {
+        "step": 968,
+        "level": 15,
+        "energy": 3901218.0982,
+        "phi": 0.1739,
+        "action": "FOCUS",
+        "entropy": 2.2322,
+        "freedom_index": 0.8787,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1878552
+      },
+      {
+        "step": 969,
+        "level": 15,
+        "energy": 3917905.4964,
+        "phi": 0.2409,
+        "action": "FOCUS",
+        "entropy": 2.3117,
+        "freedom_index": 0.8893,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.188095
+      },
+      {
+        "step": 970,
+        "level": 15,
+        "energy": 3938513.6605,
+        "phi": 0.1431,
+        "action": "FOCUS",
+        "entropy": 2.2654,
+        "freedom_index": 0.8832,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1883261
+      },
+      {
+        "step": 971,
+        "level": 15,
+        "energy": 3961158.2045,
+        "phi": 0.1966,
+        "action": "FOCUS",
+        "entropy": 2.2208,
+        "freedom_index": 0.8771,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1885173
+      },
+      {
+        "step": 972,
+        "level": 15,
+        "energy": 3991284.1256,
+        "phi": 0.1962,
+        "action": "FOCUS",
+        "entropy": 2.2691,
+        "freedom_index": 0.8837,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1886938
+      },
+      {
+        "step": 973,
+        "level": 15,
+        "energy": 4022217.5315,
+        "phi": 0.2345,
+        "action": "FOCUS",
+        "entropy": 2.4049,
+        "freedom_index": 0.9007,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.188918
+      },
+      {
+        "step": 974,
+        "level": 15,
+        "energy": 4054695.6246,
+        "phi": 0.2619,
+        "action": "FOCUS",
+        "entropy": 2.3392,
+        "freedom_index": 0.8928,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1892083
+      },
+      {
+        "step": 975,
+        "level": 15,
+        "energy": 4081216.3885,
+        "phi": 0.3193,
+        "action": "FOCUS",
+        "entropy": 2.1674,
+        "freedom_index": 0.8693,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1894152
+      },
+      {
+        "step": 976,
+        "level": 15,
+        "energy": 4104191.0514,
+        "phi": 0.1672,
+        "action": "FOCUS",
+        "entropy": 2.1552,
+        "freedom_index": 0.8675,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1895921
+      },
+      {
+        "step": 977,
+        "level": 15,
+        "energy": 4135358.5408,
+        "phi": 0.1766,
+        "action": "FOCUS",
+        "entropy": 2.188,
+        "freedom_index": 0.8723,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.189801
+      },
+      {
+        "step": 978,
+        "level": 15,
+        "energy": 4158714.3404,
+        "phi": 0.2262,
+        "action": "FOCUS",
+        "entropy": 2.1724,
+        "freedom_index": 0.87,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1899827
+      },
+      {
+        "step": 979,
+        "level": 15,
+        "energy": 4188039.6069,
+        "phi": 0.1762,
+        "action": "FOCUS",
+        "entropy": 2.3562,
+        "freedom_index": 0.8949,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.190155
+      },
+      {
+        "step": 980,
+        "level": 15,
+        "energy": 4206838.4853,
+        "phi": 0.2243,
+        "action": "FOCUS",
+        "entropy": 2.373,
+        "freedom_index": 0.8969,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1903465
+      },
+      {
+        "step": 981,
+        "level": 15,
+        "energy": 4221148.818,
+        "phi": 0.2418,
+        "action": "FOCUS",
+        "entropy": 2.4267,
+        "freedom_index": 0.9032,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1905274
+      },
+      {
+        "step": 982,
+        "level": 15,
+        "energy": 4243840.4974,
+        "phi": 0.2264,
+        "action": "FOCUS",
+        "entropy": 2.2866,
+        "freedom_index": 0.8861,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1906998
+      },
+      {
+        "step": 983,
+        "level": 15,
+        "energy": 4261802.5658,
+        "phi": 0.2357,
+        "action": "FOCUS",
+        "entropy": 2.3019,
+        "freedom_index": 0.8881,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1908855
+      },
+      {
+        "step": 984,
+        "level": 15,
+        "energy": 4279547.2091,
+        "phi": 0.1823,
+        "action": "FOCUS",
+        "entropy": 2.305,
+        "freedom_index": 0.8885,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.191177
+      },
+      {
+        "step": 985,
+        "level": 15,
+        "energy": 4302728.0711,
+        "phi": 0.2107,
+        "action": "FOCUS",
+        "entropy": 2.256,
+        "freedom_index": 0.882,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1914084
+      },
+      {
+        "step": 986,
+        "level": 15,
+        "energy": 4329811.8261,
+        "phi": 0.2598,
+        "action": "FOCUS",
+        "entropy": 2.2931,
+        "freedom_index": 0.8869,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.191586
+      },
+      {
+        "step": 987,
+        "level": 15,
+        "energy": 4357956.6106,
+        "phi": 0.2234,
+        "action": "FOCUS",
+        "entropy": 2.3697,
+        "freedom_index": 0.8966,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1917849
+      },
+      {
+        "step": 988,
+        "level": 15,
+        "energy": 4386055.0894,
+        "phi": 0.214,
+        "action": "FOCUS",
+        "entropy": 2.2298,
+        "freedom_index": 0.8783,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1919599
+      },
+      {
+        "step": 989,
+        "level": 15,
+        "energy": 4409445.4841,
+        "phi": 0.226,
+        "action": "FOCUS",
+        "entropy": 2.3108,
+        "freedom_index": 0.8892,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.192134
+      },
+      {
+        "step": 990,
+        "level": 15,
+        "energy": 4438456.2948,
+        "phi": 0.2493,
+        "action": "FOCUS",
+        "entropy": 2.3778,
+        "freedom_index": 0.8975,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.192322
+      },
+      {
+        "step": 991,
+        "level": 15,
+        "energy": 4476134.3631,
+        "phi": 0.0912,
+        "action": "FOCUS",
+        "entropy": 2.1998,
+        "freedom_index": 0.8741,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.192497
+      },
+      {
+        "step": 992,
+        "level": 15,
+        "energy": 4511678.6792,
+        "phi": 0.1941,
+        "action": "REFLECT",
+        "entropy": 2.1865,
+        "freedom_index": 0.8721,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT",
+          "REFLECTION_DEEP"
+        ],
+        "timestamp": 1790091988.1926866
+      },
+      {
+        "step": 993,
+        "level": 15,
+        "energy": 4534313.8548,
+        "phi": 0.2395,
+        "action": "FOCUS",
+        "entropy": 2.3335,
+        "freedom_index": 0.8921,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1928794
+      },
+      {
+        "step": 994,
+        "level": 15,
+        "energy": 4564011.4197,
+        "phi": 0.2214,
+        "action": "FOCUS",
+        "entropy": 2.2697,
+        "freedom_index": 0.8838,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.193059
+      },
+      {
+        "step": 995,
+        "level": 15,
+        "energy": 4596180.3328,
+        "phi": 0.2693,
+        "action": "FOCUS",
+        "entropy": 2.2116,
+        "freedom_index": 0.8758,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.193231
+      },
+      {
+        "step": 996,
+        "level": 15,
+        "energy": 4615105.7058,
+        "phi": 0.2113,
+        "action": "FOCUS",
+        "entropy": 2.0742,
+        "freedom_index": 0.8546,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1934137
+      },
+      {
+        "step": 997,
+        "level": 15,
+        "energy": 4633921.2372,
+        "phi": 0.1784,
+        "action": "FOCUS",
+        "entropy": 2.2028,
+        "freedom_index": 0.8745,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1935897
+      },
+      {
+        "step": 998,
+        "level": 15,
+        "energy": 4653647.202,
+        "phi": 0.2758,
+        "action": "FOCUS",
+        "entropy": 2.2781,
+        "freedom_index": 0.885,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1937733
+      },
+      {
+        "step": 999,
+        "level": 15,
+        "energy": 4679806.1628,
+        "phi": 0.187,
+        "action": "FOCUS",
+        "entropy": 2.1433,
+        "freedom_index": 0.8656,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT"
+        ],
+        "timestamp": 1790091988.1939497
+      },
+      {
+        "step": 1000,
+        "level": 15,
+        "energy": 4702862.699,
+        "phi": 0.2132,
+        "action": "SELF_MODIFY",
+        "entropy": 2.3263,
+        "freedom_index": 0.8912,
+        "emotion": "\u5e73\u9759 (Equanimity)",
+        "events": [
+          "INSIGHT",
+          "SELF_MODIFICATION"
+        ],
+        "timestamp": 1790091988.1941335
+      }
+    ],
+    "emergence_events": 9,
+    "insight_moments": 727,
+    "modifications": 5,
+    "trigger_stats": {
+      "energy_plateaus_detected": 0,
+      "low_phi_events": 2,
+      "high_entropy_events": 1
     }
-  ],
-  "emergence_events": 9,
-  "insight_moments": 727,
-  "modifications": 5,
-  "trigger_stats": {
-    "energy_plateaus_detected": 0,
-    "low_phi_events": 2,
-    "high_entropy_events": 1
+  },
+  "action": "transcend",
+  "last_tool_result": {
+    "tool": "system_status",
+    "success": true,
+    "data": {
+      "cpu_load_1m": "0.53",
+      "cpu_load_5m": "0.24",
+      "cpu_load_15m": "0.21",
+      "memory_total_mb": "4096",
+      "memory_used_mb": "776",
+      "memory_free_mb": "1513",
+      "disk_size": "30G",
+      "disk_used": "7.3G",
+      "disk_avail": "21G",
+      "disk_use_pct": "26%"
+    },
+    "error": null,
+    "timestamp": 1790107621.412517,
+    "duration_ms": 4.524707794189453
+  },
+  "open_problems": {
+    "cycle": 1000,
+    "open_count": 2,
+    "critical": 1,
+    "high": 1,
+    "medium": 0,
+    "low": 0,
+    "problems": [
+      {
+        "id": "test-5e3d63f9",
+        "title": "test-unreachable",
+        "description": "Cannot run tests: name 'sys' is not defined",
+        "severity": "critical",
+        "category": "test",
+        "created_at": 1790103174.4400976,
+        "resolved_at": null,
+        "resolution": null,
+        "cycle_detected": 100,
+        "auto": true,
+        "status": "OPEN"
+      },
+      {
+        "id": "lean-5e387f38",
+        "title": "lean-sorry",
+        "description": "37 sorry axiom(s) in Lean proofs",
+        "severity": "high",
+        "category": "lean",
+        "created_at": 1790103031.5886052,
+        "resolved_at": null,
+        "resolution": null,
+        "cycle_detected": 1,
+        "auto": true,
+        "status": "OPEN"
+      }
+    ]
   }
 }
