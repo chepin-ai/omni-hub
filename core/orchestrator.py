@@ -22,6 +22,7 @@ _persistence = None
 _monitor = None
 _git_hook = None
 _tools_registry = None
+_open_problems = None
 
 
 def _get_north_star():
@@ -46,6 +47,14 @@ def _get_tools_registry():
         from core.tools import get_tool_registry
         _tools_registry = get_tool_registry()
     return _tools_registry
+
+
+def _get_open_problems():
+    global _open_problems
+    if _open_problems is None:
+        from core.open_problems import OpenProblemsTracker
+        _open_problems = OpenProblemsTracker()
+    return _open_problems
 
 
 def _get_persistence():
@@ -362,7 +371,20 @@ class OMNIHUBOrchestrator:
             except Exception:
                 pass
 
-        # 8. Persist state
+        # 8. Open problems scan (every 100 cycles)
+        if self.cycle_count % 100 == 0:
+            try:
+                tracker = _get_open_problems()
+                scan_result = tracker.scan(cycle=self.cycle_count)
+                self.current_state['open_problems'] = scan_result
+                if scan_result['critical'] > 0 and bus and Topics:
+                    bus.publish_simple(Topics.ALERT,
+                                      {"type": "open_problems_critical", "count": scan_result['critical']},
+                                      source="diagnostics")
+            except Exception:
+                pass
+
+        # 9. Persist state
         if self.auto_persist and self.cycle_count % C.SELF_DRIVE_CHECKPOINT_INTERVAL == 0:
             self._persist()
             if bus and Topics:
@@ -370,7 +392,7 @@ class OMNIHUBOrchestrator:
                                   {"cycle": self.cycle_count, "file": str(C.STATE_FILE)},
                                   source="persistence")
 
-        # 9. Auto-git commit
+        # 10. Auto-git commit
         if self.auto_git and self.cycle_count % C.SELF_DRIVE_CHECKPOINT_INTERVAL == 0:
             self._git_commit()
             if bus and Topics:
@@ -378,7 +400,7 @@ class OMNIHUBOrchestrator:
                                   {"cycle": self.cycle_count},
                                   source="auto_git")
 
-        # 10. Publish cycle end
+        # 11. Publish cycle end
         if bus and Topics:
             bus.publish_simple(Topics.CYCLE_END,
                               {"cycle": self.cycle_count, "alerts": len(self.alerts)},

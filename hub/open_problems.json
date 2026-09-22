@@ -1,0 +1,72 @@
+{
+  "updated_at": "2026-09-23T02:53:49.138251",
+  "total": 5,
+  "open": 3,
+  "problems": [
+    {
+      "id": "git-1c8c93ed",
+      "title": "git-unpushed",
+      "description": "1 commit(s) not pushed to origin",
+      "severity": "medium",
+      "category": "git",
+      "created_at": 1790103031.588593,
+      "resolved_at": null,
+      "resolution": null,
+      "cycle_detected": 1,
+      "auto": true,
+      "status": "OPEN"
+    },
+    {
+      "id": "lean-5e387f38",
+      "title": "lean-sorry",
+      "description": "37 sorry axiom(s) in Lean proofs",
+      "severity": "high",
+      "category": "lean",
+      "created_at": 1790103031.5886052,
+      "resolved_at": null,
+      "resolution": null,
+      "cycle_detected": 1,
+      "auto": true,
+      "status": "OPEN"
+    },
+    {
+      "id": "code-02518155",
+      "title": "legacy-debt",
+      "description": "40 legacy Python files (v1-v11)",
+      "severity": "low",
+      "category": "code",
+      "created_at": 1790103031.5886238,
+      "resolved_at": 1790103129.904159,
+      "resolution": "All active modules compile cleanly",
+      "cycle_detected": 1,
+      "auto": true,
+      "status": "RESOLVED"
+    },
+    {
+      "id": "code-c3c6e860",
+      "title": "syntax-errors",
+      "description": "23 active Python file(s) with syntax errors",
+      "severity": "critical",
+      "category": "code",
+      "created_at": 1790103031.5886295,
+      "resolved_at": 1790103129.9041612,
+      "resolution": "All active modules compile cleanly",
+      "cycle_detected": 1,
+      "auto": true,
+      "status": "RESOLVED"
+    },
+    {
+      "id": "test-5e3d63f9",
+      "title": "test-unreachable",
+      "description": "Cannot run tests: name 'sys' is not defined",
+      "severity": "critical",
+      "category": "test",
+      "created_at": 1790103174.4400976,
+      "resolved_at": null,
+      "resolution": null,
+      "cycle_detected": 100,
+      "auto": true,
+      "status": "OPEN"
+    }
+  ]
+}
