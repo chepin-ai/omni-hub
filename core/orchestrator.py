@@ -23,6 +23,7 @@ _monitor = None
 _git_hook = None
 _tools_registry = None
 _open_problems = None
+_agent_swarm = None
 
 
 def _get_north_star():
@@ -55,6 +56,17 @@ def _get_open_problems():
         from core.open_problems import OpenProblemsTracker
         _open_problems = OpenProblemsTracker()
     return _open_problems
+
+
+def _get_agent_swarm():
+    global _agent_swarm
+    if _agent_swarm is None:
+        from core.agent_swarm import AgentSwarm, AgentSwarmConfig
+        _agent_swarm = AgentSwarm(AgentSwarmConfig(
+            n_research=1, n_code=1, n_review=1, n_meta=1,
+            cycle_limit=1, report_interval=1,
+        ))
+    return _agent_swarm
 
 
 def _get_persistence():
@@ -300,13 +312,30 @@ class OMNIHUBOrchestrator:
         # 4. Execute tool_call if selected
         if action == "tool_call":
             try:
-                tools = _get_tools_registry()
-                result = tools.invoke_random(exclude=["web_search"])
-                self.current_state["last_tool_result"] = result.to_dict()
-                if bus and Topics:
-                    bus.publish_simple(Topics.ACTION_SELECTED,
-                                      {"action": "tool_call", "tool": result.tool_name, "success": result.success},
-                                      source="tools")
+                import random
+                # 30% chance to trigger full AgentSwarm instead of single tool
+                if random.random() < 0.3:
+                    swarm = _get_agent_swarm()
+                    swarm.run_cycle(self.current_state.copy())
+                    status = swarm.get_status()
+                    self.current_state["last_tool_result"] = {
+                        "mode": "agent_swarm",
+                        "agents": status["n_agents"],
+                        "successful_tasks": status["total_successful_tasks"],
+                        "by_role": {k: v["tasks"] for k, v in status["by_role"].items()},
+                    }
+                    if bus and Topics:
+                        bus.publish_simple(Topics.ACTION_SELECTED,
+                                          {"action": "agent_swarm", "agents": status["n_agents"]},
+                                          source="agents")
+                else:
+                    tools = _get_tools_registry()
+                    result = tools.invoke_random(exclude=["web_search"])
+                    self.current_state["last_tool_result"] = result.to_dict()
+                    if bus and Topics:
+                        bus.publish_simple(Topics.ACTION_SELECTED,
+                                          {"action": "tool_call", "tool": result.tool_name, "success": result.success},
+                                          source="tools")
             except Exception as e:
                 self.current_state["last_tool_result"] = {"tool": "none", "success": False, "error": str(e)}
 
