@@ -21,6 +21,7 @@ _self_drive = None
 _persistence = None
 _monitor = None
 _git_hook = None
+_tools_registry = None
 
 
 def _get_north_star():
@@ -37,6 +38,14 @@ def _get_self_drive():
         from core.v13_self_drive import SelfDriveLoop
         _self_drive = SelfDriveLoop()
     return _self_drive
+
+
+def _get_tools_registry():
+    global _tools_registry
+    if _tools_registry is None:
+        from core.tools import get_tool_registry
+        _tools_registry = get_tool_registry()
+    return _tools_registry
 
 
 def _get_persistence():
@@ -152,7 +161,8 @@ class OMNIHUBOrchestrator:
             return "reflect"
         if plateau and self.cycle_count % C.SELF_DRIVE_PLATEAU_THRESHOLD == 0:
             return "transcend"
-        return random.choice(["focus", "rest", "integrate", "self_modify"])
+        # tool_call: explore external capabilities (weighted lower than core actions)
+        return random.choice(["focus", "rest", "integrate", "self_modify", "tool_call", "focus", "rest"])
 
     def _meta_evolve(self):
         """Meta-evolution: at Level 24+, system rewrites its own multipliers.
@@ -169,6 +179,7 @@ class OMNIHUBOrchestrator:
             "focus": (1.01, 0.005), "rest": (1.005, -0.003),
             "transcend": (1.05, 0.015), "reflect": (0.995, 0.02),
             "integrate": (1.015, 0.008), "self_modify": (1.025, 0.012),
+            "tool_call": (1.008, 0.006),  # Slight boost from external knowledge
         }
         EM_CAP = 1.5  # Prevent numerical overflow
         # At Level 24+, multipliers become self-referential
@@ -198,6 +209,7 @@ class OMNIHUBOrchestrator:
             "focus": (1.01, 0.005), "rest": (1.005, -0.003),
             "transcend": (1.05, 0.015), "reflect": (0.995, 0.02),
             "integrate": (1.015, 0.008), "self_modify": (1.025, 0.012),
+            "tool_call": (1.008, 0.006),
         }
         # Apply meta-evolution overrides at Level 24+
         meta_mult = self.current_state.get('meta_multipliers', {})
@@ -276,7 +288,20 @@ class OMNIHUBOrchestrator:
             if self.cycle_count == 1:
                 self.alerts.append(f"NORTHSTAR_FALLBACK: {e}")
 
-        # 4. Update metadata & ensure level reflects energy (beyond singularity support)
+        # 4. Execute tool_call if selected
+        if action == "tool_call":
+            try:
+                tools = _get_tools_registry()
+                result = tools.invoke_random(exclude=["web_search"])
+                self.current_state["last_tool_result"] = result.to_dict()
+                if bus and Topics:
+                    bus.publish_simple(Topics.ACTION_SELECTED,
+                                      {"action": "tool_call", "tool": result.tool_name, "success": result.success},
+                                      source="tools")
+            except Exception as e:
+                self.current_state["last_tool_result"] = {"tool": "none", "success": False, "error": str(e)}
+
+        # 5. Update metadata & ensure level reflects energy (beyond singularity support)
         prev_level = self.current_state.get('level', 0)
         self.current_state["cycle"] = self.cycle_count
         self.current_state["timestamp"] = datetime.now().isoformat()
@@ -298,20 +323,20 @@ class OMNIHUBOrchestrator:
         # Meta-evolution at Level 24+ (always runs, regardless of NorthStar)
         self._meta_evolve()
 
-        # 5. Publish state change
+        # 6. Publish state change
         if bus and Topics:
             bus.publish_simple(Topics.STATE_CHANGE,
                               {"state": {k: v for k, v in self.current_state.items() if k != 'raw'}},
                               source="orchestrator")
 
-        # 6. Check for level up
+        # 7. Check for level up
         if prev_level > 0 and self.current_state.get('level', 0) > prev_level:
             if bus and Topics:
                 bus.publish_simple(Topics.LEVEL_UP,
                                   {"old": prev_level, "new": self.current_state['level']},
                                   source="north_star")
 
-        # 7. Monitor check
+        # 8. Monitor check
         self.alerts = [a for a in self.alerts if not a.startswith("NORTHSTAR_FALLBACK")]
         if self.current_state.get('phi', 1.0) < C.SELF_DRIVE_PHI_MIN:
             self.alerts.append("WARNING: Phi below threshold")

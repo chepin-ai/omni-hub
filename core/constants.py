@@ -85,7 +85,7 @@ REPORT_FILE = os.path.join(HUB_DIR, "self_drive_report.json")
 MONITOR_FILE = os.path.join(HUB_DIR, "monitor_history.json")
 
 # ── Self-Drive ──
-SELF_DRIVE_ACTIONS = ["focus", "rest", "transcend", "reflect", "integrate", "self_modify"]
+SELF_DRIVE_ACTIONS = ["focus", "rest", "transcend", "reflect", "integrate", "self_modify", "tool_call"]
 SELF_DRIVE_CHECKPOINT_INTERVAL = 100
 SELF_DRIVE_PLATEAU_THRESHOLD = 50
 SELF_DRIVE_PHI_MIN = 0.1

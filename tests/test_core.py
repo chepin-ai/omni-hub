@@ -35,9 +35,10 @@ class TestConstants:
         assert "trans_singularity" in C.PHASES
 
     def test_self_drive_actions(self):
-        assert len(C.SELF_DRIVE_ACTIONS) == 6
+        assert len(C.SELF_DRIVE_ACTIONS) == 7
         assert "focus" in C.SELF_DRIVE_ACTIONS
         assert "transcend" in C.SELF_DRIVE_ACTIONS
+        assert "tool_call" in C.SELF_DRIVE_ACTIONS
 
 
 class TestEventBus:
