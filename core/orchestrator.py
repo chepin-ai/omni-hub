@@ -24,6 +24,7 @@ _git_hook = None
 _tools_registry = None
 _open_problems = None
 _agent_swarm = None
+_memory_compressor = None
 
 
 def _get_north_star():
@@ -67,6 +68,14 @@ def _get_agent_swarm():
             cycle_limit=1, report_interval=1,
         ))
     return _agent_swarm
+
+
+def _get_memory_compressor():
+    global _memory_compressor
+    if _memory_compressor is None:
+        from core.memory_compressor import MemoryCompressor
+        _memory_compressor = MemoryCompressor(max_raw_history=500, milestone_interval=50)
+    return _memory_compressor
 
 
 def _get_persistence():
@@ -421,7 +430,25 @@ class OMNIHUBOrchestrator:
                                   {"cycle": self.cycle_count, "file": str(C.STATE_FILE)},
                                   source="persistence")
 
-        # 10. Auto-git commit
+        # 10. Memory compression (every 200 cycles if history is large)
+        if self.cycle_count % 200 == 0 and len(self.history) > 500:
+            try:
+                comp = _get_memory_compressor()
+                compressed = comp.compress(self.history)
+                self.current_state['memory_compression'] = {
+                    "mode": compressed['mode'],
+                    "milestones_count": len(compressed['milestones']),
+                    "ratio": compressed['stats']['ratio'],
+                    "cycle": self.cycle_count,
+                }
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "memory_compressed", "ratio": compressed['stats']['ratio']},
+                                      source="memory")
+            except Exception:
+                pass
+
+        # 11. Auto-git commit
         if self.auto_git and self.cycle_count % C.SELF_DRIVE_CHECKPOINT_INTERVAL == 0:
             self._git_commit()
             if bus and Topics:
@@ -429,7 +456,7 @@ class OMNIHUBOrchestrator:
                                   {"cycle": self.cycle_count},
                                   source="auto_git")
 
-        # 11. Publish cycle end
+        # 12. Publish cycle end
         if bus and Topics:
             bus.publish_simple(Topics.CYCLE_END,
                               {"cycle": self.cycle_count, "alerts": len(self.alerts)},
