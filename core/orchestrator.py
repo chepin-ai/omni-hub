@@ -27,6 +27,7 @@ _agent_swarm = None
 _memory_compressor = None
 _goal_planner = None
 _predictive = None
+_adaptive = None
 
 
 def _get_north_star():
@@ -94,6 +95,14 @@ def _get_predictive():
         from core.predictive import PredictiveEngine
         _predictive = PredictiveEngine(history_window=100)
     return _predictive
+
+
+def _get_adaptive():
+    global _adaptive
+    if _adaptive is None:
+        from core.adaptive_thresholds import AdaptiveThresholds
+        _adaptive = AdaptiveThresholds()
+    return _adaptive
 
 
 def _get_persistence():
@@ -469,7 +478,32 @@ class OMNIHUBOrchestrator:
             except Exception:
                 pass
 
-        # 10. Persist state
+        # 10. Adaptive threshold tracking
+        if self.cycle_count % 50 == 0 and len(self.history) >= 20:
+            try:
+                adaptive = _get_adaptive()
+                # Compute metrics from recent history
+                recent = self.history[-20:]
+                energies = [h['state'].get('energy', 1.0) for h in recent if 'state' in h]
+                phis = [h['state'].get('phi', 0.5) for h in recent if 'state' in h]
+                if len(energies) >= 2 and energies[0] > 0:
+                    growth = (energies[-1] / energies[0]) ** (1 / len(energies))
+                    adaptive.track("energy_growth_rate", growth)
+                if len(phis) >= 2:
+                    phi_var = max(phis) - min(phis)
+                    adaptive.track("phi_variance", phi_var)
+                # Run evaluation every 200 cycles
+                if self.cycle_count % 200 == 0:
+                    proposals = adaptive.evaluate(self.cycle_count)
+                    from core import constants as C_mod
+                    for prop in proposals:
+                        adaptive.apply(prop, C_mod)
+                    if proposals:
+                        self.current_state['adaptive_adjustments'] = adaptive.get_status()
+            except Exception:
+                pass
+
+        # 11. Persist state
         if self.auto_persist and self.cycle_count % C.SELF_DRIVE_CHECKPOINT_INTERVAL == 0:
             self._persist()
             if bus and Topics:
@@ -477,7 +511,7 @@ class OMNIHUBOrchestrator:
                                   {"cycle": self.cycle_count, "file": str(C.STATE_FILE)},
                                   source="persistence")
 
-        # 11. Goal planning cycle (every 50 cycles)
+        # 12. Goal planning cycle (every 50 cycles)
         if self.cycle_count % 50 == 0:
             try:
                 planner = _get_goal_planner()
@@ -494,7 +528,7 @@ class OMNIHUBOrchestrator:
             except Exception:
                 pass
 
-        # 12. Memory compression (every 200 cycles if history is large)
+        # 13. Memory compression (every 200 cycles if history is large)
         if self.cycle_count % 200 == 0 and len(self.history) > 500:
             try:
                 comp = _get_memory_compressor()
@@ -512,7 +546,7 @@ class OMNIHUBOrchestrator:
             except Exception:
                 pass
 
-        # 13. Auto-git commit
+        # 14. Auto-git commit
         if self.auto_git and self.cycle_count % C.SELF_DRIVE_CHECKPOINT_INTERVAL == 0:
             self._git_commit()
             if bus and Topics:
@@ -520,7 +554,7 @@ class OMNIHUBOrchestrator:
                                   {"cycle": self.cycle_count},
                                   source="auto_git")
 
-        # 14. Publish cycle end
+        # 15. Publish cycle end
         if bus and Topics:
             bus.publish_simple(Topics.CYCLE_END,
                               {"cycle": self.cycle_count, "alerts": len(self.alerts)},
