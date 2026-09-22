@@ -94,8 +94,11 @@ class GlobalStateMonitor:
             try:
                 with open(self.state_file, "r", encoding="utf-8") as fh:
                     data = json.load(fh)
-                self.phi = float(data.get("Phi", 0.0))
-                self.iteration = int(data.get("iteration", 0))
+                pos = data.get("current_position", {})
+                self.phi = float(pos.get("consciousness", 0.0))
+                self.iteration = int(data.get("step", 0))
+                self.level = int(pos.get("level", 0))
+                self.energy = float(data.get("ladder", {}).get("current_energy", 0.0))
                 self.timestamp = data.get("timestamp", "")
             except (json.JSONDecodeError, ValueError, KeyError, FileNotFoundError):
                 pass

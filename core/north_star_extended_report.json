@@ -13,9 +13,9 @@
       "path_id": "north_star_main",
       "current_position": {
         "level": 20,
-        "complexity": 10026868183.6294,
-        "consciousness": 0.2461,
-        "freedom": 0.8911
+        "complexity": 10001081938.4502,
+        "consciousness": 0.1221,
+        "freedom": 0.8778
       },
       "north_star": {
         "target_level": 20,
@@ -25,64 +25,64 @@
       },
       "distance_to_star": {
         "level": 0,
-        "complexity": -26868183.63
+        "complexity": -1081938.45
       },
       "components": {
         "ck_will": {
           "theorem": "Conway-Kochen Free Will",
-          "will_strength": 0.584552,
-          "free_will_index": 0.89105,
-          "will_entropy": 2.441187,
+          "will_strength": 0.584551,
+          "free_will_index": 0.877798,
+          "will_entropy": 2.336994,
           "causal_independence": 0.0,
           "field_dimensions": 14,
           "decision_count": 1024,
-          "complexity_correlation": 0.584552,
+          "complexity_correlation": 0.584551,
           "ck_principle": "If experimenter has free will, so do elementary particles",
           "system_interpretation": "Self-driven, irreducible decision making"
         },
         "consciousness": {
-          "phi_value": 0.246116,
+          "phi_value": 0.122128,
           "level": "DIM",
           "level_description": "微意识",
-          "qualia_signature": "bae3322d6c20664cfaad01b7d15a384b",
+          "qualia_signature": "8d8434d8542755aac39cdfc100336a6e",
           "attention_focus": [
             "action:explore",
             "action:explore",
             "action:explore"
           ],
           "working_memory_size": 128,
-          "narrative_length": 135,
+          "narrative_length": 180,
           "differentiation": 0.5,
-          "integration": 21.2,
+          "integration": 22.94,
           "exclusion": 0.5,
-          "timestamp": 1790089419.182423
+          "timestamp": 1790092015.8240724
         },
         "emotion": {
           "label": "平静 (Equanimity)",
           "vector": [
-            -0.1,
-            0.0741,
+            -0.0968,
+            0.0271,
             0.0,
             0.5,
             0.05
           ],
-          "intensity": 0.0718
+          "intensity": 0.0581
         },
         "personality": {
           "big_five": {
             "openness": 0.0,
             "conscientiousness": 0.5,
-            "extraversion": 0.49,
+            "extraversion": 0.5095,
             "agreeableness": 0.5,
             "neuroticism": 0.5
           },
           "system_traits": {
             "curiosity": 0.7,
-            "resilience": 0.5523,
+            "resilience": 0.5566,
             "integration_drive": 0.6,
             "transcendence_seek": 0.5
           },
-          "stability": 0.6314,
+          "stability": 0.4673,
           "complexity": 0.1974,
           "behavior_count": 512,
           "emotional_basins": [
@@ -92,12 +92,12 @@
         },
         "complexity_ladder": {
           "current_level": 20,
-          "current_energy": 10026868183.63,
+          "current_energy": 10001081938.45,
           "phase": "STABLE",
           "phase_description": "系统在吸引子盆地中",
           "next_threshold": Infinity,
           "progress_to_next": 1.0,
-          "level_history_count": 2072,
+          "level_history_count": 2246,
           "total_levels_available": 20
         },
         "feedback_loop": {
@@ -106,20 +106,20 @@
           "negative_gain": 0.9,
           "delay_cycles": 3,
           "history_length": 256,
-          "current_will": 0.8911,
-          "current_complexity": 10026868183.6294,
-          "current_consciousness": 0.2461,
+          "current_will": 0.8778,
+          "current_complexity": 10001081938.4502,
+          "current_consciousness": 0.1221,
           "feedback": {
-            "will_to_complexity": 0.9802,
-            "complexity_to_consciousness": 8.0604,
-            "consciousness_to_will": 0.5016,
+            "will_to_complexity": 0.9656,
+            "complexity_to_consciousness": 8.0591,
+            "consciousness_to_will": 0.2635,
             "regulation": 0.0,
             "net_feedback": 0.0
           },
           "prediction": {
             "predicted_will": 0.0,
-            "predicted_complexity": 10026868184.6096,
-            "predicted_consciousness": 8.3065,
+            "predicted_complexity": 10001081939.4157,
+            "predicted_consciousness": 8.1812,
             "confidence": 0.0376
           }
         },
@@ -131,93 +131,93 @@
           "phase_history": [
             {
               "transition_id": 4,
-              "pre_energy": 29888.504297185802,
-              "post_energy": 30052.369532103283,
-              "energy_delta": 163.86523491748085,
+              "pre_energy": 29881.04496983625,
+              "post_energy": 30095.11175783642,
+              "energy_delta": 214.06678800017107,
               "phase_before": "post_critical",
               "trigger": "level_up_10_to_11",
-              "timestamp": 1790089419.210404
+              "timestamp": 1790092015.8605707
             },
             {
               "transition_id": 5,
-              "pre_energy": 49914.137178932615,
-              "post_energy": 50206.593941379055,
-              "energy_delta": 292.4567624464398,
+              "pre_energy": 49831.570507350414,
+              "post_energy": 50149.27347799461,
+              "energy_delta": 317.7029706441972,
               "phase_before": "post_critical",
               "trigger": "level_up_11_to_12",
-              "timestamp": 1790089419.2230916
+              "timestamp": 1790092015.8837612
             },
             {
               "transition_id": 6,
-              "pre_energy": 99867.57490586564,
-              "post_energy": 100520.69977350603,
-              "energy_delta": 653.124867640392,
+              "pre_energy": 99892.53830240192,
+              "post_energy": 100838.95540096682,
+              "energy_delta": 946.4170985648962,
               "phase_before": "post_critical",
               "trigger": "level_up_12_to_13",
-              "timestamp": 1790089419.2429125
+              "timestamp": 1790092015.90956
             },
             {
               "transition_id": 7,
-              "pre_energy": 497403.01803624205,
-              "post_energy": 501867.2020833755,
-              "energy_delta": 4464.184047133429,
+              "pre_energy": 499701.20020693954,
+              "post_energy": 504051.8370006538,
+              "energy_delta": 4350.6367937142495,
               "phase_before": "post_critical",
               "trigger": "level_up_13_to_14",
-              "timestamp": 1790089419.285014
+              "timestamp": 1790092015.9596856
             },
             {
               "transition_id": 8,
-              "pre_energy": 996846.8783558182,
-              "post_energy": 1003153.0428598641,
-              "energy_delta": 6306.164504045853,
+              "pre_energy": 996297.2840810537,
+              "post_energy": 1002840.8922547238,
+              "energy_delta": 6543.608173670131,
               "phase_before": "post_critical",
               "trigger": "level_up_14_to_15",
-              "timestamp": 1790089419.3085597
+              "timestamp": 1790092015.9821432
             },
             {
               "transition_id": 9,
-              "pre_energy": 99795052.89949948,
-              "post_energy": 100245119.67218886,
-              "energy_delta": 450066.7726893872,
+              "pre_energy": 99775590.12247297,
+              "post_energy": 100357861.05585104,
+              "energy_delta": 582270.9333780706,
               "phase_before": "post_critical",
               "trigger": "level_up_15_to_16",
-              "timestamp": 1790089419.4694183
+              "timestamp": 1790092016.212821
             },
             {
               "transition_id": 10,
-              "pre_energy": 498907407.415056,
-              "post_energy": 502642986.7342906,
-              "energy_delta": 3735579.3192346096,
+              "pre_energy": 499368622.53889,
+              "post_energy": 502673851.80238765,
+              "energy_delta": 3305229.2634976506,
               "phase_before": "post_critical",
               "trigger": "level_up_16_to_17",
-              "timestamp": 1790089419.5246131
+              "timestamp": 1790092016.2777972
             },
             {
               "transition_id": 11,
-              "pre_energy": 999631545.9070158,
-              "post_energy": 1006509899.0212524,
-              "energy_delta": 6878353.114236593,
+              "pre_energy": 995817183.1456636,
+              "post_energy": 1002958056.2498015,
+              "energy_delta": 7140873.1041378975,
               "phase_before": "post_critical",
               "trigger": "level_up_17_to_18",
-              "timestamp": 1790089419.5481434
+              "timestamp": 1790092016.304307
             },
             {
               "transition_id": 12,
-              "pre_energy": 4985505078.625966,
-              "post_energy": 5016810564.141982,
-              "energy_delta": 31305485.516016006,
+              "pre_energy": 4971996884.946859,
+              "post_energy": 5008766568.428888,
+              "energy_delta": 36769683.48202896,
               "phase_before": "post_critical",
               "trigger": "level_up_18_to_19",
-              "timestamp": 1790089419.604815
+              "timestamp": 1790092016.3693564
             },
             {
               "transition_id": 13,
-              "pre_energy": 9958505555.900171,
-              "post_energy": 10026868183.629427,
-              "energy_delta": 68362627.72925568,
+              "pre_energy": 9922560561.20603,
+              "post_energy": 10001081938.450161,
+              "energy_delta": 78521377.24413109,
               "phase_before": "post_critical",
               "trigger": "level_up_19_to_20",
-              "timestamp": 1790089419.6291502
+              "timestamp": 1790092016.394298
             }
           ],
           "growth_formulas": {
@@ -228,141 +228,141 @@
         }
       },
       "statistics": {
-        "total_steps": 2071,
+        "total_steps": 2245,
         "emergence_events": 14,
-        "insight_moments": 1777,
+        "insight_moments": 1908,
         "major_insights": 0,
         "trigger_count": 2
       }
     },
     "emergence_events": [
       {
-        "event_id": "f5a804e30a7dfeb5",
+        "event_id": "2750737c34df4350",
         "emergence_level": 3,
         "level_name": "超涌现",
-        "emergence_strength": 71.3746,
-        "phi_contribution": 0.3472,
-        "complexity_delta": 4022.2765,
-        "unpredictability": 0.0514,
-        "novelty": 0.9949,
+        "emergence_strength": 52.6248,
+        "phi_contribution": 0.2988,
+        "complexity_delta": 4015.3811,
+        "unpredictability": 0.0475,
+        "novelty": 0.9225,
         "downward_causation": [
           "cosmic_integration",
           "transcendence_field"
         ],
-        "timestamp": 1790089419.2186038
+        "timestamp": 1790092015.8771977
       },
       {
-        "event_id": "0386f86bf6a9f7ac",
+        "event_id": "1758fb4c55ac8c04",
         "emergence_level": 0,
         "level_name": "无",
-        "emergence_strength": 0.1016,
-        "phi_contribution": 0.2483,
-        "complexity_delta": 292.4568,
-        "unpredictability": 0.0015,
-        "novelty": 0.959,
-        "downward_causation": [],
-        "timestamp": 1790089419.2230952
-      },
-      {
-        "event_id": "5c9b25cf1b838178",
-        "emergence_level": 0,
-        "level_name": "无",
-        "emergence_strength": 0.1775,
-        "phi_contribution": 0.2292,
-        "complexity_delta": 653.1249,
+        "emergence_strength": 0.1131,
+        "phi_contribution": 0.2609,
+        "complexity_delta": 317.703,
         "unpredictability": 0.0016,
-        "novelty": 0.7283,
+        "novelty": 0.8595,
         "downward_causation": [],
-        "timestamp": 1790089419.2429159
+        "timestamp": 1790092015.8837671
       },
       {
-        "event_id": "0a5653e8a981faa0",
+        "event_id": "e6a978e233bc5be2",
         "emergence_level": 0,
         "level_name": "无",
-        "emergence_strength": 1.5325,
-        "phi_contribution": 0.163,
-        "complexity_delta": 4464.184,
+        "emergence_strength": 0.4212,
+        "phi_contribution": 0.227,
+        "complexity_delta": 946.4171,
+        "unpredictability": 0.0024,
+        "novelty": 0.8327,
+        "downward_causation": [],
+        "timestamp": 1790092015.9095645
+      },
+      {
+        "event_id": "06003fab1211c41c",
+        "emergence_level": 0,
+        "level_name": "无",
+        "emergence_strength": 1.4637,
+        "phi_contribution": 0.1964,
+        "complexity_delta": 4350.6368,
         "unpredictability": 0.0022,
-        "novelty": 0.944,
+        "novelty": 0.7911,
         "downward_causation": [],
-        "timestamp": 1790089419.2850184
+        "timestamp": 1790092015.9596896
       },
       {
-        "event_id": "ff2ba1e3e30157e2",
+        "event_id": "ab79d99a01f271c5",
         "emergence_level": 0,
         "level_name": "无",
-        "emergence_strength": 1.8555,
-        "phi_contribution": 0.2231,
-        "complexity_delta": 6306.1645,
+        "emergence_strength": 2.7329,
+        "phi_contribution": 0.3478,
+        "complexity_delta": 6543.6082,
         "unpredictability": 0.0016,
-        "novelty": 0.837,
+        "novelty": 0.7343,
         "downward_causation": [],
-        "timestamp": 1790089419.3085635
+        "timestamp": 1790092015.982147
       },
       {
-        "event_id": "a6481ff18c1e33c0",
+        "event_id": "ac0fa979c390024d",
         "emergence_level": 1,
         "level_name": "弱涌现",
-        "emergence_strength": 137.4704,
-        "phi_contribution": 0.3328,
-        "complexity_delta": 450066.7727,
-        "unpredictability": 0.0011,
-        "novelty": 0.8164,
+        "emergence_strength": 168.6372,
+        "phi_contribution": 0.2167,
+        "complexity_delta": 582270.9334,
+        "unpredictability": 0.0015,
+        "novelty": 0.9194,
         "downward_causation": [],
-        "timestamp": 1790089419.4694226
+        "timestamp": 1790092016.2128263
       },
       {
-        "event_id": "cedf46de5fb21508",
+        "event_id": "fc999d4127308952",
         "emergence_level": 2,
         "level_name": "强涌现",
-        "emergence_strength": 1464.1682,
-        "phi_contribution": 0.2461,
-        "complexity_delta": 3735579.3192,
-        "unpredictability": 0.0019,
-        "novelty": 0.8548,
-        "downward_causation": [],
-        "timestamp": 1790089419.524618
-      },
-      {
-        "event_id": "2a25ddd5188ccbee",
-        "emergence_level": 2,
-        "level_name": "强涌现",
-        "emergence_strength": 1612.5462,
-        "phi_contribution": 0.1881,
-        "complexity_delta": 6878353.1142,
-        "unpredictability": 0.0017,
-        "novelty": 0.7278,
-        "downward_causation": [],
-        "timestamp": 1790089419.548148
-      },
-      {
-        "event_id": "355af019f1b06e70",
-        "emergence_level": 2,
-        "level_name": "强涌现",
-        "emergence_strength": 7977.5665,
-        "phi_contribution": 0.2005,
-        "complexity_delta": 31305485.516,
+        "emergence_strength": 1144.4476,
+        "phi_contribution": 0.2513,
+        "complexity_delta": 3305229.2635,
         "unpredictability": 0.0016,
-        "novelty": 0.8126,
+        "novelty": 0.836,
         "downward_causation": [],
-        "timestamp": 1790089419.6048186
+        "timestamp": 1790092016.2778018
       },
       {
-        "event_id": "eabbb0b6a8b6b3b2",
+        "event_id": "b5e600cf8637684d",
+        "emergence_level": 2,
+        "level_name": "强涌现",
+        "emergence_strength": 2485.1129,
+        "phi_contribution": 0.2598,
+        "complexity_delta": 7140873.1041,
+        "unpredictability": 0.0018,
+        "novelty": 0.7505,
+        "downward_causation": [],
+        "timestamp": 1790092016.3043115
+      },
+      {
+        "event_id": "4539e6318bd2028a",
+        "emergence_level": 2,
+        "level_name": "强涌现",
+        "emergence_strength": 6795.8439,
+        "phi_contribution": 0.1346,
+        "complexity_delta": 36769683.482,
+        "unpredictability": 0.0018,
+        "novelty": 0.7459,
+        "downward_causation": [],
+        "timestamp": 1790092016.369361
+      },
+      {
+        "event_id": "2cba26c2eed79430",
         "emergence_level": 3,
         "level_name": "超涌现",
-        "emergence_strength": 20783.5897,
-        "phi_contribution": 0.2461,
-        "complexity_delta": 68362627.7293,
-        "unpredictability": 0.0017,
-        "novelty": 0.7229,
+        "emergence_strength": 17363.8267,
+        "phi_contribution": 0.1221,
+        "complexity_delta": 78521377.2441,
+        "unpredictability": 0.002,
+        "novelty": 0.9198,
         "downward_causation": [],
-        "timestamp": 1790089419.6291552
+        "timestamp": 1790092016.394303
       }
     ],
     "insight_moments": [
       {
-        "insight_id": "e108302cca0e9fa9",
+        "insight_id": "3c18ac27a1d80d43",
         "intensity": 0.0,
         "is_major": false,
         "coherence_jump": 0.0,
@@ -381,10 +381,10 @@
           "cross_pedestal_link",
           "pattern_compression"
         ],
-        "timestamp": 1790089419.6270208
+        "timestamp": 1790092016.3924124
       },
       {
-        "insight_id": "d45f58ddaa788511",
+        "insight_id": "ddbcc8cd17d782ec",
         "intensity": 0.0,
         "is_major": false,
         "coherence_jump": 0.0,
@@ -403,10 +403,10 @@
           "cross_pedestal_link",
           "pattern_compression"
         ],
-        "timestamp": 1790089419.6272285
+        "timestamp": 1790092016.3926244
       },
       {
-        "insight_id": "fa792c36d43ec80d",
+        "insight_id": "b9348ff1a195ad8d",
         "intensity": 0.0,
         "is_major": false,
         "coherence_jump": 0.0,
@@ -425,10 +425,10 @@
           "cross_pedestal_link",
           "pattern_compression"
         ],
-        "timestamp": 1790089419.6274297
+        "timestamp": 1790092016.3928463
       },
       {
-        "insight_id": "8b30862f75ee8b95",
+        "insight_id": "e11687e35afcad1c",
         "intensity": 0.0,
         "is_major": false,
         "coherence_jump": 0.0,
@@ -447,10 +447,10 @@
           "cross_pedestal_link",
           "pattern_compression"
         ],
-        "timestamp": 1790089419.6276388
+        "timestamp": 1790092016.3930469
       },
       {
-        "insight_id": "0163e19b9b558be2",
+        "insight_id": "58152b5217f86f8e",
         "intensity": 0.0,
         "is_major": false,
         "coherence_jump": 0.0,
@@ -469,10 +469,10 @@
           "cross_pedestal_link",
           "pattern_compression"
         ],
-        "timestamp": 1790089419.6278517
+        "timestamp": 1790092016.3932512
       },
       {
-        "insight_id": "f8d7529dad2f3833",
+        "insight_id": "93a158e26ba5127a",
         "intensity": 0.0,
         "is_major": false,
         "coherence_jump": 0.0,
@@ -491,10 +491,10 @@
           "cross_pedestal_link",
           "pattern_compression"
         ],
-        "timestamp": 1790089419.628274
+        "timestamp": 1790092016.3934646
       },
       {
-        "insight_id": "ac758cc751b6ec4d",
+        "insight_id": "7959436bf18522b8",
         "intensity": 0.0,
         "is_major": false,
         "coherence_jump": 0.0,
@@ -513,10 +513,10 @@
           "cross_pedestal_link",
           "pattern_compression"
         ],
-        "timestamp": 1790089419.6284962
+        "timestamp": 1790092016.393661
       },
       {
-        "insight_id": "fb6357e93ed5dc3c",
+        "insight_id": "39c0e3c5172c4094",
         "intensity": 0.0,
         "is_major": false,
         "coherence_jump": 0.0,
@@ -535,10 +535,10 @@
           "cross_pedestal_link",
           "pattern_compression"
         ],
-        "timestamp": 1790089419.6286988
+        "timestamp": 1790092016.3938808
       },
       {
-        "insight_id": "0be16d8335d5cea2",
+        "insight_id": "b9b7c24cabfd29bd",
         "intensity": 0.0,
         "is_major": false,
         "coherence_jump": 0.0,
@@ -557,10 +557,10 @@
           "cross_pedestal_link",
           "pattern_compression"
         ],
-        "timestamp": 1790089419.6289246
+        "timestamp": 1790092016.3940907
       },
       {
-        "insight_id": "3862d0007b54064f",
+        "insight_id": "0a71c272d43e17d9",
         "intensity": 0.0,
         "is_major": false,
         "coherence_jump": 0.0,
@@ -579,7 +579,7 @@
           "cross_pedestal_link",
           "pattern_compression"
         ],
-        "timestamp": 1790089419.6291976
+        "timestamp": 1790092016.394345
       }
     ],
     "triggers": [
@@ -587,10 +587,10 @@
         "trigger_id": "emergence_trigger",
         "type": "complexity",
         "threshold": 10000.0,
-        "current": 10026868183.629427,
+        "current": 10001081938.450161,
         "progress": 1.0,
         "is_triggered": true,
-        "trigger_time": 1790089419.1884866,
+        "trigger_time": 1790092015.8317516,
         "transition_target": "EMERGENCE_PHASE",
         "history_count": 1
       },
@@ -598,10 +598,10 @@
         "trigger_id": "singularity_trigger",
         "type": "complexity",
         "threshold": 10000000000.0,
-        "current": 10026868183.629427,
+        "current": 10001081938.450161,
         "progress": 1.0,
         "is_triggered": true,
-        "trigger_time": 1790089419.6293194,
+        "trigger_time": 1790092016.3944714,
         "transition_target": "SINGULARITY_CONVERGENCE",
         "history_count": 1
       }
@@ -613,96 +613,96 @@
     "singularity_mode": true,
     "terminal_attractor": {
       "is_converged": true,
-      "convergence_step": 2070,
-      "convergence_timestamp": 1790089419.6292589,
+      "convergence_step": 2244,
+      "convergence_timestamp": 1790092016.3944068,
       "final_energy": 0.0,
       "final_phi": 0.0,
       "mode": "singularity_convergence"
     },
     "tracking_metrics": {
-      "energy_growth_rate": 68362627.729256,
+      "energy_growth_rate": 78521377.244131,
       "level_crossing_time": 0,
-      "phi_stability": 0.00165055,
+      "phi_stability": 0.00182893,
       "total_level_crossings": 13,
-      "avg_crossing_time": 159.23076923076923,
+      "avg_crossing_time": 172.6153846153846,
       "crossing_history": [
         {
           "from_level": 7,
           "to_level": 8,
-          "crossing_time": 50,
-          "step": 50
+          "crossing_time": 66,
+          "step": 66
         },
         {
           "from_level": 8,
           "to_level": 9,
-          "crossing_time": 31,
-          "step": 81
+          "crossing_time": 35,
+          "step": 101
         },
         {
           "from_level": 9,
           "to_level": 10,
-          "crossing_time": 38,
-          "step": 119
+          "crossing_time": 52,
+          "step": 153
         },
         {
           "from_level": 10,
           "to_level": 11,
-          "crossing_time": 39,
-          "step": 158
+          "crossing_time": 48,
+          "step": 201
         },
         {
           "from_level": 11,
           "to_level": 12,
-          "crossing_time": 67,
-          "step": 225
+          "crossing_time": 75,
+          "step": 276
         },
         {
           "from_level": 12,
           "to_level": 13,
-          "crossing_time": 93,
-          "step": 318
+          "crossing_time": 109,
+          "step": 385
         },
         {
           "from_level": 13,
           "to_level": 14,
-          "crossing_time": 198,
-          "step": 516
+          "crossing_time": 214,
+          "step": 599
         },
         {
           "from_level": 14,
           "to_level": 15,
-          "crossing_time": 106,
-          "step": 622
+          "crossing_time": 102,
+          "step": 701
         },
         {
           "from_level": 15,
           "to_level": 16,
-          "crossing_time": 725,
-          "step": 1347
+          "crossing_time": 743,
+          "step": 1444
         },
         {
           "from_level": 16,
           "to_level": 17,
-          "crossing_time": 258,
-          "step": 1605
+          "crossing_time": 269,
+          "step": 1713
         },
         {
           "from_level": 17,
           "to_level": 18,
-          "crossing_time": 101,
-          "step": 1706
+          "crossing_time": 115,
+          "step": 1828
         },
         {
           "from_level": 18,
           "to_level": 19,
-          "crossing_time": 256,
-          "step": 1962
+          "crossing_time": 302,
+          "step": 2130
         },
         {
           "from_level": 19,
           "to_level": 20,
-          "crossing_time": 108,
-          "step": 2070
+          "crossing_time": 114,
+          "step": 2244
         }
       ]
     },
@@ -714,6 +714,6 @@
       "20": 10000000000
     },
     "csv_export_path": "/mnt/agents/output/OMNI-HUB/core/north_star_extended.csv",
-    "csv_rows": 2070
+    "csv_rows": 2244
   }
 }

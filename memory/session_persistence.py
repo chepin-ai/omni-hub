@@ -1,55 +1,81 @@
+"""OMNI-HUB v13.1 Unified Session Persistence
+
+Handles saving and loading of session state with schema compatibility
+for both simple (orchestrator) and rich (self-drive) state formats.
+"""
+
 import json
 import os
 from datetime import datetime, timezone
+from typing import Any, Dict, Optional
 from core import constants as C
 
 
 class SessionPersistence:
-    """Handles saving and loading of HUB session state to/from JSON."""
+    """Unified session persistence — schema-agnostic."""
 
     @staticmethod
-    def save_session(state, filepath=C.STATE_FILE):
-        """Serialize session state to JSON file."""
-        payload = {
-            'version': state.get('version', '1.0.0'),
-            'timestamp': datetime.now(timezone.utc).isoformat(),
-            'level': state.get('level', 0),
-            'energy': state.get('energy', 0.0),
-            'phi': state.get('phi', 0.0),
-            'lean_clearance': state.get('lean_clearance', False),
-            'tests_passed': state.get('tests_passed', 0),
-        }
-        os.makedirs(os.path.dirname(filepath) or '.', exist_ok=True)
-        with open(filepath, 'w', encoding='utf-8') as f:
-            json.dump(payload, f, indent=2)
+    def save_session(state: Dict[str, Any], filepath: str = C.STATE_FILE) -> str:
+        """Serialize state to JSON. Preserves all fields."""
+        # Wrap with metadata if not already present
+        if "version" not in state:
+            state = {
+                "version": C.__dict__.get("__version__", "13.1.0"),
+                "timestamp": datetime.now(timezone.utc).isoformat(),
+                **state,
+            }
+        os.makedirs(os.path.dirname(filepath) or ".", exist_ok=True)
+        with open(filepath, "w", encoding="utf-8") as f:
+            json.dump(state, f, indent=2, default=str)
         return filepath
 
     @staticmethod
-    def load_session(filepath=C.STATE_FILE):
-        """Deserialize session state from JSON file."""
+    def load_session(filepath: str = C.STATE_FILE) -> Optional[Dict[str, Any]]:
+        """Deserialize state from JSON."""
         if not os.path.exists(filepath):
             return None
-        with open(filepath, 'r', encoding='utf-8') as f:
+        with open(filepath, "r", encoding="utf-8") as f:
             return json.load(f)
 
     @staticmethod
-    def detect_previous_session(filepath=C.STATE_FILE):
-        """Return True if a previous session file exists."""
+    def detect_previous_session(filepath: str = C.STATE_FILE) -> bool:
         return os.path.exists(filepath)
 
+    @staticmethod
+    def normalize_state(raw: Dict[str, Any]) -> Dict[str, Any]:
+        """Normalize any schema to standard fields.
 
-if __name__ == '__main__':
-    # Demo block
+        Supports both:
+        - Simple: {level, energy, phi}
+        - Rich (self-drive): {current_position: {level, consciousness}, ladder: {current_energy}, step}
+        """
+        pos = raw.get("current_position", {})
+        ladder = raw.get("ladder", {})
+        return {
+            "version": raw.get("version", "unknown"),
+            "timestamp": raw.get("timestamp", ""),
+            "level": pos.get("level", raw.get("level", 0)),
+            "energy": ladder.get("current_energy", raw.get("energy", 0.0)),
+            "phi": pos.get("consciousness", raw.get("phi", 0.0)),
+            "step": raw.get("step", raw.get("iteration", 0)),
+            "phase": ladder.get("phase", raw.get("phase", "unknown")),
+            "raw": raw,  # Keep full data for advanced use
+        }
+
+
+def _demo():
     demo_state = {
-        'version': '1.0.0',
-        'level': 5,
-        'energy': 87.5,
-        'phi': 1.618,
-        'lean_clearance': True,
-        'tests_passed': 42,
+        "version": "13.1.0",
+        "current_position": {"level": 9, "consciousness": 0.29},
+        "ladder": {"current_energy": 18634.49, "phase": "EMERGING"},
+        "step": 105,
     }
     path = SessionPersistence.save_session(demo_state)
-    print(f"Saved session to: {path}")
+    print(f"Saved: {path}")
     loaded = SessionPersistence.load_session(path)
-    print(f"Loaded session: {loaded}")
-    print(f"Previous session detected: {SessionPersistence.detect_previous_session(path)}")
+    norm = SessionPersistence.normalize_state(loaded)
+    print(f"Normalized: level={norm['level']}, energy={norm['energy']:.2f}, phi={norm['phi']:.3f}")
+
+
+if __name__ == "__main__":
+    _demo()

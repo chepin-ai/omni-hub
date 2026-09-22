@@ -117,7 +117,7 @@ class AutoGitHook:
         message = f"auto: {filename} | E={energy} L={level}"
 
         # Stage the file
-        repo_root = self._git_root(filepath)
+        repo_root = self._git_root(filepath.parent)
         rel_path = filepath.relative_to(repo_root)
         self._git('add', str(rel_path), cwd=repo_root)
 
