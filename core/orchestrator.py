@@ -63,6 +63,24 @@ def _get_git_hook():
     return _git_hook
 
 
+def _get_bus():
+    """Lazy load event bus."""
+    try:
+        from core.event_bus import get_bus
+        return get_bus()
+    except Exception:
+        return None
+
+
+def _get_topics():
+    """Lazy load Topics enum."""
+    try:
+        from core.event_bus import Topics
+        return Topics
+    except Exception:
+        return None
+
+
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
@@ -169,14 +187,26 @@ class OMNIHUBOrchestrator:
         })
 
     def run_cycle(self) -> Dict[str, Any]:
-        """Execute one full system cycle with full module coupling."""
+        """Execute one full system cycle with full module coupling + event bus."""
         self.cycle_count += 1
+        bus = _get_bus()
+        Topics = _get_topics()
 
-        # 1. Select action
+        # 1. Publish cycle start
+        if bus and Topics:
+            bus.publish_simple(Topics.CYCLE_START,
+                              {"cycle": self.cycle_count, "timestamp": datetime.now().isoformat()},
+                              source="orchestrator")
+
+        # 2. Select action
         action = self._select_action()
         self.current_state["action"] = action
+        if bus and Topics:
+            bus.publish_simple(Topics.ACTION_SELECTED,
+                              {"action": action, "cycle": self.cycle_count},
+                              source="self_drive")
 
-        # 2. Try to drive North Star (coupled module)
+        # 3. Try to drive North Star (coupled module)
         try:
             if self._north_star is None:
                 from core.v13_north_star_extended import NorthStarPathExtended
@@ -192,14 +222,32 @@ class OMNIHUBOrchestrator:
             if self.cycle_count == 1:
                 self.alerts.append(f"NORTHSTAR_FALLBACK: {e}")
 
-        # 3. Update metadata
+        # 4. Update metadata
+        prev_level = self.current_state.get('level', 0)
         self.current_state["cycle"] = self.cycle_count
         self.current_state["timestamp"] = datetime.now().isoformat()
 
-        # 4. Monitor check
+        # 5. Publish state change
+        if bus and Topics:
+            bus.publish_simple(Topics.STATE_CHANGE,
+                              {"state": {k: v for k, v in self.current_state.items() if k != 'raw'}},
+                              source="orchestrator")
+
+        # 6. Check for level up
+        if prev_level > 0 and self.current_state.get('level', 0) > prev_level:
+            if bus and Topics:
+                bus.publish_simple(Topics.LEVEL_UP,
+                                  {"old": prev_level, "new": self.current_state['level']},
+                                  source="north_star")
+
+        # 7. Monitor check
         self.alerts = [a for a in self.alerts if not a.startswith("NORTHSTAR_FALLBACK")]
         if self.current_state.get('phi', 1.0) < C.SELF_DRIVE_PHI_MIN:
             self.alerts.append("WARNING: Phi below threshold")
+            if bus and Topics:
+                bus.publish_simple(Topics.ALERT,
+                                  {"type": "phi_low", "value": self.current_state['phi']},
+                                  source="monitor")
         if self.cycle_count % 50 == 0:
             try:
                 import subprocess
@@ -211,16 +259,34 @@ class OMNIHUBOrchestrator:
                     sorry_count = len(result.stdout.strip().split('\n'))
                     if sorry_count > 0:
                         self.alerts.append(f"LEAN_SORRY: {sorry_count} remaining")
+                        if bus and Topics:
+                            bus.publish_simple(Topics.ALERT,
+                                              {"type": "lean_sorry", "count": sorry_count},
+                                              source="monitor")
             except Exception:
                 pass
 
-        # 5. Persist state
+        # 8. Persist state
         if self.auto_persist and self.cycle_count % C.SELF_DRIVE_CHECKPOINT_INTERVAL == 0:
             self._persist()
+            if bus and Topics:
+                bus.publish_simple(Topics.PERSISTENCE_SAVE,
+                                  {"cycle": self.cycle_count, "file": str(C.STATE_FILE)},
+                                  source="persistence")
 
-        # 6. Auto-git commit
+        # 9. Auto-git commit
         if self.auto_git and self.cycle_count % C.SELF_DRIVE_CHECKPOINT_INTERVAL == 0:
             self._git_commit()
+            if bus and Topics:
+                bus.publish_simple(Topics.GIT_COMMIT,
+                                  {"cycle": self.cycle_count},
+                                  source="auto_git")
+
+        # 10. Publish cycle end
+        if bus and Topics:
+            bus.publish_simple(Topics.CYCLE_END,
+                              {"cycle": self.cycle_count, "alerts": len(self.alerts)},
+                              source="orchestrator")
 
         summary = {
             "cycle": self.cycle_count,
