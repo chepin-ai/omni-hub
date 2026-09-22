@@ -222,10 +222,25 @@ class OMNIHUBOrchestrator:
             if self.cycle_count == 1:
                 self.alerts.append(f"NORTHSTAR_FALLBACK: {e}")
 
-        # 4. Update metadata
+        # 4. Update metadata & ensure level reflects energy (beyond singularity support)
         prev_level = self.current_state.get('level', 0)
         self.current_state["cycle"] = self.cycle_count
         self.current_state["timestamp"] = datetime.now().isoformat()
+        # Force level recalculation from energy (allows surpassing NorthStar's internal max)
+        energy = self.current_state.get('energy', 0)
+        level = self.current_state.get('level', 0)
+        for lvl in range(level + 1, C.MAX_LEVEL + 1):
+            threshold = C.LEVEL_THRESHOLDS.get(lvl)
+            if threshold and energy >= threshold:
+                level = lvl
+            else:
+                break
+        self.current_state['level'] = level
+        # Recalculate phase
+        if level >= 25:
+            self.current_state['phase'] = "asymptotic_infinity"
+        elif level >= 21:
+            self.current_state['phase'] = "trans_singularity"
 
         # 5. Publish state change
         if bus and Topics:
