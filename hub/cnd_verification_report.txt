@@ -1,0 +1,25 @@
+==================================================
+=== T-0008 CND Verification Report ===
+Matrix size: 46x46
+CND check (sampled): PASS
+Max x^T D x (sampled): -6.364499e+01
+Eigenvalue check: PASS
+PSD kernel check: PASS
+=== VERDICT: PROVISIONALLY VERIFIED ===
+==================================================
+
+Detailed results:
+4-point condition violations: 0
+Max 4-point violation: 7.105427e-15
+Min eigenvalue of exp(-D): 3.172551e-01
+Centered eigenvalues (top 10):
+  lambda_0: -5.842549e-15
+  lambda_1: -2.420812e-01
+  lambda_2: -2.955310e-01
+  lambda_3: -3.577320e-01
+  lambda_4: -4.330898e-01
+  lambda_5: -4.923837e-01
+  lambda_6: -5.482298e-01
+  lambda_7: -6.258539e-01
+  lambda_8: -6.500833e-01
+  lambda_9: -6.553175e-01

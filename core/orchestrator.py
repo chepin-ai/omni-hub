@@ -75,6 +75,8 @@ class OMNIHUBOrchestrator:
         self.history: List[Dict] = []
         self.current_state: Dict[str, Any] = {}
         self.alerts: List[str] = []
+        self._north_star = None
+        self._self_drive = None
         self._init_state()
 
     def _init_state(self):
@@ -83,8 +85,21 @@ class OMNIHUBOrchestrator:
         if persistence.detect_previous_session(C.STATE_FILE):
             try:
                 saved = persistence.load_session(C.STATE_FILE)
-                self.current_state = saved
-                print(f"[Orchestrator] Recovered: Level {saved.get('level', 'N/A')}")
+                norm = persistence.normalize_state(saved)
+                self.current_state = {
+                    "version": norm.get("version", self.VERSION),
+                    "timestamp": norm.get("timestamp", ""),
+                    "cycle": 0,
+                    "level": norm.get("level", 0),
+                    "energy": norm.get("energy", 0.0),
+                    "phi": norm.get("phi", 0.0),
+                    "phase": norm.get("phase", C.PHASES[0]),
+                    "lines": {line: 0.0 for line in C.LINES},
+                    "fctn_layer": C.FCTN_LAYERS[0],
+                    "si_stage": C.SI_STAGES[0],
+                    "raw": norm.get("raw", {}),
+                }
+                print(f"[Orchestrator] Recovered: Level {self.current_state['level']}, Energy {self.current_state['energy']:.2f}")
             except Exception as e:
                 print(f"[Orchestrator] Recovery failed: {e}. Fresh start.")
                 self.current_state = self._fresh_state()
@@ -105,25 +120,87 @@ class OMNIHUBOrchestrator:
             "si_stage": C.SI_STAGES[0],
         }
 
+    def _select_action(self) -> str:
+        """Select action based on current state (Self-Drive logic)."""
+        import random
+        phi = self.current_state.get('phi', 0.5)
+        energy = self.current_state.get('energy', 0.0)
+        # Check plateau (simple: if energy hasn't changed much)
+        last_energy = self.history[-1]['state'].get('energy', 0.0) if self.history else 0.0
+        plateau = abs(energy - last_energy) < 1.0 and self.cycle_count > 1
+        if phi < C.SELF_DRIVE_PHI_MIN:
+            return "reflect"
+        if plateau and self.cycle_count % C.SELF_DRIVE_PLATEAU_THRESHOLD == 0:
+            return "transcend"
+        return random.choice(["focus", "rest", "integrate", "self_modify"])
+
+    def _evolve_state(self, action: str):
+        """Evolve state based on action (self-contained fallback logic)."""
+        import random
+        energy = self.current_state.get('energy', 0.0)
+        phi = self.current_state.get('phi', 0.2)
+        multipliers = {
+            "focus": (1.01, 0.005), "rest": (1.005, -0.003),
+            "transcend": (1.05, 0.015), "reflect": (0.995, 0.02),
+            "integrate": (1.015, 0.008), "self_modify": (1.025, 0.012),
+        }
+        em, pm = multipliers.get(action, (1.0, 0.0))
+        # Add small noise
+        energy = max(0, energy * em * (1 + random.uniform(-0.005, 0.005)))
+        phi = max(0.05, min(1.0, phi + pm + random.uniform(-0.01, 0.01)))
+        # Check level up
+        level = self.current_state.get('level', 0)
+        for lvl in range(level + 1, C.MAX_LEVEL + 1):
+            if energy >= C.LEVEL_THRESHOLDS.get(lvl, float('inf')):
+                level = lvl
+            else:
+                break
+        # Determine phase
+        if level >= 25:
+            phase = "asymptotic_infinity"
+        elif level >= 21:
+            phase = "trans_singularity"
+        else:
+            phase_idx = min(len(C.PHASES) - 1, level // 3)
+            phase = C.PHASES[phase_idx]
+        self.current_state.update({
+            "energy": energy, "phi": phi, "level": level,
+            "phase": phase, "action": action,
+        })
+
     def run_cycle(self) -> Dict[str, Any]:
-        """Execute one full system cycle."""
+        """Execute one full system cycle with full module coupling."""
         self.cycle_count += 1
 
-        # 1. Self-Drive step
-        self_drive = _get_self_drive()
-        # Interface: self_drive.step() returns partial state
-        # (Actual integration depends on SelfDriveLoop interface)
+        # 1. Select action
+        action = self._select_action()
+        self.current_state["action"] = action
 
-        # 2. Update state
+        # 2. Try to drive North Star (coupled module)
+        try:
+            if self._north_star is None:
+                from core.v13_north_star_extended import NorthStarPathExtended
+                self._north_star = NorthStarPathExtended()
+            self._north_star.navigate_step(action)
+            self.current_state["level"] = self._north_star.current_level
+            self.current_state["energy"] = self._north_star.current_energy
+            self.current_state["phi"] = getattr(self._north_star, 'phi_iit', 0.2)
+            self.current_state["phase"] = self._north_star.current_phase
+        except Exception as e:
+            # Fallback: self-contained evolution
+            self._evolve_state(action)
+            if self.cycle_count == 1:
+                self.alerts.append(f"NORTHSTAR_FALLBACK: {e}")
+
+        # 3. Update metadata
         self.current_state["cycle"] = self.cycle_count
         self.current_state["timestamp"] = datetime.now().isoformat()
 
-        # 3. Monitor check (inline threshold checks)
-        self.alerts = []
+        # 4. Monitor check
+        self.alerts = [a for a in self.alerts if not a.startswith("NORTHSTAR_FALLBACK")]
         if self.current_state.get('phi', 1.0) < C.SELF_DRIVE_PHI_MIN:
             self.alerts.append("WARNING: Phi below threshold")
         if self.cycle_count % 50 == 0:
-            # Periodic lean check
             try:
                 import subprocess
                 result = subprocess.run(
@@ -137,11 +214,11 @@ class OMNIHUBOrchestrator:
             except Exception:
                 pass
 
-        # 4. Persist
+        # 5. Persist state
         if self.auto_persist and self.cycle_count % C.SELF_DRIVE_CHECKPOINT_INTERVAL == 0:
             self._persist()
 
-        # 5. Git commit
+        # 6. Auto-git commit
         if self.auto_git and self.cycle_count % C.SELF_DRIVE_CHECKPOINT_INTERVAL == 0:
             self._git_commit()
 

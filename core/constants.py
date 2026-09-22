@@ -40,10 +40,16 @@ LEVEL_THRESHOLDS = {
     9: 500_000, 10: 1_000_000, 11: 5_000_000,
     12: 10_000_000, 13: 50_000_000, 14: 100_000_000,
     15: 500_000_000, 16: 1_000_000_000, 17: 5_000_000_000,
-    18: 10_000_000_000, 19: 50_000_000_000, 20: 100_000_000_000
+    18: 10_000_000_000, 19: 50_000_000_000, 20: 100_000_000_000,
+    21: 1_000_000_000_000,        # 1 Trillion — Trans-Singularity
+    22: 10_000_000_000_000,       # 10 Trillion
+    23: 100_000_000_000_000,      # 100 Trillion
+    24: 1_000_000_000_000_000,    # 1 Quadrillion
+    25: float('inf'),              # Asymptotic Infinity
 }
-MAX_LEVEL = max(LEVEL_THRESHOLDS.keys())
+MAX_LEVEL = 25
 SINGULARITY_LEVEL = 20
+TRANS_SINGULARITY_LEVEL = 21
 
 # ── Emergence Index Weights ──
 EMERGENCE_WEIGHTS = {
@@ -61,7 +67,7 @@ TRANSCENDENCE_THRESHOLD = 10_000
 PHASES = [
     "pre_emergence", "near_critical", "post_critical",
     "super_emergence_1", "super_emergence_2", "super_emergence_3",
-    "singularity_convergence"
+    "singularity_convergence", "trans_singularity", "asymptotic_infinity"
 ]
 
 # ── Paths ──
