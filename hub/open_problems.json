@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-09-23T02:53:49.138251",
+  "updated_at": "2026-09-23T02:57:24.990412",
   "total": 5,
-  "open": 3,
+  "open": 2,
   "problems": [
     {
       "id": "git-1c8c93ed",
@@ -10,11 +10,11 @@
       "severity": "medium",
       "category": "git",
       "created_at": 1790103031.588593,
-      "resolved_at": null,
-      "resolution": null,
+      "resolved_at": 1790103441.121796,
+      "resolution": "All commits pushed",
       "cycle_detected": 1,
       "auto": true,
-      "status": "OPEN"
+      "status": "RESOLVED"
     },
     {
       "id": "lean-5e387f38",
