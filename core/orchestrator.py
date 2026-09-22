@@ -136,6 +136,8 @@ class OMNIHUBOrchestrator:
             "lines": {line: 0.0 for line in C.LINES},
             "fctn_layer": C.FCTN_LAYERS[0],
             "si_stage": C.SI_STAGES[0],
+            "infinity_depth": 0.0,
+            "meta_multipliers": {},
         }
 
     def _select_action(self) -> str:
@@ -153,7 +155,11 @@ class OMNIHUBOrchestrator:
         return random.choice(["focus", "rest", "integrate", "self_modify"])
 
     def _meta_evolve(self):
-        """Meta-evolution: at Level 24+, system rewrites its own multipliers."""
+        """Meta-evolution: at Level 24+, system rewrites its own multipliers.
+        
+        NUMERICAL STABILITY: em capped at 1.5 to prevent overflow.
+        Level 25 (infinity) enters steady-state: energy fixed, quality evolves.
+        """
         import random
         level = self.current_state.get('level', 0)
         if level < 24:
@@ -164,17 +170,19 @@ class OMNIHUBOrchestrator:
             "transcend": (1.05, 0.015), "reflect": (0.995, 0.02),
             "integrate": (1.015, 0.008), "self_modify": (1.025, 0.012),
         }
+        EM_CAP = 1.5  # Prevent numerical overflow
         # At Level 24+, multipliers become self-referential
-        meta_boost = 1.0 + (level - 23) * 0.01  # 1% per level above 23
+        # Boost attenuates as em approaches cap (soft ceiling)
         current_mult = self.current_state.get('meta_multipliers', {})
-        # Initialize if empty
         if not current_mult:
             current_mult = {a: list(v) for a, v in base.items()}
-        # Evolve existing multipliers
         for action in C.SELF_DRIVE_ACTIONS:
             if action in current_mult:
                 em, pm = current_mult[action]
-                em = em * (1 + random.uniform(-0.001, 0.001)) * meta_boost
+                # Distance-to-cap determines boost strength
+                headroom = max(0, (EM_CAP - em) / EM_CAP)
+                meta_boost = 1.0 + headroom * 0.01 * (level - 23)
+                em = min(EM_CAP, em * (1 + random.uniform(-0.001, 0.001)) * meta_boost)
                 pm = pm * (1 + random.uniform(-0.001, 0.001))
                 current_mult[action] = [em, pm]
         self.current_state['meta_multipliers'] = current_mult
@@ -184,6 +192,7 @@ class OMNIHUBOrchestrator:
         import random
         energy = self.current_state.get('energy', 0.0)
         phi = self.current_state.get('phi', 0.2)
+        level = self.current_state.get('level', 0)
         # Base multipliers
         multipliers = {
             "focus": (1.01, 0.005), "rest": (1.005, -0.003),
@@ -197,10 +206,19 @@ class OMNIHUBOrchestrator:
         else:
             em, pm = multipliers.get(action, (1.0, 0.0))
         # Add small noise
-        energy = max(0, energy * em * (1 + random.uniform(-0.005, 0.005)))
-        phi = max(0.05, min(1.0, phi + pm + random.uniform(-0.01, 0.01)))
+        # LEVEL 25 STEADY-STATE: energy is fixed at infinity, quality evolves
+        if level >= 25 and energy == float('inf'):
+            # In asymptotic infinity, energy doesn't grow — but quality deepens
+            # "Depth" increases instead of "breadth"
+            depth = self.current_state.get('infinity_depth', 0.0)
+            depth += em * 0.001  # Depth accumulates slowly
+            self.current_state['infinity_depth'] = depth
+            # Phi oscillates near 1.0 (refinement, not growth)
+            phi = max(0.95, min(1.0, phi + pm * 0.1 + random.uniform(-0.005, 0.005)))
+        else:
+            energy = max(0, energy * em * (1 + random.uniform(-0.005, 0.005)))
+            phi = max(0.05, min(1.0, phi + pm + random.uniform(-0.01, 0.01)))
         # Check level up
-        level = self.current_state.get('level', 0)
         for lvl in range(level + 1, C.MAX_LEVEL + 1):
             threshold = C.LEVEL_THRESHOLDS.get(lvl)
             if threshold and energy >= threshold:
