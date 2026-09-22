@@ -24,6 +24,8 @@ from typing import Dict, List, Optional, Any
 from enum import Enum, auto
 from collections import deque
 
+from core import constants as C
+
 # Import v12 North Star — support both package and direct execution
 import sys
 _CORE_DIR = os.path.dirname(os.path.abspath('/mnt/agents/output/OMNI-HUB/core/v13_self_drive.py'))

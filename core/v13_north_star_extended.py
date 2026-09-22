@@ -33,6 +33,9 @@ from collections import deque
 # Ensure core is on path for import
 sys.path.insert(0, "/mnt/agents/output/OMNI-HUB/core")
 
+# Unified constants
+from core import constants as C
+
 # Import all base components from v12 north star
 from v12_north_star import (
     CosmicConstants,
@@ -82,6 +85,7 @@ class ExtendedComplexityLadder(ComplexityLadder):
 
     def __post_init__(self):
         # Merge base thresholds with extended
+        # Extended beyond C.LEVEL_THRESHOLDS
         extended_thresholds = {
             16: 100_000_000.0,      # 1e8 -- supercritical mass
             17: 500_000_000.0,      # 5e8 -- deep integration v2
@@ -402,6 +406,7 @@ class ExtendedNorthStarPath(NorthStarPath):
             "singularity_mode": self.singularity_mode,
             "terminal_attractor": self.terminal.get_report(),
             "tracking_metrics": self.metrics.get_metrics_report(),
+            # Extended beyond C.LEVEL_THRESHOLDS
             "extended_thresholds": {
                 16: 100_000_000,
                 17: 500_000_000,

@@ -13,6 +13,7 @@ import time
 from datetime import datetime
 from pathlib import Path
 from threading import Lock, Timer
+from core import constants as C
 
 
 class AutoGitHook:
@@ -224,14 +225,14 @@ def main():
     parser.add_argument(
         '--cooldown', '-c',
         type=int,
-        default=60,
-        help='Debounce cooldown in seconds (default: 60)'
+        default=C.GIT_DEBOUNCE_SECONDS,
+        help=f'Debounce cooldown in seconds (default: {C.GIT_DEBOUNCE_SECONDS})'
     )
     parser.add_argument(
         '--ext',
         nargs='+',
-        default=['.py', '.lean', '.md'],
-        help='File extensions to watch (default: .py .lean .md)'
+        default=C.GIT_WATCH_EXTENSIONS,
+        help=f'File extensions to watch (default: {" ".join(C.GIT_WATCH_EXTENSIONS)})'
     )
     parser.add_argument(
         '--no-push',
@@ -239,9 +240,12 @@ def main():
         help='Commit only; do not push to remote'
     )
 
-    args = parser.parse_args() if len(sys.argv) > 1 else argparse.Namespace(
-        watch=".", cooldown=60, ext=['.py', '.lean', '.md'], no_push=False
-    )
+    if len(sys.argv) > 1 and not any(x in sys.argv[0] for x in ['ipykernel', 'ipython']):
+        args = parser.parse_args()
+    else:
+        args = argparse.Namespace(
+            watch=".", cooldown=C.GIT_DEBOUNCE_SECONDS, ext=C.GIT_WATCH_EXTENSIONS, no_push=False
+        )
 
     hook = AutoGitHook(cooldown=args.cooldown)
     # Monkey-patch push if disabled

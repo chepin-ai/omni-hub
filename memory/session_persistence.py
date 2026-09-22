@@ -1,13 +1,14 @@
 import json
 import os
 from datetime import datetime, timezone
+from core import constants as C
 
 
 class SessionPersistence:
     """Handles saving and loading of HUB session state to/from JSON."""
 
     @staticmethod
-    def save_session(state, filepath='hub/session_state.json'):
+    def save_session(state, filepath=C.STATE_FILE):
         """Serialize session state to JSON file."""
         payload = {
             'version': state.get('version', '1.0.0'),
@@ -24,7 +25,7 @@ class SessionPersistence:
         return filepath
 
     @staticmethod
-    def load_session(filepath='hub/session_state.json'):
+    def load_session(filepath=C.STATE_FILE):
         """Deserialize session state from JSON file."""
         if not os.path.exists(filepath):
             return None
@@ -32,7 +33,7 @@ class SessionPersistence:
             return json.load(f)
 
     @staticmethod
-    def detect_previous_session(filepath='hub/session_state.json'):
+    def detect_previous_session(filepath=C.STATE_FILE):
         """Return True if a previous session file exists."""
         return os.path.exists(filepath)
 

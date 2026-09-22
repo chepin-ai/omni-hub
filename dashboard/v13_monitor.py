@@ -4,6 +4,7 @@ import sys
 import glob
 import time
 import argparse
+from core import constants as C
 
 
 class GlobalStateMonitor:
@@ -21,8 +22,8 @@ class GlobalStateMonitor:
         "RESET": "\033[0m",
     }
 
-    def __init__(self, lean_dir="lean/OMNIHUB", test_dir="tests",
-                 state_file="hub/session_state.json"):
+    def __init__(self, lean_dir=C.LEAN_DIR, test_dir="tests",
+                 state_file=C.STATE_FILE):
         self.lean_dir = lean_dir
         self.test_dir = test_dir
         self.state_file = state_file
@@ -106,49 +107,49 @@ class GlobalStateMonitor:
         self.read_test_status()
         self.read_north_star_status()
 
-        C = self.COLORS
-        R = C["RESET"]
+        COL = self.COLORS
+        R = COL["RESET"]
 
         # Determine alert states
-        sorry_color = C["RED"] if self.sorry_count > 0 else C["GREEN"]
-        test_color = C["RED"] if self.test_fail > 0 else C["GREEN"]
-        phi_color = C["YELLOW"] if self.phi < 0.1 else C["GREEN"]
+        sorry_color = COL["RED"] if self.sorry_count > 0 else COL["GREEN"]
+        test_color = COL["RED"] if self.test_fail > 0 else COL["GREEN"]
+        phi_color = COL["YELLOW"] if self.phi < C.SELF_DRIVE_PHI_MIN else COL["GREEN"]
 
         # Build dashboard
         lines = []
-        lines.append(f"{C['BOLD']}{C['CYAN']}" + "=" * 60 + f"{R}")
-        lines.append(f"{C['BOLD']}{C['WHITE']}  OMNI-HUB GLOBAL STATE MONITOR v13{R}")
-        lines.append(f"{C['BOLD']}{C['CYAN']}" + "=" * 60 + f"{R}")
+        lines.append(f"{COL['BOLD']}{COL['CYAN']}" + "=" * 60 + f"{R}")
+        lines.append(f"{COL['BOLD']}{COL['WHITE']}  OMNI-HUB GLOBAL STATE MONITOR v13{R}")
+        lines.append(f"{COL['BOLD']}{COL['CYAN']}" + "=" * 60 + f"{R}")
         lines.append("")
-        lines.append(f"  {C['BOLD']}Lean Proofs:{R}")
+        lines.append(f"  {COL['BOLD']}Lean Proofs:{R}")
         lines.append(f"    {sorry_color}sorry count : {self.sorry_count}{R}")
         lines.append("")
-        lines.append(f"  {C['BOLD']}Test Suite:{R}")
+        lines.append(f"  {COL['BOLD']}Test Suite:{R}")
         lines.append(f"    {test_color}failures   : {self.test_fail}{R}")
-        lines.append(f"    {C['GREEN']}passes     : {self.test_pass}{R}")
+        lines.append(f"    {COL['GREEN']}passes     : {self.test_pass}{R}")
         lines.append("")
-        lines.append(f"  {C['BOLD']}North Star:{R}")
+        lines.append(f"  {COL['BOLD']}North Star:{R}")
         lines.append(f"    {phi_color}Phi        : {self.phi:.4f}{R}")
-        lines.append(f"    {C['BLUE']}iteration  : {self.iteration}{R}")
-        lines.append(f"    {C['MAGENTA']}timestamp  : {self.timestamp}{R}")
+        lines.append(f"    {COL['BLUE']}iteration  : {self.iteration}{R}")
+        lines.append(f"    {COL['MAGENTA']}timestamp  : {self.timestamp}{R}")
         lines.append("")
 
         # Alerts summary
         alerts = []
         if self.sorry_count > 0:
-            alerts.append(f"{C['RED']}[ALERT] sorry > 0{R}")
+            alerts.append(f"{COL['RED']}[ALERT] sorry > 0{R}")
         if self.test_fail > 0:
-            alerts.append(f"{C['RED']}[ALERT] test_fail > 0{R}")
-        if self.phi < 0.1:
-            alerts.append(f"{C['YELLOW']}[WARN]  Phi < 0.1{R}")
+            alerts.append(f"{COL['RED']}[ALERT] test_fail > 0{R}")
+        if self.phi < C.SELF_DRIVE_PHI_MIN:
+            alerts.append(f"{COL['YELLOW']}[WARN]  Phi < {C.SELF_DRIVE_PHI_MIN}{R}")
         if not alerts:
-            alerts.append(f"{C['GREEN']}[OK]    All systems nominal{R}")
+            alerts.append(f"{COL['GREEN']}[OK]    All systems nominal{R}")
 
         for a in alerts:
             lines.append(f"  {a}")
 
         lines.append("")
-        lines.append(f"{C['BOLD']}{C['CYAN']}" + "=" * 60 + f"{R}")
+        lines.append(f"{COL['BOLD']}{COL['CYAN']}" + "=" * 60 + f"{R}")
 
         print("\n".join(lines))
         return "\n".join(lines)
@@ -171,16 +172,19 @@ def main():
                         help="Run a single snapshot and exit")
     parser.add_argument("--interval", type=int, default=5,
                         help="Refresh interval in seconds (default: 5)")
-    parser.add_argument("--lean-dir", default="lean/OMNIHUB",
+    parser.add_argument("--lean-dir", default=C.LEAN_DIR,
                         help="Directory containing .lean files")
     parser.add_argument("--test-dir", default="tests",
                         help="Directory containing test outputs")
-    parser.add_argument("--state-file", default="hub/session_state.json",
+    parser.add_argument("--state-file", default=C.STATE_FILE,
                         help="Path to session_state.json")
-    args = parser.parse_args() if len(sys.argv) > 1 else argparse.Namespace(
-        once=False, interval=5, lean_dir="lean/OMNIHUB",
-        test_dir="tests", state_file="hub/session_state.json"
-    )
+    if len(sys.argv) > 1 and not any(x in sys.argv[0] for x in ['ipykernel', 'ipython']):
+        args = parser.parse_args()
+    else:
+        args = argparse.Namespace(
+            once=False, interval=5, lean_dir=C.LEAN_DIR,
+            test_dir="tests", state_file=C.STATE_FILE
+        )
 
     monitor = GlobalStateMonitor(
         lean_dir=args.lean_dir,
