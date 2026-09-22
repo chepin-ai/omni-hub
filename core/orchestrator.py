@@ -28,6 +28,7 @@ _memory_compressor = None
 _goal_planner = None
 _predictive = None
 _adaptive = None
+_self_reflection = None
 
 
 def _get_north_star():
@@ -103,6 +104,14 @@ def _get_adaptive():
         from core.adaptive_thresholds import AdaptiveThresholds
         _adaptive = AdaptiveThresholds()
     return _adaptive
+
+
+def _get_self_reflection():
+    global _self_reflection
+    if _self_reflection is None:
+        from core.self_reflection import SelfReflection
+        _self_reflection = SelfReflection()
+    return _self_reflection
 
 
 def _get_persistence():
@@ -528,7 +537,26 @@ class OMNIHUBOrchestrator:
             except Exception:
                 pass
 
-        # 13. Memory compression (every 200 cycles if history is large)
+        # 13. Self-reflection scan (every 500 cycles)
+        if self.cycle_count % 500 == 0:
+            try:
+                mirror = _get_self_reflection()
+                report = mirror.generate_self_report()
+                self.current_state['self_reflection'] = {
+                    "health_score": report['codebase']['health_score'],
+                    "modules": report['codebase']['modules_analyzed'],
+                    "lines": report['codebase']['total_lines'],
+                    "tests": report['testing']['total_tests'],
+                    "patterns": report['patterns'],
+                }
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "self_reflection", "health": report['codebase']['health_score']},
+                                      source="introspection")
+            except Exception:
+                pass
+
+        # 14. Memory compression (every 200 cycles if history is large)
         if self.cycle_count % 200 == 0 and len(self.history) > 500:
             try:
                 comp = _get_memory_compressor()
@@ -546,7 +574,7 @@ class OMNIHUBOrchestrator:
             except Exception:
                 pass
 
-        # 14. Auto-git commit
+        # 15. Auto-git commit
         if self.auto_git and self.cycle_count % C.SELF_DRIVE_CHECKPOINT_INTERVAL == 0:
             self._git_commit()
             if bus and Topics:
@@ -554,7 +582,7 @@ class OMNIHUBOrchestrator:
                                   {"cycle": self.cycle_count},
                                   source="auto_git")
 
-        # 15. Publish cycle end
+        # 16. Publish cycle end
         if bus and Topics:
             bus.publish_simple(Topics.CYCLE_END,
                               {"cycle": self.cycle_count, "alerts": len(self.alerts)},
