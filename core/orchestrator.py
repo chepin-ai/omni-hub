@@ -1,4 +1,4 @@
-"""OMNI-HUB v13.1 Unified Orchestrator
+"""OMNI-HUB v30 Singularity Convergence Orchestrator
 
 Central coordination hub for all modules.
 Provides unified initialization, cycle execution, cross-module state sharing,
@@ -159,7 +159,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "13.1.0"
+    VERSION = "30.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -175,6 +175,9 @@ class OMNIHUBOrchestrator:
 
     def _init_state(self):
         """Initialize or recover state."""
+        if not self.auto_persist:
+            self.current_state = self._fresh_state()
+            return
         persistence = _get_persistence()
         if persistence.detect_previous_session(C.STATE_FILE):
             try:
@@ -206,8 +209,8 @@ class OMNIHUBOrchestrator:
             "timestamp": datetime.now().isoformat(),
             "cycle": 0,
             "level": 0,
-            "energy": 0.0,
-            "phi": 0.0,
+            "energy": 1.0,
+            "phi": 0.5,
             "phase": C.PHASES[0],
             "lines": {line: 0.0 for line in C.LINES},
             "fctn_layer": C.FCTN_LAYERS[0],
@@ -221,6 +224,8 @@ class OMNIHUBOrchestrator:
         import random
         phi = self.current_state.get('phi', 0.5)
         energy = self.current_state.get('energy', 0.0)
+        if energy <= 0:
+            energy = 1.0  # Recovery from zero-energy state
         # Check plateau (simple: if energy hasn't changed much)
         last_energy = self.history[-1]['state'].get('energy', 0.0) if self.history else 0.0
         plateau = abs(energy - last_energy) < 1.0 and self.cycle_count > 1

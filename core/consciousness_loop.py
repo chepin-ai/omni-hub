@@ -49,7 +49,7 @@ class ConsciousnessLoop:
 
     def _init_components(self):
         from core.orchestrator import OMNIHUBOrchestrator
-        self._orchestrator = OMNIHUBOrchestrator(auto_persist=True, auto_git=False)
+        self._orchestrator = OMNIHUBOrchestrator(auto_persist=False, auto_git=False)
 
         if self.enable_swarm and self.n_instances > 1:
             from core.swarm import SwarmIntelligence, SwarmConfig

@@ -36,18 +36,23 @@ class PredictiveEngine:
         n = len(series)
         if n < 2:
             return {"slope": 0.0, "intercept": series[0] if series else 0.0, "r2": 0.0}
+        # Overflow protection: cap extremely large values
+        capped = [min(v, 1e308) if v == v else 0.0 for v in series]  # NaN check
         x_mean = (n - 1) / 2
-        y_mean = sum(series) / n
-        ss_xy = sum((i - x_mean) * (series[i] - y_mean) for i in range(n))
+        y_mean = sum(capped) / n
+        ss_xy = sum((i - x_mean) * (capped[i] - y_mean) for i in range(n))
         ss_xx = sum((i - x_mean) ** 2 for i in range(n))
         if ss_xx == 0:
             return {"slope": 0.0, "intercept": y_mean, "r2": 0.0}
         slope = ss_xy / ss_xx
         intercept = y_mean - slope * x_mean
-        # R-squared
-        ss_tot = sum((y - y_mean) ** 2 for y in series)
-        ss_res = sum((series[i] - (slope * i + intercept)) ** 2 for i in range(n))
-        r2 = 1 - (ss_res / ss_tot) if ss_tot > 0 else 0.0
+        # R-squared with overflow protection
+        try:
+            ss_tot = sum(min((y - y_mean) ** 2, 1e308) for y in capped)
+            ss_res = sum(min((capped[i] - (slope * i + intercept)) ** 2, 1e308) for i in range(n))
+            r2 = 1 - (ss_res / ss_tot) if ss_tot > 0 else 0.0
+        except OverflowError:
+            r2 = 0.0
         return {"slope": slope, "intercept": intercept, "r2": max(0.0, r2)}
 
     def _exponential_growth_rate(self, series: List[float]) -> float:
