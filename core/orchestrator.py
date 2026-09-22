@@ -143,6 +143,7 @@ class OMNIHUBOrchestrator:
         self.alerts: List[str] = []
         self._north_star = None
         self._self_drive = None
+        self._attention = None
         self._init_state()
 
     def _init_state(self):
@@ -189,7 +190,7 @@ class OMNIHUBOrchestrator:
         }
 
     def _select_action(self) -> str:
-        """Select action based on current state (Self-Drive logic)."""
+        """Select action based on current state using attention mechanism."""
         import random
         phi = self.current_state.get('phi', 0.5)
         energy = self.current_state.get('energy', 0.0)
@@ -200,8 +201,12 @@ class OMNIHUBOrchestrator:
             return "reflect"
         if plateau and self.cycle_count % C.SELF_DRIVE_PLATEAU_THRESHOLD == 0:
             return "transcend"
-        # tool_call: explore external capabilities (weighted lower than core actions)
-        return random.choice(["focus", "rest", "integrate", "self_modify", "tool_call", "focus", "rest"])
+        # Use attention mechanism for weighted selection
+        if self._attention is None:
+            from core.attention import AttentionMechanism
+            self._attention = AttentionMechanism()
+        action = self._attention.select_action(self.current_state, C.SELF_DRIVE_ACTIONS)
+        return action
 
     def _meta_evolve(self):
         """Meta-evolution: at Level 24+, system rewrites its own multipliers.
@@ -379,20 +384,26 @@ class OMNIHUBOrchestrator:
         # Meta-evolution at Level 24+ (always runs, regardless of NorthStar)
         self._meta_evolve()
 
-        # 6. Publish state change
+        # 6. Record attention outcome
+        if self._attention is not None and self.history:
+            prev_energy = self.history[-1]['state'].get('energy', 1.0)
+            curr_energy = self.current_state.get('energy', 1.0)
+            self._attention.record_outcome(action, prev_energy, curr_energy)
+
+        # 7. Publish state change
         if bus and Topics:
             bus.publish_simple(Topics.STATE_CHANGE,
                               {"state": {k: v for k, v in self.current_state.items() if k != 'raw'}},
                               source="orchestrator")
 
-        # 7. Check for level up
+        # 8. Check for level up
         if prev_level > 0 and self.current_state.get('level', 0) > prev_level:
             if bus and Topics:
                 bus.publish_simple(Topics.LEVEL_UP,
                                   {"old": prev_level, "new": self.current_state['level']},
                                   source="north_star")
 
-        # 8. Monitor check
+        # 9. Monitor check
         self.alerts = [a for a in self.alerts if not a.startswith("NORTHSTAR_FALLBACK")]
         if self.current_state.get('phi', 1.0) < C.SELF_DRIVE_PHI_MIN:
             self.alerts.append("WARNING: Phi below threshold")
