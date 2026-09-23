@@ -36,6 +36,7 @@ _cross_system = None
 _resonance = None
 _auto_evolution = None
 _line_engine = None
+_alignment_engine = None
 
 
 def _get_north_star():
@@ -180,6 +181,14 @@ def _get_line_engine():
     return _line_engine
 
 
+def _get_alignment_engine():
+    global _alignment_engine
+    if _alignment_engine is None:
+        from core.global_alignment import get_alignment_engine
+        _alignment_engine = get_alignment_engine()
+    return _alignment_engine
+
+
 def _get_persistence():
     global _persistence
     if _persistence is None:
@@ -225,7 +234,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "34.0.0"
+    VERSION = "35.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -825,6 +834,24 @@ class OMNIHUBOrchestrator:
             self.current_state['line_convergence'] = line_result['line_convergence']
         except Exception:
             pass
+
+        # 26. Global alignment verification (every 500 cycles)
+        if self.cycle_count % 500 == 0 and self.cycle_count > 0:
+            try:
+                align = _get_alignment_engine()
+                report = align.run_alignment_check()
+                self.current_state['alignment_report'] = {
+                    "status": report['status'],
+                    "score": report['overall_score'],
+                    "cross_module": f"{report['cross_module']['aligned']}/{report['cross_module']['total']}",
+                    "line_module": f"{report['line_module']['aligned_count']}/11",
+                }
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "alignment_check", "score": report['overall_score']},
+                                      source="alignment")
+            except Exception:
+                pass
 
         summary = {
             "cycle": self.cycle_count,
