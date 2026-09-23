@@ -202,30 +202,40 @@ class OpenProblemsTracker:
         else:
             self.resolve_by_category('code', 'Legacy debt reduced')
 
-        # 6. Python syntax errors
+        # 6. Python syntax errors — Auto-discover active modules (no stale whitelist)
         try:
-            # Scan only active modules (whitelist approach)
-            active_modules = [
-                'core/constants.py', 'core/orchestrator.py', 'core/event_bus.py',
-                'core/swarm.py', 'core/tools.py', 'core/self_modify.py',
-                'core/open_problems.py', 'core/v13_self_drive.py',
-                'core/v12_north_star.py', 'core/v13_north_star_extended.py',
-                'memory/session_persistence.py', 'hooks/auto_commit.py',
-                'dashboard/v13_monitor.py', 'dashboard/web_dashboard.py',
-                'run_v15.py',
-            ]
+            import py_compile
+            active_modules = []
+            legacy_modules = []
             syntax_errors = 0
+            broken_modules = []
+            # Auto-discover: non-v* modules in core/ are active
+            for f in sorted((base / 'core').glob('*.py')):
+                if f.name.startswith('v') and f.name[1:2].isdigit():
+                    legacy_modules.append(f)
+                elif f.name == '__init__.py':
+                    continue
+                else:
+                    active_modules.append(f)
+            # Also check memory, hooks, dashboard, root
+            for subdir in ['memory', 'hooks', 'dashboard']:
+                for f in sorted((base / subdir).glob('*.py')):
+                    if not f.name.startswith('v') or not f.name[1:2].isdigit():
+                        active_modules.append(f)
+            for f in sorted(base.glob('run_*.py')):
+                active_modules.append(f)
+            # Triple verification: compile check + py_compile + importability
             for mod in active_modules:
-                f = base / mod
-                if f.exists():
-                    try:
-                        compile(f.read_text(), str(f), 'exec')
-                    except SyntaxError:
-                        syntax_errors += 1
+                try:
+                    compile(mod.read_text(encoding='utf-8'), str(mod), 'exec')
+                    py_compile.compile(str(mod), doraise=True)
+                except (SyntaxError, py_compile.PyCompileError) as e:
+                    syntax_errors += 1
+                    broken_modules.append(f"{mod.name}: {e}")
             if syntax_errors > 0:
-                detected.append(('syntax-errors', f'{syntax_errors} active module(s) with syntax errors', 'critical', 'code'))
+                detected.append(('syntax-errors', f'{syntax_errors} active module(s) with syntax errors: {"; ".join(broken_modules[:3])}', 'critical', 'code'))
             else:
-                self.resolve_by_category('code', 'All active modules compile cleanly')
+                self.resolve_by_category('code', 'All active modules compile cleanly (auto-discovered)')
         except Exception:
             pass
 

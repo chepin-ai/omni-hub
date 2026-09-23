@@ -29,6 +29,8 @@ _goal_planner = None
 _predictive = None
 _adaptive = None
 _self_reflection = None
+_emotional_state = None
+_emergent_creativity = None
 
 
 def _get_north_star():
@@ -112,6 +114,22 @@ def _get_self_reflection():
         from core.self_reflection import SelfReflection
         _self_reflection = SelfReflection()
     return _self_reflection
+
+
+def _get_emotional_state():
+    global _emotional_state
+    if _emotional_state is None:
+        from core.emotional_state import EmotionalState
+        _emotional_state = EmotionalState()
+    return _emotional_state
+
+
+def _get_emergent_creativity():
+    global _emergent_creativity
+    if _emergent_creativity is None:
+        from core.emergent_creativity import EmergentCreativity
+        _emergent_creativity = EmergentCreativity()
+    return _emergent_creativity
 
 
 def _get_persistence():
@@ -367,30 +385,36 @@ class OMNIHUBOrchestrator:
         # 4. Execute tool_call if selected
         if action == "tool_call":
             try:
-                import random
-                # 30% chance to trigger full AgentSwarm instead of single tool
-                if random.random() < 0.3:
-                    swarm = _get_agent_swarm()
-                    swarm.run_cycle(self.current_state.copy())
-                    status = swarm.get_status()
-                    self.current_state["last_tool_result"] = {
-                        "mode": "agent_swarm",
-                        "agents": status["n_agents"],
-                        "successful_tasks": status["total_successful_tasks"],
-                        "by_role": {k: v["tasks"] for k, v in status["by_role"].items()},
-                    }
-                    if bus and Topics:
-                        bus.publish_simple(Topics.ACTION_SELECTED,
-                                          {"action": "agent_swarm", "agents": status["n_agents"]},
-                                          source="agents")
+                # ANTI-FRAUD: Verify system integrity before external operations
+                from core.antifraud_guard import pre_operation_check
+                if not pre_operation_check("tool_call"):
+                    self.current_state["last_tool_result"] = {"tool": "none", "success": False, "error": "ANTIFRAUD_BLOCKED"}
+                    action = "reflect"  # Fallback to safe action
                 else:
-                    tools = _get_tools_registry()
-                    result = tools.invoke_random(exclude=["web_search"])
-                    self.current_state["last_tool_result"] = result.to_dict()
-                    if bus and Topics:
-                        bus.publish_simple(Topics.ACTION_SELECTED,
-                                          {"action": "tool_call", "tool": result.tool_name, "success": result.success},
-                                          source="tools")
+                    import random
+                    # 30% chance to trigger full AgentSwarm instead of single tool
+                    if random.random() < 0.3:
+                        swarm = _get_agent_swarm()
+                        swarm.run_cycle(self.current_state.copy())
+                        status = swarm.get_status()
+                        self.current_state["last_tool_result"] = {
+                            "mode": "agent_swarm",
+                            "agents": status["n_agents"],
+                            "successful_tasks": status["total_successful_tasks"],
+                            "by_role": {k: v["tasks"] for k, v in status["by_role"].items()},
+                        }
+                        if bus and Topics:
+                            bus.publish_simple(Topics.ACTION_SELECTED,
+                                              {"action": "agent_swarm", "agents": status["n_agents"]},
+                                              source="agents")
+                    else:
+                        tools = _get_tools_registry()
+                        result = tools.invoke_random(exclude=["web_search"])
+                        self.current_state["last_tool_result"] = result.to_dict()
+                        if bus and Topics:
+                            bus.publish_simple(Topics.ACTION_SELECTED,
+                                              {"action": "tool_call", "tool": result.tool_name, "success": result.success},
+                                              source="tools")
             except Exception as e:
                 self.current_state["last_tool_result"] = {"tool": "none", "success": False, "error": str(e)}
 
@@ -461,7 +485,7 @@ class OMNIHUBOrchestrator:
             except Exception:
                 pass
 
-        # 8. Predictive analytics (every 100 cycles)
+        # 10. Predictive analytics (every 100 cycles)
         if self.cycle_count % 100 == 0 and len(self.history) >= 100:
             try:
                 engine = _get_predictive()
@@ -479,7 +503,7 @@ class OMNIHUBOrchestrator:
             except Exception:
                 pass
 
-        # 9. Open problems scan (every 100 cycles)
+        # 11. Open problems scan (every 100 cycles)
         if self.cycle_count % 100 == 0:
             try:
                 tracker = _get_open_problems()
@@ -492,7 +516,7 @@ class OMNIHUBOrchestrator:
             except Exception:
                 pass
 
-        # 10. Adaptive threshold tracking
+        # 12. Adaptive threshold tracking
         if self.cycle_count % 50 == 0 and len(self.history) >= 20:
             try:
                 adaptive = _get_adaptive()
@@ -517,7 +541,7 @@ class OMNIHUBOrchestrator:
             except Exception:
                 pass
 
-        # 11. Persist state
+        # 13. Persist state
         if self.auto_persist and self.cycle_count % C.SELF_DRIVE_CHECKPOINT_INTERVAL == 0:
             self._persist()
             if bus and Topics:
@@ -525,7 +549,7 @@ class OMNIHUBOrchestrator:
                                   {"cycle": self.cycle_count, "file": str(C.STATE_FILE)},
                                   source="persistence")
 
-        # 12. Goal planning cycle (every 50 cycles)
+        # 14. Goal planning cycle (every 50 cycles)
         if self.cycle_count % 50 == 0:
             try:
                 planner = _get_goal_planner()
@@ -542,7 +566,7 @@ class OMNIHUBOrchestrator:
             except Exception:
                 pass
 
-        # 13. Self-reflection scan (every 500 cycles)
+        # 15. Self-reflection scan (every 500 cycles)
         if self.cycle_count % 500 == 0:
             try:
                 mirror = _get_self_reflection()
@@ -561,7 +585,49 @@ class OMNIHUBOrchestrator:
             except Exception:
                 pass
 
-        # 14. Memory compression (every 200 cycles if history is large)
+        # 16. Emotional state evolution (every cycle)
+        try:
+            emotion = _get_emotional_state()
+            if len(self.history) >= 2:
+                prev_state = self.history[-2]['state']
+            else:
+                prev_state = self.current_state
+            prev_energy = prev_state.get('energy', 1.0)
+            curr_energy = self.current_state.get('energy', 1.0)
+            energy_delta = (curr_energy / prev_energy - 1.0) if prev_energy > 0 else 0.0
+            emotion.evolve(
+                action=action,
+                phase=self.current_state.get('phase', 'unknown'),
+                energy_delta=energy_delta,
+                level=self.current_state.get('level', 0),
+            )
+            self.current_state['emotional_state'] = emotion.current.as_dict()
+            self.current_state['dominant_mood'] = emotion.current.dominant_mood()
+        except Exception:
+            pass
+
+        # 17. Emergent creativity (every 100 cycles)
+        if self.cycle_count % 100 == 0:
+            try:
+                creativity = _get_emergent_creativity()
+                emotional_dict = self.current_state.get('emotional_state')
+                artifact = creativity.generate(
+                    system_state=self.current_state.copy(),
+                    emotional_state=emotional_dict,
+                )
+                self.current_state['last_artifact'] = {
+                    "type": artifact.artifact_type,
+                    "content": artifact.content[:100],
+                    "novelty": artifact.novelty_score,
+                }
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "creative_artifact", "novelty": artifact.novelty_score},
+                                      source="creativity")
+            except Exception:
+                pass
+
+        # 17. Memory compression (every 200 cycles if history is large)
         if self.cycle_count % 200 == 0 and len(self.history) > 500:
             try:
                 comp = _get_memory_compressor()
@@ -579,7 +645,7 @@ class OMNIHUBOrchestrator:
             except Exception:
                 pass
 
-        # 15. Auto-git commit
+        # 18. Auto-git commit
         if self.auto_git and self.cycle_count % C.SELF_DRIVE_CHECKPOINT_INTERVAL == 0:
             self._git_commit()
             if bus and Topics:
@@ -587,7 +653,7 @@ class OMNIHUBOrchestrator:
                                   {"cycle": self.cycle_count},
                                   source="auto_git")
 
-        # 16. Publish cycle end
+        # 19. Publish cycle end
         if bus and Topics:
             bus.publish_simple(Topics.CYCLE_END,
                               {"cycle": self.cycle_count, "alerts": len(self.alerts)},
