@@ -31,6 +31,8 @@ _adaptive = None
 _self_reflection = None
 _emotional_state = None
 _emergent_creativity = None
+_self_healing = None
+_cross_system = None
 
 
 def _get_north_star():
@@ -132,6 +134,25 @@ def _get_emergent_creativity():
     return _emergent_creativity
 
 
+def _get_self_healing():
+    global _self_healing
+    if _self_healing is None:
+        from core.self_healing import SelfHealingEngine
+        _self_healing = SelfHealingEngine()
+    return _self_healing
+
+
+def _get_cross_system():
+    global _cross_system
+    if _cross_system is None:
+        from core.cross_system_protocol import CrossSystemProtocol
+        _cross_system = CrossSystemProtocol(
+            system_id=f"omni-hub-{os.getpid()}",
+            version=C.VERSION,
+        )
+    return _cross_system
+
+
 def _get_persistence():
     global _persistence
     if _persistence is None:
@@ -177,7 +198,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "30.0.0"
+    VERSION = "31.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -658,6 +679,60 @@ class OMNIHUBOrchestrator:
             bus.publish_simple(Topics.CYCLE_END,
                               {"cycle": self.cycle_count, "alerts": len(self.alerts)},
                               source="orchestrator")
+
+        # 20. Health monitoring (every cycle, lightweight)
+        try:
+            healing = _get_self_healing()
+            health_report = healing.check(self.cycle_count, self.current_state.copy())
+            self.current_state['health_status'] = health_report['status']
+            self.current_state['anomaly_score'] = health_report['anomaly_score']
+        except Exception:
+            pass
+
+        # 21. Deep repair + improvement (every 500 cycles)
+        if self.cycle_count % 500 == 0 and self.cycle_count > 0:
+            try:
+                healing = _get_self_healing()
+                repair_report = healing.deep_repair(self.cycle_count)
+                self.current_state['last_repair'] = {
+                    "cycle": self.cycle_count,
+                    "repairs": len(repair_report['repairs']),
+                    "suggestions": len(repair_report['suggestions']),
+                    "applied": len(repair_report['applied']),
+                }
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "deep_repair", "repairs": len(repair_report['repairs'])},
+                                      source="healing")
+            except Exception:
+                pass
+
+        # 22. Cross-system federation (every 200 cycles)
+        if self.cycle_count % 200 == 0 and self.cycle_count > 0:
+            try:
+                cross = _get_cross_system()
+                # Broadcast heartbeat to peers
+                packet = cross.create_packet(
+                    packet_type="state_sync",
+                    target_id="*",
+                    payload={
+                        "cycle": self.cycle_count,
+                        "level": self.current_state.get('level', 0),
+                        "energy": str(self.current_state.get('energy', 0)),
+                        "phase": self.current_state.get('phase', 'unknown'),
+                        "phi": self.current_state.get('phi', 0.5),
+                        "version": C.VERSION,
+                    },
+                )
+                packet.sign()
+                cross.outbox.append(packet)
+                self.current_state['federation_status'] = {
+                    "peers": len(cross.peers),
+                    "outbox": len(cross.outbox),
+                    "last_broadcast": self.cycle_count,
+                }
+            except Exception:
+                pass
 
         summary = {
             "cycle": self.cycle_count,
