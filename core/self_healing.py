@@ -154,12 +154,19 @@ class RepairEngine:
     def clear_pycache(self) -> RepairAction:
         """Remove __pycache__ directories to prevent stale imports."""
         removed = 0
+        errors = []
         try:
             for pycache in self.BASE.rglob('__pycache__'):
                 if pycache.is_dir():
-                    shutil.rmtree(pycache)
-                    removed += 1
-            return RepairAction('clear_pycache', 'all', True, f'Removed {removed} __pycache__ dirs')
+                    try:
+                        shutil.rmtree(pycache, ignore_errors=True)
+                        removed += 1
+                    except Exception as e:
+                        errors.append(str(e))
+            detail = f'Removed {removed} __pycache__ dirs'
+            if errors:
+                detail += f' ({len(errors)} errors ignored)'
+            return RepairAction('clear_pycache', 'all', True, detail)
         except Exception as e:
             return RepairAction('clear_pycache', 'all', False, str(e))
 

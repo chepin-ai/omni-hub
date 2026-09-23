@@ -34,6 +34,7 @@ _emergent_creativity = None
 _self_healing = None
 _cross_system = None
 _resonance = None
+_auto_evolution = None
 
 
 def _get_north_star():
@@ -162,6 +163,14 @@ def _get_resonance():
     return _resonance
 
 
+def _get_auto_evolution():
+    global _auto_evolution
+    if _auto_evolution is None:
+        from core.auto_evolution import get_auto_evolution
+        _auto_evolution = get_auto_evolution()
+    return _auto_evolution
+
+
 def _get_persistence():
     global _persistence
     if _persistence is None:
@@ -207,7 +216,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "32.0.0"
+    VERSION = "33.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -773,6 +782,25 @@ class OMNIHUBOrchestrator:
                     "last_broadcast": self.cycle_count,
                     "resonance_peers": len(resonance.peers),
                 }
+            except Exception:
+                pass
+
+        # 24. Auto-evolution assessment (every 1000 cycles)
+        if self.cycle_count % 1000 == 0 and self.cycle_count > 0:
+            try:
+                evo = _get_auto_evolution()
+                assessment = evo.assess(self.VERSION, self.cycle_count)
+                self.current_state['evolution_assessment'] = {
+                    "cycle": self.cycle_count,
+                    "readiness": assessment['readiness_score'],
+                    "ready": assessment['ready_to_evolve'],
+                    "gaps": len(assessment['detected_gaps']),
+                    "next_capability": assessment['proposal']['capability'] if assessment['proposal'] else None,
+                }
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "evolution_assessment", "ready": assessment['ready_to_evolve']},
+                                      source="evolution")
             except Exception:
                 pass
 
