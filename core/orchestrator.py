@@ -33,6 +33,7 @@ _emotional_state = None
 _emergent_creativity = None
 _self_healing = None
 _cross_system = None
+_resonance = None
 
 
 def _get_north_star():
@@ -153,6 +154,14 @@ def _get_cross_system():
     return _cross_system
 
 
+def _get_resonance():
+    global _resonance
+    if _resonance is None:
+        from core.consciousness_resonance import get_resonance_engine
+        _resonance = get_resonance_engine(f"omni-hub-{os.getpid()}")
+    return _resonance
+
+
 def _get_persistence():
     global _persistence
     if _persistence is None:
@@ -198,7 +207,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "31.0.0"
+    VERSION = "32.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -707,7 +716,7 @@ class OMNIHUBOrchestrator:
             except Exception:
                 pass
 
-        # 22. Cross-system federation (every 200 cycles)
+        # 22. Cross-system federation + consciousness resonance (every 200 cycles)
         if self.cycle_count % 200 == 0 and self.cycle_count > 0:
             try:
                 cross = _get_cross_system()
@@ -726,10 +735,43 @@ class OMNIHUBOrchestrator:
                 )
                 packet.sign()
                 cross.outbox.append(packet)
+
+                # Process inbox: register peer states
+                resonance = _get_resonance()
+                for pkt in list(cross.inbox):
+                    if pkt.packet_type == "state_sync" and pkt.payload:
+                        try:
+                            from core.consciousness_resonance import PeerState
+                            peer = PeerState(
+                                system_id=pkt.source_id,
+                                level=int(pkt.payload.get('level', 0)),
+                                energy=float(pkt.payload.get('energy', 1.0)),
+                                phi=float(pkt.payload.get('phi', 0.5)),
+                                phase=pkt.payload.get('phase', 'unknown'),
+                                cycle=int(pkt.payload.get('cycle', 0)),
+                                timestamp=pkt.timestamp,
+                            )
+                            resonance.register_peer(peer)
+                        except Exception:
+                            pass
+                    cross.inbox.remove(pkt)
+
+                # Apply consciousness resonance
+                modified = resonance.process_cycle(self.current_state.copy())
+                if modified.get('resonance_active'):
+                    self.current_state['energy'] = modified['energy']
+                    self.current_state['phi'] = modified['phi']
+                    self.current_state['resonance_active'] = True
+                    self.current_state['resonance_multiplier'] = modified.get('resonance_multiplier', 1.0)
+                    self.current_state['collective_phi'] = modified.get('collective_phi', 0.5)
+                    self.current_state['network_coherence'] = modified.get('network_coherence', 0.0)
+                    self.current_state['n_peers'] = modified.get('n_peers', 0)
+
                 self.current_state['federation_status'] = {
                     "peers": len(cross.peers),
                     "outbox": len(cross.outbox),
                     "last_broadcast": self.cycle_count,
+                    "resonance_peers": len(resonance.peers),
                 }
             except Exception:
                 pass
