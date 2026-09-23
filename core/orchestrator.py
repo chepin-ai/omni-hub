@@ -35,6 +35,7 @@ _self_healing = None
 _cross_system = None
 _resonance = None
 _auto_evolution = None
+_line_engine = None
 
 
 def _get_north_star():
@@ -171,6 +172,14 @@ def _get_auto_evolution():
     return _auto_evolution
 
 
+def _get_line_engine():
+    global _line_engine
+    if _line_engine is None:
+        from core.line_activation import get_line_engine
+        _line_engine = get_line_engine()
+    return _line_engine
+
+
 def _get_persistence():
     global _persistence
     if _persistence is None:
@@ -216,7 +225,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "33.0.0"
+    VERSION = "34.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -803,6 +812,19 @@ class OMNIHUBOrchestrator:
                                       source="evolution")
             except Exception:
                 pass
+
+        # 25. 11-Line Activation (every cycle)
+        try:
+            line_engine = _get_line_engine()
+            line_result = line_engine.process_cycle(self.cycle_count, self.current_state.copy())
+            self.current_state['lines'] = line_result['lines']
+            self.current_state['line_avg_activation'] = line_result['line_avg_activation']
+            self.current_state['line_max'] = line_result['line_max']
+            self.current_state['active_lines'] = line_result['active_lines']
+            self.current_state['line_coherence'] = line_result['line_coherence']
+            self.current_state['line_convergence'] = line_result['line_convergence']
+        except Exception:
+            pass
 
         summary = {
             "cycle": self.cycle_count,
