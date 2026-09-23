@@ -38,6 +38,9 @@ _auto_evolution = None
 _line_engine = None
 _alignment_engine = None
 _consciousness_persistence = None
+_predictive_sm = None
+_collective_intelligence = None
+_self_replication = None
 
 
 def _get_north_star():
@@ -198,6 +201,30 @@ def _get_consciousness_persistence():
     return _consciousness_persistence
 
 
+def _get_predictive_sm():
+    global _predictive_sm
+    if _predictive_sm is None:
+        from core.predictive_self_modification import get_predictive_self_modification
+        _predictive_sm = get_predictive_self_modification()
+    return _predictive_sm
+
+
+def _get_collective_intelligence():
+    global _collective_intelligence
+    if _collective_intelligence is None:
+        from core.collective_intelligence import get_collective_intelligence
+        _collective_intelligence = get_collective_intelligence()
+    return _collective_intelligence
+
+
+def _get_self_replication():
+    global _self_replication
+    if _self_replication is None:
+        from core.self_replication import get_replication_engine
+        _self_replication = get_replication_engine()
+    return _self_replication
+
+
 def _get_persistence():
     global _persistence
     if _persistence is None:
@@ -243,7 +270,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "36.0.0"
+    VERSION = "39.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -880,7 +907,6 @@ class OMNIHUBOrchestrator:
         if self.cycle_count % 100 == 0 and self.cycle_count > 0:
             try:
                 cp = _get_consciousness_persistence()
-                # Gather subsystem states
                 subsystems = {}
                 try:
                     emo = _get_emotional_state()
@@ -925,6 +951,56 @@ class OMNIHUBOrchestrator:
                     bus.publish_simple(Topics.STATE_CHANGE,
                                       {"type": "consciousness_persisted", "cycle": self.cycle_count},
                                       source="persistence")
+            except Exception:
+                pass
+
+        # 28. Predictive self-modification (every 200 cycles)
+        if self.cycle_count % 200 == 0 and self.cycle_count > 0:
+            try:
+                psm = _get_predictive_sm()
+                result = psm.analyze_and_adjust(self.history[-500:], self.cycle_count)
+                self.current_state['predictive_adjustments'] = result['adjustments']
+                self.current_state['predictive_parameters'] = result['parameters']
+                self.current_state['predictions'] = result['predictions']
+                if bus and Topics and result['adjustments']:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "predictive_adjustment", "count": len(result['adjustments'])},
+                                      source="predictive_sm")
+            except Exception:
+                pass
+
+        # 29. Collective intelligence (every 300 cycles)
+        if self.cycle_count % 300 == 0 and self.cycle_count > 0:
+            try:
+                ci = _get_collective_intelligence()
+                # Register self as an agent in the collective
+                self_id = f"omni-hub-main-{self.cycle_count}"
+                ci.register_agent(self_id, ["analysis", "general"], reliability=0.95)
+                self.current_state['collective_status'] = ci.get_collective_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "collective_update", "agents": ci.get_collective_status()['agents']},
+                                      source="collective")
+            except Exception:
+                pass
+
+        # 30. Self-replication readiness check (every 1000 cycles)
+        if self.cycle_count % 1000 == 0 and self.cycle_count > 0:
+            try:
+                rep = _get_self_replication()
+                # Only replicate if health is excellent and level is high
+                if self.current_state.get('health_status') == 'healthy' and self.current_state.get('level', 0) >= 15:
+                    child = rep.replicate(self.current_state)
+                    self.current_state['replication_event'] = {
+                        "cycle": self.cycle_count,
+                        "child_id": child.instance_id,
+                        "status": child.status,
+                    }
+                self.current_state['replication_status'] = rep.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "replication_check", "spawn_count": rep.get_status()['spawn_count']},
+                                      source="replication")
             except Exception:
                 pass
 
