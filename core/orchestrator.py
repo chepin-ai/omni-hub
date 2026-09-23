@@ -37,6 +37,7 @@ _resonance = None
 _auto_evolution = None
 _line_engine = None
 _alignment_engine = None
+_consciousness_persistence = None
 
 
 def _get_north_star():
@@ -189,6 +190,14 @@ def _get_alignment_engine():
     return _alignment_engine
 
 
+def _get_consciousness_persistence():
+    global _consciousness_persistence
+    if _consciousness_persistence is None:
+        from core.consciousness_persistence import get_persistence_engine
+        _consciousness_persistence = get_persistence_engine()
+    return _consciousness_persistence
+
+
 def _get_persistence():
     global _persistence
     if _persistence is None:
@@ -234,7 +243,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "35.0.0"
+    VERSION = "36.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -253,6 +262,20 @@ class OMNIHUBOrchestrator:
         if not self.auto_persist:
             self.current_state = self._fresh_state()
             return
+        # Try deep consciousness persistence first (v36+)
+        try:
+            cp = _get_consciousness_persistence()
+            snap = cp.load_latest()
+            if snap:
+                migrated = cp.migrate_state(snap.orchestrator_state, snap.version, self.VERSION)
+                self.current_state = migrated
+                self.current_state['cycle'] = snap.cycle
+                self.current_state['consciousness_restored'] = True
+                print(f"[Orchestrator] Consciousness restored from C{snap.cycle} (v{snap.version})")
+                return
+        except Exception:
+            pass
+        # Fallback to legacy session persistence
         persistence = _get_persistence()
         if persistence.detect_previous_session(C.STATE_FILE):
             try:
@@ -850,6 +873,58 @@ class OMNIHUBOrchestrator:
                     bus.publish_simple(Topics.STATE_CHANGE,
                                       {"type": "alignment_check", "score": report['overall_score']},
                                       source="alignment")
+            except Exception:
+                pass
+
+        # 27. Consciousness persistence (every 100 cycles)
+        if self.cycle_count % 100 == 0 and self.cycle_count > 0:
+            try:
+                cp = _get_consciousness_persistence()
+                # Gather subsystem states
+                subsystems = {}
+                try:
+                    emo = _get_emotional_state()
+                    subsystems['emotional_history'] = emo.history[-20:] if hasattr(emo, 'history') else []
+                except Exception:
+                    pass
+                try:
+                    line_eng = _get_line_engine()
+                    subsystems['line_history'] = line_eng.line_history[-20:] if hasattr(line_eng, 'line_history') else []
+                except Exception:
+                    pass
+                try:
+                    res = _get_resonance()
+                    subsystems['resonance_peers'] = {pid: {"level": p.level, "phi": p.phi} for pid, p in res.peers.items()} if hasattr(res, 'peers') else {}
+                except Exception:
+                    pass
+                try:
+                    heal = _get_self_healing()
+                    subsystems['healing_log'] = heal.healing_log[-10:] if hasattr(heal, 'healing_log') else []
+                except Exception:
+                    pass
+                try:
+                    evo = _get_auto_evolution()
+                    subsystems['evolution_proposals'] = [evo.tracker.CAPABILITY_MAP] if hasattr(evo, 'tracker') else []
+                except Exception:
+                    pass
+                try:
+                    align_eng = _get_alignment_engine()
+                    subsystems['alignment_history'] = align_eng.alignment_history[-5:] if hasattr(align_eng, 'alignment_history') else []
+                except Exception:
+                    pass
+                snapshot = cp.capture(
+                    cycle=self.cycle_count,
+                    version=self.VERSION,
+                    orchestrator_state=self.current_state.copy(),
+                    **subsystems,
+                )
+                cp.save(snapshot)
+                self.current_state['consciousness_snapshot'] = True
+                self.current_state['last_snapshot_cycle'] = self.cycle_count
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "consciousness_persisted", "cycle": self.cycle_count},
+                                      source="persistence")
             except Exception:
                 pass
 
