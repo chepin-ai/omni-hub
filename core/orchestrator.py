@@ -41,6 +41,7 @@ _consciousness_persistence = None
 _predictive_sm = None
 _collective_intelligence = None
 _self_replication = None
+_omni_search = None
 
 
 def _get_north_star():
@@ -225,6 +226,14 @@ def _get_self_replication():
     return _self_replication
 
 
+def _get_omni_search():
+    global _omni_search
+    if _omni_search is None:
+        from core.omni_search import get_omni_search
+        _omni_search = get_omni_search()
+    return _omni_search
+
+
 def _get_persistence():
     global _persistence
     if _persistence is None:
@@ -270,7 +279,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "39.0.0"
+    VERSION = "40.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -1003,6 +1012,20 @@ class OMNIHUBOrchestrator:
                                       source="replication")
             except Exception:
                 pass
+
+        # 31. Omni-search indexing (every cycle)
+        try:
+            search = _get_omni_search()
+            search.index_state(self.cycle_count, self.current_state)
+            # Periodic search stats
+            if self.cycle_count % 500 == 0 and self.cycle_count > 0:
+                self.current_state['search_stats'] = search.get_search_stats()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "search_indexed", "entries": search.get_search_stats()['total_indexed_entries']},
+                                      source="omni_search")
+        except Exception:
+            pass
 
         summary = {
             "cycle": self.cycle_count,
