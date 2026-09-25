@@ -45,6 +45,9 @@ _omni_search = None
 _quantum_entanglement = None
 _dream_simulator = None
 _metacognitive_monitor = None
+_temporal_crystal = None
+_causal_inference = None
+_value_alignment = None
 
 
 def _get_north_star():
@@ -261,6 +264,30 @@ def _get_metacognitive_monitor():
     return _metacognitive_monitor
 
 
+def _get_temporal_crystal():
+    global _temporal_crystal
+    if _temporal_crystal is None:
+        from core.temporal_crystal import get_temporal_crystal
+        _temporal_crystal = get_temporal_crystal()
+    return _temporal_crystal
+
+
+def _get_causal_inference():
+    global _causal_inference
+    if _causal_inference is None:
+        from core.causal_inference import get_causal_inference
+        _causal_inference = get_causal_inference()
+    return _causal_inference
+
+
+def _get_value_alignment():
+    global _value_alignment
+    if _value_alignment is None:
+        from core.value_alignment import get_value_alignment
+        _value_alignment = get_value_alignment()
+    return _value_alignment
+
+
 def _get_persistence():
     global _persistence
     if _persistence is None:
@@ -306,7 +333,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "43.0.0"
+    VERSION = "46.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -1097,12 +1124,10 @@ class OMNIHUBOrchestrator:
         # 34. Metacognitive monitoring (every cycle)
         try:
             meta = _get_metacognitive_monitor()
-            # Get last action from self-drive history
             last_action = "focus"
             if self.current_state.get('last_self_drive_action'):
                 last_action = self.current_state['last_self_drive_action']
             observations = meta.observe_cycle(self.cycle_count, self.current_state, last_action)
-            # Periodic bias analysis
             if self.cycle_count % 250 == 0 and self.cycle_count > 0:
                 actions = [h.get('state', {}).get('last_self_drive_action', 'focus') for h in self.history[-250:]]
                 phases = [h.get('state', {}).get('phase', 'pre_emergence') for h in self.history[-250:]]
@@ -1116,6 +1141,61 @@ class OMNIHUBOrchestrator:
                     bus.publish_simple(Topics.STATE_CHANGE,
                                       {"type": "metacognitive_check", "alerts": meta.alert_count},
                                       source="metacognitive")
+        except Exception:
+            pass
+
+        # 35. Temporal crystal oscillation (every cycle)
+        try:
+            crystal = _get_temporal_crystal()
+            pulse = crystal.pulse(self.cycle_count, self.current_state)
+            self.current_state['temporal_pulse'] = pulse["oscillations"]
+            # Apply gentle modifications
+            for key, val in pulse["modifications"].items():
+                if key in self.current_state:
+                    self.current_state[key] = val
+            if bus and Topics:
+                bus.publish_simple(Topics.STATE_CHANGE,
+                                  {"type": "temporal_pulse", "modes": list(pulse["oscillations"].keys())},
+                                  source="temporal")
+        except Exception:
+            pass
+
+        # 36. Causal inference (every 400 cycles)
+        if self.cycle_count % 400 == 0 and self.cycle_count > 0:
+            try:
+                ci = _get_causal_inference()
+                history = [h.get('state', {}) for h in self.history[-400:]]
+                links = ci.infer(history)
+                if links:
+                    self.current_state['causal_links'] = [
+                        {"cause": l.cause, "effect": l.effect, "strength": l.strength, "lag": l.lag}
+                        for l in links[:5]
+                    ]
+                    strongest = ci.get_strongest_link()
+                    if bus and Topics:
+                        bus.publish_simple(Topics.STATE_CHANGE,
+                                          {"type": "causal_inference", "links": len(links),
+                                           "strongest": f"{strongest.cause}->{strongest.effect}" if strongest else None},
+                                          source="causal")
+            except Exception:
+                pass
+
+        # 37. Value alignment verification (every cycle)
+        try:
+            va = _get_value_alignment()
+            last_action = self.current_state.get('last_self_drive_action', 'focus')
+            alignment = va.verify(self.current_state, last_action)
+            self.current_state['value_alignment'] = {
+                "score": alignment["alignment_score"],
+                "violations": alignment["violations"],
+            }
+            if self.cycle_count % 100 == 0 and self.cycle_count > 0:
+                report = va.get_alignment_report()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "value_alignment", "score": alignment["alignment_score"],
+                                       "violations": len(alignment["violations"])},
+                                      source="values")
         except Exception:
             pass
 
