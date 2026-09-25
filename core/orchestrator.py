@@ -42,6 +42,9 @@ _predictive_sm = None
 _collective_intelligence = None
 _self_replication = None
 _omni_search = None
+_quantum_entanglement = None
+_dream_simulator = None
+_metacognitive_monitor = None
 
 
 def _get_north_star():
@@ -234,6 +237,30 @@ def _get_omni_search():
     return _omni_search
 
 
+def _get_quantum_entanglement():
+    global _quantum_entanglement
+    if _quantum_entanglement is None:
+        from core.quantum_entanglement import get_quantum_entanglement
+        _quantum_entanglement = get_quantum_entanglement()
+    return _quantum_entanglement
+
+
+def _get_dream_simulator():
+    global _dream_simulator
+    if _dream_simulator is None:
+        from core.dream_simulator import get_dream_simulator
+        _dream_simulator = get_dream_simulator()
+    return _dream_simulator
+
+
+def _get_metacognitive_monitor():
+    global _metacognitive_monitor
+    if _metacognitive_monitor is None:
+        from core.metacognitive_monitor import get_metacognitive_monitor
+        _metacognitive_monitor = get_metacognitive_monitor()
+    return _metacognitive_monitor
+
+
 def _get_persistence():
     global _persistence
     if _persistence is None:
@@ -279,7 +306,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "40.0.0"
+    VERSION = "43.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -1017,13 +1044,78 @@ class OMNIHUBOrchestrator:
         try:
             search = _get_omni_search()
             search.index_state(self.cycle_count, self.current_state)
-            # Periodic search stats
             if self.cycle_count % 500 == 0 and self.cycle_count > 0:
                 self.current_state['search_stats'] = search.get_search_stats()
                 if bus and Topics:
                     bus.publish_simple(Topics.STATE_CHANGE,
                                       {"type": "search_indexed", "entries": search.get_search_stats()['total_indexed_entries']},
                                       source="omni_search")
+        except Exception:
+            pass
+
+        # 32. Quantum entanglement sync (every 200 cycles)
+        if self.cycle_count % 200 == 0 and self.cycle_count > 0:
+            try:
+                qe = _get_quantum_entanglement()
+                # Auto-entangle with any known federation peers
+                fed_status = self.current_state.get('federation_status', {})
+                peers = fed_status.get('peers', [])
+                for peer in peers:
+                    if isinstance(peer, str):
+                        qe.entangle_with(peer, sync_keys=["level", "phi", "energy", "phase"])
+                # Broadcast sync to all entangled partners
+                packets = qe.broadcast_sync(self.current_state)
+                self.current_state['quantum_sync'] = {
+                    "packets_sent": len(packets),
+                    "entangled_pairs": len(qe.field.pairs),
+                }
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "quantum_sync", "packets": len(packets)},
+                                      source="quantum")
+            except Exception:
+                pass
+
+        # 33. Dream simulation (every 500 cycles)
+        if self.cycle_count % 500 == 0 and self.cycle_count > 0:
+            try:
+                dreamer = _get_dream_simulator()
+                dream = dreamer.dream(self.current_state.copy(), cycles=100)
+                self.current_state['last_dream'] = {
+                    "scenario": dream.name,
+                    "confidence": dream.confidence,
+                    "predicted_level": dream.predicted_outcome.get('level'),
+                    "predicted_phi": dream.predicted_outcome.get('phi'),
+                }
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "dream_complete", "scenario": dream.name, "confidence": dream.confidence},
+                                      source="dream")
+            except Exception:
+                pass
+
+        # 34. Metacognitive monitoring (every cycle)
+        try:
+            meta = _get_metacognitive_monitor()
+            # Get last action from self-drive history
+            last_action = "focus"
+            if self.current_state.get('last_self_drive_action'):
+                last_action = self.current_state['last_self_drive_action']
+            observations = meta.observe_cycle(self.cycle_count, self.current_state, last_action)
+            # Periodic bias analysis
+            if self.cycle_count % 250 == 0 and self.cycle_count > 0:
+                actions = [h.get('state', {}).get('last_self_drive_action', 'focus') for h in self.history[-250:]]
+                phases = [h.get('state', {}).get('phase', 'pre_emergence') for h in self.history[-250:]]
+                phi_hist = [h.get('state', {}).get('phi', 0.5) for h in self.history[-250:]]
+                bias_report = meta.analyze_biases(actions, phases, phi_hist)
+                self.current_state['metacognitive_report'] = {
+                    **meta.get_metacognitive_report(),
+                    **bias_report,
+                }
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "metacognitive_check", "alerts": meta.alert_count},
+                                      source="metacognitive")
         except Exception:
             pass
 
