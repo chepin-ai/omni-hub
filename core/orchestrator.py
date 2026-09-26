@@ -63,6 +63,9 @@ _creative_synthesis = None
 _recursive_self_model = None
 _decision_forest = None
 _convergence_monitor = None
+_probabilistic_reasoning = None
+_information_theory = None
+_evolutionary_optimizer = None
 
 
 def _get_north_star():
@@ -423,6 +426,30 @@ def _get_convergence_monitor():
     return _convergence_monitor
 
 
+def _get_probabilistic_reasoning():
+    global _probabilistic_reasoning
+    if _probabilistic_reasoning is None:
+        from core.probabilistic_reasoning import get_probabilistic_reasoning
+        _probabilistic_reasoning = get_probabilistic_reasoning()
+    return _probabilistic_reasoning
+
+
+def _get_information_theory():
+    global _information_theory
+    if _information_theory is None:
+        from core.information_theory import get_information_theory
+        _information_theory = get_information_theory()
+    return _information_theory
+
+
+def _get_evolutionary_optimizer():
+    global _evolutionary_optimizer
+    if _evolutionary_optimizer is None:
+        from core.evolutionary_optimizer import get_evolutionary_optimizer
+        _evolutionary_optimizer = get_evolutionary_optimizer()
+    return _evolutionary_optimizer
+
+
 def _get_persistence():
     global _persistence
     if _persistence is None:
@@ -468,7 +495,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "61.0.0"
+    VERSION = "64.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -1596,6 +1623,49 @@ class OMNIHUBOrchestrator:
                     bus.publish_simple(Topics.STATE_CHANGE,
                                       {"type": "divergence_alert", "rate": analysis["convergence_rate"]},
                                       source="convergence")
+            except Exception:
+                pass
+
+        # 53. Probabilistic reasoning — update beliefs (every 120 cycles)
+        if self.cycle_count % 120 == 0 and self.cycle_count > 0:
+            try:
+                pr = _get_probabilistic_reasoning()
+                pr.infer_from_state(self.current_state)
+                self.current_state['probabilistic_reasoning'] = pr.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "belief_update", "beliefs": len(pr.beliefs)},
+                                      source="reasoning")
+            except Exception:
+                pass
+
+        # 54. Information theory — analyze entropy/complexity (every 180 cycles)
+        if self.cycle_count % 180 == 0 and self.cycle_count > 0:
+            try:
+                it = _get_information_theory()
+                analysis = it.analyze(self.current_state)
+                self.current_state['information_theory'] = analysis
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "info_analysis", "complexity": analysis.get("complexity")},
+                                      source="information")
+            except Exception:
+                pass
+
+        # 55. Evolutionary optimizer — evolve parameters (every 250 cycles)
+        if self.cycle_count % 250 == 0 and self.cycle_count > 0:
+            try:
+                eo = _get_evolutionary_optimizer()
+                fittest = eo.evolve(self.current_state)
+                self.current_state['evolutionary_optimizer'] = {
+                    "generation": eo.generation,
+                    "best_fitness": round(fittest.fitness, 3),
+                    "best_phi_weight": round(fittest.phi_weight, 3),
+                }
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "evolution", "gen": eo.generation, "fitness": fittest.fitness},
+                                      source="evolution")
             except Exception:
                 pass
 
