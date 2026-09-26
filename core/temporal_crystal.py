@@ -37,10 +37,10 @@ class TemporalCrystal:
 
     def __init__(self):
         self.modes: List[OscillationMode] = [
-            OscillationMode("phi_pulse", 100.0, 0.1, 0.0, 0.001),
-            OscillationMode("energy_breath", 500.0, 0.05, math.pi/4, 0.0005),
-            OscillationMode("level_resonance", 1000.0, 0.02, math.pi/2, 0.0001),
-            OscillationMode("coherence_wave", 200.0, 0.08, math.pi/3, 0.002),
+            OscillationMode("phi_pulse", 100.0, 0.02, 0.0, 0.0),
+            OscillationMode("energy_breath", 500.0, 0.01, math.pi/4, 0.0),
+            OscillationMode("level_resonance", 1000.0, 0.005, math.pi/2, 0.0),
+            OscillationMode("coherence_wave", 200.0, 0.015, math.pi/3, 0.0),
         ]
         self.oscillation_count = 0
         self.energy_harvested = 0.0
@@ -51,10 +51,7 @@ class TemporalCrystal:
         result = {}
         for mode in self.modes:
             # Time crystal equation: oscillation persists without decay
-            # In real time crystals, damping is compensated by periodic driving
-            # Here we simulate that with anti-damping
-            anti_damp = 1.0 + mode.damping * cycle * 0.001
-            value = mode.amplitude * math.sin(2 * math.pi * cycle / mode.frequency + mode.phase_offset) * anti_damp
+            value = mode.amplitude * math.sin(2 * math.pi * cycle / mode.frequency + mode.phase_offset)
             result[mode.name] = value
             self.energy_harvested += abs(value) * 0.001
         self.oscillation_count += 1
