@@ -51,6 +51,9 @@ _value_alignment = None
 _semantic_network = None
 _intention_engine = None
 _homeostasis = None
+_pattern_synthesis = None
+_counterfactual_engine = None
+_identity_core = None
 
 
 def _get_north_star():
@@ -315,6 +318,30 @@ def _get_homeostasis():
     return _homeostasis
 
 
+def _get_pattern_synthesis():
+    global _pattern_synthesis
+    if _pattern_synthesis is None:
+        from core.pattern_synthesis import get_pattern_synthesis
+        _pattern_synthesis = get_pattern_synthesis()
+    return _pattern_synthesis
+
+
+def _get_counterfactual_engine():
+    global _counterfactual_engine
+    if _counterfactual_engine is None:
+        from core.counterfactual_engine import get_counterfactual_engine
+        _counterfactual_engine = get_counterfactual_engine()
+    return _counterfactual_engine
+
+
+def _get_identity_core():
+    global _identity_core
+    if _identity_core is None:
+        from core.identity_core import get_identity_core
+        _identity_core = get_identity_core()
+    return _identity_core
+
+
 def _get_persistence():
     global _persistence
     if _persistence is None:
@@ -360,7 +387,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "49.0.0"
+    VERSION = "52.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -1283,6 +1310,65 @@ class OMNIHUBOrchestrator:
                                        "stability": regulation["stability_score"],
                                        "healthy": regulation["healthy"]},
                                       source="homeostasis")
+        except Exception:
+            pass
+
+        # 41. Pattern synthesis — discover patterns (every 250 cycles)
+        if self.cycle_count % 250 == 0 and self.cycle_count > 0:
+            try:
+                ps = _get_pattern_synthesis()
+                history = [h.get('state', {}) for h in self.history[-250:]]
+                patterns = ps.synthesize(history)
+                if patterns:
+                    self.current_state['discovered_patterns'] = [
+                        {"type": p.pattern_type, "desc": p.description, "confidence": p.confidence}
+                        for p in patterns[:5]
+                    ]
+                self.current_state['pattern_synthesis'] = ps.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "pattern_discovery", "patterns": len(patterns)},
+                                      source="patterns")
+            except Exception:
+                pass
+
+        # 42. Counterfactual engine — what-if reasoning (every 350 cycles)
+        if self.cycle_count % 350 == 0 and self.cycle_count > 0:
+            try:
+                cf = _get_counterfactual_engine()
+                history = [h.get('state', {}) for h in self.history[-50:]]
+                scenarios = cf.generate_scenarios(self.current_state, history)
+                if scenarios:
+                    self.current_state['counterfactuals'] = [
+                        {"premise": s.premise, "regret": s.regret_score}
+                        for s in scenarios[:3]
+                    ]
+                    lessons = cf.get_lessons()
+                    if lessons:
+                        self.current_state['lessons_learned'] = lessons
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "counterfactual", "scenarios": len(scenarios)},
+                                      source="counterfactual")
+            except Exception:
+                pass
+
+        # 43. Identity core — self-narrative (every cycle)
+        try:
+            ic = _get_identity_core()
+            identity = ic.observe(self.current_state, self.cycle_count)
+            self.current_state['identity'] = {
+                "score": identity["identity_score"],
+                "intention": identity["dominant_intention"],
+                "consistent": identity["consistent"],
+            }
+            if self.cycle_count % 100 == 0 and self.cycle_count > 0:
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "identity_update",
+                                       "score": identity["identity_score"],
+                                       "intention": identity["dominant_intention"]},
+                                      source="identity")
         except Exception:
             pass
 
