@@ -60,6 +60,9 @@ _world_model = None
 _emotional_resonance = None
 _contextual_adaptation = None
 _creative_synthesis = None
+_recursive_self_model = None
+_decision_forest = None
+_convergence_monitor = None
 
 
 def _get_north_star():
@@ -396,6 +399,30 @@ def _get_creative_synthesis():
     return _creative_synthesis
 
 
+def _get_recursive_self_model():
+    global _recursive_self_model
+    if _recursive_self_model is None:
+        from core.recursive_self_model import get_recursive_self_model
+        _recursive_self_model = get_recursive_self_model()
+    return _recursive_self_model
+
+
+def _get_decision_forest():
+    global _decision_forest
+    if _decision_forest is None:
+        from core.decision_forest import get_decision_forest
+        _decision_forest = get_decision_forest()
+    return _decision_forest
+
+
+def _get_convergence_monitor():
+    global _convergence_monitor
+    if _convergence_monitor is None:
+        from core.convergence_monitor import get_convergence_monitor
+        _convergence_monitor = get_convergence_monitor()
+    return _convergence_monitor
+
+
 def _get_persistence():
     global _persistence
     if _persistence is None:
@@ -441,7 +468,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "58.0.0"
+    VERSION = "61.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -1523,6 +1550,52 @@ class OMNIHUBOrchestrator:
                     bus.publish_simple(Topics.STATE_CHANGE,
                                       {"type": "creative", "ideas": len(ideas)},
                                       source="creative")
+            except Exception:
+                pass
+
+        # 50. Recursive self-model — model one's own model (every cycle)
+        try:
+            rsm = _get_recursive_self_model()
+            model = rsm.generate_model(self.current_state, self.cycle_count)
+            accuracy = rsm.evaluate_accuracy(model, self.current_state)
+            self.current_state['recursive_self_model'] = {
+                "meta_awareness": rsm.get_meta_awareness(),
+                "model_accuracy": round(accuracy, 3),
+            }
+        except Exception:
+            pass
+
+        # 51. Decision forest — evaluate multiple paths (every 150 cycles)
+        if self.cycle_count % 150 == 0 and self.cycle_count > 0:
+            try:
+                df = _get_decision_forest()
+                paths = df.evaluate(self.current_state)
+                best = df.get_best_path()
+                if best:
+                    self.current_state['decision_forest'] = {
+                        "best_path_id": best.path_id,
+                        "best_actions": best.action_sequence,
+                        "best_score": round(best.path_score, 3),
+                        "paths_evaluated": len(paths),
+                    }
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "decision_eval", "best_path": best.path_id if best else None},
+                                      source="decisions")
+            except Exception:
+                pass
+
+        # 52. Convergence monitor — track convergence/divergence (every 100 cycles)
+        if self.cycle_count % 100 == 0 and self.cycle_count > 0:
+            try:
+                cm = _get_convergence_monitor()
+                cm.record(self.current_state, self.cycle_count)
+                analysis = cm.analyze()
+                self.current_state['convergence'] = analysis
+                if analysis.get("is_diverging") and bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "divergence_alert", "rate": analysis["convergence_rate"]},
+                                      source="convergence")
             except Exception:
                 pass
 
