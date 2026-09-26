@@ -57,6 +57,9 @@ _identity_core = None
 _attention_evolution = None
 _episodic_memory = None
 _world_model = None
+_emotional_resonance = None
+_contextual_adaptation = None
+_creative_synthesis = None
 
 
 def _get_north_star():
@@ -369,6 +372,30 @@ def _get_world_model():
     return _world_model
 
 
+def _get_emotional_resonance():
+    global _emotional_resonance
+    if _emotional_resonance is None:
+        from core.emotional_resonance import get_emotional_resonance
+        _emotional_resonance = get_emotional_resonance()
+    return _emotional_resonance
+
+
+def _get_contextual_adaptation():
+    global _contextual_adaptation
+    if _contextual_adaptation is None:
+        from core.contextual_adaptation import get_contextual_adaptation
+        _contextual_adaptation = get_contextual_adaptation()
+    return _contextual_adaptation
+
+
+def _get_creative_synthesis():
+    global _creative_synthesis
+    if _creative_synthesis is None:
+        from core.creative_synthesis import get_creative_synthesis
+        _creative_synthesis = get_creative_synthesis()
+    return _creative_synthesis
+
+
 def _get_persistence():
     global _persistence
     if _persistence is None:
@@ -414,7 +441,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "55.0.0"
+    VERSION = "58.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -1444,6 +1471,58 @@ class OMNIHUBOrchestrator:
                     bus.publish_simple(Topics.STATE_CHANGE,
                                       {"type": "prediction", "confidence": pred.confidence},
                                       source="world_model")
+            except Exception:
+                pass
+
+        # 47. Emotional resonance — propagate emotions (every cycle)
+        try:
+            er = _get_emotional_resonance()
+            emotion = self.current_state.get('emotional_vector', {})
+            if emotion:
+                emotion_state = er.update(emotion)
+                modified = er.apply_to_state(self.current_state)
+                self.current_state['emotional_resonance'] = {
+                    "dominant": er.get_dominant_emotion(),
+                    "tone": er.get_emotional_tone(),
+                }
+                if modified.get('exploration_rate'):
+                    self.current_state['exploration_rate'] = modified['exploration_rate']
+        except Exception:
+            pass
+
+        # 48. Contextual adaptation — adapt to context (every 100 cycles)
+        if self.cycle_count % 100 == 0 and self.cycle_count > 0:
+            try:
+                ca = _get_contextual_adaptation()
+                profile = ca.assess_context(self.cycle_count, 0)
+                adaptations = ca.adapt(self.current_state, profile)
+                self.current_state['contextual_adaptation'] = {
+                    "context": ca.get_status().get("current_context"),
+                    "adaptations": adaptations,
+                    "recommended": ca.get_recommended_action(profile),
+                }
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "context_adapt", "context": profile.time_of_day},
+                                      source="context")
+            except Exception:
+                pass
+
+        # 49. Creative synthesis — generate novel ideas (every 300 cycles)
+        if self.cycle_count % 300 == 0 and self.cycle_count > 0:
+            try:
+                cs = _get_creative_synthesis()
+                ideas = cs.synthesize(self.current_state)
+                if ideas:
+                    self.current_state['creative_ideas'] = [
+                        {"id": i.idea_id, "sources": i.sources, "concept": i.concept, "novelty": i.novelty_score}
+                        for i in ideas[:5]
+                    ]
+                self.current_state['creative_synthesis'] = cs.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "creative", "ideas": len(ideas)},
+                                      source="creative")
             except Exception:
                 pass
 
