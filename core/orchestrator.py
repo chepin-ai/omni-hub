@@ -69,6 +69,9 @@ _evolutionary_optimizer = None
 _symbolic_reasoning = None
 _language_core = None
 _ethical_framework = None
+_learning_core = None
+_knowledge_consolidation = None
+_executive_function = None
 
 
 def _get_north_star():
@@ -477,6 +480,30 @@ def _get_ethical_framework():
     return _ethical_framework
 
 
+def _get_learning_core():
+    global _learning_core
+    if _learning_core is None:
+        from core.learning_core import get_learning_core
+        _learning_core = get_learning_core()
+    return _learning_core
+
+
+def _get_knowledge_consolidation():
+    global _knowledge_consolidation
+    if _knowledge_consolidation is None:
+        from core.knowledge_consolidation import get_knowledge_consolidation
+        _knowledge_consolidation = get_knowledge_consolidation()
+    return _knowledge_consolidation
+
+
+def _get_executive_function():
+    global _executive_function
+    if _executive_function is None:
+        from core.executive_function import get_executive_function
+        _executive_function = get_executive_function()
+    return _executive_function
+
+
 def _get_persistence():
     global _persistence
     if _persistence is None:
@@ -522,7 +549,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "67.0.0"
+    VERSION = "70.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -1741,6 +1768,49 @@ class OMNIHUBOrchestrator:
                     bus.publish_simple(Topics.STATE_CHANGE,
                                       {"type": "ethical_alert", "verdict": evaluation.verdict},
                                       source="ethics")
+            except Exception:
+                pass
+
+        # 59. Learning core — learn from experience (every cycle)
+        if self.cycle_count > 0:
+            try:
+                lc = _get_learning_core()
+                prev_state = self.history[-1]["state"] if self.history else self.current_state
+                action = self.current_state.get('last_self_drive_action', 'focus')
+                reward = lc.learn_from_cycle(prev_state, self.current_state, action)
+                self.current_state['learning_core'] = lc.get_status()
+                self.current_state['last_reward'] = round(reward, 3)
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "learning", "reward": reward, "best_action": lc.recommend_action()},
+                                      source="learning")
+            except Exception:
+                pass
+
+        # 60. Knowledge consolidation — merge knowledge (every 150 cycles)
+        if self.cycle_count % 150 == 0 and self.cycle_count > 0:
+            try:
+                kc = _get_knowledge_consolidation()
+                consolidated = kc.consolidate_from_state(self.current_state, self.cycle_count)
+                self.current_state['knowledge_consolidation'] = consolidated
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "consolidation", "chunks": consolidated.get("total_chunks", 0)},
+                                      source="knowledge")
+            except Exception:
+                pass
+
+        # 61. Executive function — task control (every 70 cycles)
+        if self.cycle_count % 70 == 0 and self.cycle_count > 0:
+            try:
+                ef = _get_executive_function()
+                ef.derive_tasks_from_state(self.current_state, self.cycle_count)
+                ef.switch_task(self.cycle_count)
+                self.current_state['executive_function'] = ef.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "executive", "active": ef.active_task.name if ef.active_task else None},
+                                      source="executive")
             except Exception:
                 pass
 
