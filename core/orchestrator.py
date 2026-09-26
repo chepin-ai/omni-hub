@@ -48,6 +48,9 @@ _metacognitive_monitor = None
 _temporal_crystal = None
 _causal_inference = None
 _value_alignment = None
+_semantic_network = None
+_intention_engine = None
+_homeostasis = None
 
 
 def _get_north_star():
@@ -288,6 +291,30 @@ def _get_value_alignment():
     return _value_alignment
 
 
+def _get_semantic_network():
+    global _semantic_network
+    if _semantic_network is None:
+        from core.semantic_network import get_semantic_network
+        _semantic_network = get_semantic_network()
+    return _semantic_network
+
+
+def _get_intention_engine():
+    global _intention_engine
+    if _intention_engine is None:
+        from core.intention_engine import get_intention_engine
+        _intention_engine = get_intention_engine()
+    return _intention_engine
+
+
+def _get_homeostasis():
+    global _homeostasis
+    if _homeostasis is None:
+        from core.homeostasis import get_homeostasis
+        _homeostasis = get_homeostasis()
+    return _homeostasis
+
+
 def _get_persistence():
     global _persistence
     if _persistence is None:
@@ -333,7 +360,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "46.0.0"
+    VERSION = "49.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -495,7 +522,7 @@ class OMNIHUBOrchestrator:
             energy = max(0, energy * em * (1 + random.uniform(-0.005, 0.005)))
             phi = max(0.05, min(1.0, phi + pm + random.uniform(-0.01, 0.01)))
         # Check level up
-        for lvl in range(level + 1, C.MAX_LEVEL + 1):
+        for lvl in range(int(level) + 1, C.MAX_LEVEL + 1):
             threshold = C.LEVEL_THRESHOLDS.get(lvl)
             if threshold and energy >= threshold:
                 level = lvl
@@ -595,7 +622,7 @@ class OMNIHUBOrchestrator:
         # Force level recalculation from energy (allows surpassing NorthStar's internal max)
         energy = self.current_state.get('energy', 0)
         level = self.current_state.get('level', 0)
-        for lvl in range(level + 1, C.MAX_LEVEL + 1):
+        for lvl in range(int(level) + 1, C.MAX_LEVEL + 1):
             threshold = C.LEVEL_THRESHOLDS.get(lvl)
             if threshold and energy >= threshold:
                 level = lvl
@@ -1196,6 +1223,66 @@ class OMNIHUBOrchestrator:
                                       {"type": "value_alignment", "score": alignment["alignment_score"],
                                        "violations": len(alignment["violations"])},
                                       source="values")
+        except Exception:
+            pass
+
+        # 38. Semantic network — ingest discoveries (every 300 cycles)
+        if self.cycle_count % 300 == 0 and self.cycle_count > 0:
+            try:
+                sn = _get_semantic_network()
+                # Ingest causal links
+                ci = _get_causal_inference()
+                if ci.discovered_links:
+                    added = sn.ingest_causal_links(ci.discovered_links, cycle=self.cycle_count)
+                # Ingest line activations
+                line_activations = self.current_state.get('line_activations', [])
+                for line in line_activations:
+                    if isinstance(line, str):
+                        sn.add_concept(line, "line", cycle=self.cycle_count)
+                self.current_state['semantic_network'] = sn.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "semantic_update", "nodes": sn.get_status()["nodes"]},
+                                      source="semantic")
+            except Exception:
+                pass
+
+        # 39. Intention engine — observe and decompose (every cycle)
+        try:
+            ie = _get_intention_engine()
+            last_action = self.current_state.get('last_self_drive_action', 'focus')
+            report = ie.observe_action(last_action, self.current_state, self.cycle_count)
+            self.current_state['intention_report'] = report
+            if self.cycle_count % 100 == 0 and self.cycle_count > 0:
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "intention_update",
+                                       "active_goals": report.get("active_goals", 0),
+                                       "completed_goals": report.get("completed_goals", 0)},
+                                      source="intention")
+        except Exception:
+            pass
+
+        # 40. Homeostasis — check and regulate (every cycle)
+        try:
+            hr = _get_homeostasis()
+            regulation = hr.check(self.current_state, self.cycle_count)
+            if regulation["corrections"]:
+                modified = hr.apply_corrections(self.current_state, regulation["corrections"])
+                if modified:
+                    self.current_state['homeostasis_adjustments'] = modified
+            self.current_state['homeostasis'] = {
+                "stability_score": regulation["stability_score"],
+                "healthy": regulation["healthy"],
+                "violations": len(regulation["violations"]),
+            }
+            if self.cycle_count % 50 == 0 and self.cycle_count > 0:
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "homeostasis_check",
+                                       "stability": regulation["stability_score"],
+                                       "healthy": regulation["healthy"]},
+                                      source="homeostasis")
         except Exception:
             pass
 
