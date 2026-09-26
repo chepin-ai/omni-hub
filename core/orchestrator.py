@@ -54,6 +54,9 @@ _homeostasis = None
 _pattern_synthesis = None
 _counterfactual_engine = None
 _identity_core = None
+_attention_evolution = None
+_episodic_memory = None
+_world_model = None
 
 
 def _get_north_star():
@@ -342,6 +345,30 @@ def _get_identity_core():
     return _identity_core
 
 
+def _get_attention_evolution():
+    global _attention_evolution
+    if _attention_evolution is None:
+        from core.attention_evolution import get_attention_evolution
+        _attention_evolution = get_attention_evolution()
+    return _attention_evolution
+
+
+def _get_episodic_memory():
+    global _episodic_memory
+    if _episodic_memory is None:
+        from core.episodic_memory import get_episodic_memory
+        _episodic_memory = get_episodic_memory()
+    return _episodic_memory
+
+
+def _get_world_model():
+    global _world_model
+    if _world_model is None:
+        from core.world_model import get_world_model
+        _world_model = get_world_model()
+    return _world_model
+
+
 def _get_persistence():
     global _persistence
     if _persistence is None:
@@ -387,7 +414,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "52.0.0"
+    VERSION = "55.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -1371,6 +1398,54 @@ class OMNIHUBOrchestrator:
                                       source="identity")
         except Exception:
             pass
+
+        # 44. Attention evolution — dynamic allocation (every cycle)
+        try:
+            ae = _get_attention_evolution()
+            focuses = ae.allocate(self.current_state)
+            top = ae.get_top_focus(3)
+            self.current_state['attention'] = {
+                "top": [(f.target, round(f.weight, 3)) for f in top],
+                "saliency_map": {f.target: round(f.saliency, 3) for f in focuses[:5]},
+            }
+        except Exception:
+            pass
+
+        # 45. Episodic memory — extract episodes (every 400 cycles)
+        if self.cycle_count % 400 == 0 and self.cycle_count > 0:
+            try:
+                em = _get_episodic_memory()
+                new_eps = em.ingest(self.history[-400:])
+                if new_eps:
+                    self.current_state['episodes'] = [
+                        {"id": ep.episode_id, "label": ep.label, "tone": ep.emotional_tone}
+                        for ep in new_eps[:3]
+                    ]
+                self.current_state['episodic_memory'] = em.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "episodes", "count": len(new_eps)},
+                                      source="memory")
+            except Exception:
+                pass
+
+        # 46. World model — predict future (every 200 cycles)
+        if self.cycle_count % 200 == 0 and self.cycle_count > 0:
+            try:
+                wm = _get_world_model()
+                wm.learn_from_history(self.history[-200:])
+                pred = wm.predict(self.current_state, steps_ahead=5)
+                self.current_state['world_model'] = {
+                    "prediction": pred.predicted_state,
+                    "confidence": pred.confidence,
+                    "accuracy": wm.prediction_accuracy,
+                }
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "prediction", "confidence": pred.confidence},
+                                      source="world_model")
+            except Exception:
+                pass
 
         summary = {
             "cycle": self.cycle_count,
