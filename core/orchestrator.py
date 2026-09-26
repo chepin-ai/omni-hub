@@ -72,6 +72,9 @@ _ethical_framework = None
 _learning_core = None
 _knowledge_consolidation = None
 _executive_function = None
+_motivation_engine = None
+_capability_assessment = None
+_architectural_evolution = None
 
 
 def _get_north_star():
@@ -504,6 +507,30 @@ def _get_executive_function():
     return _executive_function
 
 
+def _get_motivation_engine():
+    global _motivation_engine
+    if _motivation_engine is None:
+        from core.motivation_engine import get_motivation_engine
+        _motivation_engine = get_motivation_engine()
+    return _motivation_engine
+
+
+def _get_capability_assessment():
+    global _capability_assessment
+    if _capability_assessment is None:
+        from core.capability_assessment import get_capability_assessment
+        _capability_assessment = get_capability_assessment()
+    return _capability_assessment
+
+
+def _get_architectural_evolution():
+    global _architectural_evolution
+    if _architectural_evolution is None:
+        from core.architectural_evolution import get_architectural_evolution
+        _architectural_evolution = get_architectural_evolution()
+    return _architectural_evolution
+
+
 def _get_persistence():
     global _persistence
     if _persistence is None:
@@ -549,7 +576,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "70.0.0"
+    VERSION = "73.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -1811,6 +1838,47 @@ class OMNIHUBOrchestrator:
                     bus.publish_simple(Topics.STATE_CHANGE,
                                       {"type": "executive", "active": ef.active_task.name if ef.active_task else None},
                                       source="executive")
+            except Exception:
+                pass
+
+        # 62. Motivation engine — update drives and generate goals (every 60 cycles)
+        if self.cycle_count % 60 == 0 and self.cycle_count > 0:
+            try:
+                me = _get_motivation_engine()
+                me.update_from_state(self.current_state)
+                goals = me.generate_goals()
+                self.current_state['motivation_engine'] = me.get_status()
+                self.current_state['generated_goals'] = goals
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "motivation", "drive": round(me.drive_level, 3), "goals": len(goals)},
+                                      source="motivation")
+            except Exception:
+                pass
+
+        # 63. Capability assessment — evaluate strengths/weaknesses (every 120 cycles)
+        if self.cycle_count % 120 == 0 and self.cycle_count > 0:
+            try:
+                ca = _get_capability_assessment()
+                ca.assess_from_state(self.current_state)
+                self.current_state['capability_assessment'] = ca.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "assessment", "avg": round(ca.get_status()["average_score"], 3)},
+                                      source="assessment")
+            except Exception:
+                pass
+
+        # 64. Architectural evolution — propose structural changes (every 200 cycles)
+        if self.cycle_count % 200 == 0 and self.cycle_count > 0:
+            try:
+                ae = _get_architectural_evolution()
+                proposals = ae.analyze_structure(self.current_state)
+                self.current_state['architectural_evolution'] = ae.get_status()
+                if bus and Topics and proposals:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "architecture", "changes": len(proposals)},
+                                      source="architecture")
             except Exception:
                 pass
 
