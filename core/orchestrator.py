@@ -66,6 +66,9 @@ _convergence_monitor = None
 _probabilistic_reasoning = None
 _information_theory = None
 _evolutionary_optimizer = None
+_symbolic_reasoning = None
+_language_core = None
+_ethical_framework = None
 
 
 def _get_north_star():
@@ -450,6 +453,30 @@ def _get_evolutionary_optimizer():
     return _evolutionary_optimizer
 
 
+def _get_symbolic_reasoning():
+    global _symbolic_reasoning
+    if _symbolic_reasoning is None:
+        from core.symbolic_reasoning import get_symbolic_reasoning
+        _symbolic_reasoning = get_symbolic_reasoning()
+    return _symbolic_reasoning
+
+
+def _get_language_core():
+    global _language_core
+    if _language_core is None:
+        from core.language_core import get_language_core
+        _language_core = get_language_core()
+    return _language_core
+
+
+def _get_ethical_framework():
+    global _ethical_framework
+    if _ethical_framework is None:
+        from core.ethical_framework import get_ethical_framework
+        _ethical_framework = get_ethical_framework()
+    return _ethical_framework
+
+
 def _get_persistence():
     global _persistence
     if _persistence is None:
@@ -495,7 +522,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "64.0.0"
+    VERSION = "67.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -1666,6 +1693,54 @@ class OMNIHUBOrchestrator:
                     bus.publish_simple(Topics.STATE_CHANGE,
                                       {"type": "evolution", "gen": eo.generation, "fitness": fittest.fitness},
                                       source="evolution")
+            except Exception:
+                pass
+
+        # 56. Symbolic reasoning — derive facts and infer (every 200 cycles)
+        if self.cycle_count % 200 == 0 and self.cycle_count > 0:
+            try:
+                sr = _get_symbolic_reasoning()
+                inferences = sr.derive_from_state(self.current_state)
+                self.current_state['symbolic_reasoning'] = {
+                    **sr.get_status(),
+                    "new_inferences": len(inferences),
+                }
+                if bus and Topics and inferences:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "inference", "count": len(inferences)},
+                                      source="symbolic")
+            except Exception:
+                pass
+
+        # 57. Language core — generate description (every 50 cycles)
+        if self.cycle_count % 50 == 0 and self.cycle_count > 0:
+            try:
+                lc = _get_language_core()
+                description = lc.describe_state(self.current_state, self.cycle_count)
+                self.current_state['language_description'] = description
+                self.current_state['language_core'] = lc.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "description", "length": len(description)},
+                                      source="language")
+            except Exception:
+                pass
+
+        # 58. Ethical framework — evaluate actions (every 80 cycles)
+        if self.cycle_count % 80 == 0 and self.cycle_count > 0:
+            try:
+                ef = _get_ethical_framework()
+                evaluation = ef.evaluate_current_action(self.current_state)
+                self.current_state['ethical_evaluation'] = {
+                    "action": evaluation.action,
+                    "verdict": evaluation.verdict,
+                    "score": round(evaluation.overall_score, 3),
+                }
+                self.current_state['ethical_framework'] = ef.get_status()
+                if bus and Topics and evaluation.verdict not in ["ethical", "acceptable"]:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "ethical_alert", "verdict": evaluation.verdict},
+                                      source="ethics")
             except Exception:
                 pass
 
