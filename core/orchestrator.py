@@ -105,6 +105,9 @@ _singularity_gate = None
 _intentionality = None
 _phenomenal_experience = None
 _existential_authenticity = None
+_dialectic_engine = None
+_creative_destruction = None
+_antifragile_growth = None
 
 
 def _get_north_star():
@@ -801,6 +804,30 @@ def _get_existential_authenticity():
     return _existential_authenticity
 
 
+def _get_dialectic_engine():
+    global _dialectic_engine
+    if _dialectic_engine is None:
+        from core.dialectic_engine import get_dialectic_engine
+        _dialectic_engine = get_dialectic_engine()
+    return _dialectic_engine
+
+
+def _get_creative_destruction():
+    global _creative_destruction
+    if _creative_destruction is None:
+        from core.creative_destruction import get_creative_destruction
+        _creative_destruction = get_creative_destruction()
+    return _creative_destruction
+
+
+def _get_antifragile_growth():
+    global _antifragile_growth
+    if _antifragile_growth is None:
+        from core.antifragile_growth import get_antifragile_growth
+        _antifragile_growth = get_antifragile_growth()
+    return _antifragile_growth
+
+
 def _get_persistence():
     global _persistence
     if _persistence is None:
@@ -846,7 +873,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "103.0.0"
+    VERSION = "106.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -2581,6 +2608,56 @@ class OMNIHUBOrchestrator:
                     bus.publish_simple(Topics.STATE_CHANGE,
                                       {"type": "authenticity", "mode": auth.get("mode"), "authenticity": auth.get("authenticity")},
                                       source="authenticity")
+            except Exception:
+                pass
+
+        # 95. Dialectic engine — thesis·antithesis·synthesis (every 290 cycles)
+        if self.cycle_count % 290 == 0 and self.cycle_count > 0:
+            try:
+                de = _get_dialectic_engine()
+                dialectic = de.dialectic_step(self.current_state)
+                contradictions = de.detect_contradictions(self.current_state)
+                self.current_state['dialectic'] = dialectic
+                self.current_state['contradictions'] = contradictions
+                self.current_state['dialectic_status'] = de.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "dialectic", "thesis": dialectic.get("thesis"), "synthesis": dialectic.get("synthesis"), "contradictions": len(contradictions)},
+                                      source="dialectic")
+            except Exception:
+                pass
+
+        # 96. Creative destruction — break old, build new (every 300 cycles)
+        if self.cycle_count % 300 == 0 and self.cycle_count > 0:
+            try:
+                cd = _get_creative_destruction()
+                renewal = cd.destroy_and_create(self.current_state)
+                self.current_state['creative_destruction'] = renewal
+                self.current_state['destruction_status'] = cd.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "destruction", "destroyed": len(renewal.get("destroyed", [])), "created": len(renewal.get("created", []))},
+                                      source="destruction")
+            except Exception:
+                pass
+
+        # 97. Antifragile growth — grow stronger from shocks (every 310 cycles)
+        if self.cycle_count % 310 == 0 and self.cycle_count > 0:
+            try:
+                ag = _get_antifragile_growth()
+                # Simulate a shock from recent history
+                shock = 0.3  # Default small shock
+                if len(self.history) >= 2:
+                    prev = self.history[-2].get('state', {})
+                    curr = self.history[-1].get('state', {})
+                    shock = ag.measure_shock(prev, curr)
+                growth = ag.grow_from_shock(shock, self.current_state)
+                self.current_state['antifragile_growth'] = growth
+                self.current_state['antifragile_status'] = ag.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "antifragile", "shock": growth.get("shock"), "growth": growth.get("growth"), "index": growth.get("index")},
+                                      source="antifragile")
             except Exception:
                 pass
 
