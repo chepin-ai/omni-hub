@@ -78,6 +78,9 @@ _architectural_evolution = None
 _future_simulator = None
 _risk_analyzer = None
 _opportunity_scanner = None
+_resource_manager = None
+_collaboration_protocol = None
+_meta_learning = None
 
 
 def _get_north_star():
@@ -558,6 +561,30 @@ def _get_opportunity_scanner():
     return _opportunity_scanner
 
 
+def _get_resource_manager():
+    global _resource_manager
+    if _resource_manager is None:
+        from core.resource_manager import get_resource_manager
+        _resource_manager = get_resource_manager()
+    return _resource_manager
+
+
+def _get_collaboration_protocol():
+    global _collaboration_protocol
+    if _collaboration_protocol is None:
+        from core.collaboration_protocol import get_collaboration_protocol
+        _collaboration_protocol = get_collaboration_protocol()
+    return _collaboration_protocol
+
+
+def _get_meta_learning():
+    global _meta_learning
+    if _meta_learning is None:
+        from core.meta_learning import get_meta_learning
+        _meta_learning = get_meta_learning()
+    return _meta_learning
+
+
 def _get_persistence():
     global _persistence
     if _persistence is None:
@@ -603,7 +630,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "76.0.0"
+    VERSION = "79.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -1958,6 +1985,46 @@ class OMNIHUBOrchestrator:
                     bus.publish_simple(Topics.STATE_CHANGE,
                                       {"type": "opportunity", "count": len(opportunities)},
                                       source="opportunity")
+            except Exception:
+                pass
+
+        # 68. Resource manager — optimize allocation (every 70 cycles)
+        if self.cycle_count % 70 == 0 and self.cycle_count > 0:
+            try:
+                rm = _get_resource_manager()
+                allocations = rm.optimize_from_state(self.current_state)
+                self.current_state['resource_manager'] = rm.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "allocation", "tasks": len(allocations)},
+                                      source="resources")
+            except Exception:
+                pass
+
+        # 69. Collaboration protocol — coordinate agents (every 100 cycles)
+        if self.cycle_count % 100 == 0 and self.cycle_count > 0:
+            try:
+                cp = _get_collaboration_protocol()
+                assigned = cp.coordinate_from_state(self.current_state)
+                self.current_state['collaboration_protocol'] = cp.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "collaboration", "assigned": len(assigned)},
+                                      source="collaboration")
+            except Exception:
+                pass
+
+        # 70. Meta-learning — optimize learning strategies (every 80 cycles)
+        if self.cycle_count % 80 == 0 and self.cycle_count > 0:
+            try:
+                ml = _get_meta_learning()
+                adaptation = ml.adapt_strategies(self.current_state)
+                self.current_state['meta_learning'] = ml.get_status()
+                self.current_state['recommended_strategy'] = adaptation.get('recommended')
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "meta_learning", "strategy": adaptation.get('recommended')},
+                                      source="meta")
             except Exception:
                 pass
 
