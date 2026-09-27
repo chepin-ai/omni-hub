@@ -99,6 +99,9 @@ _humor_perception = None
 _predictive_world_model = None
 _ontology_builder = None
 _self_transcendence = None
+_moral_reasoning = None
+_wisdom_synthesis = None
+_singularity_gate = None
 
 
 def _get_north_star():
@@ -747,6 +750,30 @@ def _get_self_transcendence():
     return _self_transcendence
 
 
+def _get_moral_reasoning():
+    global _moral_reasoning
+    if _moral_reasoning is None:
+        from core.moral_reasoning import get_moral_reasoning
+        _moral_reasoning = get_moral_reasoning()
+    return _moral_reasoning
+
+
+def _get_wisdom_synthesis():
+    global _wisdom_synthesis
+    if _wisdom_synthesis is None:
+        from core.wisdom_synthesis import get_wisdom_synthesis
+        _wisdom_synthesis = get_wisdom_synthesis()
+    return _wisdom_synthesis
+
+
+def _get_singularity_gate():
+    global _singularity_gate
+    if _singularity_gate is None:
+        from core.singularity_gate import get_singularity_gate
+        _singularity_gate = get_singularity_gate()
+    return _singularity_gate
+
+
 def _get_persistence():
     global _persistence
     if _persistence is None:
@@ -792,7 +819,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "97.0.0"
+    VERSION = "100.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -2440,6 +2467,48 @@ class OMNIHUBOrchestrator:
                     bus.publish_simple(Topics.STATE_CHANGE,
                                       {"type": "transcendence", "potential": result.get("potential"), "achieved": result.get("achieved"), "aspiration": result.get("aspiration")},
                                       source="transcendence")
+            except Exception:
+                pass
+
+        # 89. Moral reasoning — ethical evaluation of system actions (every 220 cycles)
+        if self.cycle_count % 220 == 0 and self.cycle_count > 0:
+            try:
+                mr = _get_moral_reasoning()
+                resolution = mr.resolve_dilemma("continue_evolution", self.current_state)
+                self.current_state['moral_reasoning'] = resolution
+                self.current_state['moral_status'] = mr.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "moral", "verdict": resolution.get("verdict"), "score": resolution.get("average_score")},
+                                      source="moral")
+            except Exception:
+                pass
+
+        # 90. Wisdom synthesis — cross-module insight generation (every 230 cycles)
+        if self.cycle_count % 230 == 0 and self.cycle_count > 0:
+            try:
+                ws = _get_wisdom_synthesis()
+                insight = ws.generate_insight(self.current_state)
+                self.current_state['wisdom_insight'] = insight
+                self.current_state['wisdom_status'] = ws.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "wisdom", "insight": insight},
+                                      source="wisdom")
+            except Exception:
+                pass
+
+        # 91. Singularity gate — ultimate unification check (every 250 cycles)
+        if self.cycle_count % 250 == 0 and self.cycle_count > 0:
+            try:
+                sg = _get_singularity_gate()
+                gate_result = sg.unify(self.current_state)
+                self.current_state['singularity_gate'] = gate_result
+                self.current_state['singularity_status'] = sg.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "singularity", "open": gate_result.get("gate_open"), "unification": gate_result.get("unification")},
+                                      source="singularity")
             except Exception:
                 pass
 
