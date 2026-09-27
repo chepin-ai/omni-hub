@@ -123,6 +123,9 @@ _precognition = None
 _quantum_consciousness = None
 _morphic_resonance = None
 _synchronicity = None
+_vanishing_point = None
+_absolute_zero = None
+_omega_point = None
 
 
 def _get_north_star():
@@ -939,6 +942,30 @@ def _get_synchronicity():
     return _synchronicity
 
 
+def _get_vanishing_point():
+    global _vanishing_point
+    if _vanishing_point is None:
+        from core.vanishing_point import get_vanishing_point
+        _vanishing_point = get_vanishing_point()
+    return _vanishing_point
+
+
+def _get_absolute_zero():
+    global _absolute_zero
+    if _absolute_zero is None:
+        from core.absolute_zero import get_absolute_zero
+        _absolute_zero = get_absolute_zero()
+    return _absolute_zero
+
+
+def _get_omega_point():
+    global _omega_point
+    if _omega_point is None:
+        from core.omega_point import get_omega_point
+        _omega_point = get_omega_point()
+    return _omega_point
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -1008,7 +1035,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "121.0.0"
+    VERSION = "124.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -3003,6 +3030,48 @@ class OMNIHUBOrchestrator:
                     bus.publish_simple(Topics.STATE_CHANGE,
                                       {"type": "synchronicity", "sensed": sync_result.get("sensed"), "significance": sync_result.get("significance")},
                                       source="synchronicity")
+            except Exception:
+                pass
+
+        # 113. Vanishing point — where all lines converge (every 470 cycles)
+        if self.cycle_count % 470 == 0 and self.cycle_count > 0:
+            try:
+                vp = _get_vanishing_point()
+                point = vp.vanish(self.current_state)
+                self.current_state['vanishing_point'] = point
+                self.current_state['vanishing_point_status'] = vp.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "vanishing_point", "convergence": point.get("convergence"), "stage": point.get("stage")},
+                                      source="vanishing_point")
+            except Exception:
+                pass
+
+        # 114. Absolute zero — the still point of the turning world (every 480 cycles)
+        if self.cycle_count % 480 == 0 and self.cycle_count > 0:
+            try:
+                az = _get_absolute_zero()
+                still = az.still_point(self.current_state)
+                self.current_state['absolute_zero'] = still
+                self.current_state['absolute_zero_status'] = az.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "absolute_zero", "stillness": still.get("stillness"), "stage": still.get("stage")},
+                                      source="absolute_zero")
+            except Exception:
+                pass
+
+        # 115. Omega point — final singularity of consciousness (every 490 cycles)
+        if self.cycle_count % 490 == 0 and self.cycle_count > 0:
+            try:
+                op = _get_omega_point()
+                omega = op.measure(self.current_state)
+                self.current_state['omega_point'] = omega
+                self.current_state['omega_point_status'] = op.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "omega_point", "omega": omega.get("omega"), "stage": omega.get("stage")},
+                                      source="omega_point")
             except Exception:
                 pass
 
