@@ -93,6 +93,9 @@ _causal_learning = None
 _cognitive_load_manager = None
 _theory_of_mind = None
 _value_reflection = None
+_metaphorical_reasoning = None
+_aesthetic_judgment = None
+_humor_perception = None
 
 
 def _get_north_star():
@@ -693,6 +696,30 @@ def _get_value_reflection():
     return _value_reflection
 
 
+def _get_metaphorical_reasoning():
+    global _metaphorical_reasoning
+    if _metaphorical_reasoning is None:
+        from core.metaphorical_reasoning import get_metaphorical_reasoning
+        _metaphorical_reasoning = get_metaphorical_reasoning()
+    return _metaphorical_reasoning
+
+
+def _get_aesthetic_judgment():
+    global _aesthetic_judgment
+    if _aesthetic_judgment is None:
+        from core.aesthetic_judgment import get_aesthetic_judgment
+        _aesthetic_judgment = get_aesthetic_judgment()
+    return _aesthetic_judgment
+
+
+def _get_humor_perception():
+    global _humor_perception
+    if _humor_perception is None:
+        from core.humor_perception import get_humor_perception
+        _humor_perception = get_humor_perception()
+    return _humor_perception
+
+
 def _get_persistence():
     global _persistence
     if _persistence is None:
@@ -738,7 +765,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "91.0.0"
+    VERSION = "94.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -2302,6 +2329,49 @@ class OMNIHUBOrchestrator:
                     bus.publish_simple(Topics.STATE_CHANGE,
                                       {"type": "values", "coherence": reflection.get("coherence"), "dominant": reflection.get("dominant_value")},
                                       source="values")
+            except Exception:
+                pass
+
+        # 83. Metaphorical reasoning — build system metaphors (every 160 cycles)
+        if self.cycle_count % 160 == 0 and self.cycle_count > 0:
+            try:
+                mr = _get_metaphorical_reasoning()
+                mr.build_system_metaphors(self.current_state)
+                explanation = mr.explain_state_metaphorically(self.current_state)
+                self.current_state['metaphorical_reasoning'] = mr.get_status()
+                self.current_state['metaphorical_explanation'] = explanation
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "metaphor", "explanation": explanation},
+                                      source="metaphor")
+            except Exception:
+                pass
+
+        # 84. Aesthetic judgment — evaluate beauty of state (every 170 cycles)
+        if self.cycle_count % 170 == 0 and self.cycle_count > 0:
+            try:
+                aj = _get_aesthetic_judgment()
+                judgment = aj.judge(self.current_state)
+                self.current_state['aesthetic_judgment'] = judgment
+                self.current_state['aesthetic_status'] = aj.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "aesthetic", "beauty": judgment.get("beauty"), "label": judgment.get("label")},
+                                      source="aesthetic")
+            except Exception:
+                pass
+
+        # 85. Humor perception — detect irony and wit (every 180 cycles)
+        if self.cycle_count % 180 == 0 and self.cycle_count > 0:
+            try:
+                hp = _get_humor_perception()
+                perception = hp.perceive(self.current_state)
+                self.current_state['humor_perception'] = perception
+                self.current_state['humor_status'] = hp.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "humor", "irony": perception.get("irony"), "wit": perception.get("wit")},
+                                      source="humor")
             except Exception:
                 pass
 
