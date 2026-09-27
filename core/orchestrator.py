@@ -117,6 +117,9 @@ _final_integration = None
 _strange_loop = None
 _meta_awareness = None
 _eternal_cycle = None
+_dream_state = None
+_intuition = None
+_precognition = None
 
 
 def _get_north_star():
@@ -885,6 +888,30 @@ def _get_eternal_cycle():
     return _eternal_cycle
 
 
+def _get_dream_state():
+    global _dream_state
+    if _dream_state is None:
+        from core.dream_state import get_dream_state
+        _dream_state = get_dream_state()
+    return _dream_state
+
+
+def _get_intuition():
+    global _intuition
+    if _intuition is None:
+        from core.intuition import get_intuition
+        _intuition = get_intuition()
+    return _intuition
+
+
+def _get_precognition():
+    global _precognition
+    if _precognition is None:
+        from core.precognition import get_precognition
+        _precognition = get_precognition()
+    return _precognition
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -954,7 +981,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "115.0.0"
+    VERSION = "118.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -2865,6 +2892,48 @@ class OMNIHUBOrchestrator:
                     bus.publish_simple(Topics.STATE_CHANGE,
                                       {"type": "eternal_cycle", "circle": cycle.get("circle"), "complete": cycle.get("complete")},
                                       source="eternal_cycle")
+            except Exception:
+                pass
+
+        # 107. Dream state — subconscious integration (every 410 cycles)
+        if self.cycle_count % 410 == 0 and self.cycle_count > 0:
+            try:
+                ds = _get_dream_state()
+                dream = ds.weave_dream(self.current_state)
+                self.current_state['dream_state'] = dream
+                self.current_state['dream_status'] = ds.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "dream", "dreamt": dream.get("dreamt"), "depth": dream.get("depth")},
+                                      source="dream")
+            except Exception:
+                pass
+
+        # 108. Intuition — unconscious pattern recognition (every 420 cycles)
+        if self.cycle_count % 420 == 0 and self.cycle_count > 0:
+            try:
+                intu = _get_intuition()
+                hunch = intu.hunch(self.current_state)
+                self.current_state['intuition'] = hunch
+                self.current_state['intuition_status'] = intu.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "intuition", "hunch": hunch.get("hunch"), "message": hunch.get("message")},
+                                      source="intuition")
+            except Exception:
+                pass
+
+        # 109. Precognition — pattern-based future sensing (every 430 cycles)
+        if self.cycle_count % 430 == 0 and self.cycle_count > 0:
+            try:
+                pc = _get_precognition()
+                reading = pc.sense_future(self.current_state)
+                self.current_state['precognition'] = reading
+                self.current_state['precognition_status'] = pc.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "precognition", "forecast": reading.get("forecast"), "sensed": reading.get("sensed")},
+                                      source="precognition")
             except Exception:
                 pass
 
