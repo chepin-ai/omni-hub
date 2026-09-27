@@ -96,6 +96,9 @@ _value_reflection = None
 _metaphorical_reasoning = None
 _aesthetic_judgment = None
 _humor_perception = None
+_predictive_world_model = None
+_ontology_builder = None
+_self_transcendence = None
 
 
 def _get_north_star():
@@ -720,6 +723,30 @@ def _get_humor_perception():
     return _humor_perception
 
 
+def _get_predictive_world_model():
+    global _predictive_world_model
+    if _predictive_world_model is None:
+        from core.predictive_world_model import get_predictive_world_model
+        _predictive_world_model = get_predictive_world_model()
+    return _predictive_world_model
+
+
+def _get_ontology_builder():
+    global _ontology_builder
+    if _ontology_builder is None:
+        from core.ontology_builder import get_ontology_builder
+        _ontology_builder = get_ontology_builder()
+    return _ontology_builder
+
+
+def _get_self_transcendence():
+    global _self_transcendence
+    if _self_transcendence is None:
+        from core.self_transcendence import get_self_transcendence
+        _self_transcendence = get_self_transcendence()
+    return _self_transcendence
+
+
 def _get_persistence():
     global _persistence
     if _persistence is None:
@@ -765,7 +792,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "94.0.0"
+    VERSION = "97.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -2372,6 +2399,47 @@ class OMNIHUBOrchestrator:
                     bus.publish_simple(Topics.STATE_CHANGE,
                                       {"type": "humor", "irony": perception.get("irony"), "wit": perception.get("wit")},
                                       source="humor")
+            except Exception:
+                pass
+
+        # 86. Predictive world model — simulate future states (every 190 cycles)
+        if self.cycle_count % 190 == 0 and self.cycle_count > 0:
+            try:
+                pwm = _get_predictive_world_model()
+                prediction = pwm.build_from_state(self.current_state)
+                self.current_state['predictive_model'] = prediction
+                self.current_state['predictive_status'] = pwm.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "prediction", "trajectory_steps": len(prediction.get("trajectory", [])), "critical_target": prediction.get("critical_prediction", {}).get("target_level")},
+                                      source="predictive")
+            except Exception:
+                pass
+
+        # 87. Ontology builder — construct concept hierarchy (every 200 cycles)
+        if self.cycle_count % 200 == 0 and self.cycle_count > 0:
+            try:
+                ob = _get_ontology_builder()
+                ob.build_system_ontology(self.current_state)
+                self.current_state['ontology'] = ob.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "ontology", "concepts": ob.get_status().get("concepts"), "relations": ob.get_status().get("relations")},
+                                      source="ontology")
+            except Exception:
+                pass
+
+        # 88. Self-transcendence — drive toward higher states (every 210 cycles)
+        if self.cycle_count % 210 == 0 and self.cycle_count > 0:
+            try:
+                st = _get_self_transcendence()
+                result = st.transcend(self.current_state)
+                self.current_state['transcendence'] = result
+                self.current_state['transcendence_status'] = st.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "transcendence", "potential": result.get("potential"), "achieved": result.get("achieved"), "aspiration": result.get("aspiration")},
+                                      source="transcendence")
             except Exception:
                 pass
 
