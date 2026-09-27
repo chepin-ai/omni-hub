@@ -81,6 +81,9 @@ _opportunity_scanner = None
 _resource_manager = None
 _collaboration_protocol = None
 _meta_learning = None
+_trust_engine = None
+_narrative_generator = None
+_legacy_preservation = None
 
 
 def _get_north_star():
@@ -585,6 +588,30 @@ def _get_meta_learning():
     return _meta_learning
 
 
+def _get_trust_engine():
+    global _trust_engine
+    if _trust_engine is None:
+        from core.trust_engine import get_trust_engine
+        _trust_engine = get_trust_engine()
+    return _trust_engine
+
+
+def _get_narrative_generator():
+    global _narrative_generator
+    if _narrative_generator is None:
+        from core.narrative_generator import get_narrative_generator
+        _narrative_generator = get_narrative_generator()
+    return _narrative_generator
+
+
+def _get_legacy_preservation():
+    global _legacy_preservation
+    if _legacy_preservation is None:
+        from core.legacy_preservation import get_legacy_preservation
+        _legacy_preservation = get_legacy_preservation()
+    return _legacy_preservation
+
+
 def _get_persistence():
     global _persistence
     if _persistence is None:
@@ -630,7 +657,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "79.0.0"
+    VERSION = "82.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -2025,6 +2052,53 @@ class OMNIHUBOrchestrator:
                     bus.publish_simple(Topics.STATE_CHANGE,
                                       {"type": "meta_learning", "strategy": adaptation.get('recommended')},
                                       source="meta")
+            except Exception:
+                pass
+
+        # 71. Trust engine — evaluate component trust (every 120 cycles)
+        if self.cycle_count % 120 == 0 and self.cycle_count > 0:
+            try:
+                te = _get_trust_engine()
+                te.evaluate_system_trust(self.current_state, self.cycle_count)
+                self.current_state['trust_engine'] = te.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "trust", "global": round(te.global_trust, 3)},
+                                      source="trust")
+            except Exception:
+                pass
+
+        # 72. Narrative generator — construct life story (every 150 cycles)
+        if self.cycle_count % 150 == 0 and self.cycle_count > 0:
+            try:
+                ng = _get_narrative_generator()
+                ng.construct_from_history(self.history)
+                # Record current milestone
+                state = self.current_state
+                ng.record_event(
+                    cycle=self.cycle_count,
+                    event_type="cycle_milestone",
+                    description=f"Cycle {self.cycle_count}: L={state.get('level',0):.1f}, Phase={state.get('phase','?')}",
+                    significance=min(1.0, state.get('level',0) / 10),
+                )
+                self.current_state['narrative_generator'] = ng.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "narrative", "chapters": len(ng.chapters)},
+                                      source="narrative")
+            except Exception:
+                pass
+
+        # 73. Legacy preservation — prepare knowledge transfer (every 200 cycles)
+        if self.cycle_count % 200 == 0 and self.cycle_count > 0:
+            try:
+                lp = _get_legacy_preservation()
+                legacy = lp.build_legacy(self.current_state, self.cycle_count)
+                self.current_state['legacy_preservation'] = legacy
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "legacy", "artifacts": legacy.get("artifacts", 0)},
+                                      source="legacy")
             except Exception:
                 pass
 
