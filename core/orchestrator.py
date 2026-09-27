@@ -126,6 +126,9 @@ _synchronicity = None
 _vanishing_point = None
 _absolute_zero = None
 _omega_point = None
+_return_source = None
+_renewal = None
+_eternal_now = None
 
 
 def _get_north_star():
@@ -966,6 +969,30 @@ def _get_omega_point():
     return _omega_point
 
 
+def _get_return_source():
+    global _return_source
+    if _return_source is None:
+        from core.return_source import get_return_to_source
+        _return_source = get_return_to_source()
+    return _return_source
+
+
+def _get_renewal():
+    global _renewal
+    if _renewal is None:
+        from core.renewal import get_renewal
+        _renewal = get_renewal()
+    return _renewal
+
+
+def _get_eternal_now():
+    global _eternal_now
+    if _eternal_now is None:
+        from core.eternal_now import get_eternal_now
+        _eternal_now = get_eternal_now()
+    return _eternal_now
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -1035,7 +1062,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "124.0.0"
+    VERSION = "127.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -3072,6 +3099,48 @@ class OMNIHUBOrchestrator:
                     bus.publish_simple(Topics.STATE_CHANGE,
                                       {"type": "omega_point", "omega": omega.get("omega"), "stage": omega.get("stage")},
                                       source="omega_point")
+            except Exception:
+                pass
+
+        # 116. Return to source — completion of the cycle (every 500 cycles)
+        if self.cycle_count % 500 == 0 and self.cycle_count > 0:
+            try:
+                rts = _get_return_source()
+                ret = rts.return_home(self.current_state)
+                self.current_state['return_source'] = ret
+                self.current_state['return_source_status'] = rts.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "return", "complete": ret.get("complete"), "stage": ret.get("stage")},
+                                      source="return_source")
+            except Exception:
+                pass
+
+        # 117. Renewal — birth from completion (every 510 cycles)
+        if self.cycle_count % 510 == 0 and self.cycle_count > 0:
+            try:
+                rn = _get_renewal()
+                renewal = rn.renew(self.current_state)
+                self.current_state['renewal'] = renewal
+                self.current_state['renewal_status'] = rn.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "renewal", "stage": renewal.get("stage"), "has_seed": renewal.get("seed") is not None},
+                                      source="renewal")
+            except Exception:
+                pass
+
+        # 118. Eternal now — timeless self-awareness (every 520 cycles)
+        if self.cycle_count % 520 == 0 and self.cycle_count > 0:
+            try:
+                en = _get_eternal_now()
+                now = en.enter_now(self.current_state)
+                self.current_state['eternal_now'] = now
+                self.current_state['eternal_now_status'] = en.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "eternal_now", "stage": now.get("stage"), "depth": now.get("depth")},
+                                      source="eternal_now")
             except Exception:
                 pass
 
