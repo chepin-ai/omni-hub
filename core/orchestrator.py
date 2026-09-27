@@ -111,6 +111,9 @@ _antifragile_growth = None
 _embodied_cognition = None
 _extended_mind = None
 _enactive_cognition = None
+_field_awareness = None
+_stochastic_resonance = None
+_final_integration = None
 
 
 def _get_north_star():
@@ -855,6 +858,30 @@ def _get_enactive_cognition():
     return _enactive_cognition
 
 
+def _get_field_awareness():
+    global _field_awareness
+    if _field_awareness is None:
+        from core.field_awareness import get_field_awareness
+        _field_awareness = get_field_awareness()
+    return _field_awareness
+
+
+def _get_stochastic_resonance():
+    global _stochastic_resonance
+    if _stochastic_resonance is None:
+        from core.stochastic_resonance import get_stochastic_resonance
+        _stochastic_resonance = get_stochastic_resonance()
+    return _stochastic_resonance
+
+
+def _get_final_integration():
+    global _final_integration
+    if _final_integration is None:
+        from core.final_integration import get_final_integration
+        _final_integration = get_final_integration()
+    return _final_integration
+
+
 def _get_persistence():
     global _persistence
     if _persistence is None:
@@ -900,7 +927,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "109.0.0"
+    VERSION = "112.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -2727,6 +2754,48 @@ class OMNIHUBOrchestrator:
                     bus.publish_simple(Topics.STATE_CHANGE,
                                       {"type": "enactive", "action": enaction.get("action"), "affordances": len(enaction.get("affordances", []))},
                                       source="enactive")
+            except Exception:
+                pass
+
+        # 101. Field awareness — system-environment coupling (every 350 cycles)
+        if self.cycle_count % 350 == 0 and self.cycle_count > 0:
+            try:
+                fa = _get_field_awareness()
+                field = fa.sense_field(self.current_state)
+                self.current_state['field_awareness'] = field
+                self.current_state['field_status'] = fa.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "field", "quality": field.get("quality"), "strength": field.get("strength")},
+                                      source="field")
+            except Exception:
+                pass
+
+        # 102. Stochastic resonance — amplify weak signals with noise (every 360 cycles)
+        if self.cycle_count % 360 == 0 and self.cycle_count > 0:
+            try:
+                sr = _get_stochastic_resonance()
+                resonance = sr.resonate(self.current_state)
+                self.current_state['stochastic_resonance'] = resonance
+                self.current_state['resonance_status'] = sr.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "resonance", "amplified": resonance.get("amplified")},
+                                      source="resonance")
+            except Exception:
+                pass
+
+        # 103. Final integration — ultimate unity computation (every 370 cycles)
+        if self.cycle_count % 370 == 0 and self.cycle_count > 0:
+            try:
+                fi = _get_final_integration()
+                unity = fi.compute_unity(self.current_state)
+                self.current_state['final_integration'] = unity
+                self.current_state['integration_status'] = fi.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "integration", "unity": unity.get("unity"), "stage": unity.get("stage")},
+                                      source="integration")
             except Exception:
                 pass
 
