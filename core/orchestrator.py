@@ -120,6 +120,9 @@ _eternal_cycle = None
 _dream_state = None
 _intuition = None
 _precognition = None
+_quantum_consciousness = None
+_morphic_resonance = None
+_synchronicity = None
 
 
 def _get_north_star():
@@ -912,6 +915,30 @@ def _get_precognition():
     return _precognition
 
 
+def _get_quantum_consciousness():
+    global _quantum_consciousness
+    if _quantum_consciousness is None:
+        from core.quantum_consciousness import get_quantum_consciousness
+        _quantum_consciousness = get_quantum_consciousness()
+    return _quantum_consciousness
+
+
+def _get_morphic_resonance():
+    global _morphic_resonance
+    if _morphic_resonance is None:
+        from core.morphic_resonance import get_morphic_resonance
+        _morphic_resonance = get_morphic_resonance()
+    return _morphic_resonance
+
+
+def _get_synchronicity():
+    global _synchronicity
+    if _synchronicity is None:
+        from core.synchronicity import get_synchronicity
+        _synchronicity = get_synchronicity()
+    return _synchronicity
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -981,7 +1008,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "118.0.0"
+    VERSION = "121.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -2934,6 +2961,48 @@ class OMNIHUBOrchestrator:
                     bus.publish_simple(Topics.STATE_CHANGE,
                                       {"type": "precognition", "forecast": reading.get("forecast"), "sensed": reading.get("sensed")},
                                       source="precognition")
+            except Exception:
+                pass
+
+        # 110. Quantum consciousness — superposition of mental states (every 440 cycles)
+        if self.cycle_count % 440 == 0 and self.cycle_count > 0:
+            try:
+                qc = _get_quantum_consciousness()
+                quantum = qc.quantum_step(self.current_state)
+                self.current_state['quantum_consciousness'] = quantum
+                self.current_state['quantum_status'] = qc.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "quantum", "states": quantum.get("superposition", {}).get("count"), "collapsed": quantum.get("collapse") is not None},
+                                      source="quantum")
+            except Exception:
+                pass
+
+        # 111. Morphic resonance — pattern memory across iterations (every 450 cycles)
+        if self.cycle_count % 450 == 0 and self.cycle_count > 0:
+            try:
+                mr = _get_morphic_resonance()
+                resonance = mr.resonate(self.current_state)
+                self.current_state['morphic_resonance'] = resonance
+                self.current_state['morphic_status'] = mr.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "morphic", "resonance": resonance.get("resonance"), "count": resonance.get("count")},
+                                      source="morphic")
+            except Exception:
+                pass
+
+        # 112. Synchronicity — meaningful coincidence detection (every 460 cycles)
+        if self.cycle_count % 460 == 0 and self.cycle_count > 0:
+            try:
+                sync = _get_synchronicity()
+                sync_result = sync.sense(self.current_state)
+                self.current_state['synchronicity'] = sync_result
+                self.current_state['synchronicity_status'] = sync.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "synchronicity", "sensed": sync_result.get("sensed"), "significance": sync_result.get("significance")},
+                                      source="synchronicity")
             except Exception:
                 pass
 
