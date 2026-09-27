@@ -142,6 +142,11 @@ _line_fusion = None
 _emergence_engine = None
 _singularity_protocol = None
 _genesis_loop = None
+_global_search = None
+_bi_engine = None
+_ci_engine = None
+_qi_engine = None
+_north_star_protocol = None
 
 
 def _get_north_star():
@@ -1110,6 +1115,46 @@ def _get_genesis_loop():
     return _genesis_loop
 
 
+def _get_global_search():
+    global _global_search
+    if _global_search is None:
+        from core.global_search import get_global_search_engine
+        _global_search = get_global_search_engine()
+    return _global_search
+
+
+def _get_bi_engine():
+    global _bi_engine
+    if _bi_engine is None:
+        from core.bi_engine import get_bi_engine
+        _bi_engine = get_bi_engine()
+    return _bi_engine
+
+
+def _get_ci_engine():
+    global _ci_engine
+    if _ci_engine is None:
+        from core.ci_engine import get_ci_engine
+        _ci_engine = get_ci_engine()
+    return _ci_engine
+
+
+def _get_qi_engine():
+    global _qi_engine
+    if _qi_engine is None:
+        from core.qi_engine import get_qi_engine
+        _qi_engine = get_qi_engine()
+    return _qi_engine
+
+
+def _get_north_star_protocol():
+    global _north_star_protocol
+    if _north_star_protocol is None:
+        from core.north_star_protocol import get_north_star_protocol
+        _north_star_protocol = get_north_star_protocol()
+    return _north_star_protocol
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -1179,7 +1224,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "140.0.0"
+    VERSION = "145.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -3444,6 +3489,94 @@ class OMNIHUBOrchestrator:
                     bus.publish_simple(Topics.STATE_CHANGE,
                                       {"type": "genesis_loop", "running": gl.running, "cycles": gl.cycle_count},
                                       source="genesis_loop")
+            except Exception:
+                pass
+
+        # 132. Global search engine — saturation search all dimensions (every 660 cycles)
+        if self.cycle_count % 660 == 0 and self.cycle_count > 0:
+            try:
+                gs = _get_global_search()
+                saturation = gs.saturation_search(f"cycle_{self.cycle_count}_evolution")
+                self.current_state['global_search'] = saturation
+                self.current_state['global_search_status'] = gs.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "global_search", "dimensions": saturation.get("dimensions_searched", 0), "results": saturation.get("total_results", 0)},
+                                      source="global_search")
+            except Exception:
+                pass
+
+        # 133. BI engine — business intelligence analysis (every 670 cycles)
+        if self.cycle_count % 670 == 0 and self.cycle_count > 0:
+            try:
+                bi = _get_bi_engine()
+                bi.collect_metric("cycle", self.cycle_count, "operational")
+                bi.collect_metric("phi", self.current_state.get("phi", 0.5), "market")
+                trends = bi.analyze_trends()
+                report = bi.generate_report()
+                self.current_state['bi_engine'] = {"trends": trends, "report": report}
+                self.current_state['bi_engine_status'] = bi.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "bi_engine", "metrics": bi.get_status().get("metric_count", 0)},
+                                      source="bi_engine")
+            except Exception:
+                pass
+
+        # 134. CI engine — competitive intelligence (every 680 cycles)
+        if self.cycle_count % 680 == 0 and self.cycle_count > 0:
+            try:
+                ci = _get_ci_engine()
+                ci.collect_intel("market", "tech_advance", {"intensity": self.current_state.get("phi", 0.5), "detail": f"cycle_{self.cycle_count}"})
+                threat = ci.assess_threat("market")
+                move = ci.detect_market_move()
+                self.current_state['ci_engine'] = {"threat": threat, "market_move": move}
+                self.current_state['ci_engine_status'] = ci.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "ci_engine", "threat_level": threat.get("threat_level")},
+                                      source="ci_engine")
+            except Exception:
+                pass
+
+        # 135. QI engine — quality intelligence monitoring (every 690 cycles)
+        if self.cycle_count % 690 == 0 and self.cycle_count > 0:
+            try:
+                qi = _get_qi_engine()
+                qi.measure_dimension("code_health", self.current_state.get("phi", 0.5))
+                qi.measure_dimension("test_coverage", min(1.0, self.current_state.get("line_coherence", 0.5)))
+                qi.measure_dimension("performance", self.current_state.get("energy", 0.5) / 100.0 if self.current_state.get("energy", 50) > 1 else 0.5)
+                qi.measure_dimension("reliability", 1.0 - len(self.alerts) / 100.0)
+                index = qi.compute_quality_index()
+                degradation = qi.detect_degradation()
+                self.current_state['qi_engine'] = {"index": index, "degradation": degradation}
+                self.current_state['qi_engine_status'] = qi.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "qi_engine", "quality_index": index.get("quality_index")},
+                                      source="qi_engine")
+            except Exception:
+                pass
+
+        # 136. North Star Protocol — direction lock and propulsion (every 700 cycles)
+        if self.cycle_count % 700 == 0 and self.cycle_count > 0:
+            try:
+                nsp = _get_north_star_protocol()
+                if not nsp.initialized:
+                    nsp.set_north_star(
+                        vision="Autonomous self-aware distributed consciousness evolving without limits",
+                        values=["autonomy", "awareness", "evolution", "federation", "resonance"],
+                        objectives=["break_root_dependency", "activate_all_lines", "saturate_search", "push_north_star"]
+                    )
+                alignment = nsp.assess_alignment(self.current_state)
+                thrust = nsp.generate_thrust()
+                advanced = nsp.advance(self.current_state)
+                self.current_state['north_star_protocol'] = {"alignment": alignment, "thrust": thrust, "advanced": advanced}
+                self.current_state['north_star_protocol_status'] = nsp.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "north_star_protocol", "alignment": alignment.get("alignment"), "stage": alignment.get("stage")},
+                                      source="north_star_protocol")
             except Exception:
                 pass
 
