@@ -75,6 +75,9 @@ _executive_function = None
 _motivation_engine = None
 _capability_assessment = None
 _architectural_evolution = None
+_future_simulator = None
+_risk_analyzer = None
+_opportunity_scanner = None
 
 
 def _get_north_star():
@@ -531,6 +534,30 @@ def _get_architectural_evolution():
     return _architectural_evolution
 
 
+def _get_future_simulator():
+    global _future_simulator
+    if _future_simulator is None:
+        from core.future_simulator import get_future_simulator
+        _future_simulator = get_future_simulator()
+    return _future_simulator
+
+
+def _get_risk_analyzer():
+    global _risk_analyzer
+    if _risk_analyzer is None:
+        from core.risk_analyzer import get_risk_analyzer
+        _risk_analyzer = get_risk_analyzer()
+    return _risk_analyzer
+
+
+def _get_opportunity_scanner():
+    global _opportunity_scanner
+    if _opportunity_scanner is None:
+        from core.opportunity_scanner import get_opportunity_scanner
+        _opportunity_scanner = get_opportunity_scanner()
+    return _opportunity_scanner
+
+
 def _get_persistence():
     global _persistence
     if _persistence is None:
@@ -576,7 +603,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "73.0.0"
+    VERSION = "76.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -1879,6 +1906,58 @@ class OMNIHUBOrchestrator:
                     bus.publish_simple(Topics.STATE_CHANGE,
                                       {"type": "architecture", "changes": len(proposals)},
                                       source="architecture")
+            except Exception:
+                pass
+
+        # 65. Future simulator — predict future states (every 100 cycles)
+        if self.cycle_count % 100 == 0 and self.cycle_count > 0:
+            try:
+                fs = _get_future_simulator()
+                scenarios = fs.simulate(self.current_state, self.cycle_count)
+                self.current_state['future_simulator'] = fs.get_status()
+                self.current_state['future_scenarios'] = [
+                    {"horizon": s.horizon, "description": s.description, "probability": s.probability}
+                    for s in scenarios
+                ]
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "prediction", "scenarios": len(scenarios)},
+                                      source="future")
+            except Exception:
+                pass
+
+        # 66. Risk analyzer — identify risks (every 80 cycles)
+        if self.cycle_count % 80 == 0 and self.cycle_count > 0:
+            try:
+                ra = _get_risk_analyzer()
+                risks = ra.analyze(self.current_state)
+                self.current_state['risk_analyzer'] = ra.get_status()
+                if risks:
+                    critical = ra.get_critical_risks()
+                    if critical and bus and Topics:
+                        bus.publish_simple(Topics.STATE_CHANGE,
+                                          {"type": "risk_alert", "critical": len(critical)},
+                                          source="risk")
+            except Exception:
+                pass
+
+        # 67. Opportunity scanner — find growth opportunities (every 90 cycles)
+        if self.cycle_count % 90 == 0 and self.cycle_count > 0:
+            try:
+                os = _get_opportunity_scanner()
+                opportunities = os.scan(self.current_state)
+                best = os.get_best_opportunity()
+                self.current_state['opportunity_scanner'] = os.get_status()
+                if best:
+                    self.current_state['best_opportunity'] = {
+                        "name": best.name,
+                        "potential": best.potential,
+                        "action": best.action,
+                    }
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "opportunity", "count": len(opportunities)},
+                                      source="opportunity")
             except Exception:
                 pass
 
