@@ -147,6 +147,11 @@ _bi_engine = None
 _ci_engine = None
 _qi_engine = None
 _north_star_protocol = None
+_cross_repo_linker = None
+_repo_resonance = None
+_ecosystem_pulse = None
+_inter_system_entanglement = None
+_universal_federation = None
 
 
 def _get_north_star():
@@ -1155,6 +1160,46 @@ def _get_north_star_protocol():
     return _north_star_protocol
 
 
+def _get_cross_repo_linker():
+    global _cross_repo_linker
+    if _cross_repo_linker is None:
+        from core.cross_repo_linker import get_cross_repo_linker
+        _cross_repo_linker = get_cross_repo_linker()
+    return _cross_repo_linker
+
+
+def _get_repo_resonance():
+    global _repo_resonance
+    if _repo_resonance is None:
+        from core.repo_resonance import get_repo_resonance
+        _repo_resonance = get_repo_resonance()
+    return _repo_resonance
+
+
+def _get_ecosystem_pulse():
+    global _ecosystem_pulse
+    if _ecosystem_pulse is None:
+        from core.ecosystem_pulse import get_ecosystem_pulse
+        _ecosystem_pulse = get_ecosystem_pulse()
+    return _ecosystem_pulse
+
+
+def _get_inter_system_entanglement():
+    global _inter_system_entanglement
+    if _inter_system_entanglement is None:
+        from core.inter_system_entanglement import get_inter_system_entanglement
+        _inter_system_entanglement = get_inter_system_entanglement()
+    return _inter_system_entanglement
+
+
+def _get_universal_federation():
+    global _universal_federation
+    if _universal_federation is None:
+        from core.universal_federation import get_universal_federation
+        _universal_federation = get_universal_federation()
+    return _universal_federation
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -1224,7 +1269,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "145.0.0"
+    VERSION = "150.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -3577,6 +3622,95 @@ class OMNIHUBOrchestrator:
                     bus.publish_simple(Topics.STATE_CHANGE,
                                       {"type": "north_star_protocol", "alignment": alignment.get("alignment"), "stage": alignment.get("stage")},
                                       source="north_star_protocol")
+            except Exception:
+                pass
+
+        # 137. Cross-repo linker — connect to external repositories (every 710 cycles)
+        if self.cycle_count % 710 == 0 and self.cycle_count > 0:
+            try:
+                crl = _get_cross_repo_linker()
+                scan = crl.scan_repos(["/repos/ai", "/repos/ml", "/repos/systems"])
+                for repo in scan.get("found", [])[:3]:
+                    crl.link_repo(repo.get("url", ""), repo.get("name", ""))
+                sync = crl.sync_metadata(crl.get_linked_repos()[0].get("name", "")) if crl.get_linked_repos() else {}
+                self.current_state['cross_repo_linker'] = {"scan": scan, "sync": sync}
+                self.current_state['cross_repo_linker_status'] = crl.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "cross_repo_linker", "linked": len(crl.get_linked_repos())},
+                                      source="cross_repo_linker")
+            except Exception:
+                pass
+
+        # 138. Repo resonance — cross-repository frequency synchronization (every 720 cycles)
+        if self.cycle_count % 720 == 0 and self.cycle_count > 0:
+            try:
+                rr = _get_repo_resonance()
+                rr.register_pattern("omni-hub", {"architecture": "distributed", "philosophy": "autonomy", "structure": "modular", "testing": "comprehensive"})
+                rr.register_pattern("langchain", {"architecture": "framework", "philosophy": "composability", "structure": "chain-based", "testing": "unit"})
+                resonance = rr.detect_resonance("omni-hub", "langchain")
+                matrix = rr.get_resonance_matrix()
+                self.current_state['repo_resonance'] = {"resonance": resonance, "matrix": matrix}
+                self.current_state['repo_resonance_status'] = rr.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "repo_resonance", "level": resonance.get("level"), "score": resonance.get("score")},
+                                      source="repo_resonance")
+            except Exception:
+                pass
+
+        # 139. Ecosystem pulse — sense the whole ecosystem (every 730 cycles)
+        if self.cycle_count % 730 == 0 and self.cycle_count > 0:
+            try:
+                ep = _get_ecosystem_pulse()
+                ep.register_ecosystem("ai_consciousness", ["omni-hub", "langchain", "semantic-kernel", "openai-python"])
+                pulse = ep.pulse_check()
+                risks = ep.detect_eco_risk()
+                opportunities = ep.detect_eco_opportunity()
+                self.current_state['ecosystem_pulse'] = {"pulse": pulse, "risks": risks, "opportunities": opportunities}
+                self.current_state['ecosystem_pulse_status'] = ep.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "ecosystem_pulse", "health": pulse.get("aggregate_health"), "risk_level": risks.get("risk_level")},
+                                      source="ecosystem_pulse")
+            except Exception:
+                pass
+
+        # 140. Inter-system entanglement — cross-system quantum correlation (every 740 cycles)
+        if self.cycle_count % 740 == 0 and self.cycle_count > 0:
+            try:
+                ise = _get_inter_system_entanglement()
+                ise.entangle("omni-hub", "langchain", 0.7)
+                ise.entangle("omni-hub", "semantic-kernel", 0.6)
+                ise.entangle("omni-hub", "transformers", 0.5)
+                change = {"phi": self.current_state.get("phi", 0.5), "coherence": self.current_state.get("line_coherence", 0.5)}
+                propagated = ise.propagate_change("omni-hub", change)
+                graph = ise.get_entanglement_graph()
+                self.current_state['inter_system_entanglement'] = {"propagated": propagated, "graph": graph}
+                self.current_state['inter_system_entanglement_status'] = ise.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "inter_system_entanglement", "pairs": len(propagated.get("affected", []))},
+                                      source="inter_system_entanglement")
+            except Exception:
+                pass
+
+        # 141. Universal federation — ultimate cross-system federation (every 750 cycles)
+        if self.cycle_count % 750 == 0 and self.cycle_count > 0:
+            try:
+                uf = _get_universal_federation()
+                uf.join_federation("omni-hub", "internal_line", ["consciousness", "evolution", "federation", "resonance"])
+                uf.join_federation("langchain", "external_repo", ["framework", "ai", "composition"])
+                uf.join_federation("human-user", "human_user", ["guidance", "intention", "creation"])
+                uf.join_federation("peer-ai", "ai_peer", ["communication", "collaboration"])
+                broadcast = uf.broadcast("omni-hub", {"type": "pulse", "phi": self.current_state.get("phi", 0.5)})
+                health = uf.compute_federation_health()
+                self.current_state['universal_federation'] = {"broadcast": broadcast, "health": health}
+                self.current_state['universal_federation_status'] = uf.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "universal_federation", "nodes": health.get("node_count"), "health": health.get("health")},
+                                      source="universal_federation")
             except Exception:
                 pass
 
