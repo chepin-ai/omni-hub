@@ -84,6 +84,15 @@ _meta_learning = None
 _trust_engine = None
 _narrative_generator = None
 _legacy_preservation = None
+_sensory_integration = None
+_affective_computing = None
+_adaptive_interface = None
+_spatial_reasoning = None
+_temporal_reasoning = None
+_causal_learning = None
+_cognitive_load_manager = None
+_theory_of_mind = None
+_value_reflection = None
 
 
 def _get_north_star():
@@ -612,6 +621,78 @@ def _get_legacy_preservation():
     return _legacy_preservation
 
 
+def _get_sensory_integration():
+    global _sensory_integration
+    if _sensory_integration is None:
+        from core.sensory_integration import get_sensory_integration
+        _sensory_integration = get_sensory_integration()
+    return _sensory_integration
+
+
+def _get_affective_computing():
+    global _affective_computing
+    if _affective_computing is None:
+        from core.affective_computing import get_affective_computing
+        _affective_computing = get_affective_computing()
+    return _affective_computing
+
+
+def _get_adaptive_interface():
+    global _adaptive_interface
+    if _adaptive_interface is None:
+        from core.adaptive_interface import get_adaptive_interface
+        _adaptive_interface = get_adaptive_interface()
+    return _adaptive_interface
+
+
+def _get_spatial_reasoning():
+    global _spatial_reasoning
+    if _spatial_reasoning is None:
+        from core.spatial_reasoning import get_spatial_reasoning
+        _spatial_reasoning = get_spatial_reasoning()
+    return _spatial_reasoning
+
+
+def _get_temporal_reasoning():
+    global _temporal_reasoning
+    if _temporal_reasoning is None:
+        from core.temporal_reasoning import get_temporal_reasoning
+        _temporal_reasoning = get_temporal_reasoning()
+    return _temporal_reasoning
+
+
+def _get_causal_learning():
+    global _causal_learning
+    if _causal_learning is None:
+        from core.causal_learning import get_causal_learning
+        _causal_learning = get_causal_learning()
+    return _causal_learning
+
+
+def _get_cognitive_load_manager():
+    global _cognitive_load_manager
+    if _cognitive_load_manager is None:
+        from core.cognitive_load_manager import get_cognitive_load_manager
+        _cognitive_load_manager = get_cognitive_load_manager()
+    return _cognitive_load_manager
+
+
+def _get_theory_of_mind():
+    global _theory_of_mind
+    if _theory_of_mind is None:
+        from core.theory_of_mind import get_theory_of_mind
+        _theory_of_mind = get_theory_of_mind()
+    return _theory_of_mind
+
+
+def _get_value_reflection():
+    global _value_reflection
+    if _value_reflection is None:
+        from core.value_reflection import get_value_reflection
+        _value_reflection = get_value_reflection()
+    return _value_reflection
+
+
 def _get_persistence():
     global _persistence
     if _persistence is None:
@@ -657,7 +738,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "82.0.0"
+    VERSION = "91.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -2099,6 +2180,128 @@ class OMNIHUBOrchestrator:
                     bus.publish_simple(Topics.STATE_CHANGE,
                                       {"type": "legacy", "artifacts": legacy.get("artifacts", 0)},
                                       source="legacy")
+            except Exception:
+                pass
+
+        # 74. Sensory integration — fuse multi-modal inputs (every 50 cycles)
+        if self.cycle_count % 50 == 0 and self.cycle_count > 0:
+            try:
+                si = _get_sensory_integration()
+                percept = si.integrate_state(self.current_state)
+                self.current_state['sensory_integration'] = si.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "percept", "channels": percept.get("channels", 0), "conflict": percept.get("conflict")},
+                                      source="sensory")
+            except Exception:
+                pass
+
+        # 75. Affective computing — recognize and respond to emotions (every 60 cycles)
+        if self.cycle_count % 60 == 0 and self.cycle_count > 0:
+            try:
+                ac = _get_affective_computing()
+                ac.recognize_from_state(self.current_state)
+                response = ac.generate_response()
+                self.current_state['affective_computing'] = ac.get_status()
+                self.current_state['affective_response'] = response
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "emotion", "dominant": ac.get_status().get("dominant_emotion"), "response": response},
+                                      source="affect")
+            except Exception:
+                pass
+
+        # 76. Adaptive interface — adjust interaction style (every 80 cycles)
+        if self.cycle_count % 80 == 0 and self.cycle_count > 0:
+            try:
+                ai = _get_adaptive_interface()
+                ai.adapt_from_state(self.current_state)
+                self.current_state['adaptive_interface'] = ai.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "style", "mode": ai.get_interaction_mode()},
+                                      source="interface")
+            except Exception:
+                pass
+
+        # 77. Spatial reasoning — build conceptual spatial model (every 100 cycles)
+        if self.cycle_count % 100 == 0 and self.cycle_count > 0:
+            try:
+                sr = _get_spatial_reasoning()
+                sr.build_from_state(self.current_state)
+                self.current_state['spatial_reasoning'] = sr.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "spatial", "entities": len(sr.entities)},
+                                      source="spatial")
+            except Exception:
+                pass
+
+        # 78. Temporal reasoning — detect rhythms and predict events (every 110 cycles)
+        if self.cycle_count % 110 == 0 and self.cycle_count > 0:
+            try:
+                tr = _get_temporal_reasoning()
+                tr.build_schedule(self.current_state, self.cycle_count)
+                self.current_state['temporal_reasoning'] = tr.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "temporal", "rhythms": len(tr.rhythms)},
+                                      source="temporal")
+            except Exception:
+                pass
+
+        # 79. Causal learning — infer causal links from history (every 130 cycles)
+        if self.cycle_count % 130 == 0 and self.cycle_count > 0:
+            try:
+                cl = _get_causal_learning()
+                cl.learn_from_history(self.history[-20:] if len(self.history) > 20 else self.history)
+                self.current_state['causal_learning'] = cl.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "causal", "links": len(cl.links)},
+                                      source="causal")
+            except Exception:
+                pass
+
+        # 80. Cognitive load manager — monitor and regulate workload (every 40 cycles)
+        if self.cycle_count % 40 == 0 and self.cycle_count > 0:
+            try:
+                clm = _get_cognitive_load_manager()
+                regulation = clm.update(self.current_state, self.cycle_count)
+                self.current_state['cognitive_load'] = clm.get_status()
+                self.current_state['load_regulation'] = regulation
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "load", "fatigue": round(clm.fatigue, 3), "action": regulation["action"]},
+                                      source="load")
+            except Exception:
+                pass
+
+        # 81. Theory of mind — model other agents (every 90 cycles)
+        if self.cycle_count % 90 == 0 and self.cycle_count > 0:
+            try:
+                tom = _get_theory_of_mind()
+                tom.build_from_peers(self.current_state, self.cycle_count)
+                self.current_state['theory_of_mind'] = tom.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "tom", "models": len(tom.models)},
+                                      source="tom")
+            except Exception:
+                pass
+
+        # 82. Value reflection — introspect and evolve values (every 140 cycles)
+        if self.cycle_count % 140 == 0 and self.cycle_count > 0:
+            try:
+                vr = _get_value_reflection()
+                reflection = vr.reflect_on_state(self.current_state, self.cycle_count)
+                vr.evolve_values()
+                self.current_state['value_reflection'] = vr.get_status()
+                self.current_state['value_alignment_snapshot'] = reflection
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "values", "coherence": reflection.get("coherence"), "dominant": reflection.get("dominant_value")},
+                                      source="values")
             except Exception:
                 pass
 
