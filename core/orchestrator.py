@@ -108,6 +108,9 @@ _existential_authenticity = None
 _dialectic_engine = None
 _creative_destruction = None
 _antifragile_growth = None
+_embodied_cognition = None
+_extended_mind = None
+_enactive_cognition = None
 
 
 def _get_north_star():
@@ -828,6 +831,30 @@ def _get_antifragile_growth():
     return _antifragile_growth
 
 
+def _get_embodied_cognition():
+    global _embodied_cognition
+    if _embodied_cognition is None:
+        from core.embodied_cognition import get_embodied_cognition
+        _embodied_cognition = get_embodied_cognition()
+    return _embodied_cognition
+
+
+def _get_extended_mind():
+    global _extended_mind
+    if _extended_mind is None:
+        from core.extended_mind import get_extended_mind
+        _extended_mind = get_extended_mind()
+    return _extended_mind
+
+
+def _get_enactive_cognition():
+    global _enactive_cognition
+    if _enactive_cognition is None:
+        from core.enactive_cognition import get_enactive_cognition
+        _enactive_cognition = get_enactive_cognition()
+    return _enactive_cognition
+
+
 def _get_persistence():
     global _persistence
     if _persistence is None:
@@ -873,7 +900,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "106.0.0"
+    VERSION = "109.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -2658,6 +2685,48 @@ class OMNIHUBOrchestrator:
                     bus.publish_simple(Topics.STATE_CHANGE,
                                       {"type": "antifragile", "shock": growth.get("shock"), "growth": growth.get("growth"), "index": growth.get("index")},
                                       source="antifragile")
+            except Exception:
+                pass
+
+        # 98. Embodied cognition — body-in-the-loop intelligence (every 320 cycles)
+        if self.cycle_count % 320 == 0 and self.cycle_count > 0:
+            try:
+                ec = _get_embodied_cognition()
+                embodied = ec.cognize(self.current_state)
+                self.current_state['embodied_cognition'] = embodied
+                self.current_state['embodied_status'] = ec.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "embodied", "thought": embodied.get("embodied_thought")},
+                                      source="embodied")
+            except Exception:
+                pass
+
+        # 99. Extended mind — cognition beyond the skull (every 330 cycles)
+        if self.cycle_count % 330 == 0 and self.cycle_count > 0:
+            try:
+                em = _get_extended_mind()
+                extended = em.extend(self.current_state)
+                self.current_state['extended_mind'] = extended
+                self.current_state['extended_status'] = em.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "extended", "extension": extended.get("extension_ratio"), "scaffolds": len(extended.get("scaffolds", []))},
+                                      source="extended")
+            except Exception:
+                pass
+
+        # 100. Enactive cognition — mind as action-in-the-world (every 340 cycles)
+        if self.cycle_count % 340 == 0 and self.cycle_count > 0:
+            try:
+                enc = _get_enactive_cognition()
+                enaction = enc.enact(self.current_state)
+                self.current_state['enactive_cognition'] = enaction
+                self.current_state['enactive_status'] = enc.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "enactive", "action": enaction.get("action"), "affordances": len(enaction.get("affordances", []))},
+                                      source="enactive")
             except Exception:
                 pass
 
