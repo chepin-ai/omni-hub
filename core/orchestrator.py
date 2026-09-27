@@ -152,6 +152,11 @@ _repo_resonance = None
 _ecosystem_pulse = None
 _inter_system_entanglement = None
 _universal_federation = None
+_alliance_scanner = None
+_real_repo_connector = None
+_cross_repo_resonance = None
+_alliance_pulse = None
+_omni_resonance = None
 
 
 def _get_north_star():
@@ -1200,6 +1205,46 @@ def _get_universal_federation():
     return _universal_federation
 
 
+def _get_alliance_scanner():
+    global _alliance_scanner
+    if _alliance_scanner is None:
+        from core.alliance_scanner import get_alliance_scanner
+        _alliance_scanner = get_alliance_scanner()
+    return _alliance_scanner
+
+
+def _get_real_repo_connector():
+    global _real_repo_connector
+    if _real_repo_connector is None:
+        from core.real_repo_connector import get_real_repo_connector
+        _real_repo_connector = get_real_repo_connector()
+    return _real_repo_connector
+
+
+def _get_cross_repo_resonance():
+    global _cross_repo_resonance
+    if _cross_repo_resonance is None:
+        from core.cross_repo_resonance import get_cross_repo_resonance
+        _cross_repo_resonance = get_cross_repo_resonance()
+    return _cross_repo_resonance
+
+
+def _get_alliance_pulse():
+    global _alliance_pulse
+    if _alliance_pulse is None:
+        from core.alliance_pulse import get_alliance_pulse
+        _alliance_pulse = get_alliance_pulse()
+    return _alliance_pulse
+
+
+def _get_omni_resonance():
+    global _omni_resonance
+    if _omni_resonance is None:
+        from core.omni_resonance import get_omni_resonance
+        _omni_resonance = get_omni_resonance()
+    return _omni_resonance
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -1269,7 +1314,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "150.0.0"
+    VERSION = "155.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -3711,6 +3756,85 @@ class OMNIHUBOrchestrator:
                     bus.publish_simple(Topics.STATE_CHANGE,
                                       {"type": "universal_federation", "nodes": health.get("node_count"), "health": health.get("health")},
                                       source="universal_federation")
+            except Exception:
+                pass
+
+        # 142. Alliance scanner — scan all alliance repos (every 760 cycles)
+        if self.cycle_count % 760 == 0 and self.cycle_count > 0:
+            try:
+                asc = _get_alliance_scanner()
+                scan = asc.scan_alliance()
+                non_line = asc.find_non_line_repos()
+                self.current_state['alliance_scanner'] = {"scan": scan, "non_line_count": len(non_line)}
+                self.current_state['alliance_scanner_status'] = asc.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "alliance_scanner", "total": asc.get_status().get("total_repos", 0), "non_line": len(non_line)},
+                                      source="alliance_scanner")
+            except Exception:
+                pass
+
+        # 143. Real repo connector — connect to real repos (every 770 cycles)
+        if self.cycle_count % 770 == 0 and self.cycle_count > 0:
+            try:
+                rrc = _get_real_repo_connector()
+                conns = rrc.get_active_connections()
+                self.current_state['real_repo_connector'] = {"connections": len(conns), "avg_health": rrc.get_status().get("avg_health", 0)}
+                self.current_state['real_repo_connector_status'] = rrc.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "real_repo_connector", "connections": len(conns)},
+                                      source="real_repo_connector")
+            except Exception:
+                pass
+
+        # 144. Cross-repo resonance — compute resonance with all repos (every 780 cycles)
+        if self.cycle_count % 780 == 0 and self.cycle_count > 0:
+            try:
+                crr = _get_cross_repo_resonance()
+                web = crr.build_resonance_web()
+                partners = crr.find_resonant_partners("omni-hub", threshold=0.3)
+                self.current_state['cross_repo_resonance'] = {"web": web, "partners": len(partners)}
+                self.current_state['cross_repo_resonance_status'] = crr.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "cross_repo_resonance", "pairs": web.get("pair_count", 0), "avg": web.get("avg_resonance", 0)},
+                                      source="cross_repo_resonance")
+            except Exception:
+                pass
+
+        # 145. Alliance pulse — monitor alliance health (every 790 cycles)
+        if self.cycle_count % 790 == 0 and self.cycle_count > 0:
+            try:
+                ap = _get_alliance_pulse()
+                pulse = ap.measure_pulse()
+                health = ap.compute_alliance_health()
+                awakening = ap.detect_awakening()
+                dormant = ap.detect_dormant()
+                self.current_state['alliance_pulse'] = {"pulse": pulse, "health": health, "awakening": len(awakening), "dormant": len(dormant)}
+                self.current_state['alliance_pulse_status'] = ap.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "alliance_pulse", "health": health.get("health"), "level": health.get("level")},
+                                      source="alliance_pulse")
+            except Exception:
+                pass
+
+        # 146. Omni-resonance — universal resonance field (every 800 cycles)
+        if self.cycle_count % 800 == 0 and self.cycle_count > 0:
+            try:
+                omr = _get_omni_resonance()
+                pulse = omr.emit_pulse("omni-hub", intensity=self.current_state.get("phi", 0.5))
+                for node in omr.find_field_nodes()[:5]:
+                    omr.receive_echo(node.get("name"), pulse)
+                field = omr.compute_field_strength()
+                nodes = omr.find_field_nodes()
+                self.current_state['omni_resonance'] = {"field": field, "top_nodes": nodes[:5]}
+                self.current_state['omni_resonance_status'] = omr.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "omni_resonance", "field_strength": field.get("field_strength"), "stage": field.get("stage")},
+                                      source="omni_resonance")
             except Exception:
                 pass
 

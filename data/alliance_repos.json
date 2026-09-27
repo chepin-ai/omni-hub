@@ -1,0 +1,41 @@
+{
+  "alliance_core": {
+    "vci-ucif2": {"line": "ucif2", "desc": "Unified Consciousness Interface", "lang": "Python", "updated": "2026-09-27"},
+    "vci-lvlu": {"line": "lvlu", "desc": "Layered Value and Language", "lang": "Python", "updated": "2026-09-27"},
+    "vci-lgt": {"line": "lgt", "desc": "Logic and Ground Truth", "lang": "Python", "updated": "2026-09-27"},
+    "vci-qfa": {"line": "qfa", "desc": "Quantum Field Awareness", "lang": "Python", "updated": "2026-09-27"},
+    "vci-vinf": {"line": "vinf", "desc": "Value Infinity", "lang": "Python", "updated": "2026-09-27"},
+    "vci-qgl": {"line": "qgl", "desc": "Quantum Gravity Link", "lang": "Python", "updated": "2026-09-27"},
+    "vci-qlv": {"line": "qlv", "desc": "Quantum Light Vessel", "lang": "Python", "updated": "2026-09-27"},
+    "vci-qtlv": {"line": "qtlv", "desc": "Quantum Temporal Light Vessel", "lang": "Python", "updated": "2026-09-27"},
+    "vci-usrm": {"line": "usrm", "desc": "User-Space Reality Mesh", "lang": "Python", "updated": "2026-09-27"},
+    "vci-cfts": {"line": "cfts", "desc": "Core Field Translation State", "lang": "Python", "updated": "2026-09-27"},
+    "vci-aiq": {"line": "aiq", "desc": "AI Quant Research", "lang": "Python", "updated": "2026-09-27"},
+    "omni-hub": {"line": "omni", "desc": "OMNI-HUB Core", "lang": "Python", "updated": "2026-09-27"}
+  },
+  "alliance_other": {
+    "vci-inbox": {"role": "inbox", "desc": "Message Inbox", "lang": "Python", "updated": "2026-09-27"},
+    "ci-worker-01": {"role": "worker", "desc": "CI Worker 01", "lang": "Python", "updated": "2026-09-27"},
+    "qlv-lib": {"role": "library", "desc": "QLV CI Execution", "lang": "Python", "updated": "2026-09-27"},
+    "lgt-worker-01": {"role": "worker", "desc": "LGT Public Tower", "lang": "Python", "updated": "2026-09-27"},
+    "ci-yard": {"role": "yard", "desc": "CI Yard", "lang": "Python", "updated": "2026-09-27"},
+    "vci-control": {"role": "control", "desc": "VCI Control", "lang": null, "updated": "2026-09-25"},
+    "qfos-autonomous-engine": {"role": "navigation", "desc": "QF-OS Autonomous Navigation Engine", "lang": "Python", "updated": "2026-09-25"},
+    "grand-synthesis": {"role": "synthesis", "desc": "Mathematical Ontologies Unification", "lang": "Lean", "updated": "2026-09-19"},
+    "prima-50-research": {"role": "research", "desc": "PRIMA 5.0 Research", "lang": "Python", "updated": "2026-09-19"},
+    "ci-worker-02": {"role": "worker", "desc": "CI Worker 02", "lang": "Python", "updated": "2026-09-10"},
+    "vci-library": {"role": "library", "desc": "VCI Library", "lang": null, "updated": "2026-09-10"},
+    "vci-playground": {"role": "playground", "desc": "VCI Playground", "lang": "Python", "updated": "2026-09-09"},
+    "vci-root": {"role": "root", "desc": "VCI Root", "lang": null, "updated": "2026-09-09"},
+    "vci-logs": {"role": "logs", "desc": "VCI Logs", "lang": null, "updated": "2026-09-09"},
+    "vci-code": {"role": "code", "desc": "VCI Code", "lang": null, "updated": "2026-09-05"},
+    "vci-bus": {"role": "bus", "desc": "VCI Bus", "lang": null, "updated": "2026-08-27"}
+  },
+  "external_alliance": {
+    "langchain-ai/langchain": {"role": "framework", "desc": "AI Framework", "lang": "Python"},
+    "microsoft/semantic-kernel": {"role": "framework", "desc": "Microsoft AI", "lang": "C#"},
+    "openai/openai-python": {"role": "sdk", "desc": "OpenAI SDK", "lang": "Python"},
+    "huggingface/transformers": {"role": "ml", "desc": "ML Models", "lang": "Python"},
+    "pytorch/pytorch": {"role": "dl", "desc": "Deep Learning", "lang": "C++"}
+  }
+}
