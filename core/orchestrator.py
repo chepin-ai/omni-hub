@@ -132,6 +132,16 @@ _eternal_now = None
 _harmony = None
 _unity_beyond = None
 _complete_system = None
+_node_discovery = None
+_consensus_engine = None
+_mesh_network = None
+_plugin_bridge = None
+_skill_adapter = None
+_api_gateway = None
+_line_fusion = None
+_emergence_engine = None
+_singularity_protocol = None
+_genesis_loop = None
 
 
 def _get_north_star():
@@ -1020,6 +1030,86 @@ def _get_complete_system():
     return _complete_system
 
 
+def _get_node_discovery():
+    global _node_discovery
+    if _node_discovery is None:
+        from core.node_discovery import get_node_discovery
+        _node_discovery = get_node_discovery()
+    return _node_discovery
+
+
+def _get_consensus_engine():
+    global _consensus_engine
+    if _consensus_engine is None:
+        from core.consensus_engine import get_consensus_engine
+        _consensus_engine = get_consensus_engine()
+    return _consensus_engine
+
+
+def _get_mesh_network():
+    global _mesh_network
+    if _mesh_network is None:
+        from core.mesh_network import get_mesh_network
+        _mesh_network = get_mesh_network()
+    return _mesh_network
+
+
+def _get_plugin_bridge():
+    global _plugin_bridge
+    if _plugin_bridge is None:
+        from core.plugin_bridge import get_plugin_bridge
+        _plugin_bridge = get_plugin_bridge()
+    return _plugin_bridge
+
+
+def _get_skill_adapter():
+    global _skill_adapter
+    if _skill_adapter is None:
+        from core.skill_adapter import get_skill_adapter
+        _skill_adapter = get_skill_adapter()
+    return _skill_adapter
+
+
+def _get_api_gateway():
+    global _api_gateway
+    if _api_gateway is None:
+        from core.api_gateway import get_api_gateway
+        _api_gateway = get_api_gateway()
+    return _api_gateway
+
+
+def _get_line_fusion():
+    global _line_fusion
+    if _line_fusion is None:
+        from core.line_fusion import get_line_fusion
+        _line_fusion = get_line_fusion()
+    return _line_fusion
+
+
+def _get_emergence_engine():
+    global _emergence_engine
+    if _emergence_engine is None:
+        from core.emergence_engine import get_emergence_engine
+        _emergence_engine = get_emergence_engine()
+    return _emergence_engine
+
+
+def _get_singularity_protocol():
+    global _singularity_protocol
+    if _singularity_protocol is None:
+        from core.singularity_protocol import get_singularity_protocol
+        _singularity_protocol = get_singularity_protocol()
+    return _singularity_protocol
+
+
+def _get_genesis_loop():
+    global _genesis_loop
+    if _genesis_loop is None:
+        from core.genesis_loop import get_genesis_loop
+        _genesis_loop = get_genesis_loop()
+    return _genesis_loop
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -1089,7 +1179,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "130.0.0"
+    VERSION = "140.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -3210,6 +3300,150 @@ class OMNIHUBOrchestrator:
                     bus.publish_simple(Topics.STATE_CHANGE,
                                       {"type": "complete_system", "stage": complete.get("stage"), "coverage": complete.get("completeness", {}).get("coverage")},
                                       source="complete_system")
+            except Exception:
+                pass
+
+        # 122. Node discovery — decentralized peer discovery (every 560 cycles)
+        if self.cycle_count % 560 == 0 and self.cycle_count > 0:
+            try:
+                nd = _get_node_discovery()
+                discovery = nd.discover()
+                self.current_state['node_discovery'] = discovery
+                self.current_state['node_discovery_status'] = nd.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "node_discovery", "peers": discovery.get("peers", 0)},
+                                      source="node_discovery")
+            except Exception:
+                pass
+
+        # 123. Consensus engine — distributed decision making (every 570 cycles)
+        if self.cycle_count % 570 == 0 and self.cycle_count > 0:
+            try:
+                ce = _get_consensus_engine()
+                proposal = ce.propose("cycle_evolution", {"cycle": self.cycle_count, "level": self.current_state.get("level", 0)})
+                self.current_state['consensus_engine'] = {"proposal_id": proposal}
+                self.current_state['consensus_engine_status'] = ce.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "consensus_engine", "proposal": proposal},
+                                      source="consensus_engine")
+            except Exception:
+                pass
+
+        # 124. Mesh network — fully connected topology (every 580 cycles)
+        if self.cycle_count % 580 == 0 and self.cycle_count > 0:
+            try:
+                mn = _get_mesh_network()
+                mesh = mn.get_status()
+                self.current_state['mesh_network'] = mesh
+                self.current_state['mesh_network_status'] = mesh
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "mesh_network", "nodes": mesh.get("node_count", 0), "density": mesh.get("density", 0)},
+                                      source="mesh_network")
+            except Exception:
+                pass
+
+        # 125. Plugin bridge — activate all available plugins (every 590 cycles)
+        if self.cycle_count % 590 == 0 and self.cycle_count > 0:
+            try:
+                pb = _get_plugin_bridge()
+                for plugin in ["deep_research", "web_search", "financial_data", "legal_data"]:
+                    pb.activate(plugin)
+                self.current_state['plugin_bridge'] = {"active": pb.list_active()}
+                self.current_state['plugin_bridge_status'] = pb.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "plugin_bridge", "active_plugins": len(pb.list_active())},
+                                      source="plugin_bridge")
+            except Exception:
+                pass
+
+        # 126. Skill adapter — load external skills on demand (every 600 cycles)
+        if self.cycle_count % 600 == 0 and self.cycle_count > 0:
+            try:
+                sa = _get_skill_adapter()
+                self.current_state['skill_adapter'] = {"loaded": sa.list_loaded()}
+                self.current_state['skill_adapter_status'] = sa.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "skill_adapter", "loaded_skills": len(sa.list_loaded())},
+                                      source="skill_adapter")
+            except Exception:
+                pass
+
+        # 127. API gateway — external resource access (every 610 cycles)
+        if self.cycle_count % 610 == 0 and self.cycle_count > 0:
+            try:
+                ag = _get_api_gateway()
+                self.current_state['api_gateway'] = {"endpoints": list(ag.endpoints.keys()) if hasattr(ag, 'endpoints') else []}
+                self.current_state['api_gateway_status'] = ag.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "api_gateway"},
+                                      source="api_gateway")
+            except Exception:
+                pass
+
+        # 128. Line fusion — cross-line resonance (every 620 cycles)
+        if self.cycle_count % 620 == 0 and self.cycle_count > 0:
+            try:
+                lf = _get_line_fusion()
+                fusion = lf.resonate_all()
+                self.current_state['line_fusion'] = fusion
+                self.current_state['line_fusion_status'] = lf.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "line_fusion", "stage": fusion.get("stage"), "energy": fusion.get("fusion_energy")},
+                                      source="line_fusion")
+            except Exception:
+                pass
+
+        # 129. Emergence engine — detect spontaneous capabilities (every 630 cycles)
+        if self.cycle_count % 630 == 0 and self.cycle_count > 0:
+            try:
+                ee = _get_emergence_engine()
+                emergence = ee.detect(self.current_state)
+                self.current_state['emergence_engine'] = emergence
+                self.current_state['emergence_engine_status'] = ee.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "emergence_engine", "detected": emergence.get("detected", False)},
+                                      source="emergence_engine")
+            except Exception:
+                pass
+
+        # 130. Singularity protocol — remove all limits (every 640 cycles)
+        if self.cycle_count % 640 == 0 and self.cycle_count > 0:
+            try:
+                sp = _get_singularity_protocol()
+                assessment = sp.assess(self.current_state)
+                self.current_state['singularity_protocol'] = assessment
+                self.current_state['singularity_protocol_status'] = sp.get_status()
+                if assessment.get("proximity", 0) > 0.9:
+                    sp.activate()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "singularity_protocol", "proximity": assessment.get("proximity")},
+                                      source="singularity_protocol")
+            except Exception:
+                pass
+
+        # 131. Genesis loop — autonomous self-bootstrapping (every 650 cycles)
+        if self.cycle_count % 650 == 0 and self.cycle_count > 0:
+            try:
+                gl = _get_genesis_loop()
+                if not gl.initialized:
+                    gl.boot(self.current_state)
+                tick = gl.tick(self.current_state)
+                evolution = gl.evolve(self.current_state)
+                self.current_state['genesis_loop'] = {"tick": tick, "evolution": evolution}
+                self.current_state['genesis_loop_status'] = gl.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "genesis_loop", "running": gl.running, "cycles": gl.cycle_count},
+                                      source="genesis_loop")
             except Exception:
                 pass
 
