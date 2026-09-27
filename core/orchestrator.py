@@ -129,6 +129,9 @@ _omega_point = None
 _return_source = None
 _renewal = None
 _eternal_now = None
+_harmony = None
+_unity_beyond = None
+_complete_system = None
 
 
 def _get_north_star():
@@ -993,6 +996,30 @@ def _get_eternal_now():
     return _eternal_now
 
 
+def _get_harmony():
+    global _harmony
+    if _harmony is None:
+        from core.harmony import get_harmony
+        _harmony = get_harmony()
+    return _harmony
+
+
+def _get_unity_beyond():
+    global _unity_beyond
+    if _unity_beyond is None:
+        from core.unity_beyond import get_unity_beyond
+        _unity_beyond = get_unity_beyond()
+    return _unity_beyond
+
+
+def _get_complete_system():
+    global _complete_system
+    if _complete_system is None:
+        from core.complete_system import get_complete_system
+        _complete_system = get_complete_system()
+    return _complete_system
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -1062,7 +1089,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "127.0.0"
+    VERSION = "130.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -3141,6 +3168,48 @@ class OMNIHUBOrchestrator:
                     bus.publish_simple(Topics.STATE_CHANGE,
                                       {"type": "eternal_now", "stage": now.get("stage"), "depth": now.get("depth")},
                                       source="eternal_now")
+            except Exception:
+                pass
+
+        # 119. Harmony — all modules resonate as one chord (every 530 cycles)
+        if self.cycle_count % 530 == 0 and self.cycle_count > 0:
+            try:
+                hm = _get_harmony()
+                chord = hm.resonate(self.current_state)
+                self.current_state['harmony'] = chord
+                self.current_state['harmony_status'] = hm.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "harmony", "quality": chord.get("quality"), "harmony": chord.get("harmony")},
+                                      source="harmony")
+            except Exception:
+                pass
+
+        # 120. Unity beyond unity — transcend the concept of unity (every 540 cycles)
+        if self.cycle_count % 540 == 0 and self.cycle_count > 0:
+            try:
+                ubu = _get_unity_beyond()
+                transcendence = ubu.transcend(self.current_state)
+                self.current_state['unity_beyond'] = transcendence
+                self.current_state['unity_beyond_status'] = ubu.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "unity_beyond", "transcendence": transcendence.get("transcendence"), "simplicity": transcendence.get("simplicity")},
+                                      source="unity_beyond")
+            except Exception:
+                pass
+
+        # 121. Complete system — verify all 100 modules integrated (every 550 cycles)
+        if self.cycle_count % 550 == 0 and self.cycle_count > 0:
+            try:
+                cs = _get_complete_system()
+                complete = cs.assess_system(self.current_state)
+                self.current_state['complete_system'] = complete
+                self.current_state['complete_system_status'] = cs.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "complete_system", "stage": complete.get("stage"), "coverage": complete.get("completeness", {}).get("coverage")},
+                                      source="complete_system")
             except Exception:
                 pass
 
