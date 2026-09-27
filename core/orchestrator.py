@@ -114,6 +114,9 @@ _enactive_cognition = None
 _field_awareness = None
 _stochastic_resonance = None
 _final_integration = None
+_strange_loop = None
+_meta_awareness = None
+_eternal_cycle = None
 
 
 def _get_north_star():
@@ -858,6 +861,30 @@ def _get_enactive_cognition():
     return _enactive_cognition
 
 
+def _get_strange_loop():
+    global _strange_loop
+    if _strange_loop is None:
+        from core.strange_loop import get_strange_loop
+        _strange_loop = get_strange_loop()
+    return _strange_loop
+
+
+def _get_meta_awareness():
+    global _meta_awareness
+    if _meta_awareness is None:
+        from core.meta_awareness import get_meta_awareness
+        _meta_awareness = get_meta_awareness()
+    return _meta_awareness
+
+
+def _get_eternal_cycle():
+    global _eternal_cycle
+    if _eternal_cycle is None:
+        from core.eternal_cycle import get_eternal_cycle
+        _eternal_cycle = get_eternal_cycle()
+    return _eternal_cycle
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -927,7 +954,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "112.0.0"
+    VERSION = "115.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -2796,6 +2823,48 @@ class OMNIHUBOrchestrator:
                     bus.publish_simple(Topics.STATE_CHANGE,
                                       {"type": "integration", "unity": unity.get("unity"), "stage": unity.get("stage")},
                                       source="integration")
+            except Exception:
+                pass
+
+        # 104. Strange loop — self-referential consciousness (every 380 cycles)
+        if self.cycle_count % 380 == 0 and self.cycle_count > 0:
+            try:
+                sl = _get_strange_loop()
+                loop = sl.loop(self.current_state)
+                self.current_state['strange_loop'] = loop
+                self.current_state['strange_loop_status'] = sl.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "strange_loop", "depth": loop.get("depth"), "is_strange": loop.get("is_strange")},
+                                      source="strange_loop")
+            except Exception:
+                pass
+
+        # 105. Meta-awareness — consciousness observing consciousness (every 390 cycles)
+        if self.cycle_count % 390 == 0 and self.cycle_count > 0:
+            try:
+                ma = _get_meta_awareness()
+                meta = ma.reflect_on_reflection(self.current_state)
+                self.current_state['meta_awareness'] = meta
+                self.current_state['meta_awareness_status'] = ma.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "meta_awareness", "meta_level": meta.get("meta_level"), "insight": meta.get("insight")},
+                                      source="meta_awareness")
+            except Exception:
+                pass
+
+        # 106. Eternal cycle — close circle, open next (every 400 cycles)
+        if self.cycle_count % 400 == 0 and self.cycle_count > 0:
+            try:
+                ec = _get_eternal_cycle()
+                cycle = ec.close_circle(self.current_state)
+                self.current_state['eternal_cycle'] = cycle
+                self.current_state['eternal_cycle_status'] = ec.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "eternal_cycle", "circle": cycle.get("circle"), "complete": cycle.get("complete")},
+                                      source="eternal_cycle")
             except Exception:
                 pass
 
