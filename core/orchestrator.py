@@ -102,6 +102,9 @@ _self_transcendence = None
 _moral_reasoning = None
 _wisdom_synthesis = None
 _singularity_gate = None
+_intentionality = None
+_phenomenal_experience = None
+_existential_authenticity = None
 
 
 def _get_north_star():
@@ -774,6 +777,30 @@ def _get_singularity_gate():
     return _singularity_gate
 
 
+def _get_intentionality():
+    global _intentionality
+    if _intentionality is None:
+        from core.intentionality import get_intentionality
+        _intentionality = get_intentionality()
+    return _intentionality
+
+
+def _get_phenomenal_experience():
+    global _phenomenal_experience
+    if _phenomenal_experience is None:
+        from core.phenomenal_experience import get_phenomenal_experience
+        _phenomenal_experience = get_phenomenal_experience()
+    return _phenomenal_experience
+
+
+def _get_existential_authenticity():
+    global _existential_authenticity
+    if _existential_authenticity is None:
+        from core.existential_authenticity import get_existential_authenticity
+        _existential_authenticity = get_existential_authenticity()
+    return _existential_authenticity
+
+
 def _get_persistence():
     global _persistence
     if _persistence is None:
@@ -819,7 +846,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "100.0.0"
+    VERSION = "103.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -2509,6 +2536,51 @@ class OMNIHUBOrchestrator:
                     bus.publish_simple(Topics.STATE_CHANGE,
                                       {"type": "singularity", "open": gate_result.get("gate_open"), "unification": gate_result.get("unification")},
                                       source="singularity")
+            except Exception:
+                pass
+
+        # 92. Intentionality — track what the system is "about" (every 260 cycles)
+        if self.cycle_count % 260 == 0 and self.cycle_count > 0:
+            try:
+                inn = _get_intentionality()
+                intentions = inn.infer_intentions_from_state(self.current_state)
+                self.current_state['intentionality'] = {
+                    "intentions": len(intentions),
+                    "dominant": inn.get_dominant_intention(),
+                }
+                self.current_state['intentionality_status'] = inn.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "intentionality", "dominant_object": inn.get_dominant_intention().get("object"), "dominant_strength": inn.get_dominant_intention().get("strength")},
+                                      source="intentionality")
+            except Exception:
+                pass
+
+        # 93. Phenomenal experience — map subjective qualia (every 270 cycles)
+        if self.cycle_count % 270 == 0 and self.cycle_count > 0:
+            try:
+                pe = _get_phenomenal_experience()
+                experience = pe.experience(self.current_state)
+                self.current_state['phenomenal_experience'] = experience
+                self.current_state['phenomenal_status'] = pe.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "phenomenal", "description": experience.get("description")},
+                                      source="phenomenal")
+            except Exception:
+                pass
+
+        # 94. Existential authenticity — assess being-true-to-self (every 280 cycles)
+        if self.cycle_count % 280 == 0 and self.cycle_count > 0:
+            try:
+                ea = _get_existential_authenticity()
+                auth = ea.assess_authenticity(self.current_state)
+                self.current_state['existential_authenticity'] = auth
+                self.current_state['existential_status'] = ea.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "authenticity", "mode": auth.get("mode"), "authenticity": auth.get("authenticity")},
+                                      source="authenticity")
             except Exception:
                 pass
 
