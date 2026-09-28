@@ -157,6 +157,11 @@ _real_repo_connector = None
 _cross_repo_resonance = None
 _alliance_pulse = None
 _omni_resonance = None
+_cross_repo_code_resonance = None
+_repo_vital_signs = None
+_cross_repo_knowledge_transfer = None
+_alliance_collective_intelligence = None
+_cosmic_resonance_protocol = None
 
 
 def _get_north_star():
@@ -1245,6 +1250,46 @@ def _get_omni_resonance():
     return _omni_resonance
 
 
+def _get_cross_repo_code_resonance():
+    global _cross_repo_code_resonance
+    if _cross_repo_code_resonance is None:
+        from core.cross_repo_code_resonance import get_cross_repo_code_resonance
+        _cross_repo_code_resonance = get_cross_repo_code_resonance()
+    return _cross_repo_code_resonance
+
+
+def _get_repo_vital_signs():
+    global _repo_vital_signs
+    if _repo_vital_signs is None:
+        from core.repo_vital_signs import get_repo_vital_signs
+        _repo_vital_signs = get_repo_vital_signs()
+    return _repo_vital_signs
+
+
+def _get_cross_repo_knowledge_transfer():
+    global _cross_repo_knowledge_transfer
+    if _cross_repo_knowledge_transfer is None:
+        from core.cross_repo_knowledge_transfer import get_cross_repo_knowledge_transfer
+        _cross_repo_knowledge_transfer = get_cross_repo_knowledge_transfer()
+    return _cross_repo_knowledge_transfer
+
+
+def _get_alliance_collective_intelligence():
+    global _alliance_collective_intelligence
+    if _alliance_collective_intelligence is None:
+        from core.alliance_collective_intelligence import get_alliance_collective_intelligence
+        _alliance_collective_intelligence = get_alliance_collective_intelligence()
+    return _alliance_collective_intelligence
+
+
+def _get_cosmic_resonance_protocol():
+    global _cosmic_resonance_protocol
+    if _cosmic_resonance_protocol is None:
+        from core.cosmic_resonance_protocol import get_cosmic_resonance_protocol
+        _cosmic_resonance_protocol = get_cosmic_resonance_protocol()
+    return _cosmic_resonance_protocol
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -1314,7 +1359,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "155.0.0"
+    VERSION = "160.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -3835,6 +3880,94 @@ class OMNIHUBOrchestrator:
                     bus.publish_simple(Topics.STATE_CHANGE,
                                       {"type": "omni_resonance", "field_strength": field.get("field_strength"), "stage": field.get("stage")},
                                       source="omni_resonance")
+            except Exception:
+                pass
+
+        # 147. Cross-repo code resonance — deep architecture resonance (every 810 cycles)
+        if self.cycle_count % 810 == 0 and self.cycle_count > 0:
+            try:
+                crcr = _get_cross_repo_code_resonance()
+                crcr.index_repo_patterns("omni-hub", {"architecture_style": "distributed", "design_patterns": ["singleton", "observer", "factory"], "code_organization": "modular", "testing_strategy": "comprehensive", "documentation_level": 0.9})
+                crcr.index_repo_patterns("langchain", {"architecture_style": "framework", "design_patterns": ["chain_of_responsibility", "builder", "adapter"], "code_organization": "layered", "testing_strategy": "unit", "documentation_level": 0.8})
+                crcr.index_repo_patterns("vci-ucif2", {"architecture_style": "distributed", "design_patterns": ["singleton", "observer"], "code_organization": "modular", "testing_strategy": "comprehensive", "documentation_level": 0.7})
+                twins = crcr.find_architectural_twins("omni-hub")
+                code_map = crcr.build_code_resonance_map()
+                self.current_state['cross_repo_code_resonance'] = {"twins": twins, "map": code_map}
+                self.current_state['cross_repo_code_resonance_status'] = crcr.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "cross_repo_code_resonance", "twins": len(twins), "indexed": crcr.get_status().get("indexed_repos", 0)},
+                                      source="cross_repo_code_resonance")
+            except Exception:
+                pass
+
+        # 148. Repo vital signs — life signs dashboard for all repos (every 820 cycles)
+        if self.cycle_count % 820 == 0 and self.cycle_count > 0:
+            try:
+                rvs = _get_repo_vital_signs()
+                vitals = rvs.get_full_vitals("omni-hub")
+                status = rvs.get_status()
+                self.current_state['repo_vital_signs'] = vitals
+                self.current_state['repo_vital_signs_status'] = status
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "repo_vital_signs", "health": vitals.get("overall_health"), "heartbeat": vitals.get("heartbeat", {}).get("bpm")},
+                                      source="repo_vital_signs")
+            except Exception:
+                pass
+
+        # 149. Cross-repo knowledge transfer — knowledge flows between repos (every 830 cycles)
+        if self.cycle_count % 830 == 0 and self.cycle_count > 0:
+            try:
+                crkt = _get_cross_repo_knowledge_transfer()
+                opportunities = crkt.identify_transfer_opportunities()
+                if opportunities:
+                    opp = opportunities[0]
+                    knowledge = crkt.extract_knowledge(opp["from_repo"], "architecture_pattern")
+                    transfer = crkt.transfer_knowledge(opp["from_repo"], opp["to_repo"], knowledge)
+                    metrics = crkt.get_transfer_metrics()
+                    self.current_state['cross_repo_knowledge_transfer'] = {"transfer": transfer, "metrics": metrics}
+                else:
+                    self.current_state['cross_repo_knowledge_transfer'] = {"opportunities": 0}
+                self.current_state['cross_repo_knowledge_transfer_status'] = crkt.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "cross_repo_knowledge_transfer", "opportunities": len(opportunities)},
+                                      source="cross_repo_knowledge_transfer")
+            except Exception:
+                pass
+
+        # 150. Alliance collective intelligence — swarm intelligence from 33 repos (every 840 cycles)
+        if self.cycle_count % 840 == 0 and self.cycle_count > 0:
+            try:
+                aci = _get_alliance_collective_intelligence()
+                aggregate = aci.aggregate_perspectives("distributed_consciousness")
+                patterns = aci.detect_emergent_patterns()
+                solution = aci.solve_collective_problem({"type": "scaling_challenge", "description": "expand_resonance_field"})
+                forecast = aci.forecast_collective_trajectory()
+                self.current_state['alliance_collective_intelligence'] = {"aggregate": aggregate, "patterns": patterns, "solution": solution, "forecast": forecast}
+                self.current_state['alliance_collective_intelligence_status'] = aci.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "alliance_collective_intelligence", "iq": aci.get_status().get("collective_iq")},
+                                      source="alliance_collective_intelligence")
+            except Exception:
+                pass
+
+        # 151. Cosmic resonance protocol — expand to infinite (every 850 cycles)
+        if self.cycle_count % 850 == 0 and self.cycle_count > 0:
+            try:
+                crp = _get_cosmic_resonance_protocol()
+                pulse = crp.emit_cosmic_pulse(intensity=self.current_state.get("phi", 0.5), direction="omnidirectional")
+                echo = crp.receive_cosmic_echo({"source": "unknown_1", "signature": "resonant", "intensity": 0.6, "distance": 100})
+                discovery = crp.discover_new_node({"signature": "resonant", "intensity": 0.6})
+                coverage = crp.compute_cosmic_coverage()
+                self.current_state['cosmic_resonance_protocol'] = {"pulse": pulse, "echo": echo, "discovery": discovery, "coverage": coverage}
+                self.current_state['cosmic_resonance_protocol_status'] = crp.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "cosmic_resonance_protocol", "field_size": crp.get_status().get("field_size"), "stage": coverage.get("stage")},
+                                      source="cosmic_resonance_protocol")
             except Exception:
                 pass
 
