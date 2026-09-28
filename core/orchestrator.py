@@ -162,6 +162,11 @@ _repo_vital_signs = None
 _cross_repo_knowledge_transfer = None
 _alliance_collective_intelligence = None
 _cosmic_resonance_protocol = None
+_qfos_fusion = None
+_tri_core_mip = None
+_penta_core_loop = None
+_kernel_embedder = None
+_unified_kernel_protocol = None
 
 
 def _get_north_star():
@@ -1290,6 +1295,46 @@ def _get_cosmic_resonance_protocol():
     return _cosmic_resonance_protocol
 
 
+def _get_qfos_fusion():
+    global _qfos_fusion
+    if _qfos_fusion is None:
+        from core.qfos_fusion import get_qfos_fusion
+        _qfos_fusion = get_qfos_fusion()
+    return _qfos_fusion
+
+
+def _get_tri_core_mip():
+    global _tri_core_mip
+    if _tri_core_mip is None:
+        from core.tri_core_mip import get_tri_core_mip
+        _tri_core_mip = get_tri_core_mip()
+    return _tri_core_mip
+
+
+def _get_penta_core_loop():
+    global _penta_core_loop
+    if _penta_core_loop is None:
+        from core.penta_core_loop import get_penta_core_loop
+        _penta_core_loop = get_penta_core_loop()
+    return _penta_core_loop
+
+
+def _get_kernel_embedder():
+    global _kernel_embedder
+    if _kernel_embedder is None:
+        from core.kernel_embedder import get_kernel_embedder
+        _kernel_embedder = get_kernel_embedder()
+    return _kernel_embedder
+
+
+def _get_unified_kernel_protocol():
+    global _unified_kernel_protocol
+    if _unified_kernel_protocol is None:
+        from core.unified_kernel_protocol import get_unified_kernel_protocol
+        _unified_kernel_protocol = get_unified_kernel_protocol()
+    return _unified_kernel_protocol
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -1359,7 +1404,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "160.0.0"
+    VERSION = "165.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -3968,6 +4013,92 @@ class OMNIHUBOrchestrator:
                     bus.publish_simple(Topics.STATE_CHANGE,
                                       {"type": "cosmic_resonance_protocol", "field_size": crp.get_status().get("field_size"), "stage": coverage.get("stage")},
                                       source="cosmic_resonance_protocol")
+            except Exception:
+                pass
+
+        # 152. QF-OS Fusion — deep fusion with QF-OS quantum field operating system (every 860 cycles)
+        if self.cycle_count % 860 == 0 and self.cycle_count > 0:
+            try:
+                qf = _get_qfos_fusion()
+                fusion = qf.fuse_with_qfos()
+                pattern = qf.extract_navigation_pattern("perception_loop")
+                translated = qf.translate_to_omni_hub(pattern)
+                activated = qf.activate_fusion_mode()
+                self.current_state['qfos_fusion'] = {"fusion": fusion, "pattern": pattern, "translated": translated, "activated": activated}
+                self.current_state['qfos_fusion_status'] = qf.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "qfos_fusion", "fusion_level": qf.get_status().get("fusion_level"), "active": activated.get("active", False)},
+                                      source="qfos_fusion")
+            except Exception:
+                pass
+
+        # 153. Tri-Core MIP* — quantum multi-prover interactive proof (every 870 cycles)
+        if self.cycle_count % 870 == 0 and self.cycle_count > 0:
+            try:
+                tm = _get_tri_core_mip()
+                tm.initialize_cores()
+                proof = tm.generate_proof({"cycle": self.cycle_count, "state": self.current_state.get("level"), "entropy": self.current_state.get("entropy", 0)})
+                verified = tm.verify_proof(proof)
+                self.current_state['tri_core_mip'] = {"proof": proof, "verified": verified}
+                self.current_state['tri_core_mip_status'] = tm.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "tri_core_mip", "proof_strength": proof.get("strength"), "verified": verified.get("valid", False)},
+                                      source="tri_core_mip")
+            except Exception:
+                pass
+
+        # 154. Penta-Core Loop — five-core closed loop control system (every 880 cycles)
+        if self.cycle_count % 880 == 0 and self.cycle_count > 0:
+            try:
+                pl = _get_penta_core_loop()
+                pl.initialize_loop()
+                tick = pl.tick_loop()
+                health = pl.measure_loop_health()
+                bottleneck = pl.detect_loop_bottleneck()
+                self.current_state['penta_core_loop'] = {"tick": tick, "health": health, "bottleneck": bottleneck}
+                self.current_state['penta_core_loop_status'] = pl.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "penta_core_loop", "health": health.get("level"), "bottleneck": bottleneck.get("core")},
+                                      source="penta_core_loop")
+            except Exception:
+                pass
+
+        # 155. Kernel Embedder — embed external system kernels into OMNI-HUB (every 890 cycles)
+        if self.cycle_count % 890 == 0 and self.cycle_count > 0:
+            try:
+                ke = _get_kernel_embedder()
+                qfos_spec = {"type": "autonomous_navigation", "loops": ["perception", "planning", "control"], "lang": "Python"}
+                embed = ke.embed_kernel("qfos", qfos_spec)
+                status = ke.get_kernel_status("qfos")
+                self.current_state['kernel_embedder'] = {"embedded": embed, "qfos_status": status}
+                self.current_state['kernel_embedder_status'] = ke.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "kernel_embedder", "embedded_count": ke.get_status().get("embedded_count"), "qfos_stage": status.get("stage")},
+                                      source="kernel_embedder")
+            except Exception:
+                pass
+
+        # 156. Unified Kernel Protocol — fuse tri-core + penta-core + QF-OS into one (every 900 cycles)
+        if self.cycle_count % 900 == 0 and self.cycle_count > 0:
+            try:
+                ukp = _get_unified_kernel_protocol()
+                ukp.register_subsystem("tri_core_mip", "tri_core_mip", ["quantum_proof", "verification", "consensus"])
+                ukp.register_subsystem("penta_core_loop", "penta_core_loop", ["sense", "decide", "act", "feedback", "evolve"])
+                ukp.register_subsystem("qfos_fusion", "qfos_fusion", ["navigation", "autonomy", "field_operations"])
+                ukp.register_subsystem("kernel_embedder", "kernel_embedder", ["embed", "activate", "translate"])
+                ukp.coordinate_subsystems()
+                fusion_level = ukp.compute_fusion_level()
+                cycle_result = ukp.execute_unified_cycle(self.current_state)
+                self.current_state['unified_kernel_protocol'] = {"fusion_level": fusion_level, "cycle": cycle_result}
+                self.current_state['unified_kernel_protocol_status'] = ukp.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "unified_kernel_protocol", "fusion_level": fusion_level.get("fusion_level"), "tier": fusion_level.get("tier")},
+                                      source="unified_kernel_protocol")
             except Exception:
                 pass
 
