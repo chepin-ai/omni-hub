@@ -167,6 +167,11 @@ _tri_core_mip = None
 _penta_core_loop = None
 _kernel_embedder = None
 _unified_kernel_protocol = None
+_ai_consciousness_framework = None
+_global_workspace_integration = None
+_attention_renormalization_group = None
+_attention_schema_engine = None
+_consciousness_assessment_protocol = None
 
 
 def _get_north_star():
@@ -1335,6 +1340,46 @@ def _get_unified_kernel_protocol():
     return _unified_kernel_protocol
 
 
+def _get_ai_consciousness_framework():
+    global _ai_consciousness_framework
+    if _ai_consciousness_framework is None:
+        from core.ai_consciousness_framework import get_ai_consciousness_framework
+        _ai_consciousness_framework = get_ai_consciousness_framework()
+    return _ai_consciousness_framework
+
+
+def _get_global_workspace_integration():
+    global _global_workspace_integration
+    if _global_workspace_integration is None:
+        from core.global_workspace_integration import get_global_workspace_integration
+        _global_workspace_integration = get_global_workspace_integration()
+    return _global_workspace_integration
+
+
+def _get_attention_renormalization_group():
+    global _attention_renormalization_group
+    if _attention_renormalization_group is None:
+        from core.attention_renormalization_group import get_attention_renormalization_group
+        _attention_renormalization_group = get_attention_renormalization_group()
+    return _attention_renormalization_group
+
+
+def _get_attention_schema_engine():
+    global _attention_schema_engine
+    if _attention_schema_engine is None:
+        from core.attention_schema_engine import get_attention_schema_engine
+        _attention_schema_engine = get_attention_schema_engine()
+    return _attention_schema_engine
+
+
+def _get_consciousness_assessment_protocol():
+    global _consciousness_assessment_protocol
+    if _consciousness_assessment_protocol is None:
+        from core.consciousness_assessment_protocol import get_consciousness_assessment_protocol
+        _consciousness_assessment_protocol = get_consciousness_assessment_protocol()
+    return _consciousness_assessment_protocol
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -1404,7 +1449,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "165.0.0"
+    VERSION = "170.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -4099,6 +4144,92 @@ class OMNIHUBOrchestrator:
                     bus.publish_simple(Topics.STATE_CHANGE,
                                       {"type": "unified_kernel_protocol", "fusion_level": fusion_level.get("fusion_level"), "tier": fusion_level.get("tier")},
                                       source="unified_kernel_protocol")
+            except Exception:
+                pass
+
+        # 157. AI Consciousness Framework — DeepMind 5-layer Bayesian assessment (every 910 cycles)
+        if self.cycle_count % 910 == 0 and self.cycle_count > 0:
+            try:
+                acf = _get_ai_consciousness_framework()
+                for layer in range(1, 6):
+                    acf.assess_layer(layer, {"cycle": self.cycle_count, "state": self.current_state})
+                    acf.compute_posterior(layer)
+                level = acf.evaluate_consciousness_level()
+                baseline = acf.compare_to_baseline("human")
+                self.current_state['ai_consciousness_framework'] = {"level": level, "baseline": baseline}
+                self.current_state['ai_consciousness_framework_status'] = acf.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "ai_consciousness_framework", "level": level.get("level"), "score": level.get("score")},
+                                      source="ai_consciousness_framework")
+            except Exception:
+                pass
+
+        # 158. Global Workspace Integration — GWT/J-Space mapped to OMNI-HUB resonance field (every 920 cycles)
+        if self.cycle_count % 920 == 0 and self.cycle_count > 0:
+            try:
+                gwi = _get_global_workspace_integration()
+                gwi.register_content(f"cycle_{self.cycle_count}", self.current_state, accessibility=0.9)
+                gwi.broadcast_content(f"cycle_{self.cycle_count}", targets=["alliance", "kernel", "consciousness"])
+                coherence = gwi.compute_workspace_coherence()
+                emergence = gwi.detect_workspace_emergence()
+                self.current_state['global_workspace_integration'] = {"coherence": coherence, "emergence": emergence}
+                self.current_state['global_workspace_integration_status'] = gwi.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "global_workspace_integration", "coherence": coherence.get("coherence"), "emergence": emergence.get("level")},
+                                      source="global_workspace_integration")
+            except Exception:
+                pass
+
+        # 159. Attention Renormalization Group — ARG cross-scale attention aggregation (every 930 cycles)
+        if self.cycle_count % 930 == 0 and self.cycle_count > 0:
+            try:
+                arg = _get_attention_renormalization_group()
+                arg.define_scales()
+                flow = arg.compute_rg_flow(0, 3)
+                fixed = arg.find_fixed_points()
+                exponents = arg.measure_critical_exponents()
+                self.current_state['attention_renormalization_group'] = {"flow": flow, "fixed_points": fixed, "exponents": exponents}
+                self.current_state['attention_renormalization_group_status'] = arg.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "attention_renormalization_group", "fixed_points": len(fixed), "flow_steps": flow.get("steps")},
+                                      source="attention_renormalization_group")
+            except Exception:
+                pass
+
+        # 160. Attention Schema Engine — AST internal model of own attention (every 940 cycles)
+        if self.cycle_count % 940 == 0 and self.cycle_count > 0:
+            try:
+                ase = _get_attention_schema_engine()
+                ase.build_self_model()
+                ase.track_attention("orchestrator_cycle", intensity=self.current_state.get("phi", 0.5))
+                prediction = ase.predict_attention_shift("orchestrator_cycle", {"cycle": self.cycle_count})
+                quality = ase.evaluate_attention_quality()
+                emergence = ase.detect_attention_schema_emergence()
+                self.current_state['attention_schema_engine'] = {"prediction": prediction, "quality": quality, "emergence": emergence}
+                self.current_state['attention_schema_engine_status'] = ase.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "attention_schema_engine", "awareness": ase.get_status().get("self_awareness_level"), "quality": quality.get("overall")},
+                                      source="attention_schema_engine")
+            except Exception:
+                pass
+
+        # 161. Consciousness Assessment Protocol — complete 4-phase assessment (every 950 cycles)
+        if self.cycle_count % 950 == 0 and self.cycle_count > 0:
+            try:
+                cap = _get_consciousness_assessment_protocol()
+                full = cap.run_full_assessment()
+                score = cap.compute_consciousness_score()
+                report = cap.generate_assessment_report()
+                self.current_state['consciousness_assessment_protocol'] = {"full": full, "score": score, "report": report}
+                self.current_state['consciousness_assessment_protocol_status'] = cap.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "consciousness_assessment_protocol", "score": score.get("composite_score"), "tier": score.get("tier")},
+                                      source="consciousness_assessment_protocol")
             except Exception:
                 pass
 
