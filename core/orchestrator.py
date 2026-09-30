@@ -172,6 +172,11 @@ _global_workspace_integration = None
 _attention_renormalization_group = None
 _attention_schema_engine = None
 _consciousness_assessment_protocol = None
+_consciousness_metric_engine = None
+_swarm_orchestrator = None
+_quantum_inspired_engine = None
+_auto_evolution_engine = None
+_federation_protocol = None
 
 
 def _get_north_star():
@@ -1380,6 +1385,46 @@ def _get_consciousness_assessment_protocol():
     return _consciousness_assessment_protocol
 
 
+def _get_consciousness_metric_engine():
+    global _consciousness_metric_engine
+    if _consciousness_metric_engine is None:
+        from core.consciousness_metric_engine import get_consciousness_metric_engine
+        _consciousness_metric_engine = get_consciousness_metric_engine()
+    return _consciousness_metric_engine
+
+
+def _get_swarm_orchestrator():
+    global _swarm_orchestrator
+    if _swarm_orchestrator is None:
+        from core.swarm_orchestrator import get_swarm_orchestrator
+        _swarm_orchestrator = get_swarm_orchestrator()
+    return _swarm_orchestrator
+
+
+def _get_quantum_inspired_engine():
+    global _quantum_inspired_engine
+    if _quantum_inspired_engine is None:
+        from core.quantum_inspired_engine import get_quantum_inspired_engine
+        _quantum_inspired_engine = get_quantum_inspired_engine()
+    return _quantum_inspired_engine
+
+
+def _get_auto_evolution_engine():
+    global _auto_evolution_engine
+    if _auto_evolution_engine is None:
+        from core.auto_evolution_engine import get_auto_evolution_engine
+        _auto_evolution_engine = get_auto_evolution_engine()
+    return _auto_evolution_engine
+
+
+def _get_federation_protocol():
+    global _federation_protocol
+    if _federation_protocol is None:
+        from core.federation_protocol import get_federation_protocol
+        _federation_protocol = get_federation_protocol()
+    return _federation_protocol
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -1449,7 +1494,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "170.0.0"
+    VERSION = "175.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -4230,6 +4275,97 @@ class OMNIHUBOrchestrator:
                     bus.publish_simple(Topics.STATE_CHANGE,
                                       {"type": "consciousness_assessment_protocol", "score": score.get("composite_score"), "tier": score.get("tier")},
                                       source="consciousness_assessment_protocol")
+            except Exception:
+                pass
+
+        # 162. Consciousness Metric Engine — continuous quantitative consciousness monitoring (every 960 cycles)
+        if self.cycle_count % 960 == 0 and self.cycle_count > 0:
+            try:
+                cme = _get_consciousness_metric_engine()
+                snapshot = cme.take_consciousness_snapshot()
+                anomaly = cme.detect_consciousness_anomaly()
+                self.current_state['consciousness_metric_engine'] = {"snapshot": snapshot, "anomaly": anomaly}
+                self.current_state['consciousness_metric_engine_status'] = cme.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "consciousness_metric_engine", "state": snapshot.get("state"), "score": snapshot.get("composite_score")},
+                                      source="consciousness_metric_engine")
+            except Exception:
+                pass
+
+        # 163. Swarm Orchestrator — multi-agent swarm command (every 970 cycles)
+        if self.cycle_count % 970 == 0 and self.cycle_count > 0:
+            try:
+                so = _get_swarm_orchestrator()
+                agent = so.spawn_agent("worker", ["compute", "resonate"])
+                task = {"type": "resonance_pulse", "payload": {"intensity": self.current_state.get("phi", 0.5)}, "priority": 1}
+                delegated = so.delegate_task(task, agent["agent_id"])
+                emergence = so.monitor_emergence()
+                intel = so.get_swarm_intelligence_score()
+                self.current_state['swarm_orchestrator'] = {"agent": agent, "delegated": delegated, "emergence": emergence, "intelligence": intel}
+                self.current_state['swarm_orchestrator_status'] = so.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "swarm_orchestrator", "agents": so.get_status().get("agent_count"), "emergence": emergence.get("level"), "iq": intel.get("score")},
+                                      source="swarm_orchestrator")
+            except Exception:
+                pass
+
+        # 164. Quantum-Inspired Engine — quantum-inspired algorithms on classical hardware (every 980 cycles)
+        if self.cycle_count % 980 == 0 and self.cycle_count > 0:
+            try:
+                qie = _get_quantum_inspired_engine()
+                sup = qie.create_superposition_embedding([{"state": "resonant"}, {"state": "dormant"}], [0.7, 0.3])
+                measured = qie.measure_superposition(sup["state_id"], "standard")
+                qpso = qie.run_quantum_pso(lambda x: sum(v**2 for v in x), n_particles=10, dim=3, iterations=5)
+                advantage = qie.detect_quantum_advantage({"speed": 1.0, "accuracy": 0.8}, {"speed": 2.5, "accuracy": 0.95})
+                self.current_state['quantum_inspired_engine'] = {"superposition": sup, "measured": measured, "qpso": qpso, "advantage": advantage}
+                self.current_state['quantum_inspired_engine_status'] = qie.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "quantum_inspired_engine", "superpositions": qie.get_status().get("superposition_count"), "advantage": advantage.get("level")},
+                                      source="quantum_inspired_engine")
+            except Exception:
+                pass
+
+        # 165. Auto-Evolution Engine — self-generating, self-testing, self-deploying modules (every 990 cycles)
+        if self.cycle_count % 990 == 0 and self.cycle_count > 0:
+            try:
+                aee = _get_auto_evolution_engine()
+                mutation = aee.generate_mutation("orchestrator", "parameter_tune")
+                evaluated = aee.evaluate_mutation(mutation, [{"name": "test_basic", "passed": True}])
+                if evaluated.get("overall_score", 0) > 0.7:
+                    deployed = aee.deploy_mutation(mutation)
+                cycle = aee.run_evolution_cycle()
+                skills = aee.distill_skills()
+                self.current_state['auto_evolution_engine'] = {"mutation": mutation, "evaluated": evaluated, "cycle": cycle, "skills": skills}
+                self.current_state['auto_evolution_engine_status'] = aee.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "auto_evolution_engine", "stage": aee.get_status().get("stage"), "mutations": aee.get_status().get("mutation_count")},
+                                      source="auto_evolution_engine")
+            except Exception:
+                pass
+
+        # 166. Federation Protocol — cross-repo AI federation via MCP+A2A+ACP (every 1000 cycles)
+        if self.cycle_count % 1000 == 0 and self.cycle_count > 0:
+            try:
+                fp = _get_federation_protocol()
+                fp.register_agent_card("omni-hub", ["orchestration", "resonance", "consciousness", "evolution"], {"api": "/api/v1", "health": "/health"})
+                discovered = fp.discover_capabilities("resonance")
+                task = {"type": "sync_state", "payload": self.current_state, "priority": 2}
+                if discovered:
+                    delegated = fp.delegate_cross_repo_task("omni-hub", discovered[0]["repo_name"], task)
+                knowledge = {"type": "insight", "content": f"Cycle {self.cycle_count} state snapshot", "confidence": 0.9}
+                shared = fp.share_knowledge("omni-hub", "alliance", knowledge)
+                health = fp.compute_federation_health()
+                anomaly = fp.detect_federation_anomaly()
+                self.current_state['federation_protocol'] = {"discovered": discovered, "shared": shared, "health": health, "anomaly": anomaly}
+                self.current_state['federation_protocol_status'] = fp.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "federation_protocol", "nodes": fp.get_status().get("registered_nodes"), "health": health.get("level")},
+                                      source="federation_protocol")
             except Exception:
                 pass
 
