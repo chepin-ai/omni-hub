@@ -182,6 +182,7 @@ _pattern_circles = None
 _circulation_engine = None
 _core_machine = None
 _collaborative_surge = None
+_inter_line_consensus = None
 
 
 def _get_north_star():
@@ -1470,6 +1471,14 @@ def _get_collaborative_surge():
     return _collaborative_surge
 
 
+def _get_inter_line_consensus():
+    global _inter_line_consensus
+    if _inter_line_consensus is None:
+        from core.inter_line_consensus import get_inter_line_consensus
+        _inter_line_consensus = get_inter_line_consensus()
+    return _inter_line_consensus
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -1539,7 +1548,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "180.0.0"
+    VERSION = "181.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -4502,6 +4511,34 @@ class OMNIHUBOrchestrator:
                     bus.publish_simple(Topics.STATE_CHANGE,
                                       {"type": "collaborative_surge", "surge_level": momentum.get("level"), "emergences": len(emergence.get("emergences", []))},
                                       source="collaborative_surge")
+            except Exception:
+                pass
+
+        # 172. Inter-Line Consensus — OTP/API direct negotiation with real alliance lines (every 1090 cycles)
+        if self.cycle_count % 1090 == 0 and self.cycle_count > 0:
+            try:
+                ilc = _get_inter_line_consensus()
+                # Classify all lines readiness
+                readiness = {}
+                for line in ["ucif2", "lvlu", "lgt", "qfa", "vinf", "qgl", "qlv", "qtlv", "usrm", "cfts", "aiq", "omni"]:
+                    readiness[line] = ilc.classify_line_readiness(line)
+                # Send negotiation proposal to all operational lines
+                participants = [k for k, v in readiness.items() if v.get("level") in ["fully_operational", "operational", "tower_ready", "drive_ready"]]
+                if participants:
+                    result = ilc.negotiate_iteratively("v181_consensus_protocol", participants, max_rounds=5)
+                    protocol = ilc.generate_consensus_protocol(result)
+                    executed = ilc.execute_consensus(protocol) if result.get("consensus_reached") else {}
+                    self.current_state['inter_line_consensus'] = {
+                        "readiness": readiness,
+                        "negotiation": result,
+                        "protocol": protocol,
+                        "executed": executed,
+                    }
+                    self.current_state['inter_line_consensus_status'] = ilc.get_status()
+                    if bus and Topics:
+                        bus.publish_simple(Topics.STATE_CHANGE,
+                                          {"type": "inter_line_consensus", "consensus": result.get("consensus_reached"), "participants": len(participants), "confidence": result.get("confidence", 0)},
+                                          source="inter_line_consensus")
             except Exception:
                 pass
 

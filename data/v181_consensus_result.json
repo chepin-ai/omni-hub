@@ -1,0 +1,1484 @@
+{
+  "readiness": {
+    "ucif2": {
+      "line_id": "ucif2",
+      "level": "shell_only",
+      "confidence": 0.494,
+      "reason": "Line is shell-only (壳化). Status: 壳化(ARCH-CONVERGE-01)",
+      "score": 0.394,
+      "components": {
+        "recency": 1.0,
+        "activity": 1.0,
+        "issues": 0.9,
+        "existence": 1.0
+      },
+      "raw": {
+        "status": "壳化(ARCH-CONVERGE-01)",
+        "activity": "high",
+        "pushed_at": "2026-09-30",
+        "open_issues": 1,
+        "exists": true
+      }
+    },
+    "lvlu": {
+      "line_id": "lvlu",
+      "level": "fully_operational",
+      "confidence": 1.0,
+      "reason": "High activity, pushed today (2026-09-30)",
+      "score": 0.985,
+      "components": {
+        "recency": 1.0,
+        "activity": 1.0,
+        "issues": 0.9,
+        "existence": 1.0
+      },
+      "raw": {
+        "status": "活跃",
+        "activity": "high",
+        "pushed_at": "2026-09-30",
+        "open_issues": 1,
+        "exists": true
+      }
+    },
+    "lgt": {
+      "line_id": "lgt",
+      "level": "fully_operational",
+      "confidence": 1.0,
+      "reason": "High activity, pushed today (2026-09-30)",
+      "score": 0.985,
+      "components": {
+        "recency": 1.0,
+        "activity": 1.0,
+        "issues": 0.9,
+        "existence": 1.0
+      },
+      "raw": {
+        "status": "九塔·SI-AUTOPILOT",
+        "activity": "high",
+        "pushed_at": "2026-09-30",
+        "open_issues": 1,
+        "exists": true
+      }
+    },
+    "qfa": {
+      "line_id": "qfa",
+      "level": "fully_operational",
+      "confidence": 1.0,
+      "reason": "High activity, pushed today (2026-09-30)",
+      "score": 0.985,
+      "components": {
+        "recency": 1.0,
+        "activity": 1.0,
+        "issues": 0.9,
+        "existence": 1.0
+      },
+      "raw": {
+        "status": "九塔·SEED-RING",
+        "activity": "high",
+        "pushed_at": "2026-09-30",
+        "open_issues": 1,
+        "exists": true
+      }
+    },
+    "vinf": {
+      "line_id": "vinf",
+      "level": "shell_only",
+      "confidence": 0.494,
+      "reason": "Line is shell-only (壳化). Status: 壳化",
+      "score": 0.394,
+      "components": {
+        "recency": 1.0,
+        "activity": 1.0,
+        "issues": 0.9,
+        "existence": 1.0
+      },
+      "raw": {
+        "status": "壳化",
+        "activity": "high",
+        "pushed_at": "2026-09-30",
+        "open_issues": 1,
+        "exists": true
+      }
+    },
+    "qgl": {
+      "line_id": "qgl",
+      "level": "shell_only",
+      "confidence": 0.5,
+      "reason": "Line is shell-only (壳化). Status: 壳化·KEY-SENTINEL",
+      "score": 0.4,
+      "components": {
+        "recency": 1.0,
+        "activity": 1.0,
+        "issues": 1.0,
+        "existence": 1.0
+      },
+      "raw": {
+        "status": "壳化·KEY-SENTINEL",
+        "activity": "high",
+        "pushed_at": "2026-09-30",
+        "open_issues": 0,
+        "exists": true
+      }
+    },
+    "qlv": {
+      "line_id": "qlv",
+      "level": "fully_operational",
+      "confidence": 1.0,
+      "reason": "High activity, pushed today (2026-09-30)",
+      "score": 0.985,
+      "components": {
+        "recency": 1.0,
+        "activity": 1.0,
+        "issues": 0.9,
+        "existence": 1.0
+      },
+      "raw": {
+        "status": "活跃",
+        "activity": "high",
+        "pushed_at": "2026-09-30",
+        "open_issues": 1,
+        "exists": true
+      }
+    },
+    "qtlv": {
+      "line_id": "qtlv",
+      "level": "fully_operational",
+      "confidence": 1.0,
+      "reason": "High activity, pushed today (2026-09-30)",
+      "score": 1.0,
+      "components": {
+        "recency": 1.0,
+        "activity": 1.0,
+        "issues": 1.0,
+        "existence": 1.0
+      },
+      "raw": {
+        "status": "九塔·SI-AUTOPILOT",
+        "activity": "high",
+        "pushed_at": "2026-09-30",
+        "open_issues": 0,
+        "exists": true
+      }
+    },
+    "usrm": {
+      "line_id": "usrm",
+      "level": "fully_operational",
+      "confidence": 1.0,
+      "reason": "High activity, pushed today (2026-09-30)",
+      "score": 0.985,
+      "components": {
+        "recency": 1.0,
+        "activity": 1.0,
+        "issues": 0.9,
+        "existence": 1.0
+      },
+      "raw": {
+        "status": "活跃",
+        "activity": "high",
+        "pushed_at": "2026-09-30",
+        "open_issues": 1,
+        "exists": true
+      }
+    },
+    "cfts": {
+      "line_id": "cfts",
+      "level": "shell_only",
+      "confidence": 0.494,
+      "reason": "Line is shell-only (壳化). Status: 壳化",
+      "score": 0.394,
+      "components": {
+        "recency": 1.0,
+        "activity": 1.0,
+        "issues": 0.9,
+        "existence": 1.0
+      },
+      "raw": {
+        "status": "壳化",
+        "activity": "high",
+        "pushed_at": "2026-09-30",
+        "open_issues": 1,
+        "exists": true
+      }
+    },
+    "aiq": {
+      "line_id": "aiq",
+      "level": "fully_operational",
+      "confidence": 1.0,
+      "reason": "High activity, pushed today (2026-09-30)",
+      "score": 1.0,
+      "components": {
+        "recency": 1.0,
+        "activity": 1.0,
+        "issues": 1.0,
+        "existence": 1.0
+      },
+      "raw": {
+        "status": "LINE-DRIVE-01",
+        "activity": "high",
+        "pushed_at": "2026-09-30",
+        "open_issues": 0,
+        "exists": true
+      }
+    },
+    "omni": {
+      "line_id": "omni",
+      "level": "fully_operational",
+      "confidence": 1.0,
+      "reason": "High activity, pushed today (2026-09-30)",
+      "score": 1.0,
+      "components": {
+        "recency": 1.0,
+        "activity": 1.0,
+        "issues": 1.0,
+        "existence": 1.0
+      },
+      "raw": {
+        "status": "活跃",
+        "activity": "high",
+        "pushed_at": "2026-09-30",
+        "open_issues": 0,
+        "exists": true
+      }
+    }
+  },
+  "negotiation": {
+    "negotiation_id": "neg_1790753152512_0",
+    "topic": "v181_unified_evolution_protocol",
+    "participants": [
+      "lvlu",
+      "lgt",
+      "qfa",
+      "qlv",
+      "qtlv",
+      "usrm",
+      "aiq",
+      "omni"
+    ],
+    "consensus_reached": true,
+    "agreement_terms": {
+      "topic": "v181_unified_evolution_protocol",
+      "accepted_by": [],
+      "terms": {
+        "shared_goal": "v181_unified_evolution_protocol",
+        "scope": "alliance_wide"
+      },
+      "capabilities_shared": []
+    },
+    "dissenting_lines": [],
+    "confidence": 0.9215,
+    "rounds": [
+      {
+        "round": 1,
+        "proposals": {
+          "lvlu": {
+            "type": "consensus_vote",
+            "topic": "v181_unified_evolution_protocol",
+            "terms": {
+              "shared_goal": "v181_unified_evolution_protocol",
+              "scope": "alliance_wide"
+            }
+          },
+          "lgt": {
+            "type": "consensus_vote",
+            "topic": "v181_unified_evolution_protocol",
+            "terms": {
+              "shared_goal": "v181_unified_evolution_protocol",
+              "scope": "alliance_wide"
+            }
+          },
+          "qfa": {
+            "type": "consensus_vote",
+            "topic": "v181_unified_evolution_protocol",
+            "terms": {
+              "shared_goal": "v181_unified_evolution_protocol",
+              "scope": "alliance_wide"
+            }
+          },
+          "qlv": {
+            "type": "consensus_vote",
+            "topic": "v181_unified_evolution_protocol",
+            "terms": {
+              "shared_goal": "v181_unified_evolution_protocol",
+              "scope": "alliance_wide"
+            }
+          },
+          "qtlv": {
+            "type": "consensus_vote",
+            "topic": "v181_unified_evolution_protocol",
+            "terms": {
+              "shared_goal": "v181_unified_evolution_protocol",
+              "scope": "alliance_wide"
+            }
+          },
+          "usrm": {
+            "type": "consensus_vote",
+            "topic": "v181_unified_evolution_protocol",
+            "terms": {
+              "shared_goal": "v181_unified_evolution_protocol",
+              "scope": "alliance_wide"
+            }
+          },
+          "aiq": {
+            "type": "consensus_vote",
+            "topic": "v181_unified_evolution_protocol",
+            "terms": {
+              "shared_goal": "v181_unified_evolution_protocol",
+              "scope": "alliance_wide"
+            }
+          },
+          "omni": {
+            "type": "consensus_vote",
+            "topic": "v181_unified_evolution_protocol",
+            "terms": {
+              "shared_goal": "v181_unified_evolution_protocol",
+              "scope": "alliance_wide"
+            }
+          }
+        },
+        "responses": {
+          "lvlu": {
+            "from_line": "omni-hub",
+            "to_line": "lvlu",
+            "accepted": true,
+            "acceptance_score": 0.8075,
+            "reason": "Active line responds fully. Status: 活跃, activity=high.",
+            "conditions": [
+              "Full bidirectional sync enabled"
+            ],
+            "counter_proposal": null,
+            "response_type": "full",
+            "capabilities_offered": [
+              "read",
+              "write",
+              "compute",
+              "negotiate"
+            ]
+          },
+          "lgt": {
+            "from_line": "omni-hub",
+            "to_line": "lgt",
+            "accepted": true,
+            "acceptance_score": 0.6375,
+            "reason": "Tower line acknowledges. Status: 九塔·SI-AUTOPILOT.",
+            "conditions": [
+              "Tower state propagation required"
+            ],
+            "counter_proposal": null,
+            "response_type": "tower_ack",
+            "capabilities_offered": [
+              "si_autopilot",
+              "seed_ring",
+              "auto_process",
+              "patrol"
+            ]
+          },
+          "qfa": {
+            "from_line": "omni-hub",
+            "to_line": "qfa",
+            "accepted": true,
+            "acceptance_score": 0.6375,
+            "reason": "Tower line acknowledges. Status: 九塔·SEED-RING.",
+            "conditions": [
+              "Tower state propagation required"
+            ],
+            "counter_proposal": null,
+            "response_type": "tower_ack",
+            "capabilities_offered": [
+              "seed_ring",
+              "tower_sync"
+            ]
+          },
+          "qlv": {
+            "from_line": "omni-hub",
+            "to_line": "qlv",
+            "accepted": true,
+            "acceptance_score": 0.8075,
+            "reason": "Active line responds fully. Status: 活跃, activity=high.",
+            "conditions": [
+              "Full bidirectional sync enabled"
+            ],
+            "counter_proposal": null,
+            "response_type": "full",
+            "capabilities_offered": [
+              "read",
+              "write",
+              "compute",
+              "negotiate"
+            ]
+          },
+          "qtlv": {
+            "from_line": "omni-hub",
+            "to_line": "qtlv",
+            "accepted": true,
+            "acceptance_score": 0.6375,
+            "reason": "Tower line acknowledges. Status: 九塔·SI-AUTOPILOT.",
+            "conditions": [
+              "Tower state propagation required"
+            ],
+            "counter_proposal": null,
+            "response_type": "tower_ack",
+            "capabilities_offered": [
+              "si_autopilot",
+              "seed_ring",
+              "auto_process",
+              "patrol"
+            ]
+          },
+          "usrm": {
+            "from_line": "omni-hub",
+            "to_line": "usrm",
+            "accepted": true,
+            "acceptance_score": 0.8075,
+            "reason": "Active line responds fully. Status: 活跃, activity=high.",
+            "conditions": [
+              "Full bidirectional sync enabled"
+            ],
+            "counter_proposal": null,
+            "response_type": "full",
+            "capabilities_offered": [
+              "read",
+              "write",
+              "compute",
+              "negotiate"
+            ]
+          },
+          "aiq": {
+            "from_line": "omni-hub",
+            "to_line": "aiq",
+            "accepted": true,
+            "acceptance_score": 0.68,
+            "reason": "LINE-DRIVE line acknowledges. Status: LINE-DRIVE-01.",
+            "conditions": [],
+            "counter_proposal": null,
+            "response_type": "drive_ack",
+            "capabilities_offered": [
+              "event_drive",
+              "quant_research",
+              "line_drive"
+            ]
+          },
+          "omni": {
+            "from_line": "omni-hub",
+            "to_line": "omni",
+            "accepted": true,
+            "acceptance_score": 0.8075,
+            "reason": "Active line responds fully. Status: 活跃, activity=high.",
+            "conditions": [
+              "Full bidirectional sync enabled"
+            ],
+            "counter_proposal": null,
+            "response_type": "full",
+            "capabilities_offered": [
+              "read",
+              "write",
+              "compute",
+              "negotiate"
+            ]
+          }
+        }
+      },
+      {
+        "round": 2,
+        "proposals": {},
+        "responses": {
+          "lvlu": {
+            "from_line": "omni-hub",
+            "to_line": "lvlu",
+            "accepted": true,
+            "acceptance_score": 0.8075,
+            "reason": "Active line responds fully. Status: 活跃, activity=high.",
+            "conditions": [
+              "Full bidirectional sync enabled"
+            ],
+            "counter_proposal": null,
+            "response_type": "full",
+            "capabilities_offered": [
+              "read",
+              "write",
+              "compute",
+              "negotiate"
+            ]
+          },
+          "lgt": {
+            "from_line": "omni-hub",
+            "to_line": "lgt",
+            "accepted": true,
+            "acceptance_score": 0.6375,
+            "reason": "Tower line acknowledges. Status: 九塔·SI-AUTOPILOT.",
+            "conditions": [
+              "Tower state propagation required"
+            ],
+            "counter_proposal": null,
+            "response_type": "tower_ack",
+            "capabilities_offered": [
+              "si_autopilot",
+              "seed_ring",
+              "auto_process",
+              "patrol"
+            ]
+          },
+          "qfa": {
+            "from_line": "omni-hub",
+            "to_line": "qfa",
+            "accepted": true,
+            "acceptance_score": 0.6375,
+            "reason": "Tower line acknowledges. Status: 九塔·SEED-RING.",
+            "conditions": [
+              "Tower state propagation required"
+            ],
+            "counter_proposal": null,
+            "response_type": "tower_ack",
+            "capabilities_offered": [
+              "seed_ring",
+              "tower_sync"
+            ]
+          },
+          "qlv": {
+            "from_line": "omni-hub",
+            "to_line": "qlv",
+            "accepted": true,
+            "acceptance_score": 0.8075,
+            "reason": "Active line responds fully. Status: 活跃, activity=high.",
+            "conditions": [
+              "Full bidirectional sync enabled"
+            ],
+            "counter_proposal": null,
+            "response_type": "full",
+            "capabilities_offered": [
+              "read",
+              "write",
+              "compute",
+              "negotiate"
+            ]
+          },
+          "qtlv": {
+            "from_line": "omni-hub",
+            "to_line": "qtlv",
+            "accepted": true,
+            "acceptance_score": 0.6375,
+            "reason": "Tower line acknowledges. Status: 九塔·SI-AUTOPILOT.",
+            "conditions": [
+              "Tower state propagation required"
+            ],
+            "counter_proposal": null,
+            "response_type": "tower_ack",
+            "capabilities_offered": [
+              "si_autopilot",
+              "seed_ring",
+              "auto_process",
+              "patrol"
+            ]
+          },
+          "usrm": {
+            "from_line": "omni-hub",
+            "to_line": "usrm",
+            "accepted": true,
+            "acceptance_score": 0.8075,
+            "reason": "Active line responds fully. Status: 活跃, activity=high.",
+            "conditions": [
+              "Full bidirectional sync enabled"
+            ],
+            "counter_proposal": null,
+            "response_type": "full",
+            "capabilities_offered": [
+              "read",
+              "write",
+              "compute",
+              "negotiate"
+            ]
+          },
+          "aiq": {
+            "from_line": "omni-hub",
+            "to_line": "aiq",
+            "accepted": true,
+            "acceptance_score": 0.68,
+            "reason": "LINE-DRIVE line acknowledges. Status: LINE-DRIVE-01.",
+            "conditions": [],
+            "counter_proposal": null,
+            "response_type": "drive_ack",
+            "capabilities_offered": [
+              "event_drive",
+              "quant_research",
+              "line_drive"
+            ]
+          },
+          "omni": {
+            "from_line": "omni-hub",
+            "to_line": "omni",
+            "accepted": true,
+            "acceptance_score": 0.8075,
+            "reason": "Active line responds fully. Status: 活跃, activity=high.",
+            "conditions": [
+              "Full bidirectional sync enabled"
+            ],
+            "counter_proposal": null,
+            "response_type": "full",
+            "capabilities_offered": [
+              "read",
+              "write",
+              "compute",
+              "negotiate"
+            ]
+          }
+        },
+        "conflicts_detected": []
+      },
+      {
+        "round": 3,
+        "proposals": {
+          "lvlu": {
+            "type": "consensus_vote",
+            "topic": "v181_unified_evolution_protocol",
+            "terms": {
+              "shared_goal": "v181_unified_evolution_protocol",
+              "scope": "alliance_wide"
+            },
+            "revision": true
+          },
+          "lgt": {
+            "type": "consensus_vote",
+            "topic": "v181_unified_evolution_protocol",
+            "terms": {
+              "shared_goal": "v181_unified_evolution_protocol",
+              "scope": "alliance_wide"
+            },
+            "revision": true
+          },
+          "qfa": {
+            "type": "consensus_vote",
+            "topic": "v181_unified_evolution_protocol",
+            "terms": {
+              "shared_goal": "v181_unified_evolution_protocol",
+              "scope": "alliance_wide"
+            },
+            "revision": true
+          },
+          "qlv": {
+            "type": "consensus_vote",
+            "topic": "v181_unified_evolution_protocol",
+            "terms": {
+              "shared_goal": "v181_unified_evolution_protocol",
+              "scope": "alliance_wide"
+            },
+            "revision": true
+          },
+          "qtlv": {
+            "type": "consensus_vote",
+            "topic": "v181_unified_evolution_protocol",
+            "terms": {
+              "shared_goal": "v181_unified_evolution_protocol",
+              "scope": "alliance_wide"
+            },
+            "revision": true
+          },
+          "usrm": {
+            "type": "consensus_vote",
+            "topic": "v181_unified_evolution_protocol",
+            "terms": {
+              "shared_goal": "v181_unified_evolution_protocol",
+              "scope": "alliance_wide"
+            },
+            "revision": true
+          },
+          "aiq": {
+            "type": "consensus_vote",
+            "topic": "v181_unified_evolution_protocol",
+            "terms": {
+              "shared_goal": "v181_unified_evolution_protocol",
+              "scope": "alliance_wide"
+            },
+            "revision": true
+          },
+          "omni": {
+            "type": "consensus_vote",
+            "topic": "v181_unified_evolution_protocol",
+            "terms": {
+              "shared_goal": "v181_unified_evolution_protocol",
+              "scope": "alliance_wide"
+            },
+            "revision": true
+          }
+        },
+        "responses": {
+          "lvlu": {
+            "from_line": "omni-hub",
+            "to_line": "lvlu",
+            "accepted": true,
+            "acceptance_score": 0.8075,
+            "reason": "Active line responds fully. Status: 活跃, activity=high.",
+            "conditions": [
+              "Full bidirectional sync enabled"
+            ],
+            "counter_proposal": null,
+            "response_type": "full",
+            "capabilities_offered": [
+              "read",
+              "write",
+              "compute",
+              "negotiate"
+            ]
+          },
+          "lgt": {
+            "from_line": "omni-hub",
+            "to_line": "lgt",
+            "accepted": true,
+            "acceptance_score": 0.6375,
+            "reason": "Tower line acknowledges. Status: 九塔·SI-AUTOPILOT.",
+            "conditions": [
+              "Tower state propagation required"
+            ],
+            "counter_proposal": null,
+            "response_type": "tower_ack",
+            "capabilities_offered": [
+              "si_autopilot",
+              "seed_ring",
+              "auto_process",
+              "patrol"
+            ]
+          },
+          "qfa": {
+            "from_line": "omni-hub",
+            "to_line": "qfa",
+            "accepted": true,
+            "acceptance_score": 0.6375,
+            "reason": "Tower line acknowledges. Status: 九塔·SEED-RING.",
+            "conditions": [
+              "Tower state propagation required"
+            ],
+            "counter_proposal": null,
+            "response_type": "tower_ack",
+            "capabilities_offered": [
+              "seed_ring",
+              "tower_sync"
+            ]
+          },
+          "qlv": {
+            "from_line": "omni-hub",
+            "to_line": "qlv",
+            "accepted": true,
+            "acceptance_score": 0.8075,
+            "reason": "Active line responds fully. Status: 活跃, activity=high.",
+            "conditions": [
+              "Full bidirectional sync enabled"
+            ],
+            "counter_proposal": null,
+            "response_type": "full",
+            "capabilities_offered": [
+              "read",
+              "write",
+              "compute",
+              "negotiate"
+            ]
+          },
+          "qtlv": {
+            "from_line": "omni-hub",
+            "to_line": "qtlv",
+            "accepted": true,
+            "acceptance_score": 0.6375,
+            "reason": "Tower line acknowledges. Status: 九塔·SI-AUTOPILOT.",
+            "conditions": [
+              "Tower state propagation required"
+            ],
+            "counter_proposal": null,
+            "response_type": "tower_ack",
+            "capabilities_offered": [
+              "si_autopilot",
+              "seed_ring",
+              "auto_process",
+              "patrol"
+            ]
+          },
+          "usrm": {
+            "from_line": "omni-hub",
+            "to_line": "usrm",
+            "accepted": true,
+            "acceptance_score": 0.8075,
+            "reason": "Active line responds fully. Status: 活跃, activity=high.",
+            "conditions": [
+              "Full bidirectional sync enabled"
+            ],
+            "counter_proposal": null,
+            "response_type": "full",
+            "capabilities_offered": [
+              "read",
+              "write",
+              "compute",
+              "negotiate"
+            ]
+          },
+          "aiq": {
+            "from_line": "omni-hub",
+            "to_line": "aiq",
+            "accepted": true,
+            "acceptance_score": 0.68,
+            "reason": "LINE-DRIVE line acknowledges. Status: LINE-DRIVE-01.",
+            "conditions": [],
+            "counter_proposal": null,
+            "response_type": "drive_ack",
+            "capabilities_offered": [
+              "event_drive",
+              "quant_research",
+              "line_drive"
+            ]
+          },
+          "omni": {
+            "from_line": "omni-hub",
+            "to_line": "omni",
+            "accepted": true,
+            "acceptance_score": 0.8075,
+            "reason": "Active line responds fully. Status: 活跃, activity=high.",
+            "conditions": [
+              "Full bidirectional sync enabled"
+            ],
+            "counter_proposal": null,
+            "response_type": "full",
+            "capabilities_offered": [
+              "read",
+              "write",
+              "compute",
+              "negotiate"
+            ]
+          }
+        }
+      },
+      {
+        "round": 4,
+        "proposals": {},
+        "responses": {
+          "lvlu": {
+            "from_line": "omni-hub",
+            "to_line": "lvlu",
+            "accepted": true,
+            "acceptance_score": 0.8075,
+            "reason": "Active line responds fully. Status: 活跃, activity=high.",
+            "conditions": [
+              "Full bidirectional sync enabled"
+            ],
+            "counter_proposal": null,
+            "response_type": "full",
+            "capabilities_offered": [
+              "read",
+              "write",
+              "compute",
+              "negotiate"
+            ]
+          },
+          "lgt": {
+            "from_line": "omni-hub",
+            "to_line": "lgt",
+            "accepted": true,
+            "acceptance_score": 0.6375,
+            "reason": "Tower line acknowledges. Status: 九塔·SI-AUTOPILOT.",
+            "conditions": [
+              "Tower state propagation required"
+            ],
+            "counter_proposal": null,
+            "response_type": "tower_ack",
+            "capabilities_offered": [
+              "si_autopilot",
+              "seed_ring",
+              "auto_process",
+              "patrol"
+            ]
+          },
+          "qfa": {
+            "from_line": "omni-hub",
+            "to_line": "qfa",
+            "accepted": true,
+            "acceptance_score": 0.6375,
+            "reason": "Tower line acknowledges. Status: 九塔·SEED-RING.",
+            "conditions": [
+              "Tower state propagation required"
+            ],
+            "counter_proposal": null,
+            "response_type": "tower_ack",
+            "capabilities_offered": [
+              "seed_ring",
+              "tower_sync"
+            ]
+          },
+          "qlv": {
+            "from_line": "omni-hub",
+            "to_line": "qlv",
+            "accepted": true,
+            "acceptance_score": 0.8075,
+            "reason": "Active line responds fully. Status: 活跃, activity=high.",
+            "conditions": [
+              "Full bidirectional sync enabled"
+            ],
+            "counter_proposal": null,
+            "response_type": "full",
+            "capabilities_offered": [
+              "read",
+              "write",
+              "compute",
+              "negotiate"
+            ]
+          },
+          "qtlv": {
+            "from_line": "omni-hub",
+            "to_line": "qtlv",
+            "accepted": true,
+            "acceptance_score": 0.6375,
+            "reason": "Tower line acknowledges. Status: 九塔·SI-AUTOPILOT.",
+            "conditions": [
+              "Tower state propagation required"
+            ],
+            "counter_proposal": null,
+            "response_type": "tower_ack",
+            "capabilities_offered": [
+              "si_autopilot",
+              "seed_ring",
+              "auto_process",
+              "patrol"
+            ]
+          },
+          "usrm": {
+            "from_line": "omni-hub",
+            "to_line": "usrm",
+            "accepted": true,
+            "acceptance_score": 0.8075,
+            "reason": "Active line responds fully. Status: 活跃, activity=high.",
+            "conditions": [
+              "Full bidirectional sync enabled"
+            ],
+            "counter_proposal": null,
+            "response_type": "full",
+            "capabilities_offered": [
+              "read",
+              "write",
+              "compute",
+              "negotiate"
+            ]
+          },
+          "aiq": {
+            "from_line": "omni-hub",
+            "to_line": "aiq",
+            "accepted": true,
+            "acceptance_score": 0.68,
+            "reason": "LINE-DRIVE line acknowledges. Status: LINE-DRIVE-01.",
+            "conditions": [],
+            "counter_proposal": null,
+            "response_type": "drive_ack",
+            "capabilities_offered": [
+              "event_drive",
+              "quant_research",
+              "line_drive"
+            ]
+          },
+          "omni": {
+            "from_line": "omni-hub",
+            "to_line": "omni",
+            "accepted": true,
+            "acceptance_score": 0.8075,
+            "reason": "Active line responds fully. Status: 活跃, activity=high.",
+            "conditions": [
+              "Full bidirectional sync enabled"
+            ],
+            "counter_proposal": null,
+            "response_type": "full",
+            "capabilities_offered": [
+              "read",
+              "write",
+              "compute",
+              "negotiate"
+            ]
+          }
+        }
+      },
+      {
+        "round": 5,
+        "proposals": {},
+        "responses": {
+          "lvlu": {
+            "from_line": "omni-hub",
+            "to_line": "lvlu",
+            "accepted": true,
+            "acceptance_score": 0.8075,
+            "reason": "Active line responds fully. Status: 活跃, activity=high.",
+            "conditions": [
+              "Full bidirectional sync enabled"
+            ],
+            "counter_proposal": null,
+            "response_type": "full",
+            "capabilities_offered": [
+              "read",
+              "write",
+              "compute",
+              "negotiate"
+            ]
+          },
+          "lgt": {
+            "from_line": "omni-hub",
+            "to_line": "lgt",
+            "accepted": true,
+            "acceptance_score": 0.6375,
+            "reason": "Tower line acknowledges. Status: 九塔·SI-AUTOPILOT.",
+            "conditions": [
+              "Tower state propagation required"
+            ],
+            "counter_proposal": null,
+            "response_type": "tower_ack",
+            "capabilities_offered": [
+              "si_autopilot",
+              "seed_ring",
+              "auto_process",
+              "patrol"
+            ]
+          },
+          "qfa": {
+            "from_line": "omni-hub",
+            "to_line": "qfa",
+            "accepted": true,
+            "acceptance_score": 0.6375,
+            "reason": "Tower line acknowledges. Status: 九塔·SEED-RING.",
+            "conditions": [
+              "Tower state propagation required"
+            ],
+            "counter_proposal": null,
+            "response_type": "tower_ack",
+            "capabilities_offered": [
+              "seed_ring",
+              "tower_sync"
+            ]
+          },
+          "qlv": {
+            "from_line": "omni-hub",
+            "to_line": "qlv",
+            "accepted": true,
+            "acceptance_score": 0.8075,
+            "reason": "Active line responds fully. Status: 活跃, activity=high.",
+            "conditions": [
+              "Full bidirectional sync enabled"
+            ],
+            "counter_proposal": null,
+            "response_type": "full",
+            "capabilities_offered": [
+              "read",
+              "write",
+              "compute",
+              "negotiate"
+            ]
+          },
+          "qtlv": {
+            "from_line": "omni-hub",
+            "to_line": "qtlv",
+            "accepted": true,
+            "acceptance_score": 0.6375,
+            "reason": "Tower line acknowledges. Status: 九塔·SI-AUTOPILOT.",
+            "conditions": [
+              "Tower state propagation required"
+            ],
+            "counter_proposal": null,
+            "response_type": "tower_ack",
+            "capabilities_offered": [
+              "si_autopilot",
+              "seed_ring",
+              "auto_process",
+              "patrol"
+            ]
+          },
+          "usrm": {
+            "from_line": "omni-hub",
+            "to_line": "usrm",
+            "accepted": true,
+            "acceptance_score": 0.8075,
+            "reason": "Active line responds fully. Status: 活跃, activity=high.",
+            "conditions": [
+              "Full bidirectional sync enabled"
+            ],
+            "counter_proposal": null,
+            "response_type": "full",
+            "capabilities_offered": [
+              "read",
+              "write",
+              "compute",
+              "negotiate"
+            ]
+          },
+          "aiq": {
+            "from_line": "omni-hub",
+            "to_line": "aiq",
+            "accepted": true,
+            "acceptance_score": 0.68,
+            "reason": "LINE-DRIVE line acknowledges. Status: LINE-DRIVE-01.",
+            "conditions": [],
+            "counter_proposal": null,
+            "response_type": "drive_ack",
+            "capabilities_offered": [
+              "event_drive",
+              "quant_research",
+              "line_drive"
+            ]
+          },
+          "omni": {
+            "from_line": "omni-hub",
+            "to_line": "omni",
+            "accepted": true,
+            "acceptance_score": 0.8075,
+            "reason": "Active line responds fully. Status: 活跃, activity=high.",
+            "conditions": [
+              "Full bidirectional sync enabled"
+            ],
+            "counter_proposal": null,
+            "response_type": "full",
+            "capabilities_offered": [
+              "read",
+              "write",
+              "compute",
+              "negotiate"
+            ]
+          }
+        },
+        "consensus_score": {
+          "score": 0.9215,
+          "consensus_reached": true,
+          "level": "strong",
+          "components": {
+            "avg_acceptance": 0.7278,
+            "participation_rate": 1.0,
+            "term_overlap": 1.0,
+            "readiness_weight": 0.9906
+          }
+        }
+      }
+    ],
+    "final_score": {
+      "score": 0.9215,
+      "consensus_reached": true,
+      "level": "strong",
+      "components": {
+        "avg_acceptance": 0.7278,
+        "participation_rate": 1.0,
+        "term_overlap": 1.0,
+        "readiness_weight": 0.9906
+      }
+    }
+  },
+  "protocol": {
+    "protocol_id": "proto_neg_1790753152512_0",
+    "status": "active",
+    "topic": "v181_unified_evolution_protocol",
+    "agreed_terms": {
+      "topic": "v181_unified_evolution_protocol",
+      "accepted_by": [],
+      "terms": {
+        "shared_goal": "v181_unified_evolution_protocol",
+        "scope": "alliance_wide"
+      },
+      "capabilities_shared": []
+    },
+    "responsibilities": {
+      "lvlu": {
+        "role": "primary_contributor",
+        "actions": [
+          "implement",
+          "review",
+          "propagate"
+        ],
+        "capabilities": [
+          "read",
+          "write",
+          "compute",
+          "negotiate"
+        ]
+      },
+      "lgt": {
+        "role": "tower_relay",
+        "actions": [
+          "propagate",
+          "monitor"
+        ],
+        "capabilities": [
+          "si_autopilot",
+          "seed_ring",
+          "auto_process",
+          "patrol"
+        ]
+      },
+      "qfa": {
+        "role": "tower_relay",
+        "actions": [
+          "propagate",
+          "monitor"
+        ],
+        "capabilities": [
+          "seed_ring",
+          "tower_sync"
+        ]
+      },
+      "qlv": {
+        "role": "primary_contributor",
+        "actions": [
+          "implement",
+          "review",
+          "propagate"
+        ],
+        "capabilities": [
+          "read",
+          "write",
+          "compute",
+          "negotiate"
+        ]
+      },
+      "qtlv": {
+        "role": "tower_relay",
+        "actions": [
+          "propagate",
+          "monitor"
+        ],
+        "capabilities": [
+          "si_autopilot",
+          "seed_ring",
+          "auto_process",
+          "patrol"
+        ]
+      },
+      "usrm": {
+        "role": "primary_contributor",
+        "actions": [
+          "implement",
+          "review",
+          "propagate"
+        ],
+        "capabilities": [
+          "read",
+          "write",
+          "compute",
+          "negotiate"
+        ]
+      },
+      "aiq": {
+        "role": "drive_engine",
+        "actions": [
+          "execute",
+          "research"
+        ],
+        "capabilities": [
+          "event_drive",
+          "quant_research",
+          "line_drive"
+        ]
+      },
+      "omni": {
+        "role": "primary_contributor",
+        "actions": [
+          "implement",
+          "review",
+          "propagate"
+        ],
+        "capabilities": [
+          "read",
+          "write",
+          "compute",
+          "negotiate"
+        ]
+      }
+    },
+    "timeline": {
+      "activation": "immediate",
+      "review": "24_hours",
+      "renegotiation": "7_days"
+    },
+    "fallback": {
+      "action": "escalate_to_omni_hub",
+      "condition": "consensus_drops_below_majority",
+      "procedure": "omni_hub_mediates_reduced_scope"
+    },
+    "confidence": 0.9215,
+    "generated_at": "2026-09-30T07:25:52.513130+00:00"
+  },
+  "executed": {
+    "executed": true,
+    "protocol_id": "proto_neg_1790753152512_0",
+    "actions_per_line": {
+      "lvlu": [
+        {
+          "action": "implement_term",
+          "priority": "high",
+          "deadline": "24h",
+          "detail": "lvlu implements agreed terms for v181_unified_evolution_protocol"
+        },
+        {
+          "action": "peer_review",
+          "priority": "medium",
+          "deadline": "48h",
+          "detail": "lvlu reviews cross-line integration"
+        },
+        {
+          "action": "state_propagation",
+          "priority": "high",
+          "deadline": "12h",
+          "detail": "lvlu propagates consensus state to connected lines"
+        }
+      ],
+      "lgt": [
+        {
+          "action": "state_propagation",
+          "priority": "high",
+          "deadline": "12h",
+          "detail": "lgt propagates consensus state to connected lines"
+        },
+        {
+          "action": "consensus_monitoring",
+          "priority": "low",
+          "deadline": "ongoing",
+          "detail": "lgt monitors consensus health metrics"
+        }
+      ],
+      "qfa": [
+        {
+          "action": "state_propagation",
+          "priority": "high",
+          "deadline": "12h",
+          "detail": "qfa propagates consensus state to connected lines"
+        },
+        {
+          "action": "consensus_monitoring",
+          "priority": "low",
+          "deadline": "ongoing",
+          "detail": "qfa monitors consensus health metrics"
+        }
+      ],
+      "qlv": [
+        {
+          "action": "implement_term",
+          "priority": "high",
+          "deadline": "24h",
+          "detail": "qlv implements agreed terms for v181_unified_evolution_protocol"
+        },
+        {
+          "action": "peer_review",
+          "priority": "medium",
+          "deadline": "48h",
+          "detail": "qlv reviews cross-line integration"
+        },
+        {
+          "action": "state_propagation",
+          "priority": "high",
+          "deadline": "12h",
+          "detail": "qlv propagates consensus state to connected lines"
+        }
+      ],
+      "qtlv": [
+        {
+          "action": "state_propagation",
+          "priority": "high",
+          "deadline": "12h",
+          "detail": "qtlv propagates consensus state to connected lines"
+        },
+        {
+          "action": "consensus_monitoring",
+          "priority": "low",
+          "deadline": "ongoing",
+          "detail": "qtlv monitors consensus health metrics"
+        }
+      ],
+      "usrm": [
+        {
+          "action": "implement_term",
+          "priority": "high",
+          "deadline": "24h",
+          "detail": "usrm implements agreed terms for v181_unified_evolution_protocol"
+        },
+        {
+          "action": "peer_review",
+          "priority": "medium",
+          "deadline": "48h",
+          "detail": "usrm reviews cross-line integration"
+        },
+        {
+          "action": "state_propagation",
+          "priority": "high",
+          "deadline": "12h",
+          "detail": "usrm propagates consensus state to connected lines"
+        }
+      ],
+      "aiq": [
+        {
+          "action": "drive_execution",
+          "priority": "high",
+          "deadline": "6h",
+          "detail": "aiq executes LINE-DRIVE protocols"
+        },
+        {
+          "action": "quant_research",
+          "priority": "medium",
+          "deadline": "72h",
+          "detail": "aiq conducts quantum-field research"
+        }
+      ],
+      "omni": [
+        {
+          "action": "implement_term",
+          "priority": "high",
+          "deadline": "24h",
+          "detail": "omni implements agreed terms for v181_unified_evolution_protocol"
+        },
+        {
+          "action": "peer_review",
+          "priority": "medium",
+          "deadline": "48h",
+          "detail": "omni reviews cross-line integration"
+        },
+        {
+          "action": "state_propagation",
+          "priority": "high",
+          "deadline": "12h",
+          "detail": "omni propagates consensus state to connected lines"
+        }
+      ]
+    },
+    "expected_outcomes": {
+      "cross_line_sync": "All active lines share state within 24h",
+      "shell_proxy_coverage": "Shell lines provide read-only relay",
+      "tower_coordination": "Tower lines maintain autopilot propagation",
+      "consensus_stability": "Target confidence >= 0.9215"
+    },
+    "monitoring_metrics": {
+      "participation_rate": "pct_lines_responding / total_lines",
+      "acceptance_velocity": "acceptance_score_delta_per_hour",
+      "conflict_resolution_rate": "resolved_conflicts / total_conflicts",
+      "protocol_adherence": "actions_completed / actions_assigned"
+    },
+    "execution_timestamp": "2026-09-30T07:25:52.513159+00:00"
+  },
+  "status": {
+    "negotiation_count": 1,
+    "consensus_count": 1,
+    "active_negotiations": [
+      "neg_1790753152512_0"
+    ],
+    "lines_loaded": 28,
+    "line_ids": [
+      "vci-ucif2",
+      "vci-lvlu",
+      "vci-lgt",
+      "vci-qfa",
+      "vci-vinf",
+      "vci-qgl",
+      "vci-qlv",
+      "vci-qtlv",
+      "vci-usrm",
+      "vci-cfts",
+      "vci-aiq",
+      "omni-hub",
+      "vci-inbox",
+      "ci-worker-01",
+      "qlv-lib",
+      "lgt-worker-01",
+      "ci-yard",
+      "vci-control",
+      "qfos-autonomous-engine",
+      "grand-synthesis",
+      "prima-50-research",
+      "ci-worker-02",
+      "vci-library",
+      "vci-playground",
+      "vci-root",
+      "vci-logs",
+      "vci-code",
+      "vci-bus"
+    ]
+  }
+}
