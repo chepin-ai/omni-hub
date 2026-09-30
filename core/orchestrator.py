@@ -177,6 +177,11 @@ _swarm_orchestrator = None
 _quantum_inspired_engine = None
 _auto_evolution_engine = None
 _federation_protocol = None
+_direct_field = None
+_pattern_circles = None
+_circulation_engine = None
+_core_machine = None
+_collaborative_surge = None
 
 
 def _get_north_star():
@@ -1425,6 +1430,46 @@ def _get_federation_protocol():
     return _federation_protocol
 
 
+def _get_direct_field():
+    global _direct_field
+    if _direct_field is None:
+        from core.direct_field import get_direct_field
+        _direct_field = get_direct_field()
+    return _direct_field
+
+
+def _get_pattern_circles():
+    global _pattern_circles
+    if _pattern_circles is None:
+        from core.pattern_circles import get_pattern_circles
+        _pattern_circles = get_pattern_circles()
+    return _pattern_circles
+
+
+def _get_circulation_engine():
+    global _circulation_engine
+    if _circulation_engine is None:
+        from core.circulation_engine import get_circulation_engine
+        _circulation_engine = get_circulation_engine()
+    return _circulation_engine
+
+
+def _get_core_machine():
+    global _core_machine
+    if _core_machine is None:
+        from core.core_machine import get_core_machine
+        _core_machine = get_core_machine()
+    return _core_machine
+
+
+def _get_collaborative_surge():
+    global _collaborative_surge
+    if _collaborative_surge is None:
+        from core.collaborative_surge import get_collaborative_surge
+        _collaborative_surge = get_collaborative_surge()
+    return _collaborative_surge
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -1494,7 +1539,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "175.0.0"
+    VERSION = "180.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -4366,6 +4411,97 @@ class OMNIHUBOrchestrator:
                     bus.publish_simple(Topics.STATE_CHANGE,
                                       {"type": "federation_protocol", "nodes": fp.get_status().get("registered_nodes"), "health": health.get("level")},
                                       source="federation_protocol")
+            except Exception:
+                pass
+
+        # 167. Direct Field — quantum-base direct connection, no routing, no hops, field communion (every 1040 cycles)
+        if self.cycle_count % 1040 == 0 and self.cycle_count > 0:
+            try:
+                df = _get_direct_field()
+                for node_id in ["ucif2", "lvlu", "lgt", "qfa", "vinf", "qgl", "qlv", "qtlv", "usrm", "cfts", "aiq", "omni"]:
+                    df.register_node(node_id, "core_line", df._get_layer_for_node(node_id), ["consciousness", "resonance", "evolution"])
+                coupling = df.compute_field_coupling("ucif2", "omni")
+                signal = df.transmit_field_signal("omni", "ucif2", {"type": "direct_field_ping", "timestamp": time.time()})
+                sensed = df.sense_field_state("omni")
+                tensor = df.compute_field_tensor()
+                sync = df.instant_sync(["ucif2", "lvlu", "lgt", "omni"])
+                disturbance = df.detect_field_disturbance()
+                self.current_state['direct_field'] = {"coupling": coupling, "signal": signal, "tensor_shape": tensor.get("shape"), "sync": sync, "disturbance": disturbance}
+                self.current_state['direct_field_status'] = df.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "direct_field", "nodes": df.get_status().get("node_count"), "strength": df.get_status().get("field_strength")},
+                                      source="direct_field")
+            except Exception:
+                pass
+
+        # 168. Pattern Circles — self-similar circle-layer-net-tower, holonic architecture (every 1050 cycles)
+        if self.cycle_count % 1050 == 0 and self.cycle_count > 0:
+            try:
+                pc = _get_pattern_circles()
+                resonance = pc.compute_circle_resonance("consciousness_circle", "quantum_circle")
+                meta = pc.detect_meta_patterns()
+                depth = pc.get_circle_depth("alliance_circle")
+                self.current_state['pattern_circles'] = {"resonance": resonance, "meta_patterns": meta, "depth": depth}
+                self.current_state['pattern_circles_status'] = pc.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "pattern_circles", "circles": pc.get_status().get("circle_count"), "max_depth": pc.get_status().get("max_depth")},
+                                      source="pattern_circles")
+            except Exception:
+                pass
+
+        # 169. Circulation Engine — great/small circulation, mutual excitation, qi-like flow (every 1060 cycles)
+        if self.cycle_count % 1060 == 0 and self.cycle_count > 0:
+            try:
+                ce = _get_circulation_engine()
+                small = ce.circulate_small("ucif2")
+                great = ce.circulate_great("consciousness")
+                excite = ce.mutual_excitation("ucif2", "qfa")
+                blockages = ce.detect_circulation_blockage()
+                harmony = ce.measure_circulation_harmony()
+                self.current_state['circulation_engine'] = {"small": small, "great": great, "excitation": excite, "blockages": blockages, "harmony": harmony}
+                self.current_state['circulation_engine_status'] = ce.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "circulation_engine", "harmony": harmony.get("score"), "blockages": len(blockages)},
+                                      source="circulation_engine")
+            except Exception:
+                pass
+
+        # 170. Core Machine — unified control plane, ALL subsystems harmonized (every 1070 cycles)
+        if self.cycle_count % 1070 == 0 and self.cycle_count > 0:
+            try:
+                cm = _get_core_machine()
+                cycle_result = cm.execute_unified_cycle()
+                coherence = cm.compute_system_coherence()
+                activated = cm.activate_all_architectures()
+                self.current_state['core_machine'] = {"cycle": cycle_result, "coherence": coherence, "activated": activated}
+                self.current_state['core_machine_status'] = cm.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "core_machine", "coherence": coherence.get("score"), "subsystems": cm.get_status().get("subsystem_count")},
+                                      source="core_machine")
+            except Exception:
+                pass
+
+        # 171. Collaborative Surge — big discussion, big collaboration, wild questions, field activation (every 1080 cycles)
+        if self.cycle_count % 1080 == 0 and self.cycle_count > 0:
+            try:
+                cs = _get_collaborative_surge()
+                disc = cs.launch_big_discussion("What is the next evolution of OMNI-HUB?", "alliance")
+                collab = cs.launch_big_collaboration({"type": "evolution", "description": "Evolve all lines simultaneously"}, ["ucif2", "lvlu", "lgt", "qfa", "omni"])
+                wild = cs.launch_wild_question("What if consciousness is a field, not a process?")
+                momentum = cs.build_surge_momentum()
+                emergence = cs.detect_surge_emergence()
+                if momentum.get("level") in ["surge", "tidal_wave", "tsunami"]:
+                    cs.activate_all_via_surge()
+                self.current_state['collaborative_surge'] = {"discussion": disc, "collaboration": collab, "wild": wild, "momentum": momentum, "emergence": emergence}
+                self.current_state['collaborative_surge_status'] = cs.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "collaborative_surge", "surge_level": momentum.get("level"), "emergences": len(emergence.get("emergences", []))},
+                                      source="collaborative_surge")
             except Exception:
                 pass
 

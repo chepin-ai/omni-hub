@@ -1,9 +1,35 @@
-"""OMNI-HUB Core Package v13.1
+"""OMNI-HUB v180 — CollaborativeSurge core module."""
 
-Unified entry point for all core modules.
-"""
+from .collaborative_surge import (
+    CollaborativeSurge,
+    get_collaborative_surge,
+    reset_collaborative_surge,
+    CORE_LINES,
+    SurgeLevel,
+    EmergenceLevel,
+    CollaborationMode,
+    Scope,
+    ProblemType,
+    EmergenceType,
+    DirectField,
+    PatternCircles,
+    CirculationEngine,
+    CoreMachine,
+)
 
-from . import constants
-
-__version__ = "13.1.0"
-__all__ = ["constants"]
+__all__ = [
+    "CollaborativeSurge",
+    "get_collaborative_surge",
+    "reset_collaborative_surge",
+    "CORE_LINES",
+    "SurgeLevel",
+    "EmergenceLevel",
+    "CollaborationMode",
+    "Scope",
+    "ProblemType",
+    "EmergenceType",
+    "DirectField",
+    "PatternCircles",
+    "CirculationEngine",
+    "CoreMachine",
+]
