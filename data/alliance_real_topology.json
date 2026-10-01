@@ -1,0 +1,256 @@
+{
+  "accounts": {
+    "chepin-ai": {
+      "T5": {
+        "ucif2-formalization-kernel": {
+          "line": "ucif2",
+          "stake": "✅201",
+          "dashboard": "2regf437xvotk"
+        },
+        "vinf-market-kernel": {
+          "line": "vinf",
+          "stake": "✅201",
+          "dashboard": "stgdle5yj3o7s"
+        },
+        "quantum-go-ledger": {
+          "line": "qgl",
+          "stake": "⛔槽满PUT=400",
+          "dashboard": "rdkm3tzqlgnj6",
+          "lang": "Go"
+        },
+        "usrm-repo": {
+          "line": "usrm",
+          "stake": "✅201",
+          "dashboard": "62q3nd73zxf52"
+        },
+        "github-repo-cfts": {
+          "line": "cfts",
+          "stake": "✅201",
+          "dashboard": "3ay75hdbfrqe4"
+        }
+      },
+      "Q5": {
+        "qtlv-quantum-encoder": {
+          "line": "qtlv",
+          "stake": "✅201",
+          "dashboard": "待补"
+        },
+        "qlv": {
+          "line": "qlv",
+          "stake": "✅201",
+          "dashboard": "chzd4e7sjb2lk"
+        },
+        "qlv-lab": {
+          "line": "qlv",
+          "stake": "✅201",
+          "dashboard": "待补"
+        },
+        "lgt-line": {
+          "line": "lgt",
+          "stake": "✅201",
+          "dashboard": "待补"
+        },
+        "ai-quant-research": {
+          "line": "aiq",
+          "stake": "✅201",
+          "dashboard": "待补",
+          "line_status": "待确"
+        },
+        "lgt-worker-01": {
+          "line": "lgt",
+          "stake": "⏭️跳过",
+          "dashboard": "无",
+          "note": "公域塔仓secrets病案+lgt-118禁注，从协商池移除"
+        }
+      },
+      "Hub7": {
+        "ci-inbox": {
+          "role": "hub",
+          "stake": "✅首轮已投",
+          "dashboard": "待补"
+        },
+        "ci-control": {
+          "role": "cisvr",
+          "stake": "⛔100/100槽满",
+          "dashboard": "sh22uxjhdpz5q",
+          "note": "cisvr正身"
+        },
+        "ci-control-backup": {
+          "role": "cisbr",
+          "stake": "—",
+          "dashboard": "待补"
+        },
+        "ci-build": {
+          "role": "build",
+          "stake": "—",
+          "dashboard": "待补"
+        },
+        "ci-library": {
+          "role": "library",
+          "stake": "—",
+          "dashboard": "待补"
+        },
+        "ci-yard": {
+          "role": "yard",
+          "stake": "—",
+          "dashboard": "待补"
+        },
+        "ci-logs": {
+          "role": "logs",
+          "stake": "—",
+          "dashboard": "待补"
+        }
+      },
+      "ROOT": {
+        "ci-root": {
+          "role": "root",
+          "stake": "—",
+          "dashboard": "待补"
+        }
+      },
+      "other": {
+        "isu-unified-framework": {
+          "line": "isu",
+          "stake": "—",
+          "dashboard": "待补"
+        },
+        "cardinal-vault": {
+          "line": "cdnv",
+          "stake": "—",
+          "dashboard": "待补"
+        },
+        "pivot-01": {
+          "line": "pivot",
+          "stake": "—",
+          "dashboard": "cemqrw3lzksw6"
+        },
+        "ETCS-Formalization": {
+          "stake": "—",
+          "dashboard": "待补"
+        },
+        "D4UniversalOptimality": {
+          "stake": "—",
+          "dashboard": "待补"
+        },
+        "YHCSCT": {
+          "stake": "—",
+          "dashboard": "待补"
+        },
+        "GCML": {
+          "stake": "—",
+          "dashboard": "待补"
+        },
+        "DTE-Project": {
+          "line": "dte",
+          "stake": "—",
+          "dashboard": "wnughdfmkz4se"
+        },
+        "v40-sorry-resolver": {
+          "stake": "—",
+          "dashboard": "待补"
+        }
+      },
+      "research": {
+        "grand-synthesis": {
+          "role": "synthesis",
+          "lang": "Lean",
+          "stake": "—"
+        },
+        "prima-50-research": {
+          "role": "research",
+          "stake": "—"
+        },
+        "qfos-autonomous-engine": {
+          "role": "navigation",
+          "stake": "—"
+        }
+      }
+    },
+    "chepin-qi": {
+      "qi-lib": {
+        "line": "lvlu",
+        "stake": "✅201",
+        "dashboard": "待补"
+      },
+      "qlv-pub": {
+        "line": "qlv",
+        "stake": "✅201",
+        "dashboard": "待补"
+      },
+      "qlv-lib": {
+        "line": "qlv",
+        "stake": "✅201",
+        "dashboard": "待补"
+      },
+      "qfa-pub": {
+        "line": "qfa",
+        "stake": "✅201",
+        "dashboard": "待补"
+      },
+      "qfa-quantum-lab": {
+        "line": "qfa",
+        "stake": "✅201",
+        "dashboard": "待补"
+      },
+      "lgt-line": {
+        "line": "lgt",
+        "stake": "✅201",
+        "dashboard": "待补"
+      },
+      "quantum-lgt-experiments": {
+        "line": "lgt",
+        "stake": "✅201",
+        "dashboard": "待补"
+      },
+      "qlv-ci-line": {
+        "line": "qlv/lgt",
+        "stake": "✅201",
+        "dashboard": "待补"
+      },
+      "qtlv-pub": {
+        "line": "qtlv",
+        "stake": "✅201",
+        "dashboard": "待补"
+      }
+    }
+  },
+  "dashboard_confirmed": {
+    "cisvr": "sh22uxjhdpz5q",
+    "vinf": "stgdle5yj3o7s",
+    "ucif2": "2regf437xvotk",
+    "qgl": "rdkm3tzqlgnj6",
+    "usrm": "62q3nd73zxf52",
+    "cfts": "3ay75hdbfrqe4",
+    "qlv": "chzd4e7sjb2lk",
+    "dte": "wnughdfmkz4se",
+    "pivot": "cemqrw3lzksw6"
+  },
+  "workflows": {
+    "secret": "${{ secrets.GH_TO }}",
+    "lines": [
+      "vci-lvlu",
+      "vci-usrm",
+      "vci-ucif2",
+      "vci-cfts",
+      "vci-qgl",
+      "vci-qtlv",
+      "vci-lgt",
+      "vci-qlv",
+      "vci-qfa",
+      "vci-vinf",
+      "vci-inbox"
+    ]
+  },
+  "ten_towers": {
+    "中枢塔": "omni-hub",
+    "lvlu塔": "vci-lvlu",
+    "qfa塔": "vci-qfa",
+    "lgt塔": "vci-lgt/lgt-line",
+    "qlv塔": "vci-qlv/qlv/qlv-lab",
+    "qtlv塔": "vci-qtlv/qtlv-quantum-encoder",
+    "cfts塔": "vci-cfts/github-repo-cfts",
+    "vinf塔": "vci-vinf/vinf-market-kernel",
+    "usrm塔": "vci-usrm/usrm-repo",
+    "qgl塔": "vci-qgl/quantum-go-ledger"
+  }
+}

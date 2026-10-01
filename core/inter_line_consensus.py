@@ -30,10 +30,12 @@ class InterLineConsensus:
     def __init__(self, live_status_path: str = "data/alliance_repos_live_status.json") -> None:
         self._live_status_path = live_status_path
         self._live_data: Dict[str, Any] = {}
+        self._real_topology: Dict[str, Any] = {}
         self._negotiations: Dict[str, Dict[str, Any]] = {}
         self._negotiation_count: int = 0
         self._consensus_count: int = 0
         self._load_live_status()
+        self._load_real_topology()
 
     # ── Data loading ─────────────────────────────────────────────────────────
 
@@ -78,6 +80,96 @@ class InterLineConsensus:
         self._live_data = data
         return data
 
+    def _load_real_topology(self) -> Dict:
+        """Internal: load real topology mapping."""
+        path = "data/alliance_real_topology.json"
+        if not os.path.isabs(path):
+            candidates = [
+                path,
+                os.path.join(os.path.dirname(__file__), "..", path),
+                os.path.join(os.path.dirname(__file__), path),
+                "/mnt/agents/output/OMNI-HUB/" + path,
+            ]
+            for c in candidates:
+                if os.path.exists(c):
+                    path = c
+                    break
+
+        try:
+            with open(path, "r", encoding="utf-8") as fh:
+                data = json.load(fh)
+        except Exception:
+            data = {}
+
+        self._real_topology = data
+        return data
+
+    def _find_real_topology_entry(self, line_id: str) -> Optional[Dict]:
+        """Search real topology for a line by repo name, line field, or role field.
+
+        Handles two account structures:
+          - grouped: account -> group -> repo -> info (chepin-ai)
+          - flat:    account -> repo -> info          (chepin-qi)
+        """
+        if not self._real_topology:
+            return None
+
+        accounts = self._real_topology.get("accounts", {})
+
+        for account, top_level in accounts.items():
+            for key, value in top_level.items():
+                if not isinstance(value, dict):
+                    continue
+
+                # Detect flat structure: value has repo-level keys like line/stake/role
+                is_flat = any(k in value for k in ("line", "stake", "role", "dashboard"))
+
+                if is_flat:
+                    # chepin-qi style: account -> repo -> info
+                    if key == line_id:
+                        entry = dict(value)
+                        entry["_repo"] = key
+                        entry["_account"] = account
+                        entry["_group"] = None
+                        return entry
+                    if value.get("line") == line_id:
+                        entry = dict(value)
+                        entry["_repo"] = key
+                        entry["_account"] = account
+                        entry["_group"] = None
+                        return entry
+                    if value.get("role") == line_id:
+                        entry = dict(value)
+                        entry["_repo"] = key
+                        entry["_account"] = account
+                        entry["_group"] = None
+                        return entry
+                else:
+                    # chepin-ai style: account -> group -> repo -> info
+                    for repo_name, repo_info in value.items():
+                        if not isinstance(repo_info, dict):
+                            continue
+                        if repo_name == line_id:
+                            entry = dict(repo_info)
+                            entry["_repo"] = repo_name
+                            entry["_account"] = account
+                            entry["_group"] = key
+                            return entry
+                        if repo_info.get("line") == line_id:
+                            entry = dict(repo_info)
+                            entry["_repo"] = repo_name
+                            entry["_account"] = account
+                            entry["_group"] = key
+                            return entry
+                        if repo_info.get("role") == line_id:
+                            entry = dict(repo_info)
+                            entry["_repo"] = repo_name
+                            entry["_account"] = account
+                            entry["_group"] = key
+                            return entry
+
+        return None
+
     # ── Line readiness classification ────────────────────────────────────────
 
     def classify_line_readiness(self, line_id: str) -> Dict:
@@ -85,6 +177,58 @@ class InterLineConsensus:
         Classify line readiness for negotiation.
         Levels: fully_operational · operational · shell_only · dormant · offline
         """
+        # First check real topology for actual stake status
+        real_entry = self._find_real_topology_entry(line_id)
+        if real_entry is not None:
+            stake = str(real_entry.get("stake", ""))
+            repo = real_entry.get("_repo", line_id)
+
+            if "✅201" in stake:
+                return {
+                    "line_id": line_id,
+                    "level": "fully_operational",
+                    "confidence": 0.95,
+                    "reason": f"Line has active stake ({stake}) in {repo}",
+                    "score": 0.95,
+                    "components": {"stake": stake, "repo": repo},
+                    "raw": real_entry,
+                    "real_topology": True,
+                }
+            elif "⛔槽满" in stake or "⛔100/100槽满" in stake:
+                return {
+                    "line_id": line_id,
+                    "level": "shell_only",
+                    "confidence": 0.4,
+                    "reason": f"Line is shell-only ({stake}) in {repo}",
+                    "score": 0.4,
+                    "components": {"stake": stake, "repo": repo},
+                    "raw": real_entry,
+                    "real_topology": True,
+                }
+            elif "⏭️跳过" in stake:
+                return {
+                    "line_id": line_id,
+                    "level": "excluded",
+                    "confidence": 1.0,
+                    "reason": f"Line excluded from negotiation ({stake}) in {repo}",
+                    "score": 0.0,
+                    "components": {"stake": stake, "repo": repo},
+                    "raw": real_entry,
+                    "real_topology": True,
+                }
+            elif stake in ("—", "-", ""):
+                return {
+                    "line_id": line_id,
+                    "level": "dormant",
+                    "confidence": 0.3,
+                    "reason": f"Line has no active stake in {repo}",
+                    "score": 0.3,
+                    "components": {"stake": stake, "repo": repo},
+                    "raw": real_entry,
+                    "real_topology": True,
+                }
+
+        # Fallback to live data
         info = self._live_data.get(line_id)
         # Try alternate key formats (vci-ucif2 vs ucif2, omni-hub vs omni)
         if info is None:
@@ -199,7 +343,11 @@ class InterLineConsensus:
                     break
             if to_line == "omni" and "omni-hub" in self._live_data:
                 resolved = "omni-hub"
-        if resolved not in self._live_data:
+
+        # Also accept lines known in real topology
+        in_real = self._find_real_topology_entry(to_line) is not None
+
+        if resolved not in self._live_data and not in_real:
             return {
                 "from_line": from_line,
                 "to_line": to_line,
@@ -256,6 +404,79 @@ class InterLineConsensus:
         - 活跃 lines → full response
         - dormant lines → delayed/weak response
         """
+        # First check real topology for actual stake status
+        real_entry = self._find_real_topology_entry(line_id)
+        if real_entry is not None:
+            stake = str(real_entry.get("stake", ""))
+            repo = real_entry.get("_repo", line_id)
+            proposal_type = proposal.get("type", "")
+
+            # Excluded lines
+            if repo == "lgt-worker-01" or "⏭️跳过" in stake:
+                result = {
+                    "line_id": line_id,
+                    "accept": False,
+                    "acceptance_score": 0.0,
+                    "reason": f"Line {repo} is excluded from negotiation ({stake})",
+                    "response_type": "excluded",
+                    "capabilities": [],
+                    "conditions": [],
+                    "counter_proposal": None,
+                }
+                self._publish_auto_respond(line_id, "excluded", False, proposal_type)
+                return result
+
+            # Determine base response from stake
+            if "⛔槽满" in stake or "⛔100/100槽满" in stake:
+                base_response_type = "shell_proxy"
+                base_accept = True
+                base_score = 0.35
+                base_capabilities = ["readonly", "relay"]
+                base_reason = f"Line is shell-only ({stake}) in {repo}. Offers proxy/relay only."
+                base_conditions = ["All writes must be proxied through active lines"]
+            elif "✅201" in stake:
+                base_response_type = "full"
+                base_accept = True
+                base_score = 0.95
+                base_capabilities = ["read", "write", "compute", "negotiate"]
+                base_reason = f"Active line responds fully. Stake: {stake} in {repo}."
+                base_conditions = ["Full bidirectional sync enabled"]
+            elif stake in ("—", "-", ""):
+                base_response_type = "unknown"
+                base_accept = False
+                base_score = 0.1
+                base_capabilities = []
+                base_reason = f"Line has no active stake in {repo}"
+                base_conditions = []
+            else:
+                base_response_type = "unknown"
+                base_accept = False
+                base_score = 0.1
+                base_capabilities = []
+                base_reason = f"Unknown stake status ({stake}) in {repo}"
+                base_conditions = []
+
+            result = {
+                "line_id": line_id,
+                "accept": base_accept,
+                "acceptance_score": base_score,
+                "reason": base_reason,
+                "response_type": base_response_type,
+                "capabilities": base_capabilities,
+                "conditions": base_conditions,
+                "counter_proposal": None,
+            }
+
+            # Apply identity-based overrides
+            if repo == "ai-quant-research" or real_entry.get("line") == "aiq":
+                result["note"] = "线属待确"
+            if repo == "ci-control" or real_entry.get("role") == "cisvr":
+                result["response_type"] = "cisvr_ack"
+
+            self._publish_auto_respond(line_id, result["response_type"], base_accept, proposal_type)
+            return result
+
+        # Fallback to live data
         info = self._live_data.get(line_id)
         if info is None:
             for alt in [f"vci-{line_id}", f"ci-{line_id}", f"lgt-{line_id}", f"qfos-{line_id}", f"prima-50-{line_id}"]:
@@ -384,6 +605,11 @@ class InterLineConsensus:
             "counter_proposal": counter,
         }
 
+        self._publish_auto_respond(line_id, response_type, accept, proposal_type)
+        return result
+
+    def _publish_auto_respond(self, line_id: str, response_type: str, accept: bool, proposal_type: str) -> None:
+        """Publish auto-respond event to bus if available."""
         if _HAS_BUS and bus is not None:
             try:
                 bus.publish_simple(
@@ -399,8 +625,6 @@ class InterLineConsensus:
                 )
             except Exception:
                 pass
-
-        return result
 
     # ── Iterative negotiation ────────────────────────────────────────────────
 
@@ -425,7 +649,7 @@ class InterLineConsensus:
             "terms": {"shared_goal": topic, "scope": "alliance_wide"},
         }
 
-        # Filter to known participants (try alternate key formats)
+        # Filter to known participants (try alternate key formats or real topology)
         def _resolve_key(pid):
             if pid in self._live_data:
                 return pid
@@ -434,6 +658,9 @@ class InterLineConsensus:
                     return alt
             if pid == "omni" and "omni-hub" in self._live_data:
                 return "omni-hub"
+            # Also accept if known in real topology
+            if self._find_real_topology_entry(pid) is not None:
+                return pid
             return None
 
         valid_participants = [p for p in participants if _resolve_key(p) is not None]
@@ -897,12 +1124,28 @@ class InterLineConsensus:
 
     def get_status(self) -> Dict:
         """Return negotiation status."""
+        real_accounts = self._real_topology.get("accounts", {}) if self._real_topology else {}
+        real_repo_count = 0
+        for account, top_level in real_accounts.items():
+            for key, value in top_level.items():
+                if not isinstance(value, dict):
+                    continue
+                # Detect flat vs grouped structure
+                is_flat = any(k in value for k in ("line", "stake", "role", "dashboard"))
+                if is_flat:
+                    real_repo_count += 1
+                else:
+                    real_repo_count += len(value)
+
         return {
             "negotiation_count": self._negotiation_count,
             "consensus_count": self._consensus_count,
             "active_negotiations": list(self._negotiations.keys()),
             "lines_loaded": len(self._live_data),
             "line_ids": list(self._live_data.keys()),
+            "real_topology_loaded": bool(self._real_topology),
+            "real_topology_accounts": len(real_accounts),
+            "real_topology_repos": real_repo_count,
         }
 
 
