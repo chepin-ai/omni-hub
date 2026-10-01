@@ -1,0 +1,177 @@
+{
+  "_comment": "OMNI-HUB v181 Dashboard Links — ok.kimi.link mapping",
+  "_format": "xxxx part from https://xxxx.ok.kimi.link",
+  "confirmed": {
+    "cisvr": {
+      "dashboard_id": "sh22uxjhdpz5q",
+      "url": "https://sh22uxjhdpz5q.ok.kimi.link",
+      "repo": "ci-control",
+      "account": "chepin-ai",
+      "role": "中枢控制",
+      "note": "cisvr正身，首轮ci-inbox为hub之一"
+    },
+    "vinf": {
+      "dashboard_id": "stgdle5yj3o7s",
+      "url": "https://stgdle5yj3o7s.ok.kimi.link",
+      "repo": "vinf-market-kernel",
+      "account": "chepin-ai",
+      "role": "市场内核",
+      "stake": "✅201"
+    },
+    "ucif2": {
+      "dashboard_id": "2regf437xvotk",
+      "url": "https://2regf437xvotk.ok.kimi.link",
+      "repo": "ucif2-formalization-kernel",
+      "account": "chepin-ai",
+      "role": "形式化内核",
+      "stake": "✅201"
+    },
+    "qgl": {
+      "dashboard_id": "rdkm3tzqlgnj6",
+      "url": "https://rdkm3tzqlgnj6.ok.kimi.link",
+      "repo": "quantum-go-ledger",
+      "account": "chepin-ai",
+      "role": "QGL链(Go)",
+      "stake": "⛔槽满PUT=400"
+    },
+    "usrm": {
+      "dashboard_id": "62q3nd73zxf52",
+      "url": "https://62q3nd73zxf52.ok.kimi.link",
+      "repo": "usrm-repo",
+      "account": "chepin-ai",
+      "role": "用户空间现实网",
+      "stake": "✅201"
+    },
+    "cfts": {
+      "dashboard_id": "3ay75hdbfrqe4",
+      "url": "https://3ay75hdbfrqe4.ok.kimi.link",
+      "repo": "github-repo-cfts",
+      "account": "chepin-ai",
+      "role": "核心场翻译态",
+      "stake": "✅201"
+    },
+    "qlv": {
+      "dashboard_id": "chzd4e7sjb2lk",
+      "url": "https://chzd4e7sjb2lk.ok.kimi.link",
+      "repo": "qlv",
+      "account": "chepin-ai",
+      "role": "量子光船",
+      "stake": "✅201"
+    },
+    "dte": {
+      "dashboard_id": "wnughdfmkz4se",
+      "url": "https://wnughdfmkz4se.ok.kimi.link",
+      "repo": "DTE-Project",
+      "account": "chepin-ai",
+      "role": "DTE项目",
+      "stake": "—"
+    },
+    "pivot": {
+      "dashboard_id": "cemqrw3lzksw6",
+      "url": "https://cemqrw3lzksw6.ok.kimi.link",
+      "repo": "pivot-01",
+      "account": "chepin-ai",
+      "role": "中枢/支点",
+      "stake": "—"
+    }
+  },
+  "pending": {
+    "lvlu": {
+      "repo": "qi-lib",
+      "account": "chepin-qi",
+      "role": "层值语言",
+      "note": "待提供Dashboard ID"
+    },
+    "qfa": {
+      "repo": "qfa-pub/qfa-quantum-lab",
+      "account": "chepin-qi",
+      "role": "量子场感知",
+      "note": "待提供Dashboard ID"
+    },
+    "lgt": {
+      "repo": "lgt-line/quantum-lgt-experiments",
+      "account": "chepin-qi",
+      "role": "逻辑与真",
+      "note": "待提供Dashboard ID"
+    },
+    "qtlv": {
+      "repo": "qtlv-pub/qtlv-quantum-encoder",
+      "account": "chepin-qi/chepin-ai",
+      "role": "量子时空光船",
+      "note": "待提供Dashboard ID"
+    },
+    "omni": {
+      "repo": "omni-hub",
+      "account": "chepin-ai",
+      "role": "统一编排器",
+      "note": "待提供Dashboard ID"
+    },
+    "ci-inbox": {
+      "repo": "ci-inbox",
+      "account": "chepin-ai",
+      "role": "消息收件箱",
+      "note": "待提供Dashboard ID"
+    },
+    "ci-yard": {
+      "repo": "ci-yard",
+      "account": "chepin-ai",
+      "role": "验证场",
+      "note": "待提供Dashboard ID"
+    },
+    "isu": {
+      "repo": "isu-unified-framework",
+      "account": "chepin-ai",
+      "role": "统一框架",
+      "note": "待提供Dashboard ID"
+    },
+    "cdnv": {
+      "repo": "cardinal-vault",
+      "account": "chepin-ai",
+      "role": "保险库",
+      "note": "待提供Dashboard ID"
+    },
+    "ETCS": {
+      "repo": "ETCS-Formalization",
+      "account": "chepin-ai",
+      "role": "ETCS形式化",
+      "note": "待提供Dashboard ID"
+    },
+    "D4": {
+      "repo": "D4UniversalOptimality",
+      "account": "chepin-ai",
+      "role": "D4普适最优",
+      "note": "待提供Dashboard ID"
+    },
+    "YHCSCT": {
+      "repo": "YHCSCT",
+      "account": "chepin-ai",
+      "role": "YHCSCT",
+      "note": "待提供Dashboard ID"
+    },
+    "GCML": {
+      "repo": "GCML",
+      "account": "chepin-ai",
+      "role": "GCML",
+      "note": "待提供Dashboard ID"
+    },
+    "sorry-resolver": {
+      "repo": "v40-sorry-resolver",
+      "account": "chepin-ai",
+      "role": "Lean证明补全",
+      "note": "待提供Dashboard ID"
+    },
+    "ai-quant-research": {
+      "repo": "ai-quant-research",
+      "account": "chepin-ai",
+      "role": "投研基础设施",
+      "note": "qi域，线属待确，待提供Dashboard ID"
+    }
+  },
+  "meta": {
+    "confirmed_count": 9,
+    "pending_count": 15,
+    "total_expected": 24,
+    "last_updated": "2026-10-01",
+    "source": "user direct input + GitHub API"
+  }
+}

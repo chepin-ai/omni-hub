@@ -1,41 +1,616 @@
 {
-  "alliance_core": {
-    "vci-ucif2": {"line": "ucif2", "desc": "Unified Consciousness Interface", "lang": "Python", "updated": "2026-09-27"},
-    "vci-lvlu": {"line": "lvlu", "desc": "Layered Value and Language", "lang": "Python", "updated": "2026-09-27"},
-    "vci-lgt": {"line": "lgt", "desc": "Logic and Ground Truth", "lang": "Python", "updated": "2026-09-27"},
-    "vci-qfa": {"line": "qfa", "desc": "Quantum Field Awareness", "lang": "Python", "updated": "2026-09-27"},
-    "vci-vinf": {"line": "vinf", "desc": "Value Infinity", "lang": "Python", "updated": "2026-09-27"},
-    "vci-qgl": {"line": "qgl", "desc": "Quantum Gravity Link", "lang": "Python", "updated": "2026-09-27"},
-    "vci-qlv": {"line": "qlv", "desc": "Quantum Light Vessel", "lang": "Python", "updated": "2026-09-27"},
-    "vci-qtlv": {"line": "qtlv", "desc": "Quantum Temporal Light Vessel", "lang": "Python", "updated": "2026-09-27"},
-    "vci-usrm": {"line": "usrm", "desc": "User-Space Reality Mesh", "lang": "Python", "updated": "2026-09-27"},
-    "vci-cfts": {"line": "cfts", "desc": "Core Field Translation State", "lang": "Python", "updated": "2026-09-27"},
-    "vci-aiq": {"line": "aiq", "desc": "AI Quant Research", "lang": "Python", "updated": "2026-09-27"},
-    "omni-hub": {"line": "omni", "desc": "OMNI-HUB Core", "lang": "Python", "updated": "2026-09-27"}
+  "_meta": {
+    "version": "v181",
+    "updated": "2026-10-01",
+    "source": "user direct input + GitHub API",
+    "accounts": ["chepin-ai", "chepin-qi"],
+    "total_repos": 50
   },
-  "alliance_other": {
-    "vci-inbox": {"role": "inbox", "desc": "Message Inbox", "lang": "Python", "updated": "2026-09-27"},
-    "ci-worker-01": {"role": "worker", "desc": "CI Worker 01", "lang": "Python", "updated": "2026-09-27"},
-    "qlv-lib": {"role": "library", "desc": "QLV CI Execution", "lang": "Python", "updated": "2026-09-27"},
-    "lgt-worker-01": {"role": "worker", "desc": "LGT Public Tower", "lang": "Python", "updated": "2026-09-27"},
-    "ci-yard": {"role": "yard", "desc": "CI Yard", "lang": "Python", "updated": "2026-09-27"},
-    "vci-control": {"role": "control", "desc": "VCI Control", "lang": null, "updated": "2026-09-25"},
-    "qfos-autonomous-engine": {"role": "navigation", "desc": "QF-OS Autonomous Navigation Engine", "lang": "Python", "updated": "2026-09-25"},
-    "grand-synthesis": {"role": "synthesis", "desc": "Mathematical Ontologies Unification", "lang": "Lean", "updated": "2026-09-19"},
-    "prima-50-research": {"role": "research", "desc": "PRIMA 5.0 Research", "lang": "Python", "updated": "2026-09-19"},
-    "ci-worker-02": {"role": "worker", "desc": "CI Worker 02", "lang": "Python", "updated": "2026-09-10"},
-    "vci-library": {"role": "library", "desc": "VCI Library", "lang": null, "updated": "2026-09-10"},
-    "vci-playground": {"role": "playground", "desc": "VCI Playground", "lang": "Python", "updated": "2026-09-09"},
-    "vci-root": {"role": "root", "desc": "VCI Root", "lang": null, "updated": "2026-09-09"},
-    "vci-logs": {"role": "logs", "desc": "VCI Logs", "lang": null, "updated": "2026-09-09"},
-    "vci-code": {"role": "code", "desc": "VCI Code", "lang": null, "updated": "2026-09-05"},
-    "vci-bus": {"role": "bus", "desc": "VCI Bus", "lang": null, "updated": "2026-08-27"}
+  "alliance_core": {
+    "_desc": "12 core lines — shell layer (vci-*) distributed from T5+Q5",
+    "vci-ucif2": {
+      "line": "ucif2",
+      "desc": "Unified Consciousness Interface",
+      "lang": "Python",
+      "account": "chepin-ai",
+      "shell_of": "ucif2-formalization-kernel",
+      "dashboard": "2regf437xvotk",
+      "stake": "✅201",
+      "status": "壳化(ARCH-CONVERGE-01)",
+      "layer": "consciousness",
+      "updated": "2026-09-30"
+    },
+    "vci-lvlu": {
+      "line": "lvlu",
+      "desc": "Layered Value and Language",
+      "lang": "Python",
+      "account": "chepin-ai",
+      "shell_of": "qi-lib",
+      "dashboard": "待补",
+      "stake": "✅201",
+      "status": "活跃",
+      "layer": "consciousness",
+      "updated": "2026-09-30"
+    },
+    "vci-lgt": {
+      "line": "lgt",
+      "desc": "Logic and Ground Truth",
+      "lang": "Python",
+      "account": "chepin-ai",
+      "shell_of": "lgt-line/quantum-lgt-experiments",
+      "dashboard": "待补",
+      "stake": "✅201",
+      "status": "九塔·SI-AUTOPILOT",
+      "layer": "logic",
+      "updated": "2026-09-30"
+    },
+    "vci-qfa": {
+      "line": "qfa",
+      "desc": "Quantum Field Awareness",
+      "lang": "Python",
+      "account": "chepin-ai",
+      "shell_of": "qfa-pub/qfa-quantum-lab",
+      "dashboard": "待补",
+      "stake": "✅201",
+      "status": "九塔·SEED-RING",
+      "layer": "consciousness",
+      "updated": "2026-09-30"
+    },
+    "vci-vinf": {
+      "line": "vinf",
+      "desc": "Value Infinity",
+      "lang": "Python",
+      "account": "chepin-ai",
+      "shell_of": "vinf-market-kernel",
+      "dashboard": "stgdle5yj3o7s",
+      "stake": "✅201",
+      "status": "壳化",
+      "layer": "logic",
+      "updated": "2026-09-30"
+    },
+    "vci-qgl": {
+      "line": "qgl",
+      "desc": "Quantum Gravity Link",
+      "lang": "Go",
+      "account": "chepin-ai",
+      "shell_of": "quantum-go-ledger",
+      "dashboard": "rdkm3tzqlgnj6",
+      "stake": "⛔槽满PUT=400",
+      "status": "壳化·KEY-SENTINEL",
+      "layer": "logic",
+      "updated": "2026-09-30"
+    },
+    "vci-qlv": {
+      "line": "qlv",
+      "desc": "Quantum Light Vessel",
+      "lang": "Python",
+      "account": "chepin-ai",
+      "shell_of": "qlv/qlv-lab",
+      "dashboard": "chzd4e7sjb2lk",
+      "stake": "✅201",
+      "status": "活跃",
+      "layer": "quantum",
+      "updated": "2026-09-30"
+    },
+    "vci-qtlv": {
+      "line": "qtlv",
+      "desc": "Quantum Temporal Light Vessel",
+      "lang": "Python",
+      "account": "chepin-ai",
+      "shell_of": "qtlv-quantum-encoder/qtlv-pub",
+      "dashboard": "待补",
+      "stake": "✅201",
+      "status": "九塔·SI-AUTOPILOT",
+      "layer": "quantum",
+      "updated": "2026-09-30"
+    },
+    "vci-usrm": {
+      "line": "usrm",
+      "desc": "User-Space Reality Mesh",
+      "lang": "Python",
+      "account": "chepin-ai",
+      "shell_of": "usrm-repo",
+      "dashboard": "62q3nd73zxf52",
+      "stake": "✅201",
+      "status": "活跃·USRM-TOWER v2",
+      "layer": "reality",
+      "updated": "2026-09-30"
+    },
+    "vci-cfts": {
+      "line": "cfts",
+      "desc": "Core Field Translation State",
+      "lang": "Python",
+      "account": "chepin-ai",
+      "shell_of": "github-repo-cfts",
+      "dashboard": "3ay75hdbfrqe4",
+      "stake": "✅201",
+      "status": "壳化",
+      "layer": "quantum",
+      "updated": "2026-09-30"
+    },
+    "vci-aiq": {
+      "line": "aiq",
+      "desc": "AI Quant Research",
+      "lang": "Python",
+      "account": "chepin-ai",
+      "shell_of": "ai-quant-research",
+      "dashboard": "待补",
+      "stake": "✅201",
+      "status": "LINE-DRIVE-01 · 公域驱动私域",
+      "layer": "reality",
+      "updated": "2026-09-30"
+    },
+    "omni-hub": {
+      "line": "omni",
+      "desc": "OMNI-HUB Core",
+      "lang": "Python",
+      "account": "chepin-ai",
+      "shell_of": "omni-hub",
+      "dashboard": "待补",
+      "stake": "—",
+      "status": "v181活跃",
+      "layer": "meta",
+      "updated": "2026-10-01"
+    }
+  },
+  "T5": {
+    "_desc": "TOP5 实仓×5 — chepin-ai账户，与首轮vci壳层分发面完全吻合",
+    "ucif2-formalization-kernel": {
+      "line": "ucif2",
+      "account": "chepin-ai",
+      "dashboard": "2regf437xvotk",
+      "stake": "✅201",
+      "lang": "Lean/Python",
+      "role": "形式化内核",
+      "shell": "vci-ucif2",
+      "updated": "2026-09-30"
+    },
+    "vinf-market-kernel": {
+      "line": "vinf",
+      "account": "chepin-ai",
+      "dashboard": "stgdle5yj3o7s",
+      "stake": "✅201",
+      "lang": "Python",
+      "role": "市场内核",
+      "shell": "vci-vinf",
+      "updated": "2026-09-30"
+    },
+    "quantum-go-ledger": {
+      "line": "qgl",
+      "account": "chepin-ai",
+      "dashboard": "rdkm3tzqlgnj6",
+      "stake": "⛔槽满PUT=400",
+      "lang": "Go",
+      "role": "QGL链",
+      "shell": "vci-qgl",
+      "note": "100/100槽满",
+      "updated": "2026-09-30"
+    },
+    "usrm-repo": {
+      "line": "usrm",
+      "account": "chepin-ai",
+      "dashboard": "62q3nd73zxf52",
+      "stake": "✅201",
+      "lang": "Python",
+      "role": "用户空间现实网",
+      "shell": "vci-usrm",
+      "updated": "2026-09-30"
+    },
+    "github-repo-cfts": {
+      "line": "cfts",
+      "account": "chepin-ai",
+      "dashboard": "3ay75hdbfrqe4",
+      "stake": "✅201",
+      "lang": "Python",
+      "role": "核心场翻译态",
+      "shell": "vci-cfts",
+      "updated": "2026-09-30"
+    }
+  },
+  "Q5_chepin_ai": {
+    "_desc": "Quant5 chepin-ai侧",
+    "qtlv-quantum-encoder": {
+      "line": "qtlv",
+      "account": "chepin-ai",
+      "stake": "✅201",
+      "lang": "Python",
+      "role": "量子时空编码器",
+      "shell": "vci-qtlv",
+      "updated": "2026-09-30"
+    },
+    "qlv": {
+      "line": "qlv",
+      "account": "chepin-ai",
+      "dashboard": "chzd4e7sjb2lk",
+      "stake": "✅201",
+      "lang": "Python",
+      "role": "量子光船",
+      "shell": "vci-qlv",
+      "updated": "2026-09-30"
+    },
+    "qlv-lab": {
+      "line": "qlv",
+      "account": "chepin-ai",
+      "stake": "✅201",
+      "lang": "Python",
+      "role": "QLV实验室",
+      "shell": "vci-qlv",
+      "updated": "2026-09-30"
+    },
+    "lgt-line": {
+      "line": "lgt",
+      "account": "chepin-ai",
+      "stake": "✅201",
+      "lang": "Python",
+      "role": "LGT线",
+      "shell": "vci-lgt",
+      "updated": "2026-09-30"
+    },
+    "ai-quant-research": {
+      "line": "aiq",
+      "account": "chepin-ai",
+      "stake": "✅201",
+      "lang": "Python",
+      "role": "投研基础设施",
+      "shell": "vci-aiq",
+      "note": "qi钥自投；线属疑qi域待确",
+      "updated": "2026-09-30"
+    },
+    "lgt-worker-01": {
+      "line": "lgt",
+      "account": "chepin-ai",
+      "stake": "⏭️跳过",
+      "lang": "Python",
+      "role": "LGT公域塔",
+      "shell": "vci-lgt",
+      "note": "公域塔仓secrets病案+lgt-118禁注；lgt经vci-lgt/lgt-line双轨持有",
+      "status": "skipped",
+      "updated": "2026-09-30"
+    }
+  },
+  "Q5_chepin_qi": {
+    "_desc": "Quant5 chepin-qi侧 — qi域镜像",
+    "qi-lib": {
+      "line": "lvlu",
+      "account": "chepin-qi",
+      "stake": "✅201",
+      "lang": "Python",
+      "role": "qi域lib",
+      "shell": "vci-lvlu",
+      "updated": "2026-09-30"
+    },
+    "qlv-pub": {
+      "line": "qlv",
+      "account": "chepin-qi",
+      "stake": "✅201",
+      "lang": "Python",
+      "role": "公域发布",
+      "shell": "vci-qlv",
+      "updated": "2026-09-30"
+    },
+    "qlv-lib": {
+      "line": "qlv",
+      "account": "chepin-qi",
+      "stake": "✅201",
+      "lang": "Python",
+      "role": "lib扩展",
+      "shell": "vci-qlv",
+      "updated": "2026-09-30"
+    },
+    "qfa-pub": {
+      "line": "qfa",
+      "account": "chepin-qi",
+      "stake": "✅201",
+      "lang": "Python",
+      "role": "公域发布",
+      "shell": "vci-qfa",
+      "updated": "2026-09-30"
+    },
+    "qfa-quantum-lab": {
+      "line": "qfa",
+      "account": "chepin-qi",
+      "stake": "✅201",
+      "lang": "Python",
+      "role": "量子实验室",
+      "shell": "vci-qfa",
+      "updated": "2026-09-30"
+    },
+    "quantum-lgt-experiments": {
+      "line": "lgt",
+      "account": "chepin-qi",
+      "stake": "✅201",
+      "lang": "Python",
+      "role": "LGT量子实验",
+      "shell": "vci-lgt",
+      "updated": "2026-09-30"
+    },
+    "qlv-ci-line": {
+      "line": "qlv/lgt",
+      "account": "chepin-qi",
+      "stake": "✅201",
+      "lang": "Python",
+      "role": "CI线",
+      "shell": "vci-qlv/vci-lgt",
+      "updated": "2026-09-30"
+    },
+    "qtlv-pub": {
+      "line": "qtlv",
+      "account": "chepin-qi",
+      "stake": "✅201",
+      "lang": "Python",
+      "role": "公域发布",
+      "shell": "vci-qtlv",
+      "updated": "2026-09-30"
+    }
+  },
+  "Hub7": {
+    "_desc": "Hub7 中枢系统",
+    "ci-inbox": {
+      "role": "hub",
+      "account": "chepin-ai",
+      "stake": "✅首轮已投",
+      "status": "活跃",
+      "note": "hub之一",
+      "updated": "2026-09-30"
+    },
+    "ci-control": {
+      "role": "cisvr",
+      "account": "chepin-ai",
+      "dashboard": "sh22uxjhdpz5q",
+      "stake": "⛔槽满100/100",
+      "status": "壳化",
+      "note": "cisvr正身；首轮ci-inbox为hub之一",
+      "updated": "2026-09-25"
+    },
+    "ci-control-backup": {
+      "role": "cisbr",
+      "account": "chepin-ai",
+      "stake": "—",
+      "status": "备份",
+      "updated": "2026-09-25"
+    },
+    "ci-build": {
+      "role": "build",
+      "account": "chepin-ai",
+      "stake": "—",
+      "status": "活跃",
+      "updated": "2026-09-25"
+    },
+    "ci-library": {
+      "role": "library",
+      "account": "chepin-ai",
+      "stake": "—",
+      "status": "活跃",
+      "updated": "2026-09-10"
+    },
+    "ci-yard": {
+      "role": "yard",
+      "account": "chepin-ai",
+      "stake": "—",
+      "status": "验证场",
+      "updated": "2026-09-27"
+    },
+    "ci-logs": {
+      "role": "logs",
+      "account": "chepin-ai",
+      "stake": "—",
+      "status": "活跃",
+      "updated": "2026-09-09"
+    }
+  },
+  "ROOT": {
+    "_desc": "ROOT 根锚",
+    "ci-root": {
+      "role": "root",
+      "account": "chepin-ai",
+      "stake": "—",
+      "status": "根锚",
+      "updated": "2026-09-09"
+    },
+    "vci-root": {
+      "role": "root",
+      "account": "chepin-ai",
+      "stake": "—",
+      "status": "VCI根",
+      "updated": "2026-09-09"
+    }
+  },
+  "research": {
+    "_desc": "研究仓",
+    "grand-synthesis": {
+      "role": "synthesis",
+      "account": "chepin-ai",
+      "lang": "Lean",
+      "stake": "—",
+      "status": "数学本体大统合",
+      "updated": "2026-09-19"
+    },
+    "prima-50-research": {
+      "role": "research",
+      "account": "chepin-ai",
+      "lang": "Python",
+      "stake": "—",
+      "status": "PRIMA 5.0研究",
+      "updated": "2026-09-19"
+    },
+    "qfos-autonomous-engine": {
+      "role": "navigation",
+      "account": "chepin-ai",
+      "lang": "Python",
+      "stake": "—",
+      "status": "NASA导航引擎v6.37",
+      "updated": "2026-09-22"
+    }
+  },
+  "other_chepin_ai": {
+    "_desc": "其他仓 chepin-ai",
+    "isu-unified-framework": {
+      "line": "isu",
+      "account": "chepin-ai",
+      "stake": "—",
+      "role": "统一框架",
+      "dashboard": "待补",
+      "updated": "2026-09-19"
+    },
+    "cardinal-vault": {
+      "line": "cdnv",
+      "account": "chepin-ai",
+      "stake": "—",
+      "role": "保险库",
+      "dashboard": "待补",
+      "updated": "2026-09-19"
+    },
+    "pivot-01": {
+      "line": "pivot",
+      "account": "chepin-ai",
+      "dashboard": "cemqrw3lzksw6",
+      "stake": "—",
+      "role": "中枢/支点",
+      "updated": "2026-09-19"
+    },
+    "ETCS-Formalization": {
+      "account": "chepin-ai",
+      "stake": "—",
+      "role": "ETCS形式化",
+      "dashboard": "待补",
+      "updated": "2026-09-19"
+    },
+    "D4UniversalOptimality": {
+      "account": "chepin-ai",
+      "stake": "—",
+      "role": "D4普适最优",
+      "dashboard": "待补",
+      "updated": "2026-09-19"
+    },
+    "YHCSCT": {
+      "account": "chepin-ai",
+      "stake": "—",
+      "role": "YHCSCT",
+      "dashboard": "待补",
+      "updated": "2026-09-19"
+    },
+    "GCML": {
+      "account": "chepin-ai",
+      "stake": "—",
+      "role": "GCML",
+      "dashboard": "待补",
+      "updated": "2026-09-19"
+    },
+    "DTE-Project": {
+      "line": "dte",
+      "account": "chepin-ai",
+      "dashboard": "wnughdfmkz4se",
+      "stake": "—",
+      "role": "DTE项目",
+      "updated": "2026-09-19"
+    },
+    "v40-sorry-resolver": {
+      "account": "chepin-ai",
+      "stake": "—",
+      "role": "Lean证明补全",
+      "dashboard": "待补",
+      "updated": "2026-09-19"
+    }
   },
   "external_alliance": {
-    "langchain-ai/langchain": {"role": "framework", "desc": "AI Framework", "lang": "Python"},
-    "microsoft/semantic-kernel": {"role": "framework", "desc": "Microsoft AI", "lang": "C#"},
-    "openai/openai-python": {"role": "sdk", "desc": "OpenAI SDK", "lang": "Python"},
-    "huggingface/transformers": {"role": "ml", "desc": "ML Models", "lang": "Python"},
-    "pytorch/pytorch": {"role": "dl", "desc": "Deep Learning", "lang": "C++"}
+    "_desc": "外部联盟",
+    "langchain-ai/langchain": {
+      "role": "framework",
+      "desc": "AI Framework",
+      "lang": "Python"
+    },
+    "microsoft/semantic-kernel": {
+      "role": "framework",
+      "desc": "Microsoft AI",
+      "lang": "C#"
+    },
+    "openai/openai-python": {
+      "role": "sdk",
+      "desc": "OpenAI SDK",
+      "lang": "Python"
+    },
+    "huggingface/transformers": {
+      "role": "ml",
+      "desc": "ML Models",
+      "lang": "Python"
+    },
+    "pytorch/pytorch": {
+      "role": "dl",
+      "desc": "Deep Learning",
+      "lang": "C++"
+    }
+  },
+  "bus_infra": {
+    "_desc": "总线/基础设施",
+    "vci-bus": {
+      "role": "bus",
+      "account": "chepin-ai",
+      "stake": "—",
+      "status": "VCI总线",
+      "updated": "2026-08-27"
+    },
+    "ci-yard": {
+      "role": "yard",
+      "account": "chepin-ai",
+      "stake": "—",
+      "status": "验证场",
+      "updated": "2026-09-27"
+    }
+  },
+  "workers": {
+    "_desc": "工作器",
+    "ci-worker-01": {
+      "role": "worker",
+      "account": "chepin-ai",
+      "stake": "—",
+      "status": "HUB-TOWER-01",
+      "updated": "2026-09-30"
+    },
+    "ci-worker-02": {
+      "role": "worker",
+      "account": "chepin-ai",
+      "stake": "—",
+      "status": "待命",
+      "updated": "2026-09-10"
+    },
+    "lgt-worker-01": {
+      "role": "worker",
+      "account": "chepin-ai",
+      "stake": "⏭️跳过",
+      "status": "公域塔仓secrets病案+lgt-118禁注",
+      "note": "跳过",
+      "updated": "2026-09-30"
+    }
+  },
+  "legacy": {
+    "_desc": "历史/低频仓",
+    "vci-library": {
+      "role": "library",
+      "account": "chepin-ai",
+      "stake": "—",
+      "status": "图书馆",
+      "updated": "2026-09-10"
+    },
+    "vci-playground": {
+      "role": "playground",
+      "account": "chepin-ai",
+      "stake": "—",
+      "status": "实验场",
+      "updated": "2026-09-09"
+    },
+    "vci-code": {
+      "role": "code",
+      "account": "chepin-ai",
+      "stake": "—",
+      "status": "代码",
+      "updated": "2026-09-05"
+    },
+    "vci-logs": {
+      "role": "logs",
+      "account": "chepin-ai",
+      "stake": "—",
+      "status": "日志",
+      "updated": "2026-09-09"
+    }
   }
 }

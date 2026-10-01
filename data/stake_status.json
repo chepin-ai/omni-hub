@@ -1,0 +1,153 @@
+{
+  "_comment": "OMNI-HUB v181 Stake Status — T5+Q5+Hub投资状态",
+  "T5": {
+    "_desc": "TOP5 实仓×5 — chepin-ai账户",
+    "ucif2-formalization-kernel": {
+      "line": "ucif2",
+      "stake": "✅201",
+      "account": "chepin-ai",
+      "dashboard": "2regf437xvotk",
+      "status": "active",
+      "shell": "vci-ucif2"
+    },
+    "vinf-market-kernel": {
+      "line": "vinf",
+      "stake": "✅201",
+      "account": "chepin-ai",
+      "dashboard": "stgdle5yj3o7s",
+      "status": "active",
+      "shell": "vci-vinf"
+    },
+    "quantum-go-ledger": {
+      "line": "qgl",
+      "stake": "⛔槽满",
+      "account": "chepin-ai",
+      "dashboard": "rdkm3tzqlgnj6",
+      "status": "full_PUT=400",
+      "shell": "vci-qgl",
+      "lang": "Go"
+    },
+    "usrm-repo": {
+      "line": "usrm",
+      "stake": "✅201",
+      "account": "chepin-ai",
+      "dashboard": "62q3nd73zxf52",
+      "status": "active",
+      "shell": "vci-usrm"
+    },
+    "github-repo-cfts": {
+      "line": "cfts",
+      "stake": "✅201",
+      "account": "chepin-ai",
+      "dashboard": "3ay75hdbfrqe4",
+      "status": "active",
+      "shell": "vci-cfts"
+    }
+  },
+  "Q5": {
+    "_desc": "Quant5 Quant线×5 — 与首轮vci壳层分发面完全吻合",
+    "qtlv-quantum-encoder": {
+      "line": "qtlv",
+      "stake": "✅201",
+      "account": "chepin-ai",
+      "status": "active",
+      "shell": "vci-qtlv"
+    },
+    "qlv": {
+      "line": "qlv",
+      "stake": "✅201",
+      "account": "chepin-ai",
+      "dashboard": "chzd4e7sjb2lk",
+      "status": "active",
+      "shell": "vci-qlv"
+    },
+    "qlv-lab": {
+      "line": "qlv",
+      "stake": "✅201",
+      "account": "chepin-ai",
+      "status": "active",
+      "shell": "vci-qlv",
+      "note": "qlv实验室"
+    },
+    "lgt-line": {
+      "line": "lgt",
+      "stake": "✅201",
+      "account": "chepin-qi",
+      "status": "active",
+      "shell": "vci-lgt"
+    },
+    "ai-quant-research": {
+      "line": "aiq",
+      "stake": "✅201",
+      "account": "chepin-ai",
+      "status": "active",
+      "note": "qi钥自投；投研基础设施仓，线属疑qi域待确"
+    },
+    "lgt-worker-01": {
+      "line": "lgt",
+      "stake": "⏭️跳过",
+      "account": "chepin-ai",
+      "status": "skipped",
+      "note": "公域塔仓secrets病案+lgt-118禁注；lgt经vci-lgt/lgt-line双轨持有"
+    }
+  },
+  "Hub7": {
+    "_desc": "Hub7 中枢系统",
+    "ci-inbox": {
+      "role": "hub",
+      "stake": "✅首轮已投",
+      "account": "chepin-ai",
+      "status": "active",
+      "note": "hub之一"
+    },
+    "ci-control": {
+      "role": "cisvr",
+      "stake": "⛔槽满",
+      "account": "chepin-ai",
+      "dashboard": "sh22uxjhdpz5q",
+      "status": "full_100/100",
+      "note": "cisvr正身"
+    },
+    "ci-control-backup": {
+      "role": "cisbr",
+      "stake": "—",
+      "account": "chepin-ai",
+      "status": "backup"
+    },
+    "ci-build": {
+      "role": "build",
+      "stake": "—",
+      "account": "chepin-ai",
+      "status": "active"
+    },
+    "ci-library": {
+      "role": "library",
+      "stake": "—",
+      "account": "chepin-ai",
+      "status": "active"
+    },
+    "ci-yard": {
+      "role": "yard",
+      "stake": "—",
+      "account": "chepin-ai",
+      "status": "active"
+    },
+    "ci-logs": {
+      "role": "logs",
+      "stake": "—",
+      "account": "chepin-ai",
+      "status": "active"
+    }
+  },
+  "summary": {
+    "T5_active": 4,
+    "T5_full": 1,
+    "Q5_active": 5,
+    "Q5_skipped": 1,
+    "Hub_active": 6,
+    "Hub_full": 1,
+    "total_staked": 13,
+    "total_skipped": 2,
+    "total_full": 2
+  }
+}
