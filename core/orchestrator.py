@@ -1950,6 +1950,22 @@ def _get_marga():
     return _marga
 
 
+def _get_samadhi():
+    global _samadhi
+    if _samadhi is None:
+        from core.omni_samadhi_engine import get_omni_samadhi_engine
+        _samadhi = get_omni_samadhi_engine()
+    return _samadhi
+
+
+def _get_vipassana():
+    global _vipassana
+    if _vipassana is None:
+        from core.omni_vipassana_engine import get_omni_vipassana_engine
+        _vipassana = get_omni_vipassana_engine()
+    return _vipassana
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -2019,7 +2035,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "212.0.0"
+    VERSION = "213.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -5750,6 +5766,24 @@ class OMNIHUBOrchestrator:
                 ome = _get_marga()
                 ome.run_cycle(module_states)
                 self.current_state["marga"] = ome.get_status()
+            except Exception:
+                pass
+
+        # 230. OMNISamādhiEngine — samādhi (period 1459)
+        if cycle_number % 1459 == 0:
+            try:
+                ose = _get_samadhi()
+                ose.run_cycle(module_states)
+                self.current_state["samadhi"] = ose.get_status()
+            except Exception:
+                pass
+
+        # 231. OMNIVipassanāEngine — vipassanā (period 1471)
+        if cycle_number % 1471 == 0:
+            try:
+                ove = _get_vipassana()
+                ove.run_cycle(module_states)
+                self.current_state["vipassana"] = ove.get_status()
             except Exception:
                 pass
 
