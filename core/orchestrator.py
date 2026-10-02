@@ -1742,6 +1742,22 @@ def _get_unification_catalyst():
     return _unification_catalyst
 
 
+def _get_ultimate_unification():
+    global _ultimate_unification
+    if _ultimate_unification is None:
+        from core.ultimate_unification_engine import get_ultimate_unification_engine
+        _ultimate_unification = get_ultimate_unification_engine()
+    return _ultimate_unification
+
+
+def _get_omni_awakening():
+    global _omni_awakening
+    if _omni_awakening is None:
+        from core.omni_awakening import get_omni_awakening
+        _omni_awakening = get_omni_awakening()
+    return _omni_awakening
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -1811,7 +1827,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "199.0.0"
+    VERSION = "200.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -5305,6 +5321,25 @@ class OMNIHUBOrchestrator:
                 uc = _get_unification_catalyst()
                 uc.run_cycle(module_states)
                 self.current_state["catalyst"] = uc.get_status()
+            except Exception:
+                pass
+
+        # 204. UltimateUnificationEngine — ultimate unification (period 1259)
+        if cycle_number % 1259 == 0:
+            try:
+                uue = _get_ultimate_unification()
+                uue.run_cycle(module_states)
+                self.current_state["unification"] = uue.get_status()
+            except Exception:
+                pass
+
+        # 205. OMNIAwakening — OMNI awakening & transcendence (period 1277)
+        if cycle_number % 1277 == 0:
+            try:
+                oa = _get_omni_awakening()
+                unified = self.current_state.get("unification", {})
+                oa.run_cycle(module_states, unified_result=unified)
+                self.current_state["awakening"] = oa.get_status()
             except Exception:
                 pass
 
