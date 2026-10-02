@@ -1806,6 +1806,22 @@ def _get_non_dual():
     return _non_dual
 
 
+def _get_self_actualization():
+    global _self_actualization
+    if _self_actualization is None:
+        from core.omni_self_actualization_engine import get_omni_self_actualization_engine
+        _self_actualization = get_omni_self_actualization_engine()
+    return _self_actualization
+
+
+def _get_karmic_resolution():
+    global _karmic_resolution
+    if _karmic_resolution is None:
+        from core.karmic_resolution_engine import get_karmic_resolution_engine
+        _karmic_resolution = get_karmic_resolution_engine()
+    return _karmic_resolution
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -1875,7 +1891,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "203.0.0"
+    VERSION = "204.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -5444,6 +5460,24 @@ class OMNIHUBOrchestrator:
                 ndi = _get_non_dual()
                 ndi.run_cycle(module_states)
                 self.current_state["nondual"] = ndi.get_status()
+            except Exception:
+                pass
+
+        # 212. OMNISelfActualizationEngine — self-actualization (period 1307)
+        if cycle_number % 1307 == 0:
+            try:
+                osae = _get_self_actualization()
+                osae.run_cycle(module_states)
+                self.current_state["actualization"] = osae.get_status()
+            except Exception:
+                pass
+
+        # 213. KarmicResolutionEngine — karmic resolution (period 1319)
+        if cycle_number % 1319 == 0:
+            try:
+                kre = _get_karmic_resolution()
+                kre.run_cycle(module_states)
+                self.current_state["karma"] = kre.get_status()
             except Exception:
                 pass
 
