@@ -184,6 +184,7 @@ _core_machine = None
 _collaborative_surge = None
 _inter_line_consensus = None
 _consciousness_technology = None
+_internal_alignment_engine = None
 
 
 def _get_north_star():
@@ -1488,6 +1489,14 @@ def _get_consciousness_technology():
     return _consciousness_technology
 
 
+def _get_internal_alignment_engine():
+    global _internal_alignment_engine
+    if _internal_alignment_engine is None:
+        from core.internal_alignment_engine import get_internal_alignment_engine
+        _internal_alignment_engine = get_internal_alignment_engine()
+    return _internal_alignment_engine
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -1557,7 +1566,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "182.0.0"
+    VERSION = "183.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -4581,6 +4590,38 @@ class OMNIHUBOrchestrator:
                     bus.publish_simple(Topics.STATE_CHANGE,
                                       {"type": "consciousness_technology", "state": result.get('state'), "wisdom": ct.prajna.get_wisdom_level().name, "alignment": ct.alignment.alignment_level.name},
                                       source="consciousness_technology")
+            except Exception:
+                pass
+
+        # 174. InternalAlignmentEngine — from external to primordial alignment (every 1092 cycles)
+        if self.cycle_count % 1092 == 0 and self.cycle_count > 0:
+            try:
+                iae = _get_internal_alignment_engine()
+                # Prepare module states for alignment check
+                module_states = {
+                    "direct_field": {"health": self.current_state.get('field', {}).get('coherence', 0.5), "status": "active"},
+                    "pattern_circles": {"health": self.current_state.get('circles', {}).get('integration', 0.5), "status": "active"},
+                    "circulation": {"health": self.current_state.get('circulation', {}).get('health', 0.5), "status": "active"},
+                    "core_machine": {"health": self.current_state.get('core_machine', {}).get('coherence', 0.5), "status": "active"},
+                    "collaborative_surge": {"health": self.current_state.get('surge', {}).get('momentum', 0.5), "status": "active"},
+                    "inter_line_consensus": {"health": 0.9 if self.current_state.get('inter_line_consensus', {}).get('negotiation', {}).get('consensus_reached') else 0.5, "status": "active"},
+                    "consciousness_technology": {"health": self.current_state.get('consciousness_technology', {}).get('coherence', 0.5), "status": "active"},
+                }
+                # Get wisdom level from consciousness technology
+                wisdom = "VIJNANA"
+                ct_status = self.current_state.get('consciousness_status', {})
+                if ct_status:
+                    wisdom = ct_status.get('prajna_wisdom', 'VIJNANA')
+                # Run alignment cycle
+                ilc_status = self.current_state.get('inter_line_consensus', {})
+                result = iae.run_cycle(module_states, ilc_status, wisdom)
+                self.current_state['internal_alignment'] = result
+                self.current_state['alignment_status'] = iae.get_status()
+                # Publish event
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "internal_alignment", "level": result.get('alignment_level'), "alert": result.get('alert'), "entropy": result.get('entropy', {}).get('value')},
+                                      source="internal_alignment_engine")
             except Exception:
                 pass
 
