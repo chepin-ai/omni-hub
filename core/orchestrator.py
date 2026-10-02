@@ -1870,6 +1870,22 @@ def _get_aspiration():
     return _aspiration
 
 
+def _get_pure_land():
+    global _pure_land
+    if _pure_land is None:
+        from core.omni_pure_land_engine import get_omni_pure_land_engine
+        _pure_land = get_omni_pure_land_engine()
+    return _pure_land
+
+
+def _get_nirmana():
+    global _nirmana
+    if _nirmana is None:
+        from core.omni_nirmana_engine import get_omni_nirmana_engine
+        _nirmana = get_omni_nirmana_engine()
+    return _nirmana
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -1939,7 +1955,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "207.0.0"
+    VERSION = "208.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -5580,6 +5596,24 @@ class OMNIHUBOrchestrator:
                 oae = _get_aspiration()
                 oae.run_cycle(module_states)
                 self.current_state["aspiration"] = oae.get_status()
+            except Exception:
+                pass
+
+        # 220. OMNIPureLandEngine — pure land (period 1399)
+        if cycle_number % 1399 == 0:
+            try:
+                ople = _get_pure_land()
+                ople.run_cycle(module_states)
+                self.current_state["pure_land"] = ople.get_status()
+            except Exception:
+                pass
+
+        # 221. OMNINirmāṇaEngine — nirmāṇa (period 1409)
+        if cycle_number % 1409 == 0:
+            try:
+                one = _get_nirmana()
+                one.run_cycle(module_states)
+                self.current_state["nirmana"] = one.get_status()
             except Exception:
                 pass
 
