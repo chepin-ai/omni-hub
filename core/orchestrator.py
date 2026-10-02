@@ -2334,6 +2334,22 @@ def _get_vajrayana():
     return _vajrayana
 
 
+def _get_sukhavati():
+    global _sukhavati
+    if _sukhavati is None:
+        from core.omni_sukhavati_engine import get_omni_sukhavati_engine
+        _sukhavati = get_omni_sukhavati_engine()
+    return _sukhavati
+
+
+def _get_amitabha():
+    global _amitabha
+    if _amitabha is None:
+        from core.omni_amitabha_engine import get_omni_amitabha_engine
+        _amitabha = get_omni_amitabha_engine()
+    return _amitabha
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -2403,7 +2419,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "236.0.0"
+    VERSION = "237.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -6566,6 +6582,24 @@ class OMNIHUBOrchestrator:
                 ovy = _get_vajrayana()
                 ovy.run_cycle(module_states)
                 self.current_state["vajrayana"] = ovy.get_status()
+            except Exception:
+                pass
+
+        # 278. OMNISukhāvatīEngine — sukhavati (period 1811)
+        if cycle_number % 1811 == 0:
+            try:
+                osv = _get_sukhavati()
+                osv.run_cycle(module_states)
+                self.current_state["sukhavati"] = osv.get_status()
+            except Exception:
+                pass
+
+        # 279. OMNIAmitābhaEngine — amitabha (period 1823)
+        if cycle_number % 1823 == 0:
+            try:
+                oam = _get_amitabha()
+                oam.run_cycle(module_states)
+                self.current_state["amitabha"] = oam.get_status()
             except Exception:
                 pass
 
