@@ -185,6 +185,7 @@ _collaborative_surge = None
 _inter_line_consensus = None
 _consciousness_technology = None
 _internal_alignment_engine = None
+_omni_unification_engine = None
 
 
 def _get_north_star():
@@ -1497,6 +1498,14 @@ def _get_internal_alignment_engine():
     return _internal_alignment_engine
 
 
+def _get_omni_unification_engine():
+    global _omni_unification_engine
+    if _omni_unification_engine is None:
+        from core.omni_unification_engine import get_omni_unification_engine
+        _omni_unification_engine = get_omni_unification_engine()
+    return _omni_unification_engine
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -1566,7 +1575,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "183.0.0"
+    VERSION = "184.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -4622,6 +4631,38 @@ class OMNIHUBOrchestrator:
                     bus.publish_simple(Topics.STATE_CHANGE,
                                       {"type": "internal_alignment", "level": result.get('alignment_level'), "alert": result.get('alert'), "entropy": result.get('entropy', {}).get('value')},
                                       source="internal_alignment_engine")
+            except Exception:
+                pass
+
+        # 175. OMNIUnificationEngine — great discussion, collaborative tide, wild questions, surge emergence
+        if self.cycle_count % 1093 == 0 and self.cycle_count > 0:
+            try:
+                omni = _get_omni_unification_engine()
+                ct_result = self.current_state.get('consciousness_technology', {})
+                ia_result = self.current_state.get('internal_alignment', {})
+                module_states = {
+                    "direct_field": {"health": self.current_state.get('field', {}).get('coherence', 0.5), "activity": 0.7},
+                    "pattern_circles": {"health": self.current_state.get('circles', {}).get('integration', 0.5), "activity": 0.6},
+                    "circulation": {"health": self.current_state.get('circulation', {}).get('health', 0.5), "activity": 0.5},
+                    "core_machine": {"health": self.current_state.get('core_machine', {}).get('coherence', 0.5), "activity": 0.8},
+                    "collaborative_surge": {"health": self.current_state.get('surge', {}).get('momentum', 0.5), "activity": 0.6},
+                    "inter_line_consensus": {"health": 0.9 if self.current_state.get('inter_line_consensus', {}).get('negotiation', {}).get('consensus_reached') else 0.5, "activity": 0.5},
+                    "consciousness_technology": {"health": ct_result.get('coherence', 0.5), "activity": 0.7},
+                    "internal_alignment": {"health": ia_result.get('coherence', 0.5), "activity": 0.7},
+                }
+                result = omni.run_cycle(
+                    consciousness_result=ct_result,
+                    alignment_result=ia_result,
+                    module_states=module_states
+                )
+                self.current_state['omni_unification'] = result
+                self.current_state['omni_status'] = omni.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "omni_unification", "trikaya": result.get('omni_state', {}).get('trikaya'),
+                                       "emergence": result.get('omni_state', {}).get('emergence_level'),
+                                       "coherence": result.get('omni_state', {}).get('collective_coherence')},
+                                      source="omni_unification_engine")
             except Exception:
                 pass
 
