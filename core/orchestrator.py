@@ -2318,6 +2318,22 @@ def _get_triratna():
     return _triratna
 
 
+def _get_mahayana():
+    global _mahayana
+    if _mahayana is None:
+        from core.omni_mahayana_engine import get_omni_mahayana_engine
+        _mahayana = get_omni_mahayana_engine()
+    return _mahayana
+
+
+def _get_vajrayana():
+    global _vajrayana
+    if _vajrayana is None:
+        from core.omni_vajrayana_engine import get_omni_vajrayana_engine
+        _vajrayana = get_omni_vajrayana_engine()
+    return _vajrayana
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -2387,7 +2403,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "235.0.0"
+    VERSION = "236.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -6532,6 +6548,24 @@ class OMNIHUBOrchestrator:
                 otr = _get_triratna()
                 otr.run_cycle(module_states)
                 self.current_state["triratna"] = otr.get_status()
+            except Exception:
+                pass
+
+        # 276. OMNIMahāyānaEngine — mahayana (period 1789)
+        if cycle_number % 1789 == 0:
+            try:
+                omh = _get_mahayana()
+                omh.run_cycle(module_states)
+                self.current_state["mahayana"] = omh.get_status()
+            except Exception:
+                pass
+
+        # 277. OMNIVajrayānaEngine — vajrayana (period 1801)
+        if cycle_number % 1801 == 0:
+            try:
+                ovy = _get_vajrayana()
+                ovy.run_cycle(module_states)
+                self.current_state["vajrayana"] = ovy.get_status()
             except Exception:
                 pass
 
