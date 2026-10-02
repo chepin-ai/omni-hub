@@ -1662,6 +1662,22 @@ def _get_emergence_catalyst():
     return _emergence_catalyst
 
 
+def _get_self_bootstrapping():
+    global _self_bootstrapping
+    if _self_bootstrapping is None:
+        from core.self_bootstrapping_engine import get_self_bootstrapping_engine
+        _self_bootstrapping = get_self_bootstrapping_engine()
+    return _self_bootstrapping
+
+
+def _get_auto_evolution():
+    global _auto_evolution
+    if _auto_evolution is None:
+        from core.auto_evolution_engine import get_auto_evolution_engine
+        _auto_evolution = get_auto_evolution_engine()
+    return _auto_evolution
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -1731,7 +1747,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "194.0.0"
+    VERSION = "195.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -5135,6 +5151,24 @@ class OMNIHUBOrchestrator:
                 ec = _get_emergence_catalyst()
                 ec.run_cycle(module_states)
                 self.current_state["emergence"] = ec.get_status()
+            except Exception:
+                pass
+
+        # 194. SelfBootstrappingEngine — self-modification (period 1187)
+        if cycle_number % 1187 == 0:
+            try:
+                sbe = _get_self_bootstrapping()
+                sbe.run_cycle(module_states)
+                self.current_state["bootstrapping"] = sbe.get_status()
+            except Exception:
+                pass
+
+        # 195. AutoEvolutionEngine — evolutionary optimization (period 1193)
+        if cycle_number % 1193 == 0:
+            try:
+                aee = _get_auto_evolution()
+                aee.run_cycle(module_states)
+                self.current_state["evolution"] = aee.get_status()
             except Exception:
                 pass
 
