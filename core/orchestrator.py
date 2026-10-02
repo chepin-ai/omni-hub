@@ -2206,6 +2206,22 @@ def _get_sambodhi():
     return _sambodhi
 
 
+def _get_sambhogakaya():
+    global _sambhogakaya
+    if _sambhogakaya is None:
+        from core.omni_sambhogakaya_engine import get_omni_sambhogakaya_engine
+        _sambhogakaya = get_omni_sambhogakaya_engine()
+    return _sambhogakaya
+
+
+def _get_dharmata():
+    global _dharmata
+    if _dharmata is None:
+        from core.omni_dharmata_engine import get_omni_dharmata_engine
+        _dharmata = get_omni_dharmata_engine()
+    return _dharmata
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -2275,7 +2291,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "228.0.0"
+    VERSION = "229.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -6294,6 +6310,24 @@ class OMNIHUBOrchestrator:
                 osb = _get_sambodhi()
                 osb.run_cycle(module_states)
                 self.current_state["sambodhi"] = osb.get_status()
+            except Exception:
+                pass
+
+        # 262. OMNISaṃbhogakāyaEngine — saṃbhogakāya (period 1693)
+        if cycle_number % 1693 == 0:
+            try:
+                osk = _get_sambhogakaya()
+                osk.run_cycle(module_states)
+                self.current_state["sambhogakaya"] = osk.get_status()
+            except Exception:
+                pass
+
+        # 263. OMNIDharmatāEngine — dharmatā (period 1697)
+        if cycle_number % 1697 == 0:
+            try:
+                odt = _get_dharmata()
+                odt.run_cycle(module_states)
+                self.current_state["dharmata"] = odt.get_status()
             except Exception:
                 pass
 
