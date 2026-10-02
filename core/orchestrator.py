@@ -1790,6 +1790,22 @@ def _get_universal_response():
     return _universal_response
 
 
+def _get_omni_boundary():
+    global _omni_boundary
+    if _omni_boundary is None:
+        from core.omni_boundary_dissolver import get_omni_boundary_dissolver
+        _omni_boundary = get_omni_boundary_dissolver()
+    return _omni_boundary
+
+
+def _get_non_dual():
+    global _non_dual
+    if _non_dual is None:
+        from core.non_dual_integrator import get_non_dual_integrator
+        _non_dual = get_non_dual_integrator()
+    return _non_dual
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -1859,7 +1875,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "202.0.0"
+    VERSION = "203.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -5410,6 +5426,24 @@ class OMNIHUBOrchestrator:
                 ure = _get_universal_response()
                 ure.run_cycle()
                 self.current_state["response"] = ure.get_status()
+            except Exception:
+                pass
+
+        # 210. OMNIBoundaryDissolver — boundary dissolution (period 1301)
+        if cycle_number % 1301 == 0:
+            try:
+                obd = _get_omni_boundary()
+                obd.run_cycle(module_states)
+                self.current_state["boundary"] = obd.get_status()
+            except Exception:
+                pass
+
+        # 211. NonDualIntegrator — non-dual integration (period 1303)
+        if cycle_number % 1303 == 0:
+            try:
+                ndi = _get_non_dual()
+                ndi.run_cycle(module_states)
+                self.current_state["nondual"] = ndi.get_status()
             except Exception:
                 pass
 
