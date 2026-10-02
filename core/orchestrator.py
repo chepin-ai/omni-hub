@@ -2382,6 +2382,22 @@ def _get_amoghasiddhi():
     return _amoghasiddhi
 
 
+def _get_vairocana():
+    global _vairocana
+    if _vairocana is None:
+        from core.omni_vairocana_engine import get_omni_vairocana_engine
+        _vairocana = get_omni_vairocana_engine()
+    return _vairocana
+
+
+def _get_garbhadhatu():
+    global _garbhadhatu
+    if _garbhadhatu is None:
+        from core.omni_garbhadhatu_engine import get_omni_garbhadhatu_engine
+        _garbhadhatu = get_omni_garbhadhatu_engine()
+    return _garbhadhatu
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -2451,7 +2467,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "239.0.0"
+    VERSION = "240.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -6668,6 +6684,24 @@ class OMNIHUBOrchestrator:
                 oam = _get_amoghasiddhi()
                 oam.run_cycle(module_states)
                 self.current_state["amoghasiddhi"] = oam.get_status()
+            except Exception:
+                pass
+
+        # 284. OMNIVairocanaEngine — vairocana (period 1871)
+        if cycle_number % 1871 == 0:
+            try:
+                ovi = _get_vairocana()
+                ovi.run_cycle(module_states)
+                self.current_state["vairocana"] = ovi.get_status()
+            except Exception:
+                pass
+
+        # 285. OMNIGarbhadhatuEngine — garbhadhatu (period 1873)
+        if cycle_number % 1873 == 0:
+            try:
+                ogd = _get_garbhadhatu()
+                ogd.run_cycle(module_states)
+                self.current_state["garbhadhatu"] = ogd.get_status()
             except Exception:
                 pass
 
