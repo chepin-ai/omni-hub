@@ -195,6 +195,7 @@ _adaptive_learning = None
 _cross_oracle = None
 _formal_self_reference = None
 _cognitive_topology = None
+_dashboard_backend = None
 
 
 def _get_north_star():
@@ -1587,6 +1588,14 @@ def _get_cognitive_topology():
     return _cognitive_topology
 
 
+def _get_dashboard_backend():
+    global _dashboard_backend
+    if _dashboard_backend is None:
+        from core.dashboard_backend import get_dashboard_backend
+        _dashboard_backend = get_dashboard_backend()
+    return _dashboard_backend
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -1656,7 +1665,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "189.0.0"
+    VERSION = "190.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -4958,6 +4967,21 @@ class OMNIHUBOrchestrator:
                                       source="cognitive_topology")
             except Exception:
                 pass
+
+        # 185. DashboardBackend — aggregate state, stream metrics, manage alerts (every cycle)
+        try:
+            db = _get_dashboard_backend()
+            module_states = {}
+            for line in ["ucif2", "lvlu", "lgt", "qfa", "vinf", "qgl",
+                         "qlv", "qtlv", "usrm", "cfts", "aiq", "omni"]:
+                module_states[line] = {
+                    "health": self.current_state.get(line, {}).get("health", 0.7),
+                    "coherence": self.current_state.get(line, {}).get("coherence", 0.6),
+                }
+            db.update(module_states)
+            self.current_state["dashboard_data"] = db.get_dashboard_data()
+        except Exception:
+            pass
 
         summary = {
             "cycle": self.cycle_count,

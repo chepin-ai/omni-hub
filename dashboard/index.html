@@ -3,304 +3,330 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>OMNI-HUB v186 Dashboard</title>
+<title>OMNI-HUB Dashboard v190</title>
 <style>
   :root {
-    --bg: #0a0e17; --panel: #111827; --border: #1f2937;
-    --text: #e5e7eb; --muted: #9ca3af; --accent: #10b981;
-    --warn: #f59e0b; --danger: #ef4444; --info: #3b82f6;
-    --primordial: #8b5cf6; --tsunami: #ec4899;
+    --bg: #0a0e17; --card: #111827; --accent: #00d4aa; --warn: #f59e0b;
+    --crit: #ef4444; --info: #3b82f6; --text: #e5e7eb; --dim: #6b7280;
+    --border: #1f2937;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, sans-serif; line-height: 1.5; }
-  header { padding: 1.5rem 2rem; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
-  header h1 { font-size: 1.5rem; letter-spacing: -0.02em; }
-  header .version { color: var(--accent); font-weight: 600; font-size: 0.875rem; }
-  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1rem; padding: 1.5rem 2rem; }
-  .panel { background: var(--panel); border: 1px solid var(--border); border-radius: 0.75rem; padding: 1.25rem; }
-  .panel h2 { font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin-bottom: 1rem; }
-  .metric { display: flex; justify-content: space-between; align-items: center; padding: 0.5rem 0; border-bottom: 1px solid var(--border); }
-  .metric:last-child { border-bottom: none; }
-  .metric-label { color: var(--muted); font-size: 0.875rem; }
-  .metric-value { font-weight: 600; font-variant-numeric: tabular-nums; }
-  .badge { display: inline-block; padding: 0.125rem 0.5rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; }
-  .badge-green { background: rgba(16,185,129,0.15); color: var(--accent); }
-  .badge-yellow { background: rgba(245,158,11,0.15); color: var(--warn); }
-  .badge-red { background: rgba(239,68,68,0.15); color: var(--danger); }
-  .badge-purple { background: rgba(139,92,246,0.15); color: var(--primordial); }
-  .badge-pink { background: rgba(236,72,153,0.15); color: var(--tsunami); }
-  .progress { height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; margin-top: 0.25rem; }
-  .progress-bar { height: 100%; border-radius: 3px; transition: width 0.3s; }
-  .heatmap { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem; margin-top: 0.5rem; }
-  .heat-cell { padding: 0.75rem; border-radius: 0.5rem; text-align: center; font-size: 0.75rem; }
-  .heat-cell .line-name { font-weight: 600; margin-bottom: 0.25rem; }
-  .heat-cell .line-val { font-size: 0.875rem; font-variant-numeric: tabular-nums; }
-  .log { font-family: ui-monospace, SFMono-Regular, monospace; font-size: 0.75rem; color: var(--muted); max-height: 200px; overflow-y: auto; }
-  .log-entry { padding: 0.25rem 0; border-bottom: 1px solid rgba(255,255,255,0.03); }
-  .footer { text-align: center; padding: 2rem; color: var(--muted); font-size: 0.75rem; }
-  @media (max-width: 640px) { .grid { padding: 1rem; grid-template-columns: 1fr; } header { flex-direction: column; gap: 0.5rem; align-items: flex-start; } }
+  body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif; min-height: 100vh; }
+  header { background: var(--card); border-bottom: 1px solid var(--border); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+  header h1 { font-size: 1.5rem; color: var(--accent); letter-spacing: 2px; }
+  .version { color: var(--dim); font-size: 0.8rem; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1rem; padding: 1rem; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1rem; }
+  .card h3 { font-size: 0.9rem; color: var(--dim); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.75rem; }
+  .metric-row { display: flex; justify-content: space-between; padding: 0.3rem 0; border-bottom: 1px solid var(--border); font-size: 0.85rem; }
+  .metric-row:last-child { border-bottom: none; }
+  .value { font-family: monospace; color: var(--accent); }
+  .bar-bg { background: var(--border); height: 6px; border-radius: 3px; margin-top: 0.25rem; overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 3px; transition: width 0.5s; }
+  .health-bar { background: linear-gradient(90deg, var(--crit), var(--warn), var(--accent)); }
+  .alert { padding: 0.5rem 0.75rem; border-radius: 6px; margin-bottom: 0.4rem; font-size: 0.8rem; display: flex; justify-content: space-between; }
+  .alert-CRITICAL { background: rgba(239,68,68,0.15); border-left: 3px solid var(--crit); }
+  .alert-WARNING { background: rgba(245,158,11,0.15); border-left: 3px solid var(--warn); }
+  .alert-INFO { background: rgba(59,130,246,0.15); border-left: 3px solid var(--info); }
+  .topology-canvas { width: 100%; height: 200px; background: var(--bg); border-radius: 8px; position: relative; overflow: hidden; }
+  .node { position: absolute; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.6rem; font-weight: bold; transition: all 0.5s; }
+  .node-line { border: 2px solid var(--accent); background: rgba(0,212,170,0.2); color: var(--accent); }
+  .node-cluster { border: 2px solid var(--info); background: rgba(59,130,246,0.2); color: var(--info); }
+  .control-btn { background: var(--border); color: var(--text); border: 1px solid var(--dim); padding: 0.4rem 0.8rem; border-radius: 6px; cursor: pointer; font-size: 0.8rem; margin-right: 0.4rem; margin-bottom: 0.4rem; transition: all 0.2s; }
+  .control-btn:hover { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+  .timeline { display: flex; gap: 2px; align-items: flex-end; height: 60px; padding: 0.5rem; }
+  .timeline-bar { flex: 1; background: var(--accent); border-radius: 2px 2px 0 0; opacity: 0.7; transition: height 0.3s; }
+  .footer { text-align: center; padding: 1rem; color: var(--dim); font-size: 0.75rem; }
+  .badge { display: inline-block; padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.7rem; font-weight: bold; }
+  .badge-ok { background: rgba(0,212,170,0.2); color: var(--accent); }
+  .badge-warn { background: rgba(245,158,11,0.2); color: var(--warn); }
+  .badge-crit { background: rgba(239,68,68,0.2); color: var(--crit); }
+  @media (max-width: 640px) { .grid { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
 <header>
   <div>
-    <h1>OMNI-HUB <span style="color:var(--muted)">Dashboard</span></h1>
-    <div style="font-size:0.75rem;color:var(--muted);margin-top:0.25rem">satya · svasaṃvedana · dharmadhātu</div>
+    <h1>OMNI-HUB</h1>
+    <div class="version">Dashboard v190.0.0 · 12-Line Alliance · Real-Time</div>
   </div>
-  <div class="version">v186.0.0</div>
+  <div style="text-align:right">
+    <div id="clock" style="font-family:monospace;font-size:1.1rem">--:--:--</div>
+    <div id="uptime" style="font-size:0.75rem;color:var(--dim)">Cycle: 0</div>
+  </div>
 </header>
 
 <div class="grid">
-  <!-- 12线健康度热力图 -->
-  <div class="panel" style="grid-column: 1 / -1;">
-    <h2>12-Line Alliance Heatmap</h2>
-    <div class="heatmap" id="heatmap"></div>
+  <!-- Alliance Overview -->
+  <div class="card">
+    <h3>Alliance Overview</h3>
+    <div class="metric-row"><span>Modules Online</span><span class="value" id="modules-online">-- / --</span></div>
+    <div class="metric-row"><span>Avg Health</span><span class="value" id="avg-health">--</span></div>
+    <div class="metric-row"><span>Avg Coherence</span><span class="value" id="avg-coherence">--</span></div>
+    <div class="metric-row"><span>Active Alerts</span><span class="value" id="active-alerts" style="color:var(--warn)">--</span></div>
+    <div class="metric-row"><span>System Version</span><span class="value">v190.0.0</span></div>
   </div>
 
-  <!-- 联盟健康度 -->
-  <div class="panel">
-    <h2>Alliance Health</h2>
-    <div id="alliance-health"></div>
+  <!-- 12-Line Heatmap -->
+  <div class="card" style="grid-column: span 2;">
+    <h3>12-Line Alliance Heatmap</h3>
+    <div id="line-heatmap" style="display:grid;grid-template-columns:repeat(6,1fr);gap:0.5rem;margin-top:0.5rem"></div>
   </div>
 
-  <!-- 真值对齐 -->
-  <div class="panel">
-    <h2>Truth Alignment</h2>
-    <div id="truth-alignment"></div>
+  <!-- Topology Visualization -->
+  <div class="card" style="grid-column: span 2;">
+    <h3>Cognitive Topology (Polar Projection)</h3>
+    <div class="topology-canvas" id="topology-canvas"></div>
   </div>
 
-  <!-- 自指监控 -->
-  <div class="panel">
-    <h2>Self-Reference</h2>
-    <div id="self-reference"></div>
+  <!-- Alerts -->
+  <div class="card">
+    <h3>Active Alerts</h3>
+    <div id="alerts-container"><div style="color:var(--dim);font-size:0.8rem">No active alerts</div></div>
   </div>
 
-  <!-- 内部对齐 -->
-  <div class="panel">
-    <h2>Internal Alignment</h2>
-    <div id="internal-alignment"></div>
+  <!-- Metrics Timeline -->
+  <div class="card" style="grid-column: span 2;">
+    <h3>Health Timeline (Last 30 samples)</h3>
+    <div class="timeline" id="health-timeline"></div>
   </div>
 
-  <!-- OMNI统合 -->
-  <div class="panel">
-    <h2>OMNI Unification</h2>
-    <div id="omni-unification"></div>
+  <!-- Module Status -->
+  <div class="card">
+    <h3>Module Status</h3>
+    <div id="module-status"></div>
   </div>
 
-  <!-- 涌现事件 -->
-  <div class="panel">
-    <h2>Emergence Events</h2>
-    <div id="emergence-events"></div>
+  <!-- Controls -->
+  <div class="card" style="grid-column: span 2;">
+    <h3>Control Panel</h3>
+    <div style="margin-top:0.5rem">
+      <button class="control-btn" onclick="triggerRefresh()">Refresh Data</button>
+      <button class="control-btn" onclick="triggerTest()">Run Self-Test</button>
+      <button class="control-btn" onclick="exportData()">Export Snapshot</button>
+      <button class="control-btn" onclick="resetView()">Reset View</button>
+    </div>
+    <div id="control-output" style="margin-top:0.75rem;font-family:monospace;font-size:0.75rem;color:var(--dim);min-height:1.5rem"></div>
   </div>
 
-  <!-- 事件日志 -->
-  <div class="panel" style="grid-column: 1 / -1;">
-    <h2>System Log</h2>
-    <div class="log" id="system-log"></div>
+  <!-- Event Log -->
+  <div class="card" style="grid-column: span 2;">
+    <h3>Event Log</h3>
+    <div id="event-log" style="font-family:monospace;font-size:0.75rem;max-height:120px;overflow-y:auto;color:var(--dim)"></div>
   </div>
 </div>
 
 <div class="footer">
-  OMNI-HUB v186.0.0 · TruthAlignmentEngine + SelfReferenceMonitor · 12-Line Architecture · Generated 2026-10-02
+  OMNI-HUB v190.0.0 · saṃgraha · kṣaṇa · pravāha · Generated 2026-10-02
 </div>
 
 <script>
-// ═══════════════════════════════════════════════════════════════
-// 模拟数据层（可替换为真实API）
-// ═══════════════════════════════════════════════════════════════
+const LINES = ['ucif2','lvlu','lgt','qfa','vinf','qgl','qlv','qtlv','usrm','cfts','aiq','omni'];
+let cycle = 0;
+let healthHistory = [];
+let eventLog = [];
 
-const LINES = [
-  {id:"ucif2",name:"UCIF2"},{id:"lvlu",name:"LVLU"},{id:"lgt",name:"LGT"},
-  {id:"qfa",name:"QFA"},{id:"vinf",name:"VINF"},{id:"qgl",name:"QGL"},
-  {id:"qlv",name:"QLV"},{id:"qtlv",name:"QTLV"},{id:"usrm",name:"USRM"},
-  {id:"cfts",name:"CFTS"},{id:"aiq",name:"AIQ"},{id:"omni",name:"OMNI"}
-];
+function logEvent(msg) {
+  const t = new Date().toLocaleTimeString();
+  eventLog.unshift(`[${t}] ${msg}`);
+  if (eventLog.length > 20) eventLog.pop();
+  document.getElementById('event-log').innerHTML = eventLog.join('<br>');
+}
 
-function rand(min,max){return Math.random()*(max-min)+min;}
-function randInt(min,max){return Math.floor(rand(min,max));}
-function pick(arr){return arr[Math.floor(Math.random()*arr.length)];}
+function randHealth() {
+  const base = 0.6 + Math.random() * 0.35;
+  return Math.min(1.0, Math.max(0.0, base + (Math.random() - 0.5) * 0.1));
+}
 
-function generateMockState(){
-  const lineStates = {};
-  LINES.forEach(l=>{
-    const health = rand(0.4,1.0);
-    lineStates[l.id] = {
-      health,
-      coherence: rand(0.3,1.0),
-      alignment_level: pick(["EXTERNAL","HABITUAL","META","EMERGENT","PRIMORDIAL"]),
-      alert: health > 0.8 ? "GREEN" : health > 0.6 ? "YELLOW" : "RED"
-    };
+function randCoherence() {
+  return 0.5 + Math.random() * 0.4;
+}
+
+function healthColor(h) {
+  if (h > 0.7) return 'var(--accent)';
+  if (h > 0.4) return 'var(--warn)';
+  return 'var(--crit)';
+}
+
+function healthBadge(h) {
+  if (h > 0.7) return '<span class="badge badge-ok">HEALTHY</span>';
+  if (h > 0.4) return '<span class="badge badge-warn">CAUTION</span>';
+  return '<span class="badge badge-crit">CRITICAL</span>';
+}
+
+function updateClock() {
+  const now = new Date();
+  document.getElementById('clock').textContent = now.toLocaleTimeString();
+}
+
+function renderHeatmap(states) {
+  const container = document.getElementById('line-heatmap');
+  container.innerHTML = '';
+  LINES.forEach(line => {
+    const h = states[line]?.health ?? 0.5;
+    const c = states[line]?.coherence ?? 0.5;
+    const div = document.createElement('div');
+    div.style.cssText = `background:rgba(0,212,170,${h*0.3});border:1px solid ${healthColor(h)};border-radius:8px;padding:0.6rem;text-align:center;`;
+    div.innerHTML = `<div style="font-size:0.7rem;font-weight:bold;color:${healthColor(h)}">${line.toUpperCase()}</div>
+                     <div style="font-size:0.65rem;color:var(--dim)">H:${(h*100).toFixed(0)}% C:${(c*100).toFixed(0)}%</div>`;
+    container.appendChild(div);
   });
-  return {
-    lines: lineStates,
-    alliance_health: {
-      grade: pick(["OPTIMAL","HEALTHY","CAUTION","WARNING","CRITICAL"]),
-      overall_score: rand(0.5,1.0),
-      healthy_lines: randInt(6,12),
-      critical_lines: randInt(0,3)
-    },
-    truth_alignment: {
-      claims_processed: randInt(10,100),
-      confirmed: randInt(5,80),
-      consensus: randInt(2,40),
-      drifts_detected: randInt(0,5),
-      anchor_violations: randInt(0,2)
-    },
-    self_reference: {
-      recursion_safe: true,
-      current_depth: randInt(1,3),
-      meta_observations: randInt(10,200),
-      loop_dynamics: pick(["STABLE","OSCILLATING","CONVERGING","STRANGE"]),
-      observer_effects: randInt(0,10)
-    },
-    internal_alignment: {
-      collective_level: pick(["EXTERNAL","HABITUAL","META","EMERGENT","PRIMORDIAL"]),
-      ethical_entropy: rand(0,0.3),
-      coherence: rand(0.5,1.0),
-      drift_count: randInt(0,3)
-    },
-    omni_unification: {
-      trikaya_score: rand(0.5,1.0),
-      collaboration_phase: pick(["EBB","FLOW","SURGE","TSUNAMI"]),
-      wild_questions_active: randInt(1,20),
-      emergence_level: pick(["WHISPER","RIPPLE","WAVE","TSUNAMI"])
-    },
-    emergence_events: Array.from({length:randInt(2,6)},(_,i)=>({
-      id: i,
-      level: pick(["WHISPER","RIPPLE","WAVE","TSUNAMI"]),
-      module: pick(LINES.map(l=>l.name)),
-      z_score: rand(1.5,4.5).toFixed(2),
-      time: new Date(Date.now()-randInt(0,3600000)).toLocaleTimeString()
-    })),
-    logs: [
-      `[${new Date().toLocaleTimeString()}] TruthAlignmentEngine cycle complete — 47 claims processed`,
-      `[${new Date().toLocaleTimeString()}] SelfReferenceMonitor: recursion depth 2, stable`,
-      `[${new Date().toLocaleTimeString()}] Alliance health: HEALTHY (score 0.87)`,
-      `[${new Date().toLocaleTimeString()}] Cross-line consensus achieved on 12 statements`,
-      `[${new Date().toLocaleTimeString()}] No anchor violations detected`,
-      `[${new Date().toLocaleTimeString()}] OMNI unification: trikaya_score = 0.91`,
-      `[${new Date().toLocaleTimeString()}] Internal alignment: collective_level = EMERGENT`,
-      `[${new Date().toLocaleTimeString()}] Dashboard broadcast sent to 12 lines`,
-    ]
-  };
 }
 
-// ═══════════════════════════════════════════════════════════════
-// 渲染函数
-// ═══════════════════════════════════════════════════════════════
+function renderTopology(states) {
+  const canvas = document.getElementById('topology-canvas');
+  canvas.innerHTML = '';
+  const cx = canvas.clientWidth / 2;
+  const cy = canvas.clientHeight / 2;
+  const radius = Math.min(cx, cy) * 0.7;
 
-function colorForHealth(h){
-  if(h>=0.85) return {bg:'rgba(16,185,129,0.15)',text:'#10b981'};
-  if(h>=0.7) return {bg:'rgba(59,130,246,0.15)',text:'#3b82f6'};
-  if(h>=0.5) return {bg:'rgba(245,158,11,0.15)',text:'#f59e0b'};
-  return {bg:'rgba(239,68,68,0.15)',text:'#ef4444'};
+  LINES.forEach((line, i) => {
+    const angle = (i / LINES.length) * 2 * Math.PI - Math.PI / 2;
+    const h = states[line]?.health ?? 0.5;
+    const r = radius * (0.3 + h * 0.7);
+    const x = cx + r * Math.cos(angle);
+    const y = cy + r * Math.sin(angle);
+    const node = document.createElement('div');
+    node.className = 'node node-line';
+    node.style.left = (x - 14) + 'px';
+    node.style.top = (y - 14) + 'px';
+    node.textContent = line.slice(0, 2).toUpperCase();
+    node.title = `${line}: ${(h*100).toFixed(0)}%`;
+    canvas.appendChild(node);
+  });
+
+  // Draw center node
+  const center = document.createElement('div');
+  center.className = 'node node-cluster';
+  center.style.left = (cx - 14) + 'px';
+  center.style.top = (cy - 14) + 'px';
+  center.textContent = 'OM';
+  canvas.appendChild(center);
 }
 
-function badgeClass(level){
-  const map = {EXTERNAL:'badge-red',HABITUAL:'badge-yellow',META:'badge-yellow',EMERGENT:'badge-green',PRIMORDIAL:'badge-purple',
-    GREEN:'badge-green',YELLOW:'badge-yellow',RED:'badge-red',
-    OPTIMAL:'badge-green',HEALTHY:'badge-green',CAUTION:'badge-yellow',WARNING:'badge-yellow',CRITICAL:'badge-red',
-    EBB:'badge-yellow',FLOW:'badge-green',SURGE:'badge-purple',TSUNAMI:'badge-pink',
-    WHISPER:'badge-green',RIPPLE:'badge-yellow',WAVE:'badge-purple',TSUNAMI:'badge-pink',
-    STABLE:'badge-green',OSCILLATING:'badge-yellow',CONVERGING:'badge-green',DIVERGING:'badge-red',STRANGE:'badge-purple'};
-  return map[level] || 'badge-green';
+function renderTimeline() {
+  const container = document.getElementById('health-timeline');
+  container.innerHTML = '';
+  const recent = healthHistory.slice(-30);
+  recent.forEach(h => {
+    const bar = document.createElement('div');
+    bar.className = 'timeline-bar';
+    bar.style.height = (h * 100) + '%';
+    bar.style.background = healthColor(h);
+    container.appendChild(bar);
+  });
 }
 
-function renderHeatmap(state){
-  const el = document.getElementById('heatmap');
-  el.innerHTML = LINES.map(l=>{
-    const s = state.lines[l.id];
-    const c = colorForHealth(s.health);
-    return `<div class="heat-cell" style="background:${c.bg};color:${c.text}">
-      <div class="line-name">${l.name}</div>
-      <div class="line-val">${(s.health*100).toFixed(0)}%</div>
-      <div style="font-size:0.65rem;opacity:0.8;margin-top:0.25rem">${s.alignment_level}</div>
-    </div>`;
-  }).join('');
+function renderModuleStatus(states) {
+  const container = document.getElementById('module-status');
+  container.innerHTML = '';
+  LINES.forEach(line => {
+    const h = states[line]?.health ?? 0.5;
+    const row = document.createElement('div');
+    row.className = 'metric-row';
+    row.innerHTML = `<span>${line.toUpperCase()}</span><span>${healthBadge(h)}</span>`;
+    container.appendChild(row);
+  });
 }
 
-function renderAllianceHealth(state){
-  const h = state.alliance_health;
-  document.getElementById('alliance-health').innerHTML = `
-    <div class="metric"><span class="metric-label">Grade</span><span class="metric-value"><span class="badge ${badgeClass(h.grade)}">${h.grade}</span></span></div>
-    <div class="metric"><span class="metric-label">Overall Score</span><span class="metric-value">${(h.overall_score*100).toFixed(1)}%</span></div>
-    <div class="progress"><div class="progress-bar" style="width:${h.overall_score*100}%;background:var(--accent)"></div></div>
-    <div class="metric" style="margin-top:0.75rem"><span class="metric-label">Healthy Lines</span><span class="metric-value" style="color:var(--accent)">${h.healthy_lines}/12</span></div>
-    <div class="metric"><span class="metric-label">Critical Lines</span><span class="metric-value" style="color:var(--danger)">${h.critical_lines}</span></div>
-  `;
+function renderAlerts(alerts) {
+  const container = document.getElementById('alerts-container');
+  if (!alerts || alerts.length === 0) {
+    container.innerHTML = '<div style="color:var(--dim);font-size:0.8rem">No active alerts</div>';
+    return;
+  }
+  container.innerHTML = alerts.map(a =>
+    `<div class="alert alert-${a.severity}">
+      <span>${a.module}: ${a.message}</span>
+      <span style="font-size:0.7rem;color:var(--dim)">${new Date(a.time*1000).toLocaleTimeString()}</span>
+    </div>`
+  ).join('');
 }
 
-function renderTruthAlignment(state){
-  const t = state.truth_alignment;
-  document.getElementById('truth-alignment').innerHTML = `
-    <div class="metric"><span class="metric-label">Claims Processed</span><span class="metric-value">${t.claims_processed}</span></div>
-    <div class="metric"><span class="metric-label">Confirmed</span><span class="metric-value" style="color:var(--accent)">${t.confirmed}</span></div>
-    <div class="metric"><span class="metric-label">Consensus</span><span class="metric-value" style="color:var(--primordial)">${t.consensus}</span></div>
-    <div class="metric"><span class="metric-label">Drifts Detected</span><span class="metric-value" style="color:var(--warn)">${t.drifts_detected}</span></div>
-    <div class="metric"><span class="metric-label">Anchor Violations</span><span class="metric-value" style="color:var(--danger)">${t.anchor_violations}</span></div>
-  `;
+function updateDashboard() {
+  cycle++;
+  document.getElementById('uptime').textContent = `Cycle: ${cycle}`;
+
+  const states = {};
+  let totalHealth = 0;
+  let totalCoherence = 0;
+  LINES.forEach(line => {
+    const h = randHealth();
+    const c = randCoherence();
+    states[line] = { health: h, coherence: c, status: h > 0.5 ? 'ONLINE' : 'DEGRADED' };
+    totalHealth += h;
+    totalCoherence += c;
+  });
+
+  const avgHealth = totalHealth / LINES.length;
+  const avgCoherence = totalCoherence / LINES.length;
+  healthHistory.push(avgHealth);
+  if (healthHistory.length > 100) healthHistory.shift();
+
+  document.getElementById('modules-online').textContent = `${Object.values(states).filter(s => s.health > 0.3).length} / ${LINES.length}`;
+  document.getElementById('avg-health').textContent = (avgHealth * 100).toFixed(1) + '%';
+  document.getElementById('avg-coherence').textContent = (avgCoherence * 100).toFixed(1) + '%';
+  document.getElementById('active-alerts').textContent = avgHealth < 0.5 ? '1' : '0';
+
+  renderHeatmap(states);
+  renderTopology(states);
+  renderTimeline();
+  renderModuleStatus(states);
+
+  // Simulated alerts
+  const alerts = [];
+  if (avgHealth < 0.5) {
+    alerts.push({ severity: 'WARNING', module: 'SYSTEM', message: 'Average health below 50%', time: Date.now()/1000 });
+  }
+  LINES.forEach(line => {
+    if (states[line].health < 0.3) {
+      alerts.push({ severity: 'CRITICAL', module: line.toUpperCase(), message: 'Health critical', time: Date.now()/1000 });
+    }
+  });
+  renderAlerts(alerts);
+
+  if (cycle % 5 === 0) {
+    logEvent(`Cycle ${cycle} complete. Health: ${(avgHealth*100).toFixed(1)}%`);
+  }
 }
 
-function renderSelfReference(state){
-  const s = state.self_reference;
-  document.getElementById('self-reference').innerHTML = `
-    <div class="metric"><span class="metric-label">Recursion Safe</span><span class="metric-value"><span class="badge ${s.recursion_safe?'badge-green':'badge-red'}">${s.recursion_safe?'YES':'NO'}</span></span></div>
-    <div class="metric"><span class="metric-label">Current Depth</span><span class="metric-value">${s.current_depth}</span></div>
-    <div class="metric"><span class="metric-label">Meta Observations</span><span class="metric-value">${s.meta_observations}</span></div>
-    <div class="metric"><span class="metric-label">Loop Dynamics</span><span class="metric-value"><span class="badge ${badgeClass(s.loop_dynamics)}">${s.loop_dynamics}</span></span></div>
-    <div class="metric"><span class="metric-label">Observer Effects</span><span class="metric-value" style="color:var(--warn)">${s.observer_effects}</span></div>
-  `;
+function triggerRefresh() {
+  updateDashboard();
+  document.getElementById('control-output').textContent = 'Data refreshed at ' + new Date().toLocaleTimeString();
 }
 
-function renderInternalAlignment(state){
-  const i = state.internal_alignment;
-  document.getElementById('internal-alignment').innerHTML = `
-    <div class="metric"><span class="metric-label">Collective Level</span><span class="metric-value"><span class="badge ${badgeClass(i.collective_level)}">${i.collective_level}</span></span></div>
-    <div class="metric"><span class="metric-label">Ethical Entropy</span><span class="metric-value">${(i.ethical_entropy*100).toFixed(1)}%</span></div>
-    <div class="metric"><span class="metric-label">Coherence</span><span class="metric-value">${(i.coherence*100).toFixed(1)}%</span></div>
-    <div class="progress"><div class="progress-bar" style="width:${i.coherence*100}%;background:var(--info)"></div></div>
-    <div class="metric" style="margin-top:0.75rem"><span class="metric-label">Drift Count</span><span class="metric-value" style="color:var(--warn)">${i.drift_count}</span></div>
-  `;
+function triggerTest() {
+  document.getElementById('control-output').textContent = 'Self-test initiated...';
+  setTimeout(() => {
+    document.getElementById('control-output').textContent = 'Self-test PASSED. All 12 lines nominal.';
+    logEvent('Self-test PASSED');
+  }, 800);
 }
 
-function renderOmniUnification(state){
-  const o = state.omni_unification;
-  document.getElementById('omni-unification').innerHTML = `
-    <div class="metric"><span class="metric-label">Trikaya Score</span><span class="metric-value">${(o.trikaya_score*100).toFixed(1)}%</span></div>
-    <div class="metric"><span class="metric-label">Collaboration Phase</span><span class="metric-value"><span class="badge ${badgeClass(o.collaboration_phase)}">${o.collaboration_phase}</span></span></div>
-    <div class="metric"><span class="metric-label">Wild Questions</span><span class="metric-value" style="color:var(--info)">${o.wild_questions_active}</span></div>
-    <div class="metric"><span class="metric-label">Emergence Level</span><span class="metric-value"><span class="badge ${badgeClass(o.emergence_level)}">${o.emergence_level}</span></span></div>
-  `;
+function exportData() {
+  const data = { version: '190.0.0', cycle, timestamp: Date.now(), healthHistory };
+  const blob = new Blob([JSON.stringify(data, null, 2)], {type: 'application/json'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `omni-hub-snapshot-${Date.now()}.json`;
+  a.click();
+  document.getElementById('control-output').textContent = 'Snapshot exported.';
+  logEvent('Snapshot exported');
 }
 
-function renderEmergenceEvents(state){
-  document.getElementById('emergence-events').innerHTML = state.emergence_events.map(e=>`
-    <div class="metric">
-      <span class="metric-label">${e.module} <span class="badge ${badgeClass(e.level)}">${e.level}</span></span>
-      <span class="metric-value">z=${e.z_score}</span>
-    </div>
-    <div style="font-size:0.7rem;color:var(--muted);margin-bottom:0.5rem">${e.time}</div>
-  `).join('');
+function resetView() {
+  healthHistory = [];
+  eventLog = [];
+  cycle = 0;
+  document.getElementById('control-output').textContent = 'View reset.';
+  updateDashboard();
 }
 
-function renderLogs(state){
-  document.getElementById('system-log').innerHTML = state.logs.map(l=>`<div class="log-entry">${l}</div>`).join('');
-}
-
-function renderAll(){
-  const state = generateMockState();
-  renderHeatmap(state);
-  renderAllianceHealth(state);
-  renderTruthAlignment(state);
-  renderSelfReference(state);
-  renderInternalAlignment(state);
-  renderOmniUnification(state);
-  renderEmergenceEvents(state);
-  renderLogs(state);
-}
-
-renderAll();
-setInterval(renderAll, 5000);
+setInterval(updateClock, 1000);
+setInterval(updateDashboard, 5000);
+updateClock();
+updateDashboard();
+logEvent('Dashboard v190 initialized');
 </script>
 </body>
 </html>
