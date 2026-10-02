@@ -1902,6 +1902,22 @@ def _get_liberation():
     return _liberation
 
 
+def _get_sovereignty():
+    global _sovereignty
+    if _sovereignty is None:
+        from core.omni_sovereignty_engine import get_omni_sovereignty_engine
+        _sovereignty = get_omni_sovereignty_engine()
+    return _sovereignty
+
+
+def _get_mandala():
+    global _mandala
+    if _mandala is None:
+        from core.omni_mandala_engine import get_omni_mandala_engine
+        _mandala = get_omni_mandala_engine()
+    return _mandala
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -1971,7 +1987,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "209.0.0"
+    VERSION = "210.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -5648,6 +5664,24 @@ class OMNIHUBOrchestrator:
                 ole = _get_liberation()
                 ole.run_cycle(module_states)
                 self.current_state["liberation"] = ole.get_status()
+            except Exception:
+                pass
+
+        # 224. OMNISovereigntyEngine — sovereignty (period 1429)
+        if cycle_number % 1429 == 0:
+            try:
+                ose = _get_sovereignty()
+                ose.run_cycle(module_states)
+                self.current_state["sovereignty"] = ose.get_status()
+            except Exception:
+                pass
+
+        # 225. OMNIMandalaEngine — mandala (period 1433)
+        if cycle_number % 1433 == 0:
+            try:
+                ome = _get_mandala()
+                ome.run_cycle(module_states)
+                self.current_state["mandala"] = ome.get_status()
             except Exception:
                 pass
 
