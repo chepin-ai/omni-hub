@@ -2430,6 +2430,22 @@ def _get_dzogchen():
     return _dzogchen
 
 
+def _get_lamdre():
+    global _lamdre
+    if _lamdre is None:
+        from core.omni_lamdre_engine import get_omni_lamdre_engine
+        _lamdre = get_omni_lamdre_engine()
+    return _lamdre
+
+
+def _get_lamrim():
+    global _lamrim
+    if _lamrim is None:
+        from core.omni_lamrim_engine import get_omni_lamrim_engine
+        _lamrim = get_omni_lamrim_engine()
+    return _lamrim
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -2499,7 +2515,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "242.0.0"
+    VERSION = "243.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -6770,6 +6786,24 @@ class OMNIHUBOrchestrator:
                 odz = _get_dzogchen()
                 odz.run_cycle(module_states)
                 self.current_state["dzogchen"] = odz.get_status()
+            except Exception:
+                pass
+
+        # 290. OMNILamdréEngine — lamdre (period 1907)
+        if cycle_number % 1907 == 0:
+            try:
+                old = _get_lamdre()
+                old.run_cycle(module_states)
+                self.current_state["lamdre"] = old.get_status()
+            except Exception:
+                pass
+
+        # 291. OMNILamrimEngine — lamrim (period 1913)
+        if cycle_number % 1913 == 0:
+            try:
+                olr = _get_lamrim()
+                olr.run_cycle(module_states)
+                self.current_state["lamrim"] = olr.get_status()
             except Exception:
                 pass
 
