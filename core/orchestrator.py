@@ -186,6 +186,7 @@ _inter_line_consensus = None
 _consciousness_technology = None
 _internal_alignment_engine = None
 _omni_unification_engine = None
+_dashboard_omni_layer = None
 
 
 def _get_north_star():
@@ -1506,6 +1507,14 @@ def _get_omni_unification_engine():
     return _omni_unification_engine
 
 
+def _get_dashboard_omni_layer():
+    global _dashboard_omni_layer
+    if _dashboard_omni_layer is None:
+        from core.dashboard_omni_layer import get_dashboard_omni_layer
+        _dashboard_omni_layer = get_dashboard_omni_layer()
+    return _dashboard_omni_layer
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -1575,7 +1584,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "184.0.0"
+    VERSION = "185.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -4663,6 +4672,44 @@ class OMNIHUBOrchestrator:
                                        "emergence": result.get('omni_state', {}).get('emergence_level'),
                                        "coherence": result.get('omni_state', {}).get('collective_coherence')},
                                       source="omni_unification_engine")
+            except Exception:
+                pass
+
+        # 176. DashboardOMNILayer — 12-line dashboard, emergence broadcast, auto-loop, primordial×tsunami validation
+        if self.cycle_count % 1094 == 0 and self.cycle_count > 0:
+            try:
+                dash = _get_dashboard_omni_layer()
+                # Build line states from current state
+                line_states = {}
+                for line in ["ucif2", "lvlu", "lgt", "qfa", "vinf", "qgl", "qlv", "qtlv", "usrm", "cfts", "aiq", "omni"]:
+                    line_states[line] = {
+                        "health": self.current_state.get(line, {}).get("health", 0.5),
+                        "coherence": self.current_state.get(line, {}).get("coherence", 0.5),
+                        "alignment_level": self.current_state.get(line, {}).get("alignment_level", "EXTERNAL"),
+                        "consciousness_status": self.current_state.get(line, {}).get("consciousness_status", ""),
+                        "alert": self.current_state.get(line, {}).get("alert", "GREEN"),
+                    }
+                # Get OMNI and alignment results
+                omni_result = self.current_state.get("omni_unification", {})
+                alignment_result = self.current_state.get("internal_alignment", {})
+                # Run dashboard cycle
+                result = dash.run_cycle(
+                    line_states=line_states,
+                    omni_result=omni_result,
+                    alignment_result=alignment_result
+                )
+                self.current_state["dashboard_omni"] = result
+                self.current_state["dashboard_status"] = dash.get_status()
+                # Generate report every ~10 dashboard cycles
+                if self.cycle_count % 10940 == 0:
+                    report = dash.generate_report()
+                    self.current_state["dashboard_report"] = report
+                # Publish
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "dashboard_omni", "grade": result.get("alliance_health", {}).get("grade"),
+                                       "overall_score": result.get("alliance_health", {}).get("overall_score")},
+                                      source="dashboard_omni_layer")
             except Exception:
                 pass
 
