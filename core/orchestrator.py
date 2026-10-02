@@ -1710,6 +1710,22 @@ def _get_chaos_injector():
     return _chaos_injector
 
 
+def _get_pre_unification():
+    global _pre_unification
+    if _pre_unification is None:
+        from core.pre_unification_validator import get_pre_unification_validator
+        _pre_unification = get_pre_unification_validator()
+    return _pre_unification
+
+
+def _get_integration_verifier():
+    global _integration_verifier
+    if _integration_verifier is None:
+        from core.integration_verifier import get_integration_verifier
+        _integration_verifier = get_integration_verifier()
+    return _integration_verifier
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -1779,7 +1795,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "197.0.0"
+    VERSION = "198.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -5237,6 +5253,24 @@ class OMNIHUBOrchestrator:
                 ci = _get_chaos_injector()
                 ci.run_cycle(module_states)
                 self.current_state["chaos"] = ci.get_status()
+            except Exception:
+                pass
+
+        # 200. PreUnificationValidator — pre-unification checks (period 1229)
+        if cycle_number % 1229 == 0:
+            try:
+                puv = _get_pre_unification()
+                puv.run_cycle(module_states)
+                self.current_state["pre_unification"] = puv.get_status()
+            except Exception:
+                pass
+
+        # 201. IntegrationVerifier — integration verification (period 1231)
+        if cycle_number % 1231 == 0:
+            try:
+                iv = _get_integration_verifier()
+                iv.run_cycle(module_states)
+                self.current_state["integration"] = iv.get_status()
             except Exception:
                 pass
 
