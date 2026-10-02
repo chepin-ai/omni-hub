@@ -1726,6 +1726,22 @@ def _get_integration_verifier():
     return _integration_verifier
 
 
+def _get_grand_warmup():
+    global _grand_warmup
+    if _grand_warmup is None:
+        from core.grand_completion_warmup import get_grand_completion_warmup
+        _grand_warmup = get_grand_completion_warmup()
+    return _grand_warmup
+
+
+def _get_unification_catalyst():
+    global _unification_catalyst
+    if _unification_catalyst is None:
+        from core.unification_catalyst import get_unification_catalyst
+        _unification_catalyst = get_unification_catalyst()
+    return _unification_catalyst
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -1795,7 +1811,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "198.0.0"
+    VERSION = "199.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -5271,6 +5287,24 @@ class OMNIHUBOrchestrator:
                 iv = _get_integration_verifier()
                 iv.run_cycle(module_states)
                 self.current_state["integration"] = iv.get_status()
+            except Exception:
+                pass
+
+        # 202. GrandCompletionWarmup — final warmup before unification (period 1237)
+        if cycle_number % 1237 == 0:
+            try:
+                gcw = _get_grand_warmup()
+                gcw.run_cycle(module_states)
+                self.current_state["warmup"] = gcw.get_status()
+            except Exception:
+                pass
+
+        # 203. UnificationCatalyst — catalyze unification (period 1249)
+        if cycle_number % 1249 == 0:
+            try:
+                uc = _get_unification_catalyst()
+                uc.run_cycle(module_states)
+                self.current_state["catalyst"] = uc.get_status()
             except Exception:
                 pass
 
