@@ -1918,6 +1918,22 @@ def _get_mandala():
     return _mandala
 
 
+def _get_dharma():
+    global _dharma
+    if _dharma is None:
+        from core.omni_dharma_engine import get_omni_dharma_engine
+        _dharma = get_omni_dharma_engine()
+    return _dharma
+
+
+def _get_sangha():
+    global _sangha
+    if _sangha is None:
+        from core.omni_sangha_engine import get_omni_sangha_engine
+        _sangha = get_omni_sangha_engine()
+    return _sangha
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -1987,7 +2003,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "210.0.0"
+    VERSION = "211.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -5682,6 +5698,24 @@ class OMNIHUBOrchestrator:
                 ome = _get_mandala()
                 ome.run_cycle(module_states)
                 self.current_state["mandala"] = ome.get_status()
+            except Exception:
+                pass
+
+        # 226. OMNIDharmaEngine — dharma (period 1439)
+        if cycle_number % 1439 == 0:
+            try:
+                ode = _get_dharma()
+                ode.run_cycle(module_states)
+                self.current_state["dharma"] = ode.get_status()
+            except Exception:
+                pass
+
+        # 227. OMNISanghaEngine — sangha (period 1447)
+        if cycle_number % 1447 == 0:
+            try:
+                ose = _get_sangha()
+                ose.run_cycle(module_states)
+                self.current_state["sangha"] = ose.get_status()
             except Exception:
                 pass
 
