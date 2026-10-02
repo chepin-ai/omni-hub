@@ -1934,6 +1934,22 @@ def _get_sangha():
     return _sangha
 
 
+def _get_bodhi():
+    global _bodhi
+    if _bodhi is None:
+        from core.omni_bodhi_engine import get_omni_bodhi_engine
+        _bodhi = get_omni_bodhi_engine()
+    return _bodhi
+
+
+def _get_marga():
+    global _marga
+    if _marga is None:
+        from core.omni_marga_engine import get_omni_marga_engine
+        _marga = get_omni_marga_engine()
+    return _marga
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -2003,7 +2019,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "211.0.0"
+    VERSION = "212.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -5716,6 +5732,24 @@ class OMNIHUBOrchestrator:
                 ose = _get_sangha()
                 ose.run_cycle(module_states)
                 self.current_state["sangha"] = ose.get_status()
+            except Exception:
+                pass
+
+        # 228. OMNIBodhiEngine — bodhi (period 1451)
+        if cycle_number % 1451 == 0:
+            try:
+                obe = _get_bodhi()
+                obe.run_cycle(module_states)
+                self.current_state["bodhi"] = obe.get_status()
+            except Exception:
+                pass
+
+        # 229. OMNIMārgaEngine — mārga (period 1453)
+        if cycle_number % 1453 == 0:
+            try:
+                ome = _get_marga()
+                ome.run_cycle(module_states)
+                self.current_state["marga"] = ome.get_status()
             except Exception:
                 pass
 
