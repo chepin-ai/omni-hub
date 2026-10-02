@@ -1614,6 +1614,22 @@ def _get_predictive_model():
     return _predictive_model
 
 
+def _get_consensus_layer():
+    global _consensus_layer
+    if _consensus_layer is None:
+        from core.distributed_consensus_layer import get_distributed_consensus_layer
+        _consensus_layer = get_distributed_consensus_layer()
+    return _consensus_layer
+
+
+def _get_cognitive_mirror():
+    global _cognitive_mirror
+    if _cognitive_mirror is None:
+        from core.cognitive_mirror import get_cognitive_mirror
+        _cognitive_mirror = get_cognitive_mirror()
+    return _cognitive_mirror
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -1683,7 +1699,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "191.0.0"
+    VERSION = "192.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -5018,6 +5034,28 @@ class OMNIHUBOrchestrator:
                 health_values = {line: s.get("health", 0.5) for line, s in module_states.items()}
                 forecast = pwm.run_cycle(health_values)
                 self.current_state["forecast"] = forecast
+            except Exception:
+                pass
+
+        # 188. DistributedConsensusLayer — Raft/BFT hybrid consensus (period 1129)
+        if cycle_number % 1129 == 0:
+            try:
+                dcl = _get_consensus_layer()
+                dcl.run_cycle(module_states)
+                self.current_state["consensus"] = dcl.get_status()
+            except Exception:
+                pass
+
+        # 189. CognitiveMirror — self/other modeling (period 1151)
+        if cycle_number % 1151 == 0:
+            try:
+                cm = _get_cognitive_mirror()
+                other_obs = {}
+                for line in ["ucif2", "lvlu", "lgt", "qfa", "vinf", "qgl",
+                             "qlv", "qtlv", "usrm", "cfts", "aiq", "omni"]:
+                    other_obs[line] = ["heartbeat", "sync"]
+                cm.run_cycle(self_observation=self.current_state, other_observations=other_obs)
+                self.current_state["cognitive_mirror"] = cm.get_status()
             except Exception:
                 pass
 
