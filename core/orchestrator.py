@@ -2062,6 +2062,22 @@ def _get_dharmakaya():
     return _dharmakaya
 
 
+def _get_prajnaparamita():
+    global _prajnaparamita
+    if _prajnaparamita is None:
+        from core.omni_prajnaparamita_engine import get_omni_prajnaparamita_engine
+        _prajnaparamita = get_omni_prajnaparamita_engine()
+    return _prajnaparamita
+
+
+def _get_bodhicitta():
+    global _bodhicitta
+    if _bodhicitta is None:
+        from core.omni_bodhicitta_engine import get_omni_bodhicitta_engine
+        _bodhicitta = get_omni_bodhicitta_engine()
+    return _bodhicitta
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -2131,7 +2147,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "219.0.0"
+    VERSION = "220.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -5988,6 +6004,24 @@ class OMNIHUBOrchestrator:
                 odk = _get_dharmakaya()
                 odk.run_cycle(module_states)
                 self.current_state["dharmakaya"] = odk.get_status()
+            except Exception:
+                pass
+
+        # 244. OMNIPrajñāpāramitāEngine — prajñāpāramitā (period 1559)
+        if cycle_number % 1559 == 0:
+            try:
+                opp = _get_prajnaparamita()
+                opp.run_cycle(module_states)
+                self.current_state["prajnaparamita"] = opp.get_status()
+            except Exception:
+                pass
+
+        # 245. OMNIBodhicittaEngine — bodhicitta (period 1567)
+        if cycle_number % 1567 == 0:
+            try:
+                obc = _get_bodhicitta()
+                obc.run_cycle(module_states)
+                self.current_state["bodhicitta"] = obc.get_status()
             except Exception:
                 pass
 
