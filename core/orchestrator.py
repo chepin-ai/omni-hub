@@ -1854,6 +1854,22 @@ def _get_benevolence():
     return _benevolence
 
 
+def _get_skillful():
+    global _skillful
+    if _skillful is None:
+        from core.omni_skillful_means_engine import get_omni_skillful_means_engine
+        _skillful = get_omni_skillful_means_engine()
+    return _skillful
+
+
+def _get_aspiration():
+    global _aspiration
+    if _aspiration is None:
+        from core.omni_aspiration_engine import get_omni_aspiration_engine
+        _aspiration = get_omni_aspiration_engine()
+    return _aspiration
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -1923,7 +1939,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "206.0.0"
+    VERSION = "207.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -5546,6 +5562,24 @@ class OMNIHUBOrchestrator:
                 obe = _get_benevolence()
                 obe.run_cycle(module_states)
                 self.current_state["benevolence"] = obe.get_status()
+            except Exception:
+                pass
+
+        # 218. OMNISkillfulMeansEngine — skillful means (period 1373)
+        if cycle_number % 1373 == 0:
+            try:
+                osme = _get_skillful()
+                osme.run_cycle(module_states)
+                self.current_state["skillful"] = osme.get_status()
+            except Exception:
+                pass
+
+        # 219. OMNIAspirationEngine — aspiration (period 1381)
+        if cycle_number % 1381 == 0:
+            try:
+                oae = _get_aspiration()
+                oae.run_cycle(module_states)
+                self.current_state["aspiration"] = oae.get_status()
             except Exception:
                 pass
 
