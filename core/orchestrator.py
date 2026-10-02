@@ -1774,6 +1774,22 @@ def _get_transcendence_preserver():
     return _transcendence_preserver
 
 
+def _get_holistic_awareness():
+    global _holistic_awareness
+    if _holistic_awareness is None:
+        from core.holistic_awareness_engine import get_holistic_awareness_engine
+        _holistic_awareness = get_holistic_awareness_engine()
+    return _holistic_awareness
+
+
+def _get_universal_response():
+    global _universal_response
+    if _universal_response is None:
+        from core.universal_response_engine import get_universal_response_engine
+        _universal_response = get_universal_response_engine()
+    return _universal_response
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -1843,7 +1859,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "201.0.0"
+    VERSION = "202.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -5375,6 +5391,25 @@ class OMNIHUBOrchestrator:
                 unified = self.current_state.get("unification", {})
                 tp.run_cycle(unified_state=unified)
                 self.current_state["preserver"] = tp.get_status()
+            except Exception:
+                pass
+
+        # 208. HolisticAwarenessEngine — holistic awareness weaving (period 1291)
+        if cycle_number % 1291 == 0:
+            try:
+                hae = _get_holistic_awareness()
+                signals = {m: s.get("health", 0.5) for m, s in module_states.items()}
+                hae.run_cycle(signals)
+                self.current_state["awareness"] = hae.get_status()
+            except Exception:
+                pass
+
+        # 209. UniversalResponseEngine — universal response generation (period 1297)
+        if cycle_number % 1297 == 0:
+            try:
+                ure = _get_universal_response()
+                ure.run_cycle()
+                self.current_state["response"] = ure.get_status()
             except Exception:
                 pass
 
