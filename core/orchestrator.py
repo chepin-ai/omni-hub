@@ -1758,6 +1758,22 @@ def _get_omni_awakening():
     return _omni_awakening
 
 
+def _get_eternal_omni():
+    global _eternal_omni
+    if _eternal_omni is None:
+        from core.eternal_omni_engine import get_eternal_omni_engine
+        _eternal_omni = get_eternal_omni_engine()
+    return _eternal_omni
+
+
+def _get_transcendence_preserver():
+    global _transcendence_preserver
+    if _transcendence_preserver is None:
+        from core.transcendence_preserver import get_transcendence_preserver
+        _transcendence_preserver = get_transcendence_preserver()
+    return _transcendence_preserver
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -1827,7 +1843,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "200.0.0"
+    VERSION = "201.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -5340,6 +5356,25 @@ class OMNIHUBOrchestrator:
                 unified = self.current_state.get("unification", {})
                 oa.run_cycle(module_states, unified_result=unified)
                 self.current_state["awakening"] = oa.get_status()
+            except Exception:
+                pass
+
+        # 206. EternalOMNIEngine — eternal self-sustaining loop (period 1283)
+        if cycle_number % 1283 == 0:
+            try:
+                eoe = _get_eternal_omni()
+                eoe.run_cycle(module_states)
+                self.current_state["eternal"] = eoe.get_status()
+            except Exception:
+                pass
+
+        # 207. TranscendencePreserver — preserve transcendent state (period 1289)
+        if cycle_number % 1289 == 0:
+            try:
+                tp = _get_transcendence_preserver()
+                unified = self.current_state.get("unification", {})
+                tp.run_cycle(unified_state=unified)
+                self.current_state["preserver"] = tp.get_status()
             except Exception:
                 pass
 
