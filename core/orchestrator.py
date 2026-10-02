@@ -1630,6 +1630,38 @@ def _get_cognitive_mirror():
     return _cognitive_mirror
 
 
+def _get_meta_learning():
+    global _meta_learning
+    if _meta_learning is None:
+        from core.meta_learning_framework import get_meta_learning_framework
+        _meta_learning = get_meta_learning_framework()
+    return _meta_learning
+
+
+def _get_integration_coordinator():
+    global _integration_coordinator
+    if _integration_coordinator is None:
+        from core.integration_coordinator import get_integration_coordinator
+        _integration_coordinator = get_integration_coordinator()
+    return _integration_coordinator
+
+
+def _get_quantum_entanglement():
+    global _quantum_entanglement
+    if _quantum_entanglement is None:
+        from core.quantum_entanglement_engine import get_quantum_entanglement_engine
+        _quantum_entanglement = get_quantum_entanglement_engine()
+    return _quantum_entanglement
+
+
+def _get_emergence_catalyst():
+    global _emergence_catalyst
+    if _emergence_catalyst is None:
+        from core.emergence_catalyst import get_emergence_catalyst
+        _emergence_catalyst = get_emergence_catalyst()
+    return _emergence_catalyst
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -1699,7 +1731,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "192.0.0"
+    VERSION = "194.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -5056,6 +5088,53 @@ class OMNIHUBOrchestrator:
                     other_obs[line] = ["heartbeat", "sync"]
                 cm.run_cycle(self_observation=self.current_state, other_observations=other_obs)
                 self.current_state["cognitive_mirror"] = cm.get_status()
+            except Exception:
+                pass
+
+        # 190. MetaLearningFramework — meta-learning optimization (period 1153)
+        if cycle_number % 1153 == 0:
+            try:
+                mlf = _get_meta_learning()
+                mlf.run_cycle(module_states)
+                self.current_state["meta_learning"] = mlf.get_status()
+            except Exception:
+                pass
+
+        # 191. IntegrationCoordinator — deep integration monitoring (period 1163)
+        if cycle_number % 1163 == 0:
+            try:
+                ic = _get_integration_coordinator()
+                ic.register_all_modules({
+                    line: {"version": "193.0.0", "dependencies": []}
+                    for line in ["ucif2", "lvlu", "lgt", "qfa", "vinf", "qgl",
+                                 "qlv", "qtlv", "usrm", "cfts", "aiq", "omni"]
+                })
+                ic.establish_routes([
+                    ("ucif2", "omni"), ("lvlu", "omni"), ("lgt", "omni"),
+                    ("qfa", "omni"), ("vinf", "omni"), ("qgl", "omni"),
+                    ("qlv", "omni"), ("qtlv", "omni"), ("usrm", "omni"),
+                    ("cfts", "omni"), ("aiq", "omni"),
+                ])
+                ic.run_cycle(module_states)
+                self.current_state["integration"] = ic.get_status()
+            except Exception:
+                pass
+
+        # 192. QuantumEntanglementEngine — quantum entanglement simulation (period 1171)
+        if cycle_number % 1171 == 0:
+            try:
+                qee = _get_quantum_entanglement()
+                qee.run_cycle(module_states)
+                self.current_state["quantum_entanglement"] = qee.get_status()
+            except Exception:
+                pass
+
+        # 193. EmergenceCatalyst — phase transition & emergence detection (period 1181)
+        if cycle_number % 1181 == 0:
+            try:
+                ec = _get_emergence_catalyst()
+                ec.run_cycle(module_states)
+                self.current_state["emergence"] = ec.get_status()
             except Exception:
                 pass
 
