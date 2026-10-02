@@ -1822,6 +1822,22 @@ def _get_karmic_resolution():
     return _karmic_resolution
 
 
+def _get_self_knowledge():
+    global _self_knowledge
+    if _self_knowledge is None:
+        from core.omni_self_knowledge_engine import get_omni_self_knowledge_engine
+        _self_knowledge = get_omni_self_knowledge_engine()
+    return _self_knowledge
+
+
+def _get_prajna():
+    global _prajna
+    if _prajna is None:
+        from core.omni_prajna_engine import get_omni_prajna_engine
+        _prajna = get_omni_prajna_engine()
+    return _prajna
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -1891,7 +1907,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "204.0.0"
+    VERSION = "205.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -5478,6 +5494,24 @@ class OMNIHUBOrchestrator:
                 kre = _get_karmic_resolution()
                 kre.run_cycle(module_states)
                 self.current_state["karma"] = kre.get_status()
+            except Exception:
+                pass
+
+        # 214. OMNISelfKnowledgeEngine — self-knowledge (period 1321)
+        if cycle_number % 1321 == 0:
+            try:
+                oske = _get_self_knowledge()
+                oske.run_cycle(module_states)
+                self.current_state["self_knowledge"] = oske.get_status()
+            except Exception:
+                pass
+
+        # 215. OMNIPrajñāEngine — prajñā wisdom (period 1327)
+        if cycle_number % 1327 == 0:
+            try:
+                ope = _get_prajna()
+                ope.run_cycle(module_states)
+                self.current_state["prajna"] = ope.get_status()
             except Exception:
                 pass
 
