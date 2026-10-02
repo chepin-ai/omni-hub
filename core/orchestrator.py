@@ -1838,6 +1838,22 @@ def _get_prajna():
     return _prajna
 
 
+def _get_potentiality():
+    global _potentiality
+    if _potentiality is None:
+        from core.omni_potentiality_engine import get_omni_potentiality_engine
+        _potentiality = get_omni_potentiality_engine()
+    return _potentiality
+
+
+def _get_benevolence():
+    global _benevolence
+    if _benevolence is None:
+        from core.omni_benevolence_engine import get_omni_benevolence_engine
+        _benevolence = get_omni_benevolence_engine()
+    return _benevolence
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -1907,7 +1923,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "205.0.0"
+    VERSION = "206.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -5512,6 +5528,24 @@ class OMNIHUBOrchestrator:
                 ope = _get_prajna()
                 ope.run_cycle(module_states)
                 self.current_state["prajna"] = ope.get_status()
+            except Exception:
+                pass
+
+        # 216. OMNIPotentialityEngine — potentiality (period 1361)
+        if cycle_number % 1361 == 0:
+            try:
+                ope = _get_potentiality()
+                ope.run_cycle(module_states)
+                self.current_state["potentiality"] = ope.get_status()
+            except Exception:
+                pass
+
+        # 217. OMNIBenevolenceEngine — benevolence (period 1367)
+        if cycle_number % 1367 == 0:
+            try:
+                obe = _get_benevolence()
+                obe.run_cycle(module_states)
+                self.current_state["benevolence"] = obe.get_status()
             except Exception:
                 pass
 
