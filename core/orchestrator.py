@@ -193,6 +193,8 @@ _oracle_network = None
 _adversarial_tester = None
 _adaptive_learning = None
 _cross_oracle = None
+_formal_self_reference = None
+_cognitive_topology = None
 
 
 def _get_north_star():
@@ -1569,6 +1571,22 @@ def _get_cross_oracle():
     return _cross_oracle
 
 
+def _get_formal_self_reference():
+    global _formal_self_reference
+    if _formal_self_reference is None:
+        from core.formal_self_reference import get_formal_self_reference
+        _formal_self_reference = get_formal_self_reference()
+    return _formal_self_reference
+
+
+def _get_cognitive_topology():
+    global _cognitive_topology
+    if _cognitive_topology is None:
+        from core.cognitive_topology import get_cognitive_topology
+        _cognitive_topology = get_cognitive_topology()
+    return _cognitive_topology
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -1638,7 +1656,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "188.0.0"
+    VERSION = "189.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -4895,6 +4913,49 @@ class OMNIHUBOrchestrator:
                                       {"type": "cross_oracle", "avg_confidence": result.get("avg_fused_confidence"),
                                        "discrepancies": result.get("total_discrepancies")},
                                       source="cross_oracle_validator")
+            except Exception:
+                pass
+
+        # 183. FormalSelfReference — type-theoretic self-reference safety proof (every 1109 cycles)
+        if self.cycle_count % 1109 == 0 and self.cycle_count > 0:
+            try:
+                fsr = _get_formal_self_reference()
+                # Build module reference graph from current state
+                module_refs = {
+                    "ucif2": ["vinf", "qgl"],
+                    "vinf": ["ucif2", "lgt"],
+                    "lgt": ["qfa", "qgl"],
+                    "qfa": ["vinf"],
+                    "qgl": ["ucif2", "omni"],
+                    "omni": ["qgl"],
+                }
+                result = fsr.run_cycle(modules=module_refs)
+                self.current_state["formal_safety"] = result
+                self.current_state["formal_status"] = fsr.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "formal_safety", "safe_modules": result.get("safe_modules"),
+                                       "self_refs": result.get("self_references_found")},
+                                      source="formal_self_reference")
+            except Exception:
+                pass
+
+        # 184. CognitiveTopology — high-dimensional cognitive space mapping (every 1111 cycles)
+        if self.cycle_count % 1111 == 0 and self.cycle_count > 0:
+            try:
+                ct = _get_cognitive_topology()
+                alliance_state = {}
+                for line in ["ucif2", "lvlu", "lgt", "qfa", "vinf", "qgl",
+                             "qlv", "qtlv", "usrm", "cfts", "aiq", "omni"]:
+                    alliance_state[line] = self.current_state.get(line, {"health": 0.7, "coherence": 0.6})
+                result = ct.run_cycle(alliance_state=alliance_state)
+                self.current_state["cognitive_topology"] = result
+                self.current_state["topology_status"] = ct.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "cognitive_topology", "clusters": result.get("clusters_found"),
+                                       "variance": result.get("variance_retained")},
+                                      source="cognitive_topology")
             except Exception:
                 pass
 
