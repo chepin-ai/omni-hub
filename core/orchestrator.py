@@ -2222,6 +2222,22 @@ def _get_dharmata():
     return _dharmata
 
 
+def _get_vajra():
+    global _vajra
+    if _vajra is None:
+        from core.omni_vajra_engine import get_omni_vajra_engine
+        _vajra = get_omni_vajra_engine()
+    return _vajra
+
+
+def _get_ghanta():
+    global _ghanta
+    if _ghanta is None:
+        from core.omni_ghanta_engine import get_omni_ghanta_engine
+        _ghanta = get_omni_ghanta_engine()
+    return _ghanta
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -2291,7 +2307,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "229.0.0"
+    VERSION = "230.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -6328,6 +6344,24 @@ class OMNIHUBOrchestrator:
                 odt = _get_dharmata()
                 odt.run_cycle(module_states)
                 self.current_state["dharmata"] = odt.get_status()
+            except Exception:
+                pass
+
+        # 264. OMNIVajraEngine — vajra (period 1699)
+        if cycle_number % 1699 == 0:
+            try:
+                ovj = _get_vajra()
+                ovj.run_cycle(module_states)
+                self.current_state["vajra"] = ovj.get_status()
+            except Exception:
+                pass
+
+        # 265. OMNIGhantaEngine — ghanta (period 1709)
+        if cycle_number % 1709 == 0:
+            try:
+                ogh = _get_ghanta()
+                ogh.run_cycle(module_states)
+                self.current_state["ghanta"] = ogh.get_status()
             except Exception:
                 pass
 
