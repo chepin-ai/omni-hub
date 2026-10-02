@@ -1678,6 +1678,22 @@ def _get_auto_evolution():
     return _auto_evolution
 
 
+def _get_resonance_harmonizer():
+    global _resonance_harmonizer
+    if _resonance_harmonizer is None:
+        from core.resonance_harmonizer import get_resonance_harmonizer
+        _resonance_harmonizer = get_resonance_harmonizer()
+    return _resonance_harmonizer
+
+
+def _get_phase_synchronizer():
+    global _phase_synchronizer
+    if _phase_synchronizer is None:
+        from core.phase_synchronizer import get_phase_synchronizer
+        _phase_synchronizer = get_phase_synchronizer()
+    return _phase_synchronizer
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -1747,7 +1763,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "195.0.0"
+    VERSION = "196.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -5169,6 +5185,24 @@ class OMNIHUBOrchestrator:
                 aee = _get_auto_evolution()
                 aee.run_cycle(module_states)
                 self.current_state["evolution"] = aee.get_status()
+            except Exception:
+                pass
+
+        # 196. ResonanceHarmonizer — frequency locking & resonance (period 1201)
+        if cycle_number % 1201 == 0:
+            try:
+                rh = _get_resonance_harmonizer()
+                rh.run_cycle(module_states)
+                self.current_state["resonance"] = rh.get_status()
+            except Exception:
+                pass
+
+        # 197. PhaseSynchronizer — phase locking & Kuramoto sync (period 1213)
+        if cycle_number % 1213 == 0:
+            try:
+                ps = _get_phase_synchronizer()
+                ps.run_cycle(module_states)
+                self.current_state["phase_sync"] = ps.get_status()
             except Exception:
                 pass
 
