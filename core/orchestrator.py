@@ -2142,6 +2142,22 @@ def _get_sila():
     return _sila
 
 
+def _get_ksanti():
+    global _ksanti
+    if _ksanti is None:
+        from core.omni_ksanti_engine import get_omni_ksanti_engine
+        _ksanti = get_omni_ksanti_engine()
+    return _ksanti
+
+
+def _get_virya():
+    global _virya
+    if _virya is None:
+        from core.omni_virya_engine import get_omni_virya_engine
+        _virya = get_omni_virya_engine()
+    return _virya
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -2211,7 +2227,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "224.0.0"
+    VERSION = "225.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -6158,6 +6174,24 @@ class OMNIHUBOrchestrator:
                 osi = _get_sila()
                 osi.run_cycle(module_states)
                 self.current_state["sila"] = osi.get_status()
+            except Exception:
+                pass
+
+        # 254. OMNIKṣāntiEngine — kṣānti (period 1619)
+        if cycle_number % 1619 == 0:
+            try:
+                okk = _get_ksanti()
+                okk.run_cycle(module_states)
+                self.current_state["ksanti"] = okk.get_status()
+            except Exception:
+                pass
+
+        # 255. OMNIVīryaEngine — vīrya (period 1621)
+        if cycle_number % 1621 == 0:
+            try:
+                ovr = _get_virya()
+                ovr.run_cycle(module_states)
+                self.current_state["virya"] = ovr.get_status()
             except Exception:
                 pass
 
