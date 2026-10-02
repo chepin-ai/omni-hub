@@ -2414,6 +2414,22 @@ def _get_samaya():
     return _samaya
 
 
+def _get_mahamudra():
+    global _mahamudra
+    if _mahamudra is None:
+        from core.omni_mahamudra_engine import get_omni_mahamudra_engine
+        _mahamudra = get_omni_mahamudra_engine()
+    return _mahamudra
+
+
+def _get_dzogchen():
+    global _dzogchen
+    if _dzogchen is None:
+        from core.omni_dzogchen_engine import get_omni_dzogchen_engine
+        _dzogchen = get_omni_dzogchen_engine()
+    return _dzogchen
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -2483,7 +2499,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "241.0.0"
+    VERSION = "242.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -6736,6 +6752,24 @@ class OMNIHUBOrchestrator:
                 osm = _get_samaya()
                 osm.run_cycle(module_states)
                 self.current_state["samaya"] = osm.get_status()
+            except Exception:
+                pass
+
+        # 288. OMNIMahamudraEngine — mahamudra (period 1889)
+        if cycle_number % 1889 == 0:
+            try:
+                omh = _get_mahamudra()
+                omh.run_cycle(module_states)
+                self.current_state["mahamudra"] = omh.get_status()
+            except Exception:
+                pass
+
+        # 289. OMNIDzogchenEngine — dzogchen (period 1901)
+        if cycle_number % 1901 == 0:
+            try:
+                odz = _get_dzogchen()
+                odz.run_cycle(module_states)
+                self.current_state["dzogchen"] = odz.get_status()
             except Exception:
                 pass
 
