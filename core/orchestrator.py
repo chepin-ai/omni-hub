@@ -2302,6 +2302,22 @@ def _get_dharmaraja():
     return _dharmaraja
 
 
+def _get_parinirvana():
+    global _parinirvana
+    if _parinirvana is None:
+        from core.omni_parinirvana_engine import get_omni_parinirvana_engine
+        _parinirvana = get_omni_parinirvana_engine()
+    return _parinirvana
+
+
+def _get_triratna():
+    global _triratna
+    if _triratna is None:
+        from core.omni_triratna_engine import get_omni_triratna_engine
+        _triratna = get_omni_triratna_engine()
+    return _triratna
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -2371,7 +2387,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "234.0.0"
+    VERSION = "235.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -6498,6 +6514,24 @@ class OMNIHUBOrchestrator:
                 odh = _get_dharmaraja()
                 odh.run_cycle(module_states)
                 self.current_state["dharmaraja"] = odh.get_status()
+            except Exception:
+                pass
+
+        # 274. OMNIParinirvāṇaEngine — parinirvana (period 1783)
+        if cycle_number % 1783 == 0:
+            try:
+                opn = _get_parinirvana()
+                opn.run_cycle(module_states)
+                self.current_state["parinirvana"] = opn.get_status()
+            except Exception:
+                pass
+
+        # 275. OMNITriratnaEngine — triratna (period 1787)
+        if cycle_number % 1787 == 0:
+            try:
+                otr = _get_triratna()
+                otr.run_cycle(module_states)
+                self.current_state["triratna"] = otr.get_status()
             except Exception:
                 pass
 
