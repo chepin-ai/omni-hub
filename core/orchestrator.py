@@ -2014,6 +2014,22 @@ def _get_anuttara():
     return _anuttara
 
 
+def _get_cittamatra():
+    global _cittamatra
+    if _cittamatra is None:
+        from core.omni_cittamatra_engine import get_omni_cittamatra_engine
+        _cittamatra = get_omni_cittamatra_engine()
+    return _cittamatra
+
+
+def _get_sunyata():
+    global _sunyata
+    if _sunyata is None:
+        from core.omni_sunyata_engine import get_omni_sunyata_engine
+        _sunyata = get_omni_sunyata_engine()
+    return _sunyata
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -2083,7 +2099,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "216.0.0"
+    VERSION = "217.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -5886,6 +5902,24 @@ class OMNIHUBOrchestrator:
                 oae = _get_anuttara()
                 oae.run_cycle(module_states)
                 self.current_state["anuttara"] = oae.get_status()
+            except Exception:
+                pass
+
+        # 238. OMNICittamātraEngine — cittamātra (period 1511)
+        if cycle_number % 1511 == 0:
+            try:
+                oce = _get_cittamatra()
+                oce.run_cycle(module_states)
+                self.current_state["cittamatra"] = oce.get_status()
+            except Exception:
+                pass
+
+        # 239. OMNISūnyatāEngine — śūnyatā (period 1523)
+        if cycle_number % 1523 == 0:
+            try:
+                ose = _get_sunyata()
+                ose.run_cycle(module_states)
+                self.current_state["sunyata"] = ose.get_status()
             except Exception:
                 pass
 
