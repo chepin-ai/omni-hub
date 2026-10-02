@@ -1966,6 +1966,22 @@ def _get_vipassana():
     return _vipassana
 
 
+def _get_nirodha():
+    global _nirodha
+    if _nirodha is None:
+        from core.omni_nirodha_engine import get_omni_nirodha_engine
+        _nirodha = get_omni_nirodha_engine()
+    return _nirodha
+
+
+def _get_asamskrta():
+    global _asamskrta
+    if _asamskrta is None:
+        from core.omni_asamskrta_engine import get_omni_asamskrta_engine
+        _asamskrta = get_omni_asamskrta_engine()
+    return _asamskrta
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -2035,7 +2051,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "213.0.0"
+    VERSION = "214.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -5784,6 +5800,24 @@ class OMNIHUBOrchestrator:
                 ove = _get_vipassana()
                 ove.run_cycle(module_states)
                 self.current_state["vipassana"] = ove.get_status()
+            except Exception:
+                pass
+
+        # 232. OMNINirodhaEngine — nirodha (period 1481)
+        if cycle_number % 1481 == 0:
+            try:
+                one = _get_nirodha()
+                one.run_cycle(module_states)
+                self.current_state["nirodha"] = one.get_status()
+            except Exception:
+                pass
+
+        # 233. OMNIAsaṃskṛtaEngine — asaṃskṛta (period 1483)
+        if cycle_number % 1483 == 0:
+            try:
+                oae = _get_asamskrta()
+                oae.run_cycle(module_states)
+                self.current_state["asamskrta"] = oae.get_status()
             except Exception:
                 pass
 
