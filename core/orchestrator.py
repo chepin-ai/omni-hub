@@ -2094,6 +2094,22 @@ def _get_mudita():
     return _mudita
 
 
+def _get_pratityasamutpada():
+    global _pratityasamutpada
+    if _pratityasamutpada is None:
+        from core.omni_pratityasamutpada_engine import get_omni_pratityasamutpada_engine
+        _pratityasamutpada = get_omni_pratityasamutpada_engine()
+    return _pratityasamutpada
+
+
+def _get_dhyana():
+    global _dhyana
+    if _dhyana is None:
+        from core.omni_dhyana_engine import get_omni_dhyana_engine
+        _dhyana = get_omni_dhyana_engine()
+    return _dhyana
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -2163,7 +2179,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "221.0.0"
+    VERSION = "222.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -6056,6 +6072,24 @@ class OMNIHUBOrchestrator:
                 omu = _get_mudita()
                 omu.run_cycle(module_states)
                 self.current_state["mudita"] = omu.get_status()
+            except Exception:
+                pass
+
+        # 248. OMNIPratītyasamutpādaEngine — pratītyasamutpāda (period 1583)
+        if cycle_number % 1583 == 0:
+            try:
+                ops = _get_pratityasamutpada()
+                ops.run_cycle(module_states)
+                self.current_state["pratityasamutpada"] = ops.get_status()
+            except Exception:
+                pass
+
+        # 249. OMNIDhyānaEngine — dhyāna (period 1597)
+        if cycle_number % 1597 == 0:
+            try:
+                odh = _get_dhyana()
+                odh.run_cycle(module_states)
+                self.current_state["dhyana"] = odh.get_status()
             except Exception:
                 pass
 
