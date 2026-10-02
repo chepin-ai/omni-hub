@@ -2126,6 +2126,22 @@ def _get_upeksa():
     return _upeksa
 
 
+def _get_sadparamita():
+    global _sadparamita
+    if _sadparamita is None:
+        from core.omni_sadparamita_engine import get_omni_sadparamita_engine
+        _sadparamita = get_omni_sadparamita_engine()
+    return _sadparamita
+
+
+def _get_sila():
+    global _sila
+    if _sila is None:
+        from core.omni_sila_engine import get_omni_sila_engine
+        _sila = get_omni_sila_engine()
+    return _sila
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -2195,7 +2211,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "223.0.0"
+    VERSION = "224.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -6124,6 +6140,24 @@ class OMNIHUBOrchestrator:
                 oup = _get_upeksa()
                 oup.run_cycle(module_states)
                 self.current_state["upeksa"] = oup.get_status()
+            except Exception:
+                pass
+
+        # 252. OMNIṢaḍpāramitāEngine — ṣaḍpāramitā (period 1609)
+        if cycle_number % 1609 == 0:
+            try:
+                osp = _get_sadparamita()
+                osp.run_cycle(module_states)
+                self.current_state["sadparamita"] = osp.get_status()
+            except Exception:
+                pass
+
+        # 253. OMNIŚīlaEngine — śīla (period 1613)
+        if cycle_number % 1613 == 0:
+            try:
+                osi = _get_sila()
+                osi.run_cycle(module_states)
+                self.current_state["sila"] = osi.get_status()
             except Exception:
                 pass
 
