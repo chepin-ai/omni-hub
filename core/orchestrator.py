@@ -2238,6 +2238,22 @@ def _get_ghanta():
     return _ghanta
 
 
+def _get_mudra():
+    global _mudra
+    if _mudra is None:
+        from core.omni_mudra_engine import get_omni_mudra_engine
+        _mudra = get_omni_mudra_engine()
+    return _mudra
+
+
+def _get_mantra():
+    global _mantra
+    if _mantra is None:
+        from core.omni_mantra_engine import get_omni_mantra_engine
+        _mantra = get_omni_mantra_engine()
+    return _mantra
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -2307,7 +2323,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "230.0.0"
+    VERSION = "231.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -6362,6 +6378,24 @@ class OMNIHUBOrchestrator:
                 ogh = _get_ghanta()
                 ogh.run_cycle(module_states)
                 self.current_state["ghanta"] = ogh.get_status()
+            except Exception:
+                pass
+
+        # 266. OMNIMudrāEngine — mudrā (period 1721)
+        if cycle_number % 1721 == 0:
+            try:
+                omd = _get_mudra()
+                omd.run_cycle(module_states)
+                self.current_state["mudra"] = omd.get_status()
+            except Exception:
+                pass
+
+        # 267. OMNIMantraEngine — mantra (period 1723)
+        if cycle_number % 1723 == 0:
+            try:
+                omt = _get_mantra()
+                omt.run_cycle(module_states)
+                self.current_state["mantra"] = omt.get_status()
             except Exception:
                 pass
 
