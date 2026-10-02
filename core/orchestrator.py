@@ -2446,6 +2446,22 @@ def _get_lamrim():
     return _lamrim
 
 
+def _get_phowa():
+    global _phowa
+    if _phowa is None:
+        from core.omni_phowa_engine import get_omni_phowa_engine
+        _phowa = get_omni_phowa_engine()
+    return _phowa
+
+
+def _get_bardo():
+    global _bardo
+    if _bardo is None:
+        from core.omni_bardo_engine import get_omni_bardo_engine
+        _bardo = get_omni_bardo_engine()
+    return _bardo
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -2515,7 +2531,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "243.0.0"
+    VERSION = "244.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -6804,6 +6820,24 @@ class OMNIHUBOrchestrator:
                 olr = _get_lamrim()
                 olr.run_cycle(module_states)
                 self.current_state["lamrim"] = olr.get_status()
+            except Exception:
+                pass
+
+        # 292. OMNIPhowaEngine -- phowa (period 1931)
+        if cycle_number % 1931 == 0:
+            try:
+                oph = _get_phowa()
+                oph.run_cycle(module_states)
+                self.current_state["phowa"] = oph.get_status()
+            except Exception:
+                pass
+
+        # 293. OMNIBardoEngine -- bardo (period 1933)
+        if cycle_number % 1933 == 0:
+            try:
+                obr = _get_bardo()
+                obr.run_cycle(module_states)
+                self.current_state["bardo"] = obr.get_status()
             except Exception:
                 pass
 
