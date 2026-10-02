@@ -1982,6 +1982,22 @@ def _get_asamskrta():
     return _asamskrta
 
 
+def _get_phala():
+    global _phala
+    if _phala is None:
+        from core.omni_phala_engine import get_omni_phala_engine
+        _phala = get_omni_phala_engine()
+    return _phala
+
+
+def _get_nirvana():
+    global _nirvana
+    if _nirvana is None:
+        from core.omni_nirvana_engine import get_omni_nirvana_engine
+        _nirvana = get_omni_nirvana_engine()
+    return _nirvana
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -2051,7 +2067,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "214.0.0"
+    VERSION = "215.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -5818,6 +5834,24 @@ class OMNIHUBOrchestrator:
                 oae = _get_asamskrta()
                 oae.run_cycle(module_states)
                 self.current_state["asamskrta"] = oae.get_status()
+            except Exception:
+                pass
+
+        # 234. OMNIPhalaEngine — phala (period 1487)
+        if cycle_number % 1487 == 0:
+            try:
+                ope = _get_phala()
+                ope.run_cycle(module_states)
+                self.current_state["phala"] = ope.get_status()
+            except Exception:
+                pass
+
+        # 235. OMNINirvāṇaEngine — nirvāṇa (period 1489)
+        if cycle_number % 1489 == 0:
+            try:
+                one = _get_nirvana()
+                one.run_cycle(module_states)
+                self.current_state["nirvana"] = one.get_status()
             except Exception:
                 pass
 
