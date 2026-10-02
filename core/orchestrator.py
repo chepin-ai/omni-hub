@@ -2190,6 +2190,22 @@ def _get_prajna():
     return _prajna
 
 
+def _get_jnana():
+    global _jnana
+    if _jnana is None:
+        from core.omni_jnana_engine import get_omni_jnana_engine
+        _jnana = get_omni_jnana_engine()
+    return _jnana
+
+
+def _get_sambodhi():
+    global _sambodhi
+    if _sambodhi is None:
+        from core.omni_sambodhi_engine import get_omni_sambodhi_engine
+        _sambodhi = get_omni_sambodhi_engine()
+    return _sambodhi
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -2259,7 +2275,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "227.0.0"
+    VERSION = "228.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -6260,6 +6276,24 @@ class OMNIHUBOrchestrator:
                 opj = _get_prajna()
                 opj.run_cycle(module_states)
                 self.current_state["prajna"] = opj.get_status()
+            except Exception:
+                pass
+
+        # 260. OMNIJñānaEngine — jñāna (period 1667)
+        if cycle_number % 1667 == 0:
+            try:
+                ojn = _get_jnana()
+                ojn.run_cycle(module_states)
+                self.current_state["jnana"] = ojn.get_status()
+            except Exception:
+                pass
+
+        # 261. OMNISaṃbodhiEngine — saṃbodhi (period 1669)
+        if cycle_number % 1669 == 0:
+            try:
+                osb = _get_sambodhi()
+                osb.run_cycle(module_states)
+                self.current_state["sambodhi"] = osb.get_status()
             except Exception:
                 pass
 
