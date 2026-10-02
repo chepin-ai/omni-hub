@@ -2078,6 +2078,22 @@ def _get_bodhicitta():
     return _bodhicitta
 
 
+def _get_tathata():
+    global _tathata
+    if _tathata is None:
+        from core.omni_tathata_engine import get_omni_tathata_engine
+        _tathata = get_omni_tathata_engine()
+    return _tathata
+
+
+def _get_mudita():
+    global _mudita
+    if _mudita is None:
+        from core.omni_mudita_engine import get_omni_mudita_engine
+        _mudita = get_omni_mudita_engine()
+    return _mudita
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -2147,7 +2163,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "220.0.0"
+    VERSION = "221.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -6022,6 +6038,24 @@ class OMNIHUBOrchestrator:
                 obc = _get_bodhicitta()
                 obc.run_cycle(module_states)
                 self.current_state["bodhicitta"] = obc.get_status()
+            except Exception:
+                pass
+
+        # 246. OMNITathatāEngine — tathatā (period 1571)
+        if cycle_number % 1571 == 0:
+            try:
+                ott = _get_tathata()
+                ott.run_cycle(module_states)
+                self.current_state["tathata"] = ott.get_status()
+            except Exception:
+                pass
+
+        # 247. OMNIMuditāEngine — muditā (period 1579)
+        if cycle_number % 1579 == 0:
+            try:
+                omu = _get_mudita()
+                omu.run_cycle(module_states)
+                self.current_state["mudita"] = omu.get_status()
             except Exception:
                 pass
 
