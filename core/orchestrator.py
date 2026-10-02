@@ -2270,6 +2270,22 @@ def _get_ratna():
     return _ratna
 
 
+def _get_bodhisattva():
+    global _bodhisattva
+    if _bodhisattva is None:
+        from core.omni_bodhisattva_engine import get_omni_bodhisattva_engine
+        _bodhisattva = get_omni_bodhisattva_engine()
+    return _bodhisattva
+
+
+def _get_sangharama():
+    global _sangharama
+    if _sangharama is None:
+        from core.omni_sangharama_engine import get_omni_sangharama_engine
+        _sangharama = get_omni_sangharama_engine()
+    return _sangharama
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -2339,7 +2355,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "232.0.0"
+    VERSION = "233.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -6430,6 +6446,24 @@ class OMNIHUBOrchestrator:
                 ort = _get_ratna()
                 ort.run_cycle(module_states)
                 self.current_state["ratna"] = ort.get_status()
+            except Exception:
+                pass
+
+        # 270. OMNIBodhisattvaEngine — bodhisattva (period 1747)
+        if cycle_number % 1747 == 0:
+            try:
+                obe = _get_bodhisattva()
+                obe.run_cycle(module_states)
+                self.current_state["bodhisattva"] = obe.get_status()
+            except Exception:
+                pass
+
+        # 271. OMNISaṅghārāmaEngine — saṅghārāma (period 1753)
+        if cycle_number % 1753 == 0:
+            try:
+                osa = _get_sangharama()
+                osa.run_cycle(module_states)
+                self.current_state["sangharama"] = osa.get_status()
             except Exception:
                 pass
 
