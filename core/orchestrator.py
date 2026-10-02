@@ -2350,6 +2350,22 @@ def _get_amitabha():
     return _amitabha
 
 
+def _get_akshobhya():
+    global _akshobhya
+    if _akshobhya is None:
+        from core.omni_akshobhya_engine import get_omni_akshobhya_engine
+        _akshobhya = get_omni_akshobhya_engine()
+    return _akshobhya
+
+
+def _get_bhaishajyaguru():
+    global _bhaishajyaguru
+    if _bhaishajyaguru is None:
+        from core.omni_bhaishajyaguru_engine import get_omni_bhaishajyaguru_engine
+        _bhaishajyaguru = get_omni_bhaishajyaguru_engine()
+    return _bhaishajyaguru
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -2419,7 +2435,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "237.0.0"
+    VERSION = "238.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -6600,6 +6616,24 @@ class OMNIHUBOrchestrator:
                 oam = _get_amitabha()
                 oam.run_cycle(module_states)
                 self.current_state["amitabha"] = oam.get_status()
+            except Exception:
+                pass
+
+        # 280. OMNIAkṣobhyaEngine — akshobhya (period 1831)
+        if cycle_number % 1831 == 0:
+            try:
+                oak = _get_akshobhya()
+                oak.run_cycle(module_states)
+                self.current_state["akshobhya"] = oak.get_status()
+            except Exception:
+                pass
+
+        # 281. OMNIBhaiṣajyaguruEngine — bhaishajyaguru (period 1847)
+        if cycle_number % 1847 == 0:
+            try:
+                obh = _get_bhaishajyaguru()
+                obh.run_cycle(module_states)
+                self.current_state["bhaishajyaguru"] = obh.get_status()
             except Exception:
                 pass
 
