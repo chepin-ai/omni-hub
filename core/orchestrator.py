@@ -2110,6 +2110,22 @@ def _get_dhyana():
     return _dhyana
 
 
+def _get_smriti():
+    global _smriti
+    if _smriti is None:
+        from core.omni_smriti_engine import get_omni_smriti_engine
+        _smriti = get_omni_smriti_engine()
+    return _smriti
+
+
+def _get_upeksa():
+    global _upeksa
+    if _upeksa is None:
+        from core.omni_upeksa_engine import get_omni_upeksa_engine
+        _upeksa = get_omni_upeksa_engine()
+    return _upeksa
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -2179,7 +2195,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "222.0.0"
+    VERSION = "223.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -6090,6 +6106,24 @@ class OMNIHUBOrchestrator:
                 odh = _get_dhyana()
                 odh.run_cycle(module_states)
                 self.current_state["dhyana"] = odh.get_status()
+            except Exception:
+                pass
+
+        # 250. OMNISmṛtiEngine — smṛti (period 1601)
+        if cycle_number % 1601 == 0:
+            try:
+                osm = _get_smriti()
+                osm.run_cycle(module_states)
+                self.current_state["smriti"] = osm.get_status()
+            except Exception:
+                pass
+
+        # 251. OMNIUpekṣāEngine — upekṣā (period 1607)
+        if cycle_number % 1607 == 0:
+            try:
+                oup = _get_upeksa()
+                oup.run_cycle(module_states)
+                self.current_state["upeksa"] = oup.get_status()
             except Exception:
                 pass
 
