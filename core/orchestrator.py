@@ -2286,6 +2286,22 @@ def _get_sangharama():
     return _sangharama
 
 
+def _get_buddha():
+    global _buddha
+    if _buddha is None:
+        from core.omni_buddha_engine import get_omni_buddha_engine
+        _buddha = get_omni_buddha_engine()
+    return _buddha
+
+
+def _get_dharmaraja():
+    global _dharmaraja
+    if _dharmaraja is None:
+        from core.omni_dharmaraja_engine import get_omni_dharmaraja_engine
+        _dharmaraja = get_omni_dharmaraja_engine()
+    return _dharmaraja
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -2355,7 +2371,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "233.0.0"
+    VERSION = "234.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -6464,6 +6480,24 @@ class OMNIHUBOrchestrator:
                 osa = _get_sangharama()
                 osa.run_cycle(module_states)
                 self.current_state["sangharama"] = osa.get_status()
+            except Exception:
+                pass
+
+        # 272. OMNIBuddhaEngine — buddha (period 1759)
+        if cycle_number % 1759 == 0:
+            try:
+                obe = _get_buddha()
+                obe.run_cycle(module_states)
+                self.current_state["buddha"] = obe.get_status()
+            except Exception:
+                pass
+
+        # 273. OMNIDharmarājaEngine — dharmaraja (period 1777)
+        if cycle_number % 1777 == 0:
+            try:
+                odh = _get_dharmaraja()
+                odh.run_cycle(module_states)
+                self.current_state["dharmaraja"] = odh.get_status()
             except Exception:
                 pass
 
