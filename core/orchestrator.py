@@ -2254,6 +2254,22 @@ def _get_mantra():
     return _mantra
 
 
+def _get_cakra():
+    global _cakra
+    if _cakra is None:
+        from core.omni_cakra_engine import get_omni_cakra_engine
+        _cakra = get_omni_cakra_engine()
+    return _cakra
+
+
+def _get_ratna():
+    global _ratna
+    if _ratna is None:
+        from core.omni_ratna_engine import get_omni_ratna_engine
+        _ratna = get_omni_ratna_engine()
+    return _ratna
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -2323,7 +2339,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "231.0.0"
+    VERSION = "232.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -6396,6 +6412,24 @@ class OMNIHUBOrchestrator:
                 omt = _get_mantra()
                 omt.run_cycle(module_states)
                 self.current_state["mantra"] = omt.get_status()
+            except Exception:
+                pass
+
+        # 268. OMNICakraEngine — cakra (period 1733)
+        if cycle_number % 1733 == 0:
+            try:
+                ock = _get_cakra()
+                ock.run_cycle(module_states)
+                self.current_state["cakra"] = ock.get_status()
+            except Exception:
+                pass
+
+        # 269. OMNIRatnaEngine — ratna (period 1741)
+        if cycle_number % 1741 == 0:
+            try:
+                ort = _get_ratna()
+                ort.run_cycle(module_states)
+                self.current_state["ratna"] = ort.get_status()
             except Exception:
                 pass
 
