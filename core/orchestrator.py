@@ -1998,6 +1998,22 @@ def _get_nirvana():
     return _nirvana
 
 
+def _get_tathagata():
+    global _tathagata
+    if _tathagata is None:
+        from core.omni_tathagata_engine import get_omni_tathagata_engine
+        _tathagata = get_omni_tathagata_engine()
+    return _tathagata
+
+
+def _get_anuttara():
+    global _anuttara
+    if _anuttara is None:
+        from core.omni_anuttara_engine import get_omni_anuttara_engine
+        _anuttara = get_omni_anuttara_engine()
+    return _anuttara
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -2067,7 +2083,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "215.0.0"
+    VERSION = "216.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -5852,6 +5868,24 @@ class OMNIHUBOrchestrator:
                 one = _get_nirvana()
                 one.run_cycle(module_states)
                 self.current_state["nirvana"] = one.get_status()
+            except Exception:
+                pass
+
+        # 236. OMNITathāgataEngine — tathāgata (period 1493)
+        if cycle_number % 1493 == 0:
+            try:
+                ote = _get_tathagata()
+                ote.run_cycle(module_states)
+                self.current_state["tathagata"] = ote.get_status()
+            except Exception:
+                pass
+
+        # 237. OMNIAnuttaraEngine — anuttara (period 1499)
+        if cycle_number % 1499 == 0:
+            try:
+                oae = _get_anuttara()
+                oae.run_cycle(module_states)
+                self.current_state["anuttara"] = oae.get_status()
             except Exception:
                 pass
 
