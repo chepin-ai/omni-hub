@@ -189,6 +189,8 @@ _omni_unification_engine = None
 _dashboard_omni_layer = None
 _truth_alignment_engine = None
 _self_reference_monitor = None
+_oracle_network = None
+_adversarial_tester = None
 
 
 def _get_north_star():
@@ -1533,6 +1535,22 @@ def _get_self_reference_monitor():
     return _self_reference_monitor
 
 
+def _get_oracle_network():
+    global _oracle_network
+    if _oracle_network is None:
+        from core.oracle_network import get_oracle_network
+        _oracle_network = get_oracle_network()
+    return _oracle_network
+
+
+def _get_adversarial_tester():
+    global _adversarial_tester
+    if _adversarial_tester is None:
+        from core.adversarial_tester import get_adversarial_tester
+        _adversarial_tester = get_adversarial_tester()
+    return _adversarial_tester
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -1602,7 +1620,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "186.0.0"
+    VERSION = "187.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -4785,6 +4803,42 @@ class OMNIHUBOrchestrator:
                                       {"type": "self_reference", "recursion_safe": result.get("recursion_safe"),
                                        "loop_dynamics": result.get("loop_dynamics")},
                                       source="self_reference_monitor")
+            except Exception:
+                pass
+
+        # 179. OracleNetwork — multi-source oracle aggregation, consensus, reputation (every 1097 cycles)
+        if self.cycle_count % 1097 == 0 and self.cycle_count > 0:
+            try:
+                on = _get_oracle_network()
+                queries = ["system_health", "coherence_check", "alignment_status"]
+                result = on.run_cycle(queries=queries)
+                self.current_state["oracle_network"] = result
+                self.current_state["oracle_status"] = on.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "oracle_network", "queries": result.get("queries_processed"),
+                                       "consensus": result.get("consensus_finalized")},
+                                      source="oracle_network")
+            except Exception:
+                pass
+
+        # 180. AdversarialTester — resilience testing, contradiction injection, byzantine simulation (every 1098 cycles)
+        if self.cycle_count % 1098 == 0 and self.cycle_count > 0:
+            try:
+                at = _get_adversarial_tester()
+                system_state = {
+                    "health": self.current_state.get("ucif2", {}).get("health", 0.5),
+                    "coherence": self.current_state.get("ucif2", {}).get("coherence", 0.5),
+                    "claims": [{"claim_id": "c1", "statement": "system=active"}],
+                }
+                result = at.run_cycle(system_state=system_state)
+                self.current_state["adversarial_test"] = result
+                self.current_state["adversarial_status"] = at.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "adversarial_test", "resilience_score": result.get("resilience_score"),
+                                       "level": result.get("resilience_level")},
+                                      source="adversarial_tester")
             except Exception:
                 pass
 
