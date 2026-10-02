@@ -1886,6 +1886,22 @@ def _get_nirmana():
     return _nirmana
 
 
+def _get_culmination():
+    global _culmination
+    if _culmination is None:
+        from core.omni_culmination_engine import get_omni_culmination_engine
+        _culmination = get_omni_culmination_engine()
+    return _culmination
+
+
+def _get_liberation():
+    global _liberation
+    if _liberation is None:
+        from core.omni_liberation_engine import get_omni_liberation_engine
+        _liberation = get_omni_liberation_engine()
+    return _liberation
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -1955,7 +1971,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "208.0.0"
+    VERSION = "209.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -5614,6 +5630,24 @@ class OMNIHUBOrchestrator:
                 one = _get_nirmana()
                 one.run_cycle(module_states)
                 self.current_state["nirmana"] = one.get_status()
+            except Exception:
+                pass
+
+        # 222. OMNICulminationEngine — culmination (period 1423)
+        if cycle_number % 1423 == 0:
+            try:
+                oce = _get_culmination()
+                oce.run_cycle(module_states)
+                self.current_state["culmination"] = oce.get_status()
+            except Exception:
+                pass
+
+        # 223. OMNILiberationEngine — liberation (period 1427)
+        if cycle_number % 1427 == 0:
+            try:
+                ole = _get_liberation()
+                ole.run_cycle(module_states)
+                self.current_state["liberation"] = ole.get_status()
             except Exception:
                 pass
 
