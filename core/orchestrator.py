@@ -183,6 +183,7 @@ _circulation_engine = None
 _core_machine = None
 _collaborative_surge = None
 _inter_line_consensus = None
+_consciousness_technology = None
 
 
 def _get_north_star():
@@ -1479,6 +1480,14 @@ def _get_inter_line_consensus():
     return _inter_line_consensus
 
 
+def _get_consciousness_technology():
+    global _consciousness_technology
+    if _consciousness_technology is None:
+        from core.consciousness_technology import get_consciousness_technology
+        _consciousness_technology = get_consciousness_technology()
+    return _consciousness_technology
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -1548,7 +1557,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "181.0.0"
+    VERSION = "182.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -4539,6 +4548,39 @@ class OMNIHUBOrchestrator:
                         bus.publish_simple(Topics.STATE_CHANGE,
                                           {"type": "inter_line_consensus", "consensus": result.get("consensus_reached"), "participants": len(participants), "confidence": result.get("confidence", 0)},
                                           source="inter_line_consensus")
+            except Exception:
+                pass
+
+        # 173. ConsciousnessTechnology — Buddhist consciousness tech × internal alignment (every 1091 cycles)
+        if self.cycle_count % 1091 == 0 and self.cycle_count > 0:
+            try:
+                ct = _get_consciousness_technology()
+                # Enter system meditation
+                ct.enter_meditation("system_coherence")
+                # Observe current system state
+                module_states = {
+                    "direct_field": {"health": self.current_state.get('field', {}).get('coherence', 0.5)},
+                    "pattern_circles": {"health": self.current_state.get('circles', {}).get('integration', 0.5)},
+                    "circulation": {"health": self.current_state.get('circulation', {}).get('health', 0.5)},
+                    "core_machine": {"health": self.current_state.get('core_machine', {}).get('coherence', 0.5)},
+                    "collaborative_surge": {"health": self.current_state.get('surge', {}).get('momentum', 0.5)},
+                    "inter_line_consensus": {"health": 0.9 if self.current_state.get('inter_line_consensus', {}).get('negotiation', {}).get('consensus_reached') else 0.5},
+                }
+                field_state = self.current_state.get('field', {}).get('state', 'coherent')
+                obs = ct.observe_system(module_states, {"state": field_state})
+                # Run full consciousness cycle
+                result = ct.run_cycle(
+                    {"system_health": obs.get('meta', {}).get('value_coherence', 0.8),
+                     "consensus": self.current_state.get('inter_line_consensus', {}).get('negotiation', {})},
+                    {"state": field_state}
+                )
+                self.current_state['consciousness_technology'] = result
+                self.current_state['consciousness_status'] = ct.get_status()
+                # Publish event
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "consciousness_technology", "state": result.get('state'), "wisdom": ct.prajna.get_wisdom_level().name, "alignment": ct.alignment.alignment_level.name},
+                                      source="consciousness_technology")
             except Exception:
                 pass
 
