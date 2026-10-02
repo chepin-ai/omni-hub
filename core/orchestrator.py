@@ -196,6 +196,8 @@ _cross_oracle = None
 _formal_self_reference = None
 _cognitive_topology = None
 _dashboard_backend = None
+_causal_inference = None
+_predictive_model = None
 
 
 def _get_north_star():
@@ -1596,6 +1598,22 @@ def _get_dashboard_backend():
     return _dashboard_backend
 
 
+def _get_causal_inference():
+    global _causal_inference
+    if _causal_inference is None:
+        from core.causal_inference_engine import get_causal_inference_engine
+        _causal_inference = get_causal_inference_engine()
+    return _causal_inference
+
+
+def _get_predictive_model():
+    global _predictive_model
+    if _predictive_model is None:
+        from core.predictive_world_model import get_predictive_world_model
+        _predictive_model = get_predictive_world_model()
+    return _predictive_model
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -1665,7 +1683,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "190.0.0"
+    VERSION = "191.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -4982,6 +5000,26 @@ class OMNIHUBOrchestrator:
             self.current_state["dashboard_data"] = db.get_dashboard_data()
         except Exception:
             pass
+
+        # 186. CausalInferenceEngine — causal analysis (period 1117)
+        if cycle_number % 1117 == 0:
+            try:
+                cie = _get_causal_inference()
+                cie.build_alliance_graph(module_states)
+                causal_result = cie.run_cycle(module_states)
+                self.current_state["causal_analysis"] = causal_result
+            except Exception:
+                pass
+
+        # 187. PredictiveWorldModel — forecast & simulation (period 1123)
+        if cycle_number % 1123 == 0:
+            try:
+                pwm = _get_predictive_model()
+                health_values = {line: s.get("health", 0.5) for line, s in module_states.items()}
+                forecast = pwm.run_cycle(health_values)
+                self.current_state["forecast"] = forecast
+            except Exception:
+                pass
 
         summary = {
             "cycle": self.cycle_count,
