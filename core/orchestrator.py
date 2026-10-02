@@ -1694,6 +1694,22 @@ def _get_phase_synchronizer():
     return _phase_synchronizer
 
 
+def _get_stress_test():
+    global _stress_test
+    if _stress_test is None:
+        from core.stress_test_engine import get_stress_test_engine
+        _stress_test = get_stress_test_engine()
+    return _stress_test
+
+
+def _get_chaos_injector():
+    global _chaos_injector
+    if _chaos_injector is None:
+        from core.chaos_injector import get_chaos_injector
+        _chaos_injector = get_chaos_injector()
+    return _chaos_injector
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -1763,7 +1779,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "196.0.0"
+    VERSION = "197.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -5203,6 +5219,24 @@ class OMNIHUBOrchestrator:
                 ps = _get_phase_synchronizer()
                 ps.run_cycle(module_states)
                 self.current_state["phase_sync"] = ps.get_status()
+            except Exception:
+                pass
+
+        # 198. StressTestEngine — ultimate stress testing (period 1217)
+        if cycle_number % 1217 == 0:
+            try:
+                ste = _get_stress_test()
+                ste.run_cycle(module_states)
+                self.current_state["stress_test"] = ste.get_status()
+            except Exception:
+                pass
+
+        # 199. ChaosInjector — chaos engineering & resilience (period 1223)
+        if cycle_number % 1223 == 0:
+            try:
+                ci = _get_chaos_injector()
+                ci.run_cycle(module_states)
+                self.current_state["chaos"] = ci.get_status()
             except Exception:
                 pass
 
