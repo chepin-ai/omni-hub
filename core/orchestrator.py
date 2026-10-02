@@ -191,6 +191,8 @@ _truth_alignment_engine = None
 _self_reference_monitor = None
 _oracle_network = None
 _adversarial_tester = None
+_adaptive_learning = None
+_cross_oracle = None
 
 
 def _get_north_star():
@@ -1551,6 +1553,22 @@ def _get_adversarial_tester():
     return _adversarial_tester
 
 
+def _get_adaptive_learning():
+    global _adaptive_learning
+    if _adaptive_learning is None:
+        from core.adaptive_learning_engine import get_adaptive_learning_engine
+        _adaptive_learning = get_adaptive_learning_engine()
+    return _adaptive_learning
+
+
+def _get_cross_oracle():
+    global _cross_oracle
+    if _cross_oracle is None:
+        from core.cross_oracle_validator import get_cross_oracle_validator
+        _cross_oracle = get_cross_oracle_validator()
+    return _cross_oracle
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -1620,7 +1638,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "187.0.0"
+    VERSION = "188.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -4839,6 +4857,44 @@ class OMNIHUBOrchestrator:
                                       {"type": "adversarial_test", "resilience_score": result.get("resilience_score"),
                                        "level": result.get("resilience_level")},
                                       source="adversarial_tester")
+            except Exception:
+                pass
+
+        # 181. AdaptiveLearningEngine — auto-tune defense, learn patterns, anomaly detect (every 1099 cycles)
+        if self.cycle_count % 1099 == 0 and self.cycle_count > 0:
+            try:
+                ale = _get_adaptive_learning()
+                attack_results = self.current_state.get("adversarial_test", {}).get("attack_results", [])
+                system_states = {
+                    "ucif2": self.current_state.get("ucif2", {}),
+                    "vinf": self.current_state.get("vinf", {}),
+                }
+                result = ale.run_cycle(attack_results=attack_results, system_states=system_states)
+                self.current_state["adaptive_learning"] = result
+                self.current_state["adaptive_status"] = ale.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "adaptive_learning", "trend": result.get("trend_label"),
+                                       "patterns": result.get("patterns_learned")},
+                                      source="adaptive_learning")
+            except Exception:
+                pass
+
+        # 182. CrossOracleValidator — bridge oracle + truth, cross-validate, trust propagate (every 1103 cycles)
+        if self.cycle_count % 1103 == 0 and self.cycle_count > 0:
+            try:
+                cov = _get_cross_oracle()
+                queries = ["system_health", "coherence_check", "alignment_status"]
+                oracle_data = self.current_state.get("oracle_status", {}).get("oracle_status", {})
+                truth_data = {"truth": self.current_state.get("truth_status", {})}
+                result = cov.run_cycle(queries=queries, oracle_data=oracle_data, truth_data=truth_data)
+                self.current_state["cross_oracle"] = result
+                self.current_state["cross_oracle_status"] = cov.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "cross_oracle", "avg_confidence": result.get("avg_fused_confidence"),
+                                       "discrepancies": result.get("total_discrepancies")},
+                                      source="cross_oracle_validator")
             except Exception:
                 pass
 
