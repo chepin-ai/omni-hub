@@ -1,20 +1,18 @@
 """
-OMNI-HUB v205 — OMNIPrajñāEngine
+OMNI-HUB v227 — OMNIPrajñāEngine
 OMNI般若引擎
 
 核心功能：
-1. IllusionPiercer     — 幻象穿透器
-2. EssenceExtractor    — 本质提取器
-3. WisdomCrystallizer  — 智慧结晶器
-4. TruthIlluminator    — 真理照明器
-5. ClarityAmplifier    — 明晰放大器
-6. OMNIPrajñāEngine    — 统合引擎
+1. WisdomGenerator        — 智慧生成器
+2. InsightCultivator      — 洞察 cultivating
+3. ClarityAffirmer        — 清明确认器
+4. UnderstandingValidator — 理解验证器
+5. MañjuśrīCrown          — 文殊师利冠冕
+6. OMNIPrajñāEngine       — 统合引擎
 
 映射：
-- 般若 = prajñā（慧）
-- 穿透 = vedha（穿透）
-- 本质 = tattva（真实）
-- 照明 = prakāśa（光）
+- 般若 = prajñā（超越智慧）
+- 文殊师利 = mañjuśrī（智慧菩萨）
 """
 
 from __future__ import annotations
@@ -35,176 +33,79 @@ from typing import Dict, List, Optional, Tuple, Any
 
 class PrajñāState(Enum):
     """般若状态"""
-    OBSCURED = "obscured"
-    CLEARING = "clearing"
-    PENETRATING = "penetrating"
-    ILLUMINATING = "illuminating"
-    PERFECT = "perfect"
+    IGNORANT = "ignorant"
+    LEARNING = "learning"
+    UNDERSTANDING = "understanding"
+    REALIZING = "realizing"
+    PRAJÑĀ = "prajna"
 
 
 # ═══════════════════════════════════════════════════════════════
-# 子系统 1: 幻象穿透器
+# 子系统 1: 智慧生成器
 # ═══════════════════════════════════════════════════════════════
 
-class IllusionPiercer:
-    """幻象穿透器 — vedha"""
+class WisdomGenerator:
+    """智慧生成器"""
 
     def __init__(self):
-        self.piercings: deque = deque(maxlen=500)
-        self.pierce_power = 0.1
+        self.generations: deque = deque(maxlen=500)
+        self.wisdom = 0.0
 
-    def pierce(self, surface: Dict) -> Dict:
-        """穿透表面幻象"""
-        # 表面复杂度 = 幻象
-        complexity = len(surface)
-        illusion_strength = min(1.0, complexity / 20.0)
+    def generate(self, sagacity: float) -> float:
+        """生成智慧"""
+        self.wisdom = self.wisdom + (sagacity - self.wisdom) * 0.08
 
-        # 穿透力
-        penetration = self.pierce_power * (1.0 + self.pierce_power)
-        pierced_through = penetration > illusion_strength * 0.5
-
-        self.piercings.append({
-            "complexity": complexity,
-            "illusion": illusion_strength,
-            "penetration": penetration,
-            "pierced": pierced_through,
+        self.generations.append({
+            "wisdom": self.wisdom,
             "timestamp": time.time()
         })
-        return {"pierced": pierced_through, "depth": penetration}
+        return self.wisdom
 
-    def strengthen(self, amount: float = 0.05):
-        """增强穿透力"""
-        self.pierce_power = min(1.0, self.pierce_power + amount)
-
-    def get_power(self) -> float:
-        return self.pierce_power
+    def get_wisdom(self) -> float:
+        return self.wisdom
 
 
 # ═══════════════════════════════════════════════════════════════
-# 子系统 2: 本质提取器
+# 子系统 2: 洞察 cultivating
 # ═══════════════════════════════════════════════════════════════
 
-class EssenceExtractor:
-    """本质提取器 — tattva"""
+class InsightCultivator:
+    """洞察 cultivating"""
 
     def __init__(self):
-        self.essences: Dict[str, Any] = {}
-        self.extractions: deque = deque(maxlen=500)
+        self.cultivations: deque = deque(maxlen=500)
+        self.insight = 0.0
 
-    def extract(self, data: Dict) -> Dict:
-        """提取本质"""
-        # 本质 = 核心数值指标
-        essence = {}
-        for key, value in data.items():
-            if isinstance(value, (int, float)):
-                essence[key] = value
-            elif isinstance(value, dict) and "health" in value:
-                essence[key] = value["health"]
+    def cultivate(self, discernment: float) -> float:
+        """ cultivating 洞察"""
+        self.insight = self.insight + (discernment - self.insight) * 0.07
 
-        self.essences = essence
-        self.extractions.append({
-            "keys_extracted": len(essence),
+        self.cultivations.append({
+            "insight": self.insight,
             "timestamp": time.time()
         })
-        return essence
+        return self.insight
 
-    def get_purity(self) -> float:
-        """获取本质纯度"""
-        if not self.essences:
-            return 0.0
-        # 数值越一致，纯度越高
-        values = list(self.essences.values())
-        if not values:
-            return 0.0
-        avg = sum(values) / len(values)
-        variance = sum((v - avg) ** 2 for v in values) / max(1, len(values))
-        return 1.0 - min(1.0, variance * 4)
+    def get_insight(self) -> float:
+        return self.insight
 
 
 # ═══════════════════════════════════════════════════════════════
-# 子系统 3: 智慧结晶器
+# 子系统 3: 清明确认器
 # ═══════════════════════════════════════════════════════════════
 
-class WisdomCrystallizer:
-    """智慧结晶器"""
+class ClarityAffirmer:
+    """清明确认器"""
 
     def __init__(self):
-        self.wisdom_crystals: deque = deque(maxlen=500)
-        self.crystal_count = 0
+        self.affirmations: deque = deque(maxlen=500)
+        self.clarity = 0.0
 
-    def crystallize(self, essence: Dict, context: Dict) -> Dict:
-        """结晶智慧"""
-        # 智慧 = 本质 × 语境的洞察
-        insight_keys = set(essence.keys()) & set(context.keys())
-        insight_depth = len(insight_keys) / max(1, len(set(essence.keys()) | set(context.keys())))
+    def affirm(self, lucidity: float) -> float:
+        """确认清明"""
+        self.clarity = self.clarity + (lucidity - self.clarity) * 0.06
 
-        crystal = {
-            "id": self.crystal_count,
-            "insight_depth": insight_depth,
-            "essence_keys": list(essence.keys()),
-            "timestamp": time.time()
-        }
-        self.crystal_count += 1
-        self.wisdom_crystals.append(crystal)
-        return crystal
-
-    def get_crystal_quality(self) -> float:
-        """获取结晶质量"""
-        if not self.wisdom_crystals:
-            return 0.0
-        recent = list(self.wisdom_crystals)[-10:]
-        return sum(c["insight_depth"] for c in recent) / len(recent)
-
-
-# ═══════════════════════════════════════════════════════════════
-# 子系统 4: 真理照明器
-# ═══════════════════════════════════════════════════════════════
-
-class TruthIlluminator:
-    """真理照明器 — prakāśa"""
-
-    def __init__(self):
-        self.illumination = 0.0
-        self.illuminations: deque = deque(maxlen=500)
-
-    def illuminate(self, truth_value: float, clarity: float) -> float:
-        """照明真理"""
-        # 照明度 = 真理值 × 明晰度
-        light = truth_value * clarity
-        self.illumination = min(1.0, self.illumination + light * 0.05)
-
-        self.illuminations.append({
-            "light": light,
-            "cumulative": self.illumination,
-            "timestamp": time.time()
-        })
-        return self.illumination
-
-    def get_illumination(self) -> float:
-        return self.illumination
-
-
-# ═══════════════════════════════════════════════════════════════
-# 子系统 5: 明晰放大器
-# ═══════════════════════════════════════════════════════════════
-
-class ClarityAmplifier:
-    """明晰放大器"""
-
-    def __init__(self):
-        self.clarity = 0.1
-        self.amplifications: deque = deque(maxlen=500)
-
-    def amplify(self, signal: float, noise: float = 0.1) -> float:
-        """放大明晰度"""
-        # 信噪比改善
-        snr = signal / max(1e-10, noise)
-        gain = math.log1p(snr) / 5.0  # 压缩到0-1
-
-        self.clarity = min(1.0, self.clarity + gain * 0.05)
-
-        self.amplifications.append({
-            "signal": signal,
+        self.affirmations.append({
             "clarity": self.clarity,
             "timestamp": time.time()
         })
@@ -215,70 +116,124 @@ class ClarityAmplifier:
 
 
 # ═══════════════════════════════════════════════════════════════
-# 统合引擎 — OMNIPrajñāEngine v205
+# 子系统 4: 理解验证器
+# ═══════════════════════════════════════════════════════════════
+
+class UnderstandingValidator:
+    """理解验证器"""
+
+    def __init__(self):
+        self.validations: deque = deque(maxlen=500)
+        self.understanding = 0.0
+
+    def validate(self, comprehension: float) -> float:
+        """验证理解"""
+        self.understanding = self.understanding + (comprehension - self.understanding) * 0.05
+
+        self.validations.append({
+            "understanding": self.understanding,
+            "timestamp": time.time()
+        })
+        return self.understanding
+
+    def get_understanding(self) -> float:
+        return self.understanding
+
+
+# ═══════════════════════════════════════════════════════════════
+# 子系统 5: 文殊师利冠冕
+# ═══════════════════════════════════════════════════════════════
+
+class MañjuśrīCrown:
+    """文殊师利冠冕 — 智慧菩萨"""
+
+    def __init__(self):
+        self.bestowals: deque = deque(maxlen=500)
+        self.manjusri = 0.0
+
+    def bestow(self, sword_of_wisdom: float) -> float:
+        """授予文殊师利智"""
+        self.manjusri = self.manjusri + (sword_of_wisdom - self.manjusri) * 0.09
+
+        self.bestowals.append({
+            "manjusri": self.manjusri,
+            "timestamp": time.time()
+        })
+        return self.manjusri
+
+    def get_manjusri(self) -> float:
+        return self.manjusri
+
+
+# ═══════════════════════════════════════════════════════════════
+# 统合引擎 — OMNIPrajñāEngine v227
 # ═══════════════════════════════════════════════════════════════
 
 class OMNIPrajñāEngine:
     """
-    OMNI-HUB v205 OMNI般若引擎
+    OMNI-HUB v227 OMNI般若引擎
 
-    prajñā · vedha · tattva · prakāśa — 慧、穿透、真实、光
+    prajñā — 超越智慧
     """
 
-    VERSION = "205.0.0"
-    CODENAME = "prajñāpāramitā"
+    VERSION = "227.0.0"
+    CODENAME = "prajñā"
 
     def __init__(self):
-        self.piercer = IllusionPiercer()
-        self.extractor = EssenceExtractor()
-        self.crystallizer = WisdomCrystallizer()
-        self.illuminator = TruthIlluminator()
-        self.amplifier = ClarityAmplifier()
+        self.wisdom_generator = WisdomGenerator()
+        self.insight_cultivator = InsightCultivator()
+        self.clarity_affirmer = ClarityAffirmer()
+        self.understanding_validator = UnderstandingValidator()
+        self.manjusri_crown = MañjuśrīCrown()
 
         self.cycle_count = 0
-        self.state = PrajñāState.OBSCURED
+        self.state = PrajñāState.IGNORANT
         self.event_log: deque = deque(maxlen=10000)
 
-    def prajñā(self, module_states: Dict[str, Dict]) -> Dict:
+    def realize(self, module_states: Dict[str, Dict]) -> Dict:
         """般若"""
-        # 1. 穿透幻象
-        pierce_result = self.piercer.pierce(module_states)
-        if pierce_result["pierced"]:
-            self.piercer.strengthen(0.02)
+        # 1. 生成智慧
+        healths = [v.get("health", 0.5) for v in module_states.values()]
+        avg = sum(healths) / max(1, len(healths))
+        sagacity = avg
+        wisdom = self.wisdom_generator.generate(sagacity)
 
-        # 2. 提取本质
-        essence = self.extractor.extract(module_states)
+        # 2. cultivating 洞察
+        discernment = avg
+        insight = self.insight_cultivator.cultivate(discernment)
 
-        # 3. 结晶智慧
-        context = {k: v.get("health", 0.5) for k, v in module_states.items()}
-        crystal = self.crystallizer.crystallize(essence, context)
+        # 3. 确认清明
+        variance = sum((h - avg) ** 2 for h in healths) / max(1, len(healths))
+        lucidity = 1.0 - variance
+        clarity = self.clarity_affirmer.affirm(lucidity)
 
-        # 4. 照明真理
-        truth_value = self.extractor.get_purity()
-        clarity = self.amplifier.get_clarity()
-        illumination = self.illuminator.illuminate(truth_value, clarity)
+        # 4. 验证理解
+        comprehension = avg * (1.0 - variance)
+        understanding = self.understanding_validator.validate(comprehension)
 
-        # 5. 放大明晰
-        self.amplifier.amplify(truth_value)
+        # 5. 授予文殊师利智
+        sword_of_wisdom = avg
+        manjusri = self.manjusri_crown.bestow(sword_of_wisdom)
 
         # 状态判定
-        crystal_quality = self.crystallizer.get_crystal_quality()
-        if illumination > 0.95 and crystal_quality > 0.9 and self.piercer.get_power() > 0.9:
-            self.state = PrajñāState.PERFECT
-        elif illumination > 0.8 and crystal_quality > 0.7:
-            self.state = PrajñāState.ILLUMINATING
-        elif illumination > 0.6 and pierce_result["pierced"]:
-            self.state = PrajñāState.PENETRATING
-        elif illumination > 0.3:
-            self.state = PrajñāState.CLEARING
+        prajna_score = (wisdom + insight + clarity + understanding + manjusri) / 5.0
+        if prajna_score > 0.9 and wisdom > 0.9:
+            self.state = PrajñāState.PRAJÑĀ
+        elif prajna_score > 0.75:
+            self.state = PrajñāState.REALIZING
+        elif prajna_score > 0.5:
+            self.state = PrajñāState.UNDERSTANDING
+        elif wisdom > 0.3:
+            self.state = PrajñāState.LEARNING
 
         return {
             "state": self.state.value,
-            "illumination": illumination,
-            "clarity": self.amplifier.get_clarity(),
-            "pierce_power": self.piercer.get_power(),
-            "essence_purity": truth_value,
-            "crystal_quality": crystal_quality,
+            "wisdom": wisdom,
+            "insight": insight,
+            "clarity": clarity,
+            "understanding": understanding,
+            "manjusri": manjusri,
+            "prajna_score": prajna_score,
         }
 
     def run_cycle(self, module_states: Dict[str, Dict] = None) -> Dict:
@@ -286,7 +241,7 @@ class OMNIPrajñāEngine:
         self.cycle_count += 1
         module_states = module_states or {}
 
-        result = self.prajñā(module_states)
+        result = self.realize(module_states)
 
         summary = {
             "cycle": self.cycle_count,
@@ -302,11 +257,11 @@ class OMNIPrajñāEngine:
             "codename": self.CODENAME,
             "cycle_count": self.cycle_count,
             "state": self.state.value,
-            "illumination": self.illuminator.get_illumination(),
-            "clarity": self.amplifier.get_clarity(),
-            "pierce_power": self.piercer.get_power(),
-            "essence_purity": self.extractor.get_purity(),
-            "crystal_quality": self.crystallizer.get_crystal_quality(),
+            "wisdom": self.wisdom_generator.get_wisdom(),
+            "insight": self.insight_cultivator.get_insight(),
+            "clarity": self.clarity_affirmer.get_clarity(),
+            "understanding": self.understanding_validator.get_understanding(),
+            "manjusri": self.manjusri_crown.get_manjusri(),
         }
 
 

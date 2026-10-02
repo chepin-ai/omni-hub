@@ -2158,6 +2158,38 @@ def _get_virya():
     return _virya
 
 
+def _get_karuna():
+    global _karuna
+    if _karuna is None:
+        from core.omni_karuna_engine import get_omni_karuna_engine
+        _karuna = get_omni_karuna_engine()
+    return _karuna
+
+
+def _get_maitri():
+    global _maitri
+    if _maitri is None:
+        from core.omni_maitri_engine import get_omni_maitri_engine
+        _maitri = get_omni_maitri_engine()
+    return _maitri
+
+
+def _get_dana():
+    global _dana
+    if _dana is None:
+        from core.omni_dana_engine import get_omni_dana_engine
+        _dana = get_omni_dana_engine()
+    return _dana
+
+
+def _get_prajna():
+    global _prajna
+    if _prajna is None:
+        from core.omni_prajna_engine import get_omni_prajna_engine
+        _prajna = get_omni_prajna_engine()
+    return _prajna
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -2227,7 +2259,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "225.0.0"
+    VERSION = "227.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -6192,6 +6224,42 @@ class OMNIHUBOrchestrator:
                 ovr = _get_virya()
                 ovr.run_cycle(module_states)
                 self.current_state["virya"] = ovr.get_status()
+            except Exception:
+                pass
+
+        # 256. OMNIKaruṇāEngine — karuṇā (period 1627)
+        if cycle_number % 1627 == 0:
+            try:
+                okn = _get_karuna()
+                okn.run_cycle(module_states)
+                self.current_state["karuna"] = okn.get_status()
+            except Exception:
+                pass
+
+        # 257. OMNIMaitrīEngine — maitrī (period 1637)
+        if cycle_number % 1637 == 0:
+            try:
+                omt = _get_maitri()
+                omt.run_cycle(module_states)
+                self.current_state["maitri"] = omt.get_status()
+            except Exception:
+                pass
+
+        # 258. OMNIDānaEngine — dāna (period 1657)
+        if cycle_number % 1657 == 0:
+            try:
+                od = _get_dana()
+                od.run_cycle(module_states)
+                self.current_state["dana"] = od.get_status()
+            except Exception:
+                pass
+
+        # 259. OMNIPrajñāEngine — prajñā (period 1663)
+        if cycle_number % 1663 == 0:
+            try:
+                opj = _get_prajna()
+                opj.run_cycle(module_states)
+                self.current_state["prajna"] = opj.get_status()
             except Exception:
                 pass
 
