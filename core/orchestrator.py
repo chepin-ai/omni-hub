@@ -2462,6 +2462,22 @@ def _get_bardo():
     return _bardo
 
 
+def _get_mahakala():
+    global _mahakala
+    if _mahakala is None:
+        from core.omni_mahakala_engine import get_omni_mahakala_engine
+        _mahakala = get_omni_mahakala_engine()
+    return _mahakala
+
+
+def _get_palden_lhamo():
+    global _palden_lhamo
+    if _palden_lhamo is None:
+        from core.omni_palden_lhamo_engine import get_omni_palden_lhamo_engine
+        _palden_lhamo = get_omni_palden_lhamo_engine()
+    return _palden_lhamo
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -2531,7 +2547,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "244.0.0"
+    VERSION = "245.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -6838,6 +6854,24 @@ class OMNIHUBOrchestrator:
                 obr = _get_bardo()
                 obr.run_cycle(module_states)
                 self.current_state["bardo"] = obr.get_status()
+            except Exception:
+                pass
+
+        # 294. OMNIMahakalaEngine -- mahakala (period 1949)
+        if cycle_number % 1949 == 0:
+            try:
+                omh = _get_mahakala()
+                omh.run_cycle(module_states)
+                self.current_state["mahakala"] = omh.get_status()
+            except Exception:
+                pass
+
+        # 295. OMNIPaldenLhamoEngine -- palden_lhamo (period 1951)
+        if cycle_number % 1951 == 0:
+            try:
+                opl = _get_palden_lhamo()
+                opl.run_cycle(module_states)
+                self.current_state["palden_lhamo"] = opl.get_status()
             except Exception:
                 pass
 
