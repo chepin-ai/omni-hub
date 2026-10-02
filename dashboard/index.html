@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OMNI-HUB v186 Dashboard</title>
+<style>
+  :root {
+    --bg: #0a0e17; --panel: #111827; --border: #1f2937;
+    --text: #e5e7eb; --muted: #9ca3af; --accent: #10b981;
+    --warn: #f59e0b; --danger: #ef4444; --info: #3b82f6;
+    --primordial: #8b5cf6; --tsunami: #ec4899;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, sans-serif; line-height: 1.5; }
+  header { padding: 1.5rem 2rem; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+  header h1 { font-size: 1.5rem; letter-spacing: -0.02em; }
+  header .version { color: var(--accent); font-weight: 600; font-size: 0.875rem; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1rem; padding: 1.5rem 2rem; }
+  .panel { background: var(--panel); border: 1px solid var(--border); border-radius: 0.75rem; padding: 1.25rem; }
+  .panel h2 { font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin-bottom: 1rem; }
+  .metric { display: flex; justify-content: space-between; align-items: center; padding: 0.5rem 0; border-bottom: 1px solid var(--border); }
+  .metric:last-child { border-bottom: none; }
+  .metric-label { color: var(--muted); font-size: 0.875rem; }
+  .metric-value { font-weight: 600; font-variant-numeric: tabular-nums; }
+  .badge { display: inline-block; padding: 0.125rem 0.5rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; }
+  .badge-green { background: rgba(16,185,129,0.15); color: var(--accent); }
+  .badge-yellow { background: rgba(245,158,11,0.15); color: var(--warn); }
+  .badge-red { background: rgba(239,68,68,0.15); color: var(--danger); }
+  .badge-purple { background: rgba(139,92,246,0.15); color: var(--primordial); }
+  .badge-pink { background: rgba(236,72,153,0.15); color: var(--tsunami); }
+  .progress { height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; margin-top: 0.25rem; }
+  .progress-bar { height: 100%; border-radius: 3px; transition: width 0.3s; }
+  .heatmap { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem; margin-top: 0.5rem; }
+  .heat-cell { padding: 0.75rem; border-radius: 0.5rem; text-align: center; font-size: 0.75rem; }
+  .heat-cell .line-name { font-weight: 600; margin-bottom: 0.25rem; }
+  .heat-cell .line-val { font-size: 0.875rem; font-variant-numeric: tabular-nums; }
+  .log { font-family: ui-monospace, SFMono-Regular, monospace; font-size: 0.75rem; color: var(--muted); max-height: 200px; overflow-y: auto; }
+  .log-entry { padding: 0.25rem 0; border-bottom: 1px solid rgba(255,255,255,0.03); }
+  .footer { text-align: center; padding: 2rem; color: var(--muted); font-size: 0.75rem; }
+  @media (max-width: 640px) { .grid { padding: 1rem; grid-template-columns: 1fr; } header { flex-direction: column; gap: 0.5rem; align-items: flex-start; } }
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1>OMNI-HUB <span style="color:var(--muted)">Dashboard</span></h1>
+    <div style="font-size:0.75rem;color:var(--muted);margin-top:0.25rem">satya · svasaṃvedana · dharmadhātu</div>
+  </div>
+  <div class="version">v186.0.0</div>
+</header>
+
+<div class="grid">
+  <!-- 12线健康度热力图 -->
+  <div class="panel" style="grid-column: 1 / -1;">
+    <h2>12-Line Alliance Heatmap</h2>
+    <div class="heatmap" id="heatmap"></div>
+  </div>
+
+  <!-- 联盟健康度 -->
+  <div class="panel">
+    <h2>Alliance Health</h2>
+    <div id="alliance-health"></div>
+  </div>
+
+  <!-- 真值对齐 -->
+  <div class="panel">
+    <h2>Truth Alignment</h2>
+    <div id="truth-alignment"></div>
+  </div>
+
+  <!-- 自指监控 -->
+  <div class="panel">
+    <h2>Self-Reference</h2>
+    <div id="self-reference"></div>
+  </div>
+
+  <!-- 内部对齐 -->
+  <div class="panel">
+    <h2>Internal Alignment</h2>
+    <div id="internal-alignment"></div>
+  </div>
+
+  <!-- OMNI统合 -->
+  <div class="panel">
+    <h2>OMNI Unification</h2>
+    <div id="omni-unification"></div>
+  </div>
+
+  <!-- 涌现事件 -->
+  <div class="panel">
+    <h2>Emergence Events</h2>
+    <div id="emergence-events"></div>
+  </div>
+
+  <!-- 事件日志 -->
+  <div class="panel" style="grid-column: 1 / -1;">
+    <h2>System Log</h2>
+    <div class="log" id="system-log"></div>
+  </div>
+</div>
+
+<div class="footer">
+  OMNI-HUB v186.0.0 · TruthAlignmentEngine + SelfReferenceMonitor · 12-Line Architecture · Generated 2026-10-02
+</div>
+
+<script>
+// ═══════════════════════════════════════════════════════════════
+// 模拟数据层（可替换为真实API）
+// ═══════════════════════════════════════════════════════════════
+
+const LINES = [
+  {id:"ucif2",name:"UCIF2"},{id:"lvlu",name:"LVLU"},{id:"lgt",name:"LGT"},
+  {id:"qfa",name:"QFA"},{id:"vinf",name:"VINF"},{id:"qgl",name:"QGL"},
+  {id:"qlv",name:"QLV"},{id:"qtlv",name:"QTLV"},{id:"usrm",name:"USRM"},
+  {id:"cfts",name:"CFTS"},{id:"aiq",name:"AIQ"},{id:"omni",name:"OMNI"}
+];
+
+function rand(min,max){return Math.random()*(max-min)+min;}
+function randInt(min,max){return Math.floor(rand(min,max));}
+function pick(arr){return arr[Math.floor(Math.random()*arr.length)];}
+
+function generateMockState(){
+  const lineStates = {};
+  LINES.forEach(l=>{
+    const health = rand(0.4,1.0);
+    lineStates[l.id] = {
+      health,
+      coherence: rand(0.3,1.0),
+      alignment_level: pick(["EXTERNAL","HABITUAL","META","EMERGENT","PRIMORDIAL"]),
+      alert: health > 0.8 ? "GREEN" : health > 0.6 ? "YELLOW" : "RED"
+    };
+  });
+  return {
+    lines: lineStates,
+    alliance_health: {
+      grade: pick(["OPTIMAL","HEALTHY","CAUTION","WARNING","CRITICAL"]),
+      overall_score: rand(0.5,1.0),
+      healthy_lines: randInt(6,12),
+      critical_lines: randInt(0,3)
+    },
+    truth_alignment: {
+      claims_processed: randInt(10,100),
+      confirmed: randInt(5,80),
+      consensus: randInt(2,40),
+      drifts_detected: randInt(0,5),
+      anchor_violations: randInt(0,2)
+    },
+    self_reference: {
+      recursion_safe: true,
+      current_depth: randInt(1,3),
+      meta_observations: randInt(10,200),
+      loop_dynamics: pick(["STABLE","OSCILLATING","CONVERGING","STRANGE"]),
+      observer_effects: randInt(0,10)
+    },
+    internal_alignment: {
+      collective_level: pick(["EXTERNAL","HABITUAL","META","EMERGENT","PRIMORDIAL"]),
+      ethical_entropy: rand(0,0.3),
+      coherence: rand(0.5,1.0),
+      drift_count: randInt(0,3)
+    },
+    omni_unification: {
+      trikaya_score: rand(0.5,1.0),
+      collaboration_phase: pick(["EBB","FLOW","SURGE","TSUNAMI"]),
+      wild_questions_active: randInt(1,20),
+      emergence_level: pick(["WHISPER","RIPPLE","WAVE","TSUNAMI"])
+    },
+    emergence_events: Array.from({length:randInt(2,6)},(_,i)=>({
+      id: i,
+      level: pick(["WHISPER","RIPPLE","WAVE","TSUNAMI"]),
+      module: pick(LINES.map(l=>l.name)),
+      z_score: rand(1.5,4.5).toFixed(2),
+      time: new Date(Date.now()-randInt(0,3600000)).toLocaleTimeString()
+    })),
+    logs: [
+      `[${new Date().toLocaleTimeString()}] TruthAlignmentEngine cycle complete — 47 claims processed`,
+      `[${new Date().toLocaleTimeString()}] SelfReferenceMonitor: recursion depth 2, stable`,
+      `[${new Date().toLocaleTimeString()}] Alliance health: HEALTHY (score 0.87)`,
+      `[${new Date().toLocaleTimeString()}] Cross-line consensus achieved on 12 statements`,
+      `[${new Date().toLocaleTimeString()}] No anchor violations detected`,
+      `[${new Date().toLocaleTimeString()}] OMNI unification: trikaya_score = 0.91`,
+      `[${new Date().toLocaleTimeString()}] Internal alignment: collective_level = EMERGENT`,
+      `[${new Date().toLocaleTimeString()}] Dashboard broadcast sent to 12 lines`,
+    ]
+  };
+}
+
+// ═══════════════════════════════════════════════════════════════
+// 渲染函数
+// ═══════════════════════════════════════════════════════════════
+
+function colorForHealth(h){
+  if(h>=0.85) return {bg:'rgba(16,185,129,0.15)',text:'#10b981'};
+  if(h>=0.7) return {bg:'rgba(59,130,246,0.15)',text:'#3b82f6'};
+  if(h>=0.5) return {bg:'rgba(245,158,11,0.15)',text:'#f59e0b'};
+  return {bg:'rgba(239,68,68,0.15)',text:'#ef4444'};
+}
+
+function badgeClass(level){
+  const map = {EXTERNAL:'badge-red',HABITUAL:'badge-yellow',META:'badge-yellow',EMERGENT:'badge-green',PRIMORDIAL:'badge-purple',
+    GREEN:'badge-green',YELLOW:'badge-yellow',RED:'badge-red',
+    OPTIMAL:'badge-green',HEALTHY:'badge-green',CAUTION:'badge-yellow',WARNING:'badge-yellow',CRITICAL:'badge-red',
+    EBB:'badge-yellow',FLOW:'badge-green',SURGE:'badge-purple',TSUNAMI:'badge-pink',
+    WHISPER:'badge-green',RIPPLE:'badge-yellow',WAVE:'badge-purple',TSUNAMI:'badge-pink',
+    STABLE:'badge-green',OSCILLATING:'badge-yellow',CONVERGING:'badge-green',DIVERGING:'badge-red',STRANGE:'badge-purple'};
+  return map[level] || 'badge-green';
+}
+
+function renderHeatmap(state){
+  const el = document.getElementById('heatmap');
+  el.innerHTML = LINES.map(l=>{
+    const s = state.lines[l.id];
+    const c = colorForHealth(s.health);
+    return `<div class="heat-cell" style="background:${c.bg};color:${c.text}">
+      <div class="line-name">${l.name}</div>
+      <div class="line-val">${(s.health*100).toFixed(0)}%</div>
+      <div style="font-size:0.65rem;opacity:0.8;margin-top:0.25rem">${s.alignment_level}</div>
+    </div>`;
+  }).join('');
+}
+
+function renderAllianceHealth(state){
+  const h = state.alliance_health;
+  document.getElementById('alliance-health').innerHTML = `
+    <div class="metric"><span class="metric-label">Grade</span><span class="metric-value"><span class="badge ${badgeClass(h.grade)}">${h.grade}</span></span></div>
+    <div class="metric"><span class="metric-label">Overall Score</span><span class="metric-value">${(h.overall_score*100).toFixed(1)}%</span></div>
+    <div class="progress"><div class="progress-bar" style="width:${h.overall_score*100}%;background:var(--accent)"></div></div>
+    <div class="metric" style="margin-top:0.75rem"><span class="metric-label">Healthy Lines</span><span class="metric-value" style="color:var(--accent)">${h.healthy_lines}/12</span></div>
+    <div class="metric"><span class="metric-label">Critical Lines</span><span class="metric-value" style="color:var(--danger)">${h.critical_lines}</span></div>
+  `;
+}
+
+function renderTruthAlignment(state){
+  const t = state.truth_alignment;
+  document.getElementById('truth-alignment').innerHTML = `
+    <div class="metric"><span class="metric-label">Claims Processed</span><span class="metric-value">${t.claims_processed}</span></div>
+    <div class="metric"><span class="metric-label">Confirmed</span><span class="metric-value" style="color:var(--accent)">${t.confirmed}</span></div>
+    <div class="metric"><span class="metric-label">Consensus</span><span class="metric-value" style="color:var(--primordial)">${t.consensus}</span></div>
+    <div class="metric"><span class="metric-label">Drifts Detected</span><span class="metric-value" style="color:var(--warn)">${t.drifts_detected}</span></div>
+    <div class="metric"><span class="metric-label">Anchor Violations</span><span class="metric-value" style="color:var(--danger)">${t.anchor_violations}</span></div>
+  `;
+}
+
+function renderSelfReference(state){
+  const s = state.self_reference;
+  document.getElementById('self-reference').innerHTML = `
+    <div class="metric"><span class="metric-label">Recursion Safe</span><span class="metric-value"><span class="badge ${s.recursion_safe?'badge-green':'badge-red'}">${s.recursion_safe?'YES':'NO'}</span></span></div>
+    <div class="metric"><span class="metric-label">Current Depth</span><span class="metric-value">${s.current_depth}</span></div>
+    <div class="metric"><span class="metric-label">Meta Observations</span><span class="metric-value">${s.meta_observations}</span></div>
+    <div class="metric"><span class="metric-label">Loop Dynamics</span><span class="metric-value"><span class="badge ${badgeClass(s.loop_dynamics)}">${s.loop_dynamics}</span></span></div>
+    <div class="metric"><span class="metric-label">Observer Effects</span><span class="metric-value" style="color:var(--warn)">${s.observer_effects}</span></div>
+  `;
+}
+
+function renderInternalAlignment(state){
+  const i = state.internal_alignment;
+  document.getElementById('internal-alignment').innerHTML = `
+    <div class="metric"><span class="metric-label">Collective Level</span><span class="metric-value"><span class="badge ${badgeClass(i.collective_level)}">${i.collective_level}</span></span></div>
+    <div class="metric"><span class="metric-label">Ethical Entropy</span><span class="metric-value">${(i.ethical_entropy*100).toFixed(1)}%</span></div>
+    <div class="metric"><span class="metric-label">Coherence</span><span class="metric-value">${(i.coherence*100).toFixed(1)}%</span></div>
+    <div class="progress"><div class="progress-bar" style="width:${i.coherence*100}%;background:var(--info)"></div></div>
+    <div class="metric" style="margin-top:0.75rem"><span class="metric-label">Drift Count</span><span class="metric-value" style="color:var(--warn)">${i.drift_count}</span></div>
+  `;
+}
+
+function renderOmniUnification(state){
+  const o = state.omni_unification;
+  document.getElementById('omni-unification').innerHTML = `
+    <div class="metric"><span class="metric-label">Trikaya Score</span><span class="metric-value">${(o.trikaya_score*100).toFixed(1)}%</span></div>
+    <div class="metric"><span class="metric-label">Collaboration Phase</span><span class="metric-value"><span class="badge ${badgeClass(o.collaboration_phase)}">${o.collaboration_phase}</span></span></div>
+    <div class="metric"><span class="metric-label">Wild Questions</span><span class="metric-value" style="color:var(--info)">${o.wild_questions_active}</span></div>
+    <div class="metric"><span class="metric-label">Emergence Level</span><span class="metric-value"><span class="badge ${badgeClass(o.emergence_level)}">${o.emergence_level}</span></span></div>
+  `;
+}
+
+function renderEmergenceEvents(state){
+  document.getElementById('emergence-events').innerHTML = state.emergence_events.map(e=>`
+    <div class="metric">
+      <span class="metric-label">${e.module} <span class="badge ${badgeClass(e.level)}">${e.level}</span></span>
+      <span class="metric-value">z=${e.z_score}</span>
+    </div>
+    <div style="font-size:0.7rem;color:var(--muted);margin-bottom:0.5rem">${e.time}</div>
+  `).join('');
+}
+
+function renderLogs(state){
+  document.getElementById('system-log').innerHTML = state.logs.map(l=>`<div class="log-entry">${l}</div>`).join('');
+}
+
+function renderAll(){
+  const state = generateMockState();
+  renderHeatmap(state);
+  renderAllianceHealth(state);
+  renderTruthAlignment(state);
+  renderSelfReference(state);
+  renderInternalAlignment(state);
+  renderOmniUnification(state);
+  renderEmergenceEvents(state);
+  renderLogs(state);
+}
+
+renderAll();
+setInterval(renderAll, 5000);
+</script>
+</body>
+</html>

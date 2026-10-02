@@ -187,6 +187,8 @@ _consciousness_technology = None
 _internal_alignment_engine = None
 _omni_unification_engine = None
 _dashboard_omni_layer = None
+_truth_alignment_engine = None
+_self_reference_monitor = None
 
 
 def _get_north_star():
@@ -1515,6 +1517,22 @@ def _get_dashboard_omni_layer():
     return _dashboard_omni_layer
 
 
+def _get_truth_alignment_engine():
+    global _truth_alignment_engine
+    if _truth_alignment_engine is None:
+        from core.truth_alignment_engine import get_truth_alignment_engine
+        _truth_alignment_engine = get_truth_alignment_engine()
+    return _truth_alignment_engine
+
+
+def _get_self_reference_monitor():
+    global _self_reference_monitor
+    if _self_reference_monitor is None:
+        from core.self_reference_monitor import get_self_reference_monitor
+        _self_reference_monitor = get_self_reference_monitor()
+    return _self_reference_monitor
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -1584,7 +1602,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "185.0.0"
+    VERSION = "186.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -4710,6 +4728,63 @@ class OMNIHUBOrchestrator:
                                       {"type": "dashboard_omni", "grade": result.get("alliance_health", {}).get("grade"),
                                        "overall_score": result.get("alliance_health", {}).get("overall_score")},
                                       source="dashboard_omni_layer")
+            except Exception:
+                pass
+
+        # 177. TruthAlignmentEngine — cross-line fact consistency, multi-source validation, truth consensus (every 1095 cycles)
+        if self.cycle_count % 1095 == 0 and self.cycle_count > 0:
+            try:
+                tae = _get_truth_alignment_engine()
+                # Build line states with claims from current state
+                line_states = {}
+                for line in ["ucif2", "lvlu", "lgt", "qfa", "vinf", "qgl", "qlv", "qtlv", "usrm", "cfts", "aiq", "omni"]:
+                    line_data = {"claims": []}
+                    line_state = self.current_state.get(line, {})
+                    if line_state:
+                        line_data["claims"].append({
+                            "statement": f"health={line_state.get('health', 0.5)}",
+                            "module": line,
+                            "evidence": {"health": line_state.get('health', 0.5)},
+                        })
+                    line_states[line] = line_data
+                result = tae.run_cycle(line_states=line_states)
+                self.current_state["truth_alignment"] = result
+                self.current_state["truth_status"] = tae.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "truth_alignment", "confirmed": result.get("confirmed", 0),
+                                       "consensus": result.get("consensus", 0)},
+                                      source="truth_alignment_engine")
+            except Exception:
+                pass
+
+        # 178. SelfReferenceMonitor — recursive self-reference, meta-observation, consistency check (every 1096 cycles)
+        if self.cycle_count % 1096 == 0 and self.cycle_count > 0:
+            try:
+                srm = _get_self_reference_monitor()
+                # Build module states from current state
+                module_states = {}
+                for line in ["ucif2", "lvlu", "lgt", "qfa", "vinf", "qgl", "qlv", "qtlv", "usrm", "cfts", "aiq", "omni"]:
+                    module_states[line] = {
+                        "health": self.current_state.get(line, {}).get("health", 0.5),
+                        "coherence": self.current_state.get(line, {}).get("coherence", 0.5),
+                        "alert": self.current_state.get(line, {}).get("alert", "GREEN"),
+                    }
+                # Add OMNI modules as watched
+                module_states["dashboard_omni"] = {
+                    "health": self.current_state.get("dashboard_omni", {}).get("alliance_health", {}).get("overall_score", 0.5),
+                }
+                module_states["truth_alignment"] = {
+                    "confirmed": self.current_state.get("truth_alignment", {}).get("confirmed", 0),
+                }
+                result = srm.run_cycle(module_states=module_states)
+                self.current_state["self_reference"] = result
+                self.current_state["self_reference_status"] = srm.get_status()
+                if bus and Topics:
+                    bus.publish_simple(Topics.STATE_CHANGE,
+                                      {"type": "self_reference", "recursion_safe": result.get("recursion_safe"),
+                                       "loop_dynamics": result.get("loop_dynamics")},
+                                      source="self_reference_monitor")
             except Exception:
                 pass
 
