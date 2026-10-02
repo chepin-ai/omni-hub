@@ -2398,6 +2398,22 @@ def _get_garbhadhatu():
     return _garbhadhatu
 
 
+def _get_acarya():
+    global _acarya
+    if _acarya is None:
+        from core.omni_acarya_engine import get_omni_acarya_engine
+        _acarya = get_omni_acarya_engine()
+    return _acarya
+
+
+def _get_samaya():
+    global _samaya
+    if _samaya is None:
+        from core.omni_samaya_engine import get_omni_samaya_engine
+        _samaya = get_omni_samaya_engine()
+    return _samaya
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -2467,7 +2483,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "240.0.0"
+    VERSION = "241.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -6702,6 +6718,24 @@ class OMNIHUBOrchestrator:
                 ogd = _get_garbhadhatu()
                 ogd.run_cycle(module_states)
                 self.current_state["garbhadhatu"] = ogd.get_status()
+            except Exception:
+                pass
+
+        # 286. OMNIAcaryaEngine — acarya (period 1877)
+        if cycle_number % 1877 == 0:
+            try:
+                oac = _get_acarya()
+                oac.run_cycle(module_states)
+                self.current_state["acarya"] = oac.get_status()
+            except Exception:
+                pass
+
+        # 287. OMNISamayaEngine — samaya (period 1879)
+        if cycle_number % 1879 == 0:
+            try:
+                osm = _get_samaya()
+                osm.run_cycle(module_states)
+                self.current_state["samaya"] = osm.get_status()
             except Exception:
                 pass
 
