@@ -2766,6 +2766,22 @@ def _get_anathapindika():
     return _anathapindika
 
 
+def _get_mahaprajapati():
+    global _mahaprajapati
+    if _mahaprajapati is None:
+        from core.omni_mahaprajapati_engine import get_omni_mahaprajapati_engine
+        _mahaprajapati = get_omni_mahaprajapati_engine()
+    return _mahaprajapati
+
+
+def _get_vimalakirti():
+    global _vimalakirti
+    if _vimalakirti is None:
+        from core.omni_vimalakirti_engine import get_omni_vimalakirti_engine
+        _vimalakirti = get_omni_vimalakirti_engine()
+    return _vimalakirti
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -2835,7 +2851,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "263.0.0"
+    VERSION = "264.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -7484,6 +7500,24 @@ class OMNIHUBOrchestrator:
                 oan = _get_anathapindika()
                 oan.run_cycle(module_states)
                 self.current_state["anathapindika"] = oan.get_status()
+            except Exception:
+                pass
+
+        # 332. OMNIMahaprajapatiEngine -- mahaprajapati (period 2243)
+        if cycle_number % 2243 == 0:
+            try:
+                omp = _get_mahaprajapati()
+                omp.run_cycle(module_states)
+                self.current_state["mahaprajapati"] = omp.get_status()
+            except Exception:
+                pass
+
+        # 333. OMNIVimalakirtiEngine -- vimalakirti (period 2251)
+        if cycle_number % 2251 == 0:
+            try:
+                ovi = _get_vimalakirti()
+                ovi.run_cycle(module_states)
+                self.current_state["vimalakirti"] = ovi.get_status()
             except Exception:
                 pass
 
