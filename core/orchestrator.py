@@ -2558,6 +2558,22 @@ def _get_tsongkhapa():
     return _tsongkhapa
 
 
+def _get_nagarjuna():
+    global _nagarjuna
+    if _nagarjuna is None:
+        from core.omni_nagarjuna_engine import get_omni_nagarjuna_engine
+        _nagarjuna = get_omni_nagarjuna_engine()
+    return _nagarjuna
+
+
+def _get_asanga():
+    global _asanga
+    if _asanga is None:
+        from core.omni_asanga_engine import get_omni_asanga_engine
+        _asanga = get_omni_asanga_engine()
+    return _asanga
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -2627,7 +2643,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "250.0.0"
+    VERSION = "251.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -7042,6 +7058,24 @@ class OMNIHUBOrchestrator:
                 otk = _get_tsongkhapa()
                 otk.run_cycle(module_states)
                 self.current_state["tsongkhapa"] = otk.get_status()
+            except Exception:
+                pass
+
+        # 306. OMNINagarjunaEngine -- nagarjuna (period 2029)
+        if cycle_number % 2029 == 0:
+            try:
+                onj = _get_nagarjuna()
+                onj.run_cycle(module_states)
+                self.current_state["nagarjuna"] = onj.get_status()
+            except Exception:
+                pass
+
+        # 307. OMNIAsangaEngine -- asanga (period 2039)
+        if cycle_number % 2039 == 0:
+            try:
+                oas = _get_asanga()
+                oas.run_cycle(module_states)
+                self.current_state["asanga"] = oas.get_status()
             except Exception:
                 pass
 
