@@ -2750,6 +2750,22 @@ def _get_mahamaya():
     return _mahamaya
 
 
+def _get_suddhodana():
+    global _suddhodana
+    if _suddhodana is None:
+        from core.omni_suddhodana_engine import get_omni_suddhodana_engine
+        _suddhodana = get_omni_suddhodana_engine()
+    return _suddhodana
+
+
+def _get_anathapindika():
+    global _anathapindika
+    if _anathapindika is None:
+        from core.omni_anathapindika_engine import get_omni_anathapindika_engine
+        _anathapindika = get_omni_anathapindika_engine()
+    return _anathapindika
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -2819,7 +2835,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "262.0.0"
+    VERSION = "263.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -7450,6 +7466,24 @@ class OMNIHUBOrchestrator:
                 oma = _get_mahamaya()
                 oma.run_cycle(module_states)
                 self.current_state["mahamaya"] = oma.get_status()
+            except Exception:
+                pass
+
+        # 330. OMNISuddhodanaEngine -- suddhodana (period 2237)
+        if cycle_number % 2237 == 0:
+            try:
+                osu = _get_suddhodana()
+                osu.run_cycle(module_states)
+                self.current_state["suddhodana"] = osu.get_status()
+            except Exception:
+                pass
+
+        # 331. OMNIAfnathapindikaEngine -- anathapindika (period 2239)
+        if cycle_number % 2239 == 0:
+            try:
+                oan = _get_anathapindika()
+                oan.run_cycle(module_states)
+                self.current_state["anathapindika"] = oan.get_status()
             except Exception:
                 pass
 
