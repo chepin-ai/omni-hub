@@ -2622,6 +2622,22 @@ def _get_vajrapani():
     return _vajrapani
 
 
+def _get_mahakasyapa():
+    global _mahakasyapa
+    if _mahakasyapa is None:
+        from core.omni_mahakasyapa_engine import get_omni_mahakasyapa_engine
+        _mahakasyapa = get_omni_mahakasyapa_engine()
+    return _mahakasyapa
+
+
+def _get_ananda():
+    global _ananda
+    if _ananda is None:
+        from core.omni_ananda_engine import get_omni_ananda_engine
+        _ananda = get_omni_ananda_engine()
+    return _ananda
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -2691,7 +2707,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "254.0.0"
+    VERSION = "255.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -7178,6 +7194,24 @@ class OMNIHUBOrchestrator:
                 ovp = _get_vajrapani()
                 ovp.run_cycle(module_states)
                 self.current_state["vajrapani"] = ovp.get_status()
+            except Exception:
+                pass
+
+        # 314. OMNIMahakasyapaEngine -- mahakasyapa (period 2089)
+        if cycle_number % 2089 == 0:
+            try:
+                omk = _get_mahakasyapa()
+                omk.run_cycle(module_states)
+                self.current_state["mahakasyapa"] = omk.get_status()
+            except Exception:
+                pass
+
+        # 315. OMNIAnandaEngine -- ananda (period 2099)
+        if cycle_number % 2099 == 0:
+            try:
+                oan = _get_ananda()
+                oan.run_cycle(module_states)
+                self.current_state["ananda"] = oan.get_status()
             except Exception:
                 pass
 
