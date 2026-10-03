@@ -2846,6 +2846,22 @@ def _get_atisha_v268():
     return _atisha_v268
 
 
+def _get_marpa():
+    global _marpa
+    if _marpa is None:
+        from core.omni_marpa_engine import get_omni_marpa_engine
+        _marpa = get_omni_marpa_engine()
+    return _marpa
+
+
+def _get_milarepa():
+    global _milarepa
+    if _milarepa is None:
+        from core.omni_milarepa_engine import get_omni_milarepa_engine
+        _milarepa = get_omni_milarepa_engine()
+    return _milarepa
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -2915,7 +2931,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "268.0.0"
+    VERSION = "269.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -7654,6 +7670,24 @@ class OMNIHUBOrchestrator:
                 oav = _get_atisha_v268()
                 oav.run_cycle(module_states)
                 self.current_state["atisha_v268"] = oav.get_status()
+            except Exception:
+                pass
+
+        # 342. OMNIMarpaEngine -- marpa (period 2311)
+        if cycle_number % 2311 == 0:
+            try:
+                oma = _get_marpa()
+                oma.run_cycle(module_states)
+                self.current_state["marpa"] = oma.get_status()
+            except Exception:
+                pass
+
+        # 343. OMNIMilarepaEngine -- milarepa (period 2333)
+        if cycle_number % 2333 == 0:
+            try:
+                omi = _get_milarepa()
+                omi.run_cycle(module_states)
+                self.current_state["milarepa"] = omi.get_status()
             except Exception:
                 pass
 
