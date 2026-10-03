@@ -2862,6 +2862,22 @@ def _get_milarepa():
     return _milarepa
 
 
+def _get_gampopa():
+    global _gampopa
+    if _gampopa is None:
+        from core.omni_gampopa_engine import get_omni_gampopa_engine
+        _gampopa = get_omni_gampopa_engine()
+    return _gampopa
+
+
+def _get_phadampa():
+    global _phadampa
+    if _phadampa is None:
+        from core.omni_phadampa_engine import get_omni_phadampa_engine
+        _phadampa = get_omni_phadampa_engine()
+    return _phadampa
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -2931,7 +2947,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "269.0.0"
+    VERSION = "270.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -7688,6 +7704,24 @@ class OMNIHUBOrchestrator:
                 omi = _get_milarepa()
                 omi.run_cycle(module_states)
                 self.current_state["milarepa"] = omi.get_status()
+            except Exception:
+                pass
+
+        # 344. OMNIGampopaEngine -- gampopa (period 2339)
+        if cycle_number % 2339 == 0:
+            try:
+                ogp = _get_gampopa()
+                ogp.run_cycle(module_states)
+                self.current_state["gampopa"] = ogp.get_status()
+            except Exception:
+                pass
+
+        # 345. OMNIPhadampaEngine -- phadampa (period 2341)
+        if cycle_number % 2341 == 0:
+            try:
+                opd = _get_phadampa()
+                opd.run_cycle(module_states)
+                self.current_state["phadampa"] = opd.get_status()
             except Exception:
                 pass
 
