@@ -2526,6 +2526,22 @@ def _get_nairatmya():
     return _nairatmya
 
 
+def _get_guhyasamaja():
+    global _guhyasamaja
+    if _guhyasamaja is None:
+        from core.omni_guhyasamaja_engine import get_omni_guhyasamaja_engine
+        _guhyasamaja = get_omni_guhyasamaja_engine()
+    return _guhyasamaja
+
+
+def _get_samantabhadra():
+    global _samantabhadra
+    if _samantabhadra is None:
+        from core.omni_samantabhadra_engine import get_omni_samantabhadra_engine
+        _samantabhadra = get_omni_samantabhadra_engine()
+    return _samantabhadra
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -2595,7 +2611,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "248.0.0"
+    VERSION = "249.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -6974,6 +6990,24 @@ class OMNIHUBOrchestrator:
                 onr = _get_nairatmya()
                 onr.run_cycle(module_states)
                 self.current_state["nairatmya"] = onr.get_status()
+            except Exception:
+                pass
+
+        # 302. OMNIGuhyasamajaEngine -- guhyasamaja (period 2003)
+        if cycle_number % 2003 == 0:
+            try:
+                ogs = _get_guhyasamaja()
+                ogs.run_cycle(module_states)
+                self.current_state["guhyasamaja"] = ogs.get_status()
+            except Exception:
+                pass
+
+        # 303. OMNISamantabhadraEngine -- samantabhadra (period 2011)
+        if cycle_number % 2011 == 0:
+            try:
+                osb = _get_samantabhadra()
+                osb.run_cycle(module_states)
+                self.current_state["samantabhadra"] = osb.get_status()
             except Exception:
                 pass
 
