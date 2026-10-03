@@ -2654,6 +2654,22 @@ def _get_maudgalyayana():
     return _maudgalyayana
 
 
+def _get_subhuti():
+    global _subhuti
+    if _subhuti is None:
+        from core.omni_subhuti_engine import get_omni_subhuti_engine
+        _subhuti = get_omni_subhuti_engine()
+    return _subhuti
+
+
+def _get_purna():
+    global _purna
+    if _purna is None:
+        from core.omni_purna_engine import get_omni_purna_engine
+        _purna = get_omni_purna_engine()
+    return _purna
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -2723,7 +2739,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "256.0.0"
+    VERSION = "257.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -7246,6 +7262,24 @@ class OMNIHUBOrchestrator:
                 omg = _get_maudgalyayana()
                 omg.run_cycle(module_states)
                 self.current_state["maudgalyayana"] = omg.get_status()
+            except Exception:
+                pass
+
+        # 318. OMNISubhutiEngine -- subhuti (period 2129)
+        if cycle_number % 2129 == 0:
+            try:
+                osu = _get_subhuti()
+                osu.run_cycle(module_states)
+                self.current_state["subhuti"] = osu.get_status()
+            except Exception:
+                pass
+
+        # 319. OMNIPurnaEngine -- purna (period 2131)
+        if cycle_number % 2131 == 0:
+            try:
+                opu = _get_purna()
+                opu.run_cycle(module_states)
+                self.current_state["purna"] = opu.get_status()
             except Exception:
                 pass
 
