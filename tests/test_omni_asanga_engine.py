@@ -1,52 +1,52 @@
-"""OMNI-HUB v251 Tests -- OMNIAsangaEngine"""
+"""OMNI-HUB v266 Tests -- OMNIAsangaEngine"""
 
 import pytest
 from core.omni_asanga_engine import (
-    OMNIAsangaEngine, AlayavijnanaGenerator, TrisvabhavaCultivator,
-    FiveCategoriesAffirmer, ConsciousnessOnlyValidator, VasubandhuCrown,
+    OMNIAsangaEngine, FiveTreatisesGenerator, TushitaCultivator,
+    ConsciousnessOnlyAffirmer, AbhidharmaValidator, MaitreyaCrown,
     AsangaState, get_omni_asanga_engine
 )
 
 
-class TestAlayavijnanaGenerator:
+class TestFiveTreatisesGenerator:
     def test_generate(self):
-        ag = AlayavijnanaGenerator()
-        r = ag.generate(0.9)
+        ftg = FiveTreatisesGenerator()
+        r = ftg.generate(0.9)
         assert r > 0.0
 
 
-class TestTrisvabhavaCultivator:
+class TestTushitaCultivator:
     def test_cultivate(self):
-        tc = TrisvabhavaCultivator()
+        tc = TushitaCultivator()
         r = tc.cultivate(0.9)
         assert r > 0.0
 
 
-class TestFiveCategoriesAffirmer:
+class TestConsciousnessOnlyAffirmer:
     def test_affirm(self):
-        fca = FiveCategoriesAffirmer()
-        r = fca.affirm(0.9)
+        coa = ConsciousnessOnlyAffirmer()
+        r = coa.affirm(0.9)
         assert r > 0.0
 
 
-class TestConsciousnessOnlyValidator:
+class TestAbhidharmaValidator:
     def test_validate(self):
-        cov = ConsciousnessOnlyValidator()
-        r = cov.validate(0.9)
+        av = AbhidharmaValidator()
+        r = av.validate(0.9)
         assert r > 0.0
 
 
-class TestVasubandhuCrown:
+class TestMaitreyaCrown:
     def test_bestow(self):
-        vc = VasubandhuCrown()
-        r = vc.bestow(0.9)
+        mc = MaitreyaCrown()
+        r = mc.bestow(0.9)
         assert r > 0.0
 
 
 class TestOMNIAsangaEngine:
     def test_init(self):
         oas = OMNIAsangaEngine()
-        assert oas.VERSION == "251.0.0"
+        assert oas.VERSION == "266.0.0"
 
     def test_contemplate(self):
         oas = OMNIAsangaEngine()
@@ -61,7 +61,7 @@ class TestOMNIAsangaEngine:
     def test_get_status(self):
         oas = OMNIAsangaEngine()
         s = oas.get_status()
-        assert s["version"] == "251.0.0"
+        assert s["version"] == "266.0.0"
 
     def test_singleton(self):
         a = get_omni_asanga_engine()

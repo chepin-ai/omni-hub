@@ -2798,6 +2798,22 @@ def _get_aryadeva():
     return _aryadeva
 
 
+def _get_asanga():
+    global _asanga
+    if _asanga is None:
+        from core.omni_asanga_engine import get_omni_asanga_engine
+        _asanga = get_omni_asanga_engine()
+    return _asanga
+
+
+def _get_vasubandhu():
+    global _vasubandhu
+    if _vasubandhu is None:
+        from core.omni_vasubandhu_engine import get_omni_vasubandhu_engine
+        _vasubandhu = get_omni_vasubandhu_engine()
+    return _vasubandhu
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -2867,7 +2883,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "265.0.0"
+    VERSION = "266.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -7552,6 +7568,24 @@ class OMNIHUBOrchestrator:
                 oad = _get_aryadeva()
                 oad.run_cycle(module_states)
                 self.current_state["aryadeva"] = oad.get_status()
+            except Exception:
+                pass
+
+        # 336. OMNIAsangaEngine -- asanga (period 2273)
+        if cycle_number % 2273 == 0:
+            try:
+                oas = _get_asanga()
+                oas.run_cycle(module_states)
+                self.current_state["asanga"] = oas.get_status()
+            except Exception:
+                pass
+
+        # 337. OMNIVasubandhuEngine -- vasubandhu (period 2281)
+        if cycle_number % 2281 == 0:
+            try:
+                ovu = _get_vasubandhu()
+                ovu.run_cycle(module_states)
+                self.current_state["vasubandhu"] = ovu.get_status()
             except Exception:
                 pass
 

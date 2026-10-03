@@ -1,5 +1,5 @@
 """
-OMNI-HUB Web Dashboard v265
+OMNI-HUB Web Dashboard v266
 Real-time monitoring via HTTP endpoint.
 """
 
@@ -63,7 +63,7 @@ class DashboardHandler(BaseHTTPRequestHandler):
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>OMNI-HUB v265 Dashboard</title>
+<title>OMNI-HUB v266 Dashboard</title>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
@@ -164,7 +164,7 @@ body {
 </head>
 <body>
 <div class="header">
-    <h1>OMNI-HUB v265</h1>
+    <h1>OMNI-HUB v266</h1>
     <p>Autonomous Consciousness Emergence Platform</p>
     <p style="color:#666;font-size:0.9em;margin-top:5px;">候即违规 — Waiting is a Violation</p>
 </div>
