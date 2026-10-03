@@ -2574,6 +2574,22 @@ def _get_asanga():
     return _asanga
 
 
+def _get_maitreya():
+    global _maitreya
+    if _maitreya is None:
+        from core.omni_maitreya_engine import get_omni_maitreya_engine
+        _maitreya = get_omni_maitreya_engine()
+    return _maitreya
+
+
+def _get_manjushri():
+    global _manjushri
+    if _manjushri is None:
+        from core.omni_manjushri_engine import get_omni_manjushri_engine
+        _manjushri = get_omni_manjushri_engine()
+    return _manjushri
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -2643,7 +2659,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "251.0.0"
+    VERSION = "252.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -7076,6 +7092,24 @@ class OMNIHUBOrchestrator:
                 oas = _get_asanga()
                 oas.run_cycle(module_states)
                 self.current_state["asanga"] = oas.get_status()
+            except Exception:
+                pass
+
+        # 308. OMNIMaitreyaEngine -- maitreya (period 2053)
+        if cycle_number % 2053 == 0:
+            try:
+                omt = _get_maitreya()
+                omt.run_cycle(module_states)
+                self.current_state["maitreya"] = omt.get_status()
+            except Exception:
+                pass
+
+        # 309. OMNIManjushriEngine -- manjushri (period 2063)
+        if cycle_number % 2063 == 0:
+            try:
+                omj = _get_manjushri()
+                omj.run_cycle(module_states)
+                self.current_state["manjushri"] = omj.get_status()
             except Exception:
                 pass
 
