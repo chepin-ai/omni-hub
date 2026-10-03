@@ -2686,6 +2686,22 @@ def _get_dromtonpa():
     return _dromtonpa
 
 
+def _get_mahakatyayana():
+    global _mahakatyayana
+    if _mahakatyayana is None:
+        from core.omni_mahakatyayana_engine import get_omni_mahakatyayana_engine
+        _mahakatyayana = get_omni_mahakatyayana_engine()
+    return _mahakatyayana
+
+
+def _get_upali():
+    global _upali
+    if _upali is None:
+        from core.omni_upali_engine import get_omni_upali_engine
+        _upali = get_omni_upali_engine()
+    return _upali
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -2755,7 +2771,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "258.0.0"
+    VERSION = "259.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -7314,6 +7330,24 @@ class OMNIHUBOrchestrator:
                 odr = _get_dromtonpa()
                 odr.run_cycle(module_states)
                 self.current_state["dromtonpa"] = odr.get_status()
+            except Exception:
+                pass
+
+        # 322. OMNIMahakatyayanaEngine -- mahakatyayana (period 2143)
+        if cycle_number % 2143 == 0:
+            try:
+                omk = _get_mahakatyayana()
+                omk.run_cycle(module_states)
+                self.current_state["mahakatyayana"] = omk.get_status()
+            except Exception:
+                pass
+
+        # 323. OMNIUpaliEngine -- upali (period 2153)
+        if cycle_number % 2153 == 0:
+            try:
+                oup = _get_upali()
+                oup.run_cycle(module_states)
+                self.current_state["upali"] = oup.get_status()
             except Exception:
                 pass
 
