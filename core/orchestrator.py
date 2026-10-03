@@ -2542,6 +2542,22 @@ def _get_samantabhadra():
     return _samantabhadra
 
 
+def _get_padmasambhava():
+    global _padmasambhava
+    if _padmasambhava is None:
+        from core.omni_padmasambhava_engine import get_omni_padmasambhava_engine
+        _padmasambhava = get_omni_padmasambhava_engine()
+    return _padmasambhava
+
+
+def _get_tsongkhapa():
+    global _tsongkhapa
+    if _tsongkhapa is None:
+        from core.omni_tsongkhapa_engine import get_omni_tsongkhapa_engine
+        _tsongkhapa = get_omni_tsongkhapa_engine()
+    return _tsongkhapa
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -2611,7 +2627,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "249.0.0"
+    VERSION = "250.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -7008,6 +7024,24 @@ class OMNIHUBOrchestrator:
                 osb = _get_samantabhadra()
                 osb.run_cycle(module_states)
                 self.current_state["samantabhadra"] = osb.get_status()
+            except Exception:
+                pass
+
+        # 304. OMNIPadmasambhavaEngine -- padmasambhava (period 2017)
+        if cycle_number % 2017 == 0:
+            try:
+                ops = _get_padmasambhava()
+                ops.run_cycle(module_states)
+                self.current_state["padmasambhava"] = ops.get_status()
+            except Exception:
+                pass
+
+        # 305. OMNITsongkhapaEngine -- tsongkhapa (period 2027)
+        if cycle_number % 2027 == 0:
+            try:
+                otk = _get_tsongkhapa()
+                otk.run_cycle(module_states)
+                self.current_state["tsongkhapa"] = otk.get_status()
             except Exception:
                 pass
 
