@@ -2718,6 +2718,22 @@ def _get_rahula():
     return _rahula
 
 
+def _get_bimbisara():
+    global _bimbisara
+    if _bimbisara is None:
+        from core.omni_bimbisara_engine import get_omni_bimbisara_engine
+        _bimbisara = get_omni_bimbisara_engine()
+    return _bimbisara
+
+
+def _get_prasenajit():
+    global _prasenajit
+    if _prasenajit is None:
+        from core.omni_prasenajit_engine import get_omni_prasenajit_engine
+        _prasenajit = get_omni_prasenajit_engine()
+    return _prasenajit
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -2787,7 +2803,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "260.0.0"
+    VERSION = "261.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -7382,6 +7398,24 @@ class OMNIHUBOrchestrator:
                 orh = _get_rahula()
                 orh.run_cycle(module_states)
                 self.current_state["rahula"] = orh.get_status()
+            except Exception:
+                pass
+
+        # 326. OMNIBimbisaraEngine -- bimbisara (period 2203)
+        if cycle_number % 2203 == 0:
+            try:
+                obi = _get_bimbisara()
+                obi.run_cycle(module_states)
+                self.current_state["bimbisara"] = obi.get_status()
+            except Exception:
+                pass
+
+        # 327. OMNIPrasenajitEngine -- prasenajit (period 2207)
+        if cycle_number % 2207 == 0:
+            try:
+                opr = _get_prasenajit()
+                opr.run_cycle(module_states)
+                self.current_state["prasenajit"] = opr.get_status()
             except Exception:
                 pass
 
