@@ -2590,6 +2590,22 @@ def _get_manjushri():
     return _manjushri
 
 
+def _get_avalokiteshvara():
+    global _avalokiteshvara
+    if _avalokiteshvara is None:
+        from core.omni_avalokiteshvara_engine import get_omni_avalokiteshvara_engine
+        _avalokiteshvara = get_omni_avalokiteshvara_engine()
+    return _avalokiteshvara
+
+
+def _get_mahasthamaprapta():
+    global _mahasthamaprapta
+    if _mahasthamaprapta is None:
+        from core.omni_mahasthamaprapta_engine import get_omni_mahasthamaprapta_engine
+        _mahasthamaprapta = get_omni_mahasthamaprapta_engine()
+    return _mahasthamaprapta
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -2659,7 +2675,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "252.0.0"
+    VERSION = "253.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -7110,6 +7126,24 @@ class OMNIHUBOrchestrator:
                 omj = _get_manjushri()
                 omj.run_cycle(module_states)
                 self.current_state["manjushri"] = omj.get_status()
+            except Exception:
+                pass
+
+        # 310. OMNIAvalokiteshvaraEngine -- avalokiteshvara (period 2069)
+        if cycle_number % 2069 == 0:
+            try:
+                oav = _get_avalokiteshvara()
+                oav.run_cycle(module_states)
+                self.current_state["avalokiteshvara"] = oav.get_status()
+            except Exception:
+                pass
+
+        # 311. OMNIMahasthamapraptaEngine -- mahasthamaprapta (period 2081)
+        if cycle_number % 2081 == 0:
+            try:
+                omp = _get_mahasthamaprapta()
+                omp.run_cycle(module_states)
+                self.current_state["mahasthamaprapta"] = omp.get_status()
             except Exception:
                 pass
 
