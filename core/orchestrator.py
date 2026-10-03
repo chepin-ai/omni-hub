@@ -2830,6 +2830,22 @@ def _get_dharmakirti():
     return _dharmakirti
 
 
+def _get_shantideva():
+    global _shantideva
+    if _shantideva is None:
+        from core.omni_shantideva_engine import get_omni_shantideva_engine
+        _shantideva = get_omni_shantideva_engine()
+    return _shantideva
+
+
+def _get_atisha_v268():
+    global _atisha_v268
+    if _atisha_v268 is None:
+        from core.omni_atisha_v268_engine import get_omni_atisha_v268_engine
+        _atisha_v268 = get_omni_atisha_v268_engine()
+    return _atisha_v268
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -2899,7 +2915,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "267.0.0"
+    VERSION = "268.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -7620,6 +7636,24 @@ class OMNIHUBOrchestrator:
                 odk = _get_dharmakirti()
                 odk.run_cycle(module_states)
                 self.current_state["dharmakirti"] = odk.get_status()
+            except Exception:
+                pass
+
+        # 340. OMNIShantidevaEngine -- shantideva (period 2297)
+        if cycle_number % 2297 == 0:
+            try:
+                osd = _get_shantideva()
+                osd.run_cycle(module_states)
+                self.current_state["shantideva"] = osd.get_status()
+            except Exception:
+                pass
+
+        # 341. OMNIAtishaV268Engine -- atisha_v268 (period 2309)
+        if cycle_number % 2309 == 0:
+            try:
+                oav = _get_atisha_v268()
+                oav.run_cycle(module_states)
+                self.current_state["atisha_v268"] = oav.get_status()
             except Exception:
                 pass
 
