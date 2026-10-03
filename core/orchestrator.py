@@ -2478,6 +2478,22 @@ def _get_palden_lhamo():
     return _palden_lhamo
 
 
+def _get_vajrasattva():
+    global _vajrasattva
+    if _vajrasattva is None:
+        from core.omni_vajrasattva_engine import get_omni_vajrasattva_engine
+        _vajrasattva = get_omni_vajrasattva_engine()
+    return _vajrasattva
+
+
+def _get_tara():
+    global _tara
+    if _tara is None:
+        from core.omni_tara_engine import get_omni_tara_engine
+        _tara = get_omni_tara_engine()
+    return _tara
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -2547,7 +2563,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "245.0.0"
+    VERSION = "246.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -6872,6 +6888,24 @@ class OMNIHUBOrchestrator:
                 opl = _get_palden_lhamo()
                 opl.run_cycle(module_states)
                 self.current_state["palden_lhamo"] = opl.get_status()
+            except Exception:
+                pass
+
+        # 296. OMNIVajrasattvaEngine -- vajrasattva (period 1973)
+        if cycle_number % 1973 == 0:
+            try:
+                ovs = _get_vajrasattva()
+                ovs.run_cycle(module_states)
+                self.current_state["vajrasattva"] = ovs.get_status()
+            except Exception:
+                pass
+
+        # 297. OMNITaraEngine -- tara (period 1979)
+        if cycle_number % 1979 == 0:
+            try:
+                otr = _get_tara()
+                otr.run_cycle(module_states)
+                self.current_state["tara"] = otr.get_status()
             except Exception:
                 pass
 
