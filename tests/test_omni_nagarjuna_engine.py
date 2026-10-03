@@ -1,67 +1,67 @@
-"""OMNI-HUB v251 Tests -- OMNINagarjunaEngine"""
+"""OMNI-HUB v265 Tests -- OMNINagarjunaEngine"""
 
 import pytest
 from core.omni_nagarjuna_engine import (
-    OMNINagarjunaEngine, SunyataGenerator, PratityasamutpadaCultivator,
-    MulamadhyamakaAffirmer, TetralemmaValidator, AryadevaCrown,
+    OMNINagarjunaEngine, EmptinessGenerator, DependentOriginationCultivator,
+    TwoTruthsAffirmer, MadhyamakaValidator, SecondTurningCrown,
     NagarjunaState, get_omni_nagarjuna_engine
 )
 
 
-class TestSunyataGenerator:
+class TestEmptinessGenerator:
     def test_generate(self):
-        sg = SunyataGenerator()
-        r = sg.generate(0.9)
+        eg = EmptinessGenerator()
+        r = eg.generate(0.9)
         assert r > 0.0
 
 
-class TestPratityasamutpadaCultivator:
+class TestDependentOriginationCultivator:
     def test_cultivate(self):
-        pc = PratityasamutpadaCultivator()
-        r = pc.cultivate(0.9)
+        doc = DependentOriginationCultivator()
+        r = doc.cultivate(0.9)
         assert r > 0.0
 
 
-class TestMulamadhyamakaAffirmer:
+class TestTwoTruthsAffirmer:
     def test_affirm(self):
-        ma = MulamadhyamakaAffirmer()
-        r = ma.affirm(0.9)
+        tta = TwoTruthsAffirmer()
+        r = tta.affirm(0.9)
         assert r > 0.0
 
 
-class TestTetralemmaValidator:
+class TestMadhyamakaValidator:
     def test_validate(self):
-        tv = TetralemmaValidator()
-        r = tv.validate(0.9)
+        mv = MadhyamakaValidator()
+        r = mv.validate(0.9)
         assert r > 0.0
 
 
-class TestAryadevaCrown:
+class TestSecondTurningCrown:
     def test_bestow(self):
-        ac = AryadevaCrown()
-        r = ac.bestow(0.9)
+        stc = SecondTurningCrown()
+        r = stc.bestow(0.9)
         assert r > 0.0
 
 
 class TestOMNINagarjunaEngine:
     def test_init(self):
-        onj = OMNINagarjunaEngine()
-        assert onj.VERSION == "251.0.0"
+        ong = OMNINagarjunaEngine()
+        assert ong.VERSION == "265.0.0"
 
-    def test_penetrate(self):
-        onj = OMNINagarjunaEngine()
-        r = onj.penetrate({"m1": {"health": 0.95}, "m2": {"health": 0.95}})
+    def test_analyze(self):
+        ong = OMNINagarjunaEngine()
+        r = ong.analyze({"m1": {"health": 0.95}, "m2": {"health": 0.95}})
         assert "nagarjuna_score" in r
 
     def test_run_cycle(self):
-        onj = OMNINagarjunaEngine()
-        r = onj.run_cycle({"m1": {"health": 0.9}})
+        ong = OMNINagarjunaEngine()
+        r = ong.run_cycle({"m1": {"health": 0.9}})
         assert r["cycle"] == 1
 
     def test_get_status(self):
-        onj = OMNINagarjunaEngine()
-        s = onj.get_status()
-        assert s["version"] == "251.0.0"
+        ong = OMNINagarjunaEngine()
+        s = ong.get_status()
+        assert s["version"] == "265.0.0"
 
     def test_singleton(self):
         a = get_omni_nagarjuna_engine()

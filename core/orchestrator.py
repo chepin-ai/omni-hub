@@ -2782,6 +2782,22 @@ def _get_vimalakirti():
     return _vimalakirti
 
 
+def _get_nagarjuna():
+    global _nagarjuna
+    if _nagarjuna is None:
+        from core.omni_nagarjuna_engine import get_omni_nagarjuna_engine
+        _nagarjuna = get_omni_nagarjuna_engine()
+    return _nagarjuna
+
+
+def _get_aryadeva():
+    global _aryadeva
+    if _aryadeva is None:
+        from core.omni_aryadeva_engine import get_omni_aryadeva_engine
+        _aryadeva = get_omni_aryadeva_engine()
+    return _aryadeva
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -2851,7 +2867,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "264.0.0"
+    VERSION = "265.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -7518,6 +7534,24 @@ class OMNIHUBOrchestrator:
                 ovi = _get_vimalakirti()
                 ovi.run_cycle(module_states)
                 self.current_state["vimalakirti"] = ovi.get_status()
+            except Exception:
+                pass
+
+        # 334. OMNINagarjunaEngine -- nagarjuna (period 2267)
+        if cycle_number % 2267 == 0:
+            try:
+                ong = _get_nagarjuna()
+                ong.run_cycle(module_states)
+                self.current_state["nagarjuna"] = ong.get_status()
+            except Exception:
+                pass
+
+        # 335. OMNIAryadevaEngine -- aryadeva (period 2269)
+        if cycle_number % 2269 == 0:
+            try:
+                oad = _get_aryadeva()
+                oad.run_cycle(module_states)
+                self.current_state["aryadeva"] = oad.get_status()
             except Exception:
                 pass
 
