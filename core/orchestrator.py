@@ -2702,6 +2702,22 @@ def _get_upali():
     return _upali
 
 
+def _get_aniruddha():
+    global _aniruddha
+    if _aniruddha is None:
+        from core.omni_aniruddha_engine import get_omni_aniruddha_engine
+        _aniruddha = get_omni_aniruddha_engine()
+    return _aniruddha
+
+
+def _get_rahula():
+    global _rahula
+    if _rahula is None:
+        from core.omni_rahula_engine import get_omni_rahula_engine
+        _rahula = get_omni_rahula_engine()
+    return _rahula
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -2771,7 +2787,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "259.0.0"
+    VERSION = "260.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -7348,6 +7364,24 @@ class OMNIHUBOrchestrator:
                 oup = _get_upali()
                 oup.run_cycle(module_states)
                 self.current_state["upali"] = oup.get_status()
+            except Exception:
+                pass
+
+        # 324. OMNIAfiruddhaEngine -- aniruddha (period 2161)
+        if cycle_number % 2161 == 0:
+            try:
+                oan = _get_aniruddha()
+                oan.run_cycle(module_states)
+                self.current_state["aniruddha"] = oan.get_status()
+            except Exception:
+                pass
+
+        # 325. OMNIRahulaEngine -- rahula (period 2179)
+        if cycle_number % 2179 == 0:
+            try:
+                orh = _get_rahula()
+                orh.run_cycle(module_states)
+                self.current_state["rahula"] = orh.get_status()
             except Exception:
                 pass
 
