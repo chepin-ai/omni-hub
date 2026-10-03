@@ -2878,6 +2878,22 @@ def _get_phadampa():
     return _phadampa
 
 
+def _get_sakya_pandita():
+    global _sakya_pandita
+    if _sakya_pandita is None:
+        from core.omni_sakya_pandita_engine import get_omni_sakya_pandita_engine
+        _sakya_pandita = get_omni_sakya_pandita_engine()
+    return _sakya_pandita
+
+
+def _get_phagspa():
+    global _phagspa
+    if _phagspa is None:
+        from core.omni_phagspa_engine import get_omni_phagspa_engine
+        _phagspa = get_omni_phagspa_engine()
+    return _phagspa
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -2947,7 +2963,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "270.0.0"
+    VERSION = "271.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -7722,6 +7738,24 @@ class OMNIHUBOrchestrator:
                 opd = _get_phadampa()
                 opd.run_cycle(module_states)
                 self.current_state["phadampa"] = opd.get_status()
+            except Exception:
+                pass
+
+        # 346. OMNISakyaPanditaEngine -- sakya_pandita (period 2347)
+        if cycle_number % 2347 == 0:
+            try:
+                osp = _get_sakya_pandita()
+                osp.run_cycle(module_states)
+                self.current_state["sakya_pandita"] = osp.get_status()
+            except Exception:
+                pass
+
+        # 347. OMNIPhagspaEngine -- phagspa (period 2351)
+        if cycle_number % 2351 == 0:
+            try:
+                opp = _get_phagspa()
+                opp.run_cycle(module_states)
+                self.current_state["phagspa"] = opp.get_status()
             except Exception:
                 pass
 
