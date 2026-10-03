@@ -2734,6 +2734,22 @@ def _get_prasenajit():
     return _prasenajit
 
 
+def _get_yasodhara():
+    global _yasodhara
+    if _yasodhara is None:
+        from core.omni_yasodhara_engine import get_omni_yasodhara_engine
+        _yasodhara = get_omni_yasodhara_engine()
+    return _yasodhara
+
+
+def _get_mahamaya():
+    global _mahamaya
+    if _mahamaya is None:
+        from core.omni_mahamaya_engine import get_omni_mahamaya_engine
+        _mahamaya = get_omni_mahamaya_engine()
+    return _mahamaya
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -2803,7 +2819,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "261.0.0"
+    VERSION = "262.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -7416,6 +7432,24 @@ class OMNIHUBOrchestrator:
                 opr = _get_prasenajit()
                 opr.run_cycle(module_states)
                 self.current_state["prasenajit"] = opr.get_status()
+            except Exception:
+                pass
+
+        # 328. OMNIYasodharaEngine -- yasodhara (period 2213)
+        if cycle_number % 2213 == 0:
+            try:
+                oya = _get_yasodhara()
+                oya.run_cycle(module_states)
+                self.current_state["yasodhara"] = oya.get_status()
+            except Exception:
+                pass
+
+        # 329. OMNIMahamayaEngine -- mahamaya (period 2221)
+        if cycle_number % 2221 == 0:
+            try:
+                oma = _get_mahamaya()
+                oma.run_cycle(module_states)
+                self.current_state["mahamaya"] = oma.get_status()
             except Exception:
                 pass
 
