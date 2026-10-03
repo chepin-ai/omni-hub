@@ -2670,6 +2670,22 @@ def _get_purna():
     return _purna
 
 
+def _get_atisha():
+    global _atisha
+    if _atisha is None:
+        from core.omni_atisha_engine import get_omni_atisha_engine
+        _atisha = get_omni_atisha_engine()
+    return _atisha
+
+
+def _get_dromtonpa():
+    global _dromtonpa
+    if _dromtonpa is None:
+        from core.omni_dromtonpa_engine import get_omni_dromtonpa_engine
+        _dromtonpa = get_omni_dromtonpa_engine()
+    return _dromtonpa
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -2739,7 +2755,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "257.0.0"
+    VERSION = "258.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -7280,6 +7296,24 @@ class OMNIHUBOrchestrator:
                 opu = _get_purna()
                 opu.run_cycle(module_states)
                 self.current_state["purna"] = opu.get_status()
+            except Exception:
+                pass
+
+        # 320. OMNIAtishaEngine -- atisha (period 2137)
+        if cycle_number % 2137 == 0:
+            try:
+                oat = _get_atisha()
+                oat.run_cycle(module_states)
+                self.current_state["atisha"] = oat.get_status()
+            except Exception:
+                pass
+
+        # 321. OMNIDromtonpaEngine -- dromtonpa (period 2141)
+        if cycle_number % 2141 == 0:
+            try:
+                odr = _get_dromtonpa()
+                odr.run_cycle(module_states)
+                self.current_state["dromtonpa"] = odr.get_status()
             except Exception:
                 pass
 
