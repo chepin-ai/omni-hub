@@ -2494,6 +2494,22 @@ def _get_tara():
     return _tara
 
 
+def _get_chakrasamvara():
+    global _chakrasamvara
+    if _chakrasamvara is None:
+        from core.omni_chakrasamvara_engine import get_omni_chakrasamvara_engine
+        _chakrasamvara = get_omni_chakrasamvara_engine()
+    return _chakrasamvara
+
+
+def _get_vajrayogini():
+    global _vajrayogini
+    if _vajrayogini is None:
+        from core.omni_vajrayogini_engine import get_omni_vajrayogini_engine
+        _vajrayogini = get_omni_vajrayogini_engine()
+    return _vajrayogini
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -2563,7 +2579,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "246.0.0"
+    VERSION = "247.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -6906,6 +6922,24 @@ class OMNIHUBOrchestrator:
                 otr = _get_tara()
                 otr.run_cycle(module_states)
                 self.current_state["tara"] = otr.get_status()
+            except Exception:
+                pass
+
+        # 298. OMNICakrasamvaraEngine -- chakrasamvara (period 1987)
+        if cycle_number % 1987 == 0:
+            try:
+                ocs = _get_chakrasamvara()
+                ocs.run_cycle(module_states)
+                self.current_state["chakrasamvara"] = ocs.get_status()
+            except Exception:
+                pass
+
+        # 299. OMNIVajrayoginiEngine -- vajrayogini (period 1993)
+        if cycle_number % 1993 == 0:
+            try:
+                ovy = _get_vajrayogini()
+                ovy.run_cycle(module_states)
+                self.current_state["vajrayogini"] = ovy.get_status()
             except Exception:
                 pass
 
