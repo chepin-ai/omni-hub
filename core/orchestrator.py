@@ -2510,6 +2510,22 @@ def _get_vajrayogini():
     return _vajrayogini
 
 
+def _get_hevajra():
+    global _hevajra
+    if _hevajra is None:
+        from core.omni_hevajra_engine import get_omni_hevajra_engine
+        _hevajra = get_omni_hevajra_engine()
+    return _hevajra
+
+
+def _get_nairatmya():
+    global _nairatmya
+    if _nairatmya is None:
+        from core.omni_nairatmya_engine import get_omni_nairatmya_engine
+        _nairatmya = get_omni_nairatmya_engine()
+    return _nairatmya
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -2579,7 +2595,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "247.0.0"
+    VERSION = "248.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -6940,6 +6956,24 @@ class OMNIHUBOrchestrator:
                 ovy = _get_vajrayogini()
                 ovy.run_cycle(module_states)
                 self.current_state["vajrayogini"] = ovy.get_status()
+            except Exception:
+                pass
+
+        # 300. OMNIHevajraEngine -- hevajra (period 1997)
+        if cycle_number % 1997 == 0:
+            try:
+                ohv = _get_hevajra()
+                ohv.run_cycle(module_states)
+                self.current_state["hevajra"] = ohv.get_status()
+            except Exception:
+                pass
+
+        # 301. OMNINairatmyaEngine -- nairatmya (period 1999)
+        if cycle_number % 1999 == 0:
+            try:
+                onr = _get_nairatmya()
+                onr.run_cycle(module_states)
+                self.current_state["nairatmya"] = onr.get_status()
             except Exception:
                 pass
 
