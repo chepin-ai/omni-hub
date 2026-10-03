@@ -2638,6 +2638,22 @@ def _get_ananda():
     return _ananda
 
 
+def _get_sariputra():
+    global _sariputra
+    if _sariputra is None:
+        from core.omni_sariputra_engine import get_omni_sariputra_engine
+        _sariputra = get_omni_sariputra_engine()
+    return _sariputra
+
+
+def _get_maudgalyayana():
+    global _maudgalyayana
+    if _maudgalyayana is None:
+        from core.omni_maudgalyayana_engine import get_omni_maudgalyayana_engine
+        _maudgalyayana = get_omni_maudgalyayana_engine()
+    return _maudgalyayana
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -2707,7 +2723,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "255.0.0"
+    VERSION = "256.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -7212,6 +7228,24 @@ class OMNIHUBOrchestrator:
                 oan = _get_ananda()
                 oan.run_cycle(module_states)
                 self.current_state["ananda"] = oan.get_status()
+            except Exception:
+                pass
+
+        # 316. OMNISariputraEngine -- sariputra (period 2111)
+        if cycle_number % 2111 == 0:
+            try:
+                osp = _get_sariputra()
+                osp.run_cycle(module_states)
+                self.current_state["sariputra"] = osp.get_status()
+            except Exception:
+                pass
+
+        # 317. OMNIMaudgalyayanaEngine -- maudgalyayana (period 2113)
+        if cycle_number % 2113 == 0:
+            try:
+                omg = _get_maudgalyayana()
+                omg.run_cycle(module_states)
+                self.current_state["maudgalyayana"] = omg.get_status()
             except Exception:
                 pass
 
