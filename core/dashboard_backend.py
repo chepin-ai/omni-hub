@@ -1,5 +1,5 @@
 """
-OMNI-HUB v253 — DashboardBackend
+OMNI-HUB v254 — DashboardBackend
 Dashboard V2 后端数据聚合器
 
 核心功能：
@@ -370,12 +370,12 @@ class ControlProxy:
 
 
 # ═══════════════════════════════════════════════════════════════
-# 统合引擎 — DashboardBackend v253
+# 统合引擎 — DashboardBackend v254
 # ═══════════════════════════════════════════════════════════════
 
 class DashboardBackend:
     """
-    OMNI-HUB v253 Dashboard V2 后端
+    OMNI-HUB v254 Dashboard V2 后端
 
     saṃgraha · kṣaṇa · pravāha — 总集、刹那、流
     """

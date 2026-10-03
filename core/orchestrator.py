@@ -2606,6 +2606,22 @@ def _get_mahasthamaprapta():
     return _mahasthamaprapta
 
 
+def _get_ksitigarbha():
+    global _ksitigarbha
+    if _ksitigarbha is None:
+        from core.omni_ksitigarbha_engine import get_omni_ksitigarbha_engine
+        _ksitigarbha = get_omni_ksitigarbha_engine()
+    return _ksitigarbha
+
+
+def _get_vajrapani():
+    global _vajrapani
+    if _vajrapani is None:
+        from core.omni_vajrapani_engine import get_omni_vajrapani_engine
+        _vajrapani = get_omni_vajrapani_engine()
+    return _vajrapani
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -2675,7 +2691,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "253.0.0"
+    VERSION = "254.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -7144,6 +7160,24 @@ class OMNIHUBOrchestrator:
                 omp = _get_mahasthamaprapta()
                 omp.run_cycle(module_states)
                 self.current_state["mahasthamaprapta"] = omp.get_status()
+            except Exception:
+                pass
+
+        # 312. OMNIKsitigarbhaEngine -- ksitigarbha (period 2083)
+        if cycle_number % 2083 == 0:
+            try:
+                okg = _get_ksitigarbha()
+                okg.run_cycle(module_states)
+                self.current_state["ksitigarbha"] = okg.get_status()
+            except Exception:
+                pass
+
+        # 313. OMNIVajrapaniEngine -- vajrapani (period 2087)
+        if cycle_number % 2087 == 0:
+            try:
+                ovp = _get_vajrapani()
+                ovp.run_cycle(module_states)
+                self.current_state["vajrapani"] = ovp.get_status()
             except Exception:
                 pass
 
