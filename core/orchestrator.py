@@ -2814,6 +2814,22 @@ def _get_vasubandhu():
     return _vasubandhu
 
 
+def _get_dharmapala():
+    global _dharmapala
+    if _dharmapala is None:
+        from core.omni_dharmapala_engine import get_omni_dharmapala_engine
+        _dharmapala = get_omni_dharmapala_engine()
+    return _dharmapala
+
+
+def _get_dharmakirti():
+    global _dharmakirti
+    if _dharmakirti is None:
+        from core.omni_dharmakirti_engine import get_omni_dharmakirti_engine
+        _dharmakirti = get_omni_dharmakirti_engine()
+    return _dharmakirti
+
+
 def _get_field_awareness():
     global _field_awareness
     if _field_awareness is None:
@@ -2883,7 +2899,7 @@ def _get_topics():
 class OMNIHUBOrchestrator:
     """Central orchestrator for OMNI-HUB v13.1+"""
 
-    VERSION = "266.0.0"
+    VERSION = "267.0.0"
 
     def __init__(self, auto_persist: bool = True, auto_git: bool = False):
         self.auto_persist = auto_persist
@@ -7586,6 +7602,24 @@ class OMNIHUBOrchestrator:
                 ovu = _get_vasubandhu()
                 ovu.run_cycle(module_states)
                 self.current_state["vasubandhu"] = ovu.get_status()
+            except Exception:
+                pass
+
+        # 338. OMNIDharmapalaEngine -- dharmapala (period 2287)
+        if cycle_number % 2287 == 0:
+            try:
+                odp = _get_dharmapala()
+                odp.run_cycle(module_states)
+                self.current_state["dharmapala"] = odp.get_status()
+            except Exception:
+                pass
+
+        # 339. OMNIDharmakirtiEngine -- dharmakirti (period 2293)
+        if cycle_number % 2293 == 0:
+            try:
+                odk = _get_dharmakirti()
+                odk.run_cycle(module_states)
+                self.current_state["dharmakirti"] = odk.get_status()
             except Exception:
                 pass
 
